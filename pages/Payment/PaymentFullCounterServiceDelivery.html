@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PaymentFullCounterServiceDelivery</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/Common/normalize.min.css" />
+    <link rel="stylesheet" href="/Payment/AwaitingPayment.min.css" />
+    <link rel="stylesheet" href="/Payment/OrderDetailItem.min.css" />
+    <link rel="stylesheet" href="/Payment/PaymentLayout.min.css" />
+    <link rel="stylesheet" href="/Payment/OrderDetail.min.css" />
+    <link rel="stylesheet" href="/Common/Icon.min.css" />
+    <link rel="stylesheet" href="/Common/Link.min.css" />
+    <link rel="stylesheet" href="/Payment/OrderDetailSection.min.css" />
+    <link rel="stylesheet" href="/Header/NavigationBar.min.css" />
+    <link rel="stylesheet" href="/Common/Image.min.css" />
+    <link rel="stylesheet" href="/Header/IdBadge.min.css" />
+    <link rel="stylesheet" href="/Common/Input.min.css" />
+    <link rel="stylesheet" href="/Layout/MainLayout.min.css" />
+    <link rel="stylesheet" href="/Common/DimLayer.min.css" />
+    <link rel="stylesheet" href="/Common/Button.min.css" />
+  </head>
+  <body>
+    <div id="root">
+      <header class="oa-main-layout__header"></header>
+      <div id="dim-layer" class="oa-dim-layer"></div>
+      <div id="oa-main-layout" class="oa-main-layout --no-bar">
+        <div class="oa-main-layout__content">
+          <nav
+            class="oa-navigation-bar"
+            aria-label="primary"
+            data-dropdown-top-restrict="true"
+          >
+            <div class="oa-navigation-bar__container">
+              <section class="oa-navigation-bar__section --left">
+                <a class="oa-navigation-bar__back" href="/full-payment">
+                  <span class="oa-icon --back"></span>
+                </a>
+                <div class="oa-navigation-bar__logo">
+                  <img
+                    class="oa-image"
+                    data-src="/static/images/amway-logo-white.svg"
+                    alt="amway-logo-white"
+                  />
+                </div>
+              </section>
+            </div>
+          </nav>
+          <main class="oa-payment-layout">
+            <header class="oa-payment-layout__header --with-background">
+              <h4 class="oa-payment-layout__title">สั่งซื้อสินค้าสำเร็จ!</h4>
+            </header>
+            <section class="oa-payment-layout__content">
+              <section class="oa-awaiting-payment__section">
+                <p class="oa-awaiting-payment__message">
+                  <span>
+                    แอมเวย์ได้รับคำสั่งซื้อจากคุณแล้ว กรุณาทำการชำระเงินผ่าน
+                  </span>
+                  <span>เคาน์เตอร์เซอร์วิส</span>
+                </p>
+                <p class="oa-awaiting-payment__alert-message">
+                  <span
+                    class="oa-icon --information oa-awaiting-payment__alert-icon"
+                  ></span>
+                  กรุณาชำระเงินก่อนเวลา 23:30 น.
+                  มิเช่นนั้นคำสั่งซื้อจะถูกยกเลิกอัตโนมัติ
+                </p>
+                <h6 class="oa-awaiting-payment__info-title">
+                  ข้อมูลการชำระเงิน
+                </h6>
+                <div class="oa-awaiting-payment__info-detail">
+                  <span class="oa-awaiting-payment__name">
+                    <strong>Ref 1.</strong>
+                    หมายเลขคำสั่งซื้อ
+                  </span>
+                  <div class="oa-awaiting-payment__tag">191027201419D20</div>
+                  <button class="oa-awaiting-payment__copy" type="button">
+                    <span class="oa-icon --copy"></span>
+                  </button>
+                </div>
+                <div class="oa-awaiting-payment__info-detail">
+                  <span class="oa-awaiting-payment__name">
+                    <strong>Ref 2.</strong>
+                    สั่งซื้อให้
+                  </span>
+                  <div class="oa-awaiting-payment__tag">27111647</div>
+                  <button class="oa-awaiting-payment__copy" type="button">
+                    <span class="oa-icon --copy"></span>
+                  </button>
+                </div>
+                <div class="oa-awaiting-payment__code">
+                  <img
+                    class="oa-image oa-awaiting-payment__barcode"
+                    data-src="/static/images/mock-barcode.png"
+                    alt="mock-barcode"
+                  />
+                  <button type="button" class="oa-awaiting-payment__pdf">
+                    <span
+                      class="oa-icon --print oa-awaiting-payment__print-icon"
+                    ></span>
+                    แสดงบาร์โค้ด
+                  </button>
+                </div>
+                <p class="oa-awaiting-payment__detail">
+                  กรุณาใส่ หมายเลขคำสั่งซื้อ (Ref 1) และจำนวนเงิน ให้ถูกต้อง
+                  มิฉะนั้นการชำระเงินจะไม่สมบูรณ์ บางธนาคารหากมีหมายเลขอ้างอิง
+                  (Ref 2) ให้ใส่รหัสนักธุรกิจแอมเวย์หรือสมาชิกแอมเวย์
+                  เพื่อเป็นการอ้างอิง
+                </p>
+              </section>
+              <section class="oa-awaiting-payment__section">
+                <h6>ขั้นตอนต่อไป</h6>
+                <p>
+                  คุณสามารถตรวจสอบคะแนนหลังจากชำระค่าสินค้าแล้ว 30 นาที
+                  กรณีต้องการยกเลิกคำสั่งซื้อ
+                  <span>
+                    สามารถยกเลิกภายใน 1 ชม. หลังจากชำระค่าสินค้า
+                    ตรวจสอบสถานะสินค้า
+                    <a href="/delivery/check-status" class="oa-link --bold">
+                      คลิกที่นี่
+                    </a>
+                  </span>
+                </p>
+              </section>
+              <section class="oa-awaiting-payment__links">
+                <small>
+                  <a
+                    href="/return-policy"
+                    class="oa-link oa-awaiting-payment__link --bold"
+                  >
+                    ข้อมูลการคืนสินค้า
+                  </a>
+                  |
+                  <a
+                    href="/payment-method"
+                    class="oa-link oa-awaiting-payment__link --bold"
+                  >
+                    ชำระเงินด้วยวิธีอื่น
+                  </a>
+                </small>
+              </section>
+              <p class="oa-payment-layout__secured">
+                <small>
+                  Secured by
+                  <strong>Amway</strong>
+                </small>
+              </p>
+            </section>
+            <section class="oa-payment-layout__order-details">
+              <header class="oa-payment-layout__order-details-header">
+                <h6>Your order details</h6>
+                <button class="oa-payment-layout__hide-button" type="button">
+                  <small>Hide</small>
+                </button>
+              </header>
+              <div class="oa-payment-layout__order-details-content">
+                <section
+                  class="oa-order-detail oa-payment-layout__payment-summary"
+                >
+                  <header class="oa-order-detail__header">
+                    <div class="oa-order-detail__header-section --left">
+                      <h6 class="oa-order-detail__title">
+                        รายละเอียดการชำระเงิน
+                      </h6>
+                    </div>
+                  </header>
+                  <div class="oa-order-detail__content">
+                    <section class="oa-order-detail-section">
+                      <section class="oa-order-detail-item">
+                        <span class="oa-order-detail-item__name">
+                          รวมค่าสินค้า
+                        </span>
+                        <span class="oa-order-detail-item__value-1">
+                          ฿ 3,772
+                        </span>
+                      </section>
+                      <section class="oa-order-detail-item --danger">
+                        <span class="oa-order-detail-item__name">
+                          สิทธิ์ส่วนลด/โปรโมชั่นโค้ด
+                        </span>
+                        <span class="oa-order-detail-item__value-1">
+                          -฿ 100
+                        </span>
+                      </section>
+                      <section class="oa-order-detail-item --danger">
+                        <span class="oa-order-detail-item__name">
+                          ใบสำคัญลดหนี้
+                        </span>
+                        <span class="oa-order-detail-item__value-1">
+                          -฿ 100
+                        </span>
+                      </section>
+                      <section class="oa-order-detail-item --danger">
+                        <span class="oa-order-detail-item__name">
+                          Amplus Point/AR
+                        </span>
+                        <span class="oa-order-detail-item__value-1">
+                          -฿ 100
+                        </span>
+                      </section>
+                      <section class="oa-order-detail-item">
+                        <span class="oa-order-detail-item__name">
+                          ค่าจัดส่ง
+                        </span>
+                        <span class="oa-order-detail-item__value-1">฿ 75</span>
+                      </section>
+                    </section>
+                    <section
+                      class="oa-order-detail-section oa-payment-layout__total-amount-section"
+                    >
+                      <div class="oa-payment-layout__pv-bv">
+                        <span>PV / BV</span>
+                        <span>+1,000 / +2,000</span>
+                      </div>
+                      <div class="oa-payment-layout__total-amount">
+                        <span>สรุปยอดชำระ</span>
+                        <h4>฿ 3,547</h4>
+                      </div>
+                    </section>
+                  </div>
+                </section>
+                <section class="oa-order-detail">
+                  <header class="oa-order-detail__header">
+                    <div class="oa-order-detail__header-section --left">
+                      <h6 class="oa-order-detail__title">
+                        รายละเอียดการจัดส่งสินค้า
+                      </h6>
+                    </div>
+                  </header>
+                  <div class="oa-order-detail__content">
+                    <section class="oa-order-detail-section">
+                      <section class="oa-order-detail-item --highlight">
+                        <span class="oa-order-detail-item__name">
+                          ผู้ทำการสั่งซื้อ
+                        </span>
+                        <span class="oa-order-detail-item__value-1">
+                          อภิชญา สุขสำราญใจ
+                        </span>
+                        <p class="oa-order-detail-item__value-2">00001111</p>
+                      </section>
+                    </section>
+                    <section class="oa-order-detail-section">
+                      <section class="oa-order-detail-item --highlight">
+                        <span class="oa-order-detail-item__name">
+                          สั่งซื้อให้
+                        </span>
+                        <span class="oa-order-detail-item__value-1">
+                          จาณีณ แทนใจคุณ
+                        </span>
+                        <p class="oa-order-detail-item__value-2">00002222</p>
+                      </section>
+                    </section>
+                    <section class="oa-order-detail-section">
+                      <section class="oa-order-detail-item --highlight">
+                        <span class="oa-order-detail-item__name">
+                          ที่อยู่ในการส่งสินค้า
+                        </span>
+                        <p class="oa-order-detail-item__content">
+                          <span>
+                            บริษัท แอมเวย์ (ประเทศไทย) จำกัด 1199/1 ถนนรามคำแหง
+                            เขตบางกะปิ จังหวัดกรุงเทพ-มหานคร 10240
+                          </span>
+                        </p>
+                        <p class="oa-order-detail-item__content">
+                          <span>(+66) 123456789</span>
+                        </p>
+                      </section>
+                    </section>
+                  </div>
+                </section>
+                <section class="oa-order-detail">
+                  <header class="oa-order-detail__header">
+                    <div class="oa-order-detail__header-section --left">
+                      <h6 class="oa-order-detail__title">รายละเอียดสินค้า</h6>
+                      <span>(6 ชิ้น)</span>
+                    </div>
+                    <a
+                      href="/edit-cart"
+                      class="oa-link oa-order-detail__edit-link --bold"
+                    >
+                      <span
+                        class="oa-icon --edit oa-order-detail__edit-icon"
+                      ></span>
+                      <small>แก้ไข</small>
+                    </a>
+                  </header>
+                  <div class="oa-order-detail__content">
+                    <section class="oa-order-detail-section">
+                      Product List
+                    </section>
+                  </div>
+                </section>
+              </div>
+            </section>
+            <section
+              class="oa-payment-layout__order-summary"
+              data-dropdown-bottom-restrict="true"
+            >
+              <div class="oa-payment-layout__pv-bv">
+                <span>PV / BV</span>
+                <span>+1,000 / +2,000</span>
+              </div>
+              <div class="oa-payment-layout__total-amount">
+                <span>สรุปยอดชำระ</span>
+                <h4>฿ 3,547</h4>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/Common/js/image.js"></script>
+    <script src="/Payment/js/PaymentLayout.js"></script>
+    <script src="/Layout/js/MainLayout.js"></script>
+  </body>
+</html>

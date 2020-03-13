@@ -1,0 +1,121 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-sign-up-layout {
+  @regular-cover-height: 250px;
+  @small-cover-height: 185px;
+
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  &__cover-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      background: @colors[grey-200];
+      object-fit: cover;
+    }
+  }
+
+  &.--regular-cover &__cover-image {
+    height: @regular-cover-height;
+  }
+
+  &.--small-cover &__cover-image {
+    height: @small-cover-height;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: @regular-cover-height;
+    padding: 0 @spacing[m] @spacing[l];
+  }
+
+  &.--regular-cover &__content {
+    margin-top: @regular-cover-height;
+  }
+
+  &.--small-cover &__content {
+    margin-top: @small-cover-height;
+  }
+
+  &__header {
+    max-width: 550px;
+    margin-top: @spacing[m];
+    margin-bottom: @spacing[s];
+
+    &:not(.--align-mobile-left) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    color: @colors[amway-primary];
+  }
+
+  &__description {
+    margin: @spacing[s] 0;
+    color: @colors[grey-500];
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    align-items: center;
+    justify-content: flex-end;
+
+    &__cover-image {
+      right: auto;
+      bottom: 0;
+      width: 40%;
+    }
+
+    &.--regular-cover &__cover-image,
+    &.--small-cover &__cover-image {
+      height: auto;
+    }
+
+    &__content {
+      flex: none;
+      width: 60%;
+      margin-right: 0;
+      padding: @spacing[xl] @spacing[xxl];
+    }
+
+    &.--regular-cover &__content,
+    &.--small-cover &__content {
+      margin-top: 0;
+    }
+
+    &__header {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    &__title {
+      .oa-font-style(heading-1, bold);
+    }
+
+    &__description {
+      margin-top: @spacing[l];
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    &__content {
+      width: ~'calc(10% + @{content-max-width} / 2)';
+      margin-right: ~'calc(50% - @{content-max-width} / 2)';
+    }
+
+    &__header {
+      margin-bottom: @spacing[l];
+    }
+  }
+}

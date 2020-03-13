@@ -1,0 +1,1 @@
+.oa-order-detail-section:not(:first-child){padding-top:16px}.oa-order-detail-section:not(:last-child){padding-bottom:16px;border-bottom:solid 1px #ededed}@media screen and (min-width:992px){.oa-order-detail-section.--no-desktop-separator:not(:first-child){padding-top:8px}.oa-order-detail-section.--no-desktop-separator:not(:last-child){padding-bottom:8px;border-bottom:none}}

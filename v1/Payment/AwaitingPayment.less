@@ -1,0 +1,153 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-awaiting-payment {
+  &__message {
+    font-weight: @font-weights[bold];
+  }
+
+  &__via-icon {
+    display: inline;
+    width: 25px;
+    vertical-align: text-top;
+  }
+
+  &__alert-message {
+    display: flex;
+    margin-top: @spacing[m];
+    padding: @spacing[s];
+    border-radius: @border-radiuses[s];
+    background-color: rgba(@colors[red-100], 0.5);
+    color: @colors[red-300];
+  }
+
+  &__alert-icon {
+    display: flex;
+    align-items: center;
+    height: 26px;
+    margin-right: @spacing[xs];
+  }
+
+  &__info-title {
+    margin-top: @spacing[m];
+  }
+
+  &__info-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: @spacing[s] 0;
+    border-bottom: solid 1px @colors[grey-200];
+  }
+
+  &__name {
+    flex: 1;
+  }
+
+  &__tag {
+    @height: 20px;
+
+    height: @height;
+    padding: 0 @spacing[xs];
+    border-radius: @height;
+    background: @colors[amway-100];
+    color: rgba(@colors[amway-500], 0.5);
+
+    .oa-font-style(small, bold);
+  }
+
+  &__copy-icon {
+    display: flex;
+    align-items: center;
+    margin-left: @spacing[xs];
+    color: @colors[amway-primary];
+    font-size: @icon-sizes[m];
+  }
+
+  &__code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: @spacing[m];
+    text-align: center;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__qr-code {
+    width: 156px;
+    height: 156px;
+    padding: @spacing[xs];
+  }
+
+  &__barcode {
+    width: 332px;
+    height: 92px;
+    padding: @spacing[s];
+  }
+
+  &__pdf {
+    display: flex;
+    align-items: center;
+    margin-top: @spacing[xs];
+    color: @colors[amway-primary];
+  }
+
+  &__print-icon {
+    margin-right: @spacing[xs];
+    font-size: @icon-sizes[m];
+  }
+
+  &__detail {
+    margin-top: @spacing[m];
+  }
+
+  &__online-transfer-button {
+    display: none;
+  }
+
+  &__return-policy {
+    margin-top: @spacing[s];
+    text-align: center;
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    &__alert-icon {
+      height: 24px;
+      font-size: @icon-sizes[m];
+    }
+
+    &__tag {
+      @height: 24px;
+
+      height: @height;
+      padding: 0 @spacing[s];
+      border-radius: @height;
+
+      .oa-font-style(body, bold);
+    }
+
+    &__code {
+      margin-top: @spacing[l];
+    }
+
+    &__barcode {
+      margin-top: @spacing[s];
+    }
+
+    &__detail {
+      margin-top: @spacing[xxl];
+    }
+
+    &__online-transfer-button {
+      display: block;
+      margin-top: @spacing[m];
+    }
+
+    &__return-policy {
+      margin-top: @spacing[m];
+    }
+  }
+}

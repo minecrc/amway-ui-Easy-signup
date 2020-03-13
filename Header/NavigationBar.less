@@ -1,0 +1,145 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-navigation-bar {
+  height: @navigation-bar-mobile-height;
+  background: @colors[ @amway-primary];
+  color: @colors[ @white];
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    .oa-container(@side-spacing: @spacing[ @s]);
+  }
+
+  &__back {
+    display: flex;
+    margin-right: @spacing[ @s];
+    font-size: 26px;
+
+    @media screen and (min-width: @breakpoints[@lg]) {
+      display: none;
+    }
+  }
+
+  &__hamburger {
+    display: flex;
+    margin-right: @spacing[ @s];
+
+    @media screen and (min-width: @breakpoints[@lg]) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex: none;
+    height: 22px;
+
+    img {
+      height: 100%;
+    }
+
+    @media screen and (min-width: @breakpoints[@lg]) {
+      @height: 38px;
+
+      width: 65 / 22 * @height;
+      height: @height;
+    }
+  }
+
+  &__section {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &.--left {
+      flex: auto;
+    }
+  }
+
+  &__search-button {
+    display: flex;
+
+    @media screen and (min-width: @breakpoints[@lg]) {
+      display: none;
+    }
+  }
+
+  &__search-input {
+    display: none;
+    flex: none;
+    width: 420px;
+    margin-left: @spacing[ @xxl];
+
+    @media screen and (min-width: @breakpoints[@lg]) {
+      display: block;
+    }
+  }
+
+  &__icon {
+    margin-left: @spacing[ @m];
+    font-size: 22px;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: @spacing[ @m];
+    user-select: none;
+  }
+
+  &__user-icon {
+    font-size: 22px;
+  }
+
+  &__user-entry {
+    display: none;
+  }
+
+  &__login {
+    margin: 0 @spacing[ @xs];
+    font-weight: @font-weights[ @bold];
+  }
+
+  &__register {
+    margin-left: @spacing[ @xs];
+    font-weight: @font-weights[ @bold];
+  }
+
+  &__user-info {
+    display: none;
+  }
+
+  &__user-name {
+    margin-bottom: @spacing[ @xs];
+    overflow: hidden;
+    line-height: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__user-arrow {
+    margin-left: 4px;
+  }
+
+  @media screen and (min-width: @breakpoints[@lg]) {
+    height: @navigation-bar-desktop-height;
+
+    &__user-entry {
+      display: block;
+    }
+
+    &__user-info {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 120px;
+      margin-left: @spacing[ @xs];
+    }
+  }
+}

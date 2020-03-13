@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PaymentFullFail</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/Common/normalize.min.css" />
+    <link rel="stylesheet" href="/Payment/PaymentEndLayout.min.css" />
+    <link rel="stylesheet" href="/Common/Image.min.css" />
+    <link rel="stylesheet" href="/Payment/PaymentFail.min.css" />
+    <link rel="stylesheet" href="/Header/NavigationBar.min.css" />
+    <link rel="stylesheet" href="/Common/Icon.min.css" />
+    <link rel="stylesheet" href="/Header/IdBadge.min.css" />
+    <link rel="stylesheet" href="/Common/Input.min.css" />
+    <link rel="stylesheet" href="/Layout/MainLayout.min.css" />
+    <link rel="stylesheet" href="/Common/DimLayer.min.css" />
+    <link rel="stylesheet" href="/Common/Button.min.css" />
+  </head>
+  <body>
+    <div id="root">
+      <header class="oa-main-layout__header"></header>
+      <div id="dim-layer" class="oa-dim-layer"></div>
+      <div id="oa-main-layout" class="oa-main-layout --no-bar">
+        <div class="oa-main-layout__content">
+          <nav
+            class="oa-navigation-bar"
+            aria-label="primary"
+            data-dropdown-top-restrict="true"
+          >
+            <div class="oa-navigation-bar__container">
+              <section class="oa-navigation-bar__section --left">
+                <a class="oa-navigation-bar__back" href="/payment">
+                  <span class="oa-icon --back"></span>
+                </a>
+                <div class="oa-navigation-bar__logo">
+                  <img
+                    class="oa-image"
+                    data-src="/static/images/amway-logo-white.svg"
+                    alt="amway-logo-white"
+                  />
+                </div>
+              </section>
+            </div>
+          </nav>
+          <main class="oa-payment-end-layout --mobile-center">
+            <header class="oa-payment-end-layout__header">
+              <img
+                class="oa-image oa-payment-end-layout__image"
+                data-src="/static/images/payment-fail.svg"
+                alt="payment-fail"
+              />
+              <h4 class="oa-payment-end-layout__title">
+                ไม่สามารถดำเนินการชำระเงินได้
+              </h4>
+              <p class="oa-payment-end-layout__description">
+                กรุณาลองอีกครั้ง หรือเลือกวิธีการชำระเงิน ในรูปแบบอื่น
+              </p>
+            </header>
+            <section class="oa-payment-end-layout__content">
+              <button
+                type="submit"
+                class="oa-button btn btn-lg --primary --narrow --regular oa-payment-fail__button"
+              >
+                <span>ลองอีกครั้ง</span>
+              </button>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/Common/js/image.js"></script>
+    <script src="/Layout/js/MainLayout.js"></script>
+  </body>
+</html>

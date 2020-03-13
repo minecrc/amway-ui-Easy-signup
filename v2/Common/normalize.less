@@ -1,0 +1,124 @@
+@import './fonts.less';
+@import './variables.less';
+@import './mixins.less';
+
+html {
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+
+body,
+#root {
+  display: flex;
+  width: 100%;
+}
+
+body {
+  min-height: 100%;
+  color: @colors[black];
+  font-family: 'Sukhumvit Tadmai', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+
+  .mz-font-style(body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+h1 {
+  .mz-font-style(heading-1, bold);
+}
+
+h2 {
+  .mz-font-style(heading-2, bold);
+}
+
+h3 {
+  .mz-font-style(heading-3, bold);
+}
+
+h4 {
+  .mz-font-style(heading-4, bold);
+}
+
+h5 {
+  .mz-font-style(heading-5, bold);
+}
+
+h6 {
+  // backward compatibility for blue ci (v1)
+  color: @colors[black];
+
+  .mz-font-style(body, bold);
+}
+
+small {
+  .mz-font-style(small);
+}
+
+a {
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: inherit;
+}
+
+button:focus,
+button:focus:active {
+  outline: none;
+  box-shadow: inherit;
+}
+
+input::placeholder {
+  font-style: inherit;
+  font-weight: normal;
+}
+
+label {
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin-bottom: 0;
+  padding-inline-start: 0;
+}
+
+li {
+  display: block;
+}

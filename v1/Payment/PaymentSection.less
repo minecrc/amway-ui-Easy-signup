@@ -1,0 +1,22 @@
+@import '../Common/variables.less';
+
+.oa-payment-section {
+  padding: @spacing[s] @spacing[m];
+  border-bottom: solid 1px @colors[grey-200];
+  background: @colors[white];
+
+  & + & {
+    margin-top: @spacing[s];
+    border-top: solid 1px @colors[grey-200];
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    padding: @spacing[xxl];
+    border: solid 1px @colors[grey-200];
+    border-radius: @border-radiuses[s];
+
+    & + & {
+      margin-top: @spacing[m];
+    }
+  }
+}

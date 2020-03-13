@@ -1,0 +1,17 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-id-badge {
+  @height: 18px;
+
+  display: inline-block;
+  height: @height;
+  padding: 0 10px;
+  border-radius: 10px;
+  background: @colors[amway-400];
+  color: @colors[white];
+  line-height: @height;
+  user-select: none;
+
+  .oa-font-style(extra-small);
+}

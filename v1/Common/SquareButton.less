@@ -1,0 +1,48 @@
+@import './variables.less';
+@import '../Common/mixins.less';
+
+.oa-square-button {
+  flex: 1;
+  width: auto;
+  max-width: 135px;
+  height: auto;
+  padding: @spacing[m] 0;
+  transition: background-color 0.2s, border-color 0.2s;
+  border: solid 1px @colors[grey-300];
+  text-align: center;
+
+  &:hover {
+    border-color: @colors[amway-primary];
+    background: @colors[amway-100];
+  }
+
+  &__icon {
+    color: @colors[amway-primary];
+    font-size: @icon-sizes[xxl];
+    line-height: 1;
+  }
+
+  p {
+    margin-top: 4px;
+    color: @colors[amway-primary];
+  }
+
+  & + & {
+    margin-left: @spacing[xs];
+  }
+
+  @media screen and (min-width: @breakpoints[sm]) {
+    max-width: 145px;
+    padding: @spacing[l] 0;
+
+    p {
+      margin-top: @spacing[xs];
+
+      .oa-font-style(heading-5);
+    }
+
+    & + & {
+      margin-left: @spacing[xl];
+    }
+  }
+}

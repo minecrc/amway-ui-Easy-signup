@@ -1,0 +1,42 @@
+@import '../Common/variables.less';
+
+.oa-main-layout {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  &__header {
+    position: absolute;
+    z-index: @z-indexes[ @mobile-header];
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: transform 0.2s linear;
+    box-shadow: @shadows[ @xs-soft];
+    will-change: transform;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding-top: @navigation-bar-mobile-height;
+  }
+
+  &.--no-bar &__content {
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: @breakpoints[@lg]) {
+    &__header {
+      z-index: @z-indexes[ @desktop-header];
+    }
+
+    &__content {
+      padding-top: @topmost-bar-height + @navigation-bar-desktop-height +
+        @menu-bar-height;
+    }
+  }
+}

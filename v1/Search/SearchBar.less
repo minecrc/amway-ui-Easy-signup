@@ -1,0 +1,15 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-search-bar {
+  display: flex;
+  align-items: center;
+  height: @search-bar-height;
+  background: @colors[white];
+
+  .oa-container(@side-spacing: @spacing[s]);
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    display: none;
+  }
+}

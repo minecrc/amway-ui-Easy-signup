@@ -1,0 +1,176 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-awaiting-payment {
+  &__section {
+    padding: @spacing[ @m];
+    border-bottom: solid 1px @colors[ @grey-200];
+    background: @colors[ @white];
+
+    & + & {
+      margin-top: @spacing[ @s];
+      border-top: solid 1px @colors[ @grey-200];
+    }
+  }
+
+  &__via-icon {
+    display: inline;
+    width: 25px;
+    vertical-align: text-top;
+  }
+
+  &__alert-message {
+    display: flex;
+    margin-top: @spacing[ @m];
+    padding: @spacing[ @s];
+    border-radius: @border-radiuses[ @s];
+    background-color: rgba(@colors[ @red-100], 0.5);
+  }
+
+  &__alert-icon {
+    display: flex;
+    align-items: center;
+    height: 26px;
+    margin-right: @spacing[ @xs];
+  }
+
+  &__info-title {
+    margin-top: @spacing[ @m];
+  }
+
+  &__info-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: @spacing[ @s] 0;
+    border-bottom: solid 1px @colors[ @grey-200];
+  }
+
+  &__name {
+    flex: 1;
+  }
+
+  &__tag {
+    @height: 20px;
+
+    height: @height;
+    padding: 0 @spacing[ @xs];
+    border-radius: @height;
+    background: @colors[ @amway-100];
+    color: rgba(@colors[ @amway-500], 0.5);
+    font-size: @font-sizes[ @small];
+    font-weight: @font-weights[ @bold];
+  }
+
+  &__copy {
+    display: flex;
+    align-items: center;
+    margin-left: @spacing[ @xs];
+    color: @colors[ @amway-primary];
+    font-size: @font-sizes[ @heading-4];
+  }
+
+  &__code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: @spacing[ @m];
+    text-align: center;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__qr-code {
+    width: 156px;
+    height: 156px;
+    padding: @spacing[ @xs];
+  }
+
+  &__barcode {
+    width: 332px;
+    height: 92px;
+    padding: @spacing[ @s];
+  }
+
+  &__pdf {
+    display: flex;
+    align-items: center;
+    margin-top: @spacing[ @xs];
+    color: @colors[ @amway-primary];
+    font-size: @font-sizes[ @small];
+    font-weight: @font-weights[ @bold];
+  }
+
+  &__print-icon {
+    margin-right: @spacing[ @xs];
+    font-size: @font-sizes[ @heading-4];
+  }
+
+  &__detail {
+    margin-top: @spacing[ @m];
+  }
+
+  &__deep-link {
+    display: none;
+  }
+
+  &__links {
+    width: 100%;
+    margin-top: @spacing[ @s];
+    color: @colors[ @grey-400];
+    text-align: center;
+  }
+
+  &__link {
+    padding: 0 @spacing[ @s];
+  }
+
+  @media screen and (min-width: @breakpoints[@lg]) {
+    &__section {
+      padding: @spacing[ @xxl];
+      border: solid 1px @colors[ @grey-200];
+      border-radius: @border-radiuses[ @s];
+
+      & + & {
+        margin-top: @spacing[ @m];
+      }
+    }
+
+    &__alert-icon {
+      height: 24px;
+      font-size: 20px;
+    }
+
+    &__tag {
+      @height: 24px;
+
+      height: @height;
+      padding: 0 @spacing[ @s];
+      border-radius: @height;
+      font-size: @font-sizes[ @body];
+    }
+
+    &__code {
+      margin-top: @spacing[ @l];
+    }
+
+    &__barcode {
+      margin-top: @spacing[ @s];
+    }
+
+    &__detail {
+      margin-top: @spacing[ @xxl];
+    }
+
+    &__deep-link {
+      display: block;
+      margin-top: @spacing[ @m];
+    }
+
+    &__links {
+      margin-top: @spacing[ @m];
+    }
+  }
+}

@@ -1,0 +1,171 @@
+.step-progress-bar {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    cursor: pointer;
+    user-select: none
+}
+
+.step-progress-bar__step {
+    position: relative;
+    box-sizing: border-box;
+    flex: 1;
+    height: 28px;
+    margin-right: 3px;
+    color: #09498b;
+    font-size: 13px;
+    font-weight: 700
+}
+
+.step-progress-bar__step:after,
+.step-progress-bar__step:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    height: 50%;
+    background: #f1f9fd
+}
+
+.step-progress-bar__step:before {
+    top: 0;
+    transform: skewX(40deg);
+    transform-origin: 0 0
+}
+
+.step-progress-bar__step:after {
+    bottom: 0;
+    transform: skewX(-40deg);
+    transform-origin: 0 100%
+}
+
+.step-progress-bar__step:last-child:after,
+.step-progress-bar__step:last-child:before {
+    left: auto;
+    width: 14px
+}
+
+.step-progress-bar__step:first-child {
+    flex: 1.05;
+    margin-right: 0
+}
+
+.step-progress-bar__step:first-child:after,
+.step-progress-bar__step:first-child:before {
+    right: auto;
+    width: 14px
+}
+
+.step-progress-bar__step.--current:before {
+    border-top: 2px solid #09498b;
+    background: #fff
+}
+
+.step-progress-bar__step.--current:after {
+    border-bottom: 2px solid #09498b;
+    background: #fff
+}
+
+.step-progress-bar__step.--current:not(:last-child):after,
+.step-progress-bar__step.--current:not(:last-child):before {
+    border-left: 2.8px solid #09498b
+}
+
+.step-progress-bar__step.--current:not(:first-child):after,
+.step-progress-bar__step.--current:not(:first-child):before {
+    border-right: 2.8px solid #09498b
+}
+
+.step-progress-bar__step.--passed {
+    color: #fff
+}
+
+.step-progress-bar__step.--passed:after,
+.step-progress-bar__step.--passed:before {
+    background: #09498b
+}
+
+.step-progress-bar__label {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-left: 9.33333333px;
+    border: 2px solid transparent
+}
+
+.step-progress-bar__step:first-child .step-progress-bar__label,
+.step-progress-bar__step:last-child .step-progress-bar__label {
+    z-index: 0;
+    background: #f1f9fd
+}
+
+.step-progress-bar__step:last-child .step-progress-bar__label {
+    border-top-left-radius: 28px;
+    border-bottom-left-radius: 28px
+}
+
+.step-progress-bar__step:first-child .step-progress-bar__label {
+    margin-left: 14px;
+    padding-right: 14px;
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px
+}
+
+.step-progress-bar__step:first-child.--current .step-progress-bar__label,
+.step-progress-bar__step:last-child.--current .step-progress-bar__label {
+    border-color: #09498b;
+    background: #fff
+}
+
+.step-progress-bar__step:last-child.--current .step-progress-bar__label {
+    border-right-color: transparent
+}
+
+.step-progress-bar__step:first-child.--current .step-progress-bar__label {
+    border-left-color: transparent
+}
+
+.step-progress-bar__step:first-child.--passed .step-progress-bar__label,
+.step-progress-bar__step:last-child.--passed .step-progress-bar__label {
+    background: #09498b
+}
+
+.step-progress-bar__text {
+    display: none
+}
+
+@media screen and (min-width:992px) {
+    .step-progress-bar {
+        max-width: 940px
+    }
+    .step-progress-bar__step {
+        height: 48px;
+        margin-right: 5px;
+        font-size: 14px
+    }
+    .step-progress-bar__step:first-child:after,
+    .step-progress-bar__step:first-child:before,
+    .step-progress-bar__step:last-child:after,
+    .step-progress-bar__step:last-child:before {
+        width: 22px
+    }
+    .step-progress-bar__label {
+        padding-left: 11px
+    }
+    .step-progress-bar__step:last-child .step-progress-bar__label {
+        padding-left: 22px
+    }
+    .step-progress-bar__step:first-child .step-progress-bar__label {
+        margin-left: 22px;
+        padding-right: 22px
+    }
+    .step-progress-bar__text {
+        display: inline
+    }
+}

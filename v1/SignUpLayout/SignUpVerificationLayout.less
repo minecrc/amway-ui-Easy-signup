@@ -1,0 +1,83 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-sign-up-verification-layout {
+  display: flex;
+  flex-direction: column;
+  padding-top: @spacing[l];
+  padding-bottom: @spacing[l];
+
+  .oa-container();
+
+  &.--with-back-button {
+    padding-top: @spacing[m];
+  }
+
+  &__illus.--hide-on-mobile {
+    display: none;
+  }
+
+  &__back-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: @spacing[m];
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    margin-right: @spacing[xs];
+    font-size: @icon-sizes[l];
+  }
+
+  &__header {
+    max-width: 380px;
+    margin-top: @spacing[m];
+    margin-bottom: @spacing[xxl];
+    text-align: center;
+
+    @media screen and (min-width: @breakpoints[lg]) {
+      max-width: 480px;
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    color: @colors[amway-primary];
+    white-space: pre-line;
+  }
+
+  &__description {
+    margin-top: @spacing[xs];
+    color: @colors[grey-500];
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding-top: @spacing[xxl];
+    padding-bottom: @spacing[xxl];
+
+    &.--vertical-align-middle {
+      align-items: center;
+    }
+
+    &.--with-back-button {
+      padding-top: @spacing[l];
+    }
+
+    &__title {
+      .oa-font-style(heading-1, bold);
+    }
+
+    &__illus.--hide-on-mobile {
+      display: flex;
+    }
+
+    &__back-button {
+      margin-bottom: @spacing[l];
+    }
+  }
+}

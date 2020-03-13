@@ -1,0 +1,18 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-font-sizes {
+  h3 {
+    margin-bottom: @spacing[xs];
+    color: @colors[amway-500];
+    text-transform: uppercase;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: @spacing[xxxl];
+  }
+
+  > *:not(:first-child) {
+    margin-top: @spacing[xs];
+  }
+}

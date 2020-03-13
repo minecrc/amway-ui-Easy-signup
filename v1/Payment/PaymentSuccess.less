@@ -1,0 +1,117 @@
+@import '../Common/mixins.less';
+
+.oa-payment-success {
+  @detail-header-height: 72px;
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+    margin: 0 @spacing[m] @spacing[xs];
+    border: solid 1px @colors[grey-200];
+    border-radius: @border-radiuses[s];
+  }
+
+  &__summary-box {
+    padding: @spacing[xs];
+    text-align: center;
+
+    &:not(:first-child) {
+      border-top: solid 1px @colors[grey-200];
+    }
+  }
+
+  &__total-amount {
+    margin-right: @spacing[xs];
+    color: @colors[grey-400];
+  }
+
+  &__order-details {
+    width: 100%;
+  }
+
+  &__detail {
+    border-bottom: solid @gap-sizes[large] @colors[grey-100];
+  }
+
+  &__detail-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: @spacing[m];
+    color: @colors[amway-primary];
+    font-weight: @font-weights[bold];
+  }
+
+  &__collapse-icon {
+    font-size: @icon-sizes[m];
+  }
+
+  &__detail-header[aria-expanded='true'] &__collapse-icon {
+    transform: scaleY(-1);
+  }
+
+  &__detail-content {
+    padding: 0 @spacing[m] @spacing[l];
+  }
+
+  &__tag {
+    @height: 24px;
+
+    height: 24px;
+    padding: 0 @spacing[s];
+    border-radius: @height;
+    background: @colors[grey-200];
+    font-weight: @font-weights[bold];
+    line-height: @height;
+  }
+
+  &__footer {
+    flex: 1;
+    padding: @spacing[l] 0;
+    text-align: center;
+
+    .oa-container();
+  }
+
+  &__button {
+    margin-top: @spacing[l];
+  }
+
+  &__product-list {
+    padding: 0 @spacing[ m];
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    &__summary {
+      margin: 0 0 @spacing[ xl];
+    }
+
+    &__summary-box {
+      flex: 1;
+      padding: @spacing[ s];
+    }
+
+    &__detail {
+      margin-bottom: 0;
+      border-bottom: solid 1px @colors[grey-200];
+    }
+
+    &__detail-header {
+      padding: @spacing[m] 0;
+      .oa-font-style(heading-5, bold);
+    }
+
+    &__detail-content {
+      padding: 0 0 @spacing[l];
+    }
+
+    &__footer {
+      padding: @spacing[m] 0;
+    }
+
+    &__button {
+      margin-top: @spacing[xxl];
+    }
+  }
+}

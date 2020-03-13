@@ -1,0 +1,132 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-payment-layout {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  background: @colors[grey-100];
+
+  &__header {
+    padding: @spacing[m];
+
+    &.--with-background {
+      margin-bottom: @gap-sizes[large];
+      padding: @spacing[s] @spacing[m];
+      background: @colors[white];
+    }
+  }
+
+  &__order-summary {
+    display: flex;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    padding: @spacing[s] @spacing[m];
+    background: @colors[white];
+    box-shadow: @shadows[l];
+    user-select: none;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__total-amount {
+    align-items: flex-end;
+    margin-bottom: @spacing[xs];
+  }
+
+  &__total-amount-label {
+    font-weight: @font-weights[bold];
+    line-height: 1;
+  }
+
+  &__total-amount-value {
+    color: @colors[black];
+    line-height: 1;
+  }
+
+  &__toggle-indicator {
+    display: flex;
+    align-items: center;
+    color: @colors[amway-primary];
+  }
+
+  &__toggle-arrow {
+    display: flex;
+    font-size: @icon-sizes[m];
+  }
+
+  &__more,
+  &__less,
+  &__pv-bv {
+    font-weight: @font-weights[bold];
+  }
+
+  &__order-summary:not(.--active) &__toggle-arrow {
+    transform: scaleY(-1);
+  }
+
+  &__order-summary.--active &__more,
+  &__order-summary:not(.--active) &__less {
+    display: none;
+  }
+
+  &__secured {
+    width: 100%;
+    margin-top: @spacing[l];
+    margin-bottom: @spacing[m];
+    color: @colors[grey-400];
+    text-align: center;
+  }
+
+  &__action-button {
+    margin-top: @spacing[s];
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    padding-top: @spacing[xl];
+    padding-bottom: @spacing[xxxxl];
+    background: @colors[white];
+
+    .oa-container();
+
+    &__header {
+      flex: 1 0 100%;
+
+      &,
+      &.--with-background {
+        margin-top: @spacing[s];
+        margin-bottom: @spacing[xl];
+        padding: 0;
+      }
+    }
+
+    &__title {
+      .oa-font-style(heading-1, bold);
+    }
+
+    &__content {
+      flex: 658;
+      margin-right: @spacing[xxxl];
+    }
+
+    &__order-summary {
+      display: none;
+      position: relative;
+    }
+
+    &__secured {
+      margin-top: @spacing[xxl];
+    }
+  }
+}

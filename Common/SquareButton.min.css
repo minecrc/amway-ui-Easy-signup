@@ -1,0 +1,43 @@
+.oa-square-button {
+    flex: 1;
+    width: auto;
+    max-width: 135px;
+    height: auto;
+    padding: 24px 0;
+    transition: background-color .2s, border-color .2s;
+    border: solid 1px #c3c4c5;
+    text-align: center
+}
+
+.oa-square-button:hover {
+    border-color: #002f5f;
+    background: #f1f9fd
+}
+
+.oa-square-button__icon {
+    color: #002f5f;
+    font-size: 40px
+}
+
+.oa-square-button p {
+    margin-top: 4px;
+    color: #002f5f
+}
+
+.oa-square-button+.oa-square-button {
+    margin-left: 8px
+}
+
+@media screen and (min-width:576px) {
+    .oa-square-button {
+        max-width: 145px;
+        padding: 32px 0
+    }
+    .oa-square-button p {
+        margin-top: 8px;
+        font-size: 18px
+    }
+    .oa-square-button+.oa-square-button {
+        margin-left: 40px
+    }
+}

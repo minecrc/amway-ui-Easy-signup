@@ -1,0 +1,52 @@
+@import '../Common/variables.less';
+
+.oa-sign-up-preview {
+  &__payment-info {
+    width: 100%;
+    margin-bottom: @spacing[xs];
+    padding: @spacing[s] @spacing[m];
+    background: @colors[grey-100];
+    text-align: center;
+
+    p {
+      margin-bottom: @spacing[xs];
+      color: @colors[grey-400];
+    }
+  }
+
+  &__edit-link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__edit-icon {
+    margin-right: @spacing[xs] / 2;
+    font-size: @icon-sizes[m];
+  }
+
+  &__data {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    li {
+      flex: 0 0 100%;
+
+      &:not(:first-child) {
+        margin-top: @spacing[m];
+      }
+
+      p {
+        color: @colors[grey-400];
+      }
+
+      @media screen and (min-width: @breakpoints[lg]) {
+        flex: 0 0 50%;
+
+        &:nth-child(2) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,244 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-product-menu {
+  &__brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: @spacing[xs];
+    border: solid 1px @colors[grey-200];
+  }
+
+  &.--mobile & {
+    &__close-button,
+    &__back-button {
+      position: absolute;
+      left: @spacing[s];
+      transition: transform 0.2s, opacity 0.2s;
+      opacity: 0;
+      color: @colors[amway-primary];
+      font-size: @icon-sizes[l];
+      pointer-events: none;
+    }
+
+    &__close-button {
+      transform: translateY(-100%);
+    }
+
+    &__back-button {
+      transform: translateY(100%);
+    }
+
+    &__title {
+      position: absolute;
+      top: 50%;
+      right: @spacing[xl];
+      left: @spacing[xl];
+      height: 24px;
+      transform: translate3d(0, -50%, 0);
+
+      > span {
+        display: flex;
+        position: absolute;
+        right: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s, opacity 0.2s;
+        opacity: 0;
+        text-align: center;
+
+        &[data-title-level='1'] {
+          bottom: 0;
+        }
+        &[data-title-level='2'] {
+          bottom: -100%;
+        }
+        &[data-title-level='3'] {
+          bottom: -200%;
+        }
+      }
+    }
+
+    &__container {
+      display: flex;
+      width: 300%;
+      transition: transform 0.2s linear;
+
+      > * {
+        width: 100% / 3;
+      }
+    }
+
+    &__see-all:extend(.oa-mobile-menu-item) {
+      border-bottom: none;
+      background: @colors[amway-100];
+      color: @colors[amway-500];
+    }
+
+    &__category:extend(.oa-mobile-menu-item),
+    &__sub-category:extend(.oa-mobile-menu-item),
+    &__sub-category-item:extend(.oa-mobile-menu-item) {
+      .oa-mobile-menu-item-indent();
+      .oa-menu-item-style();
+    }
+
+    &__icon {
+      width: 32px;
+      height: 32px;
+      margin-right: @spacing[s];
+    }
+
+    &__text:not(.--desktop) {
+      flex: 1;
+    }
+
+    &__text.--desktop {
+      display: none;
+    }
+
+    &__category-detail {
+      position: relative;
+
+      &.--brands {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: space-between;
+        padding-top: @spacing[s];
+        padding-left: @spacing[s];
+
+        > * {
+          box-sizing: border-box;
+          width: 50%;
+          padding-right: @spacing[s];
+          padding-bottom: @spacing[s];
+        }
+      }
+
+      &:not(.--active) {
+        display: none;
+      }
+    }
+
+    &__list-arrow {
+      color: @colors[black];
+      font-size: @icon-sizes[l];
+    }
+
+    &__sub-category-detail {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      width: 100%;
+
+      &:not(.--active) {
+        display: none;
+      }
+    }
+  }
+
+  .oa-data-level(@level, @button) {
+    &.--mobile.--active[data-level='@{level}'] & {
+      &__@{button}-button {
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      &__title > span {
+        @translateX: -100% * (@level - 1);
+
+        transform: translate3d(0, @translateX, 0);
+      }
+
+      &__title > span[data-title-level='@{level}'] {
+        opacity: 1;
+      }
+    }
+  }
+
+  .oa-data-level(@level: 1, @button: close);
+  .oa-data-level(@level: 2, @button: back);
+  .oa-data-level(@level: 3, @button: back);
+
+  &.--desktop {
+    margin-top: @spacing[s] + @arrow-size;
+  }
+
+  &.--desktop & {
+    &__close-button,
+    &__back-button,
+    &__categories,
+    &__see-all {
+      display: none;
+    }
+
+    &__category-item {
+      min-width: 160px;
+      margin-right: @spacing[xxxxl];
+      margin-bottom: @spacing[xl];
+      line-height: 2;
+    }
+
+    &__sub-category {
+      display: flex;
+      align-items: center;
+      color: @colors[amway-primary];
+
+      .oa-font-style(heading-5, bold);
+    }
+
+    &__sub-category-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &__text.--mobile {
+      display: none;
+    }
+
+    &__list-arrow {
+      margin-left: @spacing[xs];
+    }
+
+    &__category-detail {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      max-height: 420px;
+      padding: @spacing[xl];
+
+      &.--brands {
+        > * {
+          width: 100% / 6;
+
+          &:nth-child(n + 7) {
+            padding-top: @spacing[s];
+          }
+          &:not(:nth-child(6n)) {
+            padding-right: @spacing[s];
+          }
+        }
+      }
+
+      &.--sub-categories {
+        flex-direction: column;
+        padding-bottom: 0;
+      }
+
+      &:not(.--active) {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+}

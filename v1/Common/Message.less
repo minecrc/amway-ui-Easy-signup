@@ -1,0 +1,23 @@
+@import './variables.less';
+
+.oa-message {
+  width: 100%;
+  min-height: 24px;
+  margin: @spacing[xs] 0 0;
+
+  &.--error {
+    color: @colors[red-300];
+  }
+
+  &.--align-center {
+    text-align: center;
+  }
+
+  & + & {
+    margin-top: @spacing[xs];
+  }
+}
+
+.oa-button + .oa-message {
+  margin-top: @spacing[s];
+}

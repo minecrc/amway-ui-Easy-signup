@@ -1,0 +1,66 @@
+@import './variables.less';
+@import './mixins.less';
+
+.oa-input-group {
+  @height: @input-height;
+  @side-padding: @spacing[s];
+
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 100%;
+
+  &.--inline:not(.--inline-desktop) {
+    .oa-inline();
+  }
+
+  &.--inline-desktop {
+    @media screen and (min-width: @breakpoints[sm]) {
+      .oa-inline();
+    }
+  }
+
+  &.--with-select &__input {
+    @media screen and (min-width: @breakpoints[md]) {
+      flex: 2;
+      margin-top: 0;
+    }
+  }
+
+  &.--with-button &__input {
+    @media screen and (min-width: @breakpoints[md]) {
+      flex: 3;
+      margin-top: 0;
+    }
+  }
+
+  &.--with-select &__select {
+    @media screen and (min-width: @breakpoints[md]) {
+      flex: 1;
+      margin-right: @spacing[s];
+    }
+  }
+
+  &.--with-button &__button {
+    @media screen and (min-width: @breakpoints[md]) {
+      flex: 1;
+      margin-top: 0;
+      margin-left: @spacing[s];
+    }
+  }
+
+  &__error-message {
+    @media screen and (min-width: @breakpoints[md]) {
+      order: 2;
+    }
+  }
+
+  & + &:not(.--inline) {
+    margin-top: @spacing[xs];
+  }
+}
+
+.oa-label + .oa-input-group {
+  margin-top: @spacing[s];
+}

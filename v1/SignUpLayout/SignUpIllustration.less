@@ -1,0 +1,44 @@
+@import '../Common/variables.less';
+
+.oa-sign-up-illustration {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 155px;
+  height: 175px;
+  margin: 0 auto;
+
+  &__background {
+    display: none;
+  }
+
+  &__people {
+    height: 175px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    align-items: flex-end;
+    width: 312px;
+    height: 428px;
+    padding-bottom: @spacing[xl];
+
+    &__background {
+      display: block;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &__people {
+      position: absolute;
+      bottom: @spacing[xs];
+      height: 290px;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import '../Common/variables.less';
+
+.oa-popup-menu {
+  position: fixed;
+  z-index: @z-indexes[popup-menu];
+  height: 100%;
+
+  &:not([data-init='true']),
+  &:not(.--init) {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &.--mobile {
+    top: 0;
+    width: 90%;
+    max-width: 328px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    background: @colors[white];
+  }
+
+  &.--mobile.--left {
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  &.--mobile.--right {
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  &.--mobile.--active {
+    transform: none;
+    box-shadow: @shadows[xs-soft];
+  }
+
+  &.--mobile &__header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: @mobile-item-height;
+    overflow: hidden;
+    border-bottom: solid 1px @colors[grey-200];
+  }
+
+  &.--mobile.--inverse &__header {
+    border-bottom-color: @colors[amway-400];
+    background: @colors[amway-500];
+    color: @colors[white];
+  }
+
+  &.--mobile &__container {
+    position: absolute;
+    top: @mobile-item-height;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  &.--desktop {
+    height: auto;
+    overflow-y: visible;
+    transform: translate3d(0, @spacing[xs], 0);
+    transition: opacity 0.2s, transform 0.2s;
+    opacity: 0;
+    box-shadow: @shadows[xl-soft];
+    pointer-events: none;
+  }
+
+  &.--desktop.--active {
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &.--desktop &__header {
+    display: none;
+  }
+
+  &.--desktop &__container {
+    position: relative;
+    background: @colors[white];
+  }
+}

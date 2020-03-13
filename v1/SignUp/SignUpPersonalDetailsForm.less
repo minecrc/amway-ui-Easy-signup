@@ -1,0 +1,96 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-sign-up-personal-details-form {
+  &__id-card {
+    display: flex;
+    align-items: center;
+    height: @input-height;
+    margin-bottom: @spacing[s];
+    padding: 0 @spacing[s];
+    background: @colors[grey-100];
+    color: @colors[grey-400];
+  }
+
+  &__edit-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__photo {
+    width: 100%;
+    margin-bottom: @spacing[s];
+
+    @media screen and (min-width: @breakpoints[sm]) {
+      @gap: @spacing[xs];
+
+      width: ~'calc(50% - @{gap})';
+    }
+  }
+
+  &__photo-error {
+    display: flex;
+    width: 100%;
+    margin-bottom: @spacing[m];
+    color: @colors[red-200];
+
+    @media screen and (min-width: @breakpoints[sm]) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__photo-error-icon {
+    margin-right: @spacing[ xs];
+  }
+
+  &__reupload-button {
+    margin: @spacing[xs] auto 0;
+
+    @media screen and (min-width: @breakpoints[sm]) {
+      margin-top: @spacing[m];
+    }
+  }
+
+  &__general-info-1:first-of-type {
+    margin-top: @spacing[l];
+  }
+
+  &__general-info-2 {
+    margin-top: 0;
+    margin-bottom: @spacing[m];
+  }
+
+  &__gender {
+    margin-bottom: @spacing[xs];
+  }
+
+  &__birthday {
+    > * {
+      .oa-inline();
+
+      &:first-child,
+      &:last-child {
+        flex: 3 / 4;
+      }
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    &__general-info-2 {
+      margin-top: @spacing[xs];
+    }
+
+    &__gender {
+      margin-bottom: @spacing[m];
+    }
+
+    &__birthday-error {
+      margin-bottom: @spacing[xs];
+    }
+  }
+}
+
+input#birthday {
+  .oa-hidden-input;
+}

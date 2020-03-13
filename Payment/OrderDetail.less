@@ -1,0 +1,43 @@
+@import '../Common/variables.less';
+
+.oa-order-detail {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    padding: 0 @spacing[ @m];
+    background: @colors[ @grey-100];
+  }
+
+  &__header-section.--left {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__title {
+    margin-right: @spacing[ @xs];
+  }
+
+  &__edit-link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__edit-icon {
+    margin-right: 4px;
+  }
+
+  &__content {
+    padding: @spacing[ @s] @spacing[ @m];
+  }
+
+  @media screen and (min-width: @breakpoints[@lg]) {
+    margin-bottom: @spacing[ @m];
+    border: solid 1px @colors[ @grey-200];
+
+    &__content {
+      padding-bottom: @spacing[ @xs];
+    }
+  }
+}

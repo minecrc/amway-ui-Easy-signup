@@ -1,0 +1,121 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-payment-method {
+  margin: 0 @spacing[m];
+  overflow: hidden;
+  transition: border-color 0.2s;
+  border: solid 1px @colors[grey-200];
+  border-radius: @border-radiuses[s];
+  box-shadow: none;
+
+  & + & {
+    margin-top: @spacing[xs];
+  }
+
+  &:hover,
+  &.--active {
+    border-color: @colors[amway-200];
+  }
+
+  &.--disabled {
+    border-color: @colors[grey-300];
+    color: @colors[grey-400];
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &.--disabled &__header {
+    background: @colors[grey-100];
+  }
+
+  &.--disabled &__title {
+    color: @colors[grey-400];
+  }
+
+  &.--disabled &__icon {
+    filter: grayscale(1);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: @spacing[s];
+    transition: background 0.2s;
+    background: @colors[white];
+    text-align: left;
+  }
+
+  &__header:hover,
+  &__header[aria-expanded='true'] {
+    background: @colors[amway-100];
+    color: @colors[amway-primary];
+  }
+
+  button&__header.--mobile-link {
+    display: none;
+  }
+
+  button&__header.--mobile-link ~ &__content {
+    display: none;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    margin-right: @spacing[s];
+  }
+
+  &__title {
+    color: @colors[amway-primary];
+  }
+
+  &__description {
+    .oa-font-style(small);
+  }
+
+  &__content-item {
+    padding: @spacing[s];
+  }
+
+  &__option {
+    font-weight: @font-weights[bold];
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    margin: 0;
+
+    &.--mobile-only {
+      display: none;
+    }
+
+    & + & {
+      margin-top: @spacing[s];
+    }
+
+    a&__header.--mobile-link {
+      display: none;
+    }
+
+    button&__header.--mobile-link {
+      display: flex;
+    }
+
+    button&__header.--mobile-link ~ &__content {
+      display: block;
+    }
+
+    &__description {
+      .oa-font-style(body);
+    }
+
+    &__content-item {
+      padding: @spacing[m] @spacing[xxxl] + @spacing[xs];
+
+      & + & {
+        border-top: solid 1px @colors[grey-200];
+      }
+    }
+  }
+}

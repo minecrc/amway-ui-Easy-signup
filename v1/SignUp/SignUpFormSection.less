@@ -1,0 +1,29 @@
+@import '../Common/variables.less';
+
+.oa-sign-up-form-section {
+  width: 100%;
+
+  &:not(:last-of-type) {
+    padding-bottom: @spacing[l];
+  }
+
+  & + & {
+    padding-top: @spacing[l];
+    border-top: solid 1px @colors[grey-200];
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: @spacing[s];
+  }
+
+  &__description {
+    flex: 100%;
+    margin-top: @spacing[xs];
+    color: @colors[black];
+  }
+}

@@ -1,0 +1,198 @@
+@import './variables.less';
+@import '../Common/mixins.less';
+
+.step-progress-bar {
+  @gap: 3px;
+  @height: 28px;
+  @angle: 40deg;
+  @border-size: 2px;
+  @arrow-width: round(@height / 2 * tan(@angle) + @border-size);
+
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  cursor: pointer;
+  user-select: none;
+
+  &__step {
+    position: relative;
+    box-sizing: border-box;
+    flex: 1;
+    height: @height;
+    margin-right: @gap;
+    color: @colors[amway-500];
+
+    .oa-font-style(small, bold);
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: @z-indexes[step-progress-bar-arrow];
+      right: 0;
+      left: 0;
+      height: 50%;
+      background: @colors[amway-100];
+    }
+
+    &:before {
+      top: 0;
+      transform: skewX(@angle);
+      transform-origin: 0% 0%;
+    }
+
+    &:after {
+      bottom: 0;
+      transform: skewX(-@angle);
+      transform-origin: 0% 100%;
+    }
+
+    &:last-child {
+      &:before,
+      &:after {
+        left: auto;
+        width: @arrow-width;
+      }
+    }
+
+    &:first-child {
+      flex: 1.05;
+      margin-right: 0;
+
+      &:before,
+      &:after {
+        right: auto;
+        width: @arrow-width;
+      }
+    }
+
+    &.--current {
+      &:before {
+        border-top: @border-size solid @colors[amway-500];
+        background: @colors[white];
+      }
+
+      &:after {
+        border-bottom: @border-size solid @colors[amway-500];
+        background: @colors[white];
+      }
+
+      &:not(:last-child) {
+        &:before,
+        &:after {
+          border-left: @border-size * 1.4 solid @colors[amway-500];
+        }
+      }
+
+      &:not(:first-child) {
+        &:before,
+        &:after {
+          border-right: @border-size * 1.4 solid @colors[amway-500];
+        }
+      }
+    }
+
+    &.--passed {
+      color: @colors[white];
+
+      &:before,
+      &:after {
+        background: @colors[amway-500];
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    position: relative;
+    z-index: @z-indexes[step-progress-bar-label];
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-left: @arrow-width * 2 / 3;
+    border: @border-size solid transparent;
+  }
+
+  &__step:last-child &__label,
+  &__step:first-child &__label {
+    z-index: @z-indexes[ground];
+    background: @colors[amway-100];
+  }
+
+  &__step:last-child &__label {
+    border-top-left-radius: @height;
+    border-bottom-left-radius: @height;
+  }
+
+  &__step:first-child &__label {
+    margin-left: @arrow-width;
+    padding-right: @arrow-width;
+    border-top-right-radius: @height;
+    border-bottom-right-radius: @height;
+  }
+
+  &__step:last-child.--current &__label,
+  &__step:first-child.--current &__label {
+    border-color: @colors[amway-500];
+    background: @colors[white];
+  }
+
+  &__step:last-child.--current &__label {
+    border-right-color: transparent;
+  }
+
+  &__step:first-child.--current &__label {
+    border-left-color: transparent;
+  }
+
+  &__step:last-child.--passed &__label,
+  &__step:first-child.--passed &__label {
+    background: @colors[amway-500];
+  }
+
+  &__text {
+    display: none;
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    @gap: 5px;
+    @height: @input-height;
+    @arrow-width: round(@height / 2 * tan(@angle) + @border-size);
+
+    max-width: 940px;
+
+    &__step {
+      height: @height;
+      margin-right: @gap;
+
+      .oa-font-style(medium, bold);
+
+      &:last-child,
+      &:first-child {
+        &:before,
+        &:after {
+          width: @arrow-width;
+        }
+      }
+    }
+
+    &__label {
+      padding-left: @arrow-width / 2;
+    }
+
+    &__step:last-child &__label {
+      padding-left: @arrow-width;
+    }
+
+    &__step:first-child &__label {
+      margin-left: @arrow-width;
+      padding-right: @arrow-width;
+    }
+
+    &__text {
+      display: inline;
+    }
+  }
+}

@@ -1,0 +1,164 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-search-modal {
+  position: absolute;
+  z-index: @z-indexes[ @search-modal];
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-bottom: @spacing[ @m];
+  overflow-y: auto;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.2s;
+  background: @colors[ @white];
+  box-shadow: @shadows[ @xl-soft];
+  pointer-events: none;
+
+  &.--active {
+    transform: none;
+    pointer-events: auto;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    height: @search-bar-height;
+    margin-bottom: @spacing[ @m];
+    padding: 0 @spacing[ @s];
+    border-bottom: solid 1px @colors[ @grey-200];
+  }
+
+  &__close-button {
+    flex: none;
+    margin-left: @spacing[ @xs];
+    color: @colors[ @amway-primary];
+  }
+
+  &__section {
+    padding: 0 @spacing[ @s];
+
+    & + & {
+      margin-top: @spacing[ @m];
+    }
+
+    > header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: @spacing[ @s];
+      color: @colors[ @amway-primary];
+    }
+  }
+
+  &__see-all {
+    display: flex;
+    align-items: center;
+  }
+
+  &__keywords {
+    border-top: solid 1px @colors[ @grey-200];
+  }
+
+  &__keyword {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: @input-height;
+    border-bottom: solid 1px @colors[ @grey-200];
+  }
+
+  &__products {
+    > li + li {
+      margin-top: @spacing[ @m];
+    }
+  }
+
+  &__product {
+    display: flex;
+  }
+
+  &__product-image {
+    flex: none;
+    width: 120px;
+    height: 120px;
+    margin-right: @spacing[ @s];
+  }
+
+  &__product-info {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__product-description {
+    color: @colors[ @grey-400];
+  }
+
+  &__product-price {
+    color: @colors[ @amway-primary];
+    font-weight: @font-weights[ @bold];
+  }
+
+  &__product-checkout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: @breakpoints[@lg]) {
+    top: @topmost-bar-height + @navigation-bar-desktop-height;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    width: 100%;
+    max-width: @content-max-width;
+    padding: @spacing[ @xl];
+    transform: translate3d(-50%, @spacing[ @xs], 0);
+    transition: opacity 0.2s, transform 0.2s;
+    opacity: 0;
+
+    &.--active {
+      transform: translate3d(-50%, 0, 0);
+      opacity: 1;
+    }
+
+    &__header {
+      display: none;
+    }
+
+    &__section {
+      padding: 0;
+
+      > header {
+        margin-bottom: 0;
+      }
+    }
+
+    &__title {
+      font-size: @font-sizes[ @heading-5];
+    }
+
+    &__keywords {
+      border: none;
+    }
+
+    &__keyword {
+      height: 60px;
+    }
+
+    &__products {
+      display: flex;
+      margin-right: -@spacing[ @xl];
+
+      > li {
+        flex: 1 0 33%;
+        margin-top: @spacing[ @m];
+        padding-right: @spacing[ @xl];
+      }
+    }
+  }
+}

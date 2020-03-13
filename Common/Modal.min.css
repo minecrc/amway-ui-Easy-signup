@@ -1,0 +1,1 @@
+.oa-modal.modal{display:flex;align-items:center;justify-content:center}.oa-modal__dialog{width:calc(100% - 24px * 2);max-width:532px;margin:0}@media screen and (min-width:992px){.oa-modal__dialog{max-width:980px}}.oa-modal .modal-content{border:none;border-radius:0}@media screen and (min-width:992px){.oa-modal .modal-content{padding:0 24px}}

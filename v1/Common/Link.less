@@ -1,0 +1,18 @@
+@import './variables.less';
+
+.oa-link {
+  color: @colors[amway-primary];
+
+  &.--bold {
+    font-weight: @font-weights[bold];
+  }
+
+  &:hover {
+    color: @colors[amway-primary];
+    text-decoration: none;
+  }
+}
+
+.oa-button + .oa-link {
+  margin-top: @spacing[s];
+}

@@ -1,0 +1,51 @@
+@import '../Common/variables.less';
+
+.oa-order-detail-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+
+  &.--danger {
+    color: @colors[red-300];
+  }
+
+  &.--highlight &__name {
+    font-weight: @font-weights[bold];
+  }
+
+  &__content {
+    flex: 100%;
+    margin-top: @spacing[xs];
+  }
+
+  &__name {
+    flex: 1;
+  }
+
+  &__value-separator {
+    display: none;
+  }
+
+  &__value-2 {
+    flex: 100%;
+    text-align: right;
+  }
+
+  &:not(:first-child) {
+    margin-top: @spacing[xs];
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    &__value-separator {
+      display: inline;
+      margin-left: @spacing[xs];
+    }
+
+    &.--inline-desktop &__value-2 {
+      flex: none;
+      margin-left: @spacing[xs];
+    }
+  }
+}

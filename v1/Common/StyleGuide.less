@@ -1,0 +1,193 @@
+@import './variables.less';
+@import '../Common/mixins.less';
+
+@width: 270px;
+@section-width: (@width * 2) + @spacing[xxxl];
+
+.oa-color {
+  display: flex;
+  justify-content: space-between;
+  color: @colors[white];
+  text-transform: capitalize;
+
+  &.--regular {
+    padding: @spacing[s] @spacing[m];
+  }
+
+  &.--small {
+    padding: 10px;
+
+    .oa-font-style(extra-small);
+  }
+}
+
+.oa-style-guide {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: @section-width * 2 + @spacing[xxl] * 4 + @spacing[xxxl] * 2;
+  margin: 0 auto;
+  padding: @spacing[l] @spacing[xxxl];
+  background: @colors[white];
+
+  &__section {
+    display: flex;
+    position: relative;
+    flex: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: @section-width;
+    margin: @spacing[xxl];
+
+    header {
+      flex: 100%;
+      margin-bottom: @spacing[xxl];
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+
+      .oa-font-style(heading-3);
+    }
+  }
+
+  &__swatches {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    width: 100%;
+
+    > * {
+      align-items: flex-end;
+    }
+
+    &.--primary {
+      > * {
+        flex: 100%;
+        height: 120px;
+
+        &:last-child {
+          height: 100px;
+        }
+      }
+    }
+
+    &.--secondary {
+      > * {
+        flex: 100%;
+        height: @spacing[xxxxl];
+
+        &:first-child,
+        &:nth-child(2) {
+          flex: 50%;
+          height: 60px;
+        }
+
+        &:nth-child(5) {
+          height: 120px;
+        }
+      }
+    }
+
+    &.--grey-scale {
+      flex-direction: row;
+
+      > * {
+        flex: 100%;
+        height: 120px;
+
+        &:first-child,
+        &:nth-child(2) {
+          flex: 50%;
+          height: @spacing[xxxxl];
+          margin-bottom: @spacing[xxl];
+        }
+      }
+    }
+  }
+
+  &__font {
+    width: 100%;
+  }
+
+  &__spacing {
+    width: 100%;
+    border-top: solid 1px @colors[amway-100];
+
+    & + & {
+      margin-top: @spacing[s];
+    }
+  }
+}
+
+.oa-accent-color {
+  display: flex;
+  width: @width;
+  margin-bottom: @spacing[m];
+
+  > * {
+    flex: 1;
+    flex-direction: column;
+    align-self: flex-start;
+    height: 96px;
+  }
+}
+
+.oa-primary-color {
+  display: flex;
+  flex-wrap: wrap;
+  width: @width;
+  margin-bottom: @spacing[s];
+
+  > * {
+    align-items: flex-end;
+    overflow: hidden;
+
+    &:first-child {
+      width: 100%;
+      height: 304px;
+    }
+    &:not(:first-child) {
+      flex: 1;
+      height: 30px;
+    }
+  }
+}
+
+.oa-border-set {
+  margin-bottom: @spacing[m];
+  text-transform: capitalize;
+
+  p {
+    flex: 100%;
+    margin-bottom: @spacing[s];
+    line-height: @font-sizes[body];
+  }
+
+  &__group {
+    display: flex;
+    margin-right: @spacing[xs];
+    margin-bottom: @spacing[xs];
+  }
+
+  &__item {
+    width: 50px;
+    height: 50px;
+
+    &:not(:last-child) {
+      margin-right: @spacing[xs];
+    }
+  }
+}
+
+.oa-typography {
+  width: 100%;
+
+  &__title {
+    margin-bottom: @spacing[xs];
+    letter-spacing: @spacing[s];
+    text-transform: uppercase;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: @spacing[l];
+  }
+}

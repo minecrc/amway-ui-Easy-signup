@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PaymentFullSuccess</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/Common/normalize.min.css" />
+    <link rel="stylesheet" href="/Payment/OrderDetailItem.min.css" />
+    <link rel="stylesheet" href="/Payment/OrderDetailSection.min.css" />
+    <link rel="stylesheet" href="/Payment/PaymentEndLayout.min.css" />
+    <link rel="stylesheet" href="/Common/Image.min.css" />
+    <link rel="stylesheet" href="/Payment/PaymentSuccess.min.css" />
+    <link rel="stylesheet" href="/Header/NavigationBar.min.css" />
+    <link rel="stylesheet" href="/Common/Icon.min.css" />
+    <link rel="stylesheet" href="/Header/IdBadge.min.css" />
+    <link rel="stylesheet" href="/Common/Input.min.css" />
+    <link rel="stylesheet" href="/Layout/MainLayout.min.css" />
+    <link rel="stylesheet" href="/Common/DimLayer.min.css" />
+    <link rel="stylesheet" href="/Common/Button.min.css" />
+    <link rel="stylesheet" href="/Common/Link.min.css" />
+  </head>
+  <body>
+    <div id="root">
+      <header class="oa-main-layout__header"></header>
+      <div id="dim-layer" class="oa-dim-layer"></div>
+      <div id="oa-main-layout" class="oa-main-layout --no-bar">
+        <div class="oa-main-layout__content">
+          <nav
+            class="oa-navigation-bar"
+            aria-label="primary"
+            data-dropdown-top-restrict="true"
+          >
+            <div class="oa-navigation-bar__container">
+              <section class="oa-navigation-bar__section --left">
+                <div class="oa-navigation-bar__logo">
+                  <img
+                    class="oa-image"
+                    data-src="/static/images/amway-logo-white.svg"
+                    alt="amway-logo-white"
+                  />
+                </div>
+              </section>
+            </div>
+          </nav>
+          <main class="oa-payment-end-layout">
+            <header class="oa-payment-end-layout__header">
+              <img
+                class="oa-image oa-payment-end-layout__image"
+                data-src="/static/images/payment-success.svg"
+                alt="payment-success"
+              />
+              <h4 class="oa-payment-end-layout__title">ชำระเงินสำเร็จแล้ว!</h4>
+              <p class="oa-payment-end-layout__description">
+                ขอบคุณที่ไว้วางใจในสินค้าและบริการจากแอมเวย์
+              </p>
+            </header>
+            <section class="oa-payment-end-layout__content">
+              <div class="oa-payment-success__summary">
+                <div class="oa-payment-success__summary-box">
+                  <strong class="oa-payment-success__total-amount">
+                    สรุปยอดชำระ
+                  </strong>
+                  <strong>฿ 289,563</strong>
+                </div>
+                <div class="oa-payment-success__summary-box">
+                  <strong>+PV 1,000 / +BV 2,000</strong>
+                </div>
+              </div>
+              <ul
+                class="oa-payment-success__order-details"
+                id="order-details"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                <li class="oa-payment-success__detail">
+                  <button
+                    id="order-info"
+                    role="tab"
+                    type="button"
+                    class="oa-payment-success__detail-header"
+                    data-toggle="collapse"
+                    data-parent="#order-details"
+                    data-target="#order-info-content"
+                    aria-controls="order-info-content"
+                    aria-expanded="true"
+                  >
+                    สรุปคำสั่งซื้อ
+                    <span
+                      class="oa-icon --arrow-down oa-payment-success__collapse-icon"
+                    ></span>
+                  </button>
+                  <div
+                    id="order-info-content"
+                    class="collapse in"
+                    role="tabpanel"
+                    aria-labelledby="order-info"
+                  >
+                    <div class="oa-payment-success__detail-content">
+                      <section
+                        class="oa-order-detail-section --no-desktop-separator"
+                      >
+                        <section
+                          class="oa-order-detail-item --highlight --inline-desktop"
+                        >
+                          <span class="oa-order-detail-item__name">
+                            หมายเลขคำสั่งซื้อ
+                          </span>
+                          <span class="oa-order-detail-item__value-1">
+                            <div class="oa-payment-success__tag">
+                              191027201419D20
+                            </div>
+                          </span>
+                        </section>
+                      </section>
+                      <section
+                        class="oa-order-detail-section --no-desktop-separator"
+                      >
+                        <section
+                          class="oa-order-detail-item --highlight --inline-desktop"
+                        >
+                          <span class="oa-order-detail-item__name">
+                            ผู้ทำการสั่งซื้อ
+                          </span>
+                          <span class="oa-order-detail-item__value-1">
+                            อภิชญา สุขสำราญใจ
+                          </span>
+                          <span class="oa-order-detail-item__value-separator">
+                            /
+                          </span>
+                          <p class="oa-order-detail-item__value-2">00001111</p>
+                        </section>
+                      </section>
+                      <section
+                        class="oa-order-detail-section --no-desktop-separator"
+                      >
+                        <section
+                          class="oa-order-detail-item --highlight --inline-desktop"
+                        >
+                          <span class="oa-order-detail-item__name">
+                            สั่งซื้อให้
+                          </span>
+                          <span class="oa-order-detail-item__value-1">
+                            จาณีณ แทนใจคุณ
+                          </span>
+                          <span class="oa-order-detail-item__value-separator">
+                            /
+                          </span>
+                          <p class="oa-order-detail-item__value-2">00002222</p>
+                        </section>
+                      </section>
+                      <section
+                        class="oa-order-detail-section --no-desktop-separator"
+                      >
+                        <section
+                          class="oa-order-detail-item --highlight --inline-desktop"
+                        >
+                          <span class="oa-order-detail-item__name">
+                            วันที่สั่งซื้อ
+                          </span>
+                          <span class="oa-order-detail-item__value-1">
+                            11 พ.ย. 2562
+                          </span>
+                          <p class="oa-order-detail-item__value-2">
+                            <strong>17:47:14 น.</strong>
+                          </p>
+                        </section>
+                      </section>
+                      <section
+                        class="oa-order-detail-section --no-desktop-separator"
+                      >
+                        <section
+                          class="oa-order-detail-item --highlight --inline-desktop"
+                        >
+                          <span class="oa-order-detail-item__name">
+                            ยอดประจำเดือน
+                          </span>
+                          <span class="oa-order-detail-item__value-1">
+                            พฤศจิกายน
+                          </span>
+                        </section>
+                      </section>
+                      <section
+                        class="oa-order-detail-section --no-desktop-separator"
+                      >
+                        <section
+                          class="oa-order-detail-item --highlight --inline-desktop"
+                        >
+                          <span class="oa-order-detail-item__name">
+                            อัพเดตยอด PV / BV
+                          </span>
+                          <span class="oa-order-detail-item__value-1">
+                            3,623 / 6,938
+                          </span>
+                        </section>
+                      </section>
+                    </div>
+                  </div>
+                </li>
+                <li class="oa-payment-success__detail">
+                  <button
+                    id="shipping-info"
+                    role="tab"
+                    type="button"
+                    class="oa-payment-success__detail-header"
+                    data-toggle="collapse"
+                    data-parent="#order-details"
+                    data-target="#shipping-info-content"
+                    aria-controls="shipping-info-content"
+                    aria-expanded="true"
+                  >
+                    สรุปการจัดส่งสินค้า
+                    <span
+                      class="oa-icon --arrow-down oa-payment-success__collapse-icon"
+                    ></span>
+                  </button>
+                  <div
+                    id="shipping-info-content"
+                    class="collapse in"
+                    role="tabpanel"
+                    aria-labelledby="shipping-info"
+                  >
+                    <div class="oa-payment-success__detail-content">
+                      <section
+                        class="oa-order-detail-section --no-desktop-separator"
+                      >
+                        <section
+                          class="oa-order-detail-item --highlight --inline-desktop"
+                        >
+                          <span class="oa-order-detail-item__name">
+                            ที่อยู่ในการส่งสินค้า
+                          </span>
+                          <p class="oa-order-detail-item__content">
+                            <span>
+                              บริษัท แอมเวย์ (ประเทศไทย) จำกัด 1199/1
+                              ถนนรามคำแหง เขตบางกะปิ จังหวัดกรุงเทพ-มหานคร 10240
+                            </span>
+                          </p>
+                          <p class="oa-order-detail-item__content">
+                            <span>(+66) 123456789</span>
+                          </p>
+                        </section>
+                      </section>
+                    </div>
+                  </div>
+                </li>
+                <li class="oa-payment-success__detail">
+                  <button
+                    id="product-list"
+                    role="tab"
+                    type="button"
+                    class="oa-payment-success__detail-header"
+                    data-toggle="collapse"
+                    data-parent="#order-details"
+                    data-target="#product-list-content"
+                    aria-controls="product-list-content"
+                    aria-expanded="true"
+                  >
+                    สรุปรายละเอียดสินค้า
+                    <span
+                      class="oa-icon --arrow-down oa-payment-success__collapse-icon"
+                    ></span>
+                  </button>
+                  <div
+                    id="product-list-content"
+                    class="collapse in"
+                    role="tabpanel"
+                    aria-labelledby="product-list"
+                  >
+                    <div class="oa-payment-success__detail-content"></div>
+                  </div>
+                </li>
+              </ul>
+              <div class="oa-payment-success__footer">
+                <a
+                  href="/return-policy"
+                  class="oa-link oa-payment-success__return-policy --bold"
+                >
+                  <span
+                    class="oa-icon --return oa-payment-success__return-icon"
+                  ></span>
+                  <span>ข้อมูลการคืนสินค้า</span>
+                </a>
+                <a
+                  href="/"
+                  class="oa-button btn btn-lg --primary --narrow --regular oa-payment-success__button"
+                >
+                  <span>เลือกซื้อสินค้าต่อ</span>
+                </a>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/Common/js/image.js"></script>
+    <script src="/Layout/js/MainLayout.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-via-credit-debit-method {
+  @cvv-input-width: 140px;
+
+  &__collapsible-section {
+    position: relative;
+    margin-top: @spacing[s];
+  }
+
+  &__cvv-input {
+    width: @cvv-input-width;
+  }
+
+  &__note {
+    margin-top: @spacing[s];
+  }
+
+  &__instalment-method {
+    display: flex;
+    flex-direction: column;
+    margin-top: @spacing[m];
+    padding-top: @spacing[m];
+    border-top: solid 1px @colors[grey-200];
+  }
+
+  &__see-instalment-info-button {
+    align-self: flex-end;
+    margin-top: @spacing[s];
+    color: @colors[amway-primary];
+  }
+
+  &__submit-button {
+    margin-top: @spacing[m];
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    &__collapsible-section {
+      margin-top: 0;
+      padding-top: @spacing[s];
+    }
+
+    &__collapsible-section.collapse {
+      display: block;
+    }
+
+    &__card-selection {
+      width: auto;
+      margin-right: @cvv-input-width + @spacing[s];
+    }
+
+    &__cvv-input {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateY(-100%);
+    }
+
+    &__note {
+      margin-top: 0;
+    }
+
+    &__instalment-method {
+      margin-top: @spacing[xl];
+      padding-top: 0;
+      border-top: none;
+    }
+
+    &__submit-button {
+      margin-top: @spacing[l];
+    }
+  }
+}

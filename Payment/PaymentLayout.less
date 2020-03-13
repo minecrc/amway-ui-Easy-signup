@@ -1,0 +1,176 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-payment-layout {
+  @total-amount-section-height: 64px;
+
+  position: relative;
+  flex: 1;
+  padding-bottom: @total-amount-section-height;
+  overflow: hidden;
+  background: @colors[ @grey-100];
+
+  &__header {
+    padding: @spacing[ @m];
+
+    &.--with-background {
+      margin-bottom: 6px;
+      padding: @spacing[ @s] @spacing[ @m];
+      background: @colors[ @white];
+    }
+  }
+
+  &__order-details {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: @total-amount-section-height;
+    left: 0;
+    flex-direction: column;
+    transition: transform 0.2s;
+    background: @colors[ @white];
+    box-shadow: @shadows[ @xl-soft];
+
+    &:not(.--active) {
+      transform: translate3d(0, 100%, 0);
+      pointer-events: none;
+    }
+  }
+
+  &__order-details-header {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: @spacing[ @s] @spacing[ @m];
+    border-bottom: solid 1px @colors[ @grey-200];
+  }
+
+  &__hide-button {
+    color: @colors[ @amway-500];
+  }
+
+  &__order-details-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  &__payment-summary {
+    order: 3;
+  }
+
+  &__total-amount-section {
+    display: none;
+  }
+
+  &__order-summary {
+    display: flex;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    height: @total-amount-section-height;
+    padding: 0 @spacing[ @m];
+    border-top: solid 1px @colors[ @grey-200];
+    background: @colors[ @white];
+    user-select: none;
+  }
+
+  &__pv-bv {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__total-amount {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    > * {
+      font-weight: @font-weights[ @bold];
+      line-height: 1;
+    }
+  }
+
+  &__secured {
+    width: 100%;
+    margin-top: @spacing[ @l];
+    margin-bottom: @spacing[ @m];
+    color: @colors[ @grey-400];
+    text-align: center;
+  }
+
+  @media screen and (min-width: @breakpoints[@lg]) {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    padding-top: @spacing[ @xl];
+    padding-bottom: @spacing[ @xxxxl];
+    background: @colors[ @white];
+
+    .oa-container();
+
+    &__header {
+      flex: 1 0 100%;
+
+      &,
+      &.--with-background {
+        margin-top: @spacing[ @s];
+        margin-bottom: @spacing[ @xl];
+        padding: 0;
+      }
+    }
+
+    &__title {
+      font-size: @font-sizes[ @heading-1];
+    }
+
+    &__content {
+      flex: 658;
+      margin-right: @spacing[ @xxxl];
+    }
+
+    &__order-details {
+      position: relative;
+      flex: 431;
+      background: transparent;
+      box-shadow: none;
+
+      &:not(.--active) {
+        transform: none;
+        pointer-events: auto;
+      }
+    }
+
+    &__order-details-header {
+      display: none;
+    }
+
+    &__payment-summary {
+      order: 0;
+    }
+
+    &__total-amount-section {
+      display: block;
+    }
+
+    &__order-summary {
+      display: none;
+      position: relative;
+    }
+
+    &__total-amount {
+      margin-top: @spacing[ @xs];
+    }
+
+    &__secured {
+      margin-top: @spacing[ @xxl];
+    }
+  }
+}

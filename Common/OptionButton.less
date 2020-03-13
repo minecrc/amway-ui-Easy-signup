@@ -1,0 +1,46 @@
+@import './variables.less';
+@import './mixins.less';
+
+.oa-option-button {
+  .oa-inline();
+
+  &__input {
+    .oa-hidden-input;
+  }
+
+  &__label {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: @input-height;
+    margin: 0;
+    border: solid 1px @colors[ @grey-300];
+    color: @colors[ @amway-500];
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      background-color: @colors[ @amway-100];
+    }
+  }
+
+  &__input:checked + &__label {
+    border-color: @colors[ @amway-500];
+    background-color: @colors[ @amway-100];
+    font-weight: @font-weights[ @bold];
+  }
+
+  &__input:disabled + &__label {
+    border-color: transparent;
+    background-color: @colors[ @grey-100];
+    color: @colors[ @grey-300];
+  }
+
+  &__input:checked:disabled + &__label {
+    border-color: @colors[ @grey-300];
+  }
+}

@@ -1,0 +1,80 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-payment-method {
+  &__method {
+    margin: 0 @spacing[ @m];
+    overflow: hidden;
+    transition: border-color 0.2s;
+    border: solid 1px @colors[ @grey-200];
+    border-radius: @border-radiuses[ @s];
+    box-shadow: none;
+
+    & + & {
+      margin-top: @spacing[ @xs];
+    }
+  }
+
+  &__method:hover,
+  &__method.--active {
+    border-color: @colors[ @amway-200];
+  }
+
+  &__method-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: @spacing[ @s];
+    transition: background 0.2s;
+    background: @colors[ @white];
+    text-align: left;
+  }
+
+  &__method-header:hover,
+  &__method-header[aria-expanded='true'] {
+    background: @colors[ @amway-100];
+    color: @colors[ @amway-primary];
+  }
+
+  &__method-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: @spacing[ @s];
+  }
+
+  &__method-title {
+    color: @colors[ @amway-primary];
+  }
+
+  &__method-description {
+    font-size: @font-sizes[ @small];
+  }
+
+  &__method-content {
+    border-top: solid 1px @colors[ @grey-200];
+  }
+
+  &__method-content-detail {
+    max-width: 580px;
+    margin: 0 auto;
+    padding: @spacing[ @s];
+  }
+
+  @media screen and (min-width: @breakpoints[@lg]) {
+    &__method {
+      margin: 0;
+
+      &.--mobile-only {
+        display: none;
+      }
+
+      & + & {
+        margin-top: @spacing[ @s];
+      }
+    }
+
+    &__method-description {
+      font-size: @font-sizes[ @body];
+    }
+  }
+}

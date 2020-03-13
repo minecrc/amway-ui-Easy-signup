@@ -1,0 +1,36 @@
+@import './variables.less';
+
+.oa-filled-input {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: @input-height;
+  border-radius: @border-radiuses[s];
+  background: @colors[amway-100];
+  color: @colors[amway-300];
+
+  &__value {
+    flex: auto;
+  }
+
+  &__button {
+    border-left: solid 1px @colors[amway-200];
+    color: @colors[amway-500];
+    font-weight: @font-weights[bold];
+
+    &:hover {
+      color: @colors[amway-600];
+    }
+  }
+
+  &__value,
+  &__button {
+    display: flex;
+    align-items: center;
+    padding: 0 @spacing[s];
+  }
+}
+
+.oa-label + .oa-filled-input {
+  margin-top: @spacing[s];
+}

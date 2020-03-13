@@ -1,0 +1,28 @@
+@import './variables.less';
+
+.mz-dim-layer {
+  position: fixed;
+  z-index: @z-indexes[dim-layer];
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  transition: opacity 0.2s linear;
+  opacity: 0;
+  background: rgba(@colors[black], 0.9);
+  pointer-events: none;
+  mix-blend-mode: multiply;
+
+  // still keep active here for backward compactability
+  &.--active,
+  &[data-opened-menu] {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    background: rgba(@colors[white], 0.6);
+    mix-blend-mode: normal;
+  }
+}

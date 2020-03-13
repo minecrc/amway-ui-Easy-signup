@@ -1,0 +1,49 @@
+@import './variables.less';
+
+.oa-inline {
+  flex: 1;
+  width: auto;
+
+  &:not(:last-child) {
+    margin-right: @spacing[ @s];
+  }
+}
+
+.oa-hidden-input {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.oa-container(@max-width: @content-max-width, @side-spacing: @spacing[@m]) {
+  width: 100%;
+  max-width: @max-width + @side-spacing * 2;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: @side-spacing;
+  padding-left: @side-spacing;
+}
+
+.oa-mobile-menu-item {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  flex: none;
+  align-items: center;
+  height: @mobile-item-height;
+  padding: 0 @spacing[ @s];
+  border-bottom: solid 1px @colors[ @grey-200];
+}
+
+.oa-mobile-menu-item-indent {
+  margin-left: @spacing[ @s];
+  padding-right: @spacing[ @m];
+}
+
+.oa-menu-item-style {
+  cursor: pointer;
+
+  &.--outstanding {
+    color: @colors[ @red-300];
+  }
+}

@@ -1,0 +1,137 @@
+/* stylelint-disable property-no-unknown */
+
+@colors: {
+  amway-primary: #002f5f;
+
+  amway-600: #03274c;
+  amway-500: #09498b;
+  amway-400: #38649a;
+  amway-300: #7d98ba;
+  amway-200: #d3e1eb;
+  amway-100: #f1f9fd;
+
+  black: #2c2c2c;
+
+  grey-600: #3a3a3a;
+  grey-500: #56565a;
+  grey-400: #9ea0a3;
+  grey-300: #c3c4c5;
+  grey-200: #ededed;
+  grey-100: #fafafa;
+  white: #ffffff;
+
+  red-300: #a80035;
+  red-200: #ce183d;
+  red-100: #ffdee5;
+
+  brown-300: #913d1d;
+  brown-200: #f3855a;
+  brown-100: #fff1e8;
+
+  yellow-300: #fa951b;
+  yellow-200: #ffc63a;
+  yellow-100: #fffae5;
+
+  purple-300: #511e62;
+  purple-200: #8b539e;
+  purple-100: #f7f1ff;
+
+  green-300: #1e5735;
+  green-200: #90c353;
+  green-100: #f0fae5;
+};
+
+@font-weights: {
+  text: 400;
+  medium: 500;
+  bold: 700;
+  extra-bold: 800;
+};
+
+@font-sizes: {
+  heading-1: 36px;
+  heading-2: 32px;
+  heading-3: 24px;
+  heading-4: 20px;
+  heading-5: 18px;
+  body: 16px;
+  medium: 14px;
+  small: 13px;
+  extra-small: 12px;
+};
+
+@icon-sizes: {
+  m: 20px;
+  l: 24px;
+  xxl: 40px;
+};
+
+@spacing: {
+  xs: 8px;
+  s: 16px;
+  m: 24px;
+  l: 32px;
+  xl: 40px;
+  xxl: 48px;
+  xxxl: 64px;
+  xxxxl: 80px;
+};
+
+@border-radiuses: {
+  s: 4px;
+  m: 8px;
+};
+
+@gap-sizes: {
+  large: 6px;
+};
+
+@shadows: {
+  xs: 0 2px 4px 0 rgba(@colors[ amway-primary], 0.3);
+  s: 0 4px 8px -1px rgba(@colors[ amway-primary], 0.3);
+  m: 0 8px 8px -1px rgba(@colors[ amway-primary], 0.3);
+  l: 0 8px 16px 1px rgba(@colors[ amway-primary], 0.3);
+  xl: 0 16px 24px 0 rgba(@colors[ amway-primary], 0.3);
+  xs-soft: 0 2px 4px 0 rgba(@colors[ amway-primary], 0.1);
+  s-soft: 0 4px 8px -1px rgba(@colors[ amway-primary], 0.1);
+  m-soft: 0 8px 8px -1px rgba(@colors[ amway-primary], 0.1);
+  l-soft: 0 8px 16px 1px rgba(@colors[ amway-primary], 0.1);
+  xl-soft: 0 16px 24px 0 rgba(@colors[ amway-primary], 0.1);
+  arrow-shadow: 0 2px 16px 2px rgba(@colors[ amway-primary], 0.1);
+};
+
+@breakpoints: {
+  xs: 375px;
+  sm: 576px;
+  md: 768px;
+  lg: 992px;
+  xl: 1180px;
+};
+
+@z-indexes: {
+  ground: 0;
+  step-progress-bar-arrow: 1;
+  step-progress-bar-label: 2;
+  mobile-header: 9;
+  dim-layer: 10;
+  desktop-header: 11;
+  popup-menu: 12;
+  search-modal: 13;
+}
+
+@content-max-width: @breakpoints[ xl];
+
+@topmost-bar-height: 40px;
+@navigation-bar-desktop-height: 80px;
+@navigation-bar-mobile-height: 54px;
+@menu-bar-height: 56px;
+@search-bar-height: 64px;
+
+@arrow-size: 12px;
+
+@input-height: 48px;
+@textarea-height: 96px;
+
+@profile-widget-width: 280px;
+
+@mobile-item-height: 64px;

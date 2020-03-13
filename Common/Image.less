@@ -1,0 +1,29 @@
+.oa-image {
+  position: relative;
+
+  &,
+  img {
+    transition: opacity 0.2s;
+  }
+
+  img[data-src],
+  img[data-src-set],
+  &[data-src],
+  &[data-background-src] {
+    opacity: 0;
+  }
+
+  &.--insert-animation {
+    &,
+    img {
+      transition: transform 0.5s cubic-bezier(0.4, 0.1, 0.5, 1.5), opacity 0.5s;
+    }
+
+    img[data-src],
+    img[data-src-set],
+    &[data-src],
+    &[data-background-src] {
+      transform: translateY(-10%);
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import '../Common/variables.less';
+
+.oa-order-detail {
+  margin-top: @gap-sizes[large];
+  background: @colors[white];
+
+  &:last-child {
+    border-bottom: solid 1px @colors[grey-200];
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: @spacing[m];
+  }
+
+  &__header-section.--left {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__title {
+    margin-right: @spacing[xs];
+  }
+
+  &__edit-link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__edit-icon {
+    margin-right: 4px;
+  }
+
+  &__content {
+    padding: 0 @spacing[m] @spacing[m];
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    margin-top: 0;
+    margin-bottom: @spacing[m];
+    border: solid 1px @colors[grey-200];
+
+    &__header {
+      padding: @spacing[s] @spacing[m];
+      border-top: none;
+      background: @colors[grey-100];
+    }
+
+    &__content {
+      padding-top: @spacing[s];
+    }
+  }
+}

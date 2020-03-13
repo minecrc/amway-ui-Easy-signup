@@ -1,0 +1,61 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-sign-up-sponsor-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: @spacing[l];
+  padding-bottom: @spacing[l];
+
+  .oa-container();
+
+  &__header {
+    width: 100%;
+    margin-bottom: @spacing[l];
+  }
+
+  &__title {
+    color: @colors[amway-primary];
+    text-align: center;
+
+    &.--desktop {
+      display: none;
+    }
+
+    &.--mobile {
+      margin-top: @spacing[l];
+    }
+
+    @media screen and (min-width: @breakpoints[lg]) {
+      &.--desktop {
+        display: block;
+        margin-bottom: @spacing[xxl];
+      }
+
+      &.--mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__illustration {
+    margin-bottom: @spacing[l];
+
+    @media screen and (min-width: @breakpoints[lg]) {
+      margin: 0;
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding-top: @spacing[xxl];
+    padding-bottom: @spacing[xxl];
+
+    &__header {
+      margin-bottom: @spacing[xxl];
+    }
+  }
+}

@@ -1,0 +1,127 @@
+@import './variables.less';
+@import '../Common/mixins.less';
+
+@side-padding: @spacing[s];
+
+.oa-dropdown-menu {
+  position: fixed;
+  top: auto;
+  left: auto;
+  margin-top: 0;
+  padding: 0;
+  overflow-y: auto;
+  border: none;
+  border-radius: 0;
+  background: @colors[white];
+  box-shadow: @shadows[xs-soft];
+}
+
+.oa-dropdown-option {
+  position: relative;
+  box-sizing: border-box;
+  padding: @spacing[s] @side-padding;
+  overflow: visible;
+  transition: background 0.2s;
+  cursor: pointer;
+
+  .oa-font-style(body);
+
+  &:not(:first-child) {
+    margin-top: 1px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      right: @side-padding;
+      left: @side-padding;
+      height: 1px;
+      transition: background 0.2s;
+      background: @colors[grey-200];
+    }
+  }
+
+  &:hover,
+  &.--active {
+    background: @colors[grey-100];
+  }
+
+  &:hover,
+  &.--active,
+  &:hover + &,
+  &.--active + & {
+    &:after {
+      background: transparent;
+    }
+  }
+}
+
+.oa-dropdown {
+  @height: @input-height;
+
+  width: 100%;
+  user-select: none;
+
+  &__label {
+    display: flex;
+    margin: 0 0 4px;
+    color: @colors[grey-400];
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: @height;
+    padding: 2px @side-padding;
+    border: 1px solid @colors[grey-300];
+
+    &:disabled {
+      background: @colors[grey-100];
+    }
+  }
+
+  &__button-text {
+    display: flex;
+    align-items: center;
+
+    &:not(.--selected) {
+      color: @colors[grey-400];
+    }
+  }
+
+  &__icon {
+    transition: color 0.2s;
+    color: @colors[grey-300];
+    font-size: @icon-sizes[l];
+  }
+
+  &__button[aria-expanded='true'] &__icon {
+    transform: scaleY(-1);
+    color: @colors[grey-600];
+  }
+
+  &__menu.dropdown-menu {
+    width: auto;
+    min-width: auto;
+    .oa-dropdown-menu();
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+
+    .oa-dropdown-option();
+  }
+
+  &__option-image {
+    width: 32px;
+    height: 32px;
+    margin-right: @spacing[s];
+  }
+
+  h6 + & {
+    margin-top: @spacing[s];
+  }
+}

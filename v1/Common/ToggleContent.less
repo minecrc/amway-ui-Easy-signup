@@ -1,0 +1,61 @@
+@import './variables.less';
+
+.oa-toggle-content {
+  width: 100%;
+  max-width: 380px;
+  overflow: hidden;
+
+  &__buttons {
+    display: flex;
+    position: relative;
+    border: solid @spacing[xs] @colors[grey-100];
+    border-radius: @border-radiuses[s];
+    background: @colors[grey-100];
+    color: @colors[amway-primary];
+  }
+
+  &__active-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    transition: transform 0.2s;
+    border-radius: @border-radiuses[s];
+    background: @colors[amway-primary];
+  }
+
+  &__button {
+    position: relative;
+    flex: 1 1 0;
+    padding: @spacing[xs];
+    transition: color 0.2s;
+    background: none;
+
+    &.--active {
+      color: @colors[white];
+      font-weight: @font-weights[bold];
+    }
+  }
+
+  &__container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-top: @spacing[m];
+  }
+
+  &__content {
+    visibility: hidden;
+    flex: none;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+
+    &.--active {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}

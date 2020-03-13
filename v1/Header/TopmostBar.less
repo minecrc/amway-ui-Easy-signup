@@ -1,0 +1,34 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-topmost-bar {
+  display: none;
+  height: @topmost-bar-height;
+  background: @colors[amway-600];
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    .oa-container(@side-spacing: @spacing[s]);
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__link {
+    margin-left: @spacing[l];
+    color: @colors[amway-300];
+
+    &.--outstanding {
+      color: @colors[white];
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    display: block;
+  }
+}

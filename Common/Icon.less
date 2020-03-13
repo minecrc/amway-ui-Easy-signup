@@ -1,0 +1,106 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+
+@import './variables.less';
+
+@font-face {
+  font-family: 'Amway Icon';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/static/fonts/amway-icon.eot');
+  src: url('/static/fonts/amway-icon.eot?#iefix') format('embedded-opentype'),
+    url('/static/fonts/amway-icon.woff') format('woff'),
+    url('/static/fonts/amway-icon.ttf') format('truetype'),
+    url('/static/fonts/amway-icon.svg#amway-icon') format('svg');
+}
+
+.oa-icon {
+  display: inline-block;
+  flex: none;
+  color: inherit;
+
+  &:before {
+    display: flex;
+    font-family: 'Amway Icon' !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal !important;
+    font-variant: normal !important;
+    font-weight: normal !important;
+    line-height: 1.2;
+    text-transform: none !important;
+    speak: none;
+  }
+
+  &.--arrow-down:before {
+    content: '\61';
+  }
+  &.--arrow-left:before {
+    content: '\62';
+  }
+  &.--arrow-right:before {
+    content: '\63';
+  }
+  &.--camera:before {
+    content: '\64';
+  }
+  &.--cart:before {
+    content: '\65';
+  }
+  &.--checkbox-checked:before {
+    content: '\66';
+  }
+  &.--checkmark:before {
+    content: '\67';
+  }
+  &.--edit:before {
+    content: '\68';
+  }
+  &.--email:before {
+    content: '\69';
+  }
+  &.--logout:before {
+    content: '\6a';
+  }
+  &.--radio-checked:before {
+    content: '\6b';
+  }
+  &.--search:before {
+    content: '\6c';
+  }
+  &.--search-reset:before {
+    content: '\6d';
+  }
+  &.--sms:before {
+    content: '\6e';
+  }
+  &.--unchecked:before {
+    content: '\6f';
+  }
+  &.--user:before {
+    content: '\70';
+  }
+  &.--back:before {
+    content: '\71';
+  }
+  &.--close:before {
+    content: '\72';
+  }
+  &.--heart:before {
+    content: '\73';
+  }
+  &.--bell:before {
+    content: '\74';
+  }
+  &.--copy:before {
+    content: '\75';
+  }
+  &.--print:before {
+    content: '\76';
+  }
+  &.--information:before {
+    content: '\77';
+  }
+  &.--return:before {
+    content: '\78';
+  }
+}

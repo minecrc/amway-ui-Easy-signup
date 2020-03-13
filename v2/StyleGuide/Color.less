@@ -1,0 +1,23 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-color {
+  display: flex;
+  justify-content: space-between;
+  color: @colors[white];
+  text-transform: capitalize;
+
+  &.--regular {
+    padding: @spacing[s] @spacing[m];
+  }
+
+  &.--small {
+    padding: 10px;
+
+    .mz-font-style(extra-small);
+
+    > *:last-child {
+      margin-top: @spacing[s];
+    }
+  }
+}

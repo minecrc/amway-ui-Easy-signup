@@ -1,0 +1,18 @@
+@import '../Common/variables.less';
+
+.oa-order-detail-section {
+  & + & {
+    margin-top: @spacing[s];
+    padding-top: @spacing[s];
+    border-top: solid 1px @colors[grey-200];
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    &.--no-desktop-separator {
+      & + & {
+        margin-top: 0;
+        border-top: none;
+      }
+    }
+  }
+}

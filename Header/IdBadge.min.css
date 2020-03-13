@@ -1,0 +1,11 @@
+.oa-id-badge {
+    display: inline-block;
+    height: 18px;
+    padding: 0 10px;
+    border-radius: 10px;
+    background: #38649a;
+    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+    user-select: none
+}

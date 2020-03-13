@@ -1,0 +1,34 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-menu-bar {
+  display: none;
+  background: @colors[ @white];
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    height: @menu-bar-height;
+    user-select: none;
+
+    .oa-container(@side-spacing: @spacing[ @s]);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: @colors[ @amway-primary];
+    font-weight: @font-weights[ @bold];
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &.--outstanding {
+      color: @colors[ @red-300];
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[@lg]) {
+    display: block;
+  }
+}

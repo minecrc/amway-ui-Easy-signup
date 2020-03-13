@@ -1,0 +1,20 @@
+@import '../Common/variables.less';
+
+.oa-noti-badge {
+  @size: 13px;
+  @font-size: 11px;
+
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  height: @size;
+  padding: 0 4px;
+  transform: translateX(25%);
+  border-radius: @size;
+  background: @colors[red-200];
+  font-size: @font-size;
+  font-weight: @font-weights[bold];
+  line-height: 1;
+}

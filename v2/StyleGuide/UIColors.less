@@ -1,0 +1,105 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-ui-colors {
+  display: grid;
+  grid-column-gap: @spacing[xxxxl];
+  grid-row-gap: @spacing[xxxl] * 2;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  padding: @spacing[xxxl] @spacing[xxxxl] * 2;
+
+  section header {
+    grid-area: header;
+  }
+
+  section header h3 {
+    color: @colors[black];
+
+    .mz-font-style(heading-3);
+  }
+
+  section header p {
+    color: @colors[grey-400];
+  }
+
+  &__primary-colors {
+    display: grid;
+    grid-column-gap: @spacing[m];
+    grid-row-gap: @spacing[m];
+    grid-template-areas:
+      'header header'
+      'body body';
+    grid-template-rows: auto 1fr;
+  }
+
+  &__accent-colors {
+    display: grid;
+    grid-column-gap: @spacing[m];
+    grid-row-gap: @spacing[m];
+    grid-template-areas:
+      'header header'
+      'body body'
+      'body body'
+      'body body';
+    grid-template-rows: auto 1fr 1fr 1fr;
+  }
+
+  &__primary-swatches {
+    display: grid;
+    grid-row-gap: @spacing[m];
+    grid-template-areas:
+      'header'
+      'body';
+    grid-template-rows: auto 1fr 1fr 1fr;
+  }
+
+  &__secondary-swatches {
+    display: grid;
+    grid-row-gap: @spacing[m];
+    grid-template-areas:
+      'header header'
+      'body body'
+      'body body'
+      'body body'
+      'body body'
+      'body body';
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
+
+    > *:not(:first-child):not(:nth-last-child(2)):not(:last-child) {
+      grid-column-end: span 2;
+      grid-column-start: 1;
+    }
+  }
+
+  &__greyscale-swatches {
+    display: grid;
+    grid-row-gap: @spacing[m];
+    grid-template-areas:
+      'header header'
+      'body body'
+      'body body'
+      'body body'
+      'body body'
+      'body body'
+      'body body'
+      'body body';
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    > *:not(:first-child):not(:nth-child(2)):not(:nth-child(3)) {
+      grid-column-end: span 2;
+      grid-column-start: 1;
+    }
+  }
+
+  &__outlines {
+    display: grid;
+    grid-column-gap: @spacing[m];
+    grid-row-gap: @spacing[m];
+    grid-template-areas:
+      'header header header header header header'
+      'body body body body body body';
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}

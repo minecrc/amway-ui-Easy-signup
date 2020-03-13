@@ -1,0 +1,152 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-order-product-list {
+  @mobile-image-width: 120px;
+  @content-spacing: @spacing[ xs];
+
+  width: 100%;
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: @spacing[ xs];
+    }
+
+    img {
+      flex: none;
+      width: @mobile-image-width;
+    }
+  }
+
+  &__item-content-wrapper {
+    display: flex;
+    flex: 0 1 ~'calc(100% - @{mobile-image-width} - @{content-spacing})';
+    flex-wrap: wrap;
+    align-self: center;
+    margin-top: @spacing[ xs];
+    margin-left: @content-spacing;
+
+    .oa-font-style(body);
+  }
+
+  &__item-content {
+    flex: none;
+    width: 100%;
+    margin-bottom: @spacing[ xs];
+  }
+
+  &__item-quantity {
+    text-align: center;
+  }
+
+  &__item-quantity-label,
+  &__item-quantity-label ~ br {
+    display: none;
+  }
+
+  &__item-price {
+    margin-left: auto;
+    color: @colors[amway-primary];
+    font-weight: @font-weights[bold];
+    text-align: right;
+  }
+
+  &__item-barcode {
+    color: @colors[grey-400];
+
+    .oa-font-style(small);
+  }
+
+  &__compact-quantity {
+    display: none;
+    margin-left: @spacing[ m];
+    color: @colors[black];
+  }
+
+  // Expand button
+
+  &__expand-button {
+    margin-top: @spacing[ s];
+  }
+
+  &__button-expanded {
+    display: none;
+  }
+
+  &.in ~ &__expand-button &__button-collapsed {
+    display: none;
+  }
+
+  &.in ~ &__expand-button &__button-expanded {
+    display: inline;
+  }
+
+  @media screen and (min-width: @breakpoints[md]) {
+    max-width: 780px;
+
+    &__item {
+      flex-wrap: nowrap;
+      img {
+        width: 86px;
+      }
+    }
+
+    &__item-content-wrapper {
+      flex-basis: 100%;
+    }
+
+    &__item-content {
+      max-width: 378px;
+    }
+
+    &__item-quantity {
+      flex: 1 0 auto;
+    }
+
+    &__item-quantity-label,
+    &__item-quantity-label ~ br {
+      display: initial;
+    }
+
+    &__item-quantity-quantity {
+      font-weight: @font-weights[bold];
+    }
+
+    &__item-price {
+      color: @colors[black];
+    }
+
+    &.--compact &__compact-quantity {
+      display: inline;
+    }
+
+    &.--compact img {
+      width: 72px;
+    }
+
+    &.--compact &__item-content-wrapper {
+      flex-wrap: nowrap;
+      margin-top: 0;
+    }
+
+    &.--compact &__item-content {
+      max-width: 205px;
+    }
+
+    &.--compact &__item-barcode {
+      margin-top: @spacing[ xs];
+    }
+
+    &.--compact &__item-quantity {
+      display: none;
+    }
+
+    &.--compact &__item-price {
+      color: @colors[amway-primary];
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import '../Common/variables.less';
+
+.oa-sign-up-layout {
+  display: flex;
+  box-sizing: border-box;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: @spacing[ @l] @spacing[ @m];
+
+  &__cover-image {
+    position: relative;
+    height: 250px;
+    margin: (-@spacing[ @l]) (-@spacing[ @m]) 0;
+
+    &.--small {
+      height: 185px;
+    }
+
+    > img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      background: @colors[ @grey-200];
+    }
+
+    @media screen and (min-width: @breakpoints[@lg]) {
+      flex: 4;
+      height: 100%;
+      margin: 0;
+
+      &.--small {
+        height: 100%;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    margin-top: @spacing[ @m];
+    margin-bottom: @spacing[ @xxl];
+
+    &:not(.--align-mobile-left) {
+      align-items: center;
+      text-align: center;
+    }
+
+    @media screen and (min-width: @breakpoints[@lg]) {
+      align-items: center;
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    margin-top: @spacing[ @xs];
+    color: @colors[ @grey-500];
+  }
+
+  @media screen and (min-width: @breakpoints[@lg]) {
+    flex-direction: row;
+    align-items: center;
+    max-width: none;
+    padding: 0;
+  }
+}

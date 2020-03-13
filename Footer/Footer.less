@@ -1,0 +1,50 @@
+@import '../Common/variables.less';
+
+.oa-footer {
+  padding: @spacing[ @l] 0;
+  background: @colors[ @amway-primary];
+  color: @colors[ @amway-200];
+  text-align: center;
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+
+    li {
+      position: relative;
+      padding: 0 @spacing[ @s];
+      font-weight: @font-weights[ @bold];
+    }
+
+    li:not(:last-child) {
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 1px;
+        height: 12px;
+        transform: translateY(-50%);
+        background: @colors[ @amway-400];
+      }
+    }
+  }
+
+  h4&__contact-center {
+    margin-top: @spacing[ @s];
+    font-weight: @font-weights[ @medium];
+    text-transform: uppercase;
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    margin-top: @spacing[ @s];
+
+    img {
+      height: 100%;
+      margin: 0 @spacing[ @s];
+    }
+  }
+}

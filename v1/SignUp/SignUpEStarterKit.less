@@ -1,0 +1,64 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-sign-up-e-starter-kit {
+  padding: @spacing[xs] 0;
+
+  &__image {
+    display: inline;
+    width: 80px;
+    height: 64px;
+    margin-right: @spacing[s];
+    float: left;
+
+    img {
+      height: 100%;
+    }
+
+    @media screen and (min-width: @breakpoints[sm]) {
+      width: 145px;
+      height: 116px;
+      margin-right: @spacing[m];
+    }
+  }
+
+  &__label {
+    display: inline;
+
+    > *:first-child {
+      margin-right: 100%;
+      color: @colors[amway-primary];
+      font-weight: @font-weights[bold];
+
+      @media screen and (min-width: @breakpoints[sm]) {
+        margin-right: 0;
+      }
+    }
+
+    > *:last-child {
+      color: @colors[black];
+
+      .oa-font-style(small);
+
+      @media screen and (min-width: @breakpoints[sm]) {
+        .oa-font-style(body);
+      }
+    }
+  }
+
+  &__agreement-radio-button {
+    margin-top: @spacing[s];
+    float: left;
+    color: @colors[black];
+
+    @media screen and (min-width: @breakpoints[sm]) {
+      margin-top: @spacing[s];
+      float: none;
+    }
+  }
+
+  &__agreement {
+    color: @colors[amway-500];
+    font-weight: @font-weights[bold];
+  }
+}

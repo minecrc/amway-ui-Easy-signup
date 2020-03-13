@@ -1,0 +1,86 @@
+@import './variables.less';
+@import './mixins.less';
+
+.oa-checkable-input {
+  width: 100%;
+
+  &__input {
+    .oa-hidden-input;
+  }
+
+  &__label {
+    display: flex;
+    position: relative;
+    margin: 0;
+    line-height: 1.5 * @font-sizes[body];
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__label.--regular > &__icon:before {
+    line-height: @font-sizes[body] * 1.5;
+  }
+
+  &__label.--small > &__icon:before {
+    line-height: @font-sizes[small] * 1.5;
+  }
+
+  &__label.--small {
+    .oa-font-style(small);
+  }
+
+  &__content:before {
+    content: '';
+    display: block;
+    height: @spacing[s];
+  }
+
+  &.--with-background > &__container {
+    padding: @spacing[xs] @spacing[s];
+    border-radius: @border-radiuses[s];
+    background: @colors[grey-100];
+  }
+
+  &.--with-background > &__input:checked:not(:disabled) + &__container,
+  &.--with-background > &__input:not(:disabled) + &__container:hover {
+    background: @colors[amway-100];
+    color: @colors[amway-500];
+  }
+
+  &__icon {
+    margin-right: @spacing[xs];
+    color: @colors[grey-300];
+    font-size: @icon-sizes[m];
+  }
+
+  &__input:disabled + &__container {
+    color: @colors[grey-400];
+  }
+
+  &__container:hover > &__label > &__icon,
+  &__input:checked + &__container > &__label > &__icon {
+    color: @colors[amway-primary];
+  }
+
+  &__input:disabled + &__container > &__label > &__icon {
+    color: inherit;
+  }
+
+  &__input:checked + &__container > &__label > &__icon.--unchecked,
+  &__input:not(:checked) + &__container > &__label > &__icon.--checked {
+    display: none;
+  }
+
+  &__input:not(:checked) + &__container > &__label & {
+    display: none;
+  }
+
+  & + & {
+    margin-top: @spacing[m];
+  }
+}
+
+.oa-message + .oa-checkable-input,
+.oa-input-group + .oa-checkable-input {
+  margin-top: @spacing[s];
+}

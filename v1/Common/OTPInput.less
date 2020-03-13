@@ -1,0 +1,21 @@
+@import './variables.less';
+
+.oa-otp-input {
+  @side-spacing: 6px;
+
+  display: flex;
+  justify-content: center;
+  margin-right: -@side-spacing;
+  margin-left: -@side-spacing;
+
+  &__input-box {
+    flex: none;
+    width: @input-height;
+    height: @input-height;
+    margin: 0 @side-spacing;
+
+    input {
+      text-align: center;
+    }
+  }
+}

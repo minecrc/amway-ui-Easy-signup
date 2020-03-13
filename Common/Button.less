@@ -1,0 +1,130 @@
+@import './variables.less';
+@import './mixins.less';
+
+.oa-button {
+  display: flex;
+  box-sizing: border-box;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 @spacing[ @s];
+  transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s,
+    color 0.2s;
+  border-radius: 0;
+  font-size: 16px;
+  user-select: none;
+
+  &:focus,
+  &:active:focus {
+    outline: none;
+  }
+
+  &.--inline {
+    .oa-inline();
+  }
+
+  &.--primary {
+    background: @colors[ @amway-primary];
+    color: @colors[ @white];
+
+    &:not(:disabled) {
+      box-shadow: @shadows[ @xs];
+    }
+
+    &:not(:disabled):hover {
+      background: @colors[ @amway-200];
+      color: @colors[ @amway-primary];
+    }
+
+    &:not(:disabled):focus {
+      background: @colors[ @amway-600];
+      color: @colors[ @white];
+    }
+  }
+
+  &.--secondary {
+    color: @colors[ @amway-primary];
+
+    &:not(:disabled) {
+      border: solid 2px @colors[ @amway-primary];
+    }
+
+    &:not(:disabled):hover {
+      border-color: transparent;
+      background: @colors[ @amway-200];
+      color: @colors[ @amway-primary];
+    }
+
+    &:not(:disabled):focus {
+      background: @colors[ @amway-600];
+      color: @colors[ @white];
+    }
+  }
+
+  &:disabled {
+    background: @colors[ @grey-200];
+    color: @colors[ @grey-400];
+  }
+
+  &.--narrow {
+    width: ~'calc(100% - @{side-spacing} * 2)';
+    max-width: 280px;
+    margin-right: auto;
+    margin-left: auto;
+    @side-spacing: @spacing[ @m];
+  }
+
+  &.--auto {
+    width: auto;
+  }
+
+  &.--large {
+    height: @input-height;
+  }
+
+  &.--regular {
+    height: @input-height;
+  }
+
+  &.--small {
+    height: 40px;
+  }
+
+  &.--extra-small {
+    height: 32px;
+    padding: 0 @spacing[ @xs];
+    font-size: @font-sizes[ @medium];
+  }
+
+  &__icon {
+    margin-right: @spacing[ @xs];
+    font-size: 20px;
+  }
+
+  & + &:not(.--inline) {
+    margin-top: @spacing[ @s];
+  }
+
+  @media screen and (min-width: @breakpoints[@md]) {
+    padding: 0 @spacing[ @l];
+  }
+}
+
+.oa-message + .oa-button,
+.oa-input-group + .oa-button,
+.oa-sign-up-form-section + .oa-button {
+  margin-top: @spacing[ @s];
+}
+
+.oa-input + .oa-button {
+  margin-top: @spacing[ @l];
+}
+
+.oa-checkable-input + .oa-button {
+  margin-top: @spacing[ @xl];
+}
+
+.oa-filled-input + .oa-button {
+  margin-top: @spacing[ @xxl];
+}

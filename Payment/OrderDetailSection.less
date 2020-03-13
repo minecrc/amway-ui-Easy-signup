@@ -1,0 +1,25 @@
+@import '../Common/variables.less';
+
+.oa-order-detail-section {
+  &:not(:first-child) {
+    padding-top: @spacing[ @s];
+  }
+
+  &:not(:last-child) {
+    padding-bottom: @spacing[ @s];
+    border-bottom: solid 1px @colors[ @grey-200];
+  }
+
+  @media screen and (min-width: @breakpoints[@lg]) {
+    &.--no-desktop-separator {
+      &:not(:first-child) {
+        padding-top: @spacing[ @xs];
+      }
+
+      &:not(:last-child) {
+        padding-bottom: @spacing[ @xs];
+        border-bottom: none;
+      }
+    }
+  }
+}

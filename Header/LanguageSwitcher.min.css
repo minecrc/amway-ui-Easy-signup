@@ -1,0 +1,12 @@
+.oa-language-switcher {
+    display: flex;
+    align-items: center;
+    color: #7d98ba;
+    cursor: pointer;
+    user-select: none
+}
+
+.oa-language-switcher img {
+    width: 24px;
+    margin-right: 8px
+}

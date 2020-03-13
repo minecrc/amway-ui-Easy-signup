@@ -1,0 +1,21 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-sign-up-spouse-enter-id-form {
+  &__country-input {
+    .oa-hidden-input();
+  }
+
+  &__passport-input {
+    margin-top: @spacing[s];
+  }
+
+  &__form &__error {
+    min-height: 0;
+    margin-top: 0;
+
+    > *:not(:empty) {
+      margin-top: @spacing[xs];
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-typography {
+  padding: 0 @spacing[xxxxl] * 2;
+
+  section {
+    display: grid;
+    grid-column-gap: @spacing[xxxxl];
+    grid-row-gap: @spacing[xxxl] * 2;
+    grid-template-columns: 560px 560px;
+    grid-template-rows: auto;
+    padding: @spacing[xxxl] 0;
+    border-bottom: solid 1px @colors[grey-100];
+
+    h3 {
+      margin-bottom: @spacing[s];
+      letter-spacing: 2px;
+    }
+  }
+
+  &__font {
+    letter-spacing: 2px;
+
+    h3 {
+      color: @colors[black];
+    }
+
+    p {
+      margin-bottom: @spacing[xs];
+      white-space: pre;
+
+      .mz-font-style(heading-3);
+    }
+
+    h1 {
+      @font-size: 120px;
+      color: @colors[amway-500];
+      font-size: @font-size;
+
+      letter-spacing: 8px;
+      line-height: 1;
+    }
+  }
+
+  &__spacing {
+    width: 100%;
+    padding-bottom: @spacing[xs];
+    border-bottom: solid 1px @colors[amway-100];
+
+    & + & {
+      margin-top: @spacing[m];
+    }
+  }
+}

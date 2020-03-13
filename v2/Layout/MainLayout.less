@@ -1,0 +1,40 @@
+@import '../Common/variables.less';
+
+.mz-main-layout {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+
+  &__header {
+    position: fixed;
+    z-index: @z-indexes[mobile-header];
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: transform 0.2s linear;
+    will-change: transform;
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    padding-top: @navigation-bar-mobile-height;
+  }
+
+  &.--no-bar &__content {
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    &__header {
+      z-index: @z-indexes[desktop-header];
+    }
+
+    &__content {
+      padding-top: @topmost-bar-height + @navigation-bar-desktop-height +
+        @menu-bar-height;
+    }
+  }
+}

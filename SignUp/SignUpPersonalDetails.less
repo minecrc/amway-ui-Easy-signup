@@ -1,0 +1,60 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-sign-up-personal-details {
+  &__id-card {
+    margin-bottom: @spacing[ @s];
+  }
+
+  &__edit-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__photo {
+    width: 100%;
+    margin-bottom: @spacing[ @s];
+
+    @media screen and (min-width: @breakpoints[@sm]) {
+      @gap: @spacing[ @xs];
+
+      width: ~'calc(50% - @{gap})';
+    }
+  }
+
+  &__reupload-button {
+    margin: @spacing[ @xs] auto 0;
+
+    @media screen and (min-width: @breakpoints[@sm]) {
+      margin-top: @spacing[ @m];
+    }
+  }
+
+  &__general-info-1:first-of-type {
+    margin-top: @spacing[ @l];
+  }
+
+  &__general-info-2 {
+    margin-bottom: @spacing[ @m];
+  }
+
+  &__gender {
+    margin-bottom: @spacing[ @xxxl];
+  }
+
+  &__birthday {
+    > * {
+      .oa-inline();
+
+      &:first-child,
+      &:last-child {
+        flex: 3 / 4;
+      }
+    }
+  }
+}
+
+input#birthday {
+  .oa-hidden-input;
+}

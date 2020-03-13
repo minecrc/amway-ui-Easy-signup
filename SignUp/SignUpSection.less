@@ -1,0 +1,27 @@
+@import '../Common/variables.less';
+
+.oa-sign-up-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  &.--right {
+    flex: 1;
+  }
+
+  @media screen and (min-width: @breakpoints[@lg]) {
+    width: auto;
+    margin-left: @spacing[ @xxl];
+
+    &.--left {
+      flex: 6;
+    }
+
+    &.--right {
+      flex: 6;
+      margin-right: @spacing[ @xxl];
+      padding: @spacing[ @xl] 0;
+    }
+  }
+}

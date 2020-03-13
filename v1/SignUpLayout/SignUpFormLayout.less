@@ -1,0 +1,44 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-sign-up-form-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: @spacing[l];
+  padding-bottom: @spacing[l];
+
+  .oa-container();
+
+  &__header {
+    width: 100%;
+    margin-bottom: @spacing[m];
+    text-align: center;
+  }
+
+  &__title {
+    color: @colors[amway-primary];
+  }
+
+  &__title:not(:first-child) {
+    margin-top: @spacing[m];
+  }
+
+  &__description {
+    margin-top: @spacing[xs];
+    color: @colors[grey-500];
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    padding-top: @spacing[xxl];
+    padding-bottom: @spacing[xxl];
+
+    &__title {
+      .oa-font-style(heading-1, bold);
+    }
+
+    &__title:not(:first-child) {
+      margin-top: @spacing[xxl];
+    }
+  }
+}

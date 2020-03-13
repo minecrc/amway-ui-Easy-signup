@@ -1,0 +1,25 @@
+@import '../Common/mixins.less';
+
+.oa-via-bank-method {
+  &__option-selection {
+    margin-top: @spacing[l];
+    margin-bottom: @spacing[s];
+  }
+
+  &__option {
+    border: solid 1px @colors[grey-200];
+
+    a {
+      display: block;
+      padding: @spacing[s];
+    }
+
+    & + & {
+      border-top: none;
+    }
+  }
+
+  &__icon {
+    margin-right: @spacing[s];
+  }
+}

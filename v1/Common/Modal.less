@@ -1,0 +1,30 @@
+@import './variables.less';
+
+.oa-modal {
+  &.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__dialog {
+    @side-spacing: @spacing[m];
+
+    width: ~'calc(100% - @{side-spacing} * 2)';
+    max-width: 580px - @spacing[m] * 2;
+    margin: 0;
+
+    @media screen and (min-width: @breakpoints[lg]) {
+      max-width: 980px;
+    }
+  }
+
+  .modal-content {
+    border: none;
+    border-radius: 0;
+
+    @media screen and (min-width: @breakpoints[lg]) {
+      padding: 0 @spacing[m];
+    }
+  }
+}
