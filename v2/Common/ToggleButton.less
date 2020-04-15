@@ -1,0 +1,85 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-toggle-button {
+  border: solid 1px @colors[grey-300];
+  border-radius: @border-radiuses[s];
+
+  &.--small {
+    min-width: 144px;
+    padding: @spacing[xxs];
+
+    .mz-font-style(small, bold);
+  }
+
+  &.--small &__button {
+    height: @spacing[m];
+  }
+
+  &.--regular {
+    min-width: 200px;
+    padding: @spacing[xs];
+
+    .mz-font-style(body, bold);
+  }
+
+  &.--regular &__button {
+    height: @spacing[l];
+  }
+
+  &.--original-blue {
+    color: @colors[original-blue];
+  }
+
+  &.--original-blue &__active-background {
+    background: @colors[original-blue];
+  }
+
+  &.--green {
+    border-color: @colors[green-200];
+    color: @colors[green-300];
+  }
+
+  &.--green &__active-background {
+    background: @colors[green-300];
+  }
+
+  &__container {
+    display: flex;
+    position: relative;
+  }
+
+  &__active-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    transition: transform 0.2s;
+    border-radius: @border-radiuses[s];
+  }
+
+  &__input {
+    .mz-hidden-input();
+  }
+
+  &__button {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    padding: 0 @spacing[xs];
+    overflow: hidden;
+    transition: color 0.2s;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &.--active {
+      color: @colors[white];
+    }
+  }
+}

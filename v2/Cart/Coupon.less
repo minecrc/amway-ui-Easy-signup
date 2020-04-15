@@ -1,0 +1,140 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-coupon {
+  display: flex;
+  width: 100%;
+  color: @colors[orange-300];
+
+  &.--disabled {
+    color: rgba(@colors[orange-300], 0.4);
+  }
+
+  &__section {
+    position: relative;
+    padding: @spacing[xs] @spacing[s];
+    background: @colors[orange-100];
+
+    &.--left {
+      flex: 1;
+      border-top-left-radius: @border-radiuses[s];
+      border-bottom-left-radius: @border-radiuses[s];
+    }
+
+    &.--right {
+      display: flex;
+      flex: none;
+      align-items: center;
+      justify-content: center;
+      border-top-right-radius: @border-radiuses[s];
+      border-bottom-right-radius: @border-radiuses[s];
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        left: 0;
+        width: 1px;
+        transform: translateX(-50%);
+        opacity: 0.5;
+        background: linear-gradient(
+          to bottom,
+          @colors[orange-200],
+          @colors[orange-200] 40%,
+          transparent 40%,
+          transparent,
+          transparent
+        );
+        background-size: 1px 5.2px;
+      }
+    }
+
+    @media screen and (min-width: @breakpoints[sm]) {
+      padding: @spacing[xs] @spacing[m];
+    }
+  }
+
+  &__condition {
+    line-height: 1.54;
+    .mz-font-style(small);
+  }
+
+  &__input {
+    .mz-hidden-input();
+  }
+
+  &__button {
+    @height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: @height;
+    margin: 0;
+    border: solid 1px @colors[orange-200];
+    border-radius: @height;
+    color: @colors[orange-300];
+    cursor: pointer;
+    user-select: none;
+
+    &.--disabled {
+      opacity: 0.4;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .mz-font-style(small);
+  }
+
+  &__checked-text {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checked-icon {
+    margin-right: @spacing[xs];
+  }
+
+  &__input:checked + &__button {
+    background: @colors[orange-200];
+    color: @colors[white];
+  }
+
+  &__input:checked + &__button &__unchecked-text,
+  &__input:not(:checked) + &__button &__checked-text {
+    display: none;
+  }
+
+  &__circle {
+    @size: 10px;
+
+    position: absolute;
+    left: 0;
+    width: @size;
+    height: @size;
+    border-radius: @size;
+    background: @colors[white];
+
+    &.--top {
+      top: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    &.--bottom {
+      bottom: 0;
+      transform: translate(-50%, 50%);
+    }
+  }
+
+  &.--bg-grey &__circle {
+    @media screen and (min-width: @breakpoints[sm]) {
+      background: @colors[grey-100];
+    }
+  }
+
+  & + & {
+    margin-top: @spacing[xs];
+  }
+}

@@ -1,0 +1,147 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-delivery-methods {
+  padding: @spacing[s];
+  border-radius: @border-radiuses[s];
+  background: @colors[white];
+
+  &__order-for {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: @spacing[s];
+
+    @media screen and (min-width: @breakpoints[lg]) {
+      flex-wrap: nowrap;
+      height: @input-height;
+    }
+  }
+
+  &__text {
+    flex: none;
+  }
+
+  &__order-for-button {
+    flex: none;
+    width: 172px;
+    margin-left: @spacing[s];
+  }
+
+  &__downline-selector {
+    flex: 100%;
+    min-width: 0;
+    margin-top: @spacing[s];
+
+    @media screen and (min-width: @breakpoints[lg]) {
+      align-self: flex-start;
+      margin-top: 0;
+      margin-left: @spacing[s];
+    }
+  }
+
+  // HACK: Delivery toggle button is a set of radio buttons instead
+  & &__delivery-toggle {
+    @media screen and (min-width: @breakpoints[lg]) {
+      display: inline-flex;
+      padding: 0;
+      border: 0;
+
+      .mz-toggle-button__active-background {
+        display: none;
+      }
+    }
+  }
+
+  & &__delivery-button {
+    @media screen and (min-width: @breakpoints[lg]) {
+      justify-content: flex-start;
+      padding: 0;
+      overflow: visible;
+      color: @colors[black];
+
+      &:not(:last-child) {
+        margin-right: @spacing[l];
+      }
+
+      &:before {
+        content: '\6b';
+        margin-right: @spacing[xs];
+        color: @colors[grey-300];
+        font-family: 'Amway Icon CI';
+        font-size: @icon-sizes[m];
+      }
+
+      &.--active:before {
+        content: '\69';
+        color: @colors[original-blue];
+      }
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: @spacing[s];
+
+    @media screen and (min-width: @breakpoints[lg]) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__address-selector {
+    flex: 100%;
+    min-width: 0;
+
+    @media screen and (min-width: @breakpoints[lg]) {
+      flex: 452;
+    }
+  }
+
+  &__search-icon {
+    color: @colors[black];
+  }
+
+  &__phone-input {
+    flex: 100%;
+    margin-top: @spacing[xs];
+
+    @media screen and (min-width: @breakpoints[lg]) {
+      flex: 176;
+      margin-top: 0;
+      margin-left: @spacing[m];
+    }
+  }
+
+  &__new-address {
+    display: inline-block;
+    padding: @spacing[s] 0;
+    color: @colors[original-blue];
+    .mz-font-style(small, bold);
+
+    @media screen and (min-width: @breakpoints[lg]) {
+      padding: @spacing[s];
+    }
+  }
+
+  &__new-address-icon {
+    font-size: @icon-sizes[xxs];
+  }
+
+  &__error-message {
+    display: none;
+  }
+
+  &__downline-selector &__error-message,
+  &__phone-input &__error-message {
+    @media screen and (min-width: @breakpoints[lg]) {
+      text-align: right;
+      white-space: nowrap;
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[lg]) {
+    padding: @spacing[m];
+  }
+}

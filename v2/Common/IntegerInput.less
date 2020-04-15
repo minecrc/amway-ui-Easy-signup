@@ -1,0 +1,51 @@
+@import './variables.less';
+@import './mixins.less';
+
+.mz-integer-input {
+  width: 96px;
+  height: @spacing[xl];
+
+  &__quantity {
+    display: none;
+
+    &.--active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      border: 1px solid @colors[grey-300];
+      border-radius: 20px;
+
+      .mz-font-style(body, bold);
+    }
+  }
+
+  & &__add-button {
+    display: none;
+
+    &.--active {
+      display: flex;
+    }
+  }
+
+  &__stepper {
+    display: flex;
+    flex: none;
+    justify-content: center;
+    padding: @spacing[xs];
+    font-size: @icon-sizes[xxs];
+    line-height: 1;
+
+    &[disabled] {
+      color: @colors[grey-300];
+    }
+  }
+
+  &__input {
+    flex: 1;
+    width: 100%;
+    border: 0;
+    outline: none;
+    text-align: center;
+  }
+}

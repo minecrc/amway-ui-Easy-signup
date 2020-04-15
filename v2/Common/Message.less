@@ -1,0 +1,23 @@
+@import './variables.less';
+
+.mz-message {
+  width: 100%;
+  min-height: 24px;
+  margin: @spacing[xs] 0 0;
+
+  &.--error {
+    color: @colors[red-200];
+  }
+
+  &.--align-center {
+    text-align: center;
+  }
+
+  & + & {
+    margin-top: @spacing[xs];
+  }
+}
+
+.mz-button + .mz-message {
+  margin-top: @spacing[s];
+}

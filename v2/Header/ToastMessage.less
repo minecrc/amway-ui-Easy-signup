@@ -1,0 +1,44 @@
+@import '../Common/variables.less';
+
+.mz-toast-message {
+  margin: @spacing[s];
+  padding: @spacing[s];
+  transform: translate3d(0, -100%, 0);
+  animation: toast-in 1 0.25s 0.5s forwards;
+  border-radius: @border-radiuses[s];
+  opacity: 0;
+  background: @colors[white];
+  box-shadow: @shadows[s];
+
+  &.--mobile {
+    @media screen and (min-width: @breakpoints[lg]) {
+      display: none;
+    }
+  }
+
+  &.--exit {
+    animation: toast-out 1 0.25s forwards;
+  }
+}
+
+@keyframes toast-in {
+  from {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-out {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+}

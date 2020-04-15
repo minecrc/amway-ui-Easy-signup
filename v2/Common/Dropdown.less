@@ -1,0 +1,74 @@
+@import './variables.less';
+@import './mixins.less';
+
+@side-padding: @spacing[s];
+
+.mz-dropdown {
+  @height: @input-height;
+
+  width: 100%;
+  user-select: none;
+
+  &__label {
+    display: flex;
+    margin: 0 0 4px;
+    color: @colors[grey-400];
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: @height;
+    padding: 2px @side-padding;
+    border: 1px solid @colors[grey-300];
+
+    &:disabled {
+      background: @colors[grey-100];
+    }
+  }
+
+  &__button-text {
+    display: flex;
+    align-items: center;
+
+    &:not(.--selected) {
+      color: @colors[grey-400];
+    }
+  }
+
+  &__icon {
+    transition: color 0.2s;
+    color: @colors[grey-300];
+    font-size: @icon-sizes[xs];
+  }
+
+  &__button[aria-expanded='true'] &__icon {
+    transform: scaleY(-1);
+    color: @colors[grey-600];
+  }
+
+  &__menu.dropdown-menu {
+    width: auto;
+    min-width: auto;
+    .mz-dropdown-menu();
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+
+    .mz-dropdown-option(@side-padding);
+  }
+
+  &__option-image {
+    width: 32px;
+    height: 32px;
+    margin-right: @spacing[s];
+  }
+
+  h6 + & {
+    margin-top: @spacing[s];
+  }
+}

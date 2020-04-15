@@ -1,0 +1,23 @@
+@import '../Common/variables.less';
+
+.mz-promo-code-section {
+  padding: 0 @spacing[s] @spacing[s];
+  background: @colors[white];
+
+  &__enter {
+    margin-top: @spacing[s];
+  }
+
+  #discount-template {
+    display: none;
+  }
+
+  @media screen and (min-width: @breakpoints[sm]) {
+    padding: 0 @spacing[m] @spacing[m];
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    padding: @spacing[m];
+    border-radius: @border-radiuses[s];
+  }
+}

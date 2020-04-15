@@ -1,0 +1,66 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-coupon-section {
+  margin-top: @spacing[s];
+
+  &__see-all {
+    display: flex;
+    justify-content: center;
+    margin-top: @spacing[xs];
+    color: @colors[orange-300];
+
+    .mz-font-style(small, bold);
+  }
+
+  &__modal {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__modal-header {
+    display: none;
+  }
+
+  &__modal-container {
+    box-sizing: content-box;
+    max-width: 380px;
+    margin: 0 auto;
+    overflow-y: auto;
+
+    h6 {
+      margin-bottom: @spacing[xs];
+
+      &:not(:first-child) {
+        margin-top: @spacing[s];
+      }
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[sm]) {
+    &__modal {
+      background: @colors[grey-100];
+    }
+
+    &__modal-header {
+      display: block;
+      margin-bottom: @spacing[s];
+      text-align: center;
+    }
+
+    &__modal-container {
+      padding: @spacing[m] @spacing[l];
+      background: @colors[white];
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    margin-top: 0;
+    margin-bottom: @spacing[m];
+    background: none;
+
+    &__see-all {
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+
+@import './variables.less';
+
+@font-face {
+  font-family: 'Amway Icon CI';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../static/fonts/amway-icon-ci.eot');
+  src: url('../../static/fonts/amway-icon-ci.eot?#iefix') format('embedded-opentype'),
+    url('../../static/fonts/amway-icon-ci.woff') format('woff'),
+    url('../../static/fonts/amway-icon-ci.ttf') format('truetype'),
+    url('../../static/fonts/amway-icon-ci.svg#amway-icon-ci') format('svg');
+}
+
+.mz-icon {
+  display: inline-block;
+  flex: none;
+  vertical-align: middle;
+
+  &:before {
+    display: flex;
+    color: inherit;
+    font-family: 'Amway Icon CI' !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal !important;
+    font-variant: normal !important;
+    font-weight: normal !important;
+    line-height: inherit;
+    text-transform: none !important;
+    speak: none;
+  }
+
+  &.--add:before {
+    content: '\61';
+  }
+  &.--arrow-down:before {
+    content: '\62';
+  }
+  &.--arrow-up:before {
+    content: '\63';
+  }
+  &.--close:before {
+    content: '\65';
+  }
+  &.--edit:before {
+    content: '\67';
+  }
+  &.--minus:before {
+    content: '\68';
+  }
+  &.--radio-checked:before {
+    content: '\69';
+  }
+  &.--search:before {
+    content: '\6a';
+  }
+  &.--unchecked:before {
+    content: '\6b';
+  }
+  &.--status-calendar:before {
+    content: '\6c';
+  }
+  &.--check:before {
+    content: '\6d';
+  }
+  &.--info:before {
+    content: '\6e';
+  }
+  &.--delete:before {
+    content: '\6f';
+  }
+  &.--checkbox-checked:before {
+    content: '\64';
+  }
+  &.--map-pin:before {
+    content: '\66';
+  }
+}

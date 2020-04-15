@@ -1,0 +1,16 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-address-option {
+  &__main-tag {
+    display: inline-flex;
+    align-items: center;
+    height: @spacing[m];
+    margin-bottom: @spacing[xxs];
+    padding: 0 @spacing[xs];
+    border-radius: @border-radiuses[s];
+    background: @colors[grey-200];
+
+    .mz-font-style(small);
+  }
+}

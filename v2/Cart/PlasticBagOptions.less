@@ -1,0 +1,28 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-plastic-bag-options {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  max-width: @cart-mobile-panel-width;
+  margin: @spacing[xs] auto 0;
+  padding: @spacing[s] @spacing[s] 0 @spacing[s];
+  background: @colors[green-100];
+  color: @colors[green-300];
+
+  &__content {
+    margin-right: @spacing[xs];
+    margin-bottom: @spacing[s];
+  }
+
+  &__toggle-button {
+    width: 144px;
+    margin-top: @spacing[xs];
+  }
+
+  @media screen and (min-width: @breakpoints[sm]) {
+    padding-left: @spacing[m];
+    border-radius: @border-radiuses[s];
+  }
+}

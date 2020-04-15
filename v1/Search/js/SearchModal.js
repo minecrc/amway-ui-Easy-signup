@@ -1,5 +1,8 @@
 /* global $ */
 (() => {
+  // NOTE: Keep this in sync with header's break point
+  const BREAKPOINT = 1024;
+
   const searchButton = $('#oa-search-button');
   const searchModal = $('#oa-search-modal');
   const searchInputs = $('.oa-search-input input');
@@ -10,10 +13,15 @@
 
   function open() {
     searchModal.addClass('--active');
+
+    if ($(window).width() <= BREAKPOINT) {
+      $('body').addClass('modal-open');
+    }
   }
 
   function close() {
     searchModal.removeClass('--active');
+    $('body').removeClass('modal-open');
   }
 
   function initSearchButton() {
@@ -39,7 +47,11 @@
     const closeButton = searchModal.find('.oa-search-modal__close-button');
     closeButton.on('click', close);
 
-    document.addEventListener('scroll', close);
+    document.addEventListener('scroll', () => {
+      if ($(window).width() > BREAKPOINT) {
+        close();
+      }
+    });
   }
 
   function initSearchInput() {

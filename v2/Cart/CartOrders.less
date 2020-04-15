@@ -1,0 +1,32 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-cart-orders {
+  &__header {
+    margin: @spacing[s] @spacing[s] @spacing[xs];
+
+    @media screen and (min-width: @breakpoints[sm]) {
+      margin: @spacing[s] 0 @spacing[xs];
+    }
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      margin-left: 0;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+
+    @media screen and (min-width: @breakpoints[sm]) {
+      border-radius: @border-radiuses[s];
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: @spacing[xxs];
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      margin-bottom: @spacing[xs];
+    }
+  }
+}

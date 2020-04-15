@@ -1,0 +1,56 @@
+@import '../Common/variables.less';
+
+.mz-gpv-bar {
+  @bar-height: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: @cart-mobile-panel-width;
+  margin: @spacing[xs] auto 0;
+  padding: @spacing[xs] @spacing[s] @spacing[s];
+  background: @colors[purple-100];
+  color: @colors[purple-300];
+
+  &__content {
+    flex: 1;
+    margin-top: @spacing[xs];
+    margin-right: @spacing[xs];
+  }
+
+  &__image {
+    flex: none;
+    width: 46px;
+    height: 56px;
+  }
+
+  &__percent {
+    display: flex;
+    flex: 100%;
+    justify-content: space-between;
+  }
+
+  &__outter-bar {
+    flex: 100%;
+    height: @bar-height;
+    margin-top: @spacing[xxs];
+    overflow: hidden;
+    border-radius: @bar-height;
+    background: rgba(@colors[purple-300], 0.1);
+  }
+
+  &__inner-bar {
+    width: 0;
+    height: 100%;
+    transition: width 0.2s;
+    border-top-right-radius: @bar-height;
+    border-bottom-right-radius: @bar-height;
+    background: @colors[purple-300];
+  }
+
+  @media screen and (min-width: @breakpoints[sm]) {
+    padding-right: @spacing[m];
+    padding-left: @spacing[m];
+    border-radius: @border-radiuses[s];
+  }
+}

@@ -1,6 +1,8 @@
 /* stylelint-disable property-no-unknown */
 
 @colors: {
+  original-blue: #002f5f;
+
   amway-600: #2a3a68;
   amway-500: #38539a;
   amway-400: #3f5ba5;
@@ -60,16 +62,20 @@
   body: 16px;
   medium: 14px;
   small: 13px;
-  extra-small: 12px;
+  extra-small: 10px;
 };
 
 @icon-sizes: {
+  xxs: 12px;
+  xs: 14px;
+  s: 16px;
   m: 20px;
   l: 24px;
   xxl: 40px;
 };
 
 @spacing: {
+  xxs: 4px;
   xs: 8px;
   s: 16px;
   m: 24px;
@@ -78,9 +84,11 @@
   xxl: 48px;
   xxxl: 64px;
   xxxxl: 80px;
+  xxxxxl: 100px;
 };
 
 @border-radiuses: {
+  xs: 2px;
   s: 4px;
   m: 8px;
 };
@@ -103,21 +111,27 @@
   sm: 576px;
   md: 768px;
   lg: 992px;
-  xl: 1180px;
+  xl: 1024px;
 };
 
 @z-indexes: {
   ground: 0;
   step-progress-bar-arrow: 1;
   step-progress-bar-label: 2;
-  mobile-header: 9;
-  dim-layer: 10;
-  desktop-header: 11;
-  popup-menu: 12;
-  search-modal: 13;
-}
+  mobile-header: 500;
+  cart-dim-layer: 600;
+  cart-mobile-panel: 601;
+  cart-mobile-detail: 602;
+  cart-mobile-summary: 603;
+  dim-layer: 1000;
+  desktop-header: 1500;
+  popup-menu: 2000;
+  search-modal: 3000;
+  modal-backdrop: 4000;
+  modal: 4001;
+};
 
-@content-max-width: @breakpoints[ xl];
+@content-max-width: 1180px;
 
 @topmost-bar-height: 40px;
 @navigation-bar-desktop-height: 80px;
@@ -133,3 +147,6 @@
 @profile-widget-width: 280px;
 
 @mobile-item-height: 64px;
+
+@cart-mobile-panel-width: 480px;
+@cart-item-max-width: 700px;

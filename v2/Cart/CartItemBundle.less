@@ -1,0 +1,116 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-cart-item-bundle {
+  @cart-item-image-width: 100px;
+  margin-top: @spacing[s];
+  border: 1px solid @colors[grey-300];
+  border-radius: @border-radiuses[s];
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    padding: 12px @spacing[m];
+    border-bottom: 1px solid @colors[grey-300];
+
+    @media screen and (min-width: @breakpoints[md]) {
+      justify-content: space-between;
+    }
+
+    .mz-font-style(small, bold);
+  }
+
+  &__edit {
+    color: @colors[purple-300];
+
+    &.--desktop {
+      display: none;
+    }
+
+    > * {
+      vertical-align: top;
+    }
+
+    &.--mobile {
+      display: block;
+      padding: 12px @spacing[m];
+      text-align: center;
+    }
+    .mz-font-style(small, bold);
+
+    @media screen and (min-width: @breakpoints[md]) {
+      &.--desktop {
+        display: block;
+        text-align: left;
+      }
+
+      &.--mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__edit-icon {
+    margin-right: @spacing[xxs];
+  }
+
+  &__items {
+    padding: 0 @spacing[m];
+  }
+
+  &__item-container {
+    border-bottom: 1px solid @colors[grey-200];
+  }
+
+  &__item {
+    display: flex;
+
+    img {
+      flex: none;
+      width: 32px;
+      height: 32px;
+
+      @media screen and (min-width: @breakpoints[md]) {
+        margin: @spacing[xs] 0;
+      }
+    }
+  }
+
+  &__quantity {
+    flex: none;
+    margin-top: @spacing[xs];
+    margin-left: @spacing[xs];
+    .mz-font-style(small, bold);
+
+    @media screen and (min-width: @breakpoints[md]) {
+      margin-top: @spacing[s];
+      margin-left: @spacing[s];
+    }
+  }
+
+  &__title-container {
+    flex: 1 1 420px;
+    margin-left: @spacing[s];
+    padding: @spacing[xs] 0;
+
+    @media screen and (min-width: @breakpoints[md]) {
+      padding: @spacing[s] 0;
+    }
+  }
+
+  &__title {
+    .mz-font-style(small);
+  }
+
+  &__label {
+    margin-top: @spacing[xxs];
+
+    &:not(:last-child) {
+      margin-right: @spacing[xxs];
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[sm]) {
+    margin-left: @cart-item-image-width + @spacing[s];
+  }
+}

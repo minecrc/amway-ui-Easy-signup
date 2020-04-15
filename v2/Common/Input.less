@@ -1,0 +1,118 @@
+@import './variables.less';
+@import '../Common/mixins.less';
+
+.mz-input {
+  @side-padding: @spacing[s];
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-content: flex-end;
+  width: 100%;
+
+  input {
+    height: @input-height;
+    padding: 2px @side-padding;
+
+    &.--small {
+      height: 40px;
+    }
+  }
+
+  textarea {
+    height: @textarea-height;
+    padding: 12px @side-padding;
+    resize: none;
+  }
+
+  input,
+  textarea {
+    transition: none;
+    border: 1px solid @colors[grey-300];
+    border-radius: 0;
+    background: @colors[white];
+    box-shadow: none;
+    color: @colors[black];
+
+    .mz-font-style(body);
+
+    &::placeholder {
+      color: @colors[grey-400];
+      .mz-font-style(body);
+    }
+
+    &:hover,
+    &:focus {
+      border-color: @colors[grey-300];
+      background: @colors[white];
+      box-shadow: none;
+    }
+
+    &:disabled {
+      border-color: @colors[grey-300];
+      background: @colors[grey-100];
+      color: @colors[grey-400];
+    }
+
+    &:disabled::placeholder {
+      color: @colors[grey-300];
+    }
+
+    &.--with-left-icon {
+      padding-left: @spacing[xl];
+    }
+
+    &.--with-right-icon {
+      padding-right: @spacing[xl];
+    }
+
+    &.--with-clear-button {
+      padding-right: @spacing[l];
+    }
+
+    &.--has-error {
+      border-color: @colors[red-200];
+    }
+  }
+
+  &__label {
+    display: flex;
+    margin: 0 0 4px;
+    color: @colors[grey-300];
+  }
+
+  &__icon {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__icon.--left {
+    left: @spacing[s];
+  }
+
+  &__icon.--right {
+    right: @spacing[s];
+  }
+
+  &__clear-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: @spacing[l];
+    height: @input-height;
+    color: @colors[grey-300];
+    font-size: @icon-sizes[s];
+
+    &:hover {
+      @media (hover: hover) {
+        color: @colors[grey-400];
+      }
+    }
+
+    &:not(.--active) {
+      display: none;
+    }
+  }
+}

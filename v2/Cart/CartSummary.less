@@ -1,0 +1,64 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-cart-summary {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 @spacing[s] @spacing[s];
+  background: @colors[white];
+
+  &__rows {
+    flex: none;
+  }
+
+  &__row.--desktop {
+    display: none;
+  }
+
+  &__row.--mobile {
+    .mz-font-style(small);
+
+    &.--red {
+      color: @colors[red-200];
+    }
+  }
+
+  &__total {
+    .mz-font-style(heading-5, bold);
+  }
+
+  &__button {
+    flex: 0 1 172px;
+    min-width: 0;
+    margin-left: @spacing[m];
+  }
+
+  @media screen and (min-width: @breakpoints[sm]) {
+    padding: 0 @spacing[m] @spacing[m];
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    display: block;
+    padding: @spacing[m];
+    border-radius: @border-radiuses[s];
+
+    &__row.--desktop {
+      display: flex;
+    }
+
+    &__row.--mobile {
+      display: none;
+    }
+
+    &__total {
+      .mz-font-style(heading-4, bold);
+    }
+
+    &__button {
+      width: 100%;
+      margin-top: @spacing[m];
+      margin-left: 0;
+    }
+  }
+}

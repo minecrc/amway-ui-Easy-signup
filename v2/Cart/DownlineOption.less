@@ -1,0 +1,17 @@
+@import '../Common/variables.less';
+
+.mz-downline-option {
+  display: flex;
+  align-items: center;
+
+  &__image {
+    @size: @spacing[l];
+
+    flex: none;
+    width: @size;
+    height: @size;
+    margin-right: @spacing[xs];
+    border-radius: @size;
+    background: @colors[grey-200];
+  }
+}

@@ -1,0 +1,32 @@
+@import '../Common/variables.less';
+
+.mz-item-added-message {
+  display: flex;
+  align-items: center;
+
+  &__image {
+    flex: none;
+    width: 58px;
+    height: 58px;
+    margin-right: @spacing[xs];
+  }
+
+  &__content {
+    min-width: 0;
+  }
+
+  &__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__content > strong {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: @spacing[xs];
+  }
+}

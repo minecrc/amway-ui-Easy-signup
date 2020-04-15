@@ -1,0 +1,65 @@
+@import './variables.less';
+@import './mixins.less';
+
+.mz-button {
+  display: flex;
+  box-sizing: border-box;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 @spacing[s];
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  border-radius: 0;
+  user-select: none;
+
+  &:focus,
+  &:active:focus {
+    outline: none;
+  }
+
+  .color(@name, @bg-color, @color) {
+    &.--@{name}.--primary:not(:disabled) {
+      background: @bg-color;
+      color: @colors[white];
+    }
+
+    &.--@{name}.--secondary {
+      border: solid 1px @bg-color;
+      color: @color;
+    }
+
+    &.--@{name}.--primary:disabled {
+      background: @colors[grey-200];
+      color: @colors[grey-400];
+    }
+
+    &.--@{name}.--secondary:disabled {
+      opacity: 0.4;
+    }
+  }
+
+  .color(original-blue, @colors[original-blue], @colors[original-blue]);
+  .color(orange, @colors[orange-200], @colors[orange-300]);
+
+  .size(@name, @height, @font-size: body, @icon-size: @icon-sizes[m]) {
+    &.--@{name} {
+      height: @height;
+
+      &:not(.--square) {
+        border-radius: @height;
+      }
+
+      .mz-font-style(@font-size);
+    }
+
+    &.--@{name} &__icon {
+      margin-right: @spacing[xs];
+      font-size: @icon-size;
+    }
+  }
+
+  .size(large, 48px);
+  .size(medium, 40px);
+  .size(small, 32px, small, @icon-sizes[s]);
+}

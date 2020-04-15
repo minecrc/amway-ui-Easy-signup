@@ -1,0 +1,37 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-error-notification {
+  padding: 0;
+  border-radius: 0;
+  background-color: @colors[red-100];
+  color: @colors[red-200];
+
+  .mz-font-style(body);
+
+  &.--secondary {
+    background-color: @colors[orange-100];
+    color: @colors[orange-300];
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    min-height: @input-height;
+    padding: @spacing[xs] 0;
+
+    .mz-container(@side-spacing: @spacing[s]);
+  }
+
+  &__info-icon {
+    flex: none;
+    margin-right: @spacing[xs];
+  }
+
+  &__close {
+    flex: none;
+    margin-left: auto;
+    color: @colors[black];
+    line-height: 1;
+  }
+}

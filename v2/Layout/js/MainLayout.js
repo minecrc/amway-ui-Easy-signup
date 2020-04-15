@@ -1,6 +1,5 @@
 /* global $ */
 (() => {
-  const BREAKPOINT = 992;
   const $window = $(window);
   let prevScrollY = $window.scrollTop();
   let prevScrollUp = false;
@@ -10,7 +9,6 @@
 
   document.addEventListener('scroll', function handleScroll() {
     const headerHeight = header.height();
-    const menuBarHeight = $window.width() >= BREAKPOINT ? menuBar.height() : 0;
 
     const scrollY = $window.scrollTop();
     const scrollUp =
@@ -19,7 +17,10 @@
     if (scrollUp || scrollY < headerHeight) {
       header.css('transform', 'none');
     } else {
-      header.css('transform', `translateY(-${headerHeight - menuBarHeight}px)`);
+      const menuBarOffset = window.isDesktop()
+        ? menuBar.offset().top - header.offset().top
+        : headerHeight;
+      header.css('transform', `translateY(-${menuBarOffset}px)`);
     }
 
     prevScrollUp = scrollUp;

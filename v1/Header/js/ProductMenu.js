@@ -5,7 +5,7 @@
 
   const ID = 'product-menu';
   // NOTE: Keep this in sync with header's break point
-  const BREAKPOINT = 992;
+  const BREAKPOINT = 1024;
   const ANIMATION_DURATION = 200;
   const LEVELS = {
     initial: 1,
@@ -14,7 +14,7 @@
   };
   const numberOfLevels = 3;
 
-  const dimLayer = $('#dim-layer');
+  const dimLayer = $('#main-dim-layer');
 
   const menuBar = $('#oa-menu-bar');
   const menuItems = menuBar.find('.oa-menu-bar__item');
@@ -52,6 +52,7 @@
   function open() {
     productMenu.addClass('--active --init');
 
+    // TODO: Trigger dim-layer:push instead
     const openedMenu = (dimLayer.attr('data-opened-menu') || '').split(',');
     dimLayer.attr(
       'data-opened-menu',
@@ -61,6 +62,7 @@
 
   function close() {
     productMenu.removeClass('--active');
+    // TODO: Trigger dim-layer:remove instead
     dimLayer.attr(
       'data-opened-menu',
       (dimLayer.attr('data-opened-menu') || '')

@@ -1,0 +1,22 @@
+@import '../Common/variables.less';
+
+.mz-login-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: @spacing[s];
+  background: @colors[white];
+
+  &__button {
+    flex: 0 0 120px;
+    margin-left: @spacing[m];
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      flex-basis: 136px;
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[sm]) {
+    border-radius: @border-radiuses[s];
+  }
+}

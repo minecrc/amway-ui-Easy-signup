@@ -105,21 +105,21 @@
   sm: 576px;
   md: 768px;
   lg: 992px;
-  xl: 1180px;
+  xl: 1024px;
 };
 
 @z-indexes: {
   ground: 0;
   step-progress-bar-arrow: 1;
   step-progress-bar-label: 2;
-  mobile-header: 9;
-  dim-layer: 10;
-  desktop-header: 11;
-  popup-menu: 12;
-  search-modal: 13;
-}
+  mobile-header: 500;
+  dim-layer: 1000;
+  desktop-header: 1500;
+  popup-menu: 2000;
+  search-modal: 3000;
+};
 
-@content-max-width: @breakpoints[ xl];
+@content-max-width: 1180px;
 
 @topmost-bar-height: 40px;
 @navigation-bar-desktop-height: 80px;

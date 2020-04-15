@@ -1,0 +1,34 @@
+@import '../Common/variables.less';
+
+.mz-cart-value-row {
+  display: flex;
+  align-items: center;
+
+  &:not(:first-child) {
+    margin-top: @spacing[xs];
+  }
+
+  &.--red {
+    color: @colors[red-200];
+  }
+
+  &__nested-area {
+    width: @spacing[m];
+    line-height: 1;
+  }
+
+  &__title {
+    flex: 1;
+  }
+
+  &__remove-button {
+    display: block;
+    color: @colors[grey-300];
+
+    @media (hover: hover) {
+      &:hover {
+        color: @colors[grey-400];
+      }
+    }
+  }
+}

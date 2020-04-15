@@ -4,9 +4,9 @@
 
   const ID = 'user-menu';
   // NOTE: Keep this in sync with header's break point
-  const BREAKPOINT = 992;
+  const BREAKPOINT = 1024;
 
-  const dimLayer = $('#dim-layer');
+  const dimLayer = $('#main-dim-layer');
 
   const user = $('#oa-user');
   const idBadge = user.find('.oa-id-badge');
@@ -17,6 +17,7 @@
   function open() {
     userMenu.addClass('--active --init');
 
+    // TODO: Trigger dim-layer:push instead
     const openedMenu = (dimLayer.attr('data-opened-menu') || '').split(',');
     dimLayer.attr(
       'data-opened-menu',
@@ -26,6 +27,7 @@
 
   function close() {
     userMenu.removeClass('--active');
+    // TODO: Trigger dim-layer:remove instead
     dimLayer.attr(
       'data-opened-menu',
       (dimLayer.attr('data-opened-menu') || '')

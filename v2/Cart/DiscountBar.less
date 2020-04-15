@@ -1,0 +1,18 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-discount-bar {
+  padding: @spacing[xxs] @spacing[s];
+  background: @colors[red-100];
+  color: @colors[red-300];
+  text-align: center;
+
+  .mz-font-style(small, bold);
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    padding: @spacing[xs] @spacing[s];
+    border-radius: @border-radiuses[s];
+
+    .mz-font-style(body, bold);
+  }
+}
