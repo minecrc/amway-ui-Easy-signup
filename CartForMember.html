@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CartNonLoggedIn</title>
+    <title>CartForMember</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" href="./styles/common.ebcd0de550622749325e.css" />
-    <link rel="stylesheet" href="./styles/Cart___CartNonLoggedIn.c30ad16c8c60df247b1e.css" />
+    <link rel="stylesheet" href="./styles/Cart___CartForMember.c30ad16c8c60df247b1e.css" />
 </head>
 
 <body>
@@ -53,18 +53,21 @@
                         <button id="oa-search-button" type="button" class="oa-navigation-bar__search-button">
                 <span class="oa-icon --search oa-navigation-bar__icon"></span>
               </button>
+                        <span class="oa-navigation-bar__icon --heart">
+                <span class="oa-icon --heart"></span>
+                        </span>
                         <span class="oa-navigation-bar__icon">
                 <span class="oa-icon --cart"></span>
                         </span>
-                        <div id="oa-user" class="oa-navigation-bar__user" data-logged-in="false">
+                        <div id="oa-user" class="oa-navigation-bar__user" data-logged-in="true">
                             <span class="oa-icon --user oa-navigation-bar__user-icon"></span>
-                            <span class="oa-navigation-bar__user-entry">
-                  <a class="oa-navigation-bar__login" href="./login">Login</a>
-                  <span>/</span>
-                            <a class="oa-navigation-bar__register" href="./register">
-                    Register
-                  </a>
-                            </span>
+                            <div class="oa-navigation-bar__user-info">
+                                <div class="oa-navigation-bar__user-name">
+                                    <small>Mr. Amorn Apichartikul</small>
+                                </div>
+                                <div class="oa-id-badge">2711647</div>
+                                <span class="oa-icon --arrow-down oa-navigation-bar__user-arrow"></span>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -495,22 +498,54 @@
                 </div>
             </div>
         </nav>
-        <nav id="oa-user-menu" class="oa-popup-menu --right oa-user-menu --inverse" data-logged-in="false" aria-label="menu">
+        <nav id="oa-user-menu" class="oa-popup-menu --right oa-user-menu --inverse" data-logged-in="true" aria-label="menu">
             <div id="oa-user-menu-arrow" class="oa-menu-arrow --amway-500"></div>
             <header class="oa-popup-menu__header">
                 <div class="oa-user-menu__header">
                     <span class="oa-icon --close oa-user-menu__close-button"></span>
+                    <a class="oa-user-menu__button" href="./favorite">
+                        <span class="oa-icon --heart"></span>
+                    </a>
+                    <a class="oa-user-menu__button" href="./notification">
+                        <span class="oa-icon --bell"></span>
+                    </a>
                 </div>
             </header>
             <div class="oa-popup-menu__container">
-                <div class="oa-user-menu__entry">
-                    <a href="./login" class="oa-button btn btn-lg --primary --fill --regular">
-                        <span>Login</span>
-                    </a>
-                    <a href="./register" class="oa-button btn btn-lg --secondary --fill --regular">
-                        <span>Create Account</span>
-                    </a>
-                </div>
+                <section class="oa-user-menu__profile">
+                    <div class="oa-user-menu__info">
+                        <img class="oa-user-menu__avatar" src="./static/images/default-avatar.png" alt="avatar" />
+                        <div class="oa-user-menu__name">
+                            Mr. Amorn Apichartikul
+                            <br />
+                            <div class="oa-id-badge">2711647</div>
+                        </div>
+                    </div>
+                    <div class="oa-user-menu__status">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th><small>Personal</small></th>
+                                    <th><small>Group</small></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PV</td>
+                                    <td>399</td>
+                                    <td>399</td>
+                                </tr>
+                                <tr>
+                                    <td>BV</td>
+                                    <td>1,196</td>
+                                    <td>1,196</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <div class="oa-user-menu__bonus">Bonus 9%</div>
                 <ul>
                     <li>
                         <a class="oa-user-menu__item --outstanding" href="./business-center">
@@ -657,11 +692,146 @@
                                 <h4 class="mz-cart-layout__title">ตะกร้าสินค้า</h4>
                             </header>
                             <section class="mz-cart-layout__content">
-                                <div class="mz-login-cta">
-                                    <span>เข้าสู่ระบบเพื่อรับสิทธิพิเศษและส่วนลดอีกมากมาย</span>
-                                    <a href="./login" class="mz-button btn btn-lg --primary --medium --original-blue mz-login-cta__button">
-                                        <span>เข้าสู่ระบบ</span>
-                                    </a>
+                                <div class="mz-delivery-methods">
+                                    <div class="mz-toggle-button mz-delivery-methods__delivery-toggle --small --original-blue">
+                                        <div class="mz-toggle-button__container">
+                                            <div class="mz-toggle-button__active-background" style="transform:translate3d(0%,0,0)"></div>
+                                            <input type="radio" class="mz-toggle-button__input" id="delivery" value="delivery" readonly="" checked="" />
+                                            <label for="delivery" class="mz-toggle-button__button mz-delivery-methods__delivery-button --active">
+                          <span>จัดส่งภายใน 1-3 วันทำการ</span>
+                        </label>
+                                            <input type="radio" class="mz-toggle-button__input" id="pickup" value="pickup" readonly="" />
+                                            <label for="pickup" class="mz-toggle-button__button mz-delivery-methods__delivery-button">
+                          <span>รับที่สาขาภายใน 30 นาที</span>
+                        </label>
+                                        </div>
+                                    </div>
+                                    <div class="mz-delivery-methods__inputs">
+                                        <div class="mz-delivery-methods__address-selector">
+                                            <div class="mz-searchable-dropdown dropdown">
+                                                <button type="button" class="mz-searchable-dropdown__button --with-left-icon --selected" data-placeholder="เลือกที่อยู่จัดส่งสินค้า" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="mz-searchable-dropdown__left-icon">
+                              <span
+                                class="mz-icon --search mz-delivery-methods__search-icon"
+                              ></span>
+                            </span>
+                            <div class="mz-searchable-dropdown__button-text">
+                              คอนโดกรุงเทพ: 56/345 เดอะนิช โมโน สุขุมวิท 50
+                              แขวงพระโขนง เขตคลองเตย กรุงเทพมหานคร 10110
+                            </div>
+                            <span
+                              class="mz-icon --arrow-down mz-searchable-dropdown__icon"
+                            ></span>
+                          </button>
+                                                <div class="mz-searchable-dropdown__modal">
+                                                    <button type="button" class="mz-searchable-dropdown__close-button">
+                              <span class="mz-icon --close"></span>
+                            </button>
+                                                    <div class="mz-input mz-searchable-dropdown__input">
+                                                        <div class="mz-input__icon --left">
+                                                            <span class="mz-icon --search mz-delivery-methods__search-icon"></span>
+                                                        </div>
+                                                        <div class="mz-input__icon --right">
+                                                            <span class="mz-icon --arrow-down mz-searchable-dropdown__icon"></span>
+                                                        </div>
+                                                        <input type="text" id="delivery-address" placeholder="เลือกที่อยู่จัดส่งสินค้า" class="mz-input__input input-lg form-control --with-left-icon --with-right-icon" value="คอนโดกรุงเทพ: 56/345 เดอะนิช โมโน สุขุมวิท 50 แขวงพระโขนง เขตคลองเตย กรุงเทพมหานคร 10110"
+                                                        />
+                                                    </div>
+                                                    <div class="mz-searchable-dropdown__menu">
+                                                        <label class="mz-searchable-dropdown__option" for="delivery-address:condo-bangkok">
+                                <input
+                                  type="radio"
+                                  class="mz-searchable-dropdown__option-input"
+                                  id="delivery-address:condo-bangkok"
+                                  name="delivery-address"
+                                  value="condo-bangkok"
+                                  data-label="คอนโดกรุงเทพ: 56/345 เดอะนิช โมโน สุขุมวิท 50 แขวงพระโขนง เขตคลองเตย กรุงเทพมหานคร 10110"
+                                  readonly=""
+                                  checked=""
+                                />
+                                <div class="mz-address-option">
+                                  <div class="mz-address-option__main-tag">
+                                    <span>ที่อยู่หลัก</span>
+                                  </div>
+                                  <div>
+                                    <strong>คอนโดกรุงเทพ</strong>
+                                    <p>
+                                      56/345 เดอะนิช โมโน สุขุมวิท 50
+                                      แขวงพระโขนง เขตคลองเตย กรุงเทพมหานคร 10110
+                                    </p>
+                                  </div>
+                                </div>
+                                <span
+                                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                                ></span>
+                              </label>
+                                                        <label class="mz-searchable-dropdown__option" for="delivery-address:home-khonkaen">
+                                <input
+                                  type="radio"
+                                  class="mz-searchable-dropdown__option-input"
+                                  id="delivery-address:home-khonkaen"
+                                  name="delivery-address"
+                                  value="home-khonkaen"
+                                  data-label="บ้านขอนแก่น: 68/9 หมู่บ้านสวัสดี ถนนประชาสําราญ อําเภอเมือง จังหวัดขอนแก่น 40000"
+                                  readonly=""
+                                />
+                                <div class="mz-address-option">
+                                  <div>
+                                    <strong>บ้านขอนแก่น</strong>
+                                    <p>
+                                      68/9 หมู่บ้านสวัสดี ถนนประชาสําราญ
+                                      อําเภอเมือง จังหวัดขอนแก่น 40000
+                                    </p>
+                                  </div>
+                                </div>
+                                <span
+                                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                                ></span>
+                              </label>
+                                                        <label class="mz-searchable-dropdown__option" for="delivery-address:work-bangkok">
+                                <input
+                                  type="radio"
+                                  class="mz-searchable-dropdown__option-input"
+                                  id="delivery-address:work-bangkok"
+                                  name="delivery-address"
+                                  value="work-bangkok"
+                                  data-label="ที่ทำงานกรุงเทพ: 1199/1 ถนนรามคำแหง แขวงหัวหมาก เขตบางกระปิ กรุงเทพมหานคร 10240"
+                                  readonly=""
+                                />
+                                <div class="mz-address-option">
+                                  <div>
+                                    <strong>ที่ทำงานกรุงเทพ</strong>
+                                    <p>
+                                      1199/1 ถนนรามคำแหง แขวงหัวหมาก เขตบางกระปิ
+                                      กรุงเทพมหานคร 10240
+                                    </p>
+                                  </div>
+                                </div>
+                                <span
+                                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                                ></span>
+                              </label>
+                                                        <div class="mz-searchable-dropdown__footer">
+                                                            <a class="mz-delivery-methods__new-address" href="./new-address">
+                                                                <span class="mz-icon --add mz-delivery-methods__new-address-icon"></span> เพิ่มที่อยู่ใหม่
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="mz-message --error mz-delivery-methods__error-message">
+                                                <small id="delivery-address-error"></small>
+                                            </p>
+                                        </div>
+                                        <div class="mz-delivery-methods__phone-input">
+                                            <div class="mz-input">
+                                                <input type="tel" name="recipient-mobile" placeholder="เบอร์โทรติดต่อ" class="mz-input__input input-lg form-control" />
+                                            </div>
+                                            <p class="mz-message --error mz-delivery-methods__error-message">
+                                                <small id="recipient-mobile-error"></small>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <header class="mz-cart-orders__header">
                                     <h6>สินค้า 10 รายการ</h6>
@@ -709,9 +879,6 @@
                                                     <div class="mz-cart-item__amount">
                                                         <div class="mz-cart-item__final-price">฿ 2</div>
                                                     </div>
-                                                    <div class="mz-cart-item__pv-bv">
-                                                        +2100 PV / + 1200 BV
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -754,9 +921,6 @@
                                                     </div>
                                                     <div class="mz-cart-item__amount">
                                                         <div class="mz-cart-item__final-price">฿ 1</div>
-                                                    </div>
-                                                    <div class="mz-cart-item__pv-bv">
-                                                        +2100 PV / + 1200 BV
                                                     </div>
                                                 </div>
                                             </div>
@@ -825,9 +989,6 @@
                                                     </div>
                                                     <div class="mz-cart-item__amount">
                                                         <div class="mz-cart-item__final-price">฿ 1</div>
-                                                    </div>
-                                                    <div class="mz-cart-item__pv-bv">
-                                                        +2100 PV / + 1200 BV
                                                     </div>
                                                 </div>
                                             </div>
@@ -902,9 +1063,6 @@
                                                         </div>
                                                         <div class="mz-cart-item__final-price">฿ 2</div>
                                                     </div>
-                                                    <div class="mz-cart-item__pv-bv">
-                                                        +2100 PV / + 1200 BV
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -977,9 +1135,6 @@
                                                     <div class="mz-cart-item__amount">
                                                         <div class="mz-cart-item__final-price">฿ 1</div>
                                                     </div>
-                                                    <div class="mz-cart-item__pv-bv">
-                                                        +2100 PV / + 1200 BV
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -989,7 +1144,7 @@
                                             <span>
                           ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์
                         </span>
-                                            <a href="./bundle-edit" class="mz-cart-item-bundle__edit --desktop">
+                                            <a href="#" class="mz-cart-item-bundle__edit --desktop" data-toggle="modal" data-target="#exampleModal">
                                                 <span class="mz-icon --edit mz-cart-item-bundle__edit-icon"></span> แก้ไขรายการ
                                             </a>
                                         </div>
@@ -1060,9 +1215,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="./bundle-edit" class="mz-cart-item-bundle__edit --mobile">
+                                        <a href="#" class="mz-cart-item-bundle__edit --mobile" data-toggle="modal" data-target="#exampleModal">
                                             <span class="mz-icon --edit mz-cart-item-bundle__edit-icon"></span> แก้ไขรายการ
                                         </a>
+
                                     </div>
                                 </div>
                                 <div class="mz-cart-item mz-cart-orders__item" id="102395" data-id="102395">
@@ -1097,7 +1253,7 @@
                             </section>
                             <section class="mz-cart-layout__panel">
                                 <h6 class="mz-cart-layout__mobile-discount-title">
-                                    โปรโมชั่นโค้ด
+                                    สิทธิ์ส่วนลดและโปรโมชั่นโค้ด
                                 </h6>
                                 <div class="mz-cart-layout__discount-section">
                                     <div class="mz-promo-code-input --mobile">
@@ -1117,6 +1273,221 @@
                                     <p class="mz-error mz-promo-code-input__error --is-used">
                                         คุณใช้โปรโมชั่นโค้ดนี้ไปแล้ว
                                     </p>
+                                    <section class="mz-coupon-section">
+                                        <div class="mz-coupon --bg-grey">
+                                            <div class="mz-coupon__section --left">
+                                                <p class="mz-coupon__condition">
+                                                    ส่วนลดเมื่อซื้อครบ ฿ 7,500
+                                                </p>
+                                                <strong>ลด ฿ 1,000</strong>
+                                            </div>
+                                            <div class="mz-coupon__section --right">
+                                                <input type="checkbox" id="preview-coupon-COUPON1000A" value="COUPON1000A" class="mz-coupon__input" data-id="COUPON1000A" data-value="1000" readonly="" />
+                                                <label for="preview-coupon-COUPON1000A" class="mz-coupon__button">
+                            <div class="mz-coupon__unchecked-text">
+                              ใช้ส่วนลด
+                            </div>
+                            <div class="mz-coupon__checked-text">
+                              <span
+                                class="mz-icon --check mz-coupon__checked-icon"
+                              ></span>
+                              <span>ใช้แล้ว</span>
+                            </div>
+                          </label>
+                                                <div class="mz-coupon__circle --top"></div>
+                                                <div class="mz-coupon__circle --bottom"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mz-coupon --bg-grey">
+                                            <div class="mz-coupon__section --left">
+                                                <p class="mz-coupon__condition">
+                                                    ส่วนลดเมื่อซื้อครบ ฿ 7,500
+                                                </p>
+                                                <strong>ลด ฿ 1,000</strong>
+                                            </div>
+                                            <div class="mz-coupon__section --right">
+                                                <input type="checkbox" id="preview-coupon-COUPON1000B" value="COUPON1000B" class="mz-coupon__input" data-id="COUPON1000B" data-value="1000" readonly="" />
+                                                <label for="preview-coupon-COUPON1000B" class="mz-coupon__button">
+                            <div class="mz-coupon__unchecked-text">
+                              ใช้ส่วนลด
+                            </div>
+                            <div class="mz-coupon__checked-text">
+                              <span
+                                class="mz-icon --check mz-coupon__checked-icon"
+                              ></span>
+                              <span>ใช้แล้ว</span>
+                            </div>
+                          </label>
+                                                <div class="mz-coupon__circle --top"></div>
+                                                <div class="mz-coupon__circle --bottom"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mz-coupon-section__see-all">
+                                            <button type="button" data-toggle="modal" data-target="#coupon-modal">
+                          ดูทั้งหมด
+                        </button>
+                                        </div>
+                                        <div id="coupon-modal" class="mz-modal modal fade --mobile-full" tabindex="-1" role="dialog" style="display:none">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content mz-coupon-section__modal">
+                                                    <button type="button" class="mz-modal__close-button" data-dismiss="modal" aria-label="Close">
+                              <span class="mz-icon --close"></span>
+                            </button>
+                                                    <header class="mz-coupon-section__modal-header">
+                                                        <h3>สิทธิ์ส่วนลดในตะกร้าของคุณ</h3>
+                                                    </header>
+                                                    <div class="mz-coupon-section__modal-container">
+                                                        <h6>สิทธิ์ส่วนลดที่ใช้ได้ในตะกร้านี้</h6>
+                                                        <div class="mz-coupon --bg-white">
+                                                            <div class="mz-coupon__section --left">
+                                                                <p class="mz-coupon__condition">
+                                                                    ส่วนลดเมื่อซื้อครบ ฿ 7,500
+                                                                </p>
+                                                                <strong>ลด ฿ 1,000</strong>
+                                                            </div>
+                                                            <div class="mz-coupon__section --right">
+                                                                <input type="checkbox" id="coupon-COUPON1000A" name="coupon" value="COUPON1000A" class="mz-coupon__input" data-id="COUPON1000A" data-value="1000" readonly="" />
+                                                                <label for="coupon-COUPON1000A" class="mz-coupon__button">
+                                    <div class="mz-coupon__unchecked-text">
+                                      ใช้ส่วนลด
+                                    </div>
+                                    <div class="mz-coupon__checked-text">
+                                      <span
+                                        class="mz-icon --check mz-coupon__checked-icon"
+                                      ></span>
+                                      <span>ใช้แล้ว</span>
+                                    </div>
+                                  </label>
+                                                                <div class="mz-coupon__circle --top"></div>
+                                                                <div class="mz-coupon__circle --bottom"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mz-coupon --bg-white">
+                                                            <div class="mz-coupon__section --left">
+                                                                <p class="mz-coupon__condition">
+                                                                    ส่วนลดเมื่อซื้อครบ ฿ 7,500
+                                                                </p>
+                                                                <strong>ลด ฿ 1,000</strong>
+                                                            </div>
+                                                            <div class="mz-coupon__section --right">
+                                                                <input type="checkbox" id="coupon-COUPON1000B" name="coupon" value="COUPON1000B" class="mz-coupon__input" data-id="COUPON1000B" data-value="1000" readonly="" />
+                                                                <label for="coupon-COUPON1000B" class="mz-coupon__button">
+                                    <div class="mz-coupon__unchecked-text">
+                                      ใช้ส่วนลด
+                                    </div>
+                                    <div class="mz-coupon__checked-text">
+                                      <span
+                                        class="mz-icon --check mz-coupon__checked-icon"
+                                      ></span>
+                                      <span>ใช้แล้ว</span>
+                                    </div>
+                                  </label>
+                                                                <div class="mz-coupon__circle --top"></div>
+                                                                <div class="mz-coupon__circle --bottom"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mz-coupon --bg-white">
+                                                            <div class="mz-coupon__section --left">
+                                                                <p class="mz-coupon__condition">
+                                                                    ส่วนลดเมื่อสั่งซื้อผลิตภัณฑ์ของนักธุรกิจแอมเวย์ใหม่รวมมูลค่า 4,829 บาท
+                                                                </p>
+                                                                <strong>ลด ฿ 1,000</strong>
+                                                            </div>
+                                                            <div class="mz-coupon__section --right">
+                                                                <input type="checkbox" id="coupon-COUPON1000C" name="coupon" value="COUPON1000C" class="mz-coupon__input" data-id="COUPON1000C" data-value="1000" readonly="" />
+                                                                <label for="coupon-COUPON1000C" class="mz-coupon__button">
+                                    <div class="mz-coupon__unchecked-text">
+                                      ใช้ส่วนลด
+                                    </div>
+                                    <div class="mz-coupon__checked-text">
+                                      <span
+                                        class="mz-icon --check mz-coupon__checked-icon"
+                                      ></span>
+                                      <span>ใช้แล้ว</span>
+                                    </div>
+                                  </label>
+                                                                <div class="mz-coupon__circle --top"></div>
+                                                                <div class="mz-coupon__circle --bottom"></div>
+                                                            </div>
+                                                        </div>
+                                                        <h6>สิทธิ์ส่วนลดทั้งหมด</h6>
+                                                        <div class="mz-coupon --bg-white --disabled">
+                                                            <div class="mz-coupon__section --left">
+                                                                <p class="mz-coupon__condition">
+                                                                    ส่วนลดเมื่อซื้อครบ ฿ 20,000
+                                                                </p>
+                                                                <strong>ลด ฿ 2,500</strong>
+                                                            </div>
+                                                            <div class="mz-coupon__section --right">
+                                                                <input type="checkbox" id="preview-coupon-COUPON2500A" value="COUPON2500A" class="mz-coupon__input" disabled="" data-id="COUPON2500A" data-value="2500" readonly="" />
+                                                                <label for="preview-coupon-COUPON2500A" class="mz-coupon__button --disabled">
+                                    <div class="mz-coupon__unchecked-text">
+                                      ใช้ส่วนลด
+                                    </div>
+                                    <div class="mz-coupon__checked-text">
+                                      <span
+                                        class="mz-icon --check mz-coupon__checked-icon"
+                                      ></span>
+                                      <span>ใช้แล้ว</span>
+                                    </div>
+                                  </label>
+                                                                <div class="mz-coupon__circle --top"></div>
+                                                                <div class="mz-coupon__circle --bottom"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mz-coupon --bg-white --disabled">
+                                                            <div class="mz-coupon__section --left">
+                                                                <p class="mz-coupon__condition">
+                                                                    ส่วนลดเมื่อสั่งซื้อผลิตภัณฑ์ของนักธุรกิจแอมเวย์ใหม่รวมมูลค่า 4,829 บาท
+                                                                </p>
+                                                                <strong>ลด ฿ 2,500</strong>
+                                                            </div>
+                                                            <div class="mz-coupon__section --right">
+                                                                <input type="checkbox" id="preview-coupon-COUPON2500B" value="COUPON2500B" class="mz-coupon__input" disabled="" data-id="COUPON2500B" data-value="2500" readonly="" />
+                                                                <label for="preview-coupon-COUPON2500B" class="mz-coupon__button --disabled">
+                                    <div class="mz-coupon__unchecked-text">
+                                      ใช้ส่วนลด
+                                    </div>
+                                    <div class="mz-coupon__checked-text">
+                                      <span
+                                        class="mz-icon --check mz-coupon__checked-icon"
+                                      ></span>
+                                      <span>ใช้แล้ว</span>
+                                    </div>
+                                  </label>
+                                                                <div class="mz-coupon__circle --top"></div>
+                                                                <div class="mz-coupon__circle --bottom"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mz-coupon --bg-white --disabled">
+                                                            <div class="mz-coupon__section --left">
+                                                                <p class="mz-coupon__condition">
+                                                                    ส่วนลดเมื่อซื้อครบ ฿ 20,000
+                                                                </p>
+                                                                <strong>ลด ฿ 2,500</strong>
+                                                            </div>
+                                                            <div class="mz-coupon__section --right">
+                                                                <input type="checkbox" id="preview-coupon-COUPON2500C" value="COUPON2500C" class="mz-coupon__input" disabled="" data-id="COUPON2500C" data-value="2500" readonly="" />
+                                                                <label for="preview-coupon-COUPON2500C" class="mz-coupon__button --disabled">
+                                    <div class="mz-coupon__unchecked-text">
+                                      ใช้ส่วนลด
+                                    </div>
+                                    <div class="mz-coupon__checked-text">
+                                      <span
+                                        class="mz-icon --check mz-coupon__checked-icon"
+                                      ></span>
+                                      <span>ใช้แล้ว</span>
+                                    </div>
+                                  </label>
+                                                                <div class="mz-coupon__circle --top"></div>
+                                                                <div class="mz-coupon__circle --bottom"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
                                 </div>
                                 <div id="cart-dim-layer" class="mz-dim-layer mz-cart-layout__dim-layer"></div>
                                 <div class="mz-cart-layout__mobile-panel">
@@ -1233,12 +1604,12 @@
                                                 </div>
                                                 <div class="mz-cart-value-row mz-cart-summary__row --desktop">
                                                     <span class="mz-cart-value-row__title">
-                              PV/BV ที่จะได้รับ
+                              Amplus Point ที่จะได้รับ
                             </span>
-                                                    <span>1,000 / 2,000</span>
+                                                    <span>500</span>
                                                 </div>
                                                 <div class="mz-cart-summary__row --mobile">
-                                                    + PV 1,000 / + BV 2,000
+                                                    Amplus Point 500
                                                 </div>
                                             </div>
                                             <button type="submit" class="mz-button btn btn-lg --primary --large --original-blue mz-cart-summary__button">
@@ -1282,13 +1653,10 @@
                                     <div class="mz-upselling-item__title">
                                         อาร์ทิสทรี ซิกเนเจอร์ คัลเลอร์ อาย แชโดว์ ควอด รีฟิลล์ พิ้งค์ ช็อกโกแลต
                                     </div>
+                                    <div class="mz-upselling-item__pvbv">2100 PV / 2000 BV</div>
                                     <div class="mz-upselling-item__price">
                                         <span>ราคาสมาชิก</span>
                                         <span>฿ 21000</span>
-                                    </div>
-                                    <div class="mz-upselling-item__price --light">
-                                        <span>ราคาขายปลีก</span>
-                                        <span>฿ 22000</span>
                                     </div>
                                     <div class="mz-integer-input mz-upselling-item__input">
                                         <div class="mz-integer-input__quantity">
@@ -1311,13 +1679,10 @@
                                     <div class="mz-upselling-item__title">
                                         อาร์ทิสทรี ซิกเนเจอร์ ไลท์ อัพ ลิป กลอสส์ - พิงค์นู้ด
                                     </div>
+                                    <div class="mz-upselling-item__pvbv">2100 PV / 2000 BV</div>
                                     <div class="mz-upselling-item__price">
                                         <span>ราคาสมาชิก</span>
                                         <span>฿ 24000</span>
-                                    </div>
-                                    <div class="mz-upselling-item__price --light">
-                                        <span>ราคาขายปลีก</span>
-                                        <span>฿ 25000</span>
                                     </div>
                                     <div class="mz-integer-input mz-upselling-item__input">
                                         <div class="mz-integer-input__quantity">
@@ -1340,13 +1705,10 @@
                                     <div class="mz-upselling-item__title">
                                         อาร์ทิสทรี ฟลอรา ชิค
                                     </div>
+                                    <div class="mz-upselling-item__pvbv">2100 PV / 2000 BV</div>
                                     <div class="mz-upselling-item__price">
                                         <span>ราคาสมาชิก</span>
                                         <span>฿ 1200</span>
-                                    </div>
-                                    <div class="mz-upselling-item__price --light">
-                                        <span>ราคาขายปลีก</span>
-                                        <span>฿ 1500</span>
                                     </div>
                                     <div class="mz-integer-input mz-upselling-item__input">
                                         <div class="mz-integer-input__quantity">
@@ -1369,13 +1731,10 @@
                                     <div class="mz-upselling-item__title">
                                         อาร์ทิสทรี ไฮดร้า-วี เฟรช โฟมมิ่ง เคล็นเซอร์
                                     </div>
+                                    <div class="mz-upselling-item__pvbv">2100 PV / 2000 BV</div>
                                     <div class="mz-upselling-item__price">
                                         <span>ราคาสมาชิก</span>
                                         <span>฿ 118000</span>
-                                    </div>
-                                    <div class="mz-upselling-item__price --light">
-                                        <span>ราคาขายปลีก</span>
-                                        <span>฿ 120000</span>
                                     </div>
                                     <div class="mz-integer-input mz-upselling-item__input">
                                         <div class="mz-integer-input__quantity">
@@ -1398,13 +1757,10 @@
                                     <div class="mz-upselling-item__title">
                                         อาร์ทิสทรี ซิกเนเจอร์ ซีเล็ค ไฮเดรทติ้ง มาสก์
                                     </div>
+                                    <div class="mz-upselling-item__pvbv">2100 PV / 2000 BV</div>
                                     <div class="mz-upselling-item__price">
                                         <span>ราคาสมาชิก</span>
                                         <span>฿ 31000</span>
-                                    </div>
-                                    <div class="mz-upselling-item__price --light">
-                                        <span>ราคาขายปลีก</span>
-                                        <span>฿ 32000</span>
                                     </div>
                                     <div class="mz-integer-input mz-upselling-item__input">
                                         <div class="mz-integer-input__quantity">
@@ -1423,13 +1779,396 @@
                                 </li>
                             </ul>
                         </div>
+                        <!-- Modal -->
+                        <div class="modal-edit-bundle fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">บอดี้คีย์ บาย นิวทริไลท์ ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์ 2 กล่อง
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                               <span aria-hidden="true">&times;</span>
+                                                              </button>
+                                    </div>
+                                    <div class="modal-body-edit-bundle">
+                                        <div class="mz-cart-item-bundle-edit__header">
+                                            <span>
+                                                                   ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์
+                                                                 </span>
+
+                                        </div>
+                                        <div class="mz-cart-item-bundle__item-container">
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 5</div>
+                                                <select id="Bundle-item">
+                                                                            <option value="audi">                 
+                                                                                  บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                          </option>
+                                                                          <option value="audi">           
+                                                                                บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                        </option>
+                                                                          <option value="audi">              
+                                                                                บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                        </option>
+                                                                            <option value="audi">     
+                                                                                  บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                          </option>
+                                                                          </select>
+
+
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 3</div>
+                                                <select id="Bundle-item">
+                                                                        <option value="audi">              
+                                                                                นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                      </option>
+                                                                      <option value="audi">               
+                                                                              นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                    </option>
+                                                                      <option value="audi">              
+                                                                              นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                    </option>
+                                                                        <option value="audi">
+                                                                                นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                      </option>
+                                                                      </select>
+
+
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
+                                                <select id="Bundle-item">
+                                                                        <option value="volvo">
+                                                                                นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                      </option>
+                                                                        <option value="saab">                                                
+                                                                                นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                      </option>
+                                                                        <option value="mercedes">          
+                                                                                นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                      </option>
+                                                                        <option value="audi">                                               
+                                                                                นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                      </option>
+                                                                      </select>
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
+                                                <select id="Bundle-item">
+                                                                              <option value="volvo">                                               
+                                                                                      อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                            </option>
+                                                                              <option value="saab">                                                  
+                                                                                      อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                            </option>
+                                                                              <option value="mercedes">             
+                                                                                      อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                            </option>
+                                                                              <option  value="audi">                                               
+                                                                                      อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                            </option>
+                                                                       </select>
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
+                                                <select id="Bundle-item">
+                                                                        <option class="mz-dropdown__option" value="volvo">                                                 
+                                                                                  แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 800 มล. 1 ใบ
+                                                                      </option>
+                                                                        <option class="mz-dropdown__option" value="saab">                                                
+                                                                                  แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 900 มล. 1 ใบ
+                                                                      </option>
+                                                                        <option class="mz-dropdown__option" value="mercedes">          
+                                                                                  แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 700 มล. 1 ใบ
+                                                                      </option>
+                                                                        <option class="mz-dropdown__option" value="audi">                                                
+                                                                                  แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 500 มล. 1 ใบ
+                                                                      </option>
+                                                                      </select>
+                                            </div>
+                                        </div>
+                                        <div class="mz-cart-item-bundle-edit__header">
+                                            <span>
+                                                                 ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์
+                                                               </span>
+
+                                        </div>
+                                        <div class="mz-cart-item-bundle__item-container">
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 5</div>
+                                                <select id="Bundle-item">
+                                                                          <option value="audi">                 
+                                                                                บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                        </option>
+                                                                        <option value="audi">           
+                                                                              บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                      </option>
+                                                                        <option value="audi">              
+                                                                              บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                      </option>
+                                                                          <option value="audi">     
+                                                                                บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                        </option>
+                                                                        </select>
+
+
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 3</div>
+                                                <select id="Bundle-item">
+                                                                      <option value="audi">              
+                                                                              นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                    </option>
+                                                                    <option value="audi">               
+                                                                            นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                  </option>
+                                                                    <option value="audi">              
+                                                                            นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                  </option>
+                                                                      <option value="audi">
+                                                                              นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                    </option>
+                                                                    </select>
+
+
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
+                                                <select id="Bundle-item">
+                                                                      <option value="volvo">
+                                                                              นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                    </option>
+                                                                      <option value="saab">                                                
+                                                                              นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                    </option>
+                                                                      <option value="mercedes">          
+                                                                              นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                    </option>
+                                                                      <option value="audi">                                               
+                                                                              นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                    </option>
+                                                                    </select>
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
+                                                <select id="Bundle-item">
+                                                                            <option value="volvo">                                               
+                                                                                    อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                          </option>
+                                                                            <option value="saab">                                                  
+                                                                                    อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                          </option>
+                                                                            <option value="mercedes">             
+                                                                                    อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                          </option>
+                                                                            <option  value="audi">                                               
+                                                                                    อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                          </option>
+                                                                     </select>
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
+                                                <select id="Bundle-item">
+                                                                      <option class="mz-dropdown__option" value="volvo">                                                 
+                                                                                แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 800 มล. 1 ใบ
+                                                                    </option>
+                                                                      <option class="mz-dropdown__option" value="saab">                                                
+                                                                                แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 900 มล. 1 ใบ
+                                                                    </option>
+                                                                      <option class="mz-dropdown__option" value="mercedes">          
+                                                                                แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 700 มล. 1 ใบ
+                                                                    </option>
+                                                                      <option class="mz-dropdown__option" value="audi">                                                
+                                                                                แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 500 มล. 1 ใบ
+                                                                    </option>
+                                                                    </select>
+                                            </div>
+                                        </div>
+                                        <div class="mz-cart-item-bundle-edit__header">
+                                            <span>
+                                                               ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์
+                                                             </span>
+
+                                        </div>
+                                        <div class="mz-cart-item-bundle__item-container">
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 5</div>
+                                                <select id="Bundle-item">
+                                                                        <option value="audi">                 
+                                                                              บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                      </option>
+                                                                      <option value="audi">           
+                                                                            บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                    </option>
+                                                                      <option value="audi">              
+                                                                            บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                    </option>
+                                                                        <option value="audi">     
+                                                                              บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                      </option>
+                                                                      </select>
+
+
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 3</div>
+                                                <select id="Bundle-item">
+                                                                    <option value="audi">              
+                                                                            นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                  </option>
+                                                                  <option value="audi">               
+                                                                          นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                </option>
+                                                                  <option value="audi">              
+                                                                          นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                </option>
+                                                                    <option value="audi">
+                                                                            นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                  </option>
+                                                                  </select>
+
+
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
+                                                <select id="Bundle-item">
+                                                                    <option value="volvo">
+                                                                            นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                  </option>
+                                                                    <option value="saab">                                                
+                                                                            นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                  </option>
+                                                                    <option value="mercedes">          
+                                                                            นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                  </option>
+                                                                    <option value="audi">                                               
+                                                                            นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                  </option>
+                                                                  </select>
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
+                                                <select id="Bundle-item">
+                                                                          <option value="volvo">                                               
+                                                                                  อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                        </option>
+                                                                          <option value="saab">                                                  
+                                                                                  อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                        </option>
+                                                                          <option value="mercedes">             
+                                                                                  อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                        </option>
+                                                                          <option  value="audi">                                               
+                                                                                  อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                        </option>
+                                                                   </select>
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
+                                                <select id="Bundle-item">
+                                                                    <option class="mz-dropdown__option" value="volvo">                                                 
+                                                                              แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 800 มล. 1 ใบ
+                                                                  </option>
+                                                                    <option class="mz-dropdown__option" value="saab">                                                
+                                                                              แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 900 มล. 1 ใบ
+                                                                  </option>
+                                                                    <option class="mz-dropdown__option" value="mercedes">          
+                                                                              แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 700 มล. 1 ใบ
+                                                                  </option>
+                                                                    <option class="mz-dropdown__option" value="audi">                                                
+                                                                              แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 500 มล. 1 ใบ
+                                                                  </option>
+                                                                  </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer-edit-bundle">
+
+                                        <div style="width: 30%;margin: 0 auto;"><button type="button" data-dismiss="modal" aria-label="Close" class="mz-button btn btn-sm --primary --small --original-blue">ตกลง</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End  Modal -->
                     </section>
                 </main>
             </div>
         </div>
     </div>
-
-
+    <style>
+        .mz-cart-item-bundle-edit__header {
+            display: flex;
+            justify-content: center;
+            /* padding: 12px 24px; */
+            border-bottom: 1px solid #c3c4c5;
+            font-size: 13px;
+            font-weight: 700;
+            background-color: #ededed;
+        }
+        
+        .mz-cart-item-bundle__title-container {
+            flex: 1 1 420px;
+            margin-left: 16px;
+            padding: 8px 0;
+            overflow: hidden;
+        }
+        
+        .modal-body-edit-bundle {
+            position: relative;
+            height: 300px;
+            overflow-y: scroll;
+        }
+        
+        select#Bundle-item>option {
+            white-space: normal;
+            min-height: 30px;
+            height: auto;
+            max-height: 240px;
+        }
+        
+        select#Bundle-item {
+            font-size: 13px;
+            max-width: 600px;
+            width: 75%;
+            padding-left: 10px;
+            margin: 10px;
+        }
+        
+        .modal-edit-bundle {
+            position: fixed;
+            top: 10%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 4050;
+            display: none;
+            overflow: hidden;
+            -webkit-overflow-scrolling: touch;
+            outline: 0;
+        }
+        
+        .modal-footer-edit-bundle {
+            padding: 15px;
+            text-align: center;
+            border-top: 1px solid #e5e5e5;
+        }
+    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="./v2/Common/js/global.js"></script>
@@ -1440,8 +2179,11 @@
     <script src="./v2/Cart/js/PromoCodeInput.js"></script>
     <script src="./v2/Cart/js/PromoCodeSection.js"></script>
     <script src="./v2/Common/js/DimLayer.js"></script>
+    <script src="./v2/Cart/js/CouponSection.js"></script>
     <script src="./v2/Common/js/Dropdown.js"></script>
     <script src="./v2/Common/js/DropdownInput.js"></script>
+    <script src="./lib/js/bodyScrollLock.min.js"></script>
+    <script src="./v2/Common/js/SearchableDropdown.js"></script>
     <script src="./v2/Cart/js/CartLayout.js"></script>
     <script src="./v1/Common/js/image.js"></script>
     <script src="./v1/Search/js/SearchModal.js"></script>
