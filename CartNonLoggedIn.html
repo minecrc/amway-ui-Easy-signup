@@ -990,7 +990,7 @@
                                             <span>
                           ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์
                         </span>
-                                            <a href="#" class="mz-cart-item-bundle__edit --desktop" data-toggle="modal" data-target="#exampleModal">
+                                            <a href="#" class="mz-cart-item-bundle__edit --desktop" data-toggle="modal" data-target="#edit-bundle-modal">
                                                 <span class="mz-icon --edit mz-cart-item-bundle__edit-icon"></span> แก้ไขรายการ
                                             </a>
                                         </div>
@@ -1061,7 +1061,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="#" data-toggle="modal" data-target="#exampleModal" class="mz-cart-item-bundle__edit --mobile">
+                                        <a href="#" class="mz-cart-item-bundle__edit --mobile" data-toggle="modal" data-target="#edit-bundle-modal">
                                             <span class="mz-icon --edit mz-cart-item-bundle__edit-icon"></span> แก้ไขรายการ
                                         </a>
                                     </div>
@@ -1425,21 +1425,22 @@
                             </ul>
                         </div>
                         <!-- Modal -->
-                        <div class="modal-edit-bundle fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div id="edit-bundle-modal" class="mz-modal modal fade --mobile-full" tabindex="-1" role="dialog" style="display:none">
                             <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">บอดี้คีย์ บาย นิวทริไลท์ ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์ 2 กล่อง
-                                        </h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                         <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body-edit-bundle">
+                                <div class="modal-content mz-coupon-section__modal">
+                                    <button type="button" class="mz-modal__close-button" data-dismiss="modal" aria-label="Close">
+                                            <span class="mz-icon --close"></span>
+                                     </button>
+
+                                    <div class="mz-coupon-section__modal-container">
+                                        <header class="mz-coupon-section__modal-header">
+                                            <h5> บอดี้คีย์ บาย นิวทริไลท์ ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์ 2 กล่อง
+                                            </h5>
+                                        </header>
                                         <div class="mz-cart-item-bundle-edit__header">
                                             <span>
-                                             ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์
-                                           </span>
+                                                               ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์
+                                                             </span>
 
                                         </div>
                                         <div class="mz-cart-item-bundle__item-container">
@@ -1447,19 +1448,19 @@
                                                 <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
                                                 <div class="mz-cart-item-bundle__quantity">X 5</div>
                                                 <select id="Bundle-item">
-                                                      <option value="audi">                 
-                                                            บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
-                                                    </option>
-                                                    <option value="audi">           
-                                                          บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
-                                                  </option>
-                                                    <option value="audi">              
-                                                          บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
-                                                  </option>
-                                                      <option value="audi">     
-                                                            บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
-                                                    </option>
-                                                    </select>
+                                                                        <option value="audi">                 
+                                                                              บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                      </option>
+                                                                      <option value="audi">           
+                                                                            บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                    </option>
+                                                                      <option value="audi">              
+                                                                            บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                    </option>
+                                                                        <option value="audi">     
+                                                                              บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                      </option>
+                                                                      </select>
 
 
                                             </div>
@@ -1467,19 +1468,19 @@
                                                 <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
                                                 <div class="mz-cart-item-bundle__quantity">X 3</div>
                                                 <select id="Bundle-item">
-                                                  <option value="audi">              
-                                                          นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
-                                                </option>
-                                                <option value="audi">               
-                                                        นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
-                                              </option>
-                                                <option value="audi">              
-                                                        นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
-                                              </option>
-                                                  <option value="audi">
-                                                          นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
-                                                </option>
-                                                </select>
+                                                                    <option value="audi">              
+                                                                            นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                  </option>
+                                                                  <option value="audi">               
+                                                                          นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                </option>
+                                                                  <option value="audi">              
+                                                                          นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                </option>
+                                                                    <option value="audi">
+                                                                            นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                  </option>
+                                                                  </select>
 
 
                                             </div>
@@ -1487,61 +1488,164 @@
                                                 <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
                                                 <div class="mz-cart-item-bundle__quantity">X 1</div>
                                                 <select id="Bundle-item">
-                                                  <option value="volvo">
-                                                          นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
-                                                </option>
-                                                  <option value="saab">                                                
-                                                          นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
-                                                </option>
-                                                  <option value="mercedes">          
-                                                          นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
-                                                </option>
-                                                  <option value="audi">                                               
-                                                          นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
-                                                </option>
-                                                </select>
+                                                                    <option value="volvo">
+                                                                            นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                  </option>
+                                                                    <option value="saab">                                                
+                                                                            นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                  </option>
+                                                                    <option value="mercedes">          
+                                                                            นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                  </option>
+                                                                    <option value="audi">                                               
+                                                                            นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                  </option>
+                                                                  </select>
                                             </div>
                                             <div class="mz-cart-item-bundle__item">
                                                 <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
                                                 <div class="mz-cart-item-bundle__quantity">X 1</div>
                                                 <select id="Bundle-item">
-                                                        <option value="volvo">                                               
-                                                                อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
-                                                      </option>
-                                                        <option value="saab">                                                  
-                                                                อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
-                                                      </option>
-                                                        <option value="mercedes">             
-                                                                อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
-                                                      </option>
-                                                        <option  value="audi">                                               
-                                                                อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
-                                                      </option>
-                                                 </select>
+                                                                          <option value="volvo">                                               
+                                                                                  อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                        </option>
+                                                                          <option value="saab">                                                  
+                                                                                  อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                        </option>
+                                                                          <option value="mercedes">             
+                                                                                  อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                        </option>
+                                                                          <option  value="audi">                                               
+                                                                                  อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                        </option>
+                                                                   </select>
                                             </div>
                                             <div class="mz-cart-item-bundle__item">
                                                 <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
                                                 <div class="mz-cart-item-bundle__quantity">X 1</div>
                                                 <select id="Bundle-item">
-                                                  <option class="mz-dropdown__option" value="volvo">                                                 
-                                                            แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 800 มล. 1 ใบ
-                                                </option>
-                                                  <option class="mz-dropdown__option" value="saab">                                                
-                                                            แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 900 มล. 1 ใบ
-                                                </option>
-                                                  <option class="mz-dropdown__option" value="mercedes">          
-                                                            แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 700 มล. 1 ใบ
-                                                </option>
-                                                  <option class="mz-dropdown__option" value="audi">                                                
-                                                            แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 500 มล. 1 ใบ
-                                                </option>
-                                                </select>
+                                                                    <option class="mz-dropdown__option" value="volvo">                                                 
+                                                                              แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 800 มล. 1 ใบ
+                                                                  </option>
+                                                                    <option class="mz-dropdown__option" value="saab">                                                
+                                                                              แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 900 มล. 1 ใบ
+                                                                  </option>
+                                                                    <option class="mz-dropdown__option" value="mercedes">          
+                                                                              แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 700 มล. 1 ใบ
+                                                                  </option>
+                                                                    <option class="mz-dropdown__option" value="audi">                                                
+                                                                              แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 500 มล. 1 ใบ
+                                                                  </option>
+                                                                  </select>
                                             </div>
                                         </div>
                                         <div class="mz-cart-item-bundle-edit__header">
                                             <span>
-                                           ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์
-                                         </span>
+                                                             ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์
+                                                           </span>
+
+                                        </div>
+                                        <div class="mz-cart-item-bundle__item-container">
+
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 5</div>
+                                                <select id="Bundle-item">
+                                                                      <option value="audi">                 
+                                                                            บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                    </option>
+                                                                    <option value="audi">           
+                                                                          บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                  </option>
+                                                                    <option value="audi">              
+                                                                          บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                  </option>
+                                                                      <option value="audi">     
+                                                                            บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                    </option>
+                                                                    </select>
+
+
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 3</div>
+                                                <select id="Bundle-item">
+                                                                  <option value="audi">              
+                                                                          นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                </option>
+                                                                <option value="audi">               
+                                                                        นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                              </option>
+                                                                <option value="audi">              
+                                                                        นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                              </option>
+                                                                  <option value="audi">
+                                                                          นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                                </option>
+                                                                </select>
+
+
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
+                                                <select id="Bundle-item">
+                                                                  <option value="volvo">
+                                                                          นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                </option>
+                                                                  <option value="saab">                                                
+                                                                          นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                </option>
+                                                                  <option value="mercedes">          
+                                                                          นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                </option>
+                                                                  <option value="audi">                                               
+                                                                          นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                                </option>
+                                                                </select>
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
+                                                <select id="Bundle-item">
+                                                                        <option value="volvo">                                               
+                                                                                อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                      </option>
+                                                                        <option value="saab">                                                  
+                                                                                อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                      </option>
+                                                                        <option value="mercedes">             
+                                                                                อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                      </option>
+                                                                        <option  value="audi">                                               
+                                                                                อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                      </option>
+                                                                 </select>
+                                            </div>
+                                            <div class="mz-cart-item-bundle__item">
+                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
+                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
+                                                <select id="Bundle-item">
+                                                                  <option class="mz-dropdown__option" value="volvo">                                                 
+                                                                            แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 800 มล. 1 ใบ
+                                                                </option>
+                                                                  <option class="mz-dropdown__option" value="saab">                                                
+                                                                            แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 900 มล. 1 ใบ
+                                                                </option>
+                                                                  <option class="mz-dropdown__option" value="mercedes">          
+                                                                            แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 700 มล. 1 ใบ
+                                                                </option>
+                                                                  <option class="mz-dropdown__option" value="audi">                                                
+                                                                            แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 500 มล. 1 ใบ
+                                                                </option>
+                                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mz-cart-item-bundle-edit__header">
+                                            <span>
+                                                           ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์
+                                                         </span>
 
                                         </div>
                                         <div class="mz-cart-item-bundle__item-container">
@@ -1549,19 +1653,19 @@
                                                 <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
                                                 <div class="mz-cart-item-bundle__quantity">X 5</div>
                                                 <select id="Bundle-item">
-                                                    <option value="audi">                 
-                                                          บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
-                                                  </option>
-                                                  <option value="audi">           
-                                                        บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
-                                                </option>
-                                                  <option value="audi">              
-                                                        บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
-                                                </option>
-                                                    <option value="audi">     
-                                                          บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
-                                                  </option>
-                                                  </select>
+                                                                    <option value="audi">                 
+                                                                          บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                  </option>
+                                                                  <option value="audi">           
+                                                                        บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                </option>
+                                                                  <option value="audi">              
+                                                                        บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                </option>
+                                                                    <option value="audi">     
+                                                                          บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                                  </option>
+                                                                  </select>
 
 
                                             </div>
@@ -1569,19 +1673,19 @@
                                                 <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
                                                 <div class="mz-cart-item-bundle__quantity">X 3</div>
                                                 <select id="Bundle-item">
-                                                <option value="audi">              
-                                                        นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
-                                              </option>
-                                              <option value="audi">               
-                                                      นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
-                                            </option>
-                                              <option value="audi">              
-                                                      นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
-                                            </option>
-                                                <option value="audi">
-                                                        นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
-                                              </option>
-                                              </select>
+                                                                <option value="audi">              
+                                                                        นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                              </option>
+                                                              <option value="audi">               
+                                                                      นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                            </option>
+                                                              <option value="audi">              
+                                                                      นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                            </option>
+                                                                <option value="audi">
+                                                                        นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                                                              </option>
+                                                              </select>
 
 
                                             </div>
@@ -1589,163 +1693,57 @@
                                                 <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
                                                 <div class="mz-cart-item-bundle__quantity">X 1</div>
                                                 <select id="Bundle-item">
-                                                <option value="volvo">
-                                                        นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
-                                              </option>
-                                                <option value="saab">                                                
-                                                        นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
-                                              </option>
-                                                <option value="mercedes">          
-                                                        นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
-                                              </option>
-                                                <option value="audi">                                               
-                                                        นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
-                                              </option>
-                                              </select>
+                                                                <option value="volvo">
+                                                                        นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                              </option>
+                                                                <option value="saab">                                                
+                                                                        นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                              </option>
+                                                                <option value="mercedes">          
+                                                                        นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                              </option>
+                                                                <option value="audi">                                               
+                                                                        นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                                                              </option>
+                                                              </select>
                                             </div>
                                             <div class="mz-cart-item-bundle__item">
                                                 <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
                                                 <div class="mz-cart-item-bundle__quantity">X 1</div>
                                                 <select id="Bundle-item">
-                                                      <option value="volvo">                                               
-                                                              อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
-                                                    </option>
-                                                      <option value="saab">                                                  
-                                                              อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
-                                                    </option>
-                                                      <option value="mercedes">             
-                                                              อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
-                                                    </option>
-                                                      <option  value="audi">                                               
-                                                              อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
-                                                    </option>
-                                               </select>
+                                                                      <option value="volvo">                                               
+                                                                              อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                    </option>
+                                                                      <option value="saab">                                                  
+                                                                              อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                    </option>
+                                                                      <option value="mercedes">             
+                                                                              อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                    </option>
+                                                                      <option  value="audi">                                               
+                                                                              อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                                                                    </option>
+                                                               </select>
                                             </div>
                                             <div class="mz-cart-item-bundle__item">
                                                 <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
                                                 <div class="mz-cart-item-bundle__quantity">X 1</div>
                                                 <select id="Bundle-item">
-                                                <option class="mz-dropdown__option" value="volvo">                                                 
-                                                          แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 800 มล. 1 ใบ
-                                              </option>
-                                                <option class="mz-dropdown__option" value="saab">                                                
-                                                          แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 900 มล. 1 ใบ
-                                              </option>
-                                                <option class="mz-dropdown__option" value="mercedes">          
-                                                          แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 700 มล. 1 ใบ
-                                              </option>
-                                                <option class="mz-dropdown__option" value="audi">                                                
-                                                          แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 500 มล. 1 ใบ
-                                              </option>
-                                              </select>
+                                                                <option class="mz-dropdown__option" value="volvo">                                                 
+                                                                          แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 800 มล. 1 ใบ
+                                                              </option>
+                                                                <option class="mz-dropdown__option" value="saab">                                                
+                                                                          แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 900 มล. 1 ใบ
+                                                              </option>
+                                                                <option class="mz-dropdown__option" value="mercedes">          
+                                                                          แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 700 มล. 1 ใบ
+                                                              </option>
+                                                                <option class="mz-dropdown__option" value="audi">                                                
+                                                                          แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 500 มล. 1 ใบ
+                                                              </option>
+                                                              </select>
                                             </div>
                                         </div>
-                                        <div class="mz-cart-item-bundle-edit__header">
-                                            <span>
-                                         ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์
-                                       </span>
-
-                                        </div>
-                                        <div class="mz-cart-item-bundle__item-container">
-                                            <div class="mz-cart-item-bundle__item">
-                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
-                                                <div class="mz-cart-item-bundle__quantity">X 5</div>
-                                                <select id="Bundle-item">
-                                                  <option value="audi">                 
-                                                        บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
-                                                </option>
-                                                <option value="audi">           
-                                                      บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
-                                              </option>
-                                                <option value="audi">              
-                                                      บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
-                                              </option>
-                                                  <option value="audi">     
-                                                        บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
-                                                </option>
-                                                </select>
-
-
-                                            </div>
-                                            <div class="mz-cart-item-bundle__item">
-                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
-                                                <div class="mz-cart-item-bundle__quantity">X 3</div>
-                                                <select id="Bundle-item">
-                                              <option value="audi">              
-                                                      นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
-                                            </option>
-                                            <option value="audi">               
-                                                    นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
-                                          </option>
-                                            <option value="audi">              
-                                                    นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
-                                          </option>
-                                              <option value="audi">
-                                                      นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
-                                            </option>
-                                            </select>
-
-
-                                            </div>
-                                            <div class="mz-cart-item-bundle__item">
-                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
-                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
-                                                <select id="Bundle-item">
-                                              <option value="volvo">
-                                                      นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
-                                            </option>
-                                              <option value="saab">                                                
-                                                      นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
-                                            </option>
-                                              <option value="mercedes">          
-                                                      นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
-                                            </option>
-                                              <option value="audi">                                               
-                                                      นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
-                                            </option>
-                                            </select>
-                                            </div>
-                                            <div class="mz-cart-item-bundle__item">
-                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
-                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
-                                                <select id="Bundle-item">
-                                                    <option value="volvo">                                               
-                                                            อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
-                                                  </option>
-                                                    <option value="saab">                                                  
-                                                            อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
-                                                  </option>
-                                                    <option value="mercedes">             
-                                                            อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
-                                                  </option>
-                                                    <option  value="audi">                                               
-                                                            อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
-                                                  </option>
-                                             </select>
-                                            </div>
-                                            <div class="mz-cart-item-bundle__item">
-                                                <img class="mz-image" alt="product-1" src="./static/images/mock/bundle-1.jpg">
-                                                <div class="mz-cart-item-bundle__quantity">X 1</div>
-                                                <select id="Bundle-item">
-                                              <option class="mz-dropdown__option" value="volvo">                                                 
-                                                        แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 800 มล. 1 ใบ
-                                            </option>
-                                              <option class="mz-dropdown__option" value="saab">                                                
-                                                        แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 900 มล. 1 ใบ
-                                            </option>
-                                              <option class="mz-dropdown__option" value="mercedes">          
-                                                        แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 700 มล. 1 ใบ
-                                            </option>
-                                              <option class="mz-dropdown__option" value="audi">                                                
-                                                        แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 500 มล. 1 ใบ
-                                            </option>
-                                            </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer-edit-bundle">
-                                        <div style="width: 30%;margin: 0 auto;"><button type="button" data-dismiss="modal" aria-label="Close" class="mz-button btn btn-sm --primary --small --original-blue">ตกลง</button></div>
-
                                     </div>
                                 </div>
                             </div>
@@ -1758,10 +1756,30 @@
     </div>
 
     <style>
+        .close-editbundle {
+            float: right;
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 1;
+            padding-right: 1%;
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            filter: alpha(opacity=20);
+            opacity: 1;
+            background: transparent;
+        }
+        
+        .mz-modal__close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: transparent;
+        }
+        
         .mz-cart-item-bundle-edit__header {
             display: flex;
-            justify-content: center;
-            /* padding: 12px 24px; */
+            justify-content: 'left';
+            padding: 12px 24px;
             border-bottom: 1px solid #c3c4c5;
             font-size: 13px;
             font-weight: 700;
@@ -1792,7 +1810,7 @@
             font-size: 13px;
             max-width: 600px;
             width: 75%;
-            padding-left: 10px;
+            padding: 5px;
             margin: 10px;
         }
         
@@ -1813,6 +1831,24 @@
             padding: 15px;
             text-align: center;
             border-top: 1px solid #e5e5e5;
+        }
+        
+        @media screen and (max-width: 425px) {
+            .mz-cart-item-bundle-edit__header {
+                background-color: white;
+            }
+            .modal-edit-bundle {
+                top: 5%;
+            }
+            .modal-edit-bundle .modal-dialog {
+                margin: 5px;
+            }
+            .modal-edit-bundle .modal-dialog .modal-content {
+                height: 90vh;
+            }
+            .modal-body-edit-bundle {
+                height: 75%;
+            }
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
