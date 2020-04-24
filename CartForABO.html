@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" href="./styles/common.ebcd0de550622749325e.css" />
     <link rel="stylesheet" href="./styles/Cart___CartForABO.c30ad16c8c60df247b1e.css" />
+
 </head>
 
 <body>
@@ -826,12 +827,14 @@
                                   </div>
                                 </div>
                                 <span
-                                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
-                                ></span>
+                                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon" ></span>
                               </label>
                                                         <div class="mz-searchable-dropdown__footer">
-                                                            <a class="mz-delivery-methods__new-address" href="./new-address">
-                                                                <span class="mz-icon --add mz-delivery-methods__new-address-icon"></span> เพิ่มที่อยู่ใหม่
+                                                            <a href="#" class="mz-cart-item-bundle__edit --desktop" data-toggle="modal" data-target="#new-address-modal">
+                                                                <span class="mz-icon --edit mz-cart-item-bundle__edit-icon"></span> เพิ่มที่อยู่ใหม่
+                                                            </a>
+                                                            <a href="#" class="mz-cart-item-bundle__edit --mobile" data-toggle="modal" data-target="#new-address-modal">
+                                                                <span class="mz-icon --edit mz-cart-item-bundle__edit-icon"></span> เพิ่มที่อยู่ใหม่
                                                             </a>
                                                         </div>
                                                     </div>
@@ -2139,6 +2142,116 @@
                             </div>
                         </div>
                         <!-- End  Modal -->
+
+                        <!-- new-address Modal -->
+                        <div id="new-address-modal" class="mz-modal modal fade --mobile-full" tabindex="-1" role="dialog" style="display:none">
+
+                            <div class="modal-dialog" role="document" style="max-width: 610px;">
+                                <div class="modal-content mz-coupon-section__modal" style="background-color: white;">
+                                    <button type="button" class="mz-modal__close-button" data-dismiss="modal" aria-label="Close">
+                                        <span class="mz-icon --close"></span>
+                                 </button>
+                                    <div class="panel-body">
+                                        <div id="newPayment" class="add-edit-address">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p><b>กรุณาตรวจสอบที่อยู่และเบอร์โทรศัพท์มือถือที่ลงทะเบียนให้ถูกต้อง เพื่อความสะดวกรวดเร็วในการจัดส่ง</b></p>
+                                                    <p class="form-tips">กรุณากรอกข้อมูลที่จำเป็นทั้งหมด</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-horizontal add-delivery-wraps">
+                                                <!---->
+                                                <div class="row">
+                                                    <div class="col-md-9 col-xs-10">
+                                                        <form name="form" method="post" action="get_form.php">
+                                                            <div class="col-md-6">
+                                                                ชื่อผู้รับ :
+                                                            </div>
+                                                            <div class="col-md-6">
+
+                                                                <input type="name" name="recipient-name" placeholder="ชื่อ - นามสกุล" class="mz-input__input input-lg form-control">
+
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                ที่อยู่ :
+                                                            </div>
+                                                            <div class="col-md-6">
+
+                                                                <input type="address" name="recipient-address" placeholder="บ้านเลขที่" class="mz-input__input input-lg form-control">
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p>
+                                                                    จังหวัด : </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <span id="province"><select name="province" class="mz-input__input input-lg form-control" style="width: 100%;"><option value="0">- เลือกจังหวัด -</option>
+                                                <option value="64">กระบี่   </option><option value="1">กรุงเทพมหานคร   </option><option value="56">กาญจนบุรี   </option><option value="34">กาฬสินธุ์   </option><option value="49">กำแพงเพชร   </option><option value="28">ขอนแก่น   </option><option value="13">จันทบุรี   </option><option value="15">ฉะเชิงเทรา   </option><option value="11">ชลบุรี   </option><option value="9">ชัยนาท   </option><option value="25">ชัยภูมิ   </option><option value="69">ชุมพร   </option><option value="72">ตรัง   </option><option value="14">ตราด   </option><option value="50">ตาก   </option><option value="17">นครนายก   </option><option value="58">นครปฐม   </option><option value="36">นครพนม   </option><option value="19">นครราชสีมา   </option><option value="63">นครศรีธรรมราช   </option><option value="47">นครสวรรค์   </option><option value="3">นนทบุรี   </option><option value="76">นราธิวาส   </option><option value="43">น่าน   </option><option value="77">บึงกาฬ</option><option value="20">บุรีรัมย์   </option><option value="4">ปทุมธานี   </option><option value="62">ประจวบคีรีขันธ์   </option><option value="16">ปราจีนบุรี   </option><option value="74">ปัตตานี   </option><option value="5">พระนครศรีอยุธยา   </option><option value="44">พะเยา   </option><option value="65">พังงา   </option><option value="73">พัทลุง   </option><option value="53">พิจิตร   </option><option value="52">พิษณุโลก   </option><option value="66">ภูเก็ต   </option><option value="32">มหาสารคาม   </option><option value="37">มุกดาหาร   </option><option value="75">ยะลา   </option><option value="24">ยโสธร   </option><option value="33">ร้อยเอ็ด   </option><option value="68">ระนอง   </option><option value="12">ระยอง   </option><option value="55">ราชบุรี   </option><option value="7">ลพบุรี   </option><option value="40">ลำปาง   </option><option value="39">ลำพูน   </option><option value="22">ศรีสะเกษ   </option><option value="35">สกลนคร   </option><option value="70">สงขลา   </option><option value="71">สตูล   </option><option value="2">สมุทรปราการ   </option><option value="60">สมุทรสงคราม   </option><option value="59">สมุทรสาคร   </option><option value="10">สระบุรี</option><option value="18">สระแก้ว   </option><option value="8">สิงห์บุรี   </option><option value="57">สุพรรณบุรี   </option><option value="67">สุราษฎร์ธานี   </option><option value="21">สุรินทร์   </option><option value="51">สุโขทัย   </option><option value="31">หนองคาย   </option><option value="27">หนองบัวลำภู   </option><option value="6">อ่างทอง   </option><option value="26">อำนาจเจริญ   </option><option value="29">อุดรธานี   </option><option value="41">อุตรดิตถ์   </option><option value="48">อุทัยธานี   </option><option value="23">อุบลราชธานี   </option><option value="45">เชียงราย   </option><option value="38">เชียงใหม่   </option><option value="61">เพชรบุรี   </option><option value="54">เพชรบูรณ์   </option><option value="30">เลย   </option><option value="42">แพร่   </option><option value="46">แม่ฮ่องสอน   </option></select>
+                                                </span>
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                อำเภอ :
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <span id="amphur">
+                                                                    <select  style="width: 100%;" class="mz-input__input input-lg form-control">
+                                                                        <option value="0">- เลือกอำเภอ -</option>
+                                                                    </select>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                ตำบล :
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <span id="district">
+                                                                    <select  style="width: 100%;" class="mz-input__input input-lg form-control">
+                                                                        <option value="0">- เลือกตำบล -</option>
+                                                                    </select>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                รหัสไปรษณีย์ :
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <span id="district">
+                                                                    <select  style="width: 100%;" class="mz-input__input input-lg form-control">
+                                                                        <option value="0">- รหัสไปรษณีย์ -</option>
+                                                                    </select>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                เบอร์โทรศัพท์มือถือ :
+                                                            </div>
+                                                            <div class="col-md-6">
+
+                                                                <input type="tel" name="recipient-mobile" placeholder="เบอร์โทรติดต่อ" class="mz-input__input input-lg form-control">
+
+                                                            </div>
+
+                                                    </div>
+
+
+
+                                                </div>
+                                                <div class="col-md-12 col-xs-12 ">
+                                                    <div class="add-delivery-accountActions">
+                                                        <button type="submit" class="mz-button btn btn-lg --primary --large --original-blue mz-cart-summary__button">
+                                                            <span>บันทึก</span>
+                                                          </button>
+                                                    </div>
+                                                </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- End new-address  Modal -->
+
                     </section>
                 </main>
             </div>
@@ -2280,6 +2393,37 @@
     <script src="./lib/js/jquery.validate.min.js"></script>
     <script src="./v2/Common/js/formValidationDefaults.js"></script>
     <script src="./v2/Cart/js/Cart.js"></script>
+    <script language="Javascript">
+        function Inint_AJAX() {
+            try {
+                return new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {} //IE
+            try {
+                return new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {} //IE
+            try {
+                return new XMLHttpRequest();
+            } catch (e) {} //Native Javascript
+            alert("XMLHttpRequest not supported");
+            return null;
+        };
+
+        function dochange(src, val) {
+            var req = Inint_AJAX();
+            req.onreadystatechange = function() {
+                if (req.readyState == 4) {
+                    if (req.status == 200) {
+                        document.getElementById(src).innerHTML = req.responseText; //รับค่ากลับมา
+                    }
+                }
+            };
+            req.open("GET", "localtion.php?data=" + src + "&val=" + val); //สร้าง connection
+            req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8"); // set Header
+            req.send(null); //ส่งค่า
+        }
+
+        window.onLoad = dochange('province', -1);
+    </script>
 </body>
 
 </html>
