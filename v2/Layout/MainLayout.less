@@ -36,5 +36,9 @@
       padding-top: @topmost-bar-height + @navigation-bar-desktop-height +
         @menu-bar-height;
     }
+
+    &.--main-bar-only &__content {
+      padding-top: @navigation-bar-desktop-height;
+    }
   }
 }

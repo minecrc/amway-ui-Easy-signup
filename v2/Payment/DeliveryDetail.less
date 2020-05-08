@@ -1,0 +1,59 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-delivery-detail {
+  .mz-container();
+  padding-bottom: @spacing[s] + @spacing[xxs];
+
+  h5 {
+    margin-bottom: @spacing[xs];
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__address-title {
+    margin-top: @spacing[s];
+    margin-bottom: @spacing[xs];
+  }
+
+  &__address {
+    margin: @spacing[xxs] 0;
+  }
+
+  &__names {
+    @media screen and (min-width: @breakpoints[xl]) {
+      padding-bottom: @spacing[s];
+      border-bottom: 1px solid @colors[grey-200];
+    }
+  }
+
+  &__info-row {
+    display: flex;
+    flex-direction: column;
+
+    strong {
+      margin-bottom: @spacing[xxs];
+
+      @media screen and (min-width: @breakpoints[xl]) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: @spacing[s];
+    }
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    @media screen and (min-width: @breakpoints[xl]) {
+      padding: @spacing[s] @spacing[m] @spacing[m];
+    }
+  }
+}

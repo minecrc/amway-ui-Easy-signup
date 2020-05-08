@@ -1,0 +1,146 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-saved-credit-debit {
+  pre {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  #credit-debit &__option-image {
+    display: none;
+
+    @media screen and (min-width: @breakpoints[md]) {
+      display: block;
+      margin-right: @spacing[s];
+    }
+  }
+
+  &__dropdown {
+    margin-top: @spacing[xs];
+  }
+
+  &__option {
+    padding: 0;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: @spacing[xxs] + @spacing[xs] @spacing[s];
+    cursor: pointer;
+
+    input {
+      .mz-hidden-input;
+    }
+  }
+
+  &__option-image {
+    width: 32px;
+  }
+
+  &__option-content {
+    margin-left: @spacing[s];
+  }
+
+  &__card-holder {
+    .mz-font-style(small);
+  }
+
+  &__option-icon {
+    visibility: hidden;
+    margin-left: auto;
+    color: @colors[original-blue];
+  }
+
+  input:checked ~ &__option-icon {
+    visibility: visible;
+  }
+
+  &__error {
+    min-height: 0;
+  }
+
+  &__amway-card-section {
+    header {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: @spacing[xs];
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      height: @spacing[s];
+    }
+  }
+
+  &__amway-card-image {
+    margin-right: @spacing[xs];
+  }
+
+  &__amway-option {
+    & + & {
+      margin-top: @spacing[xs];
+    }
+  }
+
+  &__amway-cvv-input {
+    max-width: 115px;
+    margin-top: @spacing[xs];
+  }
+
+  &__amway-cvv-icon {
+    color: @colors[grey-300];
+    font-size: @icon-sizes[m];
+  }
+
+  &__add-card-section {
+    header {
+      display: flex;
+      justify-content: space-between;
+      margin-top: @spacing[s];
+    }
+  }
+
+  &__add-card-button {
+    .mz-font-style(small, bold);
+    color: @colors[purple-300];
+  }
+
+  &__add-card-button[aria-expanded='true'] &__add {
+    display: none;
+  }
+
+  &__add-card-button[aria-expanded='false'] &__cancel {
+    display: none;
+  }
+
+  &__add-card-content {
+    margin-top: @spacing[xs];
+  }
+
+  &__instalment-section {
+    &:before {
+      content: '';
+      display: block;
+      height: @spacing[xs];
+    }
+  }
+
+  &__instalment-cvv-input {
+    max-width: 115px;
+
+    @media screen and (min-width: @breakpoints[md]) {
+      max-width: 160px;
+    }
+  }
+}

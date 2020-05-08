@@ -1,0 +1,36 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-payment-detail {
+  .mz-container();
+  padding-top: @spacing[s];
+
+  h5 {
+    margin-bottom: @spacing[xs];
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content {
+    @media screen and (min-width: @breakpoints[xl]) {
+      padding: @spacing[s] @spacing[m] 0;
+    }
+  }
+
+  &__values {
+    @media screen and (min-width: @breakpoints[xl]) {
+      padding-bottom: @spacing[s];
+      border-bottom: solid 1px @colors[grey-200];
+    }
+  }
+
+  section& {
+    @media screen and (min-width: @breakpoints[xl]) {
+      border-bottom: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}

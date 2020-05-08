@@ -3,8 +3,13 @@
 
 .mz-error {
   width: 100%;
-  margin: @spacing[xs] 0 0;
   color: @colors[red-200];
+
+  small:not(:empty):before {
+    content: '';
+    display: block;
+    height: @spacing[xs];
+  }
 
   .mz-font-style(small);
 }

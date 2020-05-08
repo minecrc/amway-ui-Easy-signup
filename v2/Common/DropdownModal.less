@@ -1,0 +1,136 @@
+@import './variables.less';
+@import './mixins.less';
+
+.mz-dropdown-modal {
+  @height: @input-height;
+
+  width: 100%;
+  user-select: none;
+
+  &__label {
+    display: flex;
+    margin: 0 0 4px;
+    color: @colors[grey-400];
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: @height;
+    padding: 2px @spacing[s];
+    border: 1px solid @colors[grey-300];
+
+    &.--has-error {
+      border-color: @colors[red-200];
+    }
+
+    &:disabled {
+      background: @colors[grey-100];
+    }
+  }
+
+  &__button-text {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__icon {
+    margin-left: auto;
+    .mz-dropdown-icon();
+  }
+
+  &__button[aria-expanded='true'] &__icon {
+    transform: scaleY(-1);
+  }
+
+  &__menu {
+    display: flex;
+    position: fixed;
+    z-index: @z-indexes[modal];
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    padding: @spacing[s];
+    transform: translate3d(0, -30%, 0);
+    transition: opacity 0.2s, transform 0.3s;
+    opacity: 0;
+    background: @colors[white];
+    pointer-events: none;
+
+    @media screen and (min-width: @breakpoints[md]) {
+      display: none;
+      width: auto;
+      min-width: auto;
+      transform: none;
+      .mz-dropdown-menu();
+    }
+  }
+
+  &.open &__button ~ &__menu {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    pointer-events: initial;
+
+    @media screen and (min-width: @breakpoints[md]) {
+      display: block;
+    }
+  }
+
+  &__close-button {
+    .mz-modal-close-button();
+
+    @media screen and (min-width: @breakpoints[md]) {
+      display: none;
+    }
+  }
+
+  &__list {
+    flex: 1;
+    overflow: auto;
+
+    @media screen and (min-width: @breakpoints[md]) {
+      overflow: visible;
+    }
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    padding: @spacing[xs] + @spacing[xxs] @spacing[s];
+    border: 1px solid @colors[grey-200];
+    border-radius: @border-radiuses[s];
+
+    &:not(:last-child) {
+      margin-bottom: @spacing[xs];
+    }
+
+    @media screen and (min-width: @breakpoints[md]) {
+      border: 0;
+      border-radius: 0;
+
+      &:not(:last-child) {
+        margin: 0;
+      }
+
+      &:last-child {
+        position: relative;
+        margin-bottom: @spacing[s];
+
+        &:not(:hover):before {
+          content: '';
+          position: absolute;
+          right: @spacing[s];
+          bottom: 0;
+          left: @spacing[s];
+          height: 1px;
+          background: @colors[grey-200];
+        }
+      }
+      .mz-dropdown-option(@spacing[s]);
+    }
+  }
+}

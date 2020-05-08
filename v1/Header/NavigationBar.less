@@ -15,16 +15,6 @@
     .oa-container(@side-spacing: @spacing[s]);
   }
 
-  &__back {
-    display: flex;
-    margin-right: @spacing[s];
-    font-size: @icon-sizes[l];
-
-    @media screen and (min-width: @breakpoints[xl]) {
-      display: none;
-    }
-  }
-
   &__hamburger {
     margin-right: @spacing[s];
     font-size: @icon-sizes[m];
@@ -92,6 +82,20 @@
       @media screen and (min-width: @breakpoints[xl]) {
         display: inline;
       }
+    }
+  }
+
+  &__cart {
+    display: flex;
+    align-items: center;
+  }
+
+  &__cart-text {
+    display: none;
+    margin-left: @spacing[xs];
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      display: block;
     }
   }
 

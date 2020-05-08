@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PaymentMethodPickup</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/styles/common.7d20030e3dcee5e61c0b.css" />
+    <link rel="stylesheet" href="/styles/FullPaymentABO___PaymentMethodPickup.d404dbfb84466023e943.css" />
+</head>
+
+<body>
+    <div id="root">
+        <header class="mz-main-layout__header">
+            <nav class="oa-navigation-bar" aria-label="primary" data-dropdown-top-restrict="true">
+                <div class="oa-navigation-bar__container">
+                    <section class="oa-navigation-bar__section --left">
+                        <div class="oa-navigation-bar__logo">
+                            <img class="oa-image" data-src="/static/images/amway-logo-white.svg" alt="amway-logo-white" />
+                        </div>
+                    </section>
+                    <section class="oa-navigation-bar__section --right">
+                        <button type="button" class="oa-navigation-bar__cart">
+                <span class="oa-navigation-bar__icon">
+                  <span class="oa-icon --cart"></span>
+                </span>
+                <span class="oa-navigation-bar__cart-text">ตะกร้าสินค้า</span>
+              </button>
+                    </section>
+                </div>
+            </nav>
+        </header>
+        <div id="main-dim-layer" class="mz-dim-layer"></div>
+        <nav id="oa-product-menu" class="oa-popup-menu --left oa-product-menu" data-level="1" aria-label="menu">
+            <div id="oa-product-menu-arrow" class="oa-menu-arrow --white"></div>
+            <header class="oa-popup-menu__header">
+                <span class="oa-icon --close oa-product-menu__close-button"></span>
+                <span class="oa-icon --back oa-product-menu__back-button"></span>
+                <h6 class="oa-product-menu__title">
+                    <span data-title-level="1">Shopping</span>
+                    <span data-title-level="2"></span>
+                    <span data-title-level="3"></span>
+                </h6>
+            </header>
+            <div class="oa-popup-menu__container">
+                <div class="oa-product-menu__container">
+                    <ul class="oa-product-menu__categories">
+                        <li>
+                            <a class="oa-product-menu__category --outstanding" data-id="promotions" data-title="Promotions" href="/promotions">
+                                <span class="oa-product-menu__text --desktop">
+                    Promotions
+                  </span>
+                                <span class="oa-product-menu__text --mobile">Promotions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="brands" data-title="Shop by Brand" href="/brands">
+                                <span class="oa-product-menu__text --desktop">Brands</span>
+                                <span class="oa-product-menu__text --mobile">
+                    Shop by Brand
+                  </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="nutrition" data-title="Nutrition" href="/nutrition">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-nutrition.svg" alt="Nutrition" />
+                                <span class="oa-product-menu__text --desktop">Nutrition</span>
+                                <span class="oa-product-menu__text --mobile">Nutrition</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="beauty" data-title="Beauty" href="/beauty">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-beauty.svg" alt="Beauty" />
+                                <span class="oa-product-menu__text --desktop">Beauty</span>
+                                <span class="oa-product-menu__text --mobile">Beauty</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="personal-care" data-title="Personal Care" href="/personal-care">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-personal-care.svg" alt="Personal Care" />
+                                <span class="oa-product-menu__text --desktop">
+                    Personal Care
+                  </span>
+                                <span class="oa-product-menu__text --mobile">
+                    Personal Care
+                  </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="home-living" data-title="Home Living" href="/home-living">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-home-living.svg" alt="Home Living" />
+                                <span class="oa-product-menu__text --desktop">
+                    Home Living
+                  </span>
+                                <span class="oa-product-menu__text --mobile">
+                    Home Living
+                  </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="agriculture" data-title="Agriculture" href="/agriculture">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-agriculture.svg" alt="Agriculture" />
+                                <span class="oa-product-menu__text --desktop">
+                    Agriculture
+                  </span>
+                                <span class="oa-product-menu__text --mobile">
+                    Agriculture
+                  </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="energy-drink" data-title="Energy Drink" href="/energy-drink">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-energy-drink.svg" alt="Energy Drink" />
+                                <span class="oa-product-menu__text --desktop">
+                    Energy Drink
+                  </span>
+                                <span class="oa-product-menu__text --mobile">
+                    Energy Drink
+                  </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="others" data-title="Others" href="/others">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-others.svg" alt="Others" />
+                                <span class="oa-product-menu__text --desktop">Others</span>
+                                <span class="oa-product-menu__text --mobile">Others</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="sop" data-title="SOP" href="/sop">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-sop.svg" alt="SOP" />
+                                <span class="oa-product-menu__text --desktop">SOP</span>
+                                <span class="oa-product-menu__text --mobile">SOP</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="brands-detail" class="oa-product-menu__category-detail --brands">
+                        <li>
+                            <a href="/brand/nutrilite">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-nutrilite.svg" alt="brand-nutrilite" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/artistry">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-artistry.svg" alt="brand-artistry" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/glister">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-glister.svg" alt="brand-glister" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/g-h">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-g-h.svg" alt="brand-g-h" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/satinique">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-satinique.svg" alt="brand-satinique" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/atmosphere-sky">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-atmosphere-sky.svg" alt="brand-atmosphere-sky" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/e-spring">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-e-spring.svg" alt="brand-e-spring" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/amway-home">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-amway-home.svg" alt="brand-amway-home" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/amway-queen">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-amway-queen.svg" alt="brand-amway-queen" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/bodykey">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-bodykey.svg" alt="brand-bodykey" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/nutriplant">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-nutriplant.svg" alt="brand-nutriplant" />
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="beauty-detail" class="oa-product-menu__category-detail --sub-categories">
+                        <li>
+                            <a class="oa-product-menu__see-all" href="/beauty">See all</a>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/skin-care" data-id="skin-care" data-title="Skin Care">
+                                <span class="oa-product-menu__text">Skin Care</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="skin-care-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/skin-care">
+                      See all
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/cleansing">
+                      Cleansing
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/serun">
+                      Serum
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/moisturizer">
+                      Moisturizer
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/serum-moisturizer">
+                      Serum &amp; Moisturizer
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/eye-cream">
+                      Eye Cream
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/sun-screen">
+                      Sun Screen
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/mask">
+                      Mask
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/for-men">
+                      For Men
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/special-treatment">
+                      Special Treatment
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/make-up" data-id="make-up" data-title="Make Up">
+                                <span class="oa-product-menu__text">Make Up</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="make-up-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/make-up">
+                      See all
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/facial">
+                      Facial
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/eyes">
+                      Eyes
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/lips">
+                      Lips
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/cheeks">
+                      Cheeks
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/collection" data-id="collection" data-title="Collection">
+                                <span class="oa-product-menu__text">Collection</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="collection-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/collection">
+                      See all
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/paris-set-edition">
+                      Paris Set Edition
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/bangkok-set-edition">
+                      Bangkok Set Edition
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/perfume" data-id="perfume" data-title="Perfume">
+                                <span class="oa-product-menu__text">Perfume</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="perfume-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/perfume">
+                      See all
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/flora-chic">
+                      Flora Chic
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/unknown">
+                      Unknown
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/accessories" data-id="accessories" data-title="Accessories">
+                                <span class="oa-product-menu__text">Accessories</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="accessories-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/accessories">
+                      See all
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/make-up-tools">
+                      Make Up Tools
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/facial-care-tools">
+                      Facial Care Tools
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/cleansing-cloth">
+                      Cleansing Cloth
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/facial-hygienic">
+                      Facial Hygienic
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul id="agriculture-detail" class="oa-product-menu__category-detail --sub-categories">
+                        <li>
+                            <a class="oa-product-menu__see-all" href="/agriculture">
+                  See all
+                </a>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/mineral-supplements" data-id="mineral-supplements" data-title="Mineral Supplements">
+                                <span class="oa-product-menu__text">Mineral Supplements</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="mineral-supplements-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/mineral-supplements">
+                      See all
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/supplement-fertilizer" data-id="supplement-fertilizer" data-title="Supplement Fertilizer">
+                                <span class="oa-product-menu__text">
+                    Supplement Fertilizer
+                  </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="supplement-fertilizer-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/supplement-fertilizer">
+                      See all
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/plant-fertilizer" data-id="plant-fertilizer" data-title="Plant Fertilizer">
+                                <span class="oa-product-menu__text">Plant Fertilizer</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="plant-fertilizer-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/plant-fertilizer">
+                      See all
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav id="oa-user-menu" class="oa-popup-menu --right oa-user-menu --inverse" data-logged-in="true" aria-label="menu">
+            <div id="oa-user-menu-arrow" class="oa-menu-arrow --amway-500"></div>
+            <header class="oa-popup-menu__header">
+                <div class="oa-user-menu__header">
+                    <span class="oa-icon --close oa-user-menu__close-button"></span>
+                    <a class="oa-user-menu__button" href="/favorite">
+                        <span class="oa-icon --heart"></span>
+                    </a>
+                    <a class="oa-user-menu__button" href="/notification">
+                        <span class="oa-icon --bell"></span>
+                    </a>
+                </div>
+            </header>
+            <div class="oa-popup-menu__container">
+                <section class="oa-user-menu__profile">
+                    <div class="oa-user-menu__info">
+                        <img class="oa-user-menu__avatar" src="/static/images/default-avatar.png" alt="avatar" />
+                        <div class="oa-user-menu__name">
+                            Mr. Amorn Apichartikul
+                            <br />
+                            <div class="oa-id-badge">2711647</div>
+                        </div>
+                    </div>
+                    <div class="oa-user-menu__status">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th><small>Personal</small></th>
+                                    <th><small>Group</small></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PV</td>
+                                    <td>399</td>
+                                    <td>399</td>
+                                </tr>
+                                <tr>
+                                    <td>BV</td>
+                                    <td>1,196</td>
+                                    <td>1,196</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <div class="oa-user-menu__bonus">Bonus 9%</div>
+                <ul>
+                    <li>
+                        <a class="oa-user-menu__item --outstanding" href="/business-center">
+                Business Center
+              </a>
+                    </li>
+                    <li>
+                        <a class="oa-user-menu__item" href="/awaiting-payment">
+                Awaiting Payment
+                <img
+                  class="oa-image oa-user-menu__noti"
+                  data-src="/static/images/new.svg"
+                  alt="new"
+                />
+              </a>
+                    </li>
+                    <li><a class="oa-user-menu__item" href="/my-sop">My SOP</a></li>
+                    <li>
+                        <a class="oa-user-menu__item" href="/education">Education</a>
+                    </li>
+                    <li>
+                        <a class="oa-user-menu__item" href="/store-locator">
+                Store Locator
+              </a>
+                    </li>
+                    <li>
+                        <a class="oa-user-menu__item" href="/about-amway">About Amway</a>
+                    </li>
+                    <li>
+                        <a class="oa-user-menu__logout" href="/">
+                            <span class="oa-icon --logout oa-user-menu__logout-icon"></span>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="oa-search-modal" class="oa-search-modal">
+            <header class="oa-search-modal__header">
+                <div class="oa-input oa-search-input">
+                    <span class="oa-icon --search oa-input__icon --left"></span>
+                    <input type="text" placeholder="Search by Name / Product ID" class="oa-input__input input-lg form-control --round --with-left-icon" />
+                </div>
+                <button id="oa-search-modal-close-button" type="button" class="oa-search-modal__close-button">
+            <small>Cancel</small>
+          </button>
+            </header>
+            <section class="oa-search-modal__section">
+                <header>
+                    <h6 class="oa-search-modal__title">Matching Keywords</h6>
+                </header>
+                <ul class="oa-search-modal__keywords">
+                    <li>
+                        <a class="oa-search-modal__keyword" href="/beauty/artistry">
+                            <span>Artistry</span>
+                            <span>
+                  Search in
+                  <strong>Beauty</strong>
+                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="oa-search-modal__keyword" href="/nutrition/arabica">
+                            <span>Arabica</span>
+                            <span>
+                  Search in
+                  <strong>Nutrition</strong>
+                </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="oa-search-modal__section">
+                <header>
+                    <h6 class="oa-search-modal__title">Products</h6>
+                    <a href="/see-all-matching-keywords" class="oa-link oa-search-modal__see-all">
+                        <small>see all</small>
+                        <span class="oa-icon --arrow-right"></span>
+                    </a>
+                </header>
+                <ul class="oa-search-modal__products">
+                    <li>
+                        <a class="oa-search-modal__product" href="/product/artistry-exact-fit™-perfecting-loose-powder-light}">
+                            <img class="oa-image oa-search-modal__product-image" data-src="/static/images/mock-search-result-artistry-powder.jpeg" alt="mock-search-result-artistry-powder" />
+                            <div class="oa-search-modal__product-info">
+                                <p class="oa-search-modal__product-title">
+                                    Artistry Exact Fit™ Perfecting Loose Powder - Light
+                                </p>
+                                <p class="oa-search-modal__product-description"></p>
+                                <div class="oa-search-modal__product-checkout">
+                                    <span class="oa-search-modal__product-price">฿964</span>
+                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
+                      <span>Add to Cart</span>
+                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="oa-search-modal__product" href="/product/artistry-signature-color™-lipstick}">
+                            <img class="oa-image oa-search-modal__product-image" data-src="/static/images/mock-search-result-artistry-lipstick.jpeg" alt="mock-search-result-artistry-lipstick" />
+                            <div class="oa-search-modal__product-info">
+                                <p class="oa-search-modal__product-title">
+                                    Artistry Signature Color™ Lipstick
+                                </p>
+                                <p class="oa-search-modal__product-description">16 colors</p>
+                                <div class="oa-search-modal__product-checkout">
+                                    <span class="oa-search-modal__product-price">880</span>
+                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
+                      <span>Add to Cart</span>
+                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="oa-search-modal__product" href="/product/artistry-exact-fit™-perfecting-loose-powder}">
+                            <img class="oa-image oa-search-modal__product-image" data-src="/static/images/mock-search-result-artistry-powder.jpeg" alt="mock-search-result-artistry-powder" />
+                            <div class="oa-search-modal__product-info">
+                                <p class="oa-search-modal__product-title">
+                                    Artistry Exact Fit™ Perfecting Loose Powder
+                                </p>
+                                <p class="oa-search-modal__product-description"></p>
+                                <div class="oa-search-modal__product-checkout">
+                                    <span class="oa-search-modal__product-price">
+                      ฿964 ~ ฿1,564
+                    </span>
+                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
+                      <span>Add to Cart</span>
+                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div id="mz-main-layout" class="mz-main-layout --main-bar-only">
+            <div class="mz-main-layout__content">
+                <main class="mz-payment-layout">
+                    <form id="payment-method" class="mz-payment-layout__form" action="#">
+                        <header class="mz-payment-layout__header">
+                            <h4 class="mz-payment-layout__title">เลือกวิธีการชำระเงิน</h4>
+                        </header>
+                        <section class="mz-payment-layout__content">
+                            <div class="mz-checkable-input mz-payment-method-option --regular-text --regular-padding --with-border">
+                                <input type="radio" id="card" name="payment-method" value="card" class="mz-checkable-input__input --radio" data-toggle="collapse" data-target="#card-content:not(.in), .mz-checkable-input__content[data-name=&#x27;payment-method&#x27;]:not(#card-content).in"
+                                    readonly="" />
+                                <div class="mz-checkable-input__container">
+                                    <label for="card" class="mz-checkable-input__label">
+                      <span
+                        class="mz-icon --unchecked mz-checkable-input__icon --unchecked"
+                      ></span>
+                      <span
+                        class="mz-icon --radio-checked mz-checkable-input__icon --checked"
+                      ></span>
+                      <div class="mz-payment-method-option__label">
+                        <div class="mz-payment-method-option__label-content">
+                          <h6 class="mz-payment-method-option__title">
+                            บัตรเครดิต / บัตรเดบิต
+                          </h6>
+                          <p class="mz-payment-method-option__description">
+                            กรุณาชำระเงินก่อนเวลา 23:30 น.
+                          </p>
+                        </div>
+                        <img
+                          class="mz-image mz-payment-method-option__label-image"
+                          data-src="/static/images/payment-mastercard.svg"
+                          alt="payment-mastercard"
+                        />
+                        <img
+                          class="mz-image mz-payment-method-option__label-image"
+                          data-src="/static/images/payment-visa.svg"
+                          alt="payment-visa"
+                        />
+                      </div>
+                    </label>
+                                    <div id="card-content" data-name="payment-method" class="mz-checkable-input__content collapse">
+                                        <div class="mz-payment-method-option__content">
+                                            <div class="mz-new-credit-debit">
+                                                <div class="mz-input mz-new-credit-debit__number">
+                                                    <input type="tel" name="card-number" placeholder="หมายเลขบัตรเครดิต/บัตรเดบิต" inputmode="numeric" autocomplete="cc-number" class="mz-input__input" />
+                                                </div>
+                                                <p class="mz-error mz-new-credit-debit__error">
+                                                    <small id="card-number-error"></small>
+                                                </p>
+                                                <div class="mz-input mz-new-credit-debit__name">
+                                                    <input type="text" name="card-name" placeholder="ชื่อผู้ถือบัตร" autocomplete="cc-name" class="mz-input__input" />
+                                                </div>
+                                                <p class="mz-error mz-new-credit-debit__error">
+                                                    <small id="card-name-error"></small>
+                                                </p>
+                                                <div class="mz-new-credit-debit__input-row">
+                                                    <div class="mz-new-credit-debit__input-group --expiry-date">
+                                                        <div class="mz-input mz-new-credit-debit__expiry-date">
+                                                            <input type="tel" name="card-expiry-date" placeholder="วันหมดอายุ (MM/YY)" inputmode="numeric" autocomplete="cc-exp" class="mz-input__input" />
+                                                        </div>
+                                                        <p class="mz-error">
+                                                            <small id="card-expiry-date-error"></small>
+                                                        </p>
+                                                    </div>
+                                                    <div class="mz-new-credit-debit__input-group --security-code">
+                                                        <div class="mz-input">
+                                                            <div class="mz-input__icon --right">
+                                                                <div id="card-security-code-cvv-popover" class="mz-popover" data-placement="bottom" data-toggle="popover" data-content='&lt;button type="button" class="mz-popover__close-button" data-dismiss="popover" aria-label="Close"&gt;&lt;span class="mz-icon --close"&gt;&lt;/span&gt;&lt;/button&gt;&lt;div class="cvv-popover__content"&gt;&lt;img src="/static/images/card-cvv.svg" alt="card-cvv"/&gt;&lt;strong&gt;รหัส CVV คือ&lt;/strong&gt;&lt;p&gt;รหัสที่อยู่บนบัตรเครดิตมีไว้เพื่อการยืนยันตัวตนของผู้ถือบัตร โดยบัตรวีซ่าและมาสเตอร์การ์ดจะมีรหัส 3 หลัก อยู่ที่ด้านหลังบัตรเครดิต&lt;/p&gt;&lt;/div&gt;'>
+                                                                    <span class="mz-icon --question-mark cvv-popover__icon"></span>
+                                                                </div>
+                                                            </div>
+                                                            <input type="password" name="card-security-code" inputmode="numeric" placeholder="CVV" autocomplete="cc-csc" maxlength="3" minlength="3" class="mz-input__input --with-right-icon" />
+                                                        </div>
+                                                        <p class="mz-error">
+                                                            <small id="card-security-code-error"></small>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="mz-checkable-input mz-new-credit-debit__remember-this-card --small-text --small-padding --with-background --fixed-background">
+                                                    <input type="checkbox" id="remember-this-card" name="remember" class="mz-checkable-input__input --checkbox" data-toggle="collapse" data-target="#remember-this-card-content:not(.in), .mz-checkable-input__content[data-name=&#x27;remember&#x27;]:not(#remember-this-card-content).in"
+                                                        readonly="" />
+                                                    <div class="mz-checkable-input__container">
+                                                        <label for="remember-this-card" class="mz-checkable-input__label">
+                                <span
+                                  class="mz-icon --unchecked mz-checkable-input__icon --unchecked"
+                                ></span>
+                                <span
+                                  class="mz-icon --checkbox-checked mz-checkable-input__icon --checked"
+                                ></span>
+                                <span>จดจำข้อมูลบัตรนี้</span>
+                              </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="mz-button btn btn-lg --primary --large --original-blue mz-payment-method-option__submit-button">
+                          <span>ชำระเงิน</span>
+                        </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mz-checkable-input mz-payment-method-option --regular-text --regular-padding --with-border">
+                                <input type="radio" id="amway-shop" name="payment-method" value="amway-shop" class="mz-checkable-input__input --radio" data-toggle="collapse" data-target="#amway-shop-content:not(.in), .mz-checkable-input__content[data-name=&#x27;payment-method&#x27;]:not(#amway-shop-content).in"
+                                    readonly="" />
+                                <div class="mz-checkable-input__container">
+                                    <label for="amway-shop" class="mz-checkable-input__label mz-payment-method-option__input-label --empty">
+                      <span
+                        class="mz-icon --unchecked mz-checkable-input__icon --unchecked"
+                      ></span>
+                      <span
+                        class="mz-icon --radio-checked mz-checkable-input__icon --checked"
+                      ></span>
+                      <div class="mz-payment-method-option__label">
+                        <div class="mz-payment-method-option__label-content">
+                          <h6 class="mz-payment-method-option__title">
+                            แอมเวย์ช็อป
+                          </h6>
+                          <p class="mz-payment-method-option__description">
+                            กรุณาชำระตามเวลาทำการช็อป
+                          </p>
+                        </div>
+                      </div>
+                    </label>
+                                    <div id="amway-shop-content" data-name="payment-method" class="mz-checkable-input__content collapse">
+                                        <div class="mz-payment-method-option__content">
+                                            <button type="submit" class="mz-button btn btn-lg --primary --large --original-blue mz-payment-method-option__submit-button">
+                          <span>ชำระเงิน</span>
+                        </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mz-checkable-input mz-payment-method-option --regular-text --regular-padding --with-border">
+                                <input type="radio" id="counter-service" name="payment-method" value="counter-service" class="mz-checkable-input__input --radio" data-toggle="collapse" data-target="#counter-service-content:not(.in), .mz-checkable-input__content[data-name=&#x27;payment-method&#x27;]:not(#counter-service-content).in"
+                                    readonly="" />
+                                <div class="mz-checkable-input__container">
+                                    <label for="counter-service" class="mz-checkable-input__label mz-payment-method-option__input-label --empty">
+                      <span
+                        class="mz-icon --unchecked mz-checkable-input__icon --unchecked"
+                      ></span>
+                      <span
+                        class="mz-icon --radio-checked mz-checkable-input__icon --checked"
+                      ></span>
+                      <div class="mz-payment-method-option__label">
+                        <div class="mz-payment-method-option__label-content">
+                          <h6 class="mz-payment-method-option__title">
+                            เคาน์เตอร์เซอร์วิส
+                          </h6>
+                          <p class="mz-payment-method-option__description">
+                            กรุณาชำระเงินก่อนเวลา 23:00 น.
+                          </p>
+                        </div>
+                        <img
+                          class="mz-image mz-payment-method-option__label-image"
+                          data-src="/static/images/payment-counter-service.svg"
+                          alt="payment-counter-service"
+                        />
+                      </div>
+                    </label>
+                                    <div id="counter-service-content" data-name="payment-method" class="mz-checkable-input__content collapse">
+                                        <div class="mz-payment-method-option__content">
+                                            <button type="submit" class="mz-button btn btn-lg --primary --large --original-blue mz-payment-method-option__submit-button">
+                          <span>ชำระเงิน</span>
+                        </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mz-checkable-input mz-payment-method-option --regular-text --regular-padding --with-border">
+                                <input type="radio" id="bank" name="payment-method" value="bank" class="mz-checkable-input__input --radio" data-toggle="collapse" data-target="#bank-content:not(.in), .mz-checkable-input__content[data-name=&#x27;payment-method&#x27;]:not(#bank-content).in"
+                                    readonly="" />
+                                <div class="mz-checkable-input__container">
+                                    <label for="bank" class="mz-checkable-input__label">
+                      <span
+                        class="mz-icon --unchecked mz-checkable-input__icon --unchecked"
+                      ></span>
+                      <span
+                        class="mz-icon --radio-checked mz-checkable-input__icon --checked"
+                      ></span>
+                      <div class="mz-payment-method-option__label">
+                        <div class="mz-payment-method-option__label-content">
+                          <h6 class="mz-payment-method-option__title">
+                            โอนผ่านบัญชีธนาคาร
+                          </h6>
+                          <p class="mz-payment-method-option__description">
+                            แอปพลิเคชัน / ATM / เคาน์เตอร์ หรือเว็บไซต์ธนาคาร
+                          </p>
+                        </div>
+                      </div>
+                    </label>
+                                    <div id="bank-content" data-name="payment-method" class="mz-checkable-input__content collapse">
+                                        <div class="mz-payment-method-option__content">
+                                            <div class="mz-bank-method">
+                                                <div class="mz-dropdown-modal dropdown mz-bank-method__dropdown">
+                                                    <button id="bank-method" type="button" class="mz-dropdown-modal__button" data-placeholder="เลือกธนาคาร" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <div class="mz-dropdown-modal__button-text">
+                                เลือกธนาคาร
+                              </div>
+                              <span
+                                class="mz-icon --arrow-down mz-dropdown-modal__icon"
+                              ></span>
+                            </button>
+                                                    <div class="mz-dropdown-modal__menu" aria-labelledby="bank-method">
+                                                        <button type="button" class="mz-dropdown-modal__close-button">
+                                <span class="mz-icon --close"></span>
+                              </button>
+                                                        <ul class="mz-dropdown-modal__list">
+                                                            <li class="mz-dropdown-modal__option mz-bank-method__option" data-value="kbank">
+                                                                <div class="mz-bank-method-option --kbank">
+                                                                    <input type="radio" id="kbank" name="bank" value="kbank" readonly="" />
+                                                                    <label for="kbank" class="mz-bank-method-option__bank-toggle" data-target="#content-kbank">
+                                      <img
+                                        class="mz-image mz-bank-method-option__bank-image"
+                                        data-src="/static/images/bank-kbank.svg"
+                                        alt="bank-kbank"
+                                      />
+                                      <div
+                                        class="mz-bank-method-option__bank-text"
+                                      >
+                                        ธนาคารกสิกรไทย
+                                      </div>
+                                      <div
+                                        class="mz-bank-method-option__content-title --desktop"
+                                      >
+                                        เลือกช่องทางการชำระเงิน
+                                      </div>
+                                    </label>
+                                                                    <div class="mz-bank-method-option__content collapse" id="content-kbank">
+                                                                        <div class="mz-bank-method-option__content-title">
+                                                                            เลือกช่องทางการชำระเงิน
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="kbank:app" value="app" />
+                                                                            <label class="mz-bank-method-option__method-button" for="kbank:app">
+                                          <img
+                                            class="mz-image mz-bank-method-option__app-icon"
+                                            data-src="/static/images/bank-app-kbank.png"
+                                            alt="bank-app-kbank"
+                                          />
+                                          แอปพลิเคชัน K+
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="kbank:atm" value="atm" />
+                                                                            <label class="mz-bank-method-option__method-button" for="kbank:atm">
+                                          ATM / เคาน์เตอร์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="mz-dropdown-modal__option mz-bank-method__option" data-value="scb">
+                                                                <div class="mz-bank-method-option --scb">
+                                                                    <input type="radio" id="scb" name="bank" value="scb" readonly="" />
+                                                                    <label for="scb" class="mz-bank-method-option__bank-toggle" data-target="#content-scb">
+                                      <img
+                                        class="mz-image mz-bank-method-option__bank-image"
+                                        data-src="/static/images/bank-scb.svg"
+                                        alt="bank-scb"
+                                      />
+                                      <div
+                                        class="mz-bank-method-option__bank-text"
+                                      >
+                                        ธนาคารไทยพาณิชย์
+                                      </div>
+                                      <div
+                                        class="mz-bank-method-option__content-title --desktop"
+                                      >
+                                        เลือกช่องทางการชำระเงิน
+                                      </div>
+                                    </label>
+                                                                    <div class="mz-bank-method-option__content collapse" id="content-scb">
+                                                                        <div class="mz-bank-method-option__content-title">
+                                                                            เลือกช่องทางการชำระเงิน
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="scb:app" value="app" />
+                                                                            <label class="mz-bank-method-option__method-button" for="scb:app">
+                                          <img
+                                            class="mz-image mz-bank-method-option__app-icon"
+                                            data-src="/static/images/bank-app-scb.png"
+                                            alt="bank-app-scb"
+                                          />
+                                          แอปพลิเคชัน
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="scb:atm" value="atm" />
+                                                                            <label class="mz-bank-method-option__method-button" for="scb:atm">
+                                          ATM / เคาน์เตอร์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="scb:web" value="web" />
+                                                                            <label class="mz-bank-method-option__method-button" for="scb:web">
+                                          เว็บไซต์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="mz-dropdown-modal__option mz-bank-method__option" data-value="bbl">
+                                                                <div class="mz-bank-method-option --bbl">
+                                                                    <input type="radio" id="bbl" name="bank" value="bbl" readonly="" />
+                                                                    <label for="bbl" class="mz-bank-method-option__bank-toggle" data-target="#content-bbl">
+                                      <img
+                                        class="mz-image mz-bank-method-option__bank-image"
+                                        data-src="/static/images/bank-bbl.svg"
+                                        alt="bank-bbl"
+                                      />
+                                      <div
+                                        class="mz-bank-method-option__bank-text"
+                                      >
+                                        ธนาคารกรุงเทพ
+                                      </div>
+                                      <div
+                                        class="mz-bank-method-option__content-title --desktop"
+                                      >
+                                        เลือกช่องทางการชำระเงิน
+                                      </div>
+                                    </label>
+                                                                    <div class="mz-bank-method-option__content collapse" id="content-bbl">
+                                                                        <div class="mz-bank-method-option__content-title">
+                                                                            เลือกช่องทางการชำระเงิน
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="bbl:app" value="app" />
+                                                                            <label class="mz-bank-method-option__method-button" for="bbl:app">
+                                          <img
+                                            class="mz-image mz-bank-method-option__app-icon"
+                                            data-src="/static/images/bank-app-bbl.png"
+                                            alt="bank-app-bbl"
+                                          />
+                                          แอปพลิเคชัน
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="bbl:atm" value="atm" />
+                                                                            <label class="mz-bank-method-option__method-button" for="bbl:atm">
+                                          ATM / เคาน์เตอร์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="bbl:web" value="web" />
+                                                                            <label class="mz-bank-method-option__method-button" for="bbl:web">
+                                          เว็บไซต์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="mz-dropdown-modal__option mz-bank-method__option" data-value="bay">
+                                                                <div class="mz-bank-method-option --bay">
+                                                                    <input type="radio" id="bay" name="bank" value="bay" readonly="" />
+                                                                    <label for="bay" class="mz-bank-method-option__bank-toggle" data-target="#content-bay">
+                                      <img
+                                        class="mz-image mz-bank-method-option__bank-image"
+                                        data-src="/static/images/bank-bay.svg"
+                                        alt="bank-bay"
+                                      />
+                                      <div
+                                        class="mz-bank-method-option__bank-text"
+                                      >
+                                        ธนาคารกรุงศรีอยุธยา
+                                      </div>
+                                      <div
+                                        class="mz-bank-method-option__content-title --desktop"
+                                      >
+                                        เลือกช่องทางการชำระเงิน
+                                      </div>
+                                    </label>
+                                                                    <div class="mz-bank-method-option__content collapse" id="content-bay">
+                                                                        <div class="mz-bank-method-option__content-title">
+                                                                            เลือกช่องทางการชำระเงิน
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="bay:app" value="app" />
+                                                                            <label class="mz-bank-method-option__method-button" for="bay:app">
+                                          <img
+                                            class="mz-image mz-bank-method-option__app-icon"
+                                            data-src="/static/images/bank-app-bay.png"
+                                            alt="bank-app-bay"
+                                          />
+                                          แอปพลิเคชัน
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="bay:atm" value="atm" />
+                                                                            <label class="mz-bank-method-option__method-button" for="bay:atm">
+                                          ATM / เคาน์เตอร์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="bay:web" value="web" />
+                                                                            <label class="mz-bank-method-option__method-button" for="bay:web">
+                                          เว็บไซต์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="mz-dropdown-modal__option mz-bank-method__option" data-value="ktb">
+                                                                <div class="mz-bank-method-option --ktb">
+                                                                    <input type="radio" id="ktb" name="bank" value="ktb" readonly="" />
+                                                                    <label for="ktb" class="mz-bank-method-option__bank-toggle" data-target="#content-ktb">
+                                      <img
+                                        class="mz-image mz-bank-method-option__bank-image"
+                                        data-src="/static/images/bank-ktb.svg"
+                                        alt="bank-ktb"
+                                      />
+                                      <div
+                                        class="mz-bank-method-option__bank-text"
+                                      >
+                                        ธนาคารกรุงไทย
+                                      </div>
+                                      <div
+                                        class="mz-bank-method-option__content-title --desktop"
+                                      >
+                                        เลือกช่องทางการชำระเงิน
+                                      </div>
+                                    </label>
+                                                                    <div class="mz-bank-method-option__content collapse" id="content-ktb">
+                                                                        <div class="mz-bank-method-option__content-title">
+                                                                            เลือกช่องทางการชำระเงิน
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="ktb:app" value="app" />
+                                                                            <label class="mz-bank-method-option__method-button" for="ktb:app">
+                                          <img
+                                            class="mz-image mz-bank-method-option__app-icon"
+                                            data-src="/static/images/bank-app-ktb.png"
+                                            alt="bank-app-ktb"
+                                          />
+                                          แอปพลิเคชัน
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="ktb:atm" value="atm" />
+                                                                            <label class="mz-bank-method-option__method-button" for="ktb:atm">
+                                          ATM / เคาน์เตอร์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="ktb:web" value="web" />
+                                                                            <label class="mz-bank-method-option__method-button" for="ktb:web">
+                                          เว็บไซต์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="mz-dropdown-modal__option mz-bank-method__option" data-value="tmb">
+                                                                <div class="mz-bank-method-option --tmb">
+                                                                    <input type="radio" id="tmb" name="bank" value="tmb" readonly="" />
+                                                                    <label for="tmb" class="mz-bank-method-option__bank-toggle" data-target="#content-tmb">
+                                      <img
+                                        class="mz-image mz-bank-method-option__bank-image"
+                                        data-src="/static/images/bank-tmb.svg"
+                                        alt="bank-tmb"
+                                      />
+                                      <div
+                                        class="mz-bank-method-option__bank-text"
+                                      >
+                                        ธนาคารทหารไทย
+                                      </div>
+                                      <div
+                                        class="mz-bank-method-option__content-title --desktop"
+                                      >
+                                        เลือกช่องทางการชำระเงิน
+                                      </div>
+                                    </label>
+                                                                    <div class="mz-bank-method-option__content collapse" id="content-tmb">
+                                                                        <div class="mz-bank-method-option__content-title">
+                                                                            เลือกช่องทางการชำระเงิน
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="tmb:app" value="app" />
+                                                                            <label class="mz-bank-method-option__method-button" for="tmb:app">
+                                          <img
+                                            class="mz-image mz-bank-method-option__app-icon"
+                                            data-src="/static/images/bank-app-tmb.png"
+                                            alt="bank-app-tmb"
+                                          />
+                                          แอปพลิเคชัน
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="tmb:atm" value="atm" />
+                                                                            <label class="mz-bank-method-option__method-button" for="tmb:atm">
+                                          ATM / เคาน์เตอร์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="tmb:web" value="web" />
+                                                                            <label class="mz-bank-method-option__method-button" for="tmb:web">
+                                          เว็บไซต์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="mz-dropdown-modal__option mz-bank-method__option" data-value="uob">
+                                                                <div class="mz-bank-method-option --uob">
+                                                                    <input type="radio" id="uob" name="bank" value="uob" readonly="" />
+                                                                    <label for="uob" class="mz-bank-method-option__bank-toggle" data-target="#content-uob">
+                                      <img
+                                        class="mz-image mz-bank-method-option__bank-image"
+                                        data-src="/static/images/bank-uob.svg"
+                                        alt="bank-uob"
+                                      />
+                                      <div
+                                        class="mz-bank-method-option__bank-text"
+                                      >
+                                        ธนาคารยูโอบี
+                                      </div>
+                                      <div
+                                        class="mz-bank-method-option__content-title --desktop"
+                                      >
+                                        เลือกช่องทางการชำระเงิน
+                                      </div>
+                                    </label>
+                                                                    <div class="mz-bank-method-option__content collapse" id="content-uob">
+                                                                        <div class="mz-bank-method-option__content-title">
+                                                                            เลือกช่องทางการชำระเงิน
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="uob:app" value="app" />
+                                                                            <label class="mz-bank-method-option__method-button" for="uob:app">
+                                          <img
+                                            class="mz-image mz-bank-method-option__app-icon"
+                                            data-src="/static/images/bank-app-uob.png"
+                                            alt="bank-app-uob"
+                                          />
+                                          แอปพลิเคชัน
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="uob:atm" value="atm" />
+                                                                            <label class="mz-bank-method-option__method-button" for="uob:atm">
+                                          ATM / เคาน์เตอร์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="uob:web" value="web" />
+                                                                            <label class="mz-bank-method-option__method-button" for="uob:web">
+                                          เว็บไซต์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="mz-dropdown-modal__option mz-bank-method__option" data-value="tbank">
+                                                                <div class="mz-bank-method-option --tbank">
+                                                                    <input type="radio" id="tbank" name="bank" value="tbank" readonly="" />
+                                                                    <label for="tbank" class="mz-bank-method-option__bank-toggle" data-target="#content-tbank">
+                                      <img
+                                        class="mz-image mz-bank-method-option__bank-image"
+                                        data-src="/static/images/bank-tbank.svg"
+                                        alt="bank-tbank"
+                                      />
+                                      <div
+                                        class="mz-bank-method-option__bank-text"
+                                      >
+                                        ธนาคารธนชาติ
+                                      </div>
+                                      <div
+                                        class="mz-bank-method-option__content-title --desktop"
+                                      >
+                                        เลือกช่องทางการชำระเงิน
+                                      </div>
+                                    </label>
+                                                                    <div class="mz-bank-method-option__content collapse" id="content-tbank">
+                                                                        <div class="mz-bank-method-option__content-title">
+                                                                            เลือกช่องทางการชำระเงิน
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="tbank:app" value="app" />
+                                                                            <label class="mz-bank-method-option__method-button" for="tbank:app">
+                                          <img
+                                            class="mz-image mz-bank-method-option__app-icon"
+                                            data-src="/static/images/bank-app-tbank.png"
+                                            alt="bank-app-tbank"
+                                          />
+                                          แอปพลิเคชัน
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="tbank:atm" value="atm" />
+                                                                            <label class="mz-bank-method-option__method-button" for="tbank:atm">
+                                          ATM / เคาน์เตอร์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                        <div class="mz-bank-method-option__method-button-container">
+                                                                            <input type="radio" name="bank-method" id="tbank:web" value="web" />
+                                                                            <label class="mz-bank-method-option__method-button" for="tbank:web">
+                                          เว็บไซต์ธนาคาร
+                                          <span
+                                            class="mz-icon --checkbox-checked mz-bank-method-option__method-icon"
+                                          ></span>
+                                        </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <p class="mz-message --error mz-bank-method__error-message">
+                                                    <small id="bank-error"></small>
+                                                </p>
+                                                <div class="mz-input mz-bank-method__phone-input">
+                                                    <input type="tel" name="recipient-mobile" placeholder="เบอร์โทรศัพท์ของคุณ" class="mz-input__input" />
+                                                </div>
+                                                <p class="mz-message --error mz-bank-method__error-message">
+                                                    <small id="recipient-mobile-error"></small>
+                                                </p>
+                                                <p class="mz-message --default">
+                                                    <small>กรุณาชำระเงินก่อนเวลา 23:00 น.</small>
+                                                </p>
+                                                <div class="mz-bank-method__button-text-template">
+                                                    <div class="mz-bank-method__button-text-bank"></div>
+                                                    <div class="mz-bank-method__button-text-selected">
+                                                        ช่องทางการชำระ:
+                                                    </div>
+                                                    <div class="mz-bank-method__button-text-method"></div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="mz-button btn btn-lg --primary --large --original-blue mz-payment-method-option__submit-button">
+                          <span>ชำระเงิน</span>
+                        </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mz-checkable-input mz-payment-method-option --mobile-only --regular-text --regular-padding --with-border">
+                                <input type="radio" id="im-smart" name="payment-method" value="im-smart" class="mz-checkable-input__input --radio" data-toggle="collapse" data-target="#im-smart-content:not(.in), .mz-checkable-input__content[data-name=&#x27;payment-method&#x27;]:not(#im-smart-content).in"
+                                    readonly="" />
+                                <div class="mz-checkable-input__container">
+                                    <label for="im-smart" class="mz-checkable-input__label mz-payment-method-option__input-label --empty">
+                      <span
+                        class="mz-icon --unchecked mz-checkable-input__icon --unchecked"
+                      ></span>
+                      <span
+                        class="mz-icon --radio-checked mz-checkable-input__icon --checked"
+                      ></span>
+                      <div class="mz-payment-method-option__label">
+                        <div class="mz-payment-method-option__label-content">
+                          <h6 class="mz-payment-method-option__title">
+                            I’m Smart App
+                          </h6>
+                          <p class="mz-payment-method-option__description"></p>
+                        </div>
+                        <img
+                          class="mz-image mz-payment-method-option__label-image"
+                          data-src="/static/images/payment-im-smart.svg"
+                          alt="payment-im-smart"
+                        />
+                      </div>
+                    </label>
+                                    <div id="im-smart-content" data-name="payment-method" class="mz-checkable-input__content collapse">
+                                        <div class="mz-payment-method-option__content">
+                                            <button type="submit" class="mz-button btn btn-lg --primary --large --original-blue mz-payment-method-option__submit-button">
+                          <span>ชำระเงิน</span>
+                        </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mz-payment-layout__footer">
+                                Secured by
+                                <img class="mz-image mz-payment-layout__2c2p" data-src="/static/images/2c2p.svg" alt="2c2p" />
+                            </div>
+                        </section>
+                        <section class="mz-payment-layout__panel">
+                            <div id="payment-dim-layer" class="mz-dim-layer mz-payment-layout__dim-layer"></div>
+                            <div class="mz-payment-layout__mobile-panel">
+                                <div class="mz-payment-layout__detail">
+                                    <div class="mz-payment-layout__detail-toggler" data-dropdown-bottom-restrict="true">
+                                        <span class="mz-payment-layout__show-detail">
+                        ดูสรุปรายการชำระเงิน
+                      </span>
+                                        <span class="mz-payment-layout__hide-detail">
+                        ซ่อนสรุปรายการชำระเงิน
+                      </span>
+                                        <span class="mz-icon --arrow-up mz-payment-layout__arrow"></span>
+                                    </div>
+                                    <section class="mz-delivery-detail">
+                                        <h5>รายละเอียดการจัดส่ง</h5>
+                                        <div class="mz-delivery-detail__content">
+                                            <div class="mz-delivery-detail__name">
+                                                อมร ศิลปการสกุล
+                                            </div>
+                                            <h6 class="mz-delivery-detail__address-title">
+                                                ที่อยู่ในการรับสินค้า
+                                            </h6>
+                                            <div class="mz-delivery-detail__address">
+                                                แอมเวย์ ช็อป สำนักงานใหญ่ 52/183 ถนนรามคำแหง หัวหมาก บางกะปิ กรุงเทพฯ 10240
+                                            </div>
+                                            <div class="mz-delivery-detail__phone">02 713 8000</div>
+                                        </div>
+                                    </section>
+                                    <section class="mz-payment-detail">
+                                        <h5>รายละเอียดการชำระเงิน</h5>
+                                        <div class="mz-payment-detail__content">
+                                            <div class="mz-payment-detail__values">
+                                                <div class="mz-cart-value-row">
+                                                    <span class="mz-cart-value-row__title">
+                              รวมค่าสินค้า
+                            </span>
+                                                    <span>฿ 21,908</span>
+                                                </div>
+                                                <div class="mz-cart-value-row">
+                                                    <span class="mz-cart-value-row__title">
+                              ค่าจัดส่ง
+                            </span>
+                                                    <span>฿ 75</span>
+                                                </div>
+                                                <div class="mz-cart-value-row --red">
+                                                    <span class="mz-cart-value-row__title">
+                              ส่วนลดทั้งหมด
+                            </span>
+                                                    <span>- ฿ 100</span>
+                                                </div>
+                                                <div class="mz-cart-value-row --red">
+                                                    <span class="mz-cart-value-row__title">
+                              ชำระด้วยใบสำคัญลดหนี้
+                            </span>
+                                                    <span>- ฿ 100</span>
+                                                </div>
+                                                <div class="mz-cart-value-row --red">
+                                                    <span class="mz-cart-value-row__title">
+                              ชำระด้วย AR
+                            </span>
+                                                    <span>- ฿ 100</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="mz-payment-layout__summary">
+                                    <div class="mz-payment-summary">
+                                        <div class="mz-payment-summary__info">
+                                            <div class="mz-payment-summary__title --desktop">
+                                                สรุปรายการชำระเงิน
+                                            </div>
+                                            <div class="--desktop">PV / BV ที่จะได้รับ</div>
+                                            <div class="mz-payment-summary__amount">฿ 21,908</div>
+                                            <div class="mz-payment-summary__points">
+                                                <div class="mz-payment-summary__pvbv --mobile">
+                                                    + PV 2,100 / + BV 2,400
+                                                </div>
+                                                <div class="--desktop">2,100 / 2,400</div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="mz-button btn btn-lg --primary --large --original-blue">
+                        <span>ชำระเงิน</span>
+                      </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/v2/Common/js/global.js"></script>
+    <script src="/v2/Common/js/DimLayer.js"></script>
+    <script src="/v2/Common/js/Image.js"></script>
+    <script src="/v2/Common/js/Input.js"></script>
+    <script src="/lib/js/bodyScrollLock.min.js"></script>
+    <script src="/v2/Common/js/Dropdown.js"></script>
+    <script src="/v2/Common/js/DropdownModal.js"></script>
+    <script src="/v2/Payment/js/BankMethod.js"></script>
+    <script src="/v2/Common/js/Popover.js"></script>
+    <script src="/lib/js/card-validator.min.js"></script>
+    <script src="/v2/Common/js/cardTypes.js"></script>
+    <script src="/v2/Payment/js/NewCreditDebit.js"></script>
+    <script src="/v2/Payment/js/PaymentLayout.js"></script>
+    <script src="/v1/Common/js/image.js"></script>
+    <script src="/v1/Search/js/SearchModal.js"></script>
+    <script src="/v1/Header/js/UserMenu.js"></script>
+    <script src="/v1/Header/js/ProductMenu.js"></script>
+    <script src="/v2/Layout/js/MainLayout.js"></script>
+    <script src="/lib/js/validator.min.js"></script>
+    <script src="/lib/js/jquery.validate.min.js"></script>
+    <script src="/v2/Common/js/formValidationDefaults.js"></script>
+    <script src="/v2/Common/js/cardValidationDefaults.js"></script>
+    <script src="/v2/Payment/js/PaymentMethod.js"></script>
+</body>
+
+</html>

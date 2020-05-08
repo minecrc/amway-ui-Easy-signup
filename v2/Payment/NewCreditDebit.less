@@ -1,0 +1,48 @@
+@import '../Common/variables.less';
+
+.mz-new-credit-debit {
+  &__name {
+    margin-top: @spacing[xs];
+  }
+
+  &__input-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: @spacing[xs];
+
+    @media screen and (min-width: @breakpoints[xs]) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__input-group {
+    &.--expiry-date {
+      flex: 9 1 auto;
+      width: auto;
+
+      @media screen and (min-width: @breakpoints[xs]) {
+        margin-right: @spacing[xs];
+      }
+    }
+
+    &.--security-code {
+      flex: 0 0 108px;
+      width: auto;
+      margin-top: @spacing[xs];
+
+      @media screen and (min-width: @breakpoints[xs]) {
+        flex: 4 0 108px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__security-code-icon {
+    color: @colors[grey-300];
+    font-size: @icon-sizes[m];
+  }
+
+  &__remember-this-card {
+    margin-top: @spacing[xs];
+  }
+}

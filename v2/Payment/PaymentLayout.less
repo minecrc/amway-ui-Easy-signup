@@ -1,0 +1,210 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-payment-layout {
+  @content-max-width: 580px;
+  @narrow-content-max-width: 492px;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  &__form {
+    flex: 1;
+    margin-top: @spacing[s];
+
+    .mz-container(@max-width: @content-max-width);
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: space-between;
+      margin-top: @spacing[xl];
+      margin-bottom: @spacing[xxxxl];
+
+      .mz-container();
+    }
+  }
+
+  &.--narrow &__form {
+    .mz-container(@max-width: @narrow-content-max-width);
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      .mz-container();
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: @spacing[s];
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      flex: 0 1 100%;
+      margin-bottom: @spacing[m];
+    }
+  }
+
+  &__title {
+    @media screen and (min-width: @breakpoints[xl]) {
+      .mz-font-style(heading-3, bold);
+    }
+  }
+
+  &__description {
+    flex: 0 0 100%;
+    margin-top: @spacing[xxs];
+  }
+
+  &__content {
+    max-width: @content-max-width;
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      flex: 1;
+      min-width: 0;
+      margin-right: @spacing[s];
+    }
+  }
+
+  &.--narrow &__content {
+    max-width: @narrow-content-max-width;
+  }
+
+  &__footer {
+    margin: @spacing[s];
+    color: @colors[grey-400];
+    text-align: center;
+
+    .mz-font-style(small);
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      margin: @spacing[m];
+    }
+  }
+
+  &__2c2p {
+    margin-left: @spacing[xxs];
+  }
+
+  &__panel {
+    margin-top: @spacing[s];
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      flex: 0 0 430px;
+      margin-top: 0;
+    }
+  }
+
+  &__dim-layer {
+    z-index: @z-indexes[payment-dim-layer];
+  }
+
+  &__mobile-panel {
+    position: fixed;
+    z-index: @z-indexes[payment-mobile-panel];
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      position: static;
+    }
+  }
+
+  &__detail {
+    position: absolute;
+    z-index: @z-indexes[payment-mobile-detail];
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: transform 0.2s;
+    background: @colors[grey-200];
+
+    &.--active {
+      transform: translateY(-100%);
+    }
+
+    section {
+      background: @colors[white];
+
+      h5 {
+        @media screen and (min-width: @breakpoints[xl]) {
+          display: flex;
+          align-items: center;
+          min-height: 48px;
+          padding: 0 @spacing[m];
+          background: @colors[grey-200];
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: @spacing[xxs];
+
+        @media screen and (min-width: @breakpoints[xl]) {
+          margin-bottom: @spacing[s];
+        }
+      }
+
+      @media screen and (min-width: @breakpoints[xl]) {
+        padding: 0;
+        border: 1px solid @colors[grey-200];
+        border-radius: @border-radiuses[s];
+      }
+    }
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      position: static;
+      background: @colors[white];
+
+      &.--active {
+        transform: none;
+      }
+    }
+  }
+
+  &__detail.--active &__show-detail {
+    display: none;
+  }
+
+  &__detail:not(.--active) &__hide-detail {
+    display: none;
+  }
+
+  &__detail.--active &__arrow {
+    transform: scaleY(-1);
+  }
+
+  &__arrow {
+    margin-left: @spacing[xs];
+  }
+
+  &__detail-toggler {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    padding: @spacing[xs] @spacing[m];
+    transform: translateY(-100%);
+    border-top: solid 1px @colors[grey-200];
+    background: @colors[white];
+    user-select: none;
+
+    .mz-font-style(small, bold);
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      display: none;
+      position: relative;
+    }
+  }
+
+  &__summary {
+    position: relative;
+    z-index: @z-indexes[payment-mobile-summary];
+  }
+}

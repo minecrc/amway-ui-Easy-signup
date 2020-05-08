@@ -32,6 +32,8 @@
   &__button-text {
     display: flex;
     align-items: center;
+    overflow: hidden;
+    text-align: left;
 
     &:not(.--selected) {
       color: @colors[grey-400];
@@ -39,14 +41,12 @@
   }
 
   &__icon {
-    transition: color 0.2s;
-    color: @colors[grey-300];
-    font-size: @icon-sizes[xs];
+    margin-left: @spacing[xs];
+    .mz-dropdown-icon();
   }
 
   &__button[aria-expanded='true'] &__icon {
     transform: scaleY(-1);
-    color: @colors[grey-600];
   }
 
   &__menu.dropdown-menu {
@@ -66,6 +66,13 @@
     width: 32px;
     height: 32px;
     margin-right: @spacing[s];
+  }
+
+  &__text {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   h6 + & {

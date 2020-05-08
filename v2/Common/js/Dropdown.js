@@ -1,91 +1,93 @@
 /* global $ */
 (() => {
-    const GAP = 24;
-    const MAX_MENU_HEIGHT = 300;
+  const GAP = 24;
+  const MAX_MENU_HEIGHT = 300;
 
-    function calculateMenuPosition(anchor, menu, { forceBottom } = {}) {
-        const topRestrictHeight = $("[data-dropdown-top-restrict='true']").height();
-        const bottomRestrictHeight =
-            $("[data-dropdown-bottom-restrict='true']").height() || 0;
+  function calculateMenuPosition(anchor, menu, { forceBottom } = {}) {
+    const topRestrictHeight = $("[data-dropdown-top-restrict='true']").height();
+    const bottomRestrictHeight =
+      $("[data-dropdown-bottom-restrict='true']").height() || 0;
 
-        const top = anchor.offset().top - $(window).scrollTop();
-        const bottom = top + anchor.outerHeight();
-        const windowHeight = window.innerHeight;
-        const bottomArea = windowHeight - bottom;
+    const top = anchor.offset().top - $(window).scrollTop();
+    const bottom = top + anchor.outerHeight();
+    const windowHeight = window.innerHeight;
+    const bottomArea = windowHeight - bottom;
 
-        if (bottomArea > 240 + bottomRestrictHeight || forceBottom) {
-            return {
-                top: bottom,
-                bottom: 'auto',
-                maxHeight: bottomArea - GAP - bottomRestrictHeight
-            };
-        }
-
-        return {
-            top: 'auto',
-            bottom: windowHeight - top,
-            maxHeight: top - GAP - topRestrictHeight
-        };
+    if (bottomArea > 240 + bottomRestrictHeight || forceBottom) {
+      return {
+        top: bottom,
+        bottom: 'auto',
+        maxHeight: bottomArea - GAP - bottomRestrictHeight
+      };
     }
 
-    function placeDropdownMenu(anchor, menu) {
-        menu.css('width', anchor.outerWidth());
-        menu.css('max-width', anchor.outerWidth());
-        menu.css('left', anchor.offset().left);
+    return {
+      top: 'auto',
+      bottom: windowHeight - top,
+      maxHeight: top - GAP - topRestrictHeight
+    };
+  }
 
-        const { top, bottom, maxHeight } = calculateMenuPosition(anchor, menu);
+  function placeDropdownMenu(anchor, menu) {
+    menu.css('width', anchor.outerWidth());
+    menu.css('max-width', anchor.outerWidth());
+    menu.css('left', anchor.offset().left);
 
-        menu.css('top', top);
-        menu.css('bottom', bottom);
-        menu.css('max-height', Math.min(maxHeight, MAX_MENU_HEIGHT));
-    }
+    const { top, bottom, maxHeight } = calculateMenuPosition(anchor, menu);
 
-    function initDropdown() {
-        const dropdown = $(this);
+    menu.css('top', top);
+    menu.css('bottom', bottom);
+    menu.css('max-height', Math.min(maxHeight, MAX_MENU_HEIGHT));
+  }
 
-        if (dropdown.attr('data-init')) return;
-        dropdown.attr('data-init', true);
+  function initDropdown() {
+    const dropdown = $(this);
 
-        const button = dropdown.find('.mz-dropdown__button');
-        const buttonText = button.find('.mz-dropdown__button-text');
-        const options = dropdown.find('li.mz-dropdown__option');
-        const dropdownMenu = dropdown.find('.mz-dropdown__menu');
+    if (dropdown.attr('data-init')) return;
+    dropdown.attr('data-init', true);
 
-        dropdown.on('shown.bs.dropdown', () => {
-            placeDropdownMenu(button, dropdownMenu);
-        });
+    const button = dropdown.find('.mz-dropdown__button');
+    const buttonText = button.find('.mz-dropdown__button-text');
+    const options = dropdown.find('li.mz-dropdown__option');
+    const dropdownMenu = dropdown.find('.mz-dropdown__menu');
 
-        $(window).resize(() => {
-            placeDropdownMenu(button, dropdownMenu);
-        });
+    dropdown.on('shown.bs.dropdown', () => {
+      placeDropdownMenu(button, dropdownMenu);
+    });
 
-        document.addEventListener('scroll', () => {
-            dropdown.removeClass('open');
-        });
+    $(window).resize(() => {
+      placeDropdownMenu(button, dropdownMenu);
+    });
 
-        options.on('click', e => {
-            e.preventDefault();
+    document.addEventListener('scroll', () => {
+      dropdown.removeClass('open');
+    });
 
-            buttonText.html($(e.target).html());
-            buttonText.addClass('--selected');
+    options.on('click', e => {
+      e.preventDefault();
 
-            const option = $(e.target);
+      const target = $(e.target);
+      const option = target.hasClass('mz-dropdown__option')
+        ? target
+        : target.closest('.mz-dropdown__option');
 
-            options.removeClass('--active');
-            option.addClass('--active');
-            option
-                .parent()
-                .siblings('button.mz-dropdown__button')
-                .trigger('change', [option.text(), option.data('value')]);
-        });
-    }
+      buttonText.html(option.html());
+      buttonText.addClass('--selected');
 
-    const dropdowns = $('.mz-dropdown');
-    console.log(dropdowns);
-    dropdowns.each(initDropdown);
+      options.removeClass('--active');
+      option.addClass('--active');
+      option
+        .parent()
+        .siblings('button.mz-dropdown__button')
+        .trigger('change', [option.text(), option.data('value')]);
+    });
+  }
 
-    // Expose `initDropdown` to $ for reuses
-    $.initDropdown = initDropdown;
-    $.calculateMenuPosition = calculateMenuPosition;
-    $.placeDropdownMenu = placeDropdownMenu;
+  const dropdowns = $('.mz-dropdown');
+  dropdowns.each(initDropdown);
+
+  // Expose `initDropdown` to $ for reuses
+  $.initDropdown = initDropdown;
+  $.calculateMenuPosition = calculateMenuPosition;
+  $.placeDropdownMenu = placeDropdownMenu;
 })();

@@ -1,0 +1,110 @@
+@import './variables.less';
+@import './mixins.less';
+
+.mz-checkable-input {
+  width: 100%;
+
+  &__input {
+    .mz-hidden-input;
+  }
+
+  &__label {
+    display: flex;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &.--regular-text &__label > &__icon {
+    line-height: @font-sizes[body] * 1.5;
+  }
+
+  &.--small-text &__label > &__icon {
+    font-size: @icon-sizes[s];
+    line-height: @font-sizes[small] * 1.5;
+  }
+
+  &.--small-text &__label {
+    .mz-font-style(small);
+  }
+
+  &.--regular-padding > &__container {
+    padding: @spacing[xs] + @spacing[xxs] @spacing[s];
+    border-radius: @border-radiuses[s];
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      padding: @spacing[s];
+    }
+  }
+
+  &.--small-padding > &__container {
+    padding: @spacing[xs] @spacing[xs] + @spacing[xxs];
+    border-radius: @border-radiuses[s];
+  }
+
+  &.--with-border > &__container {
+    border: solid 1px @colors[grey-200];
+  }
+
+  &.--with-border > &__input:checked:not(:disabled) + &__container {
+    border-color: @colors[original-blue];
+  }
+
+  &.--with-background > &__container {
+    background: @colors[grey-100];
+  }
+
+  &.--with-background > &__input:checked:not(:disabled) + &__container {
+    background: @colors[amway-100];
+  }
+
+  &.--with-background.--fixed-background > &__container {
+    background: @colors[amway-100];
+  }
+
+  &__content:before {
+    content: '';
+    display: block;
+    height: @spacing[s];
+  }
+
+  &.--small-padding > &__container > &__content:before {
+    height: @spacing[xs];
+  }
+
+  &__content:after {
+    content: '';
+    display: block;
+    height: @spacing[xxs];
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      height: @spacing[xs];
+    }
+  }
+
+  &__icon {
+    margin-right: @spacing[xs];
+    color: @colors[grey-300];
+    font-size: @icon-sizes[m];
+    line-height: 1;
+  }
+
+  &__input:disabled + &__container {
+    color: @colors[grey-400];
+  }
+
+  &__container:hover > &__label > &__icon,
+  &__input:checked + &__container > &__label > &__icon {
+    color: @colors[original-blue];
+  }
+
+  &__input:disabled + &__container > &__label > &__icon {
+    color: inherit;
+  }
+
+  &__input:checked + &__container > &__label > &__icon.--unchecked,
+  &__input:not(:checked) + &__container > &__label > &__icon.--checked {
+    display: none;
+  }
+}

@@ -42,30 +42,13 @@
   }
 
   &__button {
-    display: flex;
-    align-items: center;
+    .mz-input-like();
     width: 100%;
-    height: @height;
-    padding: 2px @side-padding;
-    border: 1px solid @colors[grey-300];
-    color: @colors[grey-400];
-    .mz-font-style(body);
 
-    &.--with-left-icon {
-      padding-left: 40px;
-    }
-
-    &.--selected {
-      color: @colors[black];
-    }
-
-    &.--has-error {
-      border-color: @colors[red-200];
-    }
-
-    &:disabled {
-      background: @colors[grey-100];
-    }
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   &.open &__button {
@@ -74,37 +57,21 @@
     }
   }
 
-  &__left-icon {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
+  &__button-icon {
+    .mz-input-like-icon();
   }
 
   &__button-text {
-    flex: 1;
-    align-items: center;
-    overflow: hidden;
-    line-height: 1.33;
-    text-align: left;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  &__input input {
-    flex: none;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    // hack to make it align with input
+    line-height: @font-sizes[body] * 1.5 + 1px;
   }
 
   &__icon {
-    font-size: @icon-sizes[xs];
+    .mz-dropdown-icon();
   }
 
   &.open &__icon {
     transform: scaleY(-1);
-    color: @colors[grey-600];
   }
 
   &.open &__input &__icon {

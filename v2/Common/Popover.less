@@ -1,0 +1,45 @@
+@import './variables.less';
+@import './mixins.less';
+
+.mz-popover {
+  cursor: pointer;
+  & ~ .popover {
+    z-index: @z-indexes[popover];
+    max-width: none;
+    border: 0;
+    border-radius: 0;
+    font-family: inherit;
+
+    &.top .arrow {
+      border-top-color: @colors[white];
+    }
+    &.right .arrow {
+      border-right-color: @colors[white];
+    }
+    &.bottom .arrow {
+      border-bottom-color: fade(@colors[white], 10%);
+    }
+    &.left .arrow {
+      border-left-color: @colors[white];
+    }
+
+    .popover-content {
+      display: flex;
+      flex-direction: column;
+      padding: @spacing[s];
+      .mz-font-style(small);
+    }
+  }
+
+  &__close-button {
+    position: absolute;
+    top: @spacing[m];
+    right: @spacing[m];
+    font-size: @icon-sizes[m];
+
+    @media screen and (min-width: @breakpoints[lg]) {
+      position: static;
+      margin-left: auto;
+    }
+  }
+}

@@ -16,11 +16,15 @@
 
   &__container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     min-height: @input-height;
     padding: @spacing[xs] 0;
 
-    .mz-container(@side-spacing: @spacing[s]);
+    .mz-container();
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      align-items: center;
+    }
   }
 
   &__info-icon {
@@ -28,10 +32,13 @@
     margin-right: @spacing[xs];
   }
 
+  &__message {
+    flex: 1;
+  }
+
   &__close {
     flex: none;
-    margin-left: auto;
+    margin-left: @spacing[xs];
     color: @colors[black];
-    line-height: 1;
   }
 }

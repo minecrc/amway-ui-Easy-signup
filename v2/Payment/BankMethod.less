@@ -1,0 +1,93 @@
+@import '../Common/variables.less';
+
+.mz-bank-method {
+  label {
+    margin-bottom: 0;
+  }
+
+  #bank-method {
+    height: @input-height;
+  }
+
+  &__option {
+    padding: 0;
+    border: 0;
+
+    &:hover {
+      @media (hover: hover) {
+        background: @colors[white];
+      }
+    }
+  }
+
+  & &__option:last-child:before {
+    content: none;
+  }
+
+  &__phone-input {
+    margin-top: @spacing[xs];
+  }
+
+  &__error-message {
+    min-height: 0;
+  }
+
+  &__button-text-template {
+    display: none;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    padding-right: @spacing[xs];
+
+    @media screen and (min-width: @breakpoints[md]) {
+      align-items: baseline;
+    }
+  }
+
+  &__button-text-bank {
+    display: flex;
+    align-items: center;
+
+    > div {
+      display: none;
+
+      @media screen and (min-width: @breakpoints[md]) {
+        display: block;
+        margin-left: @spacing[xxs];
+      }
+    }
+
+    @media screen and (min-width: @breakpoints[md]) {
+      flex: 1 0 auto;
+      align-self: center;
+    }
+  }
+
+  &__button-text-selected {
+    display: none;
+    flex: none;
+    margin-right: @spacing[xxs];
+    margin-left: @spacing[xs];
+    font-weight: @font-weights[bold];
+
+    @media screen and (min-width: @breakpoints[md]) {
+      display: block;
+    }
+  }
+
+  &__button-text-method {
+    flex: 1 0 auto;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @media screen and (min-width: @breakpoints[md]) {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__dropdown &__button-text-template {
+    display: flex;
+  }
+}

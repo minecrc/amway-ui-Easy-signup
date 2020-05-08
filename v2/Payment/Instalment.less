@@ -1,0 +1,36 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-instalment {
+  &__issuers {
+    display: flex;
+    align-items: center;
+
+    > * {
+      height: @icon-sizes[m];
+      margin-left: @spacing[xs];
+    }
+  }
+
+  &__summary {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: @spacing[m];
+
+    > * {
+      margin-right: @spacing[xxs];
+    }
+  }
+
+  &__submit-button {
+    display: none;
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    &__submit-button {
+      display: block;
+      max-width: 220px;
+      margin: @spacing[m] auto 0;
+    }
+  }
+}
