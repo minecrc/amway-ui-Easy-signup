@@ -12,13 +12,17 @@
 
   &__section {
     position: relative;
-    padding: @spacing[xs] @spacing[s];
     background: @colors[orange-100];
 
     &.--left {
       flex: 1;
+      padding: @spacing[xs] @spacing[s];
       border-top-left-radius: @border-radiuses[s];
       border-bottom-left-radius: @border-radiuses[s];
+
+      @media screen and (min-width: @breakpoints[sm]) {
+        padding: @spacing[xs] @spacing[m];
+      }
     }
 
     &.--right {
@@ -26,6 +30,7 @@
       flex: none;
       align-items: center;
       justify-content: center;
+      min-width: @spacing[m];
       border-top-right-radius: @border-radiuses[s];
       border-bottom-right-radius: @border-radiuses[s];
 
@@ -49,15 +54,24 @@
         background-size: 1px 5.2px;
       }
     }
+  }
 
-    @media screen and (min-width: @breakpoints[sm]) {
-      padding: @spacing[xs] @spacing[m];
+  &.--compact &__section {
+    &.--left {
+      @media screen and (min-width: @breakpoints[sm]) {
+        padding: @spacing[xs] @spacing[s];
+      }
     }
   }
 
-  &__condition {
-    line-height: 1.54;
+  &__title {
     .mz-font-style(small);
+    .multiline-ellipsis(@line-height: 1.5 * @font-sizes[small]);
+  }
+
+  &__condition {
+    .mz-font-style(small);
+    .multiline-ellipsis(@line-height: 1.5 * @font-sizes[small], @line-no: 2, @auto-height: true);
   }
 
   &__input {
@@ -73,6 +87,7 @@
     width: 84px;
     height: @height;
     margin: 0;
+    margin: 0 @spacing[s];
     border: solid 1px @colors[orange-200];
     border-radius: @height;
     color: @colors[orange-300];
@@ -86,6 +101,10 @@
     }
 
     .mz-font-style(small);
+
+    @media screen and (min-width: @breakpoints[sm]) {
+      margin: 0 @spacing[m];
+    }
   }
 
   &__checked-text {

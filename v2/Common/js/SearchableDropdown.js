@@ -4,7 +4,9 @@
     const searchableDropdown = $(this);
     if (searchableDropdown.attr('data-init')) return;
     searchableDropdown.attr('data-init', true);
-    const input = searchableDropdown.find('input');
+    const input = searchableDropdown.find(
+      '.mz-searchable-dropdown__input input'
+    );
     const button = searchableDropdown.find('.mz-searchable-dropdown__button');
     const buttonText = searchableDropdown.find(
       '.mz-searchable-dropdown__button-text'
@@ -40,8 +42,8 @@
     $(window).resize(placeMenu);
 
     document.addEventListener('scroll', () => {
-      if (window.isDesktop()) {
-        searchableDropdown.removeClass('open');
+      if (window.isDesktop() && searchableDropdown.hasClass('open')) {
+        button.dropdown('toggle');
       }
     });
 
@@ -71,6 +73,15 @@
     radioOptions.click(() => {
       updateLabel();
       button.addClass('--selected');
+
+      const selectedOption = searchableDropdown.find(
+        'input.mz-searchable-dropdown__option-input:checked'
+      );
+      searchableDropdown.trigger({
+        type: 'selected.mz.searchableDropdown',
+        value: selectedOption.val(),
+        label: selectedOption.data('label')
+      });
     });
 
     updateLabel();

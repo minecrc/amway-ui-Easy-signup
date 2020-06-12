@@ -1,0 +1,68 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-order-status-header {
+  padding: @spacing[s] 0 @spacing[m];
+  background: @colors[white];
+
+  .mz-container();
+
+  &__badge-icon {
+    margin-right: @spacing[xxs];
+    font-size: @icon-sizes[xxs];
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: baseline;
+    min-height: @spacing[m];
+    margin-top: @spacing[xs];
+    padding: 0 @spacing[xs];
+    border-radius: @border-radiuses[s];
+    background: @colors[grey-200];
+    color: @colors[white];
+    font-weight: @font-weights[bold];
+
+    &.--awaiting {
+      background: @colors[orange-200];
+    }
+    &.--successful {
+      background: @colors[success-green];
+    }
+    &.--failed {
+      background: @colors[red-200];
+    }
+    &.--cancelled {
+      background: @colors[red-100];
+      color: @colors[red-200];
+    }
+  }
+
+  &__description {
+    margin-top: @spacing[s];
+
+    a {
+      color: @colors[amway-500];
+    }
+
+    & + & {
+      margin-top: @spacing[xs];
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    margin: 0;
+    padding: 0 0 @spacing[l];
+    background: transparent;
+
+    &__title {
+      .mz-font-style(heading-3, bold);
+    }
+
+    &__description {
+      & + & {
+        margin-top: 0;
+      }
+    }
+  }
+}

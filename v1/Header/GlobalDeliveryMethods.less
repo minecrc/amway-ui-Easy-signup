@@ -1,0 +1,119 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-global-delivery-methods {
+  @toggle-button-desktop-padding: 4px;
+
+  display: flex;
+  align-items: center;
+  padding: @spacing[xs] 0;
+
+  & &__delivery-methods-toggle-button {
+    margin-left: @spacing[s];
+    padding: 0;
+    border-width: 0;
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      display: inline-block;
+      max-width: 100%;
+      margin-left: @spacing[s];
+      padding: @toggle-button-desktop-padding;
+      border-width: 1px;
+      border-color: @colors[amway-400];
+
+      > * {
+        display: inline-flex;
+        width: 100%;
+      }
+    }
+  }
+
+  && &__delivery-methods-toggle-option {
+    flex: none;
+    padding: 0 @spacing[s];
+    border: 1px solid @colors[amway-300];
+    border-radius: @border-radiuses[xs];
+    color: @colors[amway-300];
+    user-select: none;
+
+    &.--active {
+      border-color: @colors[amway-primary];
+      background: @colors[amway-primary];
+      color: @colors[white];
+    }
+
+    > * {
+      width: 100%;
+    }
+
+    &:last-child {
+      flex: 1 1 auto;
+      margin-left: @spacing[xs];
+    }
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      flex: 1 1 auto;
+      min-width: 132px;
+      height: 20px;
+      padding: 0;
+      border: 0;
+      border-radius: @border-radiuses[s];
+      color: @colors[white];
+
+      &.--active {
+        background: transparent;
+        color: @colors[amway-primary];
+      }
+
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__pickup-option {
+    @media screen and (min-width: @breakpoints[xl]) {
+      min-width: 132px;
+    }
+  }
+
+  &__pickup-selected {
+    display: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      padding: 0 @spacing[xl];
+    }
+  }
+
+  &__pickup-option.--selected &__pickup-selected {
+    display: block;
+  }
+
+  &__pickup-option.--selected &__pickup-placeholder {
+    display: none;
+  }
+
+  && &__delivery-methods-toggle-background {
+    display: none;
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      display: block;
+    }
+  }
+
+  &__map-pin-icon {
+    color: @colors[amway-primary];
+    font-size: @icon-sizes[m];
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    display: block;
+    padding: 0;
+  }
+}

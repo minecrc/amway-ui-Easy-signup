@@ -11,40 +11,48 @@
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/styles/common.7d20030e3dcee5e61c0b.css" />
+    <link rel="stylesheet" href="/styles/common.1d8ec6c454ccb779278b.css" />
     <link
       rel="stylesheet"
-      href="/styles/InstalmentPaymentABO___InstalmentPaymentPickup.e6dfc951e226c50e96d7.css"
+      href="/styles/InstalmentPaymentABO___InstalmentPaymentPickup.c3ffeb8356fb2afe86ff.css"
     />
   </head>
   <body>
     <div id="root">
       <header class="mz-main-layout__header">
-        <nav
-          class="oa-navigation-bar"
-          aria-label="primary"
-          data-dropdown-top-restrict="true"
-        >
-          <div class="oa-navigation-bar__container">
-            <section class="oa-navigation-bar__section --left">
-              <div class="oa-navigation-bar__logo">
-                <img
-                  class="oa-image"
-                  data-src="/static/images/amway-logo-white.svg"
-                  alt="amway-logo-white"
-                />
-              </div>
-            </section>
-            <section class="oa-navigation-bar__section --right">
-              <button type="button" class="oa-navigation-bar__cart">
-                <span class="oa-navigation-bar__icon">
-                  <span class="oa-icon --cart"></span>
-                </span>
-                <span class="oa-navigation-bar__cart-text">ตะกร้าสินค้า</span>
-              </button>
-            </section>
+        <div class="mz-main-layout__nav-container">
+          <div class="oa-top-banner">
+            เฉพาะ 29-30 เมษา ช้อป 2,000 บาท ขึ้นไป/ใบเสร็จ รับฟรี
+            แก้วเชคทรูวิวิตี้ 1 ชิ้น
+            <a href="/details">ดูรายละเอียดเพิ่มเติม</a>
           </div>
-        </nav>
+          <nav
+            class="oa-navigation-bar mz-main-layout__navigation-bar"
+            aria-label="primary"
+            data-dropdown-top-restrict="true"
+          >
+            <div class="oa-navigation-bar__container">
+              <section class="oa-navigation-bar__section --left">
+                <div class="oa-navigation-bar__logo">
+                  <img
+                    class="oa-image"
+                    data-src="/static/images/amway-logo-white.svg"
+                    alt="amway-logo-white"
+                  />
+                </div>
+              </section>
+              <section class="oa-navigation-bar__section --right">
+                <button type="button" class="oa-navigation-bar__cart">
+                  <span class="oa-navigation-bar__icon">
+                    <span class="oa-icon --cart"></span>
+                  </span>
+                  <span class="oa-navigation-bar__cart-text">ตะกร้าสินค้า</span>
+                </button>
+              </section>
+            </div>
+          </nav>
+        </div>
+        <div class="mz-main-layout__messages-container"></div>
       </header>
       <div id="main-dim-layer" class="mz-dim-layer"></div>
       <nav
@@ -838,7 +846,7 @@
             <input
               type="text"
               placeholder="Search by Name / Product ID"
-              class="oa-input__input input-lg form-control --round --with-left-icon"
+              class="oa-input__input input-lg form-control --round --small --with-left-icon"
             />
           </div>
           <button
@@ -972,6 +980,216 @@
           </ul>
         </section>
       </div>
+      <div class="oa-pickup-address-modal">
+        <div
+          class="mz-searchable-dropdown dropdown oa-pickup-address-modal__dropdown"
+        >
+          <button
+            type="button"
+            class="mz-searchable-dropdown__button oa-pickup-address-modal__dropdown-button --with-left-icon"
+            data-placeholder="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <div class="mz-searchable-dropdown__button-icon --left">
+              <span
+                class="mz-icon --search oa-pickup-address-modal__search-icon"
+              ></span>
+            </div>
+            <div class="mz-searchable-dropdown__button-icon --right"></div>
+            <span class="mz-searchable-dropdown__button-text">
+              เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า
+            </span>
+          </button>
+          <div class="mz-searchable-dropdown__modal">
+            <button type="button" class="mz-searchable-dropdown__close-button">
+              <span class="mz-icon --close"></span>
+            </button>
+            <div class="mz-input mz-searchable-dropdown__input">
+              <div class="mz-input__icon --left">
+                <span
+                  class="mz-icon --search oa-pickup-address-modal__search-icon"
+                ></span>
+              </div>
+              <input
+                type="text"
+                id="global-pickup-address"
+                placeholder="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า"
+                class="mz-input__input --with-left-icon"
+                value="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า"
+              />
+            </div>
+            <div
+              class="mz-searchable-dropdown__menu oa-pickup-address-modal__dropdown-menu"
+            >
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:after-sales"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:after-sales"
+                  name="global-pickup-address"
+                  value="after-sales"
+                  data-label="AFTER SALES SERVICE"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  AFTER SALES SERVICE
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-rama-ii"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-rama-ii"
+                  name="global-pickup-address"
+                  value="shop-rama-ii"
+                  data-label="แอมเวย์ ช็อป พระราม 2"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป พระราม 2
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-hq"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-hq"
+                  name="global-pickup-address"
+                  value="shop-hq"
+                  data-label="แอมเวย์ ช็อป สำนักงานใหญ่"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป สำนักงานใหญ่
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-1"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-1"
+                  name="global-pickup-address"
+                  value="shop-1"
+                  data-label="แอมเวย์ ช็อป 1"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป 1
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-2"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-2"
+                  name="global-pickup-address"
+                  value="shop-2"
+                  data-label="แอมเวย์ ช็อป 2"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป 2
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-3"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-3"
+                  name="global-pickup-address"
+                  value="shop-3"
+                  data-label="แอมเวย์ ช็อป 3"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป 3
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-4"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-4"
+                  name="global-pickup-address"
+                  value="shop-4"
+                  data-label="แอมเวย์ ช็อปสาขานี้ชื่อยาวมากเพื่อเป็นการทดสอบ implementation ที่ถูกต้อง"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อปสาขานี้ชื่อยาวมากเพื่อเป็นการทดสอบ implementation
+                  ที่ถูกต้อง
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <div class="mz-searchable-dropdown__footer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="mz-main-layout" class="mz-main-layout --main-bar-only">
         <div class="mz-main-layout__content">
           <main class="mz-payment-layout --narrow">
@@ -981,22 +1199,26 @@
               action="#"
             >
               <header class="mz-payment-layout__header">
-                <h4 class="mz-payment-layout__title">ผ่อนชำระผ่านบัตรเครดิต</h4>
-                <div class="mz-instalment__issuers">
-                  <img
-                    class="mz-image"
-                    data-src="/static/images/payment-mastercard.svg"
-                    alt="payment-mastercard"
-                  />
-                  <img
-                    class="mz-image"
-                    data-src="/static/images/payment-visa.svg"
-                    alt="payment-visa"
-                  />
+                <div class="mz-payment-layout__header-content">
+                  <h4 class="mz-payment-layout__title">
+                    ผ่อนชำระผ่านบัตรเครดิต
+                  </h4>
+                  <div class="mz-instalment__issuers">
+                    <img
+                      class="mz-image"
+                      data-src="/static/images/payment-mastercard.svg"
+                      alt="payment-mastercard"
+                    />
+                    <img
+                      class="mz-image"
+                      data-src="/static/images/payment-visa.svg"
+                      alt="payment-visa"
+                    />
+                  </div>
+                  <p class="mz-payment-layout__description">
+                    <small>กรุณาชำระเงินก่อนเวลา 23:30 น.</small>
+                  </p>
                 </div>
-                <p class="mz-payment-layout__description">
-                  <small>กรุณาชำระเงินก่อนเวลา 23:30 น.</small>
-                </p>
               </header>
               <section class="mz-payment-layout__content">
                 <div class="mz-instalment__summary">
@@ -1383,6 +1605,8 @@
     <script src="/v2/Common/js/cardTypes.js"></script>
     <script src="/v2/Payment/js/SavedCreditDebit.js"></script>
     <script src="/v2/Payment/js/PaymentLayout.js"></script>
+    <script src="/v2/Common/js/SearchableDropdown.js"></script>
+    <script src="/v1/Header/js/PickupAddressModal.js"></script>
     <script src="/v1/Common/js/image.js"></script>
     <script src="/v1/Search/js/SearchModal.js"></script>
     <script src="/v1/Header/js/UserMenu.js"></script>

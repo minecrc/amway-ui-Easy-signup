@@ -20,7 +20,7 @@
       flex-wrap: wrap;
       align-content: flex-start;
       justify-content: space-between;
-      margin-top: @spacing[xl];
+      margin-top: @spacing[xxxl];
       margin-bottom: @spacing[xxxxl];
 
       .mz-container();
@@ -48,7 +48,22 @@
     }
   }
 
+  &__header-content {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: @content-max-width;
+  }
+
+  &.--narrow &__header-content {
+    max-width: @narrow-content-max-width;
+  }
+
   &__title {
+    flex: 1;
+
     @media screen and (min-width: @breakpoints[xl]) {
       .mz-font-style(heading-3, bold);
     }
@@ -206,5 +221,9 @@
   &__summary {
     position: relative;
     z-index: @z-indexes[payment-mobile-summary];
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      position: static;
+    }
   }
 }

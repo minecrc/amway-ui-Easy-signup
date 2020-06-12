@@ -13,39 +13,34 @@
     return `input[name="payment-method"][value="${value}"]:checked`;
   }
 
+  function isCardMethodSelected() {
+    return $('input[name="payment-method"][value="card"]').is(':checked');
+  }
+
   const useNewCard = () => {
-    if (!$('input[name="payment-method"][value="card"]').is(':checked')) {
-      return false;
-    }
-
-    if ($('input[name="card"]').length < 1) {
-      return true;
-    }
-
-    return $('#add-card-content').is('[aria-expanded="true"]');
+    return (
+      isCardMethodSelected() &&
+      // No saved card or add card section expanded
+      ($('input[name="card"]').length < 1 ||
+        $('#add-card-section').is('[aria-expanded="true"]'))
+    );
   };
 
   const useSavedCard = () => {
-    if (!$('input[name="payment-method"][value="card"]').is(':checked')) {
-      return false;
-    }
-
-    return !$('#add-card-content').is('[aria-expanded="true"]');
+    return (
+      isCardMethodSelected() &&
+      $('#add-card-section').is('[aria-expanded="false"]')
+    );
   };
 
-  const useAmwayCardInstalment = () => {
-    if (!$('input[name="payment-method"][value="card"]').is(':checked')) {
-      return false;
-    }
-
-    if (
+  const useSavedAmwayCardInstalment = () => {
+    return (
+      isCardMethodSelected() &&
       $('input[name="card"][data-amway-card="true"]').is(':checked') &&
-      $('input[name="amway-card-option"][value="instalment"]').is(':checked')
-    ) {
-      return true;
-    }
-
-    return false;
+      $('input[name="saved-amway-card-option"][value="instalment"]').is(
+        ':checked'
+      )
+    );
   };
 
   form.validate({
@@ -73,8 +68,8 @@
         minlength: 3,
         'card-security-code': true
       },
-      'amway-card-security-code': {
-        required: useAmwayCardInstalment,
+      'saved-amway-card-security-code': {
+        required: useSavedAmwayCardInstalment,
         minlength: 3,
         'card-security-code': true
       },
@@ -106,7 +101,7 @@
         required: 'กรุณากรอก CVV',
         minlength: 'กรุณากรอก CVV ให้ครบถ้วน'
       },
-      'amway-card-security-code': {
+      'saved-amway-card-security-code': {
         required: 'กรุณากรอก CVV',
         minlength: 'กรุณากรอก CVV ให้ครบถ้วน'
       },
@@ -116,6 +111,25 @@
       'recipient-mobile': {
         required: 'กรุณากรอกเบอร์โทรศัพท์ของคุณ'
       }
+    },
+    onfocusout: function onfocusout(element) {
+      function onBlur() {
+        const collapsibleParent = $(element).closest('[aria-expanded]');
+        const outmostCollapsibleParent = $(element).closest(
+          '.mz-checkable-input__content[data-name="payment-method"]'
+        );
+
+        if (
+          !this.checkable(element) &&
+          (element.name in this.submitted || !this.optional(element)) &&
+          collapsibleParent.is('[aria-expanded="true"]') &&
+          outmostCollapsibleParent.is('[aria-expanded="true"]')
+        ) {
+          this.element(element);
+        }
+      }
+
+      setTimeout(onBlur.bind(this), 100);
     },
     highlight: (element, errorClass) => {
       const $element = $(element);
@@ -158,11 +172,11 @@
   // Force re-validation on radio buttons
   $('input[name="card"]').on('change', () => {
     resetPartialForm($('input[name="card"]'));
-    resetPartialForm($('input[name="amway-card-security-code"]'));
+    resetPartialForm($('input[name="saved-amway-card-security-code"]'));
   });
 
-  $('input[name="amway-card-option').on('change', () => {
-    resetPartialForm($('input[name="amway-card-security-code"]'));
+  $('input[name="saved-amway-card-option"]').on('change', () => {
+    resetPartialForm($('input[name="saved-amway-card-security-code"]'));
   });
 
   $('input[name="bank"]').on('change', () => {
@@ -178,10 +192,12 @@
         const content = $(e.target);
         const inputs = $(`#${content.attr('id')} input`);
 
+        resetPartialForm(inputs);
+
         $('.mz-saved-credit-debit').trigger('saved:reset');
         addCardContent.collapse('hide');
+        // Reset new card section for no card case
         $('.mz-new-credit-debit').trigger('new:reset');
-        resetPartialForm(inputs);
       }
     }
   );

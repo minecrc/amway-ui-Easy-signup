@@ -1,0 +1,77 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-order-status-layout {
+  @sticky-bar-height: 80px + 1px; // 1px for border size
+
+  flex: 1;
+  width: 100%;
+  background: @colors[grey-100];
+
+  &__container {
+    &:not(:last-child) {
+      padding-bottom: @sticky-bar-height;
+    }
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      padding-bottom: 0;
+
+      .mz-container();
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  &__left-content {
+    flex: 1 0 100%;
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      flex: 0 0 404px;
+    }
+  }
+
+  &__right-content {
+    max-width: 100%;
+    overflow: hidden;
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      // 672px will make coupon with size 200px perfectly fit
+      flex: 0 1 672px;
+      margin-left: @spacing[s];
+    }
+  }
+
+  &__mobile-sticky-bar {
+    display: flex;
+    position: fixed;
+    z-index: @z-indexes[payment-mobile-summary];
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: space-between;
+    height: @sticky-bar-height;
+    padding: @spacing[s];
+    overflow: hidden;
+    border-top: solid 1px @colors[grey-200];
+    background: @colors[white];
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    padding-top: @spacing[xl];
+    padding-bottom: @spacing[xxxxl] + @spacing[xxxl];
+  }
+}

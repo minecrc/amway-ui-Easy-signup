@@ -28,13 +28,9 @@
       if (!value) return true;
 
       const number = getNumberFromValue(value);
-      const { card, isPotentiallyValid, isValid } = CardValidator.number(
-        number
-      );
+      const { isValid } = CardValidator.number(number);
 
-      const lengths = card ? card.lengths : $.possibleCardLengths;
-
-      return lengths.includes(number.length) ? isValid : isPotentiallyValid;
+      return isValid;
     },
     'หมายเลขบัตรเครดิต/บัตรเดบิตไม่ถูกต้อง'
   );

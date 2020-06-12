@@ -1,20 +1,26 @@
 /* global $ */
 (() => {
-  // NOTE: Keep this in sync with header's break point
-  const BREAKPOINT = 1024;
-
   const searchButton = $('#oa-search-button');
   const searchModal = $('#oa-search-modal');
   const searchInputs = $('.oa-search-input input');
+  const navigationBar = $('.oa-navigation-bar');
+
+  function placeModal() {
+    const top = window.isDesktop()
+      ? navigationBar.offset().top + navigationBar.height()
+      : 0;
+    searchModal.css('top', top);
+  }
 
   function focus() {
     $('.oa-search-input:visible input').focus();
   }
 
   function open() {
+    placeModal();
     searchModal.addClass('--active');
 
-    if ($(window).width() <= BREAKPOINT) {
+    if (!window.isDesktop()) {
       $('body').addClass('modal-open');
     }
   }
@@ -48,7 +54,7 @@
     closeButton.on('click', close);
 
     document.addEventListener('scroll', () => {
-      if ($(window).width() > BREAKPOINT) {
+      if (window.isDesktop()) {
         close();
       }
     });

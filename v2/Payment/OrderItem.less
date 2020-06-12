@@ -1,0 +1,70 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-order-item {
+  display: flex;
+  position: relative;
+  padding: @spacing[s];
+  background: @colors[white];
+
+  .mz-container();
+
+  &:not(:last-child):after {
+    content: '';
+    position: absolute;
+    right: @spacing[s];
+    bottom: 0;
+    left: @spacing[s];
+    height: 1px;
+    background: @colors[grey-200];
+  }
+
+  &__image {
+    flex: none;
+    width: @spacing[xxxl];
+    height: @spacing[xxxl];
+    margin-right: @spacing[s];
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__barcode {
+    color: @colors[grey-400];
+    .mz-font-style(small);
+  }
+
+  &__title {
+    margin-top: @spacing[xxs];
+  }
+
+  &__description {
+    margin-top: @spacing[xxs];
+    color: @colors[grey-400];
+    .mz-font-style(small);
+  }
+
+  &__bundle-item {
+    display: flex;
+    margin: @spacing[xs] + @spacing[xxs] 0;
+
+    .mz-font-style(small);
+  }
+
+  &__bundle-item-quantity {
+    flex: 0 0 18px;
+    margin-right: @spacing[xs];
+  }
+
+  &__price-and-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: @spacing[xxs];
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    .mz-container(@side-spacing: @spacing[m]);
+  }
+}

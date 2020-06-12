@@ -1,0 +1,19 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-top-banner {
+  padding: @spacing[xs] @spacing[s];
+  background: @colors[brown-200];
+  color: @colors[white];
+  .oa-font-style(small);
+
+  a {
+    font-weight: @font-weights[bold];
+    text-decoration: underline;
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    text-align: center;
+    .oa-font-style(body);
+  }
+}

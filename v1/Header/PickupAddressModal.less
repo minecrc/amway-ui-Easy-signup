@@ -1,0 +1,56 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.oa-pickup-address-modal {
+  display: none;
+
+  &.--active {
+    display: block;
+  }
+
+  &__dropdown {
+    color: @colors[black];
+  }
+
+  &__dropdown-button {
+    display: none;
+  }
+
+  & &__dropdown-menu {
+    position: static;
+    box-shadow: none;
+  }
+
+  &__dropdown-menu label {
+    padding-right: @spacing[xs];
+    padding-left: @spacing[xs];
+  }
+
+  &__search-icon {
+    font-size: @icon-sizes[s];
+  }
+
+  &__address-label {
+    display: flex;
+    align-items: center;
+    .oa-font-style(body);
+  }
+
+  &__option-icon {
+    margin-right: @spacing[xs];
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    position: fixed;
+    z-index: @z-indexes[search-modal];
+    width: 450px;
+    margin-top: @spacing[s];
+    padding: @spacing[m] @spacing[m] 0;
+    background: @colors[white];
+    box-shadow: @shadows[xs];
+
+    &__dropdown-menu label {
+      padding: @spacing[s] @spacing[xs];
+    }
+  }
+}

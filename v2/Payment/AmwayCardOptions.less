@@ -1,0 +1,24 @@
+@import '../Common/variables.less';
+
+.mz-amway-card-options {
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: @spacing[xs];
+  }
+
+  &__image {
+    margin-right: @spacing[xs];
+  }
+
+  &__option {
+    & + & {
+      margin-top: @spacing[xs];
+    }
+  }
+
+  &__cvv-input {
+    max-width: 115px;
+    margin-top: @spacing[xs];
+  }
+}

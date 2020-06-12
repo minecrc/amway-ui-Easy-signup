@@ -33,6 +33,7 @@
   yellow-200: #f5f5c9;
   yellow-100: #f8f8e7;
 
+  success-green: #90c353;
   green-300: #73793b;
   green-200: #d5e4c5;
   green-100: #f0fae5;
@@ -125,6 +126,7 @@
 };
 
 @z-indexes: {
+  background: -1;
   ground: 0;
   step-progress-bar-arrow: 1;
   step-progress-bar-label: 2;
@@ -146,13 +148,18 @@
   modal: 4001;
 };
 
+@header-z-indexes: {
+  topmost-bar: 0;
+  nav-bar: 1;
+  message-bars: 2;
+};
+
 @content-max-width: 1180px;
 
 @topmost-bar-height: 40px;
 @navigation-bar-desktop-height: 80px;
 @navigation-bar-mobile-height: 54px;
 @menu-bar-height: 56px;
-@search-bar-height: 64px;
 
 @arrow-size: 12px;
 

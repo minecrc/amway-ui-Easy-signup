@@ -13,7 +13,21 @@
     right: 0;
     left: 0;
     transition: transform 0.2s linear;
-    will-change: transform;
+  }
+
+  &__nav-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__navigation-bar {
+    position: relative;
+    z-index: @header-z-indexes[nav-bar];
+  }
+
+  &__topmost-bar {
+    z-index: @header-z-indexes[topmost-bar];
+    order: 4;
   }
 
   &__content {
@@ -27,9 +41,23 @@
     padding-top: 0;
   }
 
+  &__messages-container {
+    position: relative;
+    z-index: @header-z-indexes[message-bars];
+    transition: transform 0.2s linear;
+  }
+
   @media screen and (min-width: @breakpoints[xl]) {
     &__header {
       z-index: @z-indexes[desktop-header];
+    }
+
+    &__nav-container {
+      box-shadow: @shadows[s];
+    }
+
+    &__topmost-bar {
+      order: initial;
     }
 
     &__content {

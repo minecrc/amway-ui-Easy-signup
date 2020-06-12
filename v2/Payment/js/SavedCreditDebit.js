@@ -3,7 +3,7 @@
   const savedCreditDebit = $('.mz-saved-credit-debit');
   const newCreditDebits = $('.mz-new-credit-debit');
 
-  const amwayCardSection = $('.mz-saved-credit-debit__amway-card-section');
+  const savedAmwayCardOptions = $('#saved-amway-card-options');
 
   const addCardContent = $('.mz-saved-credit-debit__add-card-content');
   const instalmentSection = $('.mz-saved-credit-debit__instalment-section');
@@ -19,7 +19,7 @@
     $('input[name="card"]').prop('checked', false);
     $('input[name="card"]').trigger('change');
     creditDebitText.html(placeholder);
-    amwayCardSection.collapse('hide');
+    savedAmwayCardOptions.collapse('hide');
   });
 
   function handleCreditDebitUpdate(e) {
@@ -47,9 +47,9 @@
     if (checkedInput.is('[data-instalment="true"]')) {
       instalmentSection.collapse('show');
     } else if (checkedInput.is('[data-amway-card="true"]')) {
-      amwayCardSection.collapse('show');
+      savedAmwayCardOptions.collapse('show');
     } else {
-      amwayCardSection.collapse('hide');
+      savedAmwayCardOptions.collapse('hide');
       instalmentSection.collapse('hide');
     }
 
@@ -61,24 +61,6 @@
 
     cvvInput.val('');
   }
-
-  amwayCardSection.on('hidden.bs.collapse', () => {
-    const inputs = amwayCardSection.find('input[type="radio"]');
-
-    inputs.each(function resetAmwayOptionInput() {
-      const input = $(this);
-      input.prop('checked', input.attr('data-default-checked'));
-
-      const content = $(`#${input.attr('id')}-content`);
-      content.collapse('hide');
-    });
-
-    const cvvInput = amwayCardSection.find(
-      'input[name="amway-card-security-code"]'
-    );
-
-    cvvInput.val('');
-  });
 
   addCardContent.on('hidden.bs.collapse', () => {
     newCreditDebits.trigger('new:reset');

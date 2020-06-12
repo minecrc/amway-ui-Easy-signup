@@ -4,8 +4,12 @@
   const newCreditDebits = $('.mz-new-credit-debit');
   const inputs = newCreditDebits.find('input');
 
+  const newAmwayCardOptions = $('#new-amway-card-options');
+
   newCreditDebits.on('new:reset', function resetNewInputs() {
+    inputs.prop('checked', false);
     inputs.val('');
+    newAmwayCardOptions.collapse('hide');
   });
 
   const numberInputs = newCreditDebits.find(
@@ -25,7 +29,7 @@
   expiryDateInputs.attr('maxlength', 4 + EXPIRY_DATE_SEPARATOR.length);
 
   function isRemoving({ value, separator }) {
-    return value.endsWith(separator[separator.length - 2]);
+    return value.endsWith(separator.slice(0, -1));
   }
 
   function removeSeparator({ value, separator }) {
@@ -76,8 +80,6 @@
     const input = $(this);
     const value = input.val();
     const separator = EXPIRY_DATE_SEPARATOR;
-
-    if (!isRemoving({ value, separator })) return;
 
     const expiryDate = removeSeparator({
       value,

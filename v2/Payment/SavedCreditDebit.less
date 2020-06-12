@@ -69,13 +69,7 @@
     min-height: 0;
   }
 
-  &__amway-card-section {
-    header {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: @spacing[xs];
-    }
-
+  &__amway-card-options {
     &:before {
       content: '';
       display: block;
@@ -83,32 +77,10 @@
     }
   }
 
-  &__amway-card-image {
-    margin-right: @spacing[xs];
-  }
-
-  &__amway-option {
-    & + & {
-      margin-top: @spacing[xs];
-    }
-  }
-
-  &__amway-cvv-input {
-    max-width: 115px;
-    margin-top: @spacing[xs];
-  }
-
-  &__amway-cvv-icon {
-    color: @colors[grey-300];
-    font-size: @icon-sizes[m];
-  }
-
-  &__add-card-section {
-    header {
-      display: flex;
-      justify-content: space-between;
-      margin-top: @spacing[s];
-    }
+  &__add-card-section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: @spacing[s];
   }
 
   &__add-card-button {

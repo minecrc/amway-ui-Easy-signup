@@ -35,6 +35,14 @@
     background: @colors[original-blue];
   }
 
+  &.--original-blue-inverted {
+    color: @colors[white];
+  }
+
+  &.--original-blue-inverted &__active-background {
+    background: @colors[white];
+  }
+
   &.--green {
     border-color: @colors[green-200];
     color: @colors[green-300];
@@ -81,5 +89,9 @@
     &.--active {
       color: @colors[white];
     }
+  }
+
+  &.--original-blue-inverted &__button.--active {
+    color: @colors[original-blue];
   }
 }
