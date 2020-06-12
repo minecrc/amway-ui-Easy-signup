@@ -3,12 +3,12 @@
     const LANGUAGES = {
         th: {
             text: 'ภาษาไทย',
-            image: '../../static/images/flag-thai.svg',
+            image: './static/images/flag-thai.svg',
             targetKey: 'en'
         },
         en: {
             text: 'English',
-            image: '../../static/images/flag-english.svg',
+            image: './static/images/flag-english.svg',
             targetKey: 'th'
         }
     };
