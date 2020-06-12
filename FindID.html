@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Login</title>
+    <title>FindID</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" href="./Common/normalize.min.css" />
     <link rel="stylesheet" href="./Header/MenuBar.min.css" />
@@ -30,98 +30,72 @@
             text-decoration: underline;
         }
         
-        .box_login-from {
+        .wrapper-memb-join {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        #btnAboConfirm {
             margin: 0 auto;
         }
         
-        .box_login-link,
-        .box_login-etc {
-            text-align: center;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        .form-group {
+            margin-bottom: 15px;
+            margin-top: 15px;
+            height: 50px;
         }
         
-        .link_login-item {
-            width: 33%;
-        }
-        
-        .link_area {
+        .form-control {
+            display: block;
             width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            max-width: 316px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         }
         
-        .login_renewal {
-            padding-top: 50px;
-            padding-bottom: 65px;
-            background: url(./static/images/mock/pc_login-bg.png) no-repeat 50% bottom;
-            background-size: auto 134px;
-            height: 678px;
-            border-bottom: 1px solid #c2c2c2;
-        }
-        
-        .btn_login-Line {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            border-radius: 9px;
-            width: 100%;
-            background-color: #80e180;
-            color: #fff;
-            height: 51px;
-            margin-top: 10px;
-        }
-        
-        .btn_login-Line:hover {
-            border: 1px solid #80e180;
-            background-color: #bfdfbf !important;
-            color: #000;
-        }
-        
-        .oa-input input {
+        input[type=text],
+        input[type=date] {
             height: 30px;
             border-width: 0 0 1px 0;
             border-color: #dedede;
             width: 100%;
+            max-width: 317px;
             padding: 0;
             font-size: 14px;
             color: #333;
             letter-spacing: -.5px;
-            margin-top: 15px;
         }
         
-        .oa-button {
-            height: 54px;
-            border-radius: 9px;
-            margin-top: 20px;
-        }
-        
-        a {
-            font-size: 13px;
-        }
-        
-        .box_login-link,
-        .box_login-etc,
-        .box_login-from {
-            max-width: 330px;
+        #choose-abo,
+        #choose-member {
+            max-width: 660px;
+            width: 100%;
             margin: 0 auto;
         }
         
-        #loginForm {
-            margin-bottom: 40px;
+        .choose-seeking-type {
+            border-bottom: 1px solid #2f2f2f;
         }
         
-        .link_Line-join {
-            margin-top: 20px;
-            background-color: #bfdfbf;
-            padding: 5px;
-            height: 35px;
-            max-width: 200px;
-            width: 100%;
-            border-radius: 5px;
-            display: inline-block;
-            vertical-align: middle;
+        .choose-abo,
+        .choose-member {
+            border-bottom: 1px solid #2f2f2f;
         }
     </style>
+
 </head>
 
 <body>
@@ -718,7 +692,7 @@
                                 <p class="oa-search-modal__product-description"></p>
                                 <div class="oa-search-modal__product-checkout">
                                     <span class="oa-search-modal__product-price">฿964</span>
-                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
+                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --medium">
                       <span>Add to Cart</span>
                     </button>
                                 </div>
@@ -735,7 +709,7 @@
                                 <p class="oa-search-modal__product-description">16 colors</p>
                                 <div class="oa-search-modal__product-checkout">
                                     <span class="oa-search-modal__product-price">880</span>
-                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
+                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --medium">
                       <span>Add to Cart</span>
                     </button>
                                 </div>
@@ -754,7 +728,7 @@
                                     <span class="oa-search-modal__product-price">
                       ฿964 ~ ฿1,564
                     </span>
-                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
+                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --medium">
                       <span>Add to Cart</span>
                     </button>
                                 </div>
@@ -764,116 +738,260 @@
                 </ul>
             </section>
         </div>
-        <!-- Login Session -->
+        <!-- Form Session -->
         <div id="oa-main-layout" class="oa-main-layout">
             <div class="oa-main-layout__content">
 
-                <div class="yCmsContentSlot login-right-content-slot">
-                    <div class="yCmsComponent login-right-content-component">
-                        <div class="login-section">
-                            <!-- //skipToContent -->
-                            <script src="//developers.Line.com/sdk/js/Line.min.js"></script>
-                            <!-- S : 2020 login renewal -->
-                            <div class="login_renewal">
-                                <div class="login-area">
-                                    <form id="loginForm" name="content_form" action="https://idp.amway.co.kr/auth/j_spring_security_check" method="post"><input type="hidden" name="response_type" id="response_type" value="id_token">
-                                        <input type="hidden" name="client_id" id="client_id" value="scyrdkdjfewdn2hb5rztj63z">
-                                        <input type="hidden" name="redirect_uri" id="redirect_uri" value="https://www.amway.co.kr/j_spring_security_check?client_id=scyrdkdjfewdn2hb5rztj63z">
-                                        <input type="hidden" name="response_mode" id="response_mode" value="form_post">
-                                        <input type="hidden" name="scope" id="scope" value="openid profile">
-                                        <input type="hidden" name="state" id="state" value="eyJub25jZSI6ImFORzRFNDNWWmZwMllHNHd6NDVxVXVjWHV0cG5LZmpUNTFIN3NweDViWERXWSIsImNsaWVudF9pZCI6InNjeXJka2RqZmV3ZG4yaGI1cnp0ajYzeiJ9">
-                                        <input type="hidden" name="nonce" id="nonce" value="aNG4E43VZfp2YG4wz45qUucXutpnKfjT51H7spx5bXDWY">
-                                        <input type="hidden" name="is_first_fp" id="is_first_fp" value="false">
-                                        <input type="hidden" name="is_first_Line" id="is_first_Line" value="">
-                                        <input type="hidden" id="LineLogin" value="">
-                                        <input type="hidden" name="socialAccessToken" id="socialAccessToken" value="">
-                                        <input type="hidden" name="socialClientId" id="socialClientId" value="">
-                                        <input type="hidden" name="socialRedirectUrl" id="socialRedirectUrl" value="">
-                                        <input type="hidden" name="socialAutoMapping" id="socialAutoMapping" value="">
-                                        <input type="hidden" name="socialCheckedRealName" id="socialCheckedRealName" value="">
-                                        <div class="box_login-from">
-                                            <h1 class="login-title">
-                                                <font style="vertical-align: inherit;">
-                                                    <font style="vertical-align: inherit;">เข้าสู่ระบบ</font>
-                                                </font>
-                                            </h1>
-                                            <div class="oa-input oa-input-group__input">
-                                                <input type="text" id="j_username" name="j_username" placeholder="ID / หมายเลขสมาชิก" class="form_lines" title="ID / หมายเลขสมาชิก" value="">
-                                                <p class="text_validation" id="loginInput" style="display:none;">ID / หมายเลขสมาชิก</p>
+                <div class="wrapper-memb-join seek-login-data find_my_idpw amway-theme">
+                    <div class="product-list-page-title">
+                        <h1>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">หารหัส</font>
+                            </font>
+                        </h1>
+                    </div>
+
+
+                    <hr class="divide-line">
+                    <h2 class="tit-h2">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">เลือกประเภทสมาชิก</font>
+                        </font>
+                    </h2>
+                    <div class="choose-seeking-type">
+                        <span><input type="radio" name="customerType" class="amwa-radio" id="seekID_abo" value="ABO" checked="checked">
+                            <label for="seekID_abo" class="focus"><font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">แอมเวย์ ABO</font></font>
+                            </label>
+                        </span>
+                        <span><input type="radio" name="customerType" class="amwa-radio" id="seekID_member" value="MEMBER">
+                            <label for="seekID_member" class="focus"><font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">สมาชิกแอมเวย์</font></font>
+                            </label>
+                        </span>
+                    </div>
+
+                    <div id="choose-abo" class="navigation-tabs-container">
+                        <div class="simple_chk_abo">
+                            <!-- tab2 -->
+                            <div class="author-content">
+                                <strong class="tit-h2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">บัตรประจำตัว</font></font></strong>
+                                <p class="author-text">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">ใส่ชื่อเพศวันเดือนปีเกิดและหมายเลขโทรศัพท์มือถือในข้อมูลสมาชิก</font>
+                                    </font>
+                                </p>
+
+                                <div class="validation-wrapper simpleABO">
+
+                                    <div class="box-input-details">
+                                        <div class="validation-box-simple">
+                                            <div class="form-group ty-input-name">
+                                                <label class="col-md-3 col-xs-12 control-label" for="simpleName_member"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ชื่อ</font></font><span class="ico-must-astar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;color:red;">*</font></font></span></label>
+                                                <div class="col-md-9 col-xs-12">
+                                                    <input id="nameABO" name="name" placeholder="ป้อนชื่อจริง" class="form-control" type="text" value=""></div>
                                             </div>
-                                            <div class="oa-input oa-input-group__input">
-                                                <input type="password" id="j_password" name="j_password" placeholder="รหัสผ่าน" class="form_lines" title="ใส่รหัสผ่าน" maxlength="30">
-                                                <p class="text_validation" id="pwInput" style="display:none;">รหัสผ่าน</p>
-                                            </div>
-                                            <div class="login_btn-group">
-                                                <button type="button" class="oa-button btn btn-lg --primary --fill --regular" id="Login_Login" onclick="">
-                                                    <font style="vertical-align: inherit;">
-                                                    <font style="vertical-align: inherit;">เข้าสู่ระบบ</font></font></button>
-                                                <button type="button" class="btn_login-Line" id="Line_hide_login_btn" onclick="javascript:return false;">
-                                                
-                                                    <span class="txt_Line">
-                                                        <span class="txt_Line-tit" style="margin-bottom: 4px">
-                                                        
-                                                            <font style="vertical-align: inherit;font-size: smaller;">  
-                                                                <div>
-                                                                 <img src="./static/images/mock/icons8-line.svg" alt="icons8-line" style="max-width: 28px;">
-                                                                 เข้าสู่ระบบ Line
-                                                                </div>
-                                                                <div>
-                                                                 เข้าสู่ระบบแบบง่าย / ยืนยันการซื้อที่ไม่ใช่สมาชิก
-                                                                </div>
-                                                     
-                                                            </font>
-                                                        </span>
-                                                       
-                                                            </span>
-                                                </button>
-                                            </div>
-                                            <div class="box_login-etc" id="Line_hide_div01">
-                                                <div class="login_etc-item">
-                                                    <span class="form_element-checkbox">
-                                                        <input type="checkbox" id="remember" name="remember" checked="checekd">
-                                                        <label for="remember" class="sp_chk focus"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">บันทึก ID</font></font></label>
-                                                    </span>
+
+                                            <div class="form-group ty-input-birth">
+                                                <label class="col-md-3 col-xs-12 control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เพศ</font></font><span class="ico-must-astar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;color:red;">*</font></font></span></label>
+                                                <div class="col-md-9 col-xs-12 select-gender">
+                                                    <div class="radio-wrapper">
+                                                        <label class="amw-radio-wrap radio-label focus" for="selectGenderMale">
+                                    <input id="selectGenderMale" name="gender" class="amw-global-radio" type="radio" value="MALE"><span class="amw-radio-overlay"></span>
+                                    <span class="amw-label-radio-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ชาย</font></font></span>
+                                </label>
+                                                    </div>
+                                                    <div class="radio-wrapper">
+                                                        <label class="amw-radio-wrap radio-label focus" for="selectGenderFemale">
+                                    <input id="selectGenderFemale" name="gender" class="amw-global-radio" type="radio" value="FEMALE"><span class="amw-radio-overlay"></span>
+                                    <span class="amw-label-radio-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">หญิง</font></font></span>
+                                </label>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="box_login-etc mobile-use" id="Line_hide_div02">
+                                            <div class="form-group ty-input-birth">
+                                                <label class="col-md-3 col-xs-12 control-label" for="simpleBirth_member">
+                                                    <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">วันเกิด</font></font>
+                                                    <span class="ico-must-astar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;color:red;">*</font></font></span></label>
+                                                <div class="col-md-9 col-xs-12">
+                                                    <input id="Birthday" name="Birthday" class="form-control" type="date" id="myDate">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mobile">
+                                                <label class="col-md-3 control-label" for="simpleMobile_member">
+                                                    <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เบอร์โทรศัพท์</font>
+                                                </font>
+                                                <span class="ico-must-astar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;color:red;">*</font></font></span></label>
+                                                <div class="col-md-6 col-xs-12">
+                                                    <div class="row form-item-row">
+
+                                                        <div class="col-md-12 col-xs-12 input-part-2">
+                                                            <input id="phoneNumberABO" name="phoneNumber" title="ป้อนด้านหลังของหมายเลขโทรศัพท์มือถือ" placeholder="ป้อนโดยไม่ต้อง '-'" class="form-control" type="text" value=""></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col col-xs-12 col-space-top"><button type="button" class="oa-button btn btn-lg --secondary --auto --medium" id="btnRequestNum">
+                                                    <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ส่งหมายเลขการตรวจสอบ</font></font></button>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mobile-certifi" style="display:none;">
+                                                <div class="col-md-3 col-empty"></div>
+                                                <div class="col-md-9 col-xs-12 certifi-input-box">
+                                                    <label class="col-md-3 col-xs-12 certifi-label" for="certiNumber" id="certiNumberLbl"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ใส่หมายเลขใบรับรอง</font></font></label>
+                                                    <div class="col-md-5 col-xs-8 certifi-input">
+                                                        <input type="text" name="certiNumber" id="certiNumber" class="form-control">
+                                                        <p class="txt-input-guide" id="timeRemaining"></p>
+                                                    </div>
+                                                    <div class="col-md-4 col-xs-4 col-btn">
+                                                        <button type="button" class="oa-button btn btn-lg --secondary --auto --medium" id="btnNumConfirm">
+                                                            <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ยืนยัน</font></font></button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-empty"></div>
+                                                <div class="col-md-9 col-xs-12">
+                                                    <p class="noti-suc type_in_form" id="certResultMessage" style="display:none;">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">การยืนยันหมายเลขโทรศัพท์มือถือเสร็จสมบูรณ์</font>
+                                                        </font>
+                                                    </p>
+                                                    <p class="noti-fail type_in_form" id="certResultFailMessage" style="display:none;"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">หมายเลขการรับรองความถูกต้องไม่ถูกต้อง </font><font style="vertical-align: inherit;">กรุณาลองอีกครั้ง.</font></font></span></p>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div>
-                                        </div>
-                                    </form>
-
-                                    <div class="box_login-link">
-                                        <a href="javascript:void(0);" class="link_login-item" onclick="findId()">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">หารหัสสมาชิก</font>
-                                            </font>
-                                        </a>
-                                        <a href="javascript:void(0);" class="link_login-item" onclick="findPw()">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">ลืมรหัสผ่านหรือไม่</font>
-                                            </font>
-                                        </a>
-                                        <a href="javascript:void(0);" class="link_login-item" onclick="register()"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ลงทะเบียน</font></font></strong></a>
-                                        <div class="link_area">
-                                            <a href="javascript:void(0);" class="link_Line-join" id="RegisterBtn"><i class="icon_Line"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><img src="./static/images/mock/icons8-line.svg" alt="icons8-line" style="max-width: 28px;margin-top: -1px;margin-left: 6px;margin-right: 10px;">ลงทะเบียน</font></font></a>
-                                        </div>
                                     </div>
+
+                                </div>
+
+                                <div class="info-txt-btm col-xs-12">
+                                    <ul class="list-type2">
+                                        <li>
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">หากคุณไม่พบ ID ของคุณ</font>
+                                                <font style="vertical-align: inherit;">โปรดติดต่อ</font>
+                                            </font>
+                                            <a href="tel:0-2725-8000" class="type-tel">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">ศูนย์บริการลูกค้าแอมเวย์ (ประเทศไทย)<br> ที่หมายเลข 0-2725-8000</font>
+                                                </font>
+                                            </a>
+                                            <font style="vertical-align: inherit;"></font>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="next-control">
+                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --medium" id="btnAboConfirm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ยืนยัน</font></font></button>
                                 </div>
                             </div>
-                            <!-- E : 2020 login renewal -->
 
                         </div>
                     </div>
-                </div>
 
+                    <div id="choose-member" class="author-content member">
+                        <strong class="author-tit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ยืนยันง่าย</font></font></strong>
+                        <p class="author-text">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    เพื่อการยืนยันอย่างรวดเร็ว</font>
+                            </font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ส่วนที่จำเป็น</font></font></em>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"></font><em><font style="vertical-align: inherit;"> จะถูกทำเครื่องหมาย</font></em>
+                                <font style="vertical-align: inherit;">ด้วย</font><em><font style="vertical-align: inherit;color:red;">* </font></em></font><br>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    ป้อนชื่อวันเดือนปีเกิดและหมายเลขโทรศัพท์มือถือที่ลงทะเบียนไว้ในข้อมูลสมาชิก
+                                </font>
+                            </font>
+                        </p>
+
+                        <div class="validation-wrapper simpleMember">
+
+                            <div class="box-input-details">
+                                <div class="validation-box-simple">
+                                    <div class="form-group ty-input-name">
+                                        <label class="col-md-3 col-xs-12 control-label" for="simpleName_member"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ชื่อ</font></font><span class="ico-must-astar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;color:red;">*</font></font></span></label>
+                                        <div class="col-md-9 col-xs-12">
+                                            <input id="name_MEMBER" name="" placeholder="ป้อนชื่อจริง" class="form-control" type="text" value=""></div>
+                                    </div>
+
+                                    <div class="form-group ty-input-birth">
+                                        <label class="col-md-3 col-xs-12 control-label" for="simpleBirth_member"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font><span class="ico-must-astar"><font style="vertical-align: inherit;">วันเกิด<font style="vertical-align: inherit;color:red;">*</font></font></span></label>
+                                        <div class="col-md-9 col-xs-12">
+                                            <input id="Birthday" name="Birthday" class="form-control" type="date" id="myDate">
+
+                                            <p class="txt-input-guide">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">โปรดป้อนวันเดือนปีเกิดของคุณในบัตรประชาชน </font>
+                                                </font>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mobile">
+                                        <label class="col-md-3 control-label" for="simpleMobile_member"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เบอร์โทรศัพท์</font></font><span class="ico-must-astar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;color:red;">*</font></font></span></label>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="row form-item-row">
+
+                                                <div class="col-md-12 col-xs-12 ">
+                                                    <input id="phoneNumber_MEMBER" name="" title="ป้อนด้านหลังของหมายเลขโทรศัพท์มือถือ" placeholder="ป้อนโดยไม่ต้อง '-'" class="form-control" type="text" value=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="info-txt-btm col-xs-12">
+                            <ul class="list-type2 col-xs-12">
+                                <li>
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">หากคุณไม่พบ ID ของคุณ</font>
+                                        <font style="vertical-align: inherit;">โปรดติดต่อ</font>
+                                    </font>
+                                    <a href="tel:0-2725-8000" class="type-tel">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">ศูนย์บริการลูกค้าแอมเวย์ (ประเทศไทย) <br> จำกัดที่หมายเลข 0-2725-8000</font>
+                                        </font>
+                                    </a>
+                                    <font style="vertical-align: inherit;"></font>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <button type="button" class="oa-button btn btn-lg --secondary --auto --medium" style=" margin: 0 auto;">
+                                ยืนยัน
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        (() => {
+            $("#choose-member").hide();
+
+            $(".amwa-radio").click(function() {
+                console.log('click');
+
+                if ($('#seekID_abo').is(':checked')) {
+                    $("#choose-member").hide();
+                    $("#choose-abo").slideDown("slow");
+                }
+                if ($('#seekID_member').is(':checked')) {
+                    $("#choose-abo").hide();
+                    $("#choose-member").slideDown("slow");
+                }
+            });
+        })();
+    </script>
     <script src="./Common/js/image.js"></script>
     <script src="./Search/js/SearchModal.js"></script>
     <script src="./Header/js/UserMenu.js"></script>
