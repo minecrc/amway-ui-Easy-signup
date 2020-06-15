@@ -35,9 +35,6 @@
     <link rel="stylesheet" href="./SignUp/SignUpLayout.min.css" />
     <link rel="stylesheet" href="./SignUp/SignUpSection.min.css" />
 
-
-    <!-- JQuery Inline -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <style>
         .tab-content {
@@ -135,144 +132,7 @@
             }
         }
     </style>
-    <script>
-        $(document).ready(function() {
-            $(window).on('load', function() {
-                var window_width = $(window).width();
-                console.log('window_width ' + window_width);
-                if (window_width < 1010) {
-                    $(".btn-right").addClass('maintab-active');
-                    $(".btn-left").removeClass('maintab-active');
-                    if (window_width < 1010 && $(".btn-right").hasClass('maintab-active')) {
-                        $(window).Show_right();
-                    } else if ($(window).width() < 1010 && $(".btn-left").hasClass('maintab-active')) {
-                        $(window).Show_left();
-                    }
-                }
 
-                $(window).resize(function() {
-                    var window_width_resize = $(window).width();
-                    console.log('width_resize ' + window_width_resize);
-                    if (window_width_resize > 1010) {
-                        $(window).Show_all();
-                    } else if (window_width < 1010) {
-                        $(".btn-right").addClass('maintab-active');
-                        $(".btn-left").removeClass('maintab-active');
-                        if (window_width < 1010 && $(".btn-right").hasClass('maintab-active')) {
-                            $(window).Show_right();
-                        } else if ($(window).width() < 1010 && $(".btn-left").hasClass('maintab-active')) {
-                            $(window).Show_left();
-                        }
-                    } else if ($(window).width() < 1010 && $(".btn-left").hasClass('maintab-active')) {
-                        $(window).Show_left();
-                    } else if ($(window).width() < 1010 && $(".btn-right").hasClass('maintab-active')) {
-                        $(window).Show_right();
-                    } else if ($(window).width() > 1010) {
-                        $(window).Show_all();
-                    }
-                });
-            });
-
-            $(".btn-right").click(function() {
-                if ($(window).width() < 1010) {
-                    $(window).Btn_right_action();
-                }
-            });
-
-            $(".btn-left").click(function() {
-                if ($(window).width() < 1010) {
-                    $(window).Btn_left_action();
-                }
-            });
-            jQuery.fn.extend({
-                Show_all: function() {
-                    $(".item-left").css('display', 'flex');
-                    $(".item-right").css('display', 'flex');
-                    $(".item-left").css('left', '0');
-                    $(".item-right").css('right', 0);
-                    $(".item-left").css('opacity', 1);
-                    $(".item-right").css('opacity', 1);
-                    $(".item-text-right").css('display', 'block');
-                    $(".item-text-left").css('display', 'block');
-                    $(".item-text-left").css('opacity', '1');
-                    $(".item-text-right").css('opacity', '1');
-                    return 1;
-                },
-                Show_right: function() {
-                    $(".benefits-tab-mem").addClass('maintab-active');
-                    $(".item-left").css('display', 'none');
-                    $(".item-text-left").css('display', 'none');
-                    return 2;
-                },
-                Show_left: function() {
-                    $(".benefits-tab-abo").addClass('maintab-active');
-                    $(".item-right").css('display', 'none');
-                    $(".item-text-right").css('display', 'none');
-                    return 3;
-                },
-                Btn_right_action: function() {
-                    $('.item-text-left').animate({
-                        opacity: 0
-                    }, 500, function() {
-                        $('.item-text-left').css('display', 'none');
-                        $(".benefits-tab-mem").addClass('maintab-active');
-                        $('.item-text-right').animate({
-                            opacity: 1
-                        }, 500);
-                    });
-
-                    $('.item-text-right').css('display', 'block');
-                    $(".benefits-tab-mem").removeClass('maintab-active');
-                    $(".btn-left").removeClass('maintab-active');
-                    $(".btn-right").addClass('maintab-active');
-                    $(".benefits-tab-abo").removeClass('maintab-active');
-                    $(".item-left").animate({
-                            left: '100%',
-                        }, 900,
-                        function() {
-                            $(".item-left").css('display', 'none');
-                            $(".item-right").css('right', '100%');
-                            $(".item-right").css('display', 'flex');
-                            $(".item-right").animate({
-                                right: '0%',
-                            }, 900);
-                        });
-                    return 4;
-                },
-                Btn_left_action: function() {
-                    $('.item-text-right').css('display', 'none');
-                    $('.item-text-right').animate({
-                        opacity: 0
-
-                    }, 500, function() {
-                        $(".benefits-tab-abo").addClass('maintab-active');
-                        $('.item-text-left').animate({
-                            opacity: 1
-                        }, 500);
-                    });
-                    $('.item-text-right').css('display', 'none');
-                    $('.item-text-left').css('display', 'block');
-                    $(".benefits-tab-abo").removeClass('maintab-active');
-                    $(".btn-right").removeClass('maintab-active');
-                    $(".btn-left").addClass('maintab-active');
-                    $(".benefits-tab-mem").removeClass('maintab-active');
-                    $(".item-right").animate({
-                            right: '100%',
-                        }, 900,
-                        function() {
-                            $(".item-right").css('display', 'none');
-                            $(".item-left").css('left', '100%');
-                            $(".item-left").css('display', 'flex');
-                            $(".item-left").animate({
-                                left: '0%',
-                            }, 900);
-                        });
-                    return 5;
-                },
-            });
-
-        });
-    </script>
 </head>
 
 <body>
@@ -989,17 +849,14 @@
                                 <div class="item-text-left  benefits-tab-abo" style="max-width: 351px; margin: 0 auto; text-align: left;  font-weight: normal;margin-top: 16px; font-size:15px;">
                                     <ul>
                                         <li style="display: list-item;">ซื้อสินค้าในราคานักธุรกิจแอมเวย์</li>
-                                        <li style="display: list-item;">รับคะแนนสะสมแอมพลัส ที่ไม่มีหมดอายุตราบเท่าที่ท่านยังคงสถานภาพการเป็นสมาชิกแอมเวย์ </li>
-
-                                        <ul style="margin-left: 25px; font-size: 15px;">
-                                            <li style="display: list-item;list-style: circle !important;">ทุก 15 บาทของยอดซื้อสินค้าแอมเวย์ รับคะแนนสะสมแอมพลัส 1 คะแนน</li>
-                                            <li style="display: list-item;list-style:  circle !important;">ทุก 12.5 คะแนน มีมูลค่า 1 บาทใช้แทนเงินสดสำหรับซื้อสินค้าแอมเวย์</li>
-                                        </ul>
-
-                                        <li style="display: list-item;">รับฟรีคะแนนแอมพลัส 100 คะแนนทันที เมื่อสมัครสมาชิกแอมเวย์หรือต่ออายุสมาชิก</li style="display: list-item;">
-                                        <li style="display: list-item;">รับวารสารแอมนิวส์(รายเดือน) ตามเงื่อนไขที่บริษัทกำหนด</li>
-                                        <li style="display: list-item;">รับบริการตรวจวิเคราะห์สุขภาพและความงามพร้อมรับคำปรึกษาสำหรับสมาชิกใหม่ฟรี</li>
-                                        <li style="display: list-item;">รับสิทธิประโยชน์พิเศษเฉพาะสำหรับสมาชิกแอมเวย์ ตามเงื่อนไขที่บริษัทกำหนด</li style="display: list-item;">
+                                        <li style="display: list-item;">สามารถขายสินค้าและให้การสปอนเซอร์ได้</li>
+                                        <li style="display: list-item;">มีสิทธิ์ซื้อชุดผลิตภัณฑ์สำหรับนักธุรกิจแอมเวย์ใหม่ในราคาพิเศษ ภายใน 90 วัน เพิ่มเติม</li>
+                                        <li style="display: list-item;">ได้รับนิตยสารอะชีฟ (รายเดือน)</li>
+                                        <li style="display: list-item;">ได้รับส่วนลด และส่วนลดพิเศษทุกประเภท ตามแผนธุรกิจของแอมเวย์ *แผนธุรกิจแอมเวย์ จะได้รับสิทธิประโยชน์จากการบริโภคหรือขายผลิตภัณฑ์ ได้รับส่วนลด (ทั้งส่วนลดพิเศษรายเดือนและส่วนรถพิเศษรายปี) ได้รับรางวัลและเงินรางวัล</li>
+                                        <li style="display: list-item;">ได้รับความคุ้มครองประกันอุบัติเหตุ ในวงเงิน 100,000 บาท ตามเงื่อนไขที่บริษัทฯ กำหนด</li>
+                                        <li style="display: list-item;">&nbsp;สามารถเลือกรับ e-Starter Kit รับส่วนลดในการซื้อสินค้า มูลค่า 300 บาท <a href="http://www.amwaytodaythai.com/digital-tool/digital-tools/amway-estarter-kit.html">เพิ่มเติม</a>&nbsp;หรือ <a href="https://media.uat.amway.id/sys-master/images/hcd/h16/8852946714654/AW%20%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B8%A3%E0%B8%B1%E0%B8%9A%20e-Starter%20Kit2.pdf">คลิกที่นี่</a>เพื่อดาวน์โหลดแบบฟอร์มสมัคร&nbsp;e-Starter
+                                            Kit
+                                        </li>
                                     </ul>
 
                                     <div style="margin: 0 auto;text-align: -webkit-center;justify-content: center;display: flex;" class="col-xs-12 col-md-10">
@@ -1015,16 +872,20 @@
                             </div>
                             <div class="col-md-6 col-xs-12 benefits-tab">
                                 <div class="item-text-right  benefits-tab-mem" style="max-width: 351px; margin: 0 auto; text-align: left;  font-weight: normal;margin-top: 16px; font-size:15px;">
+
                                     <ul>
                                         <li style="display: list-item;">ซื้อสินค้าในราคานักธุรกิจแอมเวย์</li>
-                                        <li style="display: list-item;">สามารถขายสินค้าและให้การสปอนเซอร์ได้</li>
-                                        <li style="display: list-item;">มีสิทธิ์ซื้อชุดผลิตภัณฑ์สำหรับนักธุรกิจแอมเวย์ใหม่ในราคาพิเศษ ภายใน 90 วัน เพิ่มเติม</li>
-                                        <li style="display: list-item;">ได้รับนิตยสารอะชีฟ (รายเดือน)</li>
-                                        <li style="display: list-item;">ได้รับส่วนลด และส่วนลดพิเศษทุกประเภท ตามแผนธุรกิจของแอมเวย์ *แผนธุรกิจแอมเวย์ จะได้รับสิทธิประโยชน์จากการบริโภคหรือขายผลิตภัณฑ์ ได้รับส่วนลด (ทั้งส่วนลดพิเศษรายเดือนและส่วนรถพิเศษรายปี) ได้รับรางวัลและเงินรางวัล</li>
-                                        <li style="display: list-item;">ได้รับความคุ้มครองประกันอุบัติเหตุ ในวงเงิน 100,000 บาท ตามเงื่อนไขที่บริษัทฯ กำหนด</li>
-                                        <li style="display: list-item;">&nbsp;สามารถเลือกรับ e-Starter Kit รับส่วนลดในการซื้อสินค้า มูลค่า 300 บาท <a href="http://www.amwaytodaythai.com/digital-tool/digital-tools/amway-estarter-kit.html">เพิ่มเติม</a>&nbsp;หรือ <a href="https://media.uat.amway.id/sys-master/images/hcd/h16/8852946714654/AW%20%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B8%A3%E0%B8%B1%E0%B8%9A%20e-Starter%20Kit2.pdf">คลิกที่นี่</a>เพื่อดาวน์โหลดแบบฟอร์มสสมัคร&nbsp;e-Starter
-                                            Kit
-                                        </li>
+                                        <li style="display: list-item;">รับคะแนนสะสมแอมพลัส ที่ไม่มีหมดอายุตราบเท่าที่ท่านยังคงสถานภาพการเป็นสมาชิกแอมเวย์ </li>
+
+                                        <ul style="margin-left: 25px; font-size: 15px;">
+                                            <li style="display: list-item;list-style: circle !important;">ทุก 15 บาทของยอดซื้อสินค้าแอมเวย์ รับคะแนนสะสมแอมพลัส 1 คะแนน</li>
+                                            <li style="display: list-item;list-style:  circle !important;">ทุก 12.5 คะแนน มีมูลค่า 1 บาทใช้แทนเงินสดสำหรับซื้อสินค้าแอมเวย์</li>
+                                        </ul>
+
+                                        <li style="display: list-item;">รับฟรีคะแนนแอมพลัส 100 คะแนนทันที เมื่อสมัครสมาชิกแอมเวย์หรือต่ออายุสมาชิก</li style="display: list-item;">
+                                        <li style="display: list-item;">รับวารสารแอมนิวส์(รายเดือน) ตามเงื่อนไขที่บริษัทกำหนด</li>
+                                        <li style="display: list-item;">รับบริการตรวจวิเคราะห์สุขภาพและความงามพร้อมรับคำปรึกษาสำหรับสมาชิกใหม่ฟรี</li>
+                                        <li style="display: list-item;">รับสิทธิประโยชน์พิเศษเฉพาะสำหรับสมาชิกแอมเวย์ ตามเงื่อนไขที่บริษัทกำหนด</li style="display: list-item;">
                                     </ul>
                                     <div style="margin: 0 auto;text-align: -webkit-center;justify-content: center;display: flex; " class="col-xs-12 col-md-10">
                                         <a href="/registration/member" title="สมัครนักธุรกิจแอมเวย์" class="">
@@ -1095,6 +956,144 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).on('load', function() {
+                var window_width = $(window).width();
+                console.log('window_width ' + window_width);
+                if (window_width < 1010) {
+                    $(".btn-right").addClass('maintab-active');
+                    $(".btn-left").removeClass('maintab-active');
+                    if (window_width < 1010 && $(".btn-right").hasClass('maintab-active')) {
+                        $(window).Show_right();
+                    } else if ($(window).width() < 1010 && $(".btn-left").hasClass('maintab-active')) {
+                        $(window).Show_left();
+                    }
+                }
+
+                $(window).resize(function() {
+                    var window_width_resize = $(window).width();
+                    console.log('width_resize ' + window_width_resize);
+                    if (window_width_resize > 1010) {
+                        $(window).Show_all();
+                    } else if (window_width < 1010) {
+                        $(".btn-right").addClass('maintab-active');
+                        $(".btn-left").removeClass('maintab-active');
+                        if (window_width < 1010 && $(".btn-right").hasClass('maintab-active')) {
+                            $(window).Show_right();
+                        } else if ($(window).width() < 1010 && $(".btn-left").hasClass('maintab-active')) {
+                            $(window).Show_left();
+                        }
+                    } else if ($(window).width() < 1010 && $(".btn-left").hasClass('maintab-active')) {
+                        $(window).Show_left();
+                    } else if ($(window).width() < 1010 && $(".btn-right").hasClass('maintab-active')) {
+                        $(window).Show_right();
+                    } else if ($(window).width() > 1010) {
+                        $(window).Show_all();
+                    }
+                });
+            });
+
+            $(".btn-right").click(function() {
+                if ($(window).width() < 1010) {
+                    $(window).Btn_right_action();
+                }
+            });
+
+            $(".btn-left").click(function() {
+                if ($(window).width() < 1010) {
+                    $(window).Btn_left_action();
+                }
+            });
+            jQuery.fn.extend({
+                Show_all: function() {
+                    $(".item-left").css('display', 'flex');
+                    $(".item-right").css('display', 'flex');
+                    $(".item-left").css('left', '0');
+                    $(".item-right").css('right', 0);
+                    $(".item-left").css('opacity', 1);
+                    $(".item-right").css('opacity', 1);
+                    $(".item-text-right").css('display', 'block');
+                    $(".item-text-left").css('display', 'block');
+                    $(".item-text-left").css('opacity', '1');
+                    $(".item-text-right").css('opacity', '1');
+                    return 1;
+                },
+                Show_right: function() {
+                    $(".benefits-tab-mem").addClass('maintab-active');
+                    $(".item-left").css('display', 'none');
+                    $(".item-text-left").css('display', 'none');
+                    return 2;
+                },
+                Show_left: function() {
+                    $(".benefits-tab-abo").addClass('maintab-active');
+                    $(".item-right").css('display', 'none');
+                    $(".item-text-right").css('display', 'none');
+                    return 3;
+                },
+                Btn_right_action: function() {
+                    $('.item-text-left').animate({
+                        opacity: 0
+                    }, 500, function() {
+                        $('.item-text-left').css('display', 'none');
+                        $(".benefits-tab-mem").addClass('maintab-active');
+                        $('.item-text-right').animate({
+                            opacity: 1
+                        }, 500);
+                    });
+
+                    $('.item-text-right').css('display', 'block');
+                    $(".benefits-tab-mem").removeClass('maintab-active');
+                    $(".btn-left").removeClass('maintab-active');
+                    $(".btn-right").addClass('maintab-active');
+                    $(".benefits-tab-abo").removeClass('maintab-active');
+                    $(".item-left").animate({
+                            left: '100%',
+                        }, 900,
+                        function() {
+                            $(".item-left").css('display', 'none');
+                            $(".item-right").css('right', '100%');
+                            $(".item-right").css('display', 'flex');
+                            $(".item-right").animate({
+                                right: '0%',
+                            }, 900);
+                        });
+                    return 4;
+                },
+                Btn_left_action: function() {
+                    $('.item-text-right').css('display', 'none');
+                    $('.item-text-right').animate({
+                        opacity: 0
+
+                    }, 500, function() {
+                        $(".benefits-tab-abo").addClass('maintab-active');
+                        $('.item-text-left').animate({
+                            opacity: 1
+                        }, 500);
+                    });
+                    $('.item-text-right').css('display', 'none');
+                    $('.item-text-left').css('display', 'block');
+                    $(".benefits-tab-abo").removeClass('maintab-active');
+                    $(".btn-right").removeClass('maintab-active');
+                    $(".btn-left").addClass('maintab-active');
+                    $(".benefits-tab-mem").removeClass('maintab-active');
+                    $(".item-right").animate({
+                            right: '100%',
+                        }, 900,
+                        function() {
+                            $(".item-right").css('display', 'none');
+                            $(".item-left").css('left', '100%');
+                            $(".item-left").css('display', 'flex');
+                            $(".item-left").animate({
+                                left: '0%',
+                            }, 900);
+                        });
+                    return 5;
+                },
+            });
+
+        });
+    </script>
     <script src="./Common/js/image.js"></script>
     <script src="./Search/js/SearchModal.js"></script>
     <script src="./Header/js/UserMenu.js"></script>
