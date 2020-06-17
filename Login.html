@@ -105,9 +105,9 @@
         .link_Line-join {
             margin-top: 20px;
             background-color: #883c3b;
-            padding: 2px;
-            height: 35px;
-            max-width: 200px;
+            padding: 0px;
+            height: 30px;
+            max-width: 120px;
             width: 100%;
             border-radius: 5px;
             display: inline-block;
@@ -803,36 +803,34 @@
                                                 <input type="password" id="j_password" name="j_password" placeholder="รหัสผ่าน" class="form_lines" title="ใส่รหัสผ่าน" maxlength="30">
                                                 <p class="text_validation" id="pwInput" style="display:none;">รหัสผ่าน</p>
                                             </div>
-                                            <div class="login_btn-group">
-                                                <button type="button" class="oa-button btn btn-lg --primary --fill --regular" id="Login_Login" onclick="">
-                                                    <font style="vertical-align: inherit;">
-                                                    <font style="vertical-align: inherit;">เข้าสู่ระบบ</font></font></button>
-                                                <button type="button" class="btn_login-Line" id="Line_hide_login_btn" onclick="javascript:return false;">
-                                                        <img src="./static/images/mock/icons8-line.svg" alt="icons8-line" style="max-width: 47px;">
-                                                            <span class="txt_Line" style="
-        width: 73%;
-    ">
-                                                                
-                                                                <span class="txt_Line-tit" style="margin-bottom: 4px">
-                                                                
-                                                                    <font>  
-                                                                        <div>
-                                                                       
-                                                                         เข้าสู่ระบบด้วย LINE
-                                                                        </div>
-                                                                        
-                                                             
-                                                                    </font>
-                                                                </span>
-                                                               
-                                                                    </span>
-                                                        </button>
+                                            <div class="login_btn-group" style="display: flex;flex-wrap: wrap;justify-content: center;">
+                                                <button type="button" class="oa-button btn btn-lg --primary --fill --regular" id="Login_Login" onclick="" style="max-width: 285px;">
+                                                                                            <font style="vertical-align: inherit;">
+                                                                                            <font style="vertical-align: inherit;">เข้าสู่ระบบ</font></font></button>
+                                                <button type="button" class="btn_login-Line" id="Line_hide_login_btn" onclick="javascript:return false;" style=" max-width: 285px; text-align: center; justify-content: center; ">
+                                                    <img src="./static/images/mock/icons8-line.svg" alt="icons8-line" style="max-width: 47px;">
+                                                                                                    <span class="txt_Line" >
+                                                                                                        
+                                                                                                        <span class="txt_Line-tit" style="margin-bottom: 4px">
+                                                                                                        
+                                                                                                            <font>  
+                                                                                                                <div>
+                                                                                                               
+                                                                                                                 เข้าสู่ระบบด้วย LINE
+                                                                                                                </div>
+                                                                                                                
+                                                                                                     
+                                                                                                            </font>
+                                                                                                        </span>
+                                                                                                       
+                                                                                                            </span>
+                                                                                                </button>
                                             </div>
                                             <div class="box_login-etc" id="Line_hide_div01">
                                                 <div class="login_etc-item">
                                                     <span class="form_element-checkbox">
                                                         <input type="checkbox" id="remember" name="remember" checked="checekd">
-                                                        <label for="remember" class="sp_chk focus"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">บันทึก ID</font></font></label>
+                                                        <label for="remember" class="sp_chk focus"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">จำรหัสผ่าน</font></font></label>
                                                     </span>
                                                 </div>
                                             </div>
