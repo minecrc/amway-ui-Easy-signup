@@ -43,7 +43,7 @@
         }
         
         .link_login-item {
-            width: 33%;
+            width: 50%;
         }
         
         .link_area {
@@ -61,20 +61,12 @@
         
         .btn_login-Line {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            align-items: center;
             border-radius: 9px;
             width: 100%;
-            background-color: #80e180;
+            background-color: #00c300;
             color: #fff;
-            height: 51px;
             margin-top: 10px;
-        }
-        
-        .btn_login-Line:hover {
-            border: 1px solid #80e180;
-            background-color: #bfdfbf !important;
-            color: #000;
         }
         
         .oa-input input {
@@ -112,14 +104,20 @@
         
         .link_Line-join {
             margin-top: 20px;
-            background-color: #bfdfbf;
-            padding: 5px;
+            background-color: #883c3b;
+            padding: 2px;
             height: 35px;
             max-width: 200px;
             width: 100%;
             border-radius: 5px;
             display: inline-block;
             vertical-align: middle;
+            color: #fff;
+            font-size: initial;
+        }
+        
+        .link_Line-join:hover {
+            color: #fff;
         }
     </style>
 </head>
@@ -810,24 +808,25 @@
                                                     <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">เข้าสู่ระบบ</font></font></button>
                                                 <button type="button" class="btn_login-Line" id="Line_hide_login_btn" onclick="javascript:return false;">
-                                                
-                                                    <span class="txt_Line">
-                                                        <span class="txt_Line-tit" style="margin-bottom: 4px">
-                                                        
-                                                            <font style="vertical-align: inherit;font-size: smaller;">  
-                                                                <div>
-                                                                 <img src="./static/images/mock/icons8-line.svg" alt="icons8-line" style="max-width: 28px;">
-                                                                 เข้าสู่ระบบ Line
-                                                                </div>
-                                                                <div>
-                                                                 เข้าสู่ระบบแบบง่าย / ยืนยันการซื้อที่ไม่ใช่สมาชิก
-                                                                </div>
-                                                     
-                                                            </font>
-                                                        </span>
-                                                       
-                                                            </span>
-                                                </button>
+                                                        <img src="./static/images/mock/icons8-line.svg" alt="icons8-line" style="max-width: 47px;">
+                                                            <span class="txt_Line" style="
+        width: 73%;
+    ">
+                                                                
+                                                                <span class="txt_Line-tit" style="margin-bottom: 4px">
+                                                                
+                                                                    <font>  
+                                                                        <div>
+                                                                       
+                                                                         เข้าสู่ระบบด้วย LINE
+                                                                        </div>
+                                                                        
+                                                             
+                                                                    </font>
+                                                                </span>
+                                                               
+                                                                    </span>
+                                                        </button>
                                             </div>
                                             <div class="box_login-etc" id="Line_hide_div01">
                                                 <div class="login_etc-item">
@@ -847,17 +846,22 @@
                                     <div class="box_login-link">
                                         <a href="javascript:void(0);" class="link_login-item" onclick="findId()">
                                             <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">หารหัสสมาชิก</font>
+                                                <font style="vertical-align: inherit;">ลืมหมายเลขสมาชิก/นักธุรกิจ</font>
+                                            </font>
                                             </font>
                                         </a>
                                         <a href="javascript:void(0);" class="link_login-item" onclick="findPw()">
                                             <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">ลืมรหัสผ่านหรือไม่</font>
+                                                <font style="vertical-align: inherit;">ลืมรหัสผ่าน</font>
                                             </font>
                                         </a>
-                                        <a href="javascript:void(0);" class="link_login-item" onclick="register()"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ลงทะเบียน</font></font></strong></a>
-                                        <div class="link_area">
-                                            <a href="javascript:void(0);" class="link_Line-join" id="RegisterBtn"><i class="icon_Line"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><img src="./static/images/mock/icons8-line.svg" alt="icons8-line" style="max-width: 28px;margin-top: -1px;margin-left: 6px;margin-right: 10px;">ลงทะเบียน</font></font></a>
+                                        <div class="link_area" style="display: flex;justify-content: center;">
+                                            <a href="javascript:void(0);" class="link_Line-join" id="RegisterBtn">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">
+                                                        สมัครสมาชิก</font>
+                                                </font>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
