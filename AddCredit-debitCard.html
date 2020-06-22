@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" href="./styles/common.7d20030e3dcee5e61c0b.css" />
     <link rel="stylesheet" href="./styles/FullPaymentABO___PaymentMethod.d404dbfb84466023e943.css" />
+    <style>
+        .oa-navigation-bar__cart-text {
+            display: block !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -621,19 +626,24 @@
                                 <input type="radio" id="card" name="payment-method" value="card" class="mz-checkable-input__input --radio" data-toggle="collapse" data-target="#card-content:not(.in), .mz-checkable-input__content[data-name='payment-method']:not(#card-content).in" readonly="">
                                 <div class="mz-checkable-input__container">
                                     <section class="mz-saved-credit-debit__add-card-section">
-                                        <header>
-                                            <strong>ข้อมูลบัตรเครดิต / บัตรเดบิตใหม่</strong>
-                                            <button id="add-card-section" role="tab" type="button" class="mz-saved-credit-debit__add-card-button" data-toggle="collapse" data-target="#add-card-content" aria-controls="add-card-content" aria-expanded="true">
-                              <span class="mz-saved-credit-debit__add">
-                                + เพิ่ม
-                              </span>
-                             
-                            </button>
-                                        </header>
+
+
+                                        <div class="row" style="display: flex;flex-wrap: wrap;justify-content: center;width: 100%;margin: 0 auto;">
+                                            <div class="col-xs-6 col-md-6" style="padding: 0; margin: 0;"> <strong>ข้อมูลบัตรเครดิต / บัตรเดบิตใหม่</strong> </div>
+                                            <div class="card-logo--desktop col-xs-6 col-md-6 text-right" style="padding: 0; margin-right: 0;">
+                                                <img src="https://img.icons8.com/color/36/000000/visa.png">
+                                                <img src="https://img.icons8.com/color/36/000000/mastercard.png">
+
+                                            </div>
+                                        </div>
+
+
                                         <div id="add-card-content" class="mz-saved-credit-debit__add-card-content collapse in" role="tabpanel" aria-labelledby="add-card-section" aria-expanded="true" style="">
                                             <div class="mz-new-credit-debit">
+
                                                 <div class="mz-input mz-new-credit-debit__number">
-                                                    <input type="tel" name="card-number" placeholder="หมายเลขบัตรเครดิต/บัตรเดบิต" inputmode="numeric" autocomplete="cc-number" class="mz-input__input" maxlength="28">
+                                                    <input class="mz-input__input" type="tel" name="card" placeholder="หมายเลขบัตรเครดิต/บัตรเดบิต" inputmode="numeric" autocomplete="cc-number" maxlength="28">
+
                                                 </div>
                                                 <p class="mz-error mz-new-credit-debit__error">
                                                     <small id="card-number-error"></small>
@@ -661,7 +671,7 @@
                                                                     <span class="mz-icon --question-mark cvv-popover__icon"></span>
                                                                 </div>
                                                             </div>
-                                                            <input type="password" name="card-security-code" inputmode="numeric" placeholder="CVV" autocomplete="cc-csc" maxlength="3" minlength="3" class="mz-input__input --with-right-icon">
+                                                            <input type="password" name="instalment-security-code" inputmode="numeric" placeholder="CVV" autocomplete="cc-csc" maxlength="3" minlength="3" class="mz-input__input --with-right-icon">
                                                         </div>
                                                         <p class="mz-error">
                                                             <small id="card-security-code-error"></small>
@@ -671,14 +681,16 @@
 
                                             </div>
                                         </div>
+                                        <div class="oa-row">
+                                            <button name="Submit" type="Submit" class="oa-button btn btn-lg --primary --narrow --regular --inline" style="border-radius: 30px;">
+                                                    <span>เพิ่มบัตร</span>
+                                                </button>
+                                        </div>
+
                                     </section>
 
                                 </div>
-                                <div class="oa-row">
-                                    <button type="submit" class="oa-button btn btn-lg --primary --narrow --regular --inline" style="border-radius: 30px;">
-                          <span>เพิ่มบัตร</span>
-                        </button>
-                                </div>
+
                             </div>
 
 
@@ -719,6 +731,7 @@
     <script src="./lib/js/jquery.validate.min.js"></script>
     <script src="./v2/Common/js/formValidationDefaults.js"></script>
     <script src="./v2/Common/js/cardValidationDefaults.js"></script>
+    <script src="./v2/Payment/js/SavedCreditDebit.js"></script>
     <script src="./v2/Payment/js/PaymentMethod.js"></script>
 </body>
 
