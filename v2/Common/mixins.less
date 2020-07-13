@@ -83,85 +83,10 @@
   -webkit-box-orient: vertical;
 }
 
-.mz-dropdown-menu {
-  position: fixed;
-  top: auto;
-  left: auto;
-  margin-top: 0;
-  padding: 0;
-  overflow-y: auto;
-  border: none;
-  border-radius: 0;
-  background: @colors[white];
-  box-shadow: @shadows[xs];
-}
-
-.mz-dropdown-option(@side-padding) {
-  position: relative;
-  box-sizing: border-box;
-  padding: @spacing[s] @side-padding;
-  overflow: visible;
-  transition: background 0.2s;
-  cursor: pointer;
-
-  .mz-font-style(body);
-
-  &:not(:first-child),
-  & + *:last-child {
-    position: relative;
-    margin-top: 1px;
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: -1px;
-      right: @side-padding;
-      left: @side-padding;
-      height: 1px;
-      transition: background 0.2s;
-      background: @colors[grey-200];
-    }
-  }
-
-  &:hover,
-  &.--active {
-    background: @colors[grey-100];
-  }
-
-  &:hover,
-  &.--active,
-  &:hover + &,
-  &.--active + &,
-  &:hover + *:last-child,
-  &.--active + *:last-child {
-    &:after {
-      background: transparent;
-    }
-  }
-}
-
-.mz-dropdown-icon() {
-  font-size: @icon-sizes[xs];
-}
-
-.mz-modal-close-button() {
-  margin-bottom: @spacing[s];
-  margin-left: auto;
-  padding: @spacing[xs];
-  font-size: @icon-sizes[m];
-  line-height: 1;
-
-  @media screen and (min-width: @breakpoints[md]) {
-    position: absolute;
-    top: @spacing[m];
-    right: @spacing[m];
-  }
-}
-
 .mz-input-like() {
   width: 100%;
   height: @input-height;
-  padding: 2px @side-padding;
+  padding: 2px @spacing[s];
   transition: none;
   border: 1px solid @colors[grey-300];
   border-radius: 0;
@@ -173,10 +98,12 @@
   .mz-font-style(body);
 
   &.--with-left-icon {
+    // icon padding + icon width
     padding-left: @spacing[xl];
   }
 
   &.--with-right-icon {
+    // icon padding + icon width
     padding-right: @spacing[xl];
   }
 
@@ -217,16 +144,126 @@
   // For blur area
   width: @spacing[xl];
   height: 100%;
+  font-size: @icon-sizes[s];
   line-height: @input-height;
 
   &.--left {
     left: 0;
+    padding-right: @spacing[xs];
     padding-left: @spacing[s];
   }
 
   &.--right {
     right: 0;
-    justify-content: flex-end;
     padding-right: @spacing[s];
+    padding-left: @spacing[xs];
+  }
+}
+
+.mz-dropdown-button {
+  .mz-input-like();
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.DEPRECATEDmz-dropdown-menu {
+  position: fixed;
+  top: auto;
+  left: auto;
+  margin-top: 0;
+  padding: 0;
+  overflow-y: auto;
+  border: none;
+  border-radius: 0;
+  background: @colors[white];
+  box-shadow: @shadows[xs];
+}
+
+.DEPRECATEDmz-dropdown-option(@side-padding: @spacing[s]) {
+  position: relative;
+  box-sizing: border-box;
+  padding: @spacing[xs] + @spacing[xxs] @side-padding;
+  overflow: visible;
+  transition: background 0.2s;
+  cursor: pointer;
+
+  .mz-font-style(body);
+
+  &:after {
+    position: absolute;
+    top: -1px;
+    right: @side-padding;
+    left: @side-padding;
+    height: 1px;
+    transition: background 0.2s;
+    background: @colors[grey-200];
+  }
+
+  & + &,
+  & + *:last-child {
+    position: relative;
+    margin-top: 1px;
+
+    &:after {
+      content: '';
+    }
+  }
+
+  &:hover,
+  &.--active {
+    background: @colors[grey-100];
+  }
+
+  &:hover,
+  &.--active,
+  &:hover + &,
+  &.--active + &,
+  &:hover + *:last-child,
+  &.--active + *:last-child {
+    &:after {
+      background: transparent;
+    }
+  }
+}
+
+.mz-dropdown-icon() {
+  font-size: @icon-sizes[xs];
+}
+
+.mz-modal-close-button() {
+  margin-bottom: @spacing[s];
+  margin-left: auto;
+  padding: @spacing[xs];
+  font-size: @icon-sizes[m];
+  line-height: 1;
+
+  @media screen and (min-width: @breakpoints[md]) {
+    position: absolute;
+    top: @spacing[m];
+    right: @spacing[m];
+  }
+}
+
+.mz-summary-row() {
+  white-space: nowrap;
+
+  & + &:not(:first-child) {
+    margin-top: 0;
+  }
+
+  &.--points {
+    .mz-font-style(small);
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    & + &:not(:first-child) {
+      margin-top: @spacing[xxs];
+    }
+
+    &.--points {
+      .mz-font-style(body);
+    }
   }
 }

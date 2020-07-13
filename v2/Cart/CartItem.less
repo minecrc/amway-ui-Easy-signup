@@ -107,7 +107,6 @@
     margin-top: @spacing[xxs];
 
     @media screen and (min-width: @breakpoints[md]) {
-      margin-top: 0;
       padding-bottom: @spacing[xs];
     }
   }
@@ -120,18 +119,10 @@
     }
   }
 
-  &__dropdown ~ &__label {
-    margin-top: 0;
-  }
-
   & &__dropdown {
     min-width: 200px;
     max-width: 300px;
     margin-top: @spacing[xs];
-
-    &:not(:last-child) {
-      margin-bottom: @spacing[xs];
-    }
   }
 
   &__quantity {

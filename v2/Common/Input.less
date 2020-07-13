@@ -2,33 +2,27 @@
 @import '../Common/mixins.less';
 
 .mz-input {
-  @side-padding: @spacing[s];
-
-  display: flex;
   position: relative;
-  flex-direction: column;
-  align-content: flex-end;
   width: 100%;
 
   input,
   textarea {
     .mz-input-like();
+
+    &:read-only {
+      color: @colors[grey-400];
+    }
   }
 
   textarea {
     height: @textarea-height;
-    padding: 12px @side-padding;
+    padding-top: @spacing[xs] + @spacing[xxs];
+    padding-bottom: @spacing[xs] + @spacing[xxs];
     resize: none;
   }
 
   &__icon {
     .mz-input-like-icon();
-  }
-
-  &__label {
-    display: flex;
-    margin: 0 0 4px;
-    color: @colors[grey-300];
   }
 
   &__clear-button {
@@ -49,5 +43,10 @@
     &:not(.--active) {
       display: none;
     }
+  }
+
+  input.--with-right-icon ~ &__clear-button {
+    // icon width
+    margin-right: @spacing[xl];
   }
 }

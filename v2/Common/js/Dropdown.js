@@ -87,7 +87,5 @@
   dropdowns.each(initDropdown);
 
   // Expose `initDropdown` to $ for reuses
-  $.initDropdown = initDropdown;
-  $.calculateMenuPosition = calculateMenuPosition;
   $.placeDropdownMenu = placeDropdownMenu;
 })();

@@ -1,0 +1,43 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-copy-tooltip {
+  position: absolute;
+  top: -@spacing[xxs];
+  right: 0;
+  padding: @spacing[xs];
+  transform: translate(0, -100%);
+  border-radius: @border-radiuses[s];
+  opacity: 0;
+  background: @colors[purple-300];
+  box-shadow: @shadows[s];
+  color: @colors[white];
+  white-space: nowrap;
+  pointer-events: none;
+
+  .mz-font-style(small);
+
+  &.--active {
+    animation: tooltip-in 1 1s;
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    right: 50%;
+    transform: translate(50%, -100%);
+  }
+}
+
+@keyframes tooltip-in {
+  from {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

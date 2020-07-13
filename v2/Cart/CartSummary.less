@@ -12,16 +12,8 @@
     flex: none;
   }
 
-  &__row.--desktop {
-    display: none;
-  }
-
-  &__row.--mobile {
-    .mz-font-style(small);
-
-    &.--red {
-      color: @colors[red-200];
-    }
+  &__row {
+    .mz-summary-row();
   }
 
   &__total {
@@ -42,14 +34,6 @@
     display: block;
     padding: @spacing[m];
     border-radius: @border-radiuses[s];
-
-    &__row.--desktop {
-      display: flex;
-    }
-
-    &__row.--mobile {
-      display: none;
-    }
 
     &__total {
       .mz-font-style(heading-4, bold);

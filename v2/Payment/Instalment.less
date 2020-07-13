@@ -8,19 +8,52 @@
     align-items: center;
 
     > * {
+      width: 32px;
       height: 22px;
       margin-left: @spacing[xs] + @spacing[xxs];
     }
   }
 
-  &__summary {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: @spacing[m];
+  &__cvv-input {
+    max-width: 115px;
+    margin-top: @spacing[xs];
 
-    > * {
-      margin-right: @spacing[xxs];
+    @media screen and (min-width: @breakpoints[md]) {
+      max-width: 160px;
     }
+  }
+
+  &__program-section {
+    margin-top: @spacing[m];
+  }
+
+  &__program-dropdown {
+    margin-top: @spacing[xs];
+  }
+
+  &__program-input {
+    .mz-hidden-input();
+  }
+
+  &__program-summary-section {
+    &:first-child {
+      margin-bottom: @spacing[s];
+    }
+
+    &:not(:first-child) {
+      &:before {
+        content: '';
+        display: block;
+        height: @spacing[xs];
+      }
+    }
+  }
+
+  &__program-summary {
+    padding: @spacing[xxs] @spacing[s];
+    border-radius: @border-radiuses[s];
+    background: @colors[orange-100];
+    color: @colors[orange-300];
   }
 
   &__submit-button {
@@ -28,6 +61,10 @@
   }
 
   @media screen and (min-width: @breakpoints[xl]) {
+    &__program-section {
+      margin-top: @spacing[l];
+    }
+
     &__submit-button {
       display: block;
       max-width: 220px;

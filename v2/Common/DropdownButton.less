@@ -1,0 +1,21 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-dropdown-button {
+  .mz-dropdown-button();
+
+  &__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__icon {
+    margin-left: @spacing[xs];
+    .mz-dropdown-icon();
+  }
+
+  &[aria-expanded='true'] &__icon {
+    transform: scaleY(-1);
+  }
+}

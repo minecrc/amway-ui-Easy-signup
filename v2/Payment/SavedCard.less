@@ -1,0 +1,34 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-saved-card {
+  &__dropdown {
+    margin-top: @spacing[xs];
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+  }
+
+  &__card-issuer {
+    width: 32px;
+    height: 22px;
+    margin-right: @spacing[s];
+  }
+
+  &__card-number {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  &__card-holder {
+    margin-top: @spacing[xxs];
+  }
+}

@@ -6,7 +6,7 @@
   align-items: center;
 
   &__button {
-    flex: 1;
+    flex: 98px;
   }
 
   &__error {
@@ -21,6 +21,22 @@
   &.--mobile ~ &__error {
     @media screen and (min-width: @breakpoints[xl]) {
       display: none;
+    }
+  }
+
+  &.--desktop {
+    display: none;
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      display: flex;
+    }
+  }
+
+  &.--desktop ~ &__error.--active {
+    display: none;
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      display: block;
     }
   }
 }

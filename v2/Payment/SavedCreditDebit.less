@@ -34,7 +34,6 @@
     display: flex;
     align-items: center;
     width: 100%;
-    margin: 0;
     padding: @spacing[xxs] + @spacing[xs] @spacing[s];
     cursor: pointer;
 
@@ -98,21 +97,5 @@
 
   &__add-card-content {
     margin-top: @spacing[xs];
-  }
-
-  &__instalment-section {
-    &:before {
-      content: '';
-      display: block;
-      height: @spacing[xs];
-    }
-  }
-
-  &__instalment-cvv-input {
-    max-width: 115px;
-
-    @media screen and (min-width: @breakpoints[md]) {
-      max-width: 160px;
-    }
   }
 }

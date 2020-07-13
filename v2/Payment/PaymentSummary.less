@@ -17,13 +17,8 @@
     }
   }
 
-  &__info {
-    @media screen and (min-width: @breakpoints[xl]) {
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: space-between;
-      height: 60px;
-    }
+  &__row {
+    .mz-summary-row();
   }
 
   &__title {
@@ -32,35 +27,9 @@
 
   &__amount {
     .mz-font-style(heading-5, bold);
+
     @media screen and (min-width: @breakpoints[xl]) {
       .mz-font-style(heading-4, bold);
-    }
-  }
-
-  &__amount,
-  &__points {
-    @media screen and (min-width: @breakpoints[xl]) {
-      text-align: right;
-    }
-  }
-
-  &__pvbv {
-    white-space: nowrap;
-  }
-
-  .--desktop {
-    display: none;
-
-    @media screen and (min-width: @breakpoints[xl]) {
-      display: block;
-    }
-  }
-
-  .--mobile {
-    display: block;
-
-    @media screen and (min-width: @breakpoints[xl]) {
-      display: none;
     }
   }
 

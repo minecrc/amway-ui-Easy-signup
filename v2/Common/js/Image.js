@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-this-alias, no-param-reassign */
+/* global $ */
 (() => {
   function loadImage(image) {
     const src = image.getAttribute('data-src');
@@ -80,8 +81,10 @@
   }
 
   const images = document.querySelectorAll(
-    'div.mz-image, img.mz-image, .mz-image > *'
+    'section.mz-image, div.mz-image, img.mz-image, .mz-image > *'
   );
 
   lazyload(images);
+
+  $.loadImage = loadImage;
 })();

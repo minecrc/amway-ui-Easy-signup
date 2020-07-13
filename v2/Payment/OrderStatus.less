@@ -54,13 +54,20 @@
     margin-right: @spacing[xs];
   }
 
-  &__order-item:last-child:after {
-    @media screen and (min-width: @breakpoints[xl]) {
-      content: none;
-    }
+  &__credit-info {
+    display: flex;
+    margin-top: @spacing[xs];
   }
 
-  &__reorder {
+  &__credit-info-image {
+    width: 22px;
+  }
+
+  &__credit-info-dots {
+    margin: 0 @spacing[s] 0 @spacing[xs];
+  }
+
+  &__action {
     position: relative;
     padding: @spacing[m] @spacing[s] @spacing[xl];
     border-top: solid 4px @colors[grey-200];
@@ -74,7 +81,7 @@
     }
   }
 
-  &__reorder-button {
+  &__action-button {
     @media screen and (min-width: @breakpoints[xl]) {
       max-width: 220px;
       margin: 0 auto;

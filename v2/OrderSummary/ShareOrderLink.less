@@ -1,0 +1,78 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-share-order-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: @spacing[xl] 0 @spacing[xxxl];
+
+  .mz-container();
+
+  &__image {
+    height: 156px;
+  }
+
+  &__title {
+    margin-top: @spacing[xl];
+  }
+
+  &__input-group {
+    display: flex;
+    width: 100%;
+    max-width: 420px;
+    margin-top: @spacing[m];
+  }
+
+  &__button-group {
+    position: relative;
+    flex: 0 0 92px;
+  }
+
+  &__share-options {
+    display: flex;
+    align-items: center;
+    margin-top: @spacing[s];
+  }
+
+  &__share-button {
+    width: 40px;
+    height: 40px;
+    margin-left: @spacing[m];
+  }
+
+  &__back-to-summary-button {
+    max-width: 280px;
+    margin-top: @spacing[xxl] + @spacing[xs];
+  }
+
+  &__back-to-main-link {
+    margin-top: @spacing[s];
+  }
+
+  @media screen and (min-width: @breakpoints[md]) {
+    padding: @spacing[xxxl] 0 @spacing[xxxxl];
+
+    &__image {
+      height: 200px;
+    }
+
+    &__title {
+      margin-top: @spacing[xxl];
+      .mz-font-style(heading-3, bold);
+    }
+
+    &__button-group {
+      position: relative;
+      flex: 0 0 118px;
+    }
+
+    &__back-to-summary-button {
+      margin-top: @spacing[xl];
+    }
+
+    &__back-to-main-link {
+      margin-top: @spacing[m];
+    }
+  }
+}

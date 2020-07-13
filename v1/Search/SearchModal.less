@@ -11,7 +11,7 @@
   left: 0;
   padding-bottom: @spacing[m];
   overflow-y: auto;
-  transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, -100%, 0);
   transition: transform 0.2s;
   background: @colors[white];
   box-shadow: @shadows[xl-soft];
@@ -112,7 +112,7 @@
   }
 
   @media screen and (min-width: @breakpoints[xl]) {
-    top: @topmost-bar-height + @navigation-bar-desktop-height;
+    top: @topmost-bar-desktop-height + @navigation-bar-desktop-height;
     right: auto;
     bottom: auto;
     left: 50%;

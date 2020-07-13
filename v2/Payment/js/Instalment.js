@@ -2,60 +2,36 @@
 (() => {
   const form = $('form#instalment-payment');
 
-  function isDropdownModalInput($input) {
-    return (
-      $input.attr('type') === 'radio' &&
-      $input.parents('.mz-dropdown-modal__option').length
-    );
-  }
-
   form.validate({
     rules: {
       card: {
         required: true
       },
-      'instalment-security-code': {
+      'card-security-code': {
         required: true,
         minlength: 3,
         'card-security-code': true
+      },
+      program: {
+        required: 'input[name="card"]:checked'
       }
     },
     messages: {
       card: {
         required: 'กรุณาเลือกบัตรเครดิต/บัตรเดบิต'
       },
-      'instalment-security-code': {
+      'card-security-code': {
         required: 'กรุณากรอก CVV',
         minlength: 'กรุณากรอก CVV ให้ครบถ้วน'
-      }
-    },
-    highlight: (element, errorClass) => {
-      const $element = $(element);
-
-      if (isDropdownModalInput($element)) {
-        const dropdownModalButton = $element
-          .parents('.mz-dropdown-modal__menu')
-          .prevAll('.mz-dropdown-modal__button');
-
-        dropdownModalButton.addClass(errorClass);
-      } else {
-        $element.addClass(errorClass);
-      }
-    },
-    unhighlight: (element, errorClass) => {
-      const $element = $(element);
-
-      if (isDropdownModalInput($element)) {
-        const dropdownModalButton = $element
-          .parents('.mz-dropdown-modal__menu')
-          .prevAll('.mz-dropdown-modal__button');
-
-        dropdownModalButton.removeClass(errorClass);
-      } else {
-        $element.removeClass(errorClass);
+      },
+      program: {
+        required: 'กรุณาเลือกโปรแกรมผ่อนชำระ'
       }
     }
   });
+
+  const instalmentProgram = $('#instalment-program');
+  const programSummary = $('.mz-instalment__program-summary-section');
 
   function resetPartialForm(elements) {
     const validator = form.validate();
@@ -67,19 +43,18 @@
     validator.resetElements(elements);
   }
 
-  // Force re-validation on radio buttons
   $('input[name="card"]').on('change', () => {
+    $('input[name="card-security-code"]').val('');
+    instalmentProgram.attr('disabled', false);
+    instalmentProgram.trigger('reset');
+
     resetPartialForm($('input[name="card"]'));
-    resetPartialForm($('input[name="instalment-security-code"]'));
+    resetPartialForm($('input[name="card-security-code"]'));
+    resetPartialForm($('input[name="program"]'));
+    programSummary.collapse('hide');
   });
 
-  $('.mz-saved-credit-debit__instalment-section').on(
-    'hidden.bs.collapse',
-    e => {
-      const content = $(e.target);
-      const inputs = $(`#${content.attr('id')} input`);
-
-      resetPartialForm(inputs);
-    }
-  );
+  $('input[name="program"]').on('change', () => {
+    programSummary.collapse('show');
+  });
 })();

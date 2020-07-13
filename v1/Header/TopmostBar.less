@@ -3,6 +3,7 @@
 
 .oa-topmost-bar {
   position: relative;
+  height: @topmost-bar-mobile-height;
   transition: transform 0.2s linear;
   background: @colors[grey-100];
   box-shadow: @shadows[s];
@@ -43,7 +44,7 @@
 
   @media screen and (min-width: @breakpoints[xl]) {
     position: static;
-    height: @topmost-bar-height;
+    height: @topmost-bar-desktop-height;
     transition: none;
     background: @colors[amway-600];
     box-shadow: none;
@@ -55,7 +56,6 @@
     &__delivery-methods {
       flex: 1 1 auto;
       min-width: 0;
-      margin-left: @spacing[xxxxl];
       color: @colors[white];
     }
 
@@ -63,6 +63,10 @@
     & &__language-switcher {
       display: flex;
       flex: none;
+    }
+
+    &__language-switcher {
+      width: @logo-desktop-width + @logo-desktop-margin-right;
     }
   }
 }

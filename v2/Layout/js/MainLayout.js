@@ -13,6 +13,7 @@
   const content = $('.mz-main-layout__content');
 
   function reserveTopArea() {
+    header.removeClass('--initial');
     content.css('padding-top', navContainer.height());
   }
 
@@ -28,9 +29,10 @@
       topmostBar.removeClass('--scrolled');
       notisContainer.css('transform', 'none');
     } else {
-      const menuBarOffset = window.isDesktop()
-        ? menuBar.offset().top - header.offset().top
-        : navigationBar.position().top;
+      const menuBarOffset =
+        menuBar.length && window.isDesktop()
+          ? menuBar.offset().top - header.offset().top
+          : navigationBar.position().top;
 
       header.css('transform', `translate3d(0, -${menuBarOffset}px, 0)`);
       if (!window.isDesktop()) {

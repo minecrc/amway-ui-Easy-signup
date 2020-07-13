@@ -33,7 +33,7 @@
         if (checked) {
           $.createDiscountRow(couponId, value, setChecked);
         } else {
-          $(`#${couponId}-discount-row`).remove();
+          $(`#${couponId}-discount-row`).trigger('discount:remove');
         }
       });
     }

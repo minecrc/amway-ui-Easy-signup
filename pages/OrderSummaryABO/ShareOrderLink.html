@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ShareOrderLink</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/common.251e0dcdff5dc232292e.css" />
+    <link
+      rel="stylesheet"
+      href="/styles/OrderSummaryABO___ShareOrderLink.0b4bbe6ee8eab2eb31ec.css"
+    />
+  </head>
+  <body>
+    <div id="root">
+      <header class="mz-main-layout__header --initial">
+        <div class="mz-main-layout__nav-container">
+          <nav
+            class="oa-navigation-bar mz-main-layout__navigation-bar"
+            aria-label="primary"
+            data-dropdown-top-restrict="true"
+          >
+            <div class="oa-navigation-bar__container">
+              <section class="oa-navigation-bar__section --left">
+                <div class="oa-navigation-bar__logo">
+                  <img
+                    class="oa-image"
+                    data-src="/static/images/amway-logo-white.svg"
+                    alt="amway-logo-white"
+                  />
+                </div>
+              </section>
+              <section class="oa-navigation-bar__section --right">
+                <button type="button" class="oa-navigation-bar__cart">
+                  <span class="oa-navigation-bar__icon">
+                    <span class="oa-icon --cart"></span>
+                  </span>
+                  <span class="oa-navigation-bar__cart-text">ตะกร้าสินค้า</span>
+                </button>
+              </section>
+            </div>
+          </nav>
+        </div>
+        <div class="mz-main-layout__messages-container"></div>
+      </header>
+      <div id="main-dim-layer" class="mz-dim-layer"></div>
+      <nav
+        id="oa-product-menu"
+        class="oa-popup-menu --left oa-product-menu"
+        data-level="1"
+        aria-label="menu"
+      >
+        <div id="oa-product-menu-arrow" class="oa-menu-arrow --white"></div>
+        <header class="oa-popup-menu__header">
+          <span class="oa-icon --close oa-product-menu__close-button"></span>
+          <span class="oa-icon --back oa-product-menu__back-button"></span>
+          <h6 class="oa-product-menu__title">
+            <span data-title-level="1">Shopping</span>
+            <span data-title-level="2"></span>
+            <span data-title-level="3"></span>
+          </h6>
+        </header>
+        <div class="oa-popup-menu__container">
+          <div class="oa-product-menu__container">
+            <ul class="oa-product-menu__categories">
+              <li>
+                <a
+                  class="oa-product-menu__category --outstanding"
+                  data-id="promotions"
+                  data-title="Promotions"
+                  href="/promotions"
+                >
+                  <span class="oa-product-menu__text --desktop">
+                    Promotions
+                  </span>
+                  <span class="oa-product-menu__text --mobile">Promotions</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="brands"
+                  data-title="Shop by Brand"
+                  href="/brands"
+                >
+                  <span class="oa-product-menu__text --desktop">Brands</span>
+                  <span class="oa-product-menu__text --mobile">
+                    Shop by Brand
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="nutrition"
+                  data-title="Nutrition"
+                  href="/nutrition"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-nutrition.svg"
+                    alt="Nutrition"
+                  />
+                  <span class="oa-product-menu__text --desktop">Nutrition</span>
+                  <span class="oa-product-menu__text --mobile">Nutrition</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="beauty"
+                  data-title="Beauty"
+                  href="/beauty"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-beauty.svg"
+                    alt="Beauty"
+                  />
+                  <span class="oa-product-menu__text --desktop">Beauty</span>
+                  <span class="oa-product-menu__text --mobile">Beauty</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="personal-care"
+                  data-title="Personal Care"
+                  href="/personal-care"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-personal-care.svg"
+                    alt="Personal Care"
+                  />
+                  <span class="oa-product-menu__text --desktop">
+                    Personal Care
+                  </span>
+                  <span class="oa-product-menu__text --mobile">
+                    Personal Care
+                  </span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="home-living"
+                  data-title="Home Living"
+                  href="/home-living"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-home-living.svg"
+                    alt="Home Living"
+                  />
+                  <span class="oa-product-menu__text --desktop">
+                    Home Living
+                  </span>
+                  <span class="oa-product-menu__text --mobile">
+                    Home Living
+                  </span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="agriculture"
+                  data-title="Agriculture"
+                  href="/agriculture"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-agriculture.svg"
+                    alt="Agriculture"
+                  />
+                  <span class="oa-product-menu__text --desktop">
+                    Agriculture
+                  </span>
+                  <span class="oa-product-menu__text --mobile">
+                    Agriculture
+                  </span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="energy-drink"
+                  data-title="Energy Drink"
+                  href="/energy-drink"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-energy-drink.svg"
+                    alt="Energy Drink"
+                  />
+                  <span class="oa-product-menu__text --desktop">
+                    Energy Drink
+                  </span>
+                  <span class="oa-product-menu__text --mobile">
+                    Energy Drink
+                  </span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="others"
+                  data-title="Others"
+                  href="/others"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-others.svg"
+                    alt="Others"
+                  />
+                  <span class="oa-product-menu__text --desktop">Others</span>
+                  <span class="oa-product-menu__text --mobile">Others</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="sop"
+                  data-title="SOP"
+                  href="/sop"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-sop.svg"
+                    alt="SOP"
+                  />
+                  <span class="oa-product-menu__text --desktop">SOP</span>
+                  <span class="oa-product-menu__text --mobile">SOP</span>
+                </a>
+              </li>
+            </ul>
+            <ul
+              id="brands-detail"
+              class="oa-product-menu__category-detail --brands"
+            >
+              <li>
+                <a href="/brand/nutrilite">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-nutrilite.svg"
+                    alt="brand-nutrilite"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/artistry">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-artistry.svg"
+                    alt="brand-artistry"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/glister">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-glister.svg"
+                    alt="brand-glister"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/g-h">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-g-h.svg"
+                    alt="brand-g-h"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/satinique">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-satinique.svg"
+                    alt="brand-satinique"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/atmosphere-sky">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-atmosphere-sky.svg"
+                    alt="brand-atmosphere-sky"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/e-spring">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-e-spring.svg"
+                    alt="brand-e-spring"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/amway-home">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-amway-home.svg"
+                    alt="brand-amway-home"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/amway-queen">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-amway-queen.svg"
+                    alt="brand-amway-queen"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/bodykey">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-bodykey.svg"
+                    alt="brand-bodykey"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/nutriplant">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-nutriplant.svg"
+                    alt="brand-nutriplant"
+                  />
+                </a>
+              </li>
+            </ul>
+            <ul
+              id="beauty-detail"
+              class="oa-product-menu__category-detail --sub-categories"
+            >
+              <li>
+                <a class="oa-product-menu__see-all" href="/beauty">See all</a>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/skin-care"
+                  data-id="skin-care"
+                  data-title="Skin Care"
+                >
+                  <span class="oa-product-menu__text">Skin Care</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="skin-care-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a class="oa-product-menu__see-all" href="/skin-care">
+                      See all
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/cleansing"
+                    >
+                      Cleansing
+                    </a>
+                  </li>
+                  <li>
+                    <a class="oa-product-menu__sub-category-item" href="/serun">
+                      Serum
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/moisturizer"
+                    >
+                      Moisturizer
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/serum-moisturizer"
+                    >
+                      Serum &amp; Moisturizer
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/eye-cream"
+                    >
+                      Eye Cream
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/sun-screen"
+                    >
+                      Sun Screen
+                    </a>
+                  </li>
+                  <li>
+                    <a class="oa-product-menu__sub-category-item" href="/mask">
+                      Mask
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/for-men"
+                    >
+                      For Men
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/special-treatment"
+                    >
+                      Special Treatment
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/make-up"
+                  data-id="make-up"
+                  data-title="Make Up"
+                >
+                  <span class="oa-product-menu__text">Make Up</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="make-up-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a class="oa-product-menu__see-all" href="/make-up">
+                      See all
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/facial"
+                    >
+                      Facial
+                    </a>
+                  </li>
+                  <li>
+                    <a class="oa-product-menu__sub-category-item" href="/eyes">
+                      Eyes
+                    </a>
+                  </li>
+                  <li>
+                    <a class="oa-product-menu__sub-category-item" href="/lips">
+                      Lips
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/cheeks"
+                    >
+                      Cheeks
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/collection"
+                  data-id="collection"
+                  data-title="Collection"
+                >
+                  <span class="oa-product-menu__text">Collection</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="collection-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a class="oa-product-menu__see-all" href="/collection">
+                      See all
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/paris-set-edition"
+                    >
+                      Paris Set Edition
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/bangkok-set-edition"
+                    >
+                      Bangkok Set Edition
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/perfume"
+                  data-id="perfume"
+                  data-title="Perfume"
+                >
+                  <span class="oa-product-menu__text">Perfume</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="perfume-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a class="oa-product-menu__see-all" href="/perfume">
+                      See all
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/flora-chic"
+                    >
+                      Flora Chic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/unknown"
+                    >
+                      Unknown
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/accessories"
+                  data-id="accessories"
+                  data-title="Accessories"
+                >
+                  <span class="oa-product-menu__text">Accessories</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="accessories-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a class="oa-product-menu__see-all" href="/accessories">
+                      See all
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/make-up-tools"
+                    >
+                      Make Up Tools
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/facial-care-tools"
+                    >
+                      Facial Care Tools
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/cleansing-cloth"
+                    >
+                      Cleansing Cloth
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/facial-hygienic"
+                    >
+                      Facial Hygienic
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul
+              id="agriculture-detail"
+              class="oa-product-menu__category-detail --sub-categories"
+            >
+              <li>
+                <a class="oa-product-menu__see-all" href="/agriculture">
+                  See all
+                </a>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/mineral-supplements"
+                  data-id="mineral-supplements"
+                  data-title="Mineral Supplements"
+                >
+                  <span class="oa-product-menu__text">Mineral Supplements</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="mineral-supplements-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a
+                      class="oa-product-menu__see-all"
+                      href="/mineral-supplements"
+                    >
+                      See all
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/supplement-fertilizer"
+                  data-id="supplement-fertilizer"
+                  data-title="Supplement Fertilizer"
+                >
+                  <span class="oa-product-menu__text">
+                    Supplement Fertilizer
+                  </span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="supplement-fertilizer-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a
+                      class="oa-product-menu__see-all"
+                      href="/supplement-fertilizer"
+                    >
+                      See all
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/plant-fertilizer"
+                  data-id="plant-fertilizer"
+                  data-title="Plant Fertilizer"
+                >
+                  <span class="oa-product-menu__text">Plant Fertilizer</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="plant-fertilizer-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a
+                      class="oa-product-menu__see-all"
+                      href="/plant-fertilizer"
+                    >
+                      See all
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav
+        id="oa-user-menu"
+        class="oa-popup-menu --right oa-user-menu --inverse"
+        aria-label="menu"
+      >
+        <div id="oa-user-menu-arrow" class="oa-menu-arrow --amway-500"></div>
+        <header class="oa-popup-menu__header">
+          <div class="oa-user-menu__header">
+            <span class="oa-icon --close oa-user-menu__close-button"></span>
+          </div>
+        </header>
+        <div class="oa-popup-menu__container">
+          <div class="oa-user-menu__entry">
+            <a
+              href="/login"
+              class="oa-button btn btn-lg --primary --fill --regular"
+            >
+              <span>Login</span>
+            </a>
+            <a
+              href="/register"
+              class="oa-button btn btn-lg --secondary --fill --regular"
+            >
+              <span>Create Account</span>
+            </a>
+          </div>
+          <ul>
+            <li>
+              <a
+                class="oa-user-menu__item --outstanding"
+                href="/business-center"
+              >
+                Business Center
+              </a>
+            </li>
+            <li>
+              <a class="oa-user-menu__item" href="/awaiting-payment">
+                Awaiting Payment
+                <img
+                  class="oa-image oa-user-menu__noti"
+                  data-src="/static/images/new.svg"
+                  alt="new"
+                />
+              </a>
+            </li>
+            <li><a class="oa-user-menu__item" href="/my-sop">My SOP</a></li>
+            <li>
+              <a class="oa-user-menu__item" href="/education">Education</a>
+            </li>
+            <li>
+              <a class="oa-user-menu__item" href="/store-locator">
+                Store Locator
+              </a>
+            </li>
+            <li>
+              <a class="oa-user-menu__item" href="/about-amway">About Amway</a>
+            </li>
+            <li>
+              <a class="oa-user-menu__logout" href="/">
+                <span class="oa-icon --logout oa-user-menu__logout-icon"></span>
+                <span>Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div id="oa-search-modal" class="oa-search-modal">
+        <header class="oa-search-modal__header">
+          <div class="oa-input oa-search-input">
+            <span class="oa-icon --search oa-input__icon --left"></span>
+            <input
+              type="text"
+              placeholder="Search by Name / Product ID"
+              class="oa-input__input input-lg form-control --round --small --with-left-icon"
+            />
+          </div>
+          <button
+            id="oa-search-modal-close-button"
+            type="button"
+            class="oa-search-modal__close-button"
+          >
+            <small>Cancel</small>
+          </button>
+        </header>
+        <section class="oa-search-modal__section">
+          <header>
+            <h6 class="oa-search-modal__title">Matching Keywords</h6>
+          </header>
+          <ul class="oa-search-modal__keywords">
+            <li>
+              <a class="oa-search-modal__keyword" href="/beauty/artistry">
+                <span>Artistry</span>
+                <span>
+                  Search in
+                  <strong>Beauty</strong>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="oa-search-modal__keyword" href="/nutrition/arabica">
+                <span>Arabica</span>
+                <span>
+                  Search in
+                  <strong>Nutrition</strong>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="oa-search-modal__section">
+          <header>
+            <h6 class="oa-search-modal__title">Products</h6>
+            <a
+              href="/see-all-matching-keywords"
+              class="oa-link oa-search-modal__see-all"
+            >
+              <small>see all</small>
+              <span class="oa-icon --arrow-right"></span>
+            </a>
+          </header>
+          <ul class="oa-search-modal__products">
+            <li>
+              <a
+                class="oa-search-modal__product"
+                href="/product/artistry-exact-fit™-perfecting-loose-powder-light}"
+              >
+                <img
+                  class="oa-image oa-search-modal__product-image"
+                  data-src="/static/images/mock-search-result-artistry-powder.jpeg"
+                  alt="mock-search-result-artistry-powder"
+                />
+                <div class="oa-search-modal__product-info">
+                  <p class="oa-search-modal__product-title">
+                    Artistry Exact Fit™ Perfecting Loose Powder - Light
+                  </p>
+                  <p class="oa-search-modal__product-description"></p>
+                  <div class="oa-search-modal__product-checkout">
+                    <span class="oa-search-modal__product-price">฿964</span>
+                    <button
+                      type="button"
+                      class="oa-button btn btn-lg --secondary --auto --extra-small"
+                    >
+                      <span>Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                class="oa-search-modal__product"
+                href="/product/artistry-signature-color™-lipstick}"
+              >
+                <img
+                  class="oa-image oa-search-modal__product-image"
+                  data-src="/static/images/mock-search-result-artistry-lipstick.jpeg"
+                  alt="mock-search-result-artistry-lipstick"
+                />
+                <div class="oa-search-modal__product-info">
+                  <p class="oa-search-modal__product-title">
+                    Artistry Signature Color™ Lipstick
+                  </p>
+                  <p class="oa-search-modal__product-description">16 colors</p>
+                  <div class="oa-search-modal__product-checkout">
+                    <span class="oa-search-modal__product-price">880</span>
+                    <button
+                      type="button"
+                      class="oa-button btn btn-lg --secondary --auto --extra-small"
+                    >
+                      <span>Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                class="oa-search-modal__product"
+                href="/product/artistry-exact-fit™-perfecting-loose-powder}"
+              >
+                <img
+                  class="oa-image oa-search-modal__product-image"
+                  data-src="/static/images/mock-search-result-artistry-powder.jpeg"
+                  alt="mock-search-result-artistry-powder"
+                />
+                <div class="oa-search-modal__product-info">
+                  <p class="oa-search-modal__product-title">
+                    Artistry Exact Fit™ Perfecting Loose Powder
+                  </p>
+                  <p class="oa-search-modal__product-description"></p>
+                  <div class="oa-search-modal__product-checkout">
+                    <span class="oa-search-modal__product-price">
+                      ฿964 ~ ฿1,564
+                    </span>
+                    <button
+                      type="button"
+                      class="oa-button btn btn-lg --secondary --auto --extra-small"
+                    >
+                      <span>Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="oa-pickup-address-modal">
+        <div
+          class="mz-searchable-dropdown dropdown oa-pickup-address-modal__dropdown"
+        >
+          <button
+            type="button"
+            class="mz-searchable-dropdown__button oa-pickup-address-modal__dropdown-button --with-left-icon"
+            data-placeholder="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <div class="mz-searchable-dropdown__button-icon --left">
+              <span
+                class="mz-icon --search oa-pickup-address-modal__search-icon"
+              ></span>
+            </div>
+            <div class="mz-searchable-dropdown__button-icon --right"></div>
+            <span class="mz-searchable-dropdown__button-text">
+              เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า
+            </span>
+          </button>
+          <div class="mz-searchable-dropdown__modal">
+            <button type="button" class="mz-searchable-dropdown__close-button">
+              <span class="mz-icon --close"></span>
+            </button>
+            <div class="mz-input mz-searchable-dropdown__input">
+              <div class="mz-input__icon --left">
+                <span
+                  class="mz-icon --search oa-pickup-address-modal__search-icon"
+                ></span>
+              </div>
+              <input
+                type="text"
+                id="global-pickup-address"
+                placeholder="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า"
+                class="mz-input__input --with-left-icon"
+                value="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า"
+              />
+            </div>
+            <div
+              class="mz-searchable-dropdown__menu oa-pickup-address-modal__dropdown-menu"
+            >
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:after-sales"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:after-sales"
+                  name="global-pickup-address"
+                  value="after-sales"
+                  data-label="AFTER SALES SERVICE"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  AFTER SALES SERVICE
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-rama-ii"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-rama-ii"
+                  name="global-pickup-address"
+                  value="shop-rama-ii"
+                  data-label="แอมเวย์ ช็อป พระราม 2"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป พระราม 2
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-hq"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-hq"
+                  name="global-pickup-address"
+                  value="shop-hq"
+                  data-label="แอมเวย์ ช็อป สำนักงานใหญ่"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป สำนักงานใหญ่
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-1"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-1"
+                  name="global-pickup-address"
+                  value="shop-1"
+                  data-label="แอมเวย์ ช็อป 1"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป 1
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-2"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-2"
+                  name="global-pickup-address"
+                  value="shop-2"
+                  data-label="แอมเวย์ ช็อป 2"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป 2
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-3"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-3"
+                  name="global-pickup-address"
+                  value="shop-3"
+                  data-label="แอมเวย์ ช็อป 3"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป 3
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-4"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-4"
+                  name="global-pickup-address"
+                  value="shop-4"
+                  data-label="แอมเวย์ ช็อปสาขานี้ชื่อยาวมากเพื่อเป็นการทดสอบ implementation ที่ถูกต้อง"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อปสาขานี้ชื่อยาวมากเพื่อเป็นการทดสอบ implementation
+                  ที่ถูกต้อง
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <div class="mz-searchable-dropdown__footer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="mz-main-layout" class="mz-main-layout --main-bar-only">
+        <div class="mz-main-layout__content">
+          <div class="mz-share-order-link">
+            <img
+              class="mz-image mz-share-order-link__image"
+              data-src="/static/images/illustration-share.svg"
+              alt="illustration-share"
+            />
+            <h4 class="mz-share-order-link__title">
+              แชร์ลิงก์ให้ดาวน์ไลน์ของคุณ
+            </h4>
+            <div class="mz-share-order-link__input-group">
+              <div class="mz-input">
+                <input
+                  type="text"
+                  id="copy-input"
+                  value="https://amway.co.th/7E"
+                  readonly=""
+                  class="mz-input__input"
+                />
+              </div>
+              <div class="mz-share-order-link__button-group">
+                <button
+                  id="copy"
+                  type="button"
+                  data-copy-button="true"
+                  class="mz-button btn btn-lg --primary --large --original-blue mz-share-order-link__copy-button --square"
+                >
+                  <span>คัดลอก</span>
+                </button>
+                <div id="copy-tooltip" class="mz-copy-tooltip">คัดลอกแล้ว</div>
+              </div>
+            </div>
+            <div class="mz-share-order-link__share-options">
+              <span>แชร์ไปยัง</span>
+              <button type="button" class="mz-share-order-link__share-button">
+                <img
+                  class="mz-image"
+                  data-src="/static/images/share-messenger.svg"
+                  alt="share-messenger"
+                />
+              </button>
+              <button type="button" class="mz-share-order-link__share-button">
+                <img
+                  class="mz-image"
+                  data-src="/static/images/share-line.svg"
+                  alt="share-line"
+                />
+              </button>
+            </div>
+            <a
+              href="/"
+              class="mz-button btn btn-lg --secondary --medium --original-blue mz-share-order-link__back-to-summary-button"
+            >
+              <span>กลับไปหน้าสรุปรายการ</span>
+            </a>
+            <a class="mz-link mz-share-order-link__back-to-main-link" href="/">
+              กลับไปหน้าแรก
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/v2/Common/js/global.js"></script>
+    <script src="/v2/Common/js/Image.js"></script>
+    <script src="/v2/Common/js/Input.js"></script>
+    <script src="/lib/js/bodyScrollLock.min.js"></script>
+    <script src="/v2/Common/js/Dropdown.js"></script>
+    <script src="/v2/Common/js/SearchableDropdown.js"></script>
+    <script src="/v1/Header/js/PickupAddressModal.js"></script>
+    <script src="/v1/Common/js/image.js"></script>
+    <script src="/v1/Search/js/SearchModal.js"></script>
+    <script src="/v1/Header/js/UserMenu.js"></script>
+    <script src="/v1/Header/js/ProductMenu.js"></script>
+    <script src="/v2/Common/js/DimLayer.js"></script>
+    <script src="/v2/Layout/js/MainLayout.js"></script>
+    <script src="/v2/Common/js/copy.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CartItemAdded</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/common.251e0dcdff5dc232292e.css" />
+    <link
+      rel="stylesheet"
+      href="/styles/CartABO___CartItemAdded.2bf2c1ad9658621af4e8.css"
+    />
+  </head>
+  <body>
+    <div id="root">
+      <header class="mz-main-layout__header --initial">
+        <div class="mz-main-layout__nav-container">
+          <div class="oa-top-banner">
+            เฉพาะ 29-30 เมษา ช้อป 2,000 บาท ขึ้นไป/ใบเสร็จ รับฟรี
+            แก้วเชคทรูวิวิตี้ 1 ชิ้น
+            <a href="/details">ดูรายละเอียดเพิ่มเติม</a>
+          </div>
+          <nav
+            class="oa-topmost-bar mz-main-layout__topmost-bar"
+            aria-label="secondary"
+          >
+            <section class="oa-topmost-bar__container">
+              <div
+                class="oa-language-switcher oa-topmost-bar__language-switcher"
+                data-language-key="en"
+              ></div>
+              <div
+                class="oa-global-delivery-methods oa-topmost-bar__delivery-methods"
+              >
+                <span
+                  class="mz-icon --map-pin oa-global-delivery-methods__map-pin-icon"
+                ></span>
+                <div
+                  class="mz-toggle-button oa-global-delivery-methods__delivery-methods-toggle-button --small --original-blue-inverted"
+                >
+                  <div class="mz-toggle-button__container">
+                    <div
+                      class="mz-toggle-button__active-background oa-global-delivery-methods__delivery-methods-toggle-background"
+                      style="transform: translate3d(0%, 0, 0);"
+                    ></div>
+                    <input
+                      type="radio"
+                      class="mz-toggle-button__input"
+                      id="global-delivery"
+                      name="global-delivery-method"
+                      value="global-delivery"
+                      readonly=""
+                      checked=""
+                    />
+                    <label
+                      for="global-delivery"
+                      class="mz-toggle-button__button oa-global-delivery-methods__delivery-methods-toggle-option --active"
+                    >
+                      <span>
+                        <span
+                          class="oa-global-delivery-methods__delivery-option"
+                        >
+                          จัดส่งที่บ้าน
+                        </span>
+                      </span>
+                    </label>
+                    <input
+                      type="radio"
+                      class="mz-toggle-button__input"
+                      id="global-pickup"
+                      name="global-delivery-method"
+                      value="global-pickup"
+                      readonly=""
+                    />
+                    <label
+                      for="global-pickup"
+                      class="mz-toggle-button__button oa-global-delivery-methods__delivery-methods-toggle-option"
+                    >
+                      <span>
+                        <div class="oa-global-delivery-methods__pickup-option">
+                          <span
+                            class="oa-global-delivery-methods__pickup-placeholder"
+                          >
+                            รับที่สาขา
+                          </span>
+                          <span
+                            class="oa-global-delivery-methods__pickup-selected"
+                          >
+                            รับที่ :
+                            <span
+                              data-selected-pickup-address-label="true"
+                            ></span>
+                          </span>
+                        </div>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <ul class="oa-topmost-bar__links">
+                <li class="oa-topmost-bar__link">
+                  <a href="/ศูนย์การเรียนรู้">
+                    <small>ศูนย์การเรียนรู้</small>
+                  </a>
+                </li>
+                <li class="oa-topmost-bar__link">
+                  <a href="/เกี่ยวกับแอมเวย์">
+                    <small>เกี่ยวกับแอมเวย์</small>
+                  </a>
+                </li>
+                <li class="oa-topmost-bar__link">
+                  <a href="/แอมเวย์ช็อป"><small>แอมเวย์ช็อป</small></a>
+                </li>
+                <li class="oa-topmost-bar__link --outstanding">
+                  <a href="/บิซซิเนส-เซ็นเตอร์">
+                    <small>บิซซิเนส เซ็นเตอร์</small>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </nav>
+          <nav
+            class="oa-navigation-bar mz-main-layout__navigation-bar"
+            aria-label="primary"
+            data-dropdown-top-restrict="true"
+          >
+            <div class="oa-navigation-bar__container">
+              <section class="oa-navigation-bar__section --left">
+                <button
+                  id="oa-hamburger"
+                  class="oa-navigation-bar__hamburger"
+                  type="button"
+                >
+                  <span class="oa-icon --hamburger"></span>
+                </button>
+                <a class="oa-navigation-bar__logo" href="/">
+                  <img
+                    class="oa-image"
+                    data-src="/static/images/amway-logo-white.svg"
+                    alt="amway-logo-white"
+                  />
+                </a>
+                <div class="oa-navigation-bar__search-input">
+                  <div class="oa-input oa-search-input">
+                    <span class="oa-icon --search oa-input__icon --left"></span>
+                    <input
+                      type="text"
+                      placeholder="Search by Name / Product ID"
+                      class="oa-input__input input-lg form-control --round --inverse --small --with-left-icon"
+                    />
+                  </div>
+                </div>
+              </section>
+              <section class="oa-navigation-bar__section --right">
+                <button
+                  id="oa-search-button"
+                  type="button"
+                  class="oa-navigation-bar__search-button"
+                >
+                  <span class="oa-icon --search oa-navigation-bar__icon"></span>
+                </button>
+                <span class="oa-navigation-bar__icon --heart">
+                  <span class="oa-icon --heart"></span>
+                </span>
+                <span class="oa-navigation-bar__icon">
+                  <span class="oa-icon --cart"></span>
+                </span>
+                <div
+                  id="oa-user"
+                  class="oa-navigation-bar__user"
+                  data-logged-in="true"
+                >
+                  <span
+                    class="oa-icon --user oa-navigation-bar__user-icon"
+                  ></span>
+                  <div class="oa-navigation-bar__user-info">
+                    <div class="oa-navigation-bar__user-name">
+                      <small>Mr. Amorn Apichartikul</small>
+                    </div>
+                    <div class="oa-id-badge">2711647</div>
+                    <span
+                      class="oa-icon --arrow-down oa-navigation-bar__user-arrow"
+                    ></span>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </nav>
+          <nav id="oa-menu-bar" class="oa-menu-bar" aria-label="menu">
+            <ul class="oa-menu-bar__container">
+              <li class="oa-menu-bar__item --outstanding" data-id="promotions">
+                <span class="oa-menu-bar__text">Promotions</span>
+              </li>
+              <li class="oa-menu-bar__item" data-id="brands">
+                <span class="oa-menu-bar__text">Brands</span>
+              </li>
+              <li class="oa-menu-bar__item" data-id="nutrition">
+                <span class="oa-menu-bar__text">Nutrition</span>
+              </li>
+              <li class="oa-menu-bar__item" data-id="beauty">
+                <span class="oa-menu-bar__text">Beauty</span>
+              </li>
+              <li class="oa-menu-bar__item" data-id="personal-care">
+                <span class="oa-menu-bar__text">Personal Care</span>
+              </li>
+              <li class="oa-menu-bar__item" data-id="home-living">
+                <span class="oa-menu-bar__text">Home Living</span>
+              </li>
+              <li class="oa-menu-bar__item" data-id="agriculture">
+                <span class="oa-menu-bar__text">Agriculture</span>
+              </li>
+              <li class="oa-menu-bar__item" data-id="energy-drink">
+                <span class="oa-menu-bar__text">Energy Drink</span>
+              </li>
+              <li class="oa-menu-bar__item" data-id="sop">
+                <span class="oa-menu-bar__text">SOP</span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="mz-main-layout__messages-container">
+          <div class="mz-toast-message --mobile" data-duration="5000">
+            <div class="mz-item-added-message">
+              <img
+                class="mz-image mz-item-added-message__image"
+                data-src="/static/images/mock/product-1.jpg"
+                alt="mock/product-1"
+              />
+              <div class="mz-item-added-message__content">
+                <div class="mz-item-added-message__title">
+                  นิวทริไลท์เครื่องหมายการค้า ซีแอลเอ 500 จากน้ำมันดอกคำฝอยบรรจุ
+                  180 แคปซูล
+                </div>
+                <strong>
+                  <span
+                    class="mz-icon --check mz-item-added-message__icon"
+                  ></span>
+                  เพิ่มลงตะกร้าแล้ว
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div id="main-dim-layer" class="mz-dim-layer"></div>
+      <nav
+        id="oa-product-menu"
+        class="oa-popup-menu --left oa-product-menu"
+        data-level="1"
+        aria-label="menu"
+      >
+        <div id="oa-product-menu-arrow" class="oa-menu-arrow --white"></div>
+        <header class="oa-popup-menu__header">
+          <span class="oa-icon --close oa-product-menu__close-button"></span>
+          <span class="oa-icon --back oa-product-menu__back-button"></span>
+          <h6 class="oa-product-menu__title">
+            <span data-title-level="1">Shopping</span>
+            <span data-title-level="2"></span>
+            <span data-title-level="3"></span>
+          </h6>
+        </header>
+        <div class="oa-popup-menu__container">
+          <div class="oa-product-menu__container">
+            <ul class="oa-product-menu__categories">
+              <li>
+                <a
+                  class="oa-product-menu__category --outstanding"
+                  data-id="promotions"
+                  data-title="Promotions"
+                  href="/promotions"
+                >
+                  <span class="oa-product-menu__text --desktop">
+                    Promotions
+                  </span>
+                  <span class="oa-product-menu__text --mobile">Promotions</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="brands"
+                  data-title="Shop by Brand"
+                  href="/brands"
+                >
+                  <span class="oa-product-menu__text --desktop">Brands</span>
+                  <span class="oa-product-menu__text --mobile">
+                    Shop by Brand
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="nutrition"
+                  data-title="Nutrition"
+                  href="/nutrition"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-nutrition.svg"
+                    alt="Nutrition"
+                  />
+                  <span class="oa-product-menu__text --desktop">Nutrition</span>
+                  <span class="oa-product-menu__text --mobile">Nutrition</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="beauty"
+                  data-title="Beauty"
+                  href="/beauty"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-beauty.svg"
+                    alt="Beauty"
+                  />
+                  <span class="oa-product-menu__text --desktop">Beauty</span>
+                  <span class="oa-product-menu__text --mobile">Beauty</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="personal-care"
+                  data-title="Personal Care"
+                  href="/personal-care"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-personal-care.svg"
+                    alt="Personal Care"
+                  />
+                  <span class="oa-product-menu__text --desktop">
+                    Personal Care
+                  </span>
+                  <span class="oa-product-menu__text --mobile">
+                    Personal Care
+                  </span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="home-living"
+                  data-title="Home Living"
+                  href="/home-living"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-home-living.svg"
+                    alt="Home Living"
+                  />
+                  <span class="oa-product-menu__text --desktop">
+                    Home Living
+                  </span>
+                  <span class="oa-product-menu__text --mobile">
+                    Home Living
+                  </span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="agriculture"
+                  data-title="Agriculture"
+                  href="/agriculture"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-agriculture.svg"
+                    alt="Agriculture"
+                  />
+                  <span class="oa-product-menu__text --desktop">
+                    Agriculture
+                  </span>
+                  <span class="oa-product-menu__text --mobile">
+                    Agriculture
+                  </span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="energy-drink"
+                  data-title="Energy Drink"
+                  href="/energy-drink"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-energy-drink.svg"
+                    alt="Energy Drink"
+                  />
+                  <span class="oa-product-menu__text --desktop">
+                    Energy Drink
+                  </span>
+                  <span class="oa-product-menu__text --mobile">
+                    Energy Drink
+                  </span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="others"
+                  data-title="Others"
+                  href="/others"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-others.svg"
+                    alt="Others"
+                  />
+                  <span class="oa-product-menu__text --desktop">Others</span>
+                  <span class="oa-product-menu__text --mobile">Others</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="oa-product-menu__category"
+                  data-id="sop"
+                  data-title="SOP"
+                  href="/sop"
+                >
+                  <img
+                    class="oa-image oa-product-menu__icon"
+                    data-src="/static/images/category-sop.svg"
+                    alt="SOP"
+                  />
+                  <span class="oa-product-menu__text --desktop">SOP</span>
+                  <span class="oa-product-menu__text --mobile">SOP</span>
+                </a>
+              </li>
+            </ul>
+            <ul
+              id="brands-detail"
+              class="oa-product-menu__category-detail --brands"
+            >
+              <li>
+                <a href="/brand/nutrilite">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-nutrilite.svg"
+                    alt="brand-nutrilite"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/artistry">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-artistry.svg"
+                    alt="brand-artistry"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/glister">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-glister.svg"
+                    alt="brand-glister"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/g-h">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-g-h.svg"
+                    alt="brand-g-h"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/satinique">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-satinique.svg"
+                    alt="brand-satinique"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/atmosphere-sky">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-atmosphere-sky.svg"
+                    alt="brand-atmosphere-sky"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/e-spring">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-e-spring.svg"
+                    alt="brand-e-spring"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/amway-home">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-amway-home.svg"
+                    alt="brand-amway-home"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/amway-queen">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-amway-queen.svg"
+                    alt="brand-amway-queen"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/bodykey">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-bodykey.svg"
+                    alt="brand-bodykey"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/brand/nutriplant">
+                  <img
+                    class="oa-image oa-product-menu__brand"
+                    data-src="/static/images/brand-nutriplant.svg"
+                    alt="brand-nutriplant"
+                  />
+                </a>
+              </li>
+            </ul>
+            <ul
+              id="beauty-detail"
+              class="oa-product-menu__category-detail --sub-categories"
+            >
+              <li>
+                <a class="oa-product-menu__see-all" href="/beauty">See all</a>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/skin-care"
+                  data-id="skin-care"
+                  data-title="Skin Care"
+                >
+                  <span class="oa-product-menu__text">Skin Care</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="skin-care-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a class="oa-product-menu__see-all" href="/skin-care">
+                      See all
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/cleansing"
+                    >
+                      Cleansing
+                    </a>
+                  </li>
+                  <li>
+                    <a class="oa-product-menu__sub-category-item" href="/serun">
+                      Serum
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/moisturizer"
+                    >
+                      Moisturizer
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/serum-moisturizer"
+                    >
+                      Serum &amp; Moisturizer
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/eye-cream"
+                    >
+                      Eye Cream
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/sun-screen"
+                    >
+                      Sun Screen
+                    </a>
+                  </li>
+                  <li>
+                    <a class="oa-product-menu__sub-category-item" href="/mask">
+                      Mask
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/for-men"
+                    >
+                      For Men
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/special-treatment"
+                    >
+                      Special Treatment
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/make-up"
+                  data-id="make-up"
+                  data-title="Make Up"
+                >
+                  <span class="oa-product-menu__text">Make Up</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="make-up-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a class="oa-product-menu__see-all" href="/make-up">
+                      See all
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/facial"
+                    >
+                      Facial
+                    </a>
+                  </li>
+                  <li>
+                    <a class="oa-product-menu__sub-category-item" href="/eyes">
+                      Eyes
+                    </a>
+                  </li>
+                  <li>
+                    <a class="oa-product-menu__sub-category-item" href="/lips">
+                      Lips
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/cheeks"
+                    >
+                      Cheeks
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/collection"
+                  data-id="collection"
+                  data-title="Collection"
+                >
+                  <span class="oa-product-menu__text">Collection</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="collection-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a class="oa-product-menu__see-all" href="/collection">
+                      See all
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/paris-set-edition"
+                    >
+                      Paris Set Edition
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/bangkok-set-edition"
+                    >
+                      Bangkok Set Edition
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/perfume"
+                  data-id="perfume"
+                  data-title="Perfume"
+                >
+                  <span class="oa-product-menu__text">Perfume</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="perfume-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a class="oa-product-menu__see-all" href="/perfume">
+                      See all
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/flora-chic"
+                    >
+                      Flora Chic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/unknown"
+                    >
+                      Unknown
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/accessories"
+                  data-id="accessories"
+                  data-title="Accessories"
+                >
+                  <span class="oa-product-menu__text">Accessories</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="accessories-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a class="oa-product-menu__see-all" href="/accessories">
+                      See all
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/make-up-tools"
+                    >
+                      Make Up Tools
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/facial-care-tools"
+                    >
+                      Facial Care Tools
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/cleansing-cloth"
+                    >
+                      Cleansing Cloth
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="oa-product-menu__sub-category-item"
+                      href="/facial-hygienic"
+                    >
+                      Facial Hygienic
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul
+              id="agriculture-detail"
+              class="oa-product-menu__category-detail --sub-categories"
+            >
+              <li>
+                <a class="oa-product-menu__see-all" href="/agriculture">
+                  See all
+                </a>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/mineral-supplements"
+                  data-id="mineral-supplements"
+                  data-title="Mineral Supplements"
+                >
+                  <span class="oa-product-menu__text">Mineral Supplements</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="mineral-supplements-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a
+                      class="oa-product-menu__see-all"
+                      href="/mineral-supplements"
+                    >
+                      See all
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/supplement-fertilizer"
+                  data-id="supplement-fertilizer"
+                  data-title="Supplement Fertilizer"
+                >
+                  <span class="oa-product-menu__text">
+                    Supplement Fertilizer
+                  </span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="supplement-fertilizer-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a
+                      class="oa-product-menu__see-all"
+                      href="/supplement-fertilizer"
+                    >
+                      See all
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="oa-product-menu__category-item">
+                <a
+                  class="oa-product-menu__sub-category"
+                  href="/plant-fertilizer"
+                  data-id="plant-fertilizer"
+                  data-title="Plant Fertilizer"
+                >
+                  <span class="oa-product-menu__text">Plant Fertilizer</span>
+                  <span
+                    class="oa-icon --arrow-right oa-product-menu__list-arrow"
+                  ></span>
+                </a>
+                <ul
+                  id="plant-fertilizer-detail"
+                  class="oa-product-menu__sub-category-detail"
+                >
+                  <li>
+                    <a
+                      class="oa-product-menu__see-all"
+                      href="/plant-fertilizer"
+                    >
+                      See all
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav
+        id="oa-user-menu"
+        class="oa-popup-menu --right oa-user-menu --inverse"
+        data-logged-in="true"
+        aria-label="menu"
+      >
+        <div id="oa-user-menu-arrow" class="oa-menu-arrow --amway-500"></div>
+        <header class="oa-popup-menu__header">
+          <div class="oa-user-menu__header">
+            <span class="oa-icon --close oa-user-menu__close-button"></span>
+            <a class="oa-user-menu__button" href="/favorite">
+              <span class="oa-icon --heart"></span>
+            </a>
+            <a class="oa-user-menu__button" href="/notification">
+              <span class="oa-icon --bell"></span>
+            </a>
+          </div>
+        </header>
+        <div class="oa-popup-menu__container">
+          <section class="oa-user-menu__profile">
+            <div class="oa-user-menu__info">
+              <img
+                class="oa-user-menu__avatar"
+                src="/static/images/default-avatar.png"
+                alt="avatar"
+              />
+              <div class="oa-user-menu__name">
+                Mr. Amorn Apichartikul
+                <br />
+                <div class="oa-id-badge">2711647</div>
+              </div>
+            </div>
+            <div class="oa-user-menu__status">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th><small>Personal</small></th>
+                    <th><small>Group</small></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>PV</td>
+                    <td>399</td>
+                    <td>399</td>
+                  </tr>
+                  <tr>
+                    <td>BV</td>
+                    <td>1,196</td>
+                    <td>1,196</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <div class="oa-user-menu__bonus">Bonus 9%</div>
+          <ul>
+            <li>
+              <a
+                class="oa-user-menu__item --outstanding"
+                href="/business-center"
+              >
+                Business Center
+              </a>
+            </li>
+            <li>
+              <a class="oa-user-menu__item" href="/awaiting-payment">
+                Awaiting Payment
+                <img
+                  class="oa-image oa-user-menu__noti"
+                  data-src="/static/images/new.svg"
+                  alt="new"
+                />
+              </a>
+            </li>
+            <li><a class="oa-user-menu__item" href="/my-sop">My SOP</a></li>
+            <li>
+              <a class="oa-user-menu__item" href="/education">Education</a>
+            </li>
+            <li>
+              <a class="oa-user-menu__item" href="/store-locator">
+                Store Locator
+              </a>
+            </li>
+            <li>
+              <a class="oa-user-menu__item" href="/about-amway">About Amway</a>
+            </li>
+            <li>
+              <a class="oa-user-menu__logout" href="/">
+                <span class="oa-icon --logout oa-user-menu__logout-icon"></span>
+                <span>Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div id="oa-search-modal" class="oa-search-modal">
+        <header class="oa-search-modal__header">
+          <div class="oa-input oa-search-input">
+            <span class="oa-icon --search oa-input__icon --left"></span>
+            <input
+              type="text"
+              placeholder="Search by Name / Product ID"
+              class="oa-input__input input-lg form-control --round --small --with-left-icon"
+            />
+          </div>
+          <button
+            id="oa-search-modal-close-button"
+            type="button"
+            class="oa-search-modal__close-button"
+          >
+            <small>Cancel</small>
+          </button>
+        </header>
+        <section class="oa-search-modal__section">
+          <header>
+            <h6 class="oa-search-modal__title">Matching Keywords</h6>
+          </header>
+          <ul class="oa-search-modal__keywords">
+            <li>
+              <a class="oa-search-modal__keyword" href="/beauty/artistry">
+                <span>Artistry</span>
+                <span>
+                  Search in
+                  <strong>Beauty</strong>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="oa-search-modal__keyword" href="/nutrition/arabica">
+                <span>Arabica</span>
+                <span>
+                  Search in
+                  <strong>Nutrition</strong>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="oa-search-modal__section">
+          <header>
+            <h6 class="oa-search-modal__title">Products</h6>
+            <a
+              href="/see-all-matching-keywords"
+              class="oa-link oa-search-modal__see-all"
+            >
+              <small>see all</small>
+              <span class="oa-icon --arrow-right"></span>
+            </a>
+          </header>
+          <ul class="oa-search-modal__products">
+            <li>
+              <a
+                class="oa-search-modal__product"
+                href="/product/artistry-exact-fit™-perfecting-loose-powder-light}"
+              >
+                <img
+                  class="oa-image oa-search-modal__product-image"
+                  data-src="/static/images/mock-search-result-artistry-powder.jpeg"
+                  alt="mock-search-result-artistry-powder"
+                />
+                <div class="oa-search-modal__product-info">
+                  <p class="oa-search-modal__product-title">
+                    Artistry Exact Fit™ Perfecting Loose Powder - Light
+                  </p>
+                  <p class="oa-search-modal__product-description"></p>
+                  <div class="oa-search-modal__product-checkout">
+                    <span class="oa-search-modal__product-price">฿964</span>
+                    <button
+                      type="button"
+                      class="oa-button btn btn-lg --secondary --auto --extra-small"
+                    >
+                      <span>Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                class="oa-search-modal__product"
+                href="/product/artistry-signature-color™-lipstick}"
+              >
+                <img
+                  class="oa-image oa-search-modal__product-image"
+                  data-src="/static/images/mock-search-result-artistry-lipstick.jpeg"
+                  alt="mock-search-result-artistry-lipstick"
+                />
+                <div class="oa-search-modal__product-info">
+                  <p class="oa-search-modal__product-title">
+                    Artistry Signature Color™ Lipstick
+                  </p>
+                  <p class="oa-search-modal__product-description">16 colors</p>
+                  <div class="oa-search-modal__product-checkout">
+                    <span class="oa-search-modal__product-price">880</span>
+                    <button
+                      type="button"
+                      class="oa-button btn btn-lg --secondary --auto --extra-small"
+                    >
+                      <span>Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                class="oa-search-modal__product"
+                href="/product/artistry-exact-fit™-perfecting-loose-powder}"
+              >
+                <img
+                  class="oa-image oa-search-modal__product-image"
+                  data-src="/static/images/mock-search-result-artistry-powder.jpeg"
+                  alt="mock-search-result-artistry-powder"
+                />
+                <div class="oa-search-modal__product-info">
+                  <p class="oa-search-modal__product-title">
+                    Artistry Exact Fit™ Perfecting Loose Powder
+                  </p>
+                  <p class="oa-search-modal__product-description"></p>
+                  <div class="oa-search-modal__product-checkout">
+                    <span class="oa-search-modal__product-price">
+                      ฿964 ~ ฿1,564
+                    </span>
+                    <button
+                      type="button"
+                      class="oa-button btn btn-lg --secondary --auto --extra-small"
+                    >
+                      <span>Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="oa-pickup-address-modal">
+        <div
+          class="mz-searchable-dropdown dropdown oa-pickup-address-modal__dropdown"
+        >
+          <button
+            type="button"
+            class="mz-searchable-dropdown__button oa-pickup-address-modal__dropdown-button --with-left-icon"
+            data-placeholder="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <div class="mz-searchable-dropdown__button-icon --left">
+              <span
+                class="mz-icon --search oa-pickup-address-modal__search-icon"
+              ></span>
+            </div>
+            <div class="mz-searchable-dropdown__button-icon --right"></div>
+            <span class="mz-searchable-dropdown__button-text">
+              เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า
+            </span>
+          </button>
+          <div class="mz-searchable-dropdown__modal">
+            <button type="button" class="mz-searchable-dropdown__close-button">
+              <span class="mz-icon --close"></span>
+            </button>
+            <div class="mz-input mz-searchable-dropdown__input">
+              <div class="mz-input__icon --left">
+                <span
+                  class="mz-icon --search oa-pickup-address-modal__search-icon"
+                ></span>
+              </div>
+              <input
+                type="text"
+                id="global-pickup-address"
+                placeholder="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า"
+                class="mz-input__input --with-left-icon"
+                value="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า"
+              />
+            </div>
+            <div
+              class="mz-searchable-dropdown__menu oa-pickup-address-modal__dropdown-menu"
+            >
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:after-sales"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:after-sales"
+                  name="global-pickup-address"
+                  value="after-sales"
+                  data-label="AFTER SALES SERVICE"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  AFTER SALES SERVICE
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-rama-ii"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-rama-ii"
+                  name="global-pickup-address"
+                  value="shop-rama-ii"
+                  data-label="แอมเวย์ ช็อป พระราม 2"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป พระราม 2
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-hq"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-hq"
+                  name="global-pickup-address"
+                  value="shop-hq"
+                  data-label="แอมเวย์ ช็อป สำนักงานใหญ่"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป สำนักงานใหญ่
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-1"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-1"
+                  name="global-pickup-address"
+                  value="shop-1"
+                  data-label="แอมเวย์ ช็อป 1"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป 1
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-2"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-2"
+                  name="global-pickup-address"
+                  value="shop-2"
+                  data-label="แอมเวย์ ช็อป 2"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป 2
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-3"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-3"
+                  name="global-pickup-address"
+                  value="shop-3"
+                  data-label="แอมเวย์ ช็อป 3"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป 3
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                class="mz-searchable-dropdown__option"
+                for="global-pickup-address:shop-4"
+              >
+                <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-4"
+                  name="global-pickup-address"
+                  value="shop-4"
+                  data-label="แอมเวย์ ช็อปสาขานี้ชื่อยาวมากเพื่อเป็นการทดสอบ implementation ที่ถูกต้อง"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อปสาขานี้ชื่อยาวมากเพื่อเป็นการทดสอบ implementation
+                  ที่ถูกต้อง
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <div class="mz-searchable-dropdown__footer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="mz-main-layout" class="mz-main-layout">
+        <div class="mz-main-layout__content">
+          <main class="mz-cart-layout">
+            <section class="mz-cart-layout__section">
+              <form id="cart" class="mz-cart-layout__form" action="#">
+                <header class="mz-cart-layout__header">
+                  <h4 class="mz-cart-layout__title">ตะกร้าสินค้า</h4>
+                </header>
+                <section class="mz-cart-layout__content">
+                  <div class="mz-delivery-methods">
+                    <div class="mz-delivery-methods__order-for">
+                      <div class="mz-delivery-methods__text">
+                        <strong>สั่งซื้อสินค้าให้</strong>
+                      </div>
+                      <div
+                        class="mz-toggle-button mz-delivery-methods__order-for-button --small --original-blue"
+                      >
+                        <div class="mz-toggle-button__container">
+                          <div
+                            class="mz-toggle-button__active-background"
+                            style="transform: translate3d(0%, 0, 0);"
+                          ></div>
+                          <input
+                            type="radio"
+                            class="mz-toggle-button__input"
+                            id="myself"
+                            value="myself"
+                            readonly=""
+                            checked=""
+                          />
+                          <label
+                            for="myself"
+                            class="mz-toggle-button__button --active"
+                          >
+                            <span>ตัวเอง</span>
+                          </label>
+                          <input
+                            type="radio"
+                            class="mz-toggle-button__input"
+                            id="downline"
+                            value="downline"
+                            readonly=""
+                          />
+                          <label
+                            for="downline"
+                            class="mz-toggle-button__button"
+                          >
+                            <span>ดาวน์ไลน์</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="mz-toggle-button mz-delivery-methods__delivery-toggle --small --original-blue"
+                    >
+                      <div class="mz-toggle-button__container">
+                        <div
+                          class="mz-toggle-button__active-background"
+                          style="transform: translate3d(0%, 0, 0);"
+                        ></div>
+                        <input
+                          type="radio"
+                          class="mz-toggle-button__input"
+                          id="delivery"
+                          value="delivery"
+                          readonly=""
+                          checked=""
+                        />
+                        <label
+                          for="delivery"
+                          class="mz-toggle-button__button mz-delivery-methods__delivery-button --active"
+                        >
+                          <span>จัดส่งภายใน 1-3 วันทำการ</span>
+                        </label>
+                        <input
+                          type="radio"
+                          class="mz-toggle-button__input"
+                          id="pickup"
+                          value="pickup"
+                          readonly=""
+                        />
+                        <label
+                          for="pickup"
+                          class="mz-toggle-button__button mz-delivery-methods__delivery-button"
+                        >
+                          <span>รับที่สาขาภายใน 30 นาที</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="mz-delivery-methods__inputs">
+                      <div class="mz-delivery-methods__address-selector">
+                        <div class="mz-searchable-dropdown dropdown">
+                          <button
+                            type="button"
+                            class="mz-searchable-dropdown__button --with-left-icon --with-right-icon --selected"
+                            data-placeholder="เลือกที่อยู่จัดส่งสินค้า"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <div
+                              class="mz-searchable-dropdown__button-icon --left"
+                            >
+                              <span
+                                class="mz-icon --search mz-delivery-methods__search-icon"
+                              ></span>
+                            </div>
+                            <div
+                              class="mz-searchable-dropdown__button-icon --right"
+                            >
+                              <span
+                                class="mz-icon --arrow-down mz-searchable-dropdown__icon"
+                              ></span>
+                            </div>
+                            <span class="mz-searchable-dropdown__button-text">
+                              คอนโดกรุงเทพ: 56/345 เดอะนิช โมโน สุขุมวิท 50
+                              แขวงพระโขนง เขตคลองเตย กรุงเทพมหานคร 10110
+                            </span>
+                          </button>
+                          <div class="mz-searchable-dropdown__modal">
+                            <button
+                              type="button"
+                              class="mz-searchable-dropdown__close-button"
+                            >
+                              <span class="mz-icon --close"></span>
+                            </button>
+                            <div class="mz-input mz-searchable-dropdown__input">
+                              <div class="mz-input__icon --left">
+                                <span
+                                  class="mz-icon --search mz-delivery-methods__search-icon"
+                                ></span>
+                              </div>
+                              <div class="mz-input__icon --right">
+                                <span
+                                  class="mz-icon --arrow-down mz-searchable-dropdown__icon"
+                                ></span>
+                              </div>
+                              <input
+                                type="text"
+                                id="delivery-address"
+                                placeholder="เลือกที่อยู่จัดส่งสินค้า"
+                                class="mz-input__input --with-left-icon --with-right-icon"
+                                value="คอนโดกรุงเทพ: 56/345 เดอะนิช โมโน สุขุมวิท 50 แขวงพระโขนง เขตคลองเตย กรุงเทพมหานคร 10110"
+                              />
+                            </div>
+                            <div class="mz-searchable-dropdown__menu">
+                              <label
+                                class="mz-searchable-dropdown__option"
+                                for="delivery-address:condo-bangkok"
+                              >
+                                <input
+                                  type="radio"
+                                  class="mz-searchable-dropdown__option-input"
+                                  id="delivery-address:condo-bangkok"
+                                  name="delivery-address"
+                                  value="condo-bangkok"
+                                  data-label="คอนโดกรุงเทพ: 56/345 เดอะนิช โมโน สุขุมวิท 50 แขวงพระโขนง เขตคลองเตย กรุงเทพมหานคร 10110"
+                                  readonly=""
+                                  checked=""
+                                />
+                                <div class="mz-address-option">
+                                  <div class="mz-address-option__main-tag">
+                                    <span>ที่อยู่หลัก</span>
+                                  </div>
+                                  <div>
+                                    <strong>คอนโดกรุงเทพ</strong>
+                                    <p>
+                                      56/345 เดอะนิช โมโน สุขุมวิท 50
+                                      แขวงพระโขนง เขตคลองเตย กรุงเทพมหานคร 10110
+                                    </p>
+                                  </div>
+                                </div>
+                                <span
+                                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                                ></span>
+                              </label>
+                              <label
+                                class="mz-searchable-dropdown__option"
+                                for="delivery-address:home-khonkaen"
+                              >
+                                <input
+                                  type="radio"
+                                  class="mz-searchable-dropdown__option-input"
+                                  id="delivery-address:home-khonkaen"
+                                  name="delivery-address"
+                                  value="home-khonkaen"
+                                  data-label="บ้านขอนแก่น: 68/9 หมู่บ้านสวัสดี ถนนประชาสําราญ อําเภอเมือง จังหวัดขอนแก่น 40000"
+                                  readonly=""
+                                />
+                                <div class="mz-address-option">
+                                  <div>
+                                    <strong>บ้านขอนแก่น</strong>
+                                    <p>
+                                      68/9 หมู่บ้านสวัสดี ถนนประชาสําราญ
+                                      อําเภอเมือง จังหวัดขอนแก่น 40000
+                                    </p>
+                                  </div>
+                                </div>
+                                <span
+                                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                                ></span>
+                              </label>
+                              <label
+                                class="mz-searchable-dropdown__option"
+                                for="delivery-address:work-bangkok"
+                              >
+                                <input
+                                  type="radio"
+                                  class="mz-searchable-dropdown__option-input"
+                                  id="delivery-address:work-bangkok"
+                                  name="delivery-address"
+                                  value="work-bangkok"
+                                  data-label="ที่ทำงานกรุงเทพ: 1199/1 ถนนรามคำแหง แขวงหัวหมาก เขตบางกระปิ กรุงเทพมหานคร 10240"
+                                  readonly=""
+                                />
+                                <div class="mz-address-option">
+                                  <div>
+                                    <strong>ที่ทำงานกรุงเทพ</strong>
+                                    <p>
+                                      1199/1 ถนนรามคำแหง แขวงหัวหมาก เขตบางกระปิ
+                                      กรุงเทพมหานคร 10240
+                                    </p>
+                                  </div>
+                                </div>
+                                <span
+                                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                                ></span>
+                              </label>
+                              <div class="mz-searchable-dropdown__footer">
+                                <a
+                                  class="mz-delivery-methods__new-address"
+                                  href="/new-address"
+                                >
+                                  <span
+                                    class="mz-icon --add mz-delivery-methods__new-address-icon"
+                                  ></span>
+                                  เพิ่มที่อยู่ใหม่
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p
+                          class="mz-message --error mz-delivery-methods__error-message"
+                        >
+                          <small id="delivery-address-error"></small>
+                        </p>
+                      </div>
+                      <div class="mz-delivery-methods__phone-input">
+                        <div class="mz-input">
+                          <input
+                            type="tel"
+                            name="recipient-mobile"
+                            placeholder="เบอร์โทรติดต่อ"
+                            class="mz-input__input"
+                          />
+                        </div>
+                        <p
+                          class="mz-message --error mz-delivery-methods__error-message"
+                        >
+                          <small id="recipient-mobile-error"></small>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <header class="mz-cart-orders__header">
+                    <h6>สินค้า 10 รายการ</h6>
+                  </header>
+                  <div
+                    class="mz-cart-item mz-cart-orders__item"
+                    id="102345"
+                    data-id="102345"
+                  >
+                    <div class="mz-cart-item__detail">
+                      <div class="mz-cart-item__image-and-badge">
+                        <img
+                          class="mz-image"
+                          data-src="/static/images/mock/product-1.jpg"
+                          alt="mock/product-1"
+                        />
+                      </div>
+                      <div class="mz-cart-item__content-container">
+                        <div class="mz-cart-item__content-header">
+                          <div class="mz-cart-item__barcode">รหัส#102345</div>
+                          <button type="button" class="mz-cart-item__delete">
+                            <span class="mz-icon --delete"></span>
+                          </button>
+                        </div>
+                        <div class="mz-cart-item__content">
+                          <section class="mz-cart-item__left-section">
+                            <div class="mz-cart-item__title">
+                              นิวทริไลท์เครื่องหมายการค้า ซีแอลเอ 500
+                              จากน้ำมันดอกคำฝอยบรรจุ 180 แคปซูล
+                            </div>
+                            <div
+                              class="mz-cart-item-label mz-cart-item__label --backOrder"
+                            >
+                              <span
+                                class="mz-icon --status-calendar mz-cart-item-label__icon"
+                              ></span>
+                              <span>สินค้าค้างจ่าย พร้อมส่ง 22/02/20</span>
+                            </div>
+                          </section>
+                          <div class="mz-integer-input mz-cart-item__quantity">
+                            <div class="mz-integer-input__quantity --active">
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper"
+                                data-decrement="true"
+                              >
+                                <span class="mz-icon --minus"></span>
+                              </button>
+                              <input
+                                type="tel"
+                                id="102345-quantity"
+                                name="102345-quantity"
+                                class="mz-integer-input__input"
+                                min="1"
+                                max="2"
+                                value="2"
+                              />
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper"
+                                disabled=""
+                                data-increment="true"
+                              >
+                                <span class="mz-icon --add"></span>
+                              </button>
+                            </div>
+                            <button
+                              type="button"
+                              class="mz-button btn btn-lg --primary --medium --original-blue mz-integer-input__add-button"
+                            >
+                              <span>เพิ่ม</span>
+                            </button>
+                          </div>
+                          <div class="mz-cart-item__right-section">
+                            <div class="mz-cart-item__price-and-quantity">
+                              <span>2 x ฿ 1,070</span>
+                            </div>
+                            <div class="mz-cart-item__amount">
+                              <div class="mz-cart-item__final-price">
+                                ฿ 2,140
+                              </div>
+                            </div>
+                            <div class="mz-cart-item__pv-bv">
+                              +2100 PV / + 1200 BV
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="mz-cart-item mz-cart-orders__item"
+                    id="102355"
+                    data-id="102355"
+                  >
+                    <div class="mz-cart-item__detail">
+                      <div class="mz-cart-item__image-and-badge">
+                        <img
+                          class="mz-image"
+                          data-src="/static/images/mock/product-1.jpg"
+                          alt="mock/product-1"
+                        />
+                        <div class="mz-cart-item__badge --sop">SOP</div>
+                      </div>
+                      <div class="mz-cart-item__content-container">
+                        <div class="mz-cart-item__content-header">
+                          <div class="mz-cart-item__barcode">รหัส#102355</div>
+                          <button type="button" class="mz-cart-item__delete">
+                            <span class="mz-icon --delete"></span>
+                          </button>
+                        </div>
+                        <div class="mz-cart-item__content">
+                          <section class="mz-cart-item__left-section">
+                            <div class="mz-cart-item__title">
+                              นิวทริไลท์เครื่องหมายการค้า ซีแอลเอ 500
+                              จากน้ำมันดอกคำฝอยบรรจุ 180 แคปซูล
+                            </div>
+                            <div
+                              class="mz-cart-item-label mz-cart-item__label --backOrder"
+                            >
+                              <span
+                                class="mz-icon --status-calendar mz-cart-item-label__icon"
+                              ></span>
+                              <span>สินค้าค้างจ่าย พร้อมส่ง 22/02/20</span>
+                            </div>
+                            <div
+                              class="mz-cart-item-label mz-cart-item__label --nearlyOut"
+                            >
+                              <span>สินค้าใกล้หมด</span>
+                            </div>
+                          </section>
+                          <div class="mz-integer-input mz-cart-item__quantity">
+                            <div class="mz-integer-input__quantity --active">
+                              <span>x 1</span>
+                            </div>
+                          </div>
+                          <div class="mz-cart-item__right-section">
+                            <div class="mz-cart-item__price-and-quantity">
+                              <span>1 x ฿ 1,070</span>
+                            </div>
+                            <div class="mz-cart-item__amount">
+                              <div class="mz-cart-item__final-price">
+                                ฿ 1,070
+                              </div>
+                            </div>
+                            <div class="mz-cart-item__pv-bv">
+                              +2100 PV / + 1200 BV
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="mz-cart-item mz-cart-orders__item"
+                    id="102365"
+                    data-id="102365"
+                  >
+                    <div class="mz-cart-item__detail">
+                      <div class="mz-cart-item__image-and-badge">
+                        <img
+                          class="mz-image"
+                          data-src="/static/images/mock/product-2.jpg"
+                          alt="mock/product-2"
+                        />
+                        <div class="mz-cart-item__badge --instalment">
+                          สินค้าผ่อนชำระ
+                        </div>
+                      </div>
+                      <div class="mz-cart-item__content-container">
+                        <div class="mz-cart-item__content-header">
+                          <div class="mz-cart-item__barcode">รหัส#102365</div>
+                          <button type="button" class="mz-cart-item__delete">
+                            <span class="mz-icon --delete"></span>
+                          </button>
+                        </div>
+                        <div class="mz-cart-item__content">
+                          <section class="mz-cart-item__left-section">
+                            <div class="mz-cart-item__title">
+                              เครื่องกรองอากาศ แอทโมสเฟียร์ สกาย
+                            </div>
+                            <input
+                              name="102365-instalment"
+                              id="102365-instalment"
+                              class="mz-dropdown-input__input"
+                              value="0%4m"
+                              readonly=""
+                            />
+                            <div
+                              class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown"
+                            >
+                              <button
+                                id="102365-instalment-dropdown"
+                                type="button"
+                                class="mz-dropdown__button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                              >
+                                <div
+                                  class="mz-dropdown__button-text --selected"
+                                >
+                                  <div class="mz-dropdown__text">
+                                    ผ่อนชำระ 0% 4 เดือน
+                                  </div>
+                                </div>
+                                <span
+                                  class="mz-icon --arrow-down mz-dropdown__icon"
+                                ></span>
+                              </button>
+                              <ul
+                                class="mz-dropdown__menu dropdown-menu"
+                                aria-labelledby="102365-instalment-dropdown"
+                              >
+                                <li
+                                  data-value="0%4m"
+                                  class="mz-dropdown__option"
+                                >
+                                  <div class="mz-dropdown__text">
+                                    ผ่อนชำระ 0% 4 เดือน
+                                  </div>
+                                </li>
+                                <li
+                                  data-value="2.5%12m"
+                                  class="mz-dropdown__option"
+                                >
+                                  <div class="mz-dropdown__text">
+                                    ผ่อนชำระ 2.5% 12 เดือน
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </section>
+                          <div class="mz-integer-input mz-cart-item__quantity">
+                            <div class="mz-integer-input__quantity --active">
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper"
+                                disabled=""
+                                data-decrement="true"
+                              >
+                                <span class="mz-icon --minus"></span>
+                              </button>
+                              <input
+                                type="tel"
+                                id="102365-quantity"
+                                name="102365-quantity"
+                                class="mz-integer-input__input"
+                                min="1"
+                                max="40"
+                                value="1"
+                              />
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper"
+                                data-increment="true"
+                              >
+                                <span class="mz-icon --add"></span>
+                              </button>
+                            </div>
+                            <button
+                              type="button"
+                              class="mz-button btn btn-lg --primary --medium --original-blue mz-integer-input__add-button"
+                            >
+                              <span>เพิ่ม</span>
+                            </button>
+                          </div>
+                          <div class="mz-cart-item__right-section">
+                            <div class="mz-cart-item__price-and-quantity">
+                              <span>1 x ฿ 45,920</span>
+                            </div>
+                            <div class="mz-cart-item__amount">
+                              <div class="mz-cart-item__final-price">
+                                ฿ 45,920
+                              </div>
+                            </div>
+                            <div class="mz-cart-item__pv-bv">
+                              +2100 PV / + 1200 BV
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="mz-cart-item mz-cart-orders__item"
+                    id="102375"
+                    data-id="102375"
+                  >
+                    <div class="mz-cart-item__detail">
+                      <div class="mz-cart-item__image-and-badge">
+                        <img
+                          class="mz-image"
+                          data-src="/static/images/mock/product-3.jpg"
+                          alt="mock/product-3"
+                        />
+                      </div>
+                      <div class="mz-cart-item__content-container">
+                        <div class="mz-cart-item__content-header">
+                          <div class="mz-cart-item__barcode">รหัส#102375</div>
+                          <button type="button" class="mz-cart-item__delete">
+                            <span class="mz-icon --delete"></span>
+                          </button>
+                        </div>
+                        <div class="mz-cart-item__content">
+                          <section class="mz-cart-item__left-section">
+                            <div class="mz-cart-item__title">
+                              อาร์ทิสทรี ซิกเนเจอร์ คัลเลอร์ เชียร์ สีเรดคิส
+                            </div>
+                            <input
+                              name="102375-variant"
+                              id="102375-variant"
+                              class="mz-dropdown-input__input"
+                              value="1234"
+                              readonly=""
+                            />
+                            <div
+                              class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown"
+                            >
+                              <button
+                                id="102375-variant-dropdown"
+                                type="button"
+                                class="mz-dropdown__button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                              >
+                                <div
+                                  class="mz-dropdown__button-text --selected"
+                                >
+                                  <img
+                                    class="mz-image mz-dropdown__option-image mz-cart-item-variant-dropdown__image"
+                                    data-src="/static/images/cart-item-variant-red-kiss.png"
+                                    alt="cart-item-variant-red-kiss"
+                                  />
+                                  <div class="mz-dropdown__text">สีเรดคิส</div>
+                                </div>
+                                <span
+                                  class="mz-icon --arrow-down mz-dropdown__icon"
+                                ></span>
+                              </button>
+                              <ul
+                                class="mz-dropdown__menu dropdown-menu"
+                                aria-labelledby="102375-variant-dropdown"
+                              >
+                                <li
+                                  data-value="1234"
+                                  class="mz-dropdown__option"
+                                >
+                                  <img
+                                    class="mz-image mz-dropdown__option-image mz-cart-item-variant-dropdown__image"
+                                    data-src="/static/images/cart-item-variant-red-kiss.png"
+                                    alt="cart-item-variant-red-kiss"
+                                  />
+                                  <div class="mz-dropdown__text">สีเรดคิส</div>
+                                </li>
+                                <li
+                                  data-value="5678"
+                                  class="mz-dropdown__option"
+                                >
+                                  <img
+                                    class="mz-image mz-dropdown__option-image mz-cart-item-variant-dropdown__image"
+                                    data-src="/static/images/cart-item-variant-blue-kiss.png"
+                                    alt="cart-item-variant-blue-kiss"
+                                  />
+                                  <div class="mz-dropdown__text">สีบลูคิส</div>
+                                </li>
+                              </ul>
+                            </div>
+                          </section>
+                          <div class="mz-integer-input mz-cart-item__quantity">
+                            <div class="mz-integer-input__quantity --active">
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper"
+                                data-decrement="true"
+                              >
+                                <span class="mz-icon --minus"></span>
+                              </button>
+                              <input
+                                type="tel"
+                                id="102375-quantity"
+                                name="102375-quantity"
+                                class="mz-integer-input__input"
+                                min="1"
+                                max="5"
+                                value="2"
+                              />
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper"
+                                data-increment="true"
+                              >
+                                <span class="mz-icon --add"></span>
+                              </button>
+                            </div>
+                            <button
+                              type="button"
+                              class="mz-button btn btn-lg --primary --medium --original-blue mz-integer-input__add-button"
+                            >
+                              <span>เพิ่ม</span>
+                            </button>
+                          </div>
+                          <div class="mz-cart-item__right-section">
+                            <div class="mz-cart-item__price-and-quantity">
+                              <span>2 x ฿ 880</span>
+                            </div>
+                            <div class="mz-cart-item__amount">
+                              <div class="mz-cart-item__original-price">
+                                ฿ 1,760
+                              </div>
+                              <div class="mz-cart-item__final-price">฿ 880</div>
+                            </div>
+                            <div class="mz-cart-item__pv-bv">
+                              +2100 PV / + 1200 BV
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="mz-cart-item mz-cart-orders__item"
+                    id="102385"
+                    data-id="102385"
+                  >
+                    <div class="mz-cart-item__detail">
+                      <div class="mz-cart-item__image-and-badge">
+                        <img
+                          class="mz-image"
+                          data-src="/static/images/mock/bundle-1.jpg"
+                          alt="mock/bundle-1"
+                        />
+                        <div class="mz-cart-item__badge --instalment">
+                          สินค้าผ่อนชำระ
+                        </div>
+                      </div>
+                      <div class="mz-cart-item__content-container">
+                        <div class="mz-cart-item__content-header">
+                          <div class="mz-cart-item__barcode">รหัส#102385</div>
+                          <button type="button" class="mz-cart-item__delete">
+                            <span class="mz-icon --delete"></span>
+                          </button>
+                        </div>
+                        <div class="mz-cart-item__content">
+                          <section class="mz-cart-item__left-section">
+                            <div class="mz-cart-item__title">
+                              บอดี้คีย์ บาย นิวทริไลท์
+                              ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล
+                              เอ็กซ์ 2 กล่อง
+                            </div>
+                            <input
+                              name="102385-instalment"
+                              id="102385-instalment"
+                              class="mz-dropdown-input__input"
+                              value="0%4m"
+                              readonly=""
+                            />
+                            <div
+                              class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown"
+                            >
+                              <button
+                                id="102385-instalment-dropdown"
+                                type="button"
+                                class="mz-dropdown__button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                              >
+                                <div
+                                  class="mz-dropdown__button-text --selected"
+                                >
+                                  <div class="mz-dropdown__text">
+                                    ผ่อนชำระ 0% 4 เดือน
+                                  </div>
+                                </div>
+                                <span
+                                  class="mz-icon --arrow-down mz-dropdown__icon"
+                                ></span>
+                              </button>
+                              <ul
+                                class="mz-dropdown__menu dropdown-menu"
+                                aria-labelledby="102385-instalment-dropdown"
+                              >
+                                <li
+                                  data-value="0%4m"
+                                  class="mz-dropdown__option"
+                                >
+                                  <div class="mz-dropdown__text">
+                                    ผ่อนชำระ 0% 4 เดือน
+                                  </div>
+                                </li>
+                                <li
+                                  data-value="2.5%12m"
+                                  class="mz-dropdown__option"
+                                >
+                                  <div class="mz-dropdown__text">
+                                    ผ่อนชำระ 2.5% 12 เดือน
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div
+                              class="mz-cart-item-label mz-cart-item__label --backOrder"
+                            >
+                              <span
+                                class="mz-icon --status-calendar mz-cart-item-label__icon"
+                              ></span>
+                              <span>สินค้าค้างจ่าย พร้อมส่ง 22/02/20</span>
+                            </div>
+                          </section>
+                          <div class="mz-integer-input mz-cart-item__quantity">
+                            <div class="mz-integer-input__quantity --active">
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper"
+                                disabled=""
+                                data-decrement="true"
+                              >
+                                <span class="mz-icon --minus"></span>
+                              </button>
+                              <input
+                                type="tel"
+                                id="102385-quantity"
+                                name="102385-quantity"
+                                class="mz-integer-input__input"
+                                min="1"
+                                value="1"
+                              />
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper"
+                                data-increment="true"
+                              >
+                                <span class="mz-icon --add"></span>
+                              </button>
+                            </div>
+                            <button
+                              type="button"
+                              class="mz-button btn btn-lg --primary --medium --original-blue mz-integer-input__add-button"
+                            >
+                              <span>เพิ่ม</span>
+                            </button>
+                          </div>
+                          <div class="mz-cart-item__right-section">
+                            <div class="mz-cart-item__price-and-quantity">
+                              <span>1 x ฿ 45,920</span>
+                            </div>
+                            <div class="mz-cart-item__amount">
+                              <div class="mz-cart-item__final-price">
+                                ฿ 45,920
+                              </div>
+                            </div>
+                            <div class="mz-cart-item__pv-bv">
+                              +2100 PV / + 1200 BV
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mz-cart-item-bundle">
+                      <div class="mz-cart-item-bundle__header">
+                        <span>
+                          ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์
+                        </span>
+                        <a
+                          href="/bundle-edit"
+                          class="mz-cart-item-bundle__edit --desktop"
+                        >
+                          <span
+                            class="mz-icon --edit mz-cart-item-bundle__edit-icon"
+                          ></span>
+                          แก้ไขรายการ
+                        </a>
+                      </div>
+                      <div class="mz-cart-item-bundle__items">
+                        <div class="mz-cart-item-bundle__item-container">
+                          <div class="mz-cart-item-bundle__item">
+                            <img
+                              class="mz-image"
+                              data-src="/static/images/mock/bundle-1.jpg"
+                              alt="product-1"
+                            />
+                            <div class="mz-cart-item-bundle__quantity">X 5</div>
+                            <div class="mz-cart-item-bundle__title-container">
+                              <div class="mz-cart-item-bundle__title">
+                                บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร
+                                รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                              </div>
+                              <div
+                                class="mz-cart-item-label mz-cart-item-bundle__label --backOrder"
+                              >
+                                <span
+                                  class="mz-icon --status-calendar mz-cart-item-label__icon"
+                                ></span>
+                                <span>สินค้าค้างจ่าย พร้อมส่ง 22/02/20</span>
+                              </div>
+                              <div
+                                class="mz-cart-item-label mz-cart-item-bundle__label --nearlyOut"
+                              >
+                                <span>สินค้าใกล้หมด</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mz-cart-item-bundle__item-container">
+                          <div class="mz-cart-item-bundle__item">
+                            <img
+                              class="mz-image"
+                              data-src="/static/images/mock/bundle-1.jpg"
+                              alt="product-1"
+                            />
+                            <div class="mz-cart-item-bundle__quantity">X 3</div>
+                            <div class="mz-cart-item-bundle__title-container">
+                              <div class="mz-cart-item-bundle__title">
+                                นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์
+                              </div>
+                              <div
+                                class="mz-cart-item-label mz-cart-item-bundle__label --nearlyOut"
+                              >
+                                <span>สินค้าใกล้หมด</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mz-cart-item-bundle__item-container">
+                          <div class="mz-cart-item-bundle__item">
+                            <img
+                              class="mz-image"
+                              data-src="/static/images/mock/bundle-1.jpg"
+                              alt="product-1"
+                            />
+                            <div class="mz-cart-item-bundle__quantity">X 1</div>
+                            <div class="mz-cart-item-bundle__title-container">
+                              <div class="mz-cart-item-bundle__title">
+                                นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mz-cart-item-bundle__item-container">
+                          <div class="mz-cart-item-bundle__item">
+                            <img
+                              class="mz-image"
+                              data-src="/static/images/mock/bundle-1.jpg"
+                              alt="product-1"
+                            />
+                            <div class="mz-cart-item-bundle__quantity">X 1</div>
+                            <div class="mz-cart-item-bundle__title-container">
+                              <div class="mz-cart-item-bundle__title">
+                                อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mz-cart-item-bundle__item-container">
+                          <div class="mz-cart-item-bundle__item">
+                            <img
+                              class="mz-image"
+                              data-src="/static/images/mock/bundle-1.jpg"
+                              alt="product-1"
+                            />
+                            <div class="mz-cart-item-bundle__quantity">X 1</div>
+                            <div class="mz-cart-item-bundle__title-container">
+                              <div class="mz-cart-item-bundle__title">
+                                แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker)
+                                ขนาด 800 มล. 1 ใบ
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        href="/bundle-edit"
+                        class="mz-cart-item-bundle__edit --mobile"
+                      >
+                        <span
+                          class="mz-icon --edit mz-cart-item-bundle__edit-icon"
+                        ></span>
+                        แก้ไขรายการ
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    class="mz-cart-item mz-cart-orders__item"
+                    id="102395"
+                    data-id="102395"
+                  >
+                    <div class="mz-cart-item__detail">
+                      <div class="mz-cart-item__image-and-badge">
+                        <img
+                          class="mz-image"
+                          data-src="/static/images/mock/product-9.jpg"
+                          alt="mock/product-9"
+                        />
+                      </div>
+                      <div class="mz-cart-item__content-container">
+                        <div class="mz-cart-item__content-header">
+                          <div class="mz-cart-item__barcode">รหัส#102395</div>
+                        </div>
+                        <div class="mz-cart-item__content">
+                          <section class="mz-cart-item__left-section">
+                            <div class="mz-cart-item__title">
+                              ลูกกลิ้งระงับเหงื่อและกลิ่นกาย จีแอนด์เอช
+                              โพรเท็คท์+
+                            </div>
+                          </section>
+                          <div class="mz-integer-input mz-cart-item__quantity">
+                            <div class="mz-integer-input__quantity --active">
+                              <span>x 1</span>
+                            </div>
+                          </div>
+                          <div class="mz-cart-item__right-section">
+                            <div
+                              class="mz-image mz-cart-item__gift"
+                              data-background-src="/static/images/gift.svg"
+                            >
+                              สินค้าแถมฟรี
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="mz-cart-layout__panel">
+                  <h6 class="mz-cart-layout__mobile-discount-title">
+                    สิทธิ์ส่วนลดและโปรโมชั่นโค้ด
+                  </h6>
+                  <div class="mz-cart-layout__discount-section">
+                    <div class="mz-promo-code-input --mobile">
+                      <div class="mz-input mz-promo-code-input__input">
+                        <input
+                          type="text"
+                          placeholder="พิมพ์รหัสโค้ดส่วนลด"
+                          class="mz-input__input --with-clear-button"
+                        />
+                        <button type="button" class="mz-input__clear-button">
+                          <span class="mz-icon --delete"></span>
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        class="mz-button btn btn-lg --primary --large --original-blue mz-promo-code-input__button --square"
+                      >
+                        <span>ใช้ส่วนลด</span>
+                      </button>
+                    </div>
+                    <p class="mz-error mz-promo-code-input__error --invalid">
+                      <small>โปรโมชั่นโค้ดนี้ไม่สามารถใช้ได้</small>
+                    </p>
+                    <p class="mz-error mz-promo-code-input__error --is-used">
+                      <small>คุณใช้โปรโมชั่นโค้ดนี้ไปแล้ว</small>
+                    </p>
+                    <section class="mz-coupon-section">
+                      <div class="mz-coupon --bg-grey">
+                        <div class="mz-coupon__section --left">
+                          <p class="mz-coupon__condition">
+                            ส่วนลดเมื่อซื้อครบ ฿ 7,500
+                          </p>
+                          <strong>ลด ฿ 1,000</strong>
+                        </div>
+                        <div class="mz-coupon__section --right">
+                          <input
+                            type="checkbox"
+                            id="preview-coupon-COUPON1000A"
+                            value="COUPON1000A"
+                            class="mz-coupon__input"
+                            data-id="COUPON1000A"
+                            data-value="1000"
+                            readonly=""
+                          />
+                          <label
+                            for="preview-coupon-COUPON1000A"
+                            class="mz-coupon__button"
+                          >
+                            <div class="mz-coupon__unchecked-text">
+                              ใช้ส่วนลด
+                            </div>
+                            <div class="mz-coupon__checked-text">
+                              <span
+                                class="mz-icon --check mz-coupon__checked-icon"
+                              ></span>
+                              <span>ใช้แล้ว</span>
+                            </div>
+                          </label>
+                          <div class="mz-coupon__circle --top"></div>
+                          <div class="mz-coupon__circle --bottom"></div>
+                        </div>
+                      </div>
+                      <div class="mz-coupon --bg-grey">
+                        <div class="mz-coupon__section --left">
+                          <p class="mz-coupon__condition">
+                            ส่วนลดเมื่อซื้อครบ ฿ 7,500
+                          </p>
+                          <strong>ลด ฿ 1,000</strong>
+                        </div>
+                        <div class="mz-coupon__section --right">
+                          <input
+                            type="checkbox"
+                            id="preview-coupon-COUPON1000B"
+                            value="COUPON1000B"
+                            class="mz-coupon__input"
+                            data-id="COUPON1000B"
+                            data-value="1000"
+                            readonly=""
+                          />
+                          <label
+                            for="preview-coupon-COUPON1000B"
+                            class="mz-coupon__button"
+                          >
+                            <div class="mz-coupon__unchecked-text">
+                              ใช้ส่วนลด
+                            </div>
+                            <div class="mz-coupon__checked-text">
+                              <span
+                                class="mz-icon --check mz-coupon__checked-icon"
+                              ></span>
+                              <span>ใช้แล้ว</span>
+                            </div>
+                          </label>
+                          <div class="mz-coupon__circle --top"></div>
+                          <div class="mz-coupon__circle --bottom"></div>
+                        </div>
+                      </div>
+                      <div class="mz-coupon-section__see-all">
+                        <button
+                          type="button"
+                          data-toggle="modal"
+                          data-target="#coupon-modal"
+                        >
+                          ดูทั้งหมด
+                        </button>
+                      </div>
+                      <div
+                        id="coupon-modal"
+                        class="mz-modal modal fade --mobile-full"
+                        tabindex="-1"
+                        role="dialog"
+                        style="display: none;"
+                      >
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content mz-coupon-section__modal">
+                            <button
+                              type="button"
+                              class="mz-modal__close-button"
+                              data-dismiss="modal"
+                              aria-label="Close"
+                            >
+                              <span class="mz-icon --close"></span>
+                            </button>
+                            <header class="mz-coupon-section__modal-header">
+                              <h3>สิทธิ์ส่วนลดในตะกร้าของคุณ</h3>
+                            </header>
+                            <div class="mz-coupon-section__modal-container">
+                              <h6>สิทธิ์ส่วนลดที่ใช้ได้ในตะกร้านี้</h6>
+                              <div class="mz-coupon --bg-white">
+                                <div class="mz-coupon__section --left">
+                                  <p class="mz-coupon__condition">
+                                    ส่วนลดเมื่อซื้อครบ ฿ 7,500
+                                  </p>
+                                  <strong>ลด ฿ 1,000</strong>
+                                </div>
+                                <div class="mz-coupon__section --right">
+                                  <input
+                                    type="checkbox"
+                                    id="coupon-COUPON1000A"
+                                    name="coupon"
+                                    value="COUPON1000A"
+                                    class="mz-coupon__input"
+                                    data-id="COUPON1000A"
+                                    data-value="1000"
+                                    readonly=""
+                                  />
+                                  <label
+                                    for="coupon-COUPON1000A"
+                                    class="mz-coupon__button"
+                                  >
+                                    <div class="mz-coupon__unchecked-text">
+                                      ใช้ส่วนลด
+                                    </div>
+                                    <div class="mz-coupon__checked-text">
+                                      <span
+                                        class="mz-icon --check mz-coupon__checked-icon"
+                                      ></span>
+                                      <span>ใช้แล้ว</span>
+                                    </div>
+                                  </label>
+                                  <div class="mz-coupon__circle --top"></div>
+                                  <div class="mz-coupon__circle --bottom"></div>
+                                </div>
+                              </div>
+                              <div class="mz-coupon --bg-white">
+                                <div class="mz-coupon__section --left">
+                                  <p class="mz-coupon__condition">
+                                    ส่วนลดเมื่อซื้อครบ ฿ 7,500
+                                  </p>
+                                  <strong>ลด ฿ 1,000</strong>
+                                </div>
+                                <div class="mz-coupon__section --right">
+                                  <input
+                                    type="checkbox"
+                                    id="coupon-COUPON1000B"
+                                    name="coupon"
+                                    value="COUPON1000B"
+                                    class="mz-coupon__input"
+                                    data-id="COUPON1000B"
+                                    data-value="1000"
+                                    readonly=""
+                                  />
+                                  <label
+                                    for="coupon-COUPON1000B"
+                                    class="mz-coupon__button"
+                                  >
+                                    <div class="mz-coupon__unchecked-text">
+                                      ใช้ส่วนลด
+                                    </div>
+                                    <div class="mz-coupon__checked-text">
+                                      <span
+                                        class="mz-icon --check mz-coupon__checked-icon"
+                                      ></span>
+                                      <span>ใช้แล้ว</span>
+                                    </div>
+                                  </label>
+                                  <div class="mz-coupon__circle --top"></div>
+                                  <div class="mz-coupon__circle --bottom"></div>
+                                </div>
+                              </div>
+                              <div class="mz-coupon --bg-white">
+                                <div class="mz-coupon__section --left">
+                                  <p class="mz-coupon__condition">
+                                    ส่วนลดเมื่อสั่งซื้อผลิตภัณฑ์ของนักธุรกิจแอมเวย์ใหม่รวมมูลค่า
+                                    4,829 บาท
+                                  </p>
+                                  <strong>ลด ฿ 1,000</strong>
+                                </div>
+                                <div class="mz-coupon__section --right">
+                                  <input
+                                    type="checkbox"
+                                    id="coupon-COUPON1000C"
+                                    name="coupon"
+                                    value="COUPON1000C"
+                                    class="mz-coupon__input"
+                                    data-id="COUPON1000C"
+                                    data-value="1000"
+                                    readonly=""
+                                  />
+                                  <label
+                                    for="coupon-COUPON1000C"
+                                    class="mz-coupon__button"
+                                  >
+                                    <div class="mz-coupon__unchecked-text">
+                                      ใช้ส่วนลด
+                                    </div>
+                                    <div class="mz-coupon__checked-text">
+                                      <span
+                                        class="mz-icon --check mz-coupon__checked-icon"
+                                      ></span>
+                                      <span>ใช้แล้ว</span>
+                                    </div>
+                                  </label>
+                                  <div class="mz-coupon__circle --top"></div>
+                                  <div class="mz-coupon__circle --bottom"></div>
+                                </div>
+                              </div>
+                              <h6>สิทธิ์ส่วนลดทั้งหมด</h6>
+                              <div class="mz-coupon --bg-white --disabled">
+                                <div class="mz-coupon__section --left">
+                                  <p class="mz-coupon__condition">
+                                    ส่วนลดเมื่อซื้อครบ ฿ 20,000
+                                  </p>
+                                  <strong>ลด ฿ 2,500</strong>
+                                </div>
+                                <div class="mz-coupon__section --right">
+                                  <input
+                                    type="checkbox"
+                                    id="preview-coupon-COUPON2500A"
+                                    value="COUPON2500A"
+                                    class="mz-coupon__input"
+                                    disabled=""
+                                    data-id="COUPON2500A"
+                                    data-value="2500"
+                                    readonly=""
+                                  />
+                                  <label
+                                    for="preview-coupon-COUPON2500A"
+                                    class="mz-coupon__button --disabled"
+                                  >
+                                    <div class="mz-coupon__unchecked-text">
+                                      ใช้ส่วนลด
+                                    </div>
+                                    <div class="mz-coupon__checked-text">
+                                      <span
+                                        class="mz-icon --check mz-coupon__checked-icon"
+                                      ></span>
+                                      <span>ใช้แล้ว</span>
+                                    </div>
+                                  </label>
+                                  <div class="mz-coupon__circle --top"></div>
+                                  <div class="mz-coupon__circle --bottom"></div>
+                                </div>
+                              </div>
+                              <div class="mz-coupon --bg-white --disabled">
+                                <div class="mz-coupon__section --left">
+                                  <p class="mz-coupon__condition">
+                                    ส่วนลดเมื่อสั่งซื้อผลิตภัณฑ์ของนักธุรกิจแอมเวย์ใหม่รวมมูลค่า
+                                    4,829 บาท
+                                  </p>
+                                  <strong>ลด ฿ 2,500</strong>
+                                </div>
+                                <div class="mz-coupon__section --right">
+                                  <input
+                                    type="checkbox"
+                                    id="preview-coupon-COUPON2500B"
+                                    value="COUPON2500B"
+                                    class="mz-coupon__input"
+                                    disabled=""
+                                    data-id="COUPON2500B"
+                                    data-value="2500"
+                                    readonly=""
+                                  />
+                                  <label
+                                    for="preview-coupon-COUPON2500B"
+                                    class="mz-coupon__button --disabled"
+                                  >
+                                    <div class="mz-coupon__unchecked-text">
+                                      ใช้ส่วนลด
+                                    </div>
+                                    <div class="mz-coupon__checked-text">
+                                      <span
+                                        class="mz-icon --check mz-coupon__checked-icon"
+                                      ></span>
+                                      <span>ใช้แล้ว</span>
+                                    </div>
+                                  </label>
+                                  <div class="mz-coupon__circle --top"></div>
+                                  <div class="mz-coupon__circle --bottom"></div>
+                                </div>
+                              </div>
+                              <div class="mz-coupon --bg-white --disabled">
+                                <div class="mz-coupon__section --left">
+                                  <p class="mz-coupon__condition">
+                                    ส่วนลดเมื่อซื้อครบ ฿ 20,000
+                                  </p>
+                                  <strong>ลด ฿ 2,500</strong>
+                                </div>
+                                <div class="mz-coupon__section --right">
+                                  <input
+                                    type="checkbox"
+                                    id="preview-coupon-COUPON2500C"
+                                    value="COUPON2500C"
+                                    class="mz-coupon__input"
+                                    disabled=""
+                                    data-id="COUPON2500C"
+                                    data-value="2500"
+                                    readonly=""
+                                  />
+                                  <label
+                                    for="preview-coupon-COUPON2500C"
+                                    class="mz-coupon__button --disabled"
+                                  >
+                                    <div class="mz-coupon__unchecked-text">
+                                      ใช้ส่วนลด
+                                    </div>
+                                    <div class="mz-coupon__checked-text">
+                                      <span
+                                        class="mz-icon --check mz-coupon__checked-icon"
+                                      ></span>
+                                      <span>ใช้แล้ว</span>
+                                    </div>
+                                  </label>
+                                  <div class="mz-coupon__circle --top"></div>
+                                  <div class="mz-coupon__circle --bottom"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                  <div
+                    id="cart-dim-layer"
+                    class="mz-dim-layer mz-cart-layout__dim-layer"
+                  ></div>
+                  <div class="mz-cart-layout__mobile-panel">
+                    <div class="mz-cart-layout__detail">
+                      <div
+                        class="mz-cart-layout__detail-toggler"
+                        data-dropdown-bottom-restrict="true"
+                      >
+                        <span class="mz-cart-layout__show-detail">
+                          ดูรายละเอียด
+                        </span>
+                        <span class="mz-cart-layout__hide-detail">
+                          ซ่อนรายละเอียด
+                        </span>
+                        <span
+                          class="mz-icon --arrow-up mz-cart-layout__arrow"
+                        ></span>
+                      </div>
+                      <section class="mz-cart-detail-section">
+                        <div class="mz-cart-value-row">
+                          <span class="mz-cart-value-row__title">
+                            รวมค่าสินค้า
+                          </span>
+                          <span>
+                            <span class="mz-cart-detail-section__value">
+                              ฿ 289,563
+                            </span>
+                          </span>
+                        </div>
+                        <div class="mz-cart-value-row">
+                          <span class="mz-cart-value-row__title">
+                            ค่าจัดส่ง
+                          </span>
+                          <span>
+                            <span class="mz-cart-detail-section__value">
+                              ฿ 75
+                            </span>
+                          </span>
+                        </div>
+                        <div class="mz-cart-value-row --red">
+                          <span class="mz-cart-value-row__title">
+                            ส่วนลดค่าจัดส่ง
+                          </span>
+                          <span>
+                            <span class="mz-cart-detail-section__value">
+                              - ฿ 75
+                            </span>
+                          </span>
+                        </div>
+                        <div
+                          id="discount-template"
+                          class="mz-cart-value-row --red"
+                        >
+                          <div class="mz-cart-value-row__nested-area">
+                            <button
+                              type="button"
+                              class="mz-cart-value-row__remove-button"
+                            >
+                              <span class="mz-icon --delete"></span>
+                            </button>
+                          </div>
+                          <span class="mz-cart-value-row__title">
+                            <span
+                              class="mz-cart-detail-section__discount-title"
+                            ></span>
+                          </span>
+                          <span>
+                            <span class="mz-cart-detail-section__value">
+                              ฿ 0
+                            </span>
+                          </span>
+                        </div>
+                        <div
+                          class="mz-promo-code-input mz-cart-detail-section__enter --desktop"
+                        >
+                          <div class="mz-input mz-promo-code-input__input">
+                            <input
+                              type="text"
+                              id="promo-code-input"
+                              name="promo-code"
+                              placeholder="พิมพ์รหัสโค้ดส่วนลด"
+                              class="mz-input__input --with-clear-button"
+                            />
+                            <button
+                              type="button"
+                              class="mz-input__clear-button"
+                            >
+                              <span class="mz-icon --delete"></span>
+                            </button>
+                          </div>
+                          <button
+                            type="button"
+                            class="mz-button btn btn-lg --primary --large --original-blue mz-promo-code-input__button --square"
+                          >
+                            <span>ใช้ส่วนลด</span>
+                          </button>
+                        </div>
+                        <p
+                          class="mz-error mz-promo-code-input__error --invalid"
+                        >
+                          <small>โปรโมชั่นโค้ดนี้ไม่สามารถใช้ได้</small>
+                        </p>
+                        <p
+                          class="mz-error mz-promo-code-input__error --is-used"
+                        >
+                          <small>คุณใช้โปรโมชั่นโค้ดนี้ไปแล้ว</small>
+                        </p>
+                      </section>
+                    </div>
+                    <div class="mz-cart-layout__summary">
+                      <section class="mz-cart-summary">
+                        <div class="mz-cart-summary__rows">
+                          <div
+                            class="mz-cart-value-row mz-cart-summary__row --desktop --no-title-mobile"
+                          >
+                            <span class="mz-cart-value-row__title">
+                              <strong>สรุปยอดชำระ</strong>
+                            </span>
+                            <span>
+                              <span
+                                class="mz-cart-summary__total"
+                                data-total="true"
+                              >
+                                ฿ 0
+                              </span>
+                            </span>
+                          </div>
+                          <div
+                            class="mz-cart-value-row mz-cart-summary__row --points"
+                          >
+                            <span class="mz-cart-value-row__title">
+                              PV / BV ที่จะได้รับ
+                            </span>
+                            <span>1,000 / 2,000</span>
+                          </div>
+                        </div>
+                        <button
+                          type="submit"
+                          class="mz-button btn btn-lg --primary --large --original-blue mz-cart-summary__button"
+                        >
+                          <span>สรุปรายการ</span>
+                        </button>
+                      </section>
+                      <section class="mz-discount-bar">
+                        รับส่วนลด 20% ทันที! เมื่อซื้อครบ ฿30,000
+                      </section>
+                    </div>
+                  </div>
+                  <section class="mz-gpv-bar">
+                    <p class="mz-gpv-bar__content">
+                      เพิ่มอีกเพียง
+                      <strong>2500 GPV</strong>
+                      <br />
+                      เพื่อรับโบนัสส่วนลดประจำเดือน 6%
+                    </p>
+                    <img
+                      class="mz-image mz-gpv-bar__image"
+                      data-src="/static/images/cart-gpv.svg"
+                      alt="cart-gpv"
+                    />
+                    <div class="mz-gpv-bar__percent">
+                      <strong><span id="gpv-from">3%</span></strong>
+                      <strong><span id="gpv-to">6%</span></strong>
+                    </div>
+                    <div class="mz-gpv-bar__outter-bar">
+                      <div
+                        class="mz-gpv-bar__inner-bar"
+                        data-lower-bound="5000"
+                        data-upper-bound="10000"
+                        data-current-gpv="7500"
+                      ></div>
+                    </div>
+                  </section>
+                  <section class="mz-plastic-bag-options">
+                    <div class="mz-plastic-bag-options__content">
+                      <strong>ร่วมรักษ์โลก ลดขยะจากถุงพลาสติก</strong>
+                      <div
+                        class="mz-toggle-button mz-plastic-bag-options__toggle-button --small --green"
+                      >
+                        <div class="mz-toggle-button__container">
+                          <div
+                            class="mz-toggle-button__active-background"
+                            style="transform: translate3d(0%, 0, 0);"
+                          ></div>
+                          <input
+                            type="radio"
+                            class="mz-toggle-button__input"
+                            id="no"
+                            name="plastic-bag"
+                            value="no"
+                            readonly=""
+                            checked=""
+                          />
+                          <label
+                            for="no"
+                            class="mz-toggle-button__button --active"
+                          >
+                            <span>ไม่รับ</span>
+                          </label>
+                          <input
+                            type="radio"
+                            class="mz-toggle-button__input"
+                            id="yes"
+                            name="plastic-bag"
+                            value="yes"
+                            readonly=""
+                          />
+                          <label for="yes" class="mz-toggle-button__button">
+                            <span>รับ</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      class="mz-image"
+                      data-src="/static/images/cart-plastic.svg"
+                      alt="cart-plastic"
+                    />
+                  </section>
+                </section>
+              </form>
+            </section>
+            <section class="mz-cart-layout__section">
+              <div class="mz-upselling">
+                <h4 class="mz-upselling__title">สินค้าแนะนำ</h4>
+                <ul class="mz-upselling__list">
+                  <li class="mz-upselling-item">
+                    <img
+                      class="mz-image mz-upselling-item__image"
+                      data-src="/static/images/mock/product-4.jpg"
+                      alt="mock/product-4"
+                    />
+                    <div class="mz-upselling-item__barcode">รหัส #0102345</div>
+                    <div class="mz-upselling-item__title">
+                      อาร์ทิสทรี ซิกเนเจอร์ คัลเลอร์ อาย แชโดว์ ควอด รีฟิลล์
+                      พิ้งค์ ช็อกโกแลต
+                    </div>
+                    <div class="mz-upselling-item__pvbv">2100 PV / 2000 BV</div>
+                    <div class="mz-upselling-item__price">
+                      <span>ราคาสมาชิก</span>
+                      <span>฿ 21,000</span>
+                    </div>
+                    <div class="mz-integer-input mz-upselling-item__input">
+                      <div class="mz-integer-input__quantity">
+                        <button
+                          type="button"
+                          class="mz-integer-input__stepper"
+                          data-decrement="true"
+                        >
+                          <span class="mz-icon --minus"></span>
+                        </button>
+                        <input
+                          type="tel"
+                          id="0102345-quantity"
+                          class="mz-integer-input__input"
+                          value="0"
+                        />
+                        <button
+                          type="button"
+                          class="mz-integer-input__stepper"
+                          data-increment="true"
+                        >
+                          <span class="mz-icon --add"></span>
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        class="mz-button btn btn-lg --primary --medium --original-blue mz-integer-input__add-button --active"
+                      >
+                        <span>เพิ่ม</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="mz-upselling-item">
+                    <img
+                      class="mz-image mz-upselling-item__image"
+                      data-src="/static/images/mock/product-5.jpg"
+                      alt="mock/product-5"
+                    />
+                    <div class="mz-upselling-item__barcode">รหัส #0102346</div>
+                    <div class="mz-upselling-item__title">
+                      อาร์ทิสทรี ซิกเนเจอร์ ไลท์ อัพ ลิป กลอสส์ - พิงค์นู้ด
+                    </div>
+                    <div class="mz-upselling-item__pvbv">2100 PV / 2000 BV</div>
+                    <div class="mz-upselling-item__price">
+                      <span>ราคาสมาชิก</span>
+                      <span>฿ 24,000</span>
+                    </div>
+                    <div class="mz-integer-input mz-upselling-item__input">
+                      <div class="mz-integer-input__quantity">
+                        <button
+                          type="button"
+                          class="mz-integer-input__stepper"
+                          data-decrement="true"
+                        >
+                          <span class="mz-icon --minus"></span>
+                        </button>
+                        <input
+                          type="tel"
+                          id="0102346-quantity"
+                          class="mz-integer-input__input"
+                          value="0"
+                        />
+                        <button
+                          type="button"
+                          class="mz-integer-input__stepper"
+                          data-increment="true"
+                        >
+                          <span class="mz-icon --add"></span>
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        class="mz-button btn btn-lg --primary --medium --original-blue mz-integer-input__add-button --active"
+                      >
+                        <span>เพิ่ม</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="mz-upselling-item">
+                    <img
+                      class="mz-image mz-upselling-item__image"
+                      data-src="/static/images/mock/product-6.jpg"
+                      alt="mock/product-6"
+                    />
+                    <div class="mz-upselling-item__barcode">รหัส #0102347</div>
+                    <div class="mz-upselling-item__title">
+                      อาร์ทิสทรี ฟลอรา ชิค
+                    </div>
+                    <div class="mz-upselling-item__pvbv">2100 PV / 2000 BV</div>
+                    <div class="mz-upselling-item__price">
+                      <span>ราคาสมาชิก</span>
+                      <span>฿ 1,200</span>
+                    </div>
+                    <div class="mz-integer-input mz-upselling-item__input">
+                      <div class="mz-integer-input__quantity">
+                        <button
+                          type="button"
+                          class="mz-integer-input__stepper"
+                          data-decrement="true"
+                        >
+                          <span class="mz-icon --minus"></span>
+                        </button>
+                        <input
+                          type="tel"
+                          id="0102347-quantity"
+                          class="mz-integer-input__input"
+                          value="0"
+                        />
+                        <button
+                          type="button"
+                          class="mz-integer-input__stepper"
+                          data-increment="true"
+                        >
+                          <span class="mz-icon --add"></span>
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        class="mz-button btn btn-lg --primary --medium --original-blue mz-integer-input__add-button --active"
+                      >
+                        <span>เพิ่ม</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="mz-upselling-item">
+                    <img
+                      class="mz-image mz-upselling-item__image"
+                      data-src="/static/images/mock/product-7.jpg"
+                      alt="mock/product-7"
+                    />
+                    <div class="mz-upselling-item__barcode">รหัส #0102348</div>
+                    <div class="mz-upselling-item__title">
+                      อาร์ทิสทรี ไฮดร้า-วี เฟรช โฟมมิ่ง เคล็นเซอร์
+                    </div>
+                    <div class="mz-upselling-item__pvbv">2100 PV / 2000 BV</div>
+                    <div class="mz-upselling-item__price">
+                      <span>ราคาสมาชิก</span>
+                      <span>฿ 118,000</span>
+                    </div>
+                    <div class="mz-integer-input mz-upselling-item__input">
+                      <div class="mz-integer-input__quantity">
+                        <button
+                          type="button"
+                          class="mz-integer-input__stepper"
+                          data-decrement="true"
+                        >
+                          <span class="mz-icon --minus"></span>
+                        </button>
+                        <input
+                          type="tel"
+                          id="0102348-quantity"
+                          class="mz-integer-input__input"
+                          value="0"
+                        />
+                        <button
+                          type="button"
+                          class="mz-integer-input__stepper"
+                          data-increment="true"
+                        >
+                          <span class="mz-icon --add"></span>
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        class="mz-button btn btn-lg --primary --medium --original-blue mz-integer-input__add-button --active"
+                      >
+                        <span>เพิ่ม</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="mz-upselling-item">
+                    <img
+                      class="mz-image mz-upselling-item__image"
+                      data-src="/static/images/mock/product-8.jpg"
+                      alt="mock/product-8"
+                    />
+                    <div class="mz-upselling-item__barcode">รหัส #0102349</div>
+                    <div class="mz-upselling-item__title">
+                      อาร์ทิสทรี ซิกเนเจอร์ ซีเล็ค ไฮเดรทติ้ง มาสก์
+                    </div>
+                    <div class="mz-upselling-item__pvbv">2100 PV / 2000 BV</div>
+                    <div class="mz-upselling-item__price">
+                      <span>ราคาสมาชิก</span>
+                      <span>฿ 31,000</span>
+                    </div>
+                    <div class="mz-integer-input mz-upselling-item__input">
+                      <div class="mz-integer-input__quantity">
+                        <button
+                          type="button"
+                          class="mz-integer-input__stepper"
+                          data-decrement="true"
+                        >
+                          <span class="mz-icon --minus"></span>
+                        </button>
+                        <input
+                          type="tel"
+                          id="0102349-quantity"
+                          class="mz-integer-input__input"
+                          value="0"
+                        />
+                        <button
+                          type="button"
+                          class="mz-integer-input__stepper"
+                          data-increment="true"
+                        >
+                          <span class="mz-icon --add"></span>
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        class="mz-button btn btn-lg --primary --medium --original-blue mz-integer-input__add-button --active"
+                      >
+                        <span>เพิ่ม</span>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/v2/Common/js/global.js"></script>
+    <script src="/v2/Common/js/IntegerInput.js"></script>
+    <script src="/v2/Common/js/Image.js"></script>
+    <script src="/v2/Common/js/ToggleButton.js"></script>
+    <script src="/v2/Cart/js/GpvBar.js"></script>
+    <script src="/v2/Common/js/Input.js"></script>
+    <script src="/v2/Cart/js/PromoCodeInput.js"></script>
+    <script src="/v2/Cart/js/CartDetailSection.js"></script>
+    <script src="/v2/Cart/js/useMockPromoCodes.js"></script>
+    <script src="/v2/Common/js/DimLayer.js"></script>
+    <script src="/v2/Cart/js/CouponSection.js"></script>
+    <script src="/v2/Common/js/Dropdown.js"></script>
+    <script src="/v2/Common/js/DropdownInput.js"></script>
+    <script src="/lib/js/bodyScrollLock.min.js"></script>
+    <script src="/v2/Common/js/SearchableDropdown.js"></script>
+    <script src="/v2/Cart/js/CartLayout.js"></script>
+    <script src="/v1/Header/js/PickupAddressModal.js"></script>
+    <script src="/v1/Common/js/image.js"></script>
+    <script src="/v1/Search/js/SearchModal.js"></script>
+    <script src="/v1/Header/js/UserMenu.js"></script>
+    <script src="/v1/Header/js/ProductMenu.js"></script>
+    <script src="/v2/Header/js/ToastMessage.js"></script>
+    <script src="/v1/Header/js/GlobalDeliveryMethods.js"></script>
+    <script src="/v1/Header/js/LanguageSwitcher.js"></script>
+    <script src="/v2/Layout/js/MainLayout.js"></script>
+    <script src="/lib/js/validator.min.js"></script>
+    <script src="/lib/js/jquery.validate.min.js"></script>
+    <script src="/v2/Common/js/formValidationDefaults.js"></script>
+    <script src="/v2/Cart/js/Cart.js"></script>
+  </body>
+</html>

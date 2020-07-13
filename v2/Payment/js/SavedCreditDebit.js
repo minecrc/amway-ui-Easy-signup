@@ -6,7 +6,6 @@
   const savedAmwayCardOptions = $('#saved-amway-card-options');
 
   const addCardContent = $('.mz-saved-credit-debit__add-card-content');
-  const instalmentSection = $('.mz-saved-credit-debit__instalment-section');
 
   const creditDebitButton = $('#credit-debit');
   const creditDebitText = creditDebitButton.find(
@@ -44,22 +43,17 @@
     creditDebitText.append(cardNumber);
     creditDebitWrapper.dropdownModal('close');
 
-    if (checkedInput.is('[data-instalment="true"]')) {
-      instalmentSection.collapse('show');
-    } else if (checkedInput.is('[data-amway-card="true"]')) {
+    if (
+      // backward compatibility for full payment which doesn't have attr data-instalment
+      checkedInput.not('[data-instalment="true"]') &&
+      checkedInput.is('[data-amway-card="true"]')
+    ) {
       savedAmwayCardOptions.collapse('show');
     } else {
       savedAmwayCardOptions.collapse('hide');
-      instalmentSection.collapse('hide');
     }
 
     addCardContent.collapse('hide');
-
-    const cvvInput = instalmentSection.find(
-      'input[name="instalment-security-code"]'
-    );
-
-    cvvInput.val('');
   }
 
   addCardContent.on('hidden.bs.collapse', () => {

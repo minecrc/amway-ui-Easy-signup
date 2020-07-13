@@ -13,6 +13,10 @@ body,
   width: 100%;
 }
 
+#root {
+  flex-direction: column;
+}
+
 body {
   min-height: 100%;
   color: @colors[black];
@@ -104,6 +108,8 @@ input::placeholder {
 }
 
 label {
+  // reset bootstrap
+  margin-bottom: 0;
   color: inherit;
   font-family: inherit;
   font-weight: inherit;

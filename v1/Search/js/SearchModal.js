@@ -13,7 +13,14 @@
   }
 
   function focus() {
-    $('.oa-search-input:visible input').focus();
+    const searchInput = $('.oa-search-input:visible input');
+
+    if (!window.isDesktop()) {
+      // Prevent tabbing on mobile
+      $('input').not(searchInput).attr('tabindex', -1);
+    }
+
+    searchInput.focus();
   }
 
   function open() {
@@ -28,6 +35,13 @@
   function close() {
     searchModal.removeClass('--active');
     $('body').removeClass('modal-open');
+    const searchInput = $('.oa-search-input:visible input');
+    if (searchInput.length) {
+      searchInput.get(0).blur();
+    }
+
+    // Reset tabbing for other inputs
+    $('input[tabindex="-1"]').not(searchInput).attr('tabindex', null);
   }
 
   function initSearchButton() {
@@ -45,9 +59,9 @@
 
     searchModal.attr('data-init', true);
     searchModal.mousedown(e => {
-      e.preventDefault();
-
-      focus();
+      if (window.isDesktop()) {
+        e.preventDefault();
+      }
     });
 
     const closeButton = searchModal.find('.oa-search-modal__close-button');
@@ -69,8 +83,9 @@
     input.on('focus', () => {
       if (input.is(':visible')) open();
     });
+
     input.on('blur', () => {
-      if (input.is(':visible')) close();
+      if (window.isDesktop() && input.is(':visible')) close();
     });
   }
 

@@ -3,7 +3,14 @@
 @import '../Common/mixins.less';
 
 .mz-bank-method-option {
+  @side-padding: @spacing[s];
+  @image-size: @icon-sizes[l];
+  @image-margin-right: @spacing[xs] + @spacing[xxs];
+  position: relative;
+
   width: 100%;
+  border: 1px solid transparent;
+  border-radius: @border-radiuses[s];
 
   input {
     .mz-hidden-input;
@@ -13,82 +20,56 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: 48px;
-    margin: 0;
-    padding: @spacing[s];
-    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
-    border: 1px solid @colors[grey-200];
-    border-radius: @border-radiuses[s];
+    padding: @spacing[xs] + @spacing[xxs] @side-padding;
+    transition: color 0.3s, background-color 0.3s;
     cursor: pointer;
 
-    @media screen and (min-width: @breakpoints[md]) {
-      border: 0;
-      border-radius: 0;
+    &:after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      left: -1px;
+      transition: border-color 0.3s, border-radius 0.3s;
+      border: 1px solid @colors[grey-200];
+      border-radius: @border-radiuses[s];
+      pointer-events: none;
     }
   }
 
   input:checked ~ &__bank-toggle {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
     color: @colors[white];
   }
 
   &__bank-image {
-    width: 24px;
-    height: 24px;
-    margin-right: @spacing[xs];
-  }
-
-  &__content {
-    overflow: hidden;
-    border-bottom-right-radius: @border-radiuses[s];
-    border-bottom-left-radius: @border-radiuses[s];
+    width: @image-size;
+    height: @image-size;
+    margin-right: @image-margin-right;
+    border-radius: @border-radiuses[s];
   }
 
   &__content-title {
-    padding: @spacing[xs] @spacing[s] 0;
+    padding: @spacing[xs] + @spacing[xxs] @spacing[s] @spacing[xxs];
     font-weight: @font-weights[bold];
-
-    &.--desktop {
-      display: none;
-      margin-left: auto;
-      padding: 0;
-    }
-
-    @media screen and (min-width: @breakpoints[md]) {
-      display: none;
-    }
   }
 
-  input:checked ~ &__bank-toggle &__content-title.--desktop {
-    @media screen and (min-width: @breakpoints[md]) {
-      display: block;
-    }
+  &__content-title.--desktop {
+    display: none;
+    margin-left: auto;
+    padding: 0;
+    color: @colors[white];
   }
 
   &__method-button-container {
-    &:hover {
-      @media screen and (min-width: @breakpoints[md]) and (hover: hover) {
-        background: @colors[grey-100];
-      }
-    }
-
-    @media screen and (min-width: @breakpoints[md]) {
-      padding-right: @spacing[s];
-      padding-left: @spacing[xl];
-    }
+    .DEPRECATEDmz-dropdown-option();
   }
 
   &__method-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: @spacing[xs] + @spacing[xxs] @spacing[s];
     cursor: pointer;
-  }
-
-  &__method-button-container:not(:last-child) &__method-button {
-    border-bottom: 1px solid @colors[grey-200];
   }
 
   &__app-icon {
@@ -112,18 +93,22 @@
   each(@bank-colors, {
     &.--@{key} input:checked ~ &__bank-toggle {
       background: @value;
-      border-color: @value;
-    }
 
-    &.--@{key} &__content {
-      border: 1px solid @value;
+      &:after {
+        border-color: @value;
+        border-bottom-right-radius: @border-radiuses[s];
+        border-bottom-left-radius: @border-radiuses[s];
+      }
     }
 
     &.--@{key} &__bank-toggle:hover {
       @media (hover: hover) {
         background: @value;
-        border-color: @value;
         color: @colors[white];
+
+        &:after {
+          border-color: @value;
+        }
       }
     }
 
@@ -133,4 +118,31 @@
       }
     }
   });
+
+  @media screen and (min-width: @breakpoints[md]) {
+    &__bank-toggle {
+      &:after {
+        border-radius: 0;
+        border-color: transparent;
+      }
+    }
+
+    &__content-title {
+      display: none;
+    }
+
+    input:checked ~ &__bank-toggle &__content-title.--desktop {
+      display: block;
+    }
+
+    &__method-button-container {
+      @left-pading: @side-padding + @image-size + @image-margin-right;
+
+      padding-left: @left-pading;
+
+      &:after {
+        left: @left-pading;
+      }
+    }
+  }
 }

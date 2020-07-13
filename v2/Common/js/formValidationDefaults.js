@@ -38,6 +38,29 @@
     }
   });
 
+  $.validator.setDefaults({
+    highlight: (element, errorClass) => {
+      const $element = $(element);
+      const errorTarget = $($element.attr('data-error-target'));
+
+      if (errorTarget.length > 0) {
+        errorTarget.addClass(errorClass);
+      } else {
+        $element.addClass(errorClass);
+      }
+    },
+    unhighlight: (element, errorClass) => {
+      const $element = $(element);
+      const errorTarget = $($element.attr('data-error-target'));
+
+      if (errorTarget.length > 0) {
+        errorTarget.removeClass(errorClass);
+      } else {
+        $element.removeClass(errorClass);
+      }
+    }
+  });
+
   $.validator.addMethod(
     'mobileTH',
     function mobileTH(value, element) {
