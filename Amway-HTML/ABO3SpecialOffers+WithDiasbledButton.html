@@ -17,6 +17,74 @@
             background: #b2b2b2 !important;
             color: #ffffff !important;
         }
+        
+        .mz-cart-orders__header.--with-btn {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .mz-cart-orders__header h6 {
+            max-width: 60%;
+            text-align: left;
+        }
+        
+        .mz-cart-orders__header .mz-drop-cart__click {
+            max-width: 40%;
+            text-align: right;
+        }
+        
+        .modal-dialog.drop-cart .modal-content {
+            max-width: 400px !important;
+            width: 400px;
+            height: 400px !important;
+        }
+        
+        .mz-icon.--close:before {
+            content: "\65";
+            background: transparent;
+        }
+        
+        #Drop-Cart .mz-modal.modal-content {
+            padding: 0 !important;
+        }
+        
+        #Drop-Cart .mz-modal__close-button {
+            position: relative;
+            top: unset;
+            right: unset;
+            margin-bottom: 0px;
+        }
+        
+        #Drop-Cart .mz-dropCart__content-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .modal-content-dropCart.mz-special-offer__modal {
+            background-color: #ffffff;
+        }
+        
+        #Drop-Cart .mz-cart-orders__header {
+            margin: 0;
+            background: #002f5f;
+            color: #ffffff;
+            padding: 0 15px 0 15px;
+        }
+        
+        .drop-cart-text {
+            max-width: 80%;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            padding: 30% 0 20% 0;
+        }
+        
+        .drop-cart-text span {
+            font-weight: 600;
+        }
     </style>
 
     <div id="root">
@@ -1082,8 +1150,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <header class="mz-cart-orders__header">
-                                    <h6>สินค้า 10 รายการ</h6>
+                                <header class="mz-cart-orders__header --with-btn">
+                                    <h6>สินค้า 10 รายการ</h6> <button type="button" class="mz-special-offer__click mz-drop-cart__click" data-toggle="modal" data-target="#Drop-Cart">ลบทั้งตระกร้า</button>
                                 </header>
                                 <div class="mz-special-offer">
                                     <section class="mz-special-offer__section --initial">
@@ -1097,6 +1165,35 @@
                                         <img class="mz-image mz-special-offer__image" data-src="../static/images/cart-special-offer.svg" alt="cart-special-offer" />
                                         </span>
                                     </section>
+                                    <div id="Drop-Cart" class="mz-modal modal fade --mobile-full" tabindex="-1" role="dialog" style="display: none;">
+                                        <div class="modal-dialog drop-cart" role="document">
+                                            <div class="modal-content-dropCart mz-special-offer__modal">
+                                                <header class="mz-cart-orders__header --with-btn">
+                                                    <h5>
+                                                        ลบทั้งตระกร้า
+                                                    </h5>
+                                                    <button type="button" class="mz-modal__close-button" data-dismiss="modal" aria-label="Close">
+                                                        <span class="mz-icon --close"></span>
+                                                      </button>
+                                                </header>
+                                                <div class="drop-cart-text">
+                                                    <span>
+                                                        คุณต้องการลบสินค้าในตะกร้าทั้งหมดใช่หรือไม่?
+                                                    </span>
+                                                </div>
+                                                <div class="mz-dropCart__content-container">
+                                                    <div class="mz-integer-input" style="margin: 15px 5px 15px 5px;">
+                                                        <button type="button" class="mz-button btn btn-lg --secondary --medium --original-blue">ไม่ใช่</button>
+                                                    </div>
+                                                    <div class="mz-integer-input" style="margin: 15px 5px 15px 5px;">
+                                                        <button type="button" class="mz-button btn btn-lg --primary --medium --original-blue">ใช่</button>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div id="special-offer" class="mz-modal modal fade --mobile-full" tabindex="-1" role="dialog" style="display: none;">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content mz-special-offer__modal">
