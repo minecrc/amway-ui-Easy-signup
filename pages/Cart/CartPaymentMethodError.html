@@ -11,10 +11,10 @@
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/styles/common.251e0dcdff5dc232292e.css" />
+    <link rel="stylesheet" href="/styles/common.8e7db5e747870b108a2a.css" />
     <link
       rel="stylesheet"
-      href="/styles/Cart___CartPaymentMethodError.2bf2c1ad9658621af4e8.css"
+      href="/styles/Cart___CartPaymentMethodError.a25c4d7dd26366dd004f.css"
     />
   </head>
   <body>
@@ -1355,7 +1355,16 @@
             <section class="mz-cart-layout__section">
               <form id="cart" class="mz-cart-layout__form" action="#">
                 <header class="mz-cart-layout__header">
-                  <h4 class="mz-cart-layout__title">ตะกร้าสินค้า</h4>
+                  <div class="mz-cart-layout__header-content">
+                    <h4 class="mz-cart-layout__title">ตะกร้าสินค้า</h4>
+                    <button
+                      id="empty-cart"
+                      type="button"
+                      class="mz-clear-cart-button"
+                    >
+                      ลบทั้งตะกร้า
+                    </button>
+                  </div>
                 </header>
                 <section class="mz-cart-layout__content">
                   <div class="mz-login-cta">
@@ -1405,8 +1414,18 @@
                               <span>สินค้าค้างจ่าย พร้อมส่ง 22/02/20</span>
                             </div>
                           </section>
-                          <div class="mz-integer-input mz-cart-item__quantity">
+                          <div
+                            class="mz-integer-input mz-cart-item__quantity"
+                            data-removable-on-min="true"
+                          >
                             <div class="mz-integer-input__quantity --active">
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper --hidden"
+                                data-remove="true"
+                              >
+                                <span class="mz-icon --trash"></span>
+                              </button>
                               <button
                                 type="button"
                                 class="mz-integer-input__stepper"
@@ -1494,7 +1513,10 @@
                               <span>สินค้าใกล้หมด</span>
                             </div>
                           </section>
-                          <div class="mz-integer-input mz-cart-item__quantity">
+                          <div
+                            class="mz-integer-input mz-cart-item__quantity"
+                            data-removable-on-min="true"
+                          >
                             <div class="mz-integer-input__quantity --active">
                               <span>x 1</span>
                             </div>
@@ -1593,11 +1615,21 @@
                               </ul>
                             </div>
                           </section>
-                          <div class="mz-integer-input mz-cart-item__quantity">
+                          <div
+                            class="mz-integer-input mz-cart-item__quantity"
+                            data-removable-on-min="true"
+                          >
                             <div class="mz-integer-input__quantity --active">
                               <button
                                 type="button"
                                 class="mz-integer-input__stepper"
+                                data-remove="true"
+                              >
+                                <span class="mz-icon --trash"></span>
+                              </button>
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper --hidden"
                                 disabled=""
                                 data-decrement="true"
                               >
@@ -1727,8 +1759,18 @@
                               </ul>
                             </div>
                           </section>
-                          <div class="mz-integer-input mz-cart-item__quantity">
+                          <div
+                            class="mz-integer-input mz-cart-item__quantity"
+                            data-removable-on-min="true"
+                          >
                             <div class="mz-integer-input__quantity --active">
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper --hidden"
+                                data-remove="true"
+                              >
+                                <span class="mz-icon --trash"></span>
+                              </button>
                               <button
                                 type="button"
                                 class="mz-integer-input__stepper"
@@ -1865,11 +1907,21 @@
                               <span>สินค้าค้างจ่าย พร้อมส่ง 22/02/20</span>
                             </div>
                           </section>
-                          <div class="mz-integer-input mz-cart-item__quantity">
+                          <div
+                            class="mz-integer-input mz-cart-item__quantity"
+                            data-removable-on-min="true"
+                          >
                             <div class="mz-integer-input__quantity --active">
                               <button
                                 type="button"
                                 class="mz-integer-input__stepper"
+                                data-remove="true"
+                              >
+                                <span class="mz-icon --trash"></span>
+                              </button>
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper --hidden"
                                 disabled=""
                                 data-decrement="true"
                               >
@@ -2058,7 +2110,10 @@
                               โพรเท็คท์+
                             </div>
                           </section>
-                          <div class="mz-integer-input mz-cart-item__quantity">
+                          <div
+                            class="mz-integer-input mz-cart-item__quantity"
+                            data-removable-on-min="true"
+                          >
                             <div class="mz-integer-input__quantity --active">
                               <span>x 1</span>
                             </div>
@@ -2077,35 +2132,6 @@
                   </div>
                 </section>
                 <section class="mz-cart-layout__panel">
-                  <h6 class="mz-cart-layout__mobile-discount-title">
-                    โปรโมชั่นโค้ด
-                  </h6>
-                  <div class="mz-cart-layout__discount-section">
-                    <div class="mz-promo-code-input --mobile">
-                      <div class="mz-input mz-promo-code-input__input">
-                        <input
-                          type="text"
-                          placeholder="พิมพ์รหัสโค้ดส่วนลด"
-                          class="mz-input__input --with-clear-button"
-                        />
-                        <button type="button" class="mz-input__clear-button">
-                          <span class="mz-icon --delete"></span>
-                        </button>
-                      </div>
-                      <button
-                        type="button"
-                        class="mz-button btn btn-lg --primary --large --original-blue mz-promo-code-input__button --square"
-                      >
-                        <span>ใช้ส่วนลด</span>
-                      </button>
-                    </div>
-                    <p class="mz-error mz-promo-code-input__error --invalid">
-                      <small>โปรโมชั่นโค้ดนี้ไม่สามารถใช้ได้</small>
-                    </p>
-                    <p class="mz-error mz-promo-code-input__error --is-used">
-                      <small>คุณใช้โปรโมชั่นโค้ดนี้ไปแล้ว</small>
-                    </p>
-                  </div>
                   <div
                     id="cart-dim-layer"
                     class="mz-dim-layer mz-cart-layout__dim-layer"
@@ -2132,7 +2158,7 @@
                             รวมค่าสินค้า
                           </span>
                           <span>
-                            <span class="mz-cart-detail-section__value">
+                            <span class="mz-cart-detail-section__row-value">
                               ฿ 289,563
                             </span>
                           </span>
@@ -2142,7 +2168,7 @@
                             ค่าจัดส่ง
                           </span>
                           <span>
-                            <span class="mz-cart-detail-section__value">
+                            <span class="mz-cart-detail-section__row-value">
                               ฿ 75
                             </span>
                           </span>
@@ -2152,7 +2178,7 @@
                             ส่วนลดค่าจัดส่ง
                           </span>
                           <span>
-                            <span class="mz-cart-detail-section__value">
+                            <span class="mz-cart-detail-section__row-value">
                               - ฿ 75
                             </span>
                           </span>
@@ -2161,21 +2187,19 @@
                           id="discount-template"
                           class="mz-cart-value-row --red"
                         >
-                          <div class="mz-cart-value-row__nested-area">
-                            <button
-                              type="button"
-                              class="mz-cart-value-row__remove-button"
-                            >
-                              <span class="mz-icon --delete"></span>
-                            </button>
-                          </div>
+                          <button
+                            type="button"
+                            class="mz-cart-value-row__remove-button"
+                          >
+                            <span class="mz-icon --delete"></span>
+                          </button>
                           <span class="mz-cart-value-row__title">
                             <span
-                              class="mz-cart-detail-section__discount-title"
+                              class="mz-cart-detail-section__row-title"
                             ></span>
                           </span>
                           <span>
-                            <span class="mz-cart-detail-section__value">
+                            <span class="mz-cart-detail-section__row-value">
                               ฿ 0
                             </span>
                           </span>
@@ -2221,7 +2245,7 @@
                       <section class="mz-cart-summary">
                         <div class="mz-cart-summary__rows">
                           <div
-                            class="mz-cart-value-row mz-cart-summary__row --desktop --no-title-mobile"
+                            class="mz-cart-value-row mz-cart-summary__row --no-title-mobile"
                           >
                             <span class="mz-cart-value-row__title">
                               <strong>สรุปยอดชำระ</strong>
@@ -2231,7 +2255,7 @@
                                 class="mz-cart-summary__total"
                                 data-total="true"
                               >
-                                ฿ 0
+                                ฿ 289,438
                               </span>
                             </span>
                           </div>
@@ -2240,7 +2264,7 @@
                           type="submit"
                           class="mz-button btn btn-lg --primary --large --original-blue mz-cart-summary__button"
                         >
-                          <span>สรุปรายการ</span>
+                          <span>สั่งซื้อ</span>
                         </button>
                       </section>
                       <section class="mz-discount-bar">
@@ -2248,52 +2272,81 @@
                       </section>
                     </div>
                   </div>
-                  <section class="mz-plastic-bag-options">
-                    <div class="mz-plastic-bag-options__content">
-                      <strong>ร่วมรักษ์โลก ลดขยะจากถุงพลาสติก</strong>
-                      <div
-                        class="mz-toggle-button mz-plastic-bag-options__toggle-button --small --green"
+                  <h6 class="mz-cart-layout__section-title">โปรโมชั่นโค้ด</h6>
+                  <div class="mz-cart-layout__discount-section">
+                    <div class="mz-promo-code-input --mobile">
+                      <div class="mz-input mz-promo-code-input__input">
+                        <input
+                          type="text"
+                          placeholder="พิมพ์รหัสโค้ดส่วนลด"
+                          class="mz-input__input --with-clear-button"
+                        />
+                        <button type="button" class="mz-input__clear-button">
+                          <span class="mz-icon --delete"></span>
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        class="mz-button btn btn-lg --primary --large --original-blue mz-promo-code-input__button --square"
                       >
-                        <div class="mz-toggle-button__container">
-                          <div
-                            class="mz-toggle-button__active-background"
-                            style="transform: translate3d(0%, 0, 0);"
-                          ></div>
-                          <input
-                            type="radio"
-                            class="mz-toggle-button__input"
-                            id="no"
-                            name="plastic-bag"
-                            value="no"
-                            readonly=""
-                            checked=""
-                          />
-                          <label
-                            for="no"
-                            class="mz-toggle-button__button --active"
-                          >
-                            <span>ไม่รับ</span>
-                          </label>
-                          <input
-                            type="radio"
-                            class="mz-toggle-button__input"
-                            id="yes"
-                            name="plastic-bag"
-                            value="yes"
-                            readonly=""
-                          />
-                          <label for="yes" class="mz-toggle-button__button">
-                            <span>รับ</span>
-                          </label>
+                        <span>ใช้ส่วนลด</span>
+                      </button>
+                    </div>
+                    <p class="mz-error mz-promo-code-input__error --invalid">
+                      <small>โปรโมชั่นโค้ดนี้ไม่สามารถใช้ได้</small>
+                    </p>
+                    <p class="mz-error mz-promo-code-input__error --is-used">
+                      <small>คุณใช้โปรโมชั่นโค้ดนี้ไปแล้ว</small>
+                    </p>
+                  </div>
+                  <div class="mz-cart-layout__bars-and-options">
+                    <section class="mz-plastic-bag-options">
+                      <div class="mz-plastic-bag-options__content">
+                        <strong>ร่วมรักษ์โลก ลดขยะจากถุงพลาสติก</strong>
+                        <div
+                          class="mz-toggle-button mz-plastic-bag-options__toggle-button --small --green"
+                        >
+                          <div class="mz-toggle-button__container">
+                            <div
+                              class="mz-toggle-button__active-background"
+                              style="transform: translate3d(0%, 0, 0);"
+                            ></div>
+                            <input
+                              type="radio"
+                              class="mz-toggle-button__input"
+                              id="no"
+                              name="plastic-bag"
+                              value="no"
+                              readonly=""
+                              checked=""
+                            />
+                            <label
+                              for="no"
+                              class="mz-toggle-button__button --active"
+                            >
+                              <span>ไม่รับ</span>
+                            </label>
+                            <input
+                              type="radio"
+                              class="mz-toggle-button__input"
+                              id="yes"
+                              name="plastic-bag"
+                              value="yes"
+                              readonly=""
+                            />
+                            <label for="yes" class="mz-toggle-button__button">
+                              <span>รับ</span>
+                            </label>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <img
-                      class="mz-image"
-                      data-src="/static/images/cart-plastic.svg"
-                      alt="cart-plastic"
-                    />
-                  </section>
+                      <img
+                        class="mz-image"
+                        data-src="/static/images/cart-plastic.svg"
+                        alt="cart-plastic"
+                      />
+                    </section>
+                  </div>
                 </section>
               </form>
             </section>
@@ -2322,6 +2375,13 @@
                     </div>
                     <div class="mz-integer-input mz-upselling-item__input">
                       <div class="mz-integer-input__quantity">
+                        <button
+                          type="button"
+                          class="mz-integer-input__stepper --hidden"
+                          data-remove="true"
+                        >
+                          <span class="mz-icon --trash"></span>
+                        </button>
                         <button
                           type="button"
                           class="mz-integer-input__stepper"
@@ -2373,6 +2433,13 @@
                       <div class="mz-integer-input__quantity">
                         <button
                           type="button"
+                          class="mz-integer-input__stepper --hidden"
+                          data-remove="true"
+                        >
+                          <span class="mz-icon --trash"></span>
+                        </button>
+                        <button
+                          type="button"
                           class="mz-integer-input__stepper"
                           data-decrement="true"
                         >
@@ -2420,6 +2487,13 @@
                     </div>
                     <div class="mz-integer-input mz-upselling-item__input">
                       <div class="mz-integer-input__quantity">
+                        <button
+                          type="button"
+                          class="mz-integer-input__stepper --hidden"
+                          data-remove="true"
+                        >
+                          <span class="mz-icon --trash"></span>
+                        </button>
                         <button
                           type="button"
                           class="mz-integer-input__stepper"
@@ -2471,6 +2545,13 @@
                       <div class="mz-integer-input__quantity">
                         <button
                           type="button"
+                          class="mz-integer-input__stepper --hidden"
+                          data-remove="true"
+                        >
+                          <span class="mz-icon --trash"></span>
+                        </button>
+                        <button
+                          type="button"
                           class="mz-integer-input__stepper"
                           data-decrement="true"
                         >
@@ -2520,6 +2601,13 @@
                       <div class="mz-integer-input__quantity">
                         <button
                           type="button"
+                          class="mz-integer-input__stepper --hidden"
+                          data-remove="true"
+                        >
+                          <span class="mz-icon --trash"></span>
+                        </button>
+                        <button
+                          type="button"
                           class="mz-integer-input__stepper"
                           data-decrement="true"
                         >
@@ -2552,6 +2640,7 @@
             </section>
           </main>
         </div>
+        <footer class="mz-footer">Footer</footer>
       </div>
     </div>
     <script
@@ -2571,7 +2660,6 @@
     <script src="/v2/Common/js/Input.js"></script>
     <script src="/v2/Cart/js/PromoCodeInput.js"></script>
     <script src="/v2/Cart/js/CartDetailSection.js"></script>
-    <script src="/v2/Cart/js/useMockPromoCodes.js"></script>
     <script src="/v2/Common/js/DimLayer.js"></script>
     <script src="/v2/Common/js/Dropdown.js"></script>
     <script src="/v2/Common/js/DropdownInput.js"></script>
@@ -2591,5 +2679,6 @@
     <script src="/lib/js/jquery.validate.min.js"></script>
     <script src="/v2/Common/js/formValidationDefaults.js"></script>
     <script src="/v2/Cart/js/Cart.js"></script>
+    <script src="/v2/Cart/js/useMockPromoCodes.js"></script>
   </body>
 </html>

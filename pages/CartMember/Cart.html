@@ -11,10 +11,10 @@
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/styles/common.251e0dcdff5dc232292e.css" />
+    <link rel="stylesheet" href="/styles/common.8e7db5e747870b108a2a.css" />
     <link
       rel="stylesheet"
-      href="/styles/CartMember___Cart.1530416a1548f159d839.css"
+      href="/styles/CartMember___Cart.fe797f052169fba74b9d.css"
     />
   </head>
   <body>
@@ -1368,7 +1368,16 @@
             <section class="mz-cart-layout__section">
               <form id="cart" class="mz-cart-layout__form" action="#">
                 <header class="mz-cart-layout__header">
-                  <h4 class="mz-cart-layout__title">ตะกร้าสินค้า</h4>
+                  <div class="mz-cart-layout__header-content">
+                    <h4 class="mz-cart-layout__title">ตะกร้าสินค้า</h4>
+                    <button
+                      id="empty-cart"
+                      type="button"
+                      class="mz-clear-cart-button"
+                    >
+                      ลบทั้งตะกร้า
+                    </button>
+                  </div>
                 </header>
                 <section class="mz-cart-layout__content">
                   <div class="mz-delivery-methods">
@@ -1623,8 +1632,18 @@
                               <span>สินค้าค้างจ่าย พร้อมส่ง 22/02/20</span>
                             </div>
                           </section>
-                          <div class="mz-integer-input mz-cart-item__quantity">
+                          <div
+                            class="mz-integer-input mz-cart-item__quantity"
+                            data-removable-on-min="true"
+                          >
                             <div class="mz-integer-input__quantity --active">
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper --hidden"
+                                data-remove="true"
+                              >
+                                <span class="mz-icon --trash"></span>
+                              </button>
                               <button
                                 type="button"
                                 class="mz-integer-input__stepper"
@@ -1712,7 +1731,10 @@
                               <span>สินค้าใกล้หมด</span>
                             </div>
                           </section>
-                          <div class="mz-integer-input mz-cart-item__quantity">
+                          <div
+                            class="mz-integer-input mz-cart-item__quantity"
+                            data-removable-on-min="true"
+                          >
                             <div class="mz-integer-input__quantity --active">
                               <span>x 1</span>
                             </div>
@@ -1811,11 +1833,21 @@
                               </ul>
                             </div>
                           </section>
-                          <div class="mz-integer-input mz-cart-item__quantity">
+                          <div
+                            class="mz-integer-input mz-cart-item__quantity"
+                            data-removable-on-min="true"
+                          >
                             <div class="mz-integer-input__quantity --active">
                               <button
                                 type="button"
                                 class="mz-integer-input__stepper"
+                                data-remove="true"
+                              >
+                                <span class="mz-icon --trash"></span>
+                              </button>
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper --hidden"
                                 disabled=""
                                 data-decrement="true"
                               >
@@ -1945,8 +1977,18 @@
                               </ul>
                             </div>
                           </section>
-                          <div class="mz-integer-input mz-cart-item__quantity">
+                          <div
+                            class="mz-integer-input mz-cart-item__quantity"
+                            data-removable-on-min="true"
+                          >
                             <div class="mz-integer-input__quantity --active">
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper --hidden"
+                                data-remove="true"
+                              >
+                                <span class="mz-icon --trash"></span>
+                              </button>
                               <button
                                 type="button"
                                 class="mz-integer-input__stepper"
@@ -2083,11 +2125,21 @@
                               <span>สินค้าค้างจ่าย พร้อมส่ง 22/02/20</span>
                             </div>
                           </section>
-                          <div class="mz-integer-input mz-cart-item__quantity">
+                          <div
+                            class="mz-integer-input mz-cart-item__quantity"
+                            data-removable-on-min="true"
+                          >
                             <div class="mz-integer-input__quantity --active">
                               <button
                                 type="button"
                                 class="mz-integer-input__stepper"
+                                data-remove="true"
+                              >
+                                <span class="mz-icon --trash"></span>
+                              </button>
+                              <button
+                                type="button"
+                                class="mz-integer-input__stepper --hidden"
                                 disabled=""
                                 data-decrement="true"
                               >
@@ -2276,7 +2328,10 @@
                               โพรเท็คท์+
                             </div>
                           </section>
-                          <div class="mz-integer-input mz-cart-item__quantity">
+                          <div
+                            class="mz-integer-input mz-cart-item__quantity"
+                            data-removable-on-min="true"
+                          >
                             <div class="mz-integer-input__quantity --active">
                               <span>x 1</span>
                             </div>
@@ -2295,7 +2350,193 @@
                   </div>
                 </section>
                 <section class="mz-cart-layout__panel">
-                  <h6 class="mz-cart-layout__mobile-discount-title">
+                  <div
+                    id="cart-dim-layer"
+                    class="mz-dim-layer mz-cart-layout__dim-layer"
+                  ></div>
+                  <div class="mz-cart-layout__mobile-panel">
+                    <div class="mz-cart-layout__detail">
+                      <div
+                        class="mz-cart-layout__detail-toggler"
+                        data-dropdown-bottom-restrict="true"
+                      >
+                        <span class="mz-cart-layout__show-detail">
+                          ดูรายละเอียด
+                        </span>
+                        <span class="mz-cart-layout__hide-detail">
+                          ซ่อนรายละเอียด
+                        </span>
+                        <span
+                          class="mz-icon --arrow-up mz-cart-layout__arrow"
+                        ></span>
+                      </div>
+                      <section class="mz-cart-detail-section">
+                        <div class="mz-cart-value-row">
+                          <span class="mz-cart-value-row__title">
+                            รวมค่าสินค้า
+                          </span>
+                          <span>
+                            <span class="mz-cart-detail-section__row-value">
+                              ฿ 289,563
+                            </span>
+                          </span>
+                        </div>
+                        <div class="mz-cart-value-row">
+                          <span class="mz-cart-value-row__title">
+                            ค่าจัดส่ง
+                          </span>
+                          <span>
+                            <span class="mz-cart-detail-section__row-value">
+                              ฿ 75
+                            </span>
+                          </span>
+                        </div>
+                        <div class="mz-cart-value-row --red">
+                          <span class="mz-cart-value-row__title">
+                            ส่วนลดค่าจัดส่ง
+                          </span>
+                          <span>
+                            <span class="mz-cart-detail-section__row-value">
+                              - ฿ 75
+                            </span>
+                          </span>
+                        </div>
+                        <div
+                          id="discount-template"
+                          class="mz-cart-value-row --red"
+                        >
+                          <button
+                            type="button"
+                            class="mz-cart-value-row__remove-button"
+                          >
+                            <span class="mz-icon --delete"></span>
+                          </button>
+                          <span class="mz-cart-value-row__title">
+                            <span
+                              class="mz-cart-detail-section__row-title"
+                            ></span>
+                          </span>
+                          <span>
+                            <span class="mz-cart-detail-section__row-value">
+                              ฿ 0
+                            </span>
+                          </span>
+                        </div>
+                        <div
+                          id="voucher-row"
+                          class="mz-cart-value-row mz-cart-detail-section__wallet-row --voucher"
+                        >
+                          <button
+                            type="button"
+                            class="mz-cart-value-row__remove-button"
+                          >
+                            <span class="mz-icon --delete"></span>
+                          </button>
+                          <span class="mz-cart-value-row__title">
+                            ชำระด้วยใบสำคัญลดหนี้
+                          </span>
+                          <span>
+                            <span class="mz-cart-detail-section__row-value">
+                              ฿ 0
+                            </span>
+                          </span>
+                        </div>
+                        <div
+                          id="amplus-row"
+                          class="mz-cart-value-row mz-cart-detail-section__wallet-row --amplus"
+                        >
+                          <button
+                            type="button"
+                            class="mz-cart-value-row__remove-button"
+                          >
+                            <span class="mz-icon --delete"></span>
+                          </button>
+                          <span class="mz-cart-value-row__title">
+                            ชำระด้วย Amplus Point
+                          </span>
+                          <span>
+                            <span class="mz-cart-detail-section__row-value">
+                              ฿ 0
+                            </span>
+                          </span>
+                        </div>
+                        <div
+                          class="mz-promo-code-input mz-cart-detail-section__enter --desktop"
+                        >
+                          <div class="mz-input mz-promo-code-input__input">
+                            <input
+                              type="text"
+                              id="promo-code-input"
+                              name="promo-code"
+                              placeholder="พิมพ์รหัสโค้ดส่วนลด"
+                              class="mz-input__input --with-clear-button"
+                            />
+                            <button
+                              type="button"
+                              class="mz-input__clear-button"
+                            >
+                              <span class="mz-icon --delete"></span>
+                            </button>
+                          </div>
+                          <button
+                            type="button"
+                            class="mz-button btn btn-lg --primary --large --original-blue mz-promo-code-input__button --square"
+                          >
+                            <span>ใช้ส่วนลด</span>
+                          </button>
+                        </div>
+                        <p
+                          class="mz-error mz-promo-code-input__error --invalid"
+                        >
+                          <small>โปรโมชั่นโค้ดนี้ไม่สามารถใช้ได้</small>
+                        </p>
+                        <p
+                          class="mz-error mz-promo-code-input__error --is-used"
+                        >
+                          <small>คุณใช้โปรโมชั่นโค้ดนี้ไปแล้ว</small>
+                        </p>
+                      </section>
+                    </div>
+                    <div class="mz-cart-layout__summary">
+                      <section class="mz-cart-summary">
+                        <div class="mz-cart-summary__rows">
+                          <div
+                            class="mz-cart-value-row mz-cart-summary__row --no-title-mobile"
+                          >
+                            <span class="mz-cart-value-row__title">
+                              <strong>สรุปยอดชำระ</strong>
+                            </span>
+                            <span>
+                              <span
+                                class="mz-cart-summary__total"
+                                data-total="true"
+                              >
+                                ฿ 289,338
+                              </span>
+                            </span>
+                          </div>
+                          <div
+                            class="mz-cart-value-row mz-cart-summary__row --points"
+                          >
+                            <span class="mz-cart-value-row__title">
+                              Amplus Point ที่จะได้รับ
+                            </span>
+                            <span>2,000</span>
+                          </div>
+                        </div>
+                        <button
+                          type="submit"
+                          class="mz-button btn btn-lg --primary --large --original-blue mz-cart-summary__button"
+                        >
+                          <span>สั่งซื้อ</span>
+                        </button>
+                      </section>
+                      <section class="mz-discount-bar">
+                        รับส่วนลด 20% ทันที! เมื่อซื้อครบ ฿30,000
+                      </section>
+                    </div>
+                  </div>
+                  <h6 class="mz-cart-layout__section-title">
                     สิทธิ์ส่วนลดและโปรโมชั่นโค้ด
                   </h6>
                   <div class="mz-cart-layout__discount-section">
@@ -2324,7 +2565,7 @@
                       <small>คุณใช้โปรโมชั่นโค้ดนี้ไปแล้ว</small>
                     </p>
                     <section class="mz-coupon-section">
-                      <div class="mz-coupon --bg-grey">
+                      <div class="mz-coupon --bg-grey-desktop">
                         <div class="mz-coupon__section --left">
                           <p class="mz-coupon__condition">
                             ส่วนลดเมื่อซื้อครบ ฿ 7,500
@@ -2355,16 +2596,20 @@
                               <span>ใช้แล้ว</span>
                             </div>
                           </label>
+                          <div class="mz-coupon__expiry-date">
+                            ใช้ได้ถึง 30/06/20
+                          </div>
                           <div class="mz-coupon__circle --top"></div>
                           <div class="mz-coupon__circle --bottom"></div>
                         </div>
                       </div>
-                      <div class="mz-coupon --bg-grey">
+                      <div class="mz-coupon --bg-grey-desktop">
                         <div class="mz-coupon__section --left">
                           <p class="mz-coupon__condition">
-                            ส่วนลดเมื่อซื้อครบ ฿ 7,500
+                            ลด 300 บาท เมื่อซื้ออาร์ทิสทรีครบ 3,000 บาท
+                            (นธอ.ใหม่)
                           </p>
-                          <strong>ลด ฿ 1,000</strong>
+                          <strong>ลด ฿ 300</strong>
                         </div>
                         <div class="mz-coupon__section --right">
                           <input
@@ -2373,7 +2618,7 @@
                             value="COUPON1000B"
                             class="mz-coupon__input"
                             data-id="COUPON1000B"
-                            data-value="1000"
+                            data-value="300"
                             readonly=""
                           />
                           <label
@@ -2390,6 +2635,9 @@
                               <span>ใช้แล้ว</span>
                             </div>
                           </label>
+                          <div class="mz-coupon__expiry-date">
+                            ใช้ได้ถึง 30/06/20
+                          </div>
                           <div class="mz-coupon__circle --top"></div>
                           <div class="mz-coupon__circle --bottom"></div>
                         </div>
@@ -2457,6 +2705,9 @@
                                       <span>ใช้แล้ว</span>
                                     </div>
                                   </label>
+                                  <div class="mz-coupon__expiry-date">
+                                    ใช้ได้ถึง 30/06/20
+                                  </div>
                                   <div class="mz-coupon__circle --top"></div>
                                   <div class="mz-coupon__circle --bottom"></div>
                                 </div>
@@ -2464,9 +2715,10 @@
                               <div class="mz-coupon --bg-white">
                                 <div class="mz-coupon__section --left">
                                   <p class="mz-coupon__condition">
-                                    ส่วนลดเมื่อซื้อครบ ฿ 7,500
+                                    ลด 300 บาท เมื่อซื้ออาร์ทิสทรีครบ 3,000 บาท
+                                    (นธอ.ใหม่)
                                   </p>
-                                  <strong>ลด ฿ 1,000</strong>
+                                  <strong>ลด ฿ 300</strong>
                                 </div>
                                 <div class="mz-coupon__section --right">
                                   <input
@@ -2476,7 +2728,7 @@
                                     value="COUPON1000B"
                                     class="mz-coupon__input"
                                     data-id="COUPON1000B"
-                                    data-value="1000"
+                                    data-value="300"
                                     readonly=""
                                   />
                                   <label
@@ -2493,6 +2745,9 @@
                                       <span>ใช้แล้ว</span>
                                     </div>
                                   </label>
+                                  <div class="mz-coupon__expiry-date">
+                                    ใช้ได้ถึง 30/06/20
+                                  </div>
                                   <div class="mz-coupon__circle --top"></div>
                                   <div class="mz-coupon__circle --bottom"></div>
                                 </div>
@@ -2500,10 +2755,10 @@
                               <div class="mz-coupon --bg-white">
                                 <div class="mz-coupon__section --left">
                                   <p class="mz-coupon__condition">
-                                    ส่วนลดเมื่อสั่งซื้อผลิตภัณฑ์ของนักธุรกิจแอมเวย์ใหม่รวมมูลค่า
-                                    4,829 บาท
+                                    ลด 300 บาท เมื่อซื้ออาร์ทิสทรีครบ 3,000 บาท
+                                    (นธอ.ใหม่)
                                   </p>
-                                  <strong>ลด ฿ 1,000</strong>
+                                  <strong>ลด ฿ 300</strong>
                                 </div>
                                 <div class="mz-coupon__section --right">
                                   <input
@@ -2513,7 +2768,7 @@
                                     value="COUPON1000C"
                                     class="mz-coupon__input"
                                     data-id="COUPON1000C"
-                                    data-value="1000"
+                                    data-value="300"
                                     readonly=""
                                   />
                                   <label
@@ -2530,6 +2785,9 @@
                                       <span>ใช้แล้ว</span>
                                     </div>
                                   </label>
+                                  <div class="mz-coupon__expiry-date">
+                                    ใช้ได้ถึง 30/06/20
+                                  </div>
                                   <div class="mz-coupon__circle --top"></div>
                                   <div class="mz-coupon__circle --bottom"></div>
                                 </div>
@@ -2567,6 +2825,9 @@
                                       <span>ใช้แล้ว</span>
                                     </div>
                                   </label>
+                                  <div class="mz-coupon__expiry-date">
+                                    ใช้ได้ถึง 30/06/20
+                                  </div>
                                   <div class="mz-coupon__circle --top"></div>
                                   <div class="mz-coupon__circle --bottom"></div>
                                 </div>
@@ -2604,6 +2865,9 @@
                                       <span>ใช้แล้ว</span>
                                     </div>
                                   </label>
+                                  <div class="mz-coupon__expiry-date">
+                                    ใช้ได้ถึง 30/06/20
+                                  </div>
                                   <div class="mz-coupon__circle --top"></div>
                                   <div class="mz-coupon__circle --bottom"></div>
                                 </div>
@@ -2640,6 +2904,9 @@
                                       <span>ใช้แล้ว</span>
                                     </div>
                                   </label>
+                                  <div class="mz-coupon__expiry-date">
+                                    ใช้ได้ถึง 30/06/20
+                                  </div>
                                   <div class="mz-coupon__circle --top"></div>
                                   <div class="mz-coupon__circle --bottom"></div>
                                 </div>
@@ -2650,202 +2917,256 @@
                       </div>
                     </section>
                   </div>
-                  <div
-                    id="cart-dim-layer"
-                    class="mz-dim-layer mz-cart-layout__dim-layer"
-                  ></div>
-                  <div class="mz-cart-layout__mobile-panel">
-                    <div class="mz-cart-layout__detail">
-                      <div
-                        class="mz-cart-layout__detail-toggler"
-                        data-dropdown-bottom-restrict="true"
-                      >
-                        <span class="mz-cart-layout__show-detail">
-                          ดูรายละเอียด
-                        </span>
-                        <span class="mz-cart-layout__hide-detail">
-                          ซ่อนรายละเอียด
-                        </span>
-                        <span
-                          class="mz-icon --arrow-up mz-cart-layout__arrow"
-                        ></span>
-                      </div>
-                      <section class="mz-cart-detail-section">
-                        <div class="mz-cart-value-row">
-                          <span class="mz-cart-value-row__title">
-                            รวมค่าสินค้า
-                          </span>
-                          <span>
-                            <span class="mz-cart-detail-section__value">
-                              ฿ 289,563
-                            </span>
-                          </span>
-                        </div>
-                        <div class="mz-cart-value-row">
-                          <span class="mz-cart-value-row__title">
-                            ค่าจัดส่ง
-                          </span>
-                          <span>
-                            <span class="mz-cart-detail-section__value">
-                              ฿ 75
-                            </span>
-                          </span>
-                        </div>
-                        <div class="mz-cart-value-row --red">
-                          <span class="mz-cart-value-row__title">
-                            ส่วนลดค่าจัดส่ง
-                          </span>
-                          <span>
-                            <span class="mz-cart-detail-section__value">
-                              - ฿ 75
-                            </span>
-                          </span>
-                        </div>
-                        <div
-                          id="discount-template"
-                          class="mz-cart-value-row --red"
-                        >
-                          <div class="mz-cart-value-row__nested-area">
-                            <button
-                              type="button"
-                              class="mz-cart-value-row__remove-button"
-                            >
-                              <span class="mz-icon --delete"></span>
-                            </button>
-                          </div>
-                          <span class="mz-cart-value-row__title">
-                            <span
-                              class="mz-cart-detail-section__discount-title"
-                            ></span>
-                          </span>
-                          <span>
-                            <span class="mz-cart-detail-section__value">
-                              ฿ 0
-                            </span>
-                          </span>
-                        </div>
-                        <div
-                          class="mz-promo-code-input mz-cart-detail-section__enter --desktop"
-                        >
-                          <div class="mz-input mz-promo-code-input__input">
-                            <input
-                              type="text"
-                              id="promo-code-input"
-                              name="promo-code"
-                              placeholder="พิมพ์รหัสโค้ดส่วนลด"
-                              class="mz-input__input --with-clear-button"
-                            />
-                            <button
-                              type="button"
-                              class="mz-input__clear-button"
-                            >
-                              <span class="mz-icon --delete"></span>
-                            </button>
-                          </div>
+                  <div class="mz-cart-layout__wallet-section">
+                    <section
+                      class="mz-image mz-wallet-section mz-voucher-section"
+                      data-background-src="/static/images/background-voucher.svg"
+                    >
+                      <header class="mz-wallet-section__header">
+                        <h6>
+                          <span>คุณมีใบสำคัญลดหนี้</span>
                           <button
                             type="button"
-                            class="mz-button btn btn-lg --primary --large --original-blue mz-promo-code-input__button --square"
+                            class="mz-voucher-section__note"
+                            data-toggle="modal"
+                            data-target="#voucher-modal"
                           >
-                            <span>ใช้ส่วนลด</span>
+                            <span>6 รายการ</span>
                           </button>
-                        </div>
-                        <p
-                          class="mz-error mz-promo-code-input__error --invalid"
-                        >
-                          <small>โปรโมชั่นโค้ดนี้ไม่สามารถใช้ได้</small>
-                        </p>
-                        <p
-                          class="mz-error mz-promo-code-input__error --is-used"
-                        >
-                          <small>คุณใช้โปรโมชั่นโค้ดนี้ไปแล้ว</small>
-                        </p>
-                      </section>
-                    </div>
-                    <div class="mz-cart-layout__summary">
-                      <section class="mz-cart-summary">
-                        <div class="mz-cart-summary__rows">
-                          <div
-                            class="mz-cart-value-row mz-cart-summary__row --desktop --no-title-mobile"
-                          >
-                            <span class="mz-cart-value-row__title">
-                              <strong>สรุปยอดชำระ</strong>
-                            </span>
-                            <span>
-                              <span
-                                class="mz-cart-summary__total"
-                                data-total="true"
-                              >
-                                ฿ 0
-                              </span>
-                            </span>
-                          </div>
-                          <div
-                            class="mz-cart-value-row mz-cart-summary__row --points"
-                          >
-                            <span class="mz-cart-value-row__title">
-                              Amplus Point ที่จะได้รับ
-                            </span>
-                            <span>2,000</span>
-                          </div>
+                        </h6>
+                        <strong class="mz-wallet-section__current-amount">
+                          ฿ 25,600
+                        </strong>
+                      </header>
+                      <div class="mz-wallet-section__input-group">
+                        <div class="mz-input">
+                          <input
+                            type="text"
+                            placeholder="฿ 25,600"
+                            data-id="voucher"
+                            data-initial-amount="25600"
+                            class="mz-input__input"
+                          />
                         </div>
                         <button
-                          type="submit"
-                          class="mz-button btn btn-lg --primary --large --original-blue mz-cart-summary__button"
+                          type="button"
+                          class="mz-button btn btn-lg --primary --large --original-blue mz-wallet-section__button --square"
                         >
-                          <span>สรุปรายการ</span>
+                          <span>ใช้</span>
                         </button>
-                      </section>
-                      <section class="mz-discount-bar">
-                        รับส่วนลด 20% ทันที! เมื่อซื้อครบ ฿30,000
-                      </section>
-                    </div>
-                  </div>
-                  <section class="mz-plastic-bag-options">
-                    <div class="mz-plastic-bag-options__content">
-                      <strong>ร่วมรักษ์โลก ลดขยะจากถุงพลาสติก</strong>
-                      <div
-                        class="mz-toggle-button mz-plastic-bag-options__toggle-button --small --green"
-                      >
-                        <div class="mz-toggle-button__container">
-                          <div
-                            class="mz-toggle-button__active-background"
-                            style="transform: translate3d(0%, 0, 0);"
-                          ></div>
-                          <input
-                            type="radio"
-                            class="mz-toggle-button__input"
-                            id="no"
-                            name="plastic-bag"
-                            value="no"
-                            readonly=""
-                            checked=""
-                          />
-                          <label
-                            for="no"
-                            class="mz-toggle-button__button --active"
+                      </div>
+                      <p class="mz-error mz-wallet-section__error">
+                        <small>กรุณาใส่จำนวนเงิน</small>
+                      </p>
+                    </section>
+                    <div
+                      id="voucher-modal"
+                      class="mz-modal modal fade --mobile-full"
+                      tabindex="-1"
+                      role="dialog"
+                      style="display: none;"
+                    >
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content mz-voucher-section__modal">
+                          <button
+                            type="button"
+                            class="mz-modal__close-button"
+                            data-dismiss="modal"
+                            aria-label="Close"
                           >
-                            <span>ไม่รับ</span>
-                          </label>
-                          <input
-                            type="radio"
-                            class="mz-toggle-button__input"
-                            id="yes"
-                            name="plastic-bag"
-                            value="yes"
-                            readonly=""
-                          />
-                          <label for="yes" class="mz-toggle-button__button">
-                            <span>รับ</span>
-                          </label>
+                            <span class="mz-icon --close"></span>
+                          </button>
+                          <header class="mz-voucher-section__modal-header">
+                            <h3>ใบสำคัญลดหนี้ของคุณ</h3>
+                          </header>
+                          <div class="mz-voucher-section__modal-container">
+                            <h6>ใบสำคัญลดหนี้ 6 รายการ</h6>
+                            <div class="mz-voucher">
+                              <div class="mz-voucher__section">
+                                <span class="mz-voucher__title">
+                                  วันที่ได้รับ
+                                </span>
+                                <span class="mz-voucher__value">30/06/20</span>
+                              </div>
+                              <div class="mz-voucher__section">
+                                <span class="mz-voucher__title">หมายเลข</span>
+                                <span class="mz-voucher__value">2022354</span>
+                              </div>
+                              <div class="mz-voucher__section">
+                                <div class="mz-voucher__amount">
+                                  <span>฿ 7,400</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mz-voucher">
+                              <div class="mz-voucher__section">
+                                <span class="mz-voucher__title">
+                                  วันที่ได้รับ
+                                </span>
+                                <span class="mz-voucher__value">30/06/20</span>
+                              </div>
+                              <div class="mz-voucher__section">
+                                <span class="mz-voucher__title">หมายเลข</span>
+                                <span class="mz-voucher__value">4324545</span>
+                              </div>
+                              <div class="mz-voucher__section">
+                                <div class="mz-voucher__amount">
+                                  <span>฿ 4,000</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mz-voucher">
+                              <div class="mz-voucher__section">
+                                <span class="mz-voucher__title">
+                                  วันที่ได้รับ
+                                </span>
+                                <span class="mz-voucher__value">30/06/20</span>
+                              </div>
+                              <div class="mz-voucher__section">
+                                <span class="mz-voucher__title">หมายเลข</span>
+                                <span class="mz-voucher__value">5522355</span>
+                              </div>
+                              <div class="mz-voucher__section">
+                                <div class="mz-voucher__amount">
+                                  <span>฿ 600</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mz-voucher">
+                              <div class="mz-voucher__section">
+                                <span class="mz-voucher__title">
+                                  วันที่ได้รับ
+                                </span>
+                                <span class="mz-voucher__value">30/06/20</span>
+                              </div>
+                              <div class="mz-voucher__section">
+                                <span class="mz-voucher__title">หมายเลข</span>
+                                <span class="mz-voucher__value">2022355</span>
+                              </div>
+                              <div class="mz-voucher__section">
+                                <div class="mz-voucher__amount">
+                                  <span>฿ 2,000</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mz-voucher">
+                              <div class="mz-voucher__section">
+                                <span class="mz-voucher__title">
+                                  วันที่ได้รับ
+                                </span>
+                                <span class="mz-voucher__value">30/06/20</span>
+                              </div>
+                              <div class="mz-voucher__section">
+                                <span class="mz-voucher__title">หมายเลข</span>
+                                <span class="mz-voucher__value">2022789</span>
+                              </div>
+                              <div class="mz-voucher__section">
+                                <div class="mz-voucher__amount">
+                                  <span>฿ 2,000</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mz-voucher">
+                              <div class="mz-voucher__section">
+                                <span class="mz-voucher__title">
+                                  วันที่ได้รับ
+                                </span>
+                                <span class="mz-voucher__value">30/06/20</span>
+                              </div>
+                              <div class="mz-voucher__section">
+                                <span class="mz-voucher__title">หมายเลข</span>
+                                <span class="mz-voucher__value">2104563</span>
+                              </div>
+                              <div class="mz-voucher__section">
+                                <div class="mz-voucher__amount">
+                                  <span>฿ 2,000</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <img
-                      class="mz-image"
-                      data-src="/static/images/cart-plastic.svg"
-                      alt="cart-plastic"
-                    />
-                  </section>
+                    <section
+                      class="mz-image mz-wallet-section"
+                      data-background-src="/static/images/background-amplus.svg"
+                    >
+                      <header class="mz-wallet-section__header">
+                        <h6>คุณมี Amplus Point 500 คะแนน</h6>
+                        <strong class="mz-wallet-section__current-amount">
+                          ฿ 2,500
+                        </strong>
+                      </header>
+                      <div class="mz-wallet-section__input-group">
+                        <div class="mz-input">
+                          <input
+                            type="text"
+                            placeholder="฿ 2,500"
+                            data-id="amplus"
+                            data-initial-amount="2500"
+                            class="mz-input__input"
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          class="mz-button btn btn-lg --primary --large --original-blue mz-wallet-section__button --square"
+                        >
+                          <span>ใช้</span>
+                        </button>
+                      </div>
+                      <p class="mz-error mz-wallet-section__error">
+                        <small>กรุณาใส่จำนวนเงิน</small>
+                      </p>
+                    </section>
+                  </div>
+                  <div class="mz-cart-layout__bars-and-options">
+                    <section class="mz-plastic-bag-options">
+                      <div class="mz-plastic-bag-options__content">
+                        <strong>ร่วมรักษ์โลก ลดขยะจากถุงพลาสติก</strong>
+                        <div
+                          class="mz-toggle-button mz-plastic-bag-options__toggle-button --small --green"
+                        >
+                          <div class="mz-toggle-button__container">
+                            <div
+                              class="mz-toggle-button__active-background"
+                              style="transform: translate3d(0%, 0, 0);"
+                            ></div>
+                            <input
+                              type="radio"
+                              class="mz-toggle-button__input"
+                              id="no"
+                              name="plastic-bag"
+                              value="no"
+                              readonly=""
+                              checked=""
+                            />
+                            <label
+                              for="no"
+                              class="mz-toggle-button__button --active"
+                            >
+                              <span>ไม่รับ</span>
+                            </label>
+                            <input
+                              type="radio"
+                              class="mz-toggle-button__input"
+                              id="yes"
+                              name="plastic-bag"
+                              value="yes"
+                              readonly=""
+                            />
+                            <label for="yes" class="mz-toggle-button__button">
+                              <span>รับ</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <img
+                        class="mz-image"
+                        data-src="/static/images/cart-plastic.svg"
+                        alt="cart-plastic"
+                      />
+                    </section>
+                  </div>
                 </section>
               </form>
             </section>
@@ -2874,6 +3195,13 @@
                     </div>
                     <div class="mz-integer-input mz-upselling-item__input">
                       <div class="mz-integer-input__quantity">
+                        <button
+                          type="button"
+                          class="mz-integer-input__stepper --hidden"
+                          data-remove="true"
+                        >
+                          <span class="mz-icon --trash"></span>
+                        </button>
                         <button
                           type="button"
                           class="mz-integer-input__stepper"
@@ -2925,6 +3253,13 @@
                       <div class="mz-integer-input__quantity">
                         <button
                           type="button"
+                          class="mz-integer-input__stepper --hidden"
+                          data-remove="true"
+                        >
+                          <span class="mz-icon --trash"></span>
+                        </button>
+                        <button
+                          type="button"
                           class="mz-integer-input__stepper"
                           data-decrement="true"
                         >
@@ -2972,6 +3307,13 @@
                     </div>
                     <div class="mz-integer-input mz-upselling-item__input">
                       <div class="mz-integer-input__quantity">
+                        <button
+                          type="button"
+                          class="mz-integer-input__stepper --hidden"
+                          data-remove="true"
+                        >
+                          <span class="mz-icon --trash"></span>
+                        </button>
                         <button
                           type="button"
                           class="mz-integer-input__stepper"
@@ -3023,6 +3365,13 @@
                       <div class="mz-integer-input__quantity">
                         <button
                           type="button"
+                          class="mz-integer-input__stepper --hidden"
+                          data-remove="true"
+                        >
+                          <span class="mz-icon --trash"></span>
+                        </button>
+                        <button
+                          type="button"
                           class="mz-integer-input__stepper"
                           data-decrement="true"
                         >
@@ -3072,6 +3421,13 @@
                       <div class="mz-integer-input__quantity">
                         <button
                           type="button"
+                          class="mz-integer-input__stepper --hidden"
+                          data-remove="true"
+                        >
+                          <span class="mz-icon --trash"></span>
+                        </button>
+                        <button
+                          type="button"
                           class="mz-integer-input__stepper"
                           data-decrement="true"
                         >
@@ -3104,6 +3460,7 @@
             </section>
           </main>
         </div>
+        <footer class="mz-footer">Footer</footer>
       </div>
     </div>
     <script
@@ -3121,11 +3478,11 @@
     <script src="/v2/Common/js/Image.js"></script>
     <script src="/v2/Common/js/ToggleButton.js"></script>
     <script src="/v2/Common/js/Input.js"></script>
+    <script src="/v2/Cart/js/WalletSection.js"></script>
+    <script src="/v2/Cart/js/CouponSection.js"></script>
     <script src="/v2/Cart/js/PromoCodeInput.js"></script>
     <script src="/v2/Cart/js/CartDetailSection.js"></script>
-    <script src="/v2/Cart/js/useMockPromoCodes.js"></script>
     <script src="/v2/Common/js/DimLayer.js"></script>
-    <script src="/v2/Cart/js/CouponSection.js"></script>
     <script src="/v2/Common/js/Dropdown.js"></script>
     <script src="/v2/Common/js/DropdownInput.js"></script>
     <script src="/lib/js/bodyScrollLock.min.js"></script>
@@ -3143,5 +3500,6 @@
     <script src="/lib/js/jquery.validate.min.js"></script>
     <script src="/v2/Common/js/formValidationDefaults.js"></script>
     <script src="/v2/Cart/js/Cart.js"></script>
+    <script src="/v2/Cart/js/useMockPromoCodes.js"></script>
   </body>
 </html>
