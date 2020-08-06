@@ -679,7 +679,6 @@
                                                         </p>
                                                     </div>
                                                 </div>
-
                                             </div>
                                         </div>
                                         <div class="oa-row">
@@ -687,16 +686,9 @@
                                                     <span>เพิ่มบัตร</span>
                                                 </button>
                                         </div>
-
                                     </section>
-
                                 </div>
-
                             </div>
-
-
-
-
                             <div class="mz-payment-layout__footer">
                                 Secured by
                                 <img class="mz-image mz-payment-layout__2c2p" alt="2c2p" src="../static/images/2c2p.svg">
@@ -712,8 +704,7 @@
         (() => {
             function AlphaOnly() {
                 $('#clsAlphaOnly').keypress(function(e) { // Accept only alpha numerics, no special characters 
-                    var regex = new RegExp("^[a-zA-Z ]+$");
-                    //var regex = new RegExp("^[A-Z ]+$");
+                    var regex = new RegExp("^[a-zA-Z \\- \\.]+$"); //A-z and .,-
 
                     var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
                     if (regex.test(str)) {

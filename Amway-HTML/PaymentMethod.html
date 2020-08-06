@@ -1908,8 +1908,7 @@
         (() => {
             function AlphaOnly() {
                 $('#clsAlphaOnly').keypress(function(e) { // Accept only alpha numerics, no special characters 
-                    var regex = new RegExp("^[a-zA-Z ]+$");
-                    //var regex = new RegExp("^[A-Z ]+$");
+                    var regex = new RegExp("^[a-zA-Z \\- \\.]+$"); //A-z and .,-
 
                     var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
                     if (regex.test(str)) {

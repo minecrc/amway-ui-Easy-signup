@@ -1073,6 +1073,7 @@
                                   ยกเลิก
                                 </span>
                               </button>
+                                                        <a href=""></a>
                                                     </header>
                                                     <div id="add-card-content" class="mz-saved-credit-debit__add-card-content collapse in" role="tabpanel" aria-labelledby="add-card-section" aria-expanded="true">
                                                         <div class="mz-new-credit-debit">
@@ -1909,8 +1910,7 @@
         (() => {
             function AlphaOnly() {
                 $('#clsAlphaOnly').keypress(function(e) { // Accept only alpha numerics, no special characters 
-                    var regex = new RegExp("^[a-zA-Z ]+$");
-                    //var regex = new RegExp("^[A-Z ]+$");
+                    var regex = new RegExp("^[a-zA-Z \\- \\.]+$"); //A-z and .,-
 
                     var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
                     if (regex.test(str)) {
