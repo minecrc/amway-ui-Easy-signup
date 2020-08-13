@@ -933,7 +933,6 @@
             function AlphaOnlyName() {
                 $('#First-name-Eng').keypress(function(e) { // Accept only alpha numerics, no special characters 
                     var regex = new RegExp("^[a-zA-Z \\- \\.]+$"); //A-z and .,-
-
                     var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
                     if (regex.test(str)) {
                         $('#first-name-eng-error').html("");
@@ -943,7 +942,6 @@
                         $('#first-name-eng-error').html("please use English Character");
 
                     }
-
                     e.preventDefault();
 
                     return false;
@@ -958,9 +956,7 @@
                         $('#last-name-eng-error').css('background', '#ff000017');
                         $('#last-name-eng-error').html("please use English Character");
                     }
-
                     e.preventDefault();
-
                     return false;
                 });
             }
