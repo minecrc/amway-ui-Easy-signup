@@ -2,3 +2,4 @@
 node_modules/
 _config.yml
 package-lock.json
+package.json

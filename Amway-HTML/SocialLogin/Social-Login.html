@@ -5,17 +5,137 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>SignUpABOStarterKit</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../../styles/common.6d195332c6a01d6fcf4b.css" />
-    <link rel="stylesheet" href="../../styles/SignUpABO___SignUpABOStarterKit.d0efa0a407185b6889ec.css" />
-    <link rel="stylesheet" href="../../styles/common.1d8ec6c454ccb779278b.css" />
-    <link rel="stylesheet" href="../../styles/Cart___CartForABOPickup.b1dc55a80750ab878bed.css" />
+    <link rel="stylesheet" href="../../Common/normalize.min.css" />
+    <link rel="stylesheet" href="../../Header/MenuBar.min.css" />
+    <link rel="stylesheet" href="../../Header/NavigationBar.min.css" />
+    <link rel="stylesheet" href="../../Common/Icon.min.css" />
+    <link rel="stylesheet" href="../../Common/Image.min.css" />
+    <link rel="stylesheet" href="../../Header/IdBadge.min.css" />
+    <link rel="stylesheet" href="../../Common/Input.min.css" />
+    <link rel="stylesheet" href="../../Header/ProductMenu.min.css" />
+    <link rel="stylesheet" href="../../Header/PopupMenu.min.css" />
+    <link rel="stylesheet" href="../../Common/MenuArrow.min.css" />
+    <link rel="stylesheet" href="../../Header/TopmostBar.min.css" />
+    <link rel="stylesheet" href="../../Header/LanguageSwitcher.min.css" />
+    <link rel="stylesheet" href="../../Header/UserMenu.min.css" />
+    <link rel="stylesheet" href="../../Common/Button.min.css" />
+    <link rel="stylesheet" href="../../Layout/MainLayout.min.css" />
+    <link rel="stylesheet" href="../../Common/DimLayer.min.css" />
+    <link rel="stylesheet" href="../../Search/SearchModal.min.css" />
+    <link rel="stylesheet" href="../../Common/Link.min.css" />
+    <link rel="stylesheet" href="../../styles/SignUpMember___SignUpMemberSmsInput.9a1edc65091e12dc0df0.css" />
+    <style>
+        span.oa-menu-bar__text:hover {
+            text-decoration: underline;
+        }
+        
+        .box_login-from {
+            margin: 15px auto !important;
+            text-align: center;
+        }
+        
+        .box_login-from p {
+            color: #9EA0A3;
+            font-size: 13px;
+        }
+        
+        .box_login-link,
+        .box_login-etc {
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .link_login-item {
+            width: 50%;
+        }
+        
+        .link_area {
+            width: 100%;
+        }
+        
+        .oa_amway-login-main-img {
+            max-width: 173px;
+            margin: 27px auto;
+        }
+        
+        .login_renewal {
+            /*padding-top: 50px;*/
+            padding-bottom: 65px;
+        }
+        
+        .btn_login-Line {
+            display: flex;
+            align-items: center;
+            border-radius: 9px;
+            width: 100%;
+            background-color: #00c300;
+            color: #fff;
+            margin-top: 10px;
+        }
+        
+        .oa-input input,
+        .oa-input textarea {
+            border: 1px solid #c3c4c5;
+            border-radius: 0;
+            background: #fff;
+            box-shadow: none;
+            color: #09498b;
+            font-size: 16px;
+        }
+        
+        .oa-button {
+            height: 40px;
+            margin: 13px auto;
+        }
+        
+        a {
+            font-size: 13px;
+        }
+        
+        .box_login-link,
+        .box_login-etc,
+        .box_login-from {
+            max-width: 330px;
+            margin: 0 auto;
+        }
+        
+        .oa-input.oa-input-group__input {
+            margin: 15px auto;
+            text-align: left;
+        }
+        
+        #loginForm {
+            margin-bottom: 40px;
+        }
+        
+        .link_Line-join {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 0px;
+            color: #002f5f;
+            height: 40px;
+            border-color: #002f5f;
+            max-width: 140px;
+            width: 100%;
+            border-radius: 8px;
+            vertical-align: middle;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid;
+        }
+    </style>
 </head>
 
 <body>
     <div id="root">
-        <header class="mz-main-layout__header">
+        <!-- Header Session -->
+        <header class="oa-main-layout__header">
             <nav class="oa-topmost-bar" aria-label="secondary">
                 <section class="oa-topmost-bar__container">
                     <div class="oa-language-switcher" data-language-key="en"></div>
@@ -39,33 +159,31 @@
                 <div class="oa-navigation-bar__container">
                     <section class="oa-navigation-bar__section --left">
                         <button id="oa-hamburger" class="oa-navigation-bar__hamburger" type="button">
-                <span class="oa-icon --hamburger"></span>
-              </button>
+                            <img class="oa-image" data-src="../../static/images/hamburger.svg" alt="hamburger" />
+                        </button>
                         <a class="oa-navigation-bar__logo" href="../../">
                             <img class="oa-image" data-src="../../static/images/amway-logo-white.svg" alt="amway-logo-white" />
                         </a>
                         <div class="oa-navigation-bar__search-input">
                             <div class="oa-input oa-search-input">
-                                <span class="oa-icon --search oa-input__icon --left"></span>
-                                <input type="text" placeholder="Search by Name / Product ID" class="oa-input__input input-lg form-control --round --inverse --with-left-icon" />
+                                <span class="oa-icon --search oa-input__icon"></span>
+                                <input type="text" placeholder="Search by Name / Product ID" class="oa-input__input input-lg form-control --round --inverse --small --with-icon" />
                             </div>
                         </div>
                     </section>
                     <section class="oa-navigation-bar__section --right">
                         <button id="oa-search-button" type="button" class="oa-navigation-bar__search-button">
-                <span class="oa-icon --search oa-navigation-bar__icon"></span>
-              </button>
-                        <span class="oa-navigation-bar__icon">
-                <span class="oa-icon --cart"></span>
-                        </span>
+                            <span class="oa-icon --search oa-navigation-bar__icon"></span>
+                        </button>
+                        <span class="oa-icon --cart oa-navigation-bar__icon"></span>
                         <div id="oa-user" class="oa-navigation-bar__user">
                             <span class="oa-icon --user oa-navigation-bar__user-icon"></span>
                             <span class="oa-navigation-bar__user-entry">
-                  <a class="oa-navigation-bar__login" href="../../login">Login</a>
-                  <span>/</span>
+                                <a class="oa-navigation-bar__login" href="../../login">Login</a>
+                                <span>/</span>
                             <a class="oa-navigation-bar__register" href="../../register">
-                    Register
-                  </a>
+                                    Register
+                                </a>
                             </span>
                         </div>
                     </section>
@@ -103,7 +221,7 @@
                 </ul>
             </nav>
         </header>
-        <div id="dim-layer" class="mz-dim-layer"></div>
+        <div id="dim-layer" class="oa-dim-layer"></div>
         <nav id="oa-product-menu" class="oa-popup-menu --left oa-product-menu" data-level="1" aria-label="menu">
             <div id="oa-product-menu-arrow" class="oa-menu-arrow --white"></div>
             <header class="oa-popup-menu__header">
@@ -121,8 +239,8 @@
                         <li>
                             <a class="oa-product-menu__category --outstanding" data-id="promotions" data-title="Promotions" href="../../promotions">
                                 <span class="oa-product-menu__text --desktop">
-                    Promotions
-                  </span>
+                                    Promotions
+                                </span>
                                 <span class="oa-product-menu__text --mobile">Promotions</span>
                             </a>
                         </li>
@@ -130,8 +248,8 @@
                             <a class="oa-product-menu__category" data-id="brands" data-title="Shop by Brand" href="../../brands">
                                 <span class="oa-product-menu__text --desktop">Brands</span>
                                 <span class="oa-product-menu__text --mobile">
-                    Shop by Brand
-                  </span>
+                                    Shop by Brand
+                                </span>
                             </a>
                         </li>
                         <li>
@@ -154,11 +272,11 @@
                             <a class="oa-product-menu__category" data-id="personal-care" data-title="Personal Care" href="../../personal-care">
                                 <img class="oa-image oa-product-menu__icon" data-src="../../static/images/category-personal-care.svg" alt="Personal Care" />
                                 <span class="oa-product-menu__text --desktop">
-                    Personal Care
-                  </span>
+                                    Personal Care
+                                </span>
                                 <span class="oa-product-menu__text --mobile">
-                    Personal Care
-                  </span>
+                                    Personal Care
+                                </span>
                                 <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
                             </a>
                         </li>
@@ -166,11 +284,11 @@
                             <a class="oa-product-menu__category" data-id="home-living" data-title="Home Living" href="../../home-living">
                                 <img class="oa-image oa-product-menu__icon" data-src="../../static/images/category-home-living.svg" alt="Home Living" />
                                 <span class="oa-product-menu__text --desktop">
-                    Home Living
-                  </span>
+                                    Home Living
+                                </span>
                                 <span class="oa-product-menu__text --mobile">
-                    Home Living
-                  </span>
+                                    Home Living
+                                </span>
                                 <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
                             </a>
                         </li>
@@ -178,11 +296,11 @@
                             <a class="oa-product-menu__category" data-id="agriculture" data-title="Agriculture" href="../../agriculture">
                                 <img class="oa-image oa-product-menu__icon" data-src="../../static/images/category-agriculture.svg" alt="Agriculture" />
                                 <span class="oa-product-menu__text --desktop">
-                    Agriculture
-                  </span>
+                                    Agriculture
+                                </span>
                                 <span class="oa-product-menu__text --mobile">
-                    Agriculture
-                  </span>
+                                    Agriculture
+                                </span>
                                 <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
                             </a>
                         </li>
@@ -190,11 +308,11 @@
                             <a class="oa-product-menu__category" data-id="energy-drink" data-title="Energy Drink" href="../../energy-drink">
                                 <img class="oa-image oa-product-menu__icon" data-src="../../static/images/category-energy-drink.svg" alt="Energy Drink" />
                                 <span class="oa-product-menu__text --desktop">
-                    Energy Drink
-                  </span>
+                                    Energy Drink
+                                </span>
                                 <span class="oa-product-menu__text --mobile">
-                    Energy Drink
-                  </span>
+                                    Energy Drink
+                                </span>
                                 <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
                             </a>
                         </li>
@@ -283,53 +401,53 @@
                             <ul id="skin-care-detail" class="oa-product-menu__sub-category-detail">
                                 <li>
                                     <a class="oa-product-menu__see-all" href="../../skin-care">
-                      See all
-                    </a>
+                                        See all
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../cleansing">
-                      Cleansing
-                    </a>
+                                        Cleansing
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../serun">
-                      Serum
-                    </a>
+                                        Serum
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../moisturizer">
-                      Moisturizer
-                    </a>
+                                        Moisturizer
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../serum-moisturizer">
-                      Serum &amp; Moisturizer
-                    </a>
+                                        Serum &amp; Moisturizer
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../eye-cream">
-                      Eye Cream
-                    </a>
+                                        Eye Cream
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../sun-screen">
-                      Sun Screen
-                    </a>
+                                        Sun Screen
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../mask">
-                      Mask
-                    </a>
+                                        Mask
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../for-men">
-                      For Men
-                    </a>
+                                        For Men
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../special-treatment">
-                      Special Treatment
-                    </a>
+                                        Special Treatment
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -341,28 +459,28 @@
                             <ul id="make-up-detail" class="oa-product-menu__sub-category-detail">
                                 <li>
                                     <a class="oa-product-menu__see-all" href="../../make-up">
-                      See all
-                    </a>
+                                        See all
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../facial">
-                      Facial
-                    </a>
+                                        Facial
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../eyes">
-                      Eyes
-                    </a>
+                                        Eyes
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../lips">
-                      Lips
-                    </a>
+                                        Lips
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../cheeks">
-                      Cheeks
-                    </a>
+                                        Cheeks
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -374,18 +492,18 @@
                             <ul id="collection-detail" class="oa-product-menu__sub-category-detail">
                                 <li>
                                     <a class="oa-product-menu__see-all" href="../../collection">
-                      See all
-                    </a>
+                                        See all
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../paris-set-edition">
-                      Paris Set Edition
-                    </a>
+                                        Paris Set Edition
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../bangkok-set-edition">
-                      Bangkok Set Edition
-                    </a>
+                                        Bangkok Set Edition
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -397,18 +515,18 @@
                             <ul id="perfume-detail" class="oa-product-menu__sub-category-detail">
                                 <li>
                                     <a class="oa-product-menu__see-all" href="../../perfume">
-                      See all
-                    </a>
+                                        See all
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../flora-chic">
-                      Flora Chic
-                    </a>
+                                        Flora Chic
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../unknown">
-                      Unknown
-                    </a>
+                                        Unknown
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -420,28 +538,28 @@
                             <ul id="accessories-detail" class="oa-product-menu__sub-category-detail">
                                 <li>
                                     <a class="oa-product-menu__see-all" href="../../accessories">
-                      See all
-                    </a>
+                                        See all
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../make-up-tools">
-                      Make Up Tools
-                    </a>
+                                        Make Up Tools
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../facial-care-tools">
-                      Facial Care Tools
-                    </a>
+                                        Facial Care Tools
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../cleansing-cloth">
-                      Cleansing Cloth
-                    </a>
+                                        Cleansing Cloth
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="oa-product-menu__sub-category-item" href="../../facial-hygienic">
-                      Facial Hygienic
-                    </a>
+                                        Facial Hygienic
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -449,8 +567,8 @@
                     <ul id="agriculture-detail" class="oa-product-menu__category-detail --sub-categories">
                         <li>
                             <a class="oa-product-menu__see-all" href="../../agriculture">
-                  See all
-                </a>
+                                See all
+                            </a>
                         </li>
                         <li class="oa-product-menu__category-item">
                             <a class="oa-product-menu__sub-category" href="../../mineral-supplements" data-id="mineral-supplements" data-title="Mineral Supplements">
@@ -460,23 +578,23 @@
                             <ul id="mineral-supplements-detail" class="oa-product-menu__sub-category-detail">
                                 <li>
                                     <a class="oa-product-menu__see-all" href="../../mineral-supplements">
-                      See all
-                    </a>
+                                        See all
+                                    </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="oa-product-menu__category-item">
                             <a class="oa-product-menu__sub-category" href="../../supplement-fertilizer" data-id="supplement-fertilizer" data-title="Supplement Fertilizer">
                                 <span class="oa-product-menu__text">
-                    Supplement Fertilizer
-                  </span>
+                                    Supplement Fertilizer
+                                </span>
                                 <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
                             </a>
                             <ul id="supplement-fertilizer-detail" class="oa-product-menu__sub-category-detail">
                                 <li>
                                     <a class="oa-product-menu__see-all" href="../../supplement-fertilizer">
-                      See all
-                    </a>
+                                        See all
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -488,8 +606,8 @@
                             <ul id="plant-fertilizer-detail" class="oa-product-menu__sub-category-detail">
                                 <li>
                                     <a class="oa-product-menu__see-all" href="../../plant-fertilizer">
-                      See all
-                    </a>
+                                        See all
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -516,18 +634,14 @@
                 <ul>
                     <li>
                         <a class="oa-user-menu__item --outstanding" href="../../business-center">
-                Business Center
-              </a>
+                            Business Center
+                        </a>
                     </li>
                     <li>
                         <a class="oa-user-menu__item" href="../../awaiting-payment">
-                Awaiting Payment
-                <img
-                  class="oa-image oa-user-menu__noti"
-                  data-src="../../static/images/new.svg"
-                  alt="new"
-                />
-              </a>
+                            Awaiting Payment
+                            <img class="oa-image oa-user-menu__noti" data-src="../../static/images/new.svg" alt="new" />
+                        </a>
                     </li>
                     <li><a class="oa-user-menu__item" href="../../my-sop">My SOP</a></li>
                     <li>
@@ -535,8 +649,8 @@
                     </li>
                     <li>
                         <a class="oa-user-menu__item" href="../../store-locator">
-                Store Locator
-              </a>
+                            Store Locator
+                        </a>
                     </li>
                     <li>
                         <a class="oa-user-menu__item" href="../../about-amway">About Amway</a>
@@ -553,12 +667,12 @@
         <div id="oa-search-modal" class="oa-search-modal">
             <header class="oa-search-modal__header">
                 <div class="oa-input oa-search-input">
-                    <span class="oa-icon --search oa-input__icon --left"></span>
-                    <input type="text" placeholder="Search by Name / Product ID" class="oa-input__input input-lg form-control --round --with-left-icon" />
+                    <span class="oa-icon --search oa-input__icon"></span>
+                    <input type="text" placeholder="Search by Name / Product ID" class="oa-input__input input-lg form-control --round --small --with-icon" />
                 </div>
                 <button id="oa-search-modal-close-button" type="button" class="oa-search-modal__close-button">
-            <small>Cancel</small>
-          </button>
+                    <small>Cancel</small>
+                </button>
             </header>
             <section class="oa-search-modal__section">
                 <header>
@@ -569,18 +683,18 @@
                         <a class="oa-search-modal__keyword" href="../../beauty/artistry">
                             <span>Artistry</span>
                             <span>
-                  Search in
-                  <strong>Beauty</strong>
-                </span>
+                                Search in
+                                <strong>Beauty</strong>
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a class="oa-search-modal__keyword" href="../../nutrition/arabica">
                             <span>Arabica</span>
                             <span>
-                  Search in
-                  <strong>Nutrition</strong>
-                </span>
+                                Search in
+                                <strong>Nutrition</strong>
+                            </span>
                         </a>
                     </li>
                 </ul>
@@ -605,8 +719,8 @@
                                 <div class="oa-search-modal__product-checkout">
                                     <span class="oa-search-modal__product-price">฿964</span>
                                     <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
-                      <span>Add to Cart</span>
-                    </button>
+                                        <span>Add to Cart</span>
+                                    </button>
                                 </div>
                             </div>
                         </a>
@@ -622,8 +736,8 @@
                                 <div class="oa-search-modal__product-checkout">
                                     <span class="oa-search-modal__product-price">880</span>
                                     <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
-                      <span>Add to Cart</span>
-                    </button>
+                                        <span>Add to Cart</span>
+                                    </button>
                                 </div>
                             </div>
                         </a>
@@ -638,11 +752,11 @@
                                 <p class="oa-search-modal__product-description"></p>
                                 <div class="oa-search-modal__product-checkout">
                                     <span class="oa-search-modal__product-price">
-                      ฿964 ~ ฿1,564
-                    </span>
+                                        ฿964 ~ ฿1,564
+                                    </span>
                                     <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
-                      <span>Add to Cart</span>
-                    </button>
+                                        <span>Add to Cart</span>
+                                    </button>
                                 </div>
                             </div>
                         </a>
@@ -650,287 +764,103 @@
                 </ul>
             </section>
         </div>
-        <div id="mz-main-layout" class="mz-main-layout">
-            <div class="mz-main-layout__content">
-                <main class="oa-sign-up-form-layout">
-                    <header class="oa-sign-up-form-layout__header">
-                        <div class="step-progress-bar">
-                            <div class="step-progress-bar__step" style="order:4">
-                                <div class="step-progress-bar__label">
-                                    5
-                                    <span class="step-progress-bar__text">. ชำระเงิน</span>
-                                </div>
-                            </div>
-                            <div class="step-progress-bar__step --current" style="order:3">
-                                <div class="step-progress-bar__label">
-                                    4
-                                    <span class="step-progress-bar__text">
-                      . ข้อมูลการจัดส่ง
-                    </span>
-                                </div>
-                            </div>
-                            <div class="step-progress-bar__step --passed" style="order:2">
-                                <div class="step-progress-bar__label">
-                                    3
-                                    <span class="step-progress-bar__text">
-                      . ข้อมูลผู้สปอนเซอร์
-                    </span>
-                                </div>
-                            </div>
-                            <div class="step-progress-bar__step --passed" style="order:1">
-                                <div class="step-progress-bar__label">
-                                    2
-                                    <span class="step-progress-bar__text">
-                      . ที่อยู่ปัจจุบัน
-                    </span>
-                                </div>
-                            </div>
-                            <div class="step-progress-bar__step --passed" style="order:0">
-                                <div class="step-progress-bar__label">
-                                    1
-                                    <span class="step-progress-bar__text">. ข้อมูลส่วนตัว</span>
-                                </div>
-                            </div>
-                        </div>
-                        <h3 class="oa-sign-up-form-layout__title">
-                            ชุดคู่มือสมาชิก(แค็ตตาล็อก)
-                        </h3>
-                        <p class="oa-sign-up-form-layout__description">
-                            กรุณาเลือกช่องทางในการจัดส่งชุดคู่มือสมาชิก(แค็ตตาล็อก)
-                        </p>
-                    </header>
-                    <form class="oa-form --extra-wide" action="#" id="sign-up-starter-kit" novalidate="novalidate">
+        <!-- Login Session -->
+        <div id="oa-main-layout" class="oa-main-layout">
+            <div class="oa-main-layout__content">
 
-                        <div class="oa-checkable-input --with-background">
-                            <input type="radio" id="content-method-book" name="shipping-method" value="content-method-book" class="oa-checkable-input__input --radio valid collapse in" data-toggle="collapse" data-target="#content-method-book:not(.in), .oa-checkable-input__content:not(#content-method-book).in"
-                                readonly="" aria-invalid="false" aria-expanded="true" style="">
-                            <div class="oa-checkable-input__container-custom">
-                                <label for="content-method-book" class="oa-checkable-input__label oa-sign-up-starter-kit-shipping-method__label --regular">
-                                <!-- <span class="oa-icon --unchecked oa-checkable-input__icon --unchecked" ></span>
-                                <span  class="oa-icon --radio-checked oa-checkable-input__icon --checked" ></span> -->
-                                <img class="oa-image oa-sign-up-e-starter-kit__image" alt="e-starter-kit" src="../../static/images/e-member.jpg">
-                                <p class="oa-sign-up-e-starter-kit__label">
-                                    <span>คุณได้รับคะแนน Amplus จากการสมัคร 300 คะแนน </span> <br>
-                           
-                                    <span>คุณสามารถอ่านนิตยสารรายเดือน Amnews ได้ที่ <br> 
-                                        www.amway.co.th
-                                    </span>
-                                </p>
+                <div class="yCmsContentSlot login-right-content-slot">
+                    <div class="yCmsComponent login-right-content-component">
+                        <div class="login-section">
+                            <!-- //skipToContent -->
 
-                              </label>
-                                <div id="content-method-book" class="oa-checkable-input__content collapse in" aria-expanded="true" style="">
-                                    <p> <span>กรุณาเลือกช่องทางในการรับคู่มือสมาชิกและ(แค็ตตาล็อก)</span></p>
+                            <!-- S : 2020 login renewal -->
+                            <div class="login_renewal">
+                                <div class="login-area">
 
-                                    <div class="oa-checkable-input --with-background">
-                                        <input type="radio" id="existing-address" name="shipping-method" value="existing-address" class="oa-checkable-input__input --radio valid" data-toggle="collapse" data-target="#content-shipping-method-existing-address:not(.in), .oa-checkable-input__content2:not(#content-shipping-method-existing-address).in"
-                                            readonly="">
-                                        <div class="oa-checkable-input__container">
-                                            <label for="existing-address" class="oa-checkable-input__label oa-sign-up-starter-kit-shipping-method__label --regular">
-                                            <span class="oa-icon --unchecked oa-checkable-input__icon --unchecked"></span>
-                                            <span class="oa-icon --radio-checked oa-checkable-input__icon --checked"></span>
-                                            <span>จัดส่ง (ที่อยู่ปัจจุบัน)</span>
-                                          </label>
-                                            <div id="content-shipping-method-existing-address" class="oa-checkable-input__content2 collapse">
-                                                <div class="oa-input oa-sign-up-starter-kit-shipping-method__pickup-input">
-                                                    <p> <span>กรุณาใส่เบอร์โทร</span></p>
-
-                                                    <div class="oa-input oa-sign-up-starter-kit-shipping-method__pickup-input">
-                                                        <span class="oa-icon --search oa-input__icon --left"></span>
-                                                        <input type="text" id="amway-branch" placeholder="ตัวอย่าง : 09XXXXXXXX" class="oa-input__input input-lg form-control --with-left-icon">
-                                                    </div>
-
-                                                </div>
-                                            </div>
+                                    <div class="box_login-from">
+                                        <h1 class="login-title">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">ระบุตัวตน</font>
+                                            </font>
+                                        </h1>
+                                        <span>
+                                            <font style="vertical-align: inherit;">กรุณาระบุข้อมูลเพื่อยืนยันตัวตน
+                                            </font>
+                                        </span>
+                                        <div class="oa_amway-login-main-img">
+                                            <img src="../../static/images/women-main-login.svg" alt="login main img">
                                         </div>
-
-                                    </div>
-
-                                    <div class="oa-checkable-input --with-background">
-                                        <input type="radio" id="pickup" name="shipping-method" value="pickup" class="oa-checkable-input__input --radio valid" data-toggle="collapse" data-target="#content-shipping-method-pickup:not(.in), .oa-checkable-input__content2:not(#content-shipping-method-pickup).in"
-                                            readonly="">
-                                        <div class="oa-checkable-input__container">
-                                            <label for="pickup" class="oa-checkable-input__label oa-sign-up-starter-kit-shipping-method__label --regular">
-                                            <span class="oa-icon --unchecked oa-checkable-input__icon --unchecked"></span>
-                                            <span class="oa-icon --radio-checked oa-checkable-input__icon --checked"></span>
-                                            <span>รับด้วยตนเอง</span>
-                                          </label>
-                                            <div id="content-shipping-method-pickup" class="oa-checkable-input__content2 collapse">
-                                                <div class="oa-input oa-sign-up-starter-kit-shipping-method__pickup-input">
-                                                    <div class="mz-delivery-methods__inputs">
-                                                        <div class="mz-delivery-methods__address-selector">
-                                                            <div class="mz-searchable-dropdown dropdown">
-                                                                <button type="button" class="mz-searchable-dropdown__button --with-left-icon --with-right-icon" data-placeholder="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <div
-                                              class="mz-searchable-dropdown__button-icon --left"
-                                            >
-                                              <span
-                                                class="mz-icon --search mz-delivery-methods__search-icon"
-                                              ></span>
+                                        <form action="#" id="social-login" method="POST">
+                                            <div class="oa-input oa-input-group__input">
+                                                <p class="text_validation" id="pwInput">หมายเลขนักธุรกิจ/สมาชิก</p>
+                                                <input id="NumOnlyCheck" type="id" type="text" pattern="[0-9]" placeholder="หมายเลขนักธุรกิจ/สมาชิก" class="form_lines" title="หมายเลขนักธุรกิจ/สมาชิก" maxlength="30">
                                             </div>
-                                            <div
-                                              class="mz-searchable-dropdown__button-icon --right"
-                                            >
-                                              <span
-                                                class="mz-icon --arrow-down mz-searchable-dropdown__icon"
-                                              ></span>
+                                            <div class="oa-input oa-input-group__input">
+                                                <p class="text_validation" id="pwInput">รหัสผ่าน</p>
+                                                <input type="password" id="j_password" name="j_password" placeholder="รหัสผ่าน" class="form_lines" title="ใส่รหัสผ่าน" maxlength="30">
+                                                <p class="text_validation" id="pwInput" style="display:none;">รหัสผ่าน</p>
+
                                             </div>
-                                            <span class="mz-searchable-dropdown__button-text">
-                                              เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า
-                                            </span>
-                                          </button>
-                                                                <div class="mz-searchable-dropdown__modal">
-                                                                    <button type="button" class="mz-searchable-dropdown__close-button">
-                                              <span class="mz-icon --close"></span>
+                                            <p class="mz-error mz-social-login__error">
+                                                <small id="id-error"></small>
+                                            </p>
+                                            <div class="oa-input oa-input-group__input">
+                                            </div>
+                                            <div class="login_btn-group" style="display: flex;flex-wrap: wrap;justify-content: center;">
+                                                <button type="button" class="oa-button btn btn-lg --primary --fill --regular" id="Login_Login" onclick="" style="max-width: 285px;">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">ตกลง</font>
+                                                </font>
                                             </button>
-                                                                    <div class="mz-input mz-searchable-dropdown__input">
-                                                                        <div class="mz-input__icon --left">
-                                                                            <span class="mz-icon --search mz-delivery-methods__search-icon"></span>
-                                                                        </div>
-                                                                        <div class="mz-input__icon --right">
-                                                                            <span class="mz-icon --arrow-down mz-searchable-dropdown__icon"></span>
-                                                                        </div>
-                                                                        <input type="text" id="pickup-address" placeholder="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า" class="mz-input__input --with-left-icon --with-right-icon" value="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า" />
-                                                                    </div>
-                                                                    <div class="mz-searchable-dropdown__menu">
-                                                                        <div class="mz-searchable-dropdown__result-header">
-                                                                            2 แอมเวย์ช็อปใกล้คุณ
-                                                                        </div>
-                                                                        <label class="mz-searchable-dropdown__option" for="pickup-address:amhq">
-                                                                                <input
-                                                                                  type="radio"
-                                                                                  class="mz-searchable-dropdown__option-input"
-                                                                                  id="pickup-address:amhq"
-                                                                                  name="pickup-address"
-                                                                                  value="amhq"
-                                                                                  data-label="แอมเวย์ ช็อป สำนักงานใหญ่ - AMWAY SHOP HEADQUARTERS"
-                                                                                  readonly=""
-                                                                                />
-                                                                                <div class="mz-shop-address-option">
-                                                                                  <span class="mz-icon --map-pin"></span>
-                                                                                  <span class="mz-shop-address-option__name">
-                                                                                    แอมเวย์ ช็อป สำนักงานใหญ่ - AMWAY SHOP
-                                                                                    HEADQUARTERS
-                                                                                  </span>
-                                                                                </div>
-                                                                                <span
-                                                                                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
-                                                                                ></span>
-                                                                              </label>
-                                                                        <label class="mz-searchable-dropdown__option" for="pickup-address:amsr">
-                                                                                <input
-                                                                                  type="radio"
-                                                                                  class="mz-searchable-dropdown__option-input"
-                                                                                  id="pickup-address:amsr"
-                                                                                  name="pickup-address"
-                                                                                  value="amsr"
-                                                                                  data-label="แอมเวย์ ช็อป สำโรง - AMWAY SHOP SAMRONG"
-                                                                                  readonly=""
-                                                                                />
-                                                                                <div class="mz-shop-address-option">
-                                                                                  <span class="mz-icon --map-pin"></span>
-                                                                                  <span class="mz-shop-address-option__name">
-                                                                                    แอมเวย์ ช็อป สำโรง - AMWAY SHOP SAMRONG
-                                                                                  </span>
-                                                                                </div>
-                                                                                <span
-                                                                                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
-                                                                                ></span>
-                                                                              </label>
-                                                                        <div class="mz-searchable-dropdown__footer"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <p class="mz-message --error mz-delivery-methods__error-message">
-                                                                <small id="pickup-address-error"></small>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
-
+                                    <div class="box_login-link">
+                                        <a href="./SocialLoginFindPw.html" class="link_login-item">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">ลืมรหัสผ่าน</font>
+                                            </font>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- E : 2020 login renewal -->
                         </div>
-                    </form>
-                </main>
-            </div>
-            <div class="oa-checkable-input --with-background">
-                <input type="radio" id="pickup" name="shipping-method" value="pickup" class="oa-checkable-input__input --radio" data-toggle="collapse" data-target="#content-shipping-method-pickup:not(.in), .oa-checkable-input__content:not(#content-shipping-method-pickup).in"
-                    readonly="">
-                <p class="oa-message --error">
-                    <small id="shipping-method-error"></small>
-                </p>
-                <div class="oa-row">
-                    <button type="submit" class="oa-button btn btn-lg --primary --narrow --regular --inline">
-                  <span>ขั้นตอนต่อไป</span>
-                </button>
+                    </div>
                 </div>
 
+
             </div>
-            <footer class="mz-footer">Footer</footer>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="../../lib/js/validator.min.js"></script>
-    <script src="../../lib/js/jquery.validate.min.js"></script>
-    <script src="../../v1/Common/js/formValidationDefaults.js"></script>
-    <script src="../../lib/js/jquery.Thailand.js/dependencies/JQL.min.js"></script>
-    <script src="../../lib/js/jquery.Thailand.js/dependencies/typeahead.bundle.js"></script>
-    <script src="../../lib/js/jquery.Thailand.js/dist/jquery.Thailand.min.js"></script>
-    <script src="../../v1/Common/js/Dropdown.js"></script>
-    <script src="../../v1/Common/js/AddressFormContent.js"></script>
-    <script src="../../v1/Common/js/image.js"></script>
-    <script src="../../v1/SignUp/js/SignUpStarterKitForm.js"></script>
-    <script src="../../v1/Search/js/SearchModal.js"></script>
-    <script src="../../v1/Header/js/UserMenu.js"></script>
-    <script src="../../v1/Header/js/ProductMenu.js"></script>
-    <script src="../../v1/Header/js/LanguageSwitcher.js"></script>
-    <script src="../../v2/Layout/js/MainLayout.js"></script>
-    <script src="../../v2/Common/js/global.js"></script>
-    <script src="../../v2/Common/js/IntegerInput.js"></script>
-    <script src="../../v2/Common/js/Image.js"></script>
-    <script src="../../v2/Common/js/ToggleButton.js"></script>
-    <script src="../../v2/Cart/js/GpvBar.js"></script>
-    <script src="../../v2/Common/js/Input.js"></script>
-    <script src="../../v2/Cart/js/PromoCodeInput.js"></script>
-    <script src="../../v2/Cart/js/PromoCodeSection.js"></script>
-    <script src="../../v2/Common/js/DimLayer.js"></script>
-    <script src="../../v2/Cart/js/CouponSection.js"></script>
-    <script src="../../v2/Common/js/Dropdown.js"></script>
-    <script src="../../v2/Common/js/DropdownInput.js"></script>
-    <script src="../../lib/js/bodyScrollLock.min.js"></script>
-    <script src="../../v2/Common/js/SearchableDropdown.js"></script>
-    <script src="../../v2/Cart/js/CartLayout.js"></script>
-    <script src="../../v1/Header/js/PickupAddressModal.js"></script>
-    <script src="../../v1/Common/js/image.js"></script>
-    <script src="../../v1/Search/js/SearchModal.js"></script>
-    <script src="../../v1/Header/js/UserMenu.js"></script>
-    <script src="../../v1/Header/js/ProductMenu.js"></script>
-    <script src="../../v1/Header/js/GlobalDeliveryMethods.js"></script>
-    <script src="../../v1/Header/js/LanguageSwitcher.js"></script>
-    <script src="../../v2/Layout/js/MainLayout.js"></script>
-    <script src="../../lib/js/validator.min.js"></script>
-    <script src="../../lib/js/jquery.validate.min.js"></script>
-    <script src="../../v2/Common/js/formValidationDefaults.js"></script>
-    <script src="../../v2/Cart/js/Cart.js"></script>
-
-    <style>
-        .oa-checkable-input.--with-background>.oa-checkable-input__container-custom {
-            padding: 8px 16px;
-            border-radius: 4px;
-            background: #fafafa
-        }
-        
-        .oa-checkable-input.--with-background>.oa-checkable-input__input:checked:not(:disabled)+.oa-checkable-input__container,
-        .oa-checkable-input.--with-background>.oa-checkable-input__input:not(:disabled)+.oa-checkable-input__container:hover {
-            background: #33a4dc33;
-            color: #09498b;
-            border: 1px solid #09498b;
-        }
-    </style>
+    <script>
+        (() => {
+            function NumOnly() {
+                $('#NumOnlyCheck').keypress(function(e) { // Accept only alpha numerics, no special characters 
+                    var regex = new RegExp("^[0-9]+$");
+                    var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+                    if (regex.test(str)) {
+                        $('#id-error').html("");
+                        return true;
+                    } else {
+                        $('#id-error').css('color', '#A80035');
+                        $('#id-error').html("คุณกรอกหมายเลขนักธุรกิจ/สมาชิก หรือรหัสผ่านไม่ถูกต้อง");
+                    }
+                    e.preventDefault();
+                    return false;
+                });
+            };
+            NumOnly();
+        })();
+    </script>
+    <script src="../../Common/js/image.js"></script>
+    <script src="../../Search/js/SearchModal.js"></script>
+    <script src="../../Header/js/UserMenu.js"></script>
+    <script src="../../Header/js/ProductMenu.js"></script>
+    <script src="../../Header/js/LanguageSwitcher.js"></script>
+    <script src="../../Layout/js/MainLayout.js"></script>
 </body>
 
 </html>
