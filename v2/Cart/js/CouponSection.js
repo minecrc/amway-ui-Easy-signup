@@ -12,7 +12,7 @@
       const coupon = $(this);
 
       const id = coupon.attr('id');
-      const value = coupon.attr('data-value');
+      const amount = coupon.attr('data-value');
       const couponId = coupon.attr('data-id');
 
       coupon.on('click', () => {
@@ -31,7 +31,7 @@
         setChecked(checked);
 
         if (checked) {
-          $.createDiscountRow(couponId, value, setChecked);
+          $.createDiscountRow({ id: couponId, amount }, setChecked);
         } else {
           $(`#${couponId}-discount-row`).trigger('discount:remove');
         }

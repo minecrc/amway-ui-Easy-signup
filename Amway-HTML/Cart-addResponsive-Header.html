@@ -1717,8 +1717,8 @@
                                                 <span>ใช้</span>
                                             </button>
                                         </div>
-                                        <p class="mz-error mz-wallet-section__error">
-                                            <small>กรุณาใส่จำนวนเงิน</small>
+                                        <p id="ac1" class="mz-error mz-wallet-section__error">
+                                            <small>คุณใช้ใบสำคัญลดหนี้แล้ว</small>
                                         </p>
                                     </section>
                                     <div id="voucher-modal" class="mz-modal modal fade --mobile-full" tabindex="-1" role="dialog" style="display: none;">
@@ -1847,14 +1847,14 @@
                                         </header>
                                         <div class="mz-wallet-section__input-group">
                                             <div class="mz-input">
-                                                <input type="text" placeholder="฿ 155,057" data-id="ar" data-initial-amount="155057" class="mz-input__input">
+                                                <input type="text" placeholder="฿ 155,057.12836812637" data-id="ar" data-initial-amount="155,057.12836812637" class="mz-input__input">
                                             </div>
                                             <button type="button" class="mz-button btn btn-lg --primary --large --original-blue mz-wallet-section__button --square">
                                                 <span>ใช้</span>
                                             </button>
                                         </div>
                                         <p class="mz-error mz-wallet-section__error">
-                                            <small>กรุณาใส่จำนวนเงิน</small>
+                                            <small>คุณใช้เงินในกระเป๋าแล้ว</small>
                                         </p>
                                     </section>
                                 </div>
@@ -1979,6 +1979,9 @@
                                                 <span>- 100 / - 200</span>
                                             </div>
                                             <div class="mz-promo-code-input mz-cart-detail-section__enter --desktop">
+                                                <h6 class="mz-cart-layout__section-title">
+                                                    สิทธิ์ส่วนลดและโปรโมชั่นโค้ด
+                                                </h6>
                                                 <div class="mz-input mz-promo-code-input__input">
                                                     <input type="text" id="promo-code-input" name="promo-code" placeholder="พิมพ์รหัสโค้ดส่วนลด" class="mz-input__input --with-clear-button">
                                                     <button type="button" class="mz-input__clear-button">
@@ -1989,21 +1992,18 @@
                                                     <span>ใช้ส่วนลด</span>
                                                 </button>
                                             </div>
-                                            <p class="mz-error mz-promo-code-input__error --invalid">
+                                            <p class="mz-error mz-promo-code-input__error --valid">
                                                 <small>โปรโมชั่นโค้ดนี้ไม่สามารถใช้ได้</small>
+                                            </p>
+                                            <p class="mz-error mz-promo-code-input__error --is-pass">
+                                                <small>โปรโมชั่นโค้ดนี้สามารถใช้ได้</small>
                                             </p>
                                             <p class="mz-error mz-promo-code-input__error --is-used">
                                                 <small>คุณใช้โปรโมชั่นโค้ดนี้ไปแล้ว</small>
                                             </p>
                                         </section>
                                     </div>
-
                                 </div>
-                                <h6 class="mz-cart-layout__section-title">
-                                    สิทธิ์ส่วนลดและโปรโมชั่นโค้ด
-                                </h6>
-
-
                                 <div class="mz-cart-layout__summary-no-animaiton">
                                     <section class="mz-discount-bar">
                                         รับส่วนลด 20% ทันที! เมื่อซื้อครบ ฿30,000

@@ -2,6 +2,10 @@
 (() => {
   const section = $('.mz-cart-detail-section');
 
+  function getDiscountRowId(id) {
+    return `${id}-discount-row`;
+  }
+
   function extractAmount(text) {
     const amountInString = (text.match(/\d+/g) || []).join('');
     const isEmpty = amountInString.length === 0;
@@ -21,74 +25,77 @@
 
   function updateTotal() {
     const total = $('[data-total]');
-    const totalAmount = $('.mz-cart-detail-section__value')
+    const totalAmount = $('.mz-cart-detail-section__row-value')
       .toArray()
       .reduce((acc, value) => acc + extractAmount(value.innerText).amount, 0);
 
     total.text(formatAmount(totalAmount));
   }
 
-  function updateDiscountRow(title, value) {
-    const discount = $(`#${title}-discount-row`);
-    discount.find('.mz-cart-detail-section__value').text(formatAmount(-value));
+  function updateRow(row, amount) {
+    row.find('.mz-cart-detail-section__row-value').text(formatAmount(-amount));
   }
 
-  function isDiscountRowCreated(title) {
-    const titles = $('.mz-cart-detail-section__discount-title')
-      .toArray()
-      .map(code => code.innerText);
-
-    return titles.includes(title);
+  function isDiscountRowCreated(id) {
+    return $(`#${getDiscountRowId(id)}`).length;
   }
 
-  function createOrUpdateDiscountRow(
-    title,
-    value,
-    onRemove = () => {},
-    { allowUpdate = true } = {}
-  ) {
-    const isCreated = isDiscountRowCreated(title);
-
-    if (isCreated) {
-      if (allowUpdate) {
-        updateDiscountRow(title, value);
-        updateTotal();
-      }
-
-      return;
-    }
-
+  function createDiscountRow({ id, title, amount }, onRemove = () => {}) {
     const discountTemplate = section.find('#discount-template');
-    const discount = discountTemplate.clone();
+    const discountRow = discountTemplate.clone();
 
-    discount.attr('id', `${title}-discount-row`);
-    discount.find('.mz-cart-detail-section__discount-title').text(title);
-    discount.find('.mz-cart-detail-section__value').text(formatAmount(-value));
+    discountRow.attr('id', getDiscountRowId(id));
+    discountRow.find('.mz-cart-detail-section__row-title').text(title || id);
+    updateRow(discountRow, amount);
 
     function handleRemove() {
       onRemove();
-      discount.remove();
+      discountRow.remove();
       updateTotal();
     }
 
-    discount
+    discountRow
       .find('.mz-cart-value-row__remove-button')
       .on('click', handleRemove);
-    discount.on('discount:remove', handleRemove);
+    discountRow.on('discount:remove', handleRemove);
 
-    discount.insertBefore('#discount-template');
+    discountRow.insertBefore('#discount-template');
+
     updateTotal();
   }
 
-  function createDiscountRow(promoCode, value, onRemove = () => {}) {
-    createOrUpdateDiscountRow(promoCode, value, onRemove, {
-      allowUpdate: false
+  function registerWalletRow(id, onRemove = () => {}) {
+    const walletRow = $(`#${id}-row`);
+    const removeButton = walletRow.find('.mz-cart-value-row__remove-button');
+
+    removeButton.on('click', function handleRemove() {
+      walletRow.removeClass('--active');
+      updateRow(walletRow, 0);
+      onRemove();
+      updateTotal();
     });
   }
+
+  function initWalletRow() {
+    const walletRow = $(this);
+
+    walletRow.on('wallet:update', function handleUpdate(e, amount) {
+      if (amount > 0) {
+        walletRow.addClass('--active');
+      } else {
+        walletRow.removeClass('--active');
+      }
+
+      updateRow(walletRow, amount);
+      updateTotal();
+    });
+  }
+
+  $('.mz-cart-detail-section__wallet-row').each(initWalletRow);
 
   updateTotal();
 
   $.isDiscountRowCreated = isDiscountRowCreated;
   $.createDiscountRow = createDiscountRow;
-  $.createOrUpdateDiscountRow = createOrUpdateDiscountRow;
+  $.registerWalletRow = registerWalletRow;
 })();

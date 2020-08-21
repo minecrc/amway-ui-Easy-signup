@@ -4,26 +4,22 @@
 
   const header = $('.mz-main-layout__header');
 
+  const mainLayout = $('.mz-main-layout');
   const cartLayout = $('.mz-cart-layout');
   const summary = $('.mz-cart-layout__summary');
   const panel = $('.mz-cart-layout__panel');
-  const panelParent = panel.parent('form.mz-cart-layout__form');
   const mobilePanel = cartLayout.find('.mz-cart-layout__mobile-panel');
   const toggler = cartLayout.find('.mz-cart-layout__detail-toggler');
   const detail = cartLayout.find('.mz-cart-layout__detail');
 
   function reserveBottomArea() {
-    cartLayout.css(
+    mainLayout.css(
       'paddingBottom',
       window.isDesktop() ? 0 : mobilePanel.outerHeight() + toggler.outerHeight()
     );
   }
 
   function initCartLayout() {
-    if (cartLayout.attr('data-init')) return;
-
-    cartLayout.attr('data-init', true);
-
     reserveBottomArea();
 
     const dimLayer = $('#cart-dim-layer');
@@ -64,44 +60,52 @@
       }
     });
 
+    let float = false;
+
     document.addEventListener('scroll', () => {
       if (!window.isDesktop()) return;
 
       const scrollTop = $(window).scrollTop();
-      const summaryHeight = summary.outerHeight();
+      const windowHeight = $(window).height();
 
-      const mobilePanelTop = mobilePanel.offset().top;
-      const mobilePanelBottom = mobilePanelTop + mobilePanel.outerHeight();
+      const headerHeight = header.outerHeight();
+
+      const panelTop = panel.offset().top;
+      const panelHeight = panel.outerHeight();
 
       const panelLastChild = panel.children().last();
-      const panelBottom =
-        panelLastChild.offset().top + panelLastChild.outerHeight();
+      const panelContentHeight =
+        panelLastChild.offset().top + panelLastChild.outerHeight() - panelTop;
 
-      const float = scrollTop > mobilePanelBottom;
+      const summaryHeight = summary.outerHeight();
 
       const GAP = 8;
+      const SECTION_GAP = 24;
 
-      let translateY =
-        scrollTop -
-        mobilePanelBottom +
-        summaryHeight +
-        header.outerHeight() +
-        GAP;
+      let translateY = scrollTop - panelTop + headerHeight + GAP;
 
-      const detailBottom = detail.offset().top + detail.outerHeight();
+      const hasEnoughSpace =
+        summaryHeight + SECTION_GAP < panelHeight - panelContentHeight;
 
-      if (translateY + detailBottom < panelBottom) {
-        const gap = 4; // summary has own margin top 4px;
-        translateY = panelBottom - detailBottom + gap;
+      const reachedTop = scrollTop > panelTop + summaryHeight;
+
+      // Make sure it won't overlap other components in panel
+      if (translateY < panelContentHeight + SECTION_GAP) {
+        translateY = panelContentHeight + SECTION_GAP;
       }
 
-      const newSummaryBottom = translateY + detailBottom + summaryHeight;
-      const panelParentBottom =
-        panelParent.offset().top + panelParent.outerHeight();
-      const bottomDistance = panelParentBottom - newSummaryBottom;
       // Limit follow to the parent's height
-      if (bottomDistance <= 0) {
-        translateY += bottomDistance;
+      if (translateY + summaryHeight > panelHeight) {
+        translateY = panelHeight - summaryHeight;
+      }
+
+      if (float) {
+        // check if initial space is inside the screen
+        float = scrollTop > panelTop;
+      } else if (reachedTop && hasEnoughSpace) {
+        // check if target space is inside the screen
+        float =
+          translateY + panelTop + summaryHeight < scrollTop + windowHeight;
       }
 
       summary.css(
