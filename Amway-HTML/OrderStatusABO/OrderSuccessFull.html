@@ -9,7 +9,73 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" href="../../styles/common.8e7db5e747870b108a2a.css" />
     <link rel="stylesheet" href="../../styles/RegularOrder___OrderStatusABO___OrderSuccessFull.648bf30e034efce5601f.css" />
+
     <style>
+        .btn-cancle-contain {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 45px 15px 15px 15px;
+        }
+        
+        #re-order.mz-modal {
+            min-width: 200px;
+            max-width: 440px;
+            max-height: 260px;
+            min-height: 200px;
+            height: auto;
+            background-color: #ffffff;
+            margin: 0 auto;
+            top: 20vh;
+            padding: 0 !important;
+        }
+        
+        .btn.btn-sm {
+            max-width: 160px;
+            width: 100%;
+        }
+        
+        .btn-cancle-contain {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 45px 15px 15px 15px;
+        }
+        
+        .oa-cancle-mordal-content {
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+        
+        #clear-order.mz-modal {
+            min-width: 200px;
+            max-width: 440px;
+            max-height: 260px;
+            min-height: 200px;
+            height: auto;
+            background-color: #ffffff;
+            margin: 0 auto;
+            top: 20vh;
+            padding: 0 !important;
+        }
+        
+        #clear-order.mz-modal .mz-order-cancle__title {
+            position: absolute;
+            height: 40px;
+            top: 0;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            background-color: #002f5f;
+        }
+        
+        #clear-order.mz-modal .mz-order-cancle__title h6 {
+            color: #fff;
+        }
+        
         @media only screen and (max-width: 1203px) {
             .mz-order-success-actions__buttons {
                 display: flex;
@@ -22,6 +88,7 @@
             }
         }
     </style>
+
 </head>
 
 <body>
@@ -1194,13 +1261,12 @@
                                     </div>
                                 </section>
                                 <section class="mz-order-success-actions__buttons">
-
-                                    <button type="button" class="mz-button btn btn-lg --secondary --medium --original-blue mz-order-success-actions__button">
-                      <span>สั่งซื้ออีกครั้ง</span>
-                    </button>
-                                    <button type="button" class="mz-button btn btn-lg --secondary --medium --original-blue mz-order-success-actions__button">
-                      <span>ยกเลิกคำสั่งซื้อ</span>
-                    </button>
+                                    <button type="button" class="mz-button btn btn-lg --secondary --medium --original-blue mz-order-success-actions__button" data-toggle="modal" data-target="#re-order">
+                                      <span>สั่งซื้ออีกครั้ง</span>
+                                    </button>
+                                    <button type="button" class="mz-button btn btn-lg --secondary --medium --original-blue mz-order-success-actions__button" data-toggle="modal" data-target="#clear-order">
+                                      <span>ยกเลิกคำสั่งซื้อ</span>
+                                    </button>
                                 </section>
                                 <section class="mz-order-success-actions__policies">
                                     <header>
@@ -1238,6 +1304,41 @@
                             </div>
                         </div>
                     </section>
+                    <div id="clear-order" class="mz-modal modal fade --mobile-full" style="display: none;">
+
+                        <section class="oa-cancle-mordal-content">
+                            คุณต้องการยกเลิกคำสั่งซื้อทั้งหมดหรือไม่
+                            <br>
+                            <Strong>โดยคำสั่งซื้อชุดนี้จะถูกยกเลิกทั้งหมด</Strong>
+                            <form action="/clear-order">
+                                <div class="btn-cancle-contain">
+                                    <button type="submit" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button">
+                                    <span>ยกเลิกคำสั่งซื้อ</span>
+                                </button>
+                                    <button type="button" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button" data-dismiss="modal">
+                                    <span>ไม่ยกเลิก</span>
+                                </button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+
+                    <div id="re-order" class="mz-modal modal fade --mobile-full" style="display: none;">
+                        <section class="oa-cancle-mordal-content">
+                            คุณต้องการสั่งซื้อทั้งหมดอีกครั้งใช่หรือไม่
+                            <br>
+                            <form action="/re-order">
+                                <div class="btn-cancle-contain">
+                                    <button type="button" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button" data-dismiss="modal">
+                                    <span>ไม่ใช่</span>
+                                </button>
+                                    <button type="submit" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button">
+                                    <span> ใช่ </span>
+                                </button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
                 </main>
             </div>
             <footer class="mz-footer">Footer</footer>

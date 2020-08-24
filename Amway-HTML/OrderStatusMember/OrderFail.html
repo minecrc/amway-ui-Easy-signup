@@ -11,11 +11,89 @@
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/styles/common.8e7db5e747870b108a2a.css" />
+    <link rel="stylesheet" href="../../styles/common.8e7db5e747870b108a2a.css" />
     <link
       rel="stylesheet"
-      href="/styles/RegularOrder___OrderStatusMember___OrderFail.bb0d448f6940e44a7bb5.css"
+      href="../../styles/RegularOrder___OrderStatusMember___OrderFail.bb0d448f6940e44a7bb5.css"
     />
+    <style>
+      .btn-cancle-contain {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          margin: 45px 15px 15px 15px;
+      }
+      
+      #re-order.mz-modal {
+          min-width: 200px;
+          max-width: 440px;
+          max-height: 260px;
+          min-height: 200px;
+          height: auto;
+          background-color: #ffffff;
+          margin: 0 auto;
+          top: 20vh;
+          padding: 0 !important;
+      }
+      
+      .btn.btn-sm {
+          max-width: 160px;
+          width: 100%;
+      }
+      
+      .btn-cancle-contain {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          margin: 45px 15px 15px 15px;
+      }
+      
+      .oa-cancle-mordal-content {
+          width: 100%;
+          max-width: 100%;
+          text-align: center;
+      }
+      
+      #clear-order.mz-modal {
+          min-width: 200px;
+          max-width: 440px;
+          max-height: 260px;
+          min-height: 200px;
+          height: auto;
+          background-color: #ffffff;
+          margin: 0 auto;
+          top: 20vh;
+          padding: 0 !important;
+      }
+      
+      #clear-order.mz-modal .mz-order-cancle__title {
+          position: absolute;
+          height: 40px;
+          top: 0;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+          background-color: #002f5f;
+      }
+      
+      #clear-order.mz-modal .mz-order-cancle__title h6 {
+          color: #fff;
+      }
+      
+      @media only screen and (max-width: 1203px) {
+          .mz-order-success-actions__buttons {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+          }
+          .btn.btn-lg {
+              max-width: 46%;
+              width: 100%;
+          }
+      }
+  </style>
   </head>
   <body>
     <div id="root">
@@ -100,20 +178,20 @@
               </div>
               <ul class="oa-topmost-bar__links">
                 <li class="oa-topmost-bar__link">
-                  <a href="/ศูนย์การเรียนรู้">
+                  <a href="../../ศูนย์การเรียนรู้">
                     <small>ศูนย์การเรียนรู้</small>
                   </a>
                 </li>
                 <li class="oa-topmost-bar__link">
-                  <a href="/เกี่ยวกับแอมเวย์">
+                  <a href="../../เกี่ยวกับแอมเวย์">
                     <small>เกี่ยวกับแอมเวย์</small>
                   </a>
                 </li>
                 <li class="oa-topmost-bar__link">
-                  <a href="/แอมเวย์ช็อป"><small>แอมเวย์ช็อป</small></a>
+                  <a href="../../แอมเวย์ช็อป"><small>แอมเวย์ช็อป</small></a>
                 </li>
                 <li class="oa-topmost-bar__link --outstanding">
-                  <a href="/บิซซิเนส-เซ็นเตอร์">
+                  <a href="../../บิซซิเนส-เซ็นเตอร์">
                     <small>บิซซิเนส เซ็นเตอร์</small>
                   </a>
                 </li>
@@ -134,10 +212,10 @@
                 >
                   <span class="oa-icon --hamburger"></span>
                 </button>
-                <a class="oa-navigation-bar__logo" href="/">
+                <a class="oa-navigation-bar__logo" href="../../">
                   <img
                     class="oa-image"
-                    data-src="/static/images/amway-logo-white.svg"
+                    data-src="../../static/images/amway-logo-white.svg"
                     alt="amway-logo-white"
                   />
                 </a>
@@ -246,7 +324,7 @@
                   class="oa-product-menu__category --outstanding"
                   data-id="promotions"
                   data-title="Promotions"
-                  href="/promotions"
+                  href="../../promotions"
                 >
                   <span class="oa-product-menu__text --desktop">
                     Promotions
@@ -259,7 +337,7 @@
                   class="oa-product-menu__category"
                   data-id="brands"
                   data-title="Shop by Brand"
-                  href="/brands"
+                  href="../../brands"
                 >
                   <span class="oa-product-menu__text --desktop">Brands</span>
                   <span class="oa-product-menu__text --mobile">
@@ -272,11 +350,11 @@
                   class="oa-product-menu__category"
                   data-id="nutrition"
                   data-title="Nutrition"
-                  href="/nutrition"
+                  href="../../nutrition"
                 >
                   <img
                     class="oa-image oa-product-menu__icon"
-                    data-src="/static/images/category-nutrition.svg"
+                    data-src="../../static/images/category-nutrition.svg"
                     alt="Nutrition"
                   />
                   <span class="oa-product-menu__text --desktop">Nutrition</span>
@@ -291,11 +369,11 @@
                   class="oa-product-menu__category"
                   data-id="beauty"
                   data-title="Beauty"
-                  href="/beauty"
+                  href="../../beauty"
                 >
                   <img
                     class="oa-image oa-product-menu__icon"
-                    data-src="/static/images/category-beauty.svg"
+                    data-src="../../static/images/category-beauty.svg"
                     alt="Beauty"
                   />
                   <span class="oa-product-menu__text --desktop">Beauty</span>
@@ -310,11 +388,11 @@
                   class="oa-product-menu__category"
                   data-id="personal-care"
                   data-title="Personal Care"
-                  href="/personal-care"
+                  href="../../personal-care"
                 >
                   <img
                     class="oa-image oa-product-menu__icon"
-                    data-src="/static/images/category-personal-care.svg"
+                    data-src="../../static/images/category-personal-care.svg"
                     alt="Personal Care"
                   />
                   <span class="oa-product-menu__text --desktop">
@@ -333,11 +411,11 @@
                   class="oa-product-menu__category"
                   data-id="home-living"
                   data-title="Home Living"
-                  href="/home-living"
+                  href="../../home-living"
                 >
                   <img
                     class="oa-image oa-product-menu__icon"
-                    data-src="/static/images/category-home-living.svg"
+                    data-src="../../static/images/category-home-living.svg"
                     alt="Home Living"
                   />
                   <span class="oa-product-menu__text --desktop">
@@ -356,11 +434,11 @@
                   class="oa-product-menu__category"
                   data-id="agriculture"
                   data-title="Agriculture"
-                  href="/agriculture"
+                  href="../../agriculture"
                 >
                   <img
                     class="oa-image oa-product-menu__icon"
-                    data-src="/static/images/category-agriculture.svg"
+                    data-src="../../static/images/category-agriculture.svg"
                     alt="Agriculture"
                   />
                   <span class="oa-product-menu__text --desktop">
@@ -379,11 +457,11 @@
                   class="oa-product-menu__category"
                   data-id="energy-drink"
                   data-title="Energy Drink"
-                  href="/energy-drink"
+                  href="../../energy-drink"
                 >
                   <img
                     class="oa-image oa-product-menu__icon"
-                    data-src="/static/images/category-energy-drink.svg"
+                    data-src="../../static/images/category-energy-drink.svg"
                     alt="Energy Drink"
                   />
                   <span class="oa-product-menu__text --desktop">
@@ -402,11 +480,11 @@
                   class="oa-product-menu__category"
                   data-id="others"
                   data-title="Others"
-                  href="/others"
+                  href="../../others"
                 >
                   <img
                     class="oa-image oa-product-menu__icon"
-                    data-src="/static/images/category-others.svg"
+                    data-src="../../static/images/category-others.svg"
                     alt="Others"
                   />
                   <span class="oa-product-menu__text --desktop">Others</span>
@@ -421,11 +499,11 @@
                   class="oa-product-menu__category"
                   data-id="sop"
                   data-title="SOP"
-                  href="/sop"
+                  href="../../sop"
                 >
                   <img
                     class="oa-image oa-product-menu__icon"
-                    data-src="/static/images/category-sop.svg"
+                    data-src="../../static/images/category-sop.svg"
                     alt="SOP"
                   />
                   <span class="oa-product-menu__text --desktop">SOP</span>
@@ -438,100 +516,100 @@
               class="oa-product-menu__category-detail --brands"
             >
               <li>
-                <a href="/brand/nutrilite">
+                <a href="../../brand/nutrilite">
                   <img
                     class="oa-image oa-product-menu__brand"
-                    data-src="/static/images/brand-nutrilite.svg"
+                    data-src="../../static/images/brand-nutrilite.svg"
                     alt="brand-nutrilite"
                   />
                 </a>
               </li>
               <li>
-                <a href="/brand/artistry">
+                <a href="../../brand/artistry">
                   <img
                     class="oa-image oa-product-menu__brand"
-                    data-src="/static/images/brand-artistry.svg"
+                    data-src="../../static/images/brand-artistry.svg"
                     alt="brand-artistry"
                   />
                 </a>
               </li>
               <li>
-                <a href="/brand/glister">
+                <a href="../../brand/glister">
                   <img
                     class="oa-image oa-product-menu__brand"
-                    data-src="/static/images/brand-glister.svg"
+                    data-src="../../static/images/brand-glister.svg"
                     alt="brand-glister"
                   />
                 </a>
               </li>
               <li>
-                <a href="/brand/g-h">
+                <a href="../../brand/g-h">
                   <img
                     class="oa-image oa-product-menu__brand"
-                    data-src="/static/images/brand-g-h.svg"
+                    data-src="../../static/images/brand-g-h.svg"
                     alt="brand-g-h"
                   />
                 </a>
               </li>
               <li>
-                <a href="/brand/satinique">
+                <a href="../../brand/satinique">
                   <img
                     class="oa-image oa-product-menu__brand"
-                    data-src="/static/images/brand-satinique.svg"
+                    data-src="../../static/images/brand-satinique.svg"
                     alt="brand-satinique"
                   />
                 </a>
               </li>
               <li>
-                <a href="/brand/atmosphere-sky">
+                <a href="../../brand/atmosphere-sky">
                   <img
                     class="oa-image oa-product-menu__brand"
-                    data-src="/static/images/brand-atmosphere-sky.svg"
+                    data-src="../../static/images/brand-atmosphere-sky.svg"
                     alt="brand-atmosphere-sky"
                   />
                 </a>
               </li>
               <li>
-                <a href="/brand/e-spring">
+                <a href="../../brand/e-spring">
                   <img
                     class="oa-image oa-product-menu__brand"
-                    data-src="/static/images/brand-e-spring.svg"
+                    data-src="../../static/images/brand-e-spring.svg"
                     alt="brand-e-spring"
                   />
                 </a>
               </li>
               <li>
-                <a href="/brand/amway-home">
+                <a href="../../brand/amway-home">
                   <img
                     class="oa-image oa-product-menu__brand"
-                    data-src="/static/images/brand-amway-home.svg"
+                    data-src="../../static/images/brand-amway-home.svg"
                     alt="brand-amway-home"
                   />
                 </a>
               </li>
               <li>
-                <a href="/brand/amway-queen">
+                <a href="../../brand/amway-queen">
                   <img
                     class="oa-image oa-product-menu__brand"
-                    data-src="/static/images/brand-amway-queen.svg"
+                    data-src="../../static/images/brand-amway-queen.svg"
                     alt="brand-amway-queen"
                   />
                 </a>
               </li>
               <li>
-                <a href="/brand/bodykey">
+                <a href="../../brand/bodykey">
                   <img
                     class="oa-image oa-product-menu__brand"
-                    data-src="/static/images/brand-bodykey.svg"
+                    data-src="../../static/images/brand-bodykey.svg"
                     alt="brand-bodykey"
                   />
                 </a>
               </li>
               <li>
-                <a href="/brand/nutriplant">
+                <a href="../../brand/nutriplant">
                   <img
                     class="oa-image oa-product-menu__brand"
-                    data-src="/static/images/brand-nutriplant.svg"
+                    data-src="../../static/images/brand-nutriplant.svg"
                     alt="brand-nutriplant"
                   />
                 </a>
@@ -542,12 +620,12 @@
               class="oa-product-menu__category-detail --sub-categories"
             >
               <li>
-                <a class="oa-product-menu__see-all" href="/beauty">See all</a>
+                <a class="oa-product-menu__see-all" href="../../beauty">See all</a>
               </li>
               <li class="oa-product-menu__category-item">
                 <a
                   class="oa-product-menu__sub-category"
-                  href="/skin-care"
+                  href="../../skin-care"
                   data-id="skin-care"
                   data-title="Skin Care"
                 >
@@ -561,27 +639,27 @@
                   class="oa-product-menu__sub-category-detail"
                 >
                   <li>
-                    <a class="oa-product-menu__see-all" href="/skin-care">
+                    <a class="oa-product-menu__see-all" href="../../skin-care">
                       See all
                     </a>
                   </li>
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/cleansing"
+                      href="../../cleansing"
                     >
                       Cleansing
                     </a>
                   </li>
                   <li>
-                    <a class="oa-product-menu__sub-category-item" href="/serun">
+                    <a class="oa-product-menu__sub-category-item" href="../../serun">
                       Serum
                     </a>
                   </li>
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/moisturizer"
+                      href="../../moisturizer"
                     >
                       Moisturizer
                     </a>
@@ -589,7 +667,7 @@
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/serum-moisturizer"
+                      href="../../serum-moisturizer"
                     >
                       Serum &amp; Moisturizer
                     </a>
@@ -597,7 +675,7 @@
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/eye-cream"
+                      href="../../eye-cream"
                     >
                       Eye Cream
                     </a>
@@ -605,20 +683,20 @@
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/sun-screen"
+                      href="../../sun-screen"
                     >
                       Sun Screen
                     </a>
                   </li>
                   <li>
-                    <a class="oa-product-menu__sub-category-item" href="/mask">
+                    <a class="oa-product-menu__sub-category-item" href="../../mask">
                       Mask
                     </a>
                   </li>
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/for-men"
+                      href="../../for-men"
                     >
                       For Men
                     </a>
@@ -626,7 +704,7 @@
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/special-treatment"
+                      href="../../special-treatment"
                     >
                       Special Treatment
                     </a>
@@ -636,7 +714,7 @@
               <li class="oa-product-menu__category-item">
                 <a
                   class="oa-product-menu__sub-category"
-                  href="/make-up"
+                  href="../../make-up"
                   data-id="make-up"
                   data-title="Make Up"
                 >
@@ -650,32 +728,32 @@
                   class="oa-product-menu__sub-category-detail"
                 >
                   <li>
-                    <a class="oa-product-menu__see-all" href="/make-up">
+                    <a class="oa-product-menu__see-all" href="../../make-up">
                       See all
                     </a>
                   </li>
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/facial"
+                      href="../../facial"
                     >
                       Facial
                     </a>
                   </li>
                   <li>
-                    <a class="oa-product-menu__sub-category-item" href="/eyes">
+                    <a class="oa-product-menu__sub-category-item" href="../../eyes">
                       Eyes
                     </a>
                   </li>
                   <li>
-                    <a class="oa-product-menu__sub-category-item" href="/lips">
+                    <a class="oa-product-menu__sub-category-item" href="../../lips">
                       Lips
                     </a>
                   </li>
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/cheeks"
+                      href="../../cheeks"
                     >
                       Cheeks
                     </a>
@@ -685,7 +763,7 @@
               <li class="oa-product-menu__category-item">
                 <a
                   class="oa-product-menu__sub-category"
-                  href="/collection"
+                  href="../../collection"
                   data-id="collection"
                   data-title="Collection"
                 >
@@ -699,14 +777,14 @@
                   class="oa-product-menu__sub-category-detail"
                 >
                   <li>
-                    <a class="oa-product-menu__see-all" href="/collection">
+                    <a class="oa-product-menu__see-all" href="../../collection">
                       See all
                     </a>
                   </li>
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/paris-set-edition"
+                      href="../../paris-set-edition"
                     >
                       Paris Set Edition
                     </a>
@@ -714,7 +792,7 @@
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/bangkok-set-edition"
+                      href="../../bangkok-set-edition"
                     >
                       Bangkok Set Edition
                     </a>
@@ -724,7 +802,7 @@
               <li class="oa-product-menu__category-item">
                 <a
                   class="oa-product-menu__sub-category"
-                  href="/perfume"
+                  href="../../perfume"
                   data-id="perfume"
                   data-title="Perfume"
                 >
@@ -738,14 +816,14 @@
                   class="oa-product-menu__sub-category-detail"
                 >
                   <li>
-                    <a class="oa-product-menu__see-all" href="/perfume">
+                    <a class="oa-product-menu__see-all" href="../../perfume">
                       See all
                     </a>
                   </li>
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/flora-chic"
+                      href="../../flora-chic"
                     >
                       Flora Chic
                     </a>
@@ -753,7 +831,7 @@
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/unknown"
+                      href="../../unknown"
                     >
                       Unknown
                     </a>
@@ -763,7 +841,7 @@
               <li class="oa-product-menu__category-item">
                 <a
                   class="oa-product-menu__sub-category"
-                  href="/accessories"
+                  href="../../accessories"
                   data-id="accessories"
                   data-title="Accessories"
                 >
@@ -777,14 +855,14 @@
                   class="oa-product-menu__sub-category-detail"
                 >
                   <li>
-                    <a class="oa-product-menu__see-all" href="/accessories">
+                    <a class="oa-product-menu__see-all" href="../../accessories">
                       See all
                     </a>
                   </li>
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/make-up-tools"
+                      href="../../make-up-tools"
                     >
                       Make Up Tools
                     </a>
@@ -792,7 +870,7 @@
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/facial-care-tools"
+                      href="../../facial-care-tools"
                     >
                       Facial Care Tools
                     </a>
@@ -800,7 +878,7 @@
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/cleansing-cloth"
+                      href="../../cleansing-cloth"
                     >
                       Cleansing Cloth
                     </a>
@@ -808,7 +886,7 @@
                   <li>
                     <a
                       class="oa-product-menu__sub-category-item"
-                      href="/facial-hygienic"
+                      href="../../facial-hygienic"
                     >
                       Facial Hygienic
                     </a>
@@ -821,14 +899,14 @@
               class="oa-product-menu__category-detail --sub-categories"
             >
               <li>
-                <a class="oa-product-menu__see-all" href="/agriculture">
+                <a class="oa-product-menu__see-all" href="../../agriculture">
                   See all
                 </a>
               </li>
               <li class="oa-product-menu__category-item">
                 <a
                   class="oa-product-menu__sub-category"
-                  href="/mineral-supplements"
+                  href="../../mineral-supplements"
                   data-id="mineral-supplements"
                   data-title="Mineral Supplements"
                 >
@@ -844,7 +922,7 @@
                   <li>
                     <a
                       class="oa-product-menu__see-all"
-                      href="/mineral-supplements"
+                      href="../../mineral-supplements"
                     >
                       See all
                     </a>
@@ -854,7 +932,7 @@
               <li class="oa-product-menu__category-item">
                 <a
                   class="oa-product-menu__sub-category"
-                  href="/supplement-fertilizer"
+                  href="../../supplement-fertilizer"
                   data-id="supplement-fertilizer"
                   data-title="Supplement Fertilizer"
                 >
@@ -872,7 +950,7 @@
                   <li>
                     <a
                       class="oa-product-menu__see-all"
-                      href="/supplement-fertilizer"
+                      href="../../supplement-fertilizer"
                     >
                       See all
                     </a>
@@ -882,7 +960,7 @@
               <li class="oa-product-menu__category-item">
                 <a
                   class="oa-product-menu__sub-category"
-                  href="/plant-fertilizer"
+                  href="../../plant-fertilizer"
                   data-id="plant-fertilizer"
                   data-title="Plant Fertilizer"
                 >
@@ -898,7 +976,7 @@
                   <li>
                     <a
                       class="oa-product-menu__see-all"
-                      href="/plant-fertilizer"
+                      href="../../plant-fertilizer"
                     >
                       See all
                     </a>
@@ -919,10 +997,10 @@
         <header class="oa-popup-menu__header">
           <div class="oa-user-menu__header">
             <span class="oa-icon --close oa-user-menu__close-button"></span>
-            <a class="oa-user-menu__button" href="/favorite">
+            <a class="oa-user-menu__button" href="../../favorite">
               <span class="oa-icon --heart"></span>
             </a>
-            <a class="oa-user-menu__button" href="/notification">
+            <a class="oa-user-menu__button" href="../../notification">
               <span class="oa-icon --bell"></span>
             </a>
           </div>
@@ -932,7 +1010,7 @@
             <div class="oa-user-menu__info">
               <img
                 class="oa-user-menu__avatar"
-                src="/static/images/default-avatar.png"
+                src="../../static/images/default-avatar.png"
                 alt="avatar"
               />
               <div class="oa-user-menu__name">
@@ -970,35 +1048,35 @@
             <li>
               <a
                 class="oa-user-menu__item --outstanding"
-                href="/business-center"
+                href="../../business-center"
               >
                 Business Center
               </a>
             </li>
             <li>
-              <a class="oa-user-menu__item" href="/awaiting-payment">
+              <a class="oa-user-menu__item" href="../../awaiting-payment">
                 Awaiting Payment
                 <img
                   class="oa-image oa-user-menu__noti"
-                  data-src="/static/images/new.svg"
+                  data-src="../../static/images/new.svg"
                   alt="new"
                 />
               </a>
             </li>
-            <li><a class="oa-user-menu__item" href="/my-sop">My SOP</a></li>
+            <li><a class="oa-user-menu__item" href="../../my-sop">My SOP</a></li>
             <li>
-              <a class="oa-user-menu__item" href="/education">Education</a>
+              <a class="oa-user-menu__item" href="../../education">Education</a>
             </li>
             <li>
-              <a class="oa-user-menu__item" href="/store-locator">
+              <a class="oa-user-menu__item" href="../../store-locator">
                 Store Locator
               </a>
             </li>
             <li>
-              <a class="oa-user-menu__item" href="/about-amway">About Amway</a>
+              <a class="oa-user-menu__item" href="../../about-amway">About Amway</a>
             </li>
             <li>
-              <a class="oa-user-menu__logout" href="/">
+              <a class="oa-user-menu__logout" href="../../">
                 <span class="oa-icon --logout oa-user-menu__logout-icon"></span>
                 <span>Logout</span>
               </a>
@@ -1030,7 +1108,7 @@
           </header>
           <ul class="oa-search-modal__keywords">
             <li>
-              <a class="oa-search-modal__keyword" href="/beauty/artistry">
+              <a class="oa-search-modal__keyword" href="../../beauty/artistry">
                 <span>Artistry</span>
                 <span>
                   Search in
@@ -1039,7 +1117,7 @@
               </a>
             </li>
             <li>
-              <a class="oa-search-modal__keyword" href="/nutrition/arabica">
+              <a class="oa-search-modal__keyword" href="../../nutrition/arabica">
                 <span>Arabica</span>
                 <span>
                   Search in
@@ -1053,7 +1131,7 @@
           <header>
             <h6 class="oa-search-modal__title">Products</h6>
             <a
-              href="/see-all-matching-keywords"
+              href="../../see-all-matching-keywords"
               class="oa-link oa-search-modal__see-all"
             >
               <small>see all</small>
@@ -1064,11 +1142,11 @@
             <li>
               <a
                 class="oa-search-modal__product"
-                href="/product/artistry-exact-fit™-perfecting-loose-powder-light}"
+                href="../../product/artistry-exact-fit™-perfecting-loose-powder-light}"
               >
                 <img
                   class="oa-image oa-search-modal__product-image"
-                  data-src="/static/images/mock-search-result-artistry-powder.jpeg"
+                  data-src="../../static/images/mock-search-result-artistry-powder.jpeg"
                   alt="mock-search-result-artistry-powder"
                 />
                 <div class="oa-search-modal__product-info">
@@ -1091,11 +1169,11 @@
             <li>
               <a
                 class="oa-search-modal__product"
-                href="/product/artistry-signature-color™-lipstick}"
+                href="../../product/artistry-signature-color™-lipstick}"
               >
                 <img
                   class="oa-image oa-search-modal__product-image"
-                  data-src="/static/images/mock-search-result-artistry-lipstick.jpeg"
+                  data-src="../../static/images/mock-search-result-artistry-lipstick.jpeg"
                   alt="mock-search-result-artistry-lipstick"
                 />
                 <div class="oa-search-modal__product-info">
@@ -1118,11 +1196,11 @@
             <li>
               <a
                 class="oa-search-modal__product"
-                href="/product/artistry-exact-fit™-perfecting-loose-powder}"
+                href="../../product/artistry-exact-fit™-perfecting-loose-powder}"
               >
                 <img
                   class="oa-image oa-search-modal__product-image"
-                  data-src="/static/images/mock-search-result-artistry-powder.jpeg"
+                  data-src="../../static/images/mock-search-result-artistry-powder.jpeg"
                   alt="mock-search-result-artistry-powder"
                 />
                 <div class="oa-search-modal__product-info">
@@ -1466,7 +1544,7 @@
                           <span><strong>฿ 289,338</strong></span>
                         </div>
                         <a
-                          href="/payment-method"
+                          href="../../payment-method"
                           class="mz-button btn btn-lg --primary --large --original-blue mz-payment-info__action-button --desktop-only"
                         >
                           <span>ชำระเงินทันที</span>
@@ -1672,7 +1750,7 @@
                     <div class="mz-order-item">
                       <img
                         class="mz-image mz-order-item__image"
-                        data-src="/static/images/mock/product-1.jpg"
+                        data-src="../../static/images/mock/product-1.jpg"
                         alt="mock/product-1"
                       />
                       <div class="mz-order-item__content">
@@ -1691,7 +1769,7 @@
                     <div class="mz-order-item">
                       <img
                         class="mz-image mz-order-item__image"
-                        data-src="/static/images/mock/product-1.jpg"
+                        data-src="../../static/images/mock/product-1.jpg"
                         alt="mock/product-1"
                       />
                       <div class="mz-order-item__content">
@@ -1712,7 +1790,7 @@
                     <div class="mz-order-item">
                       <img
                         class="mz-image mz-order-item__image"
-                        data-src="/static/images/mock/product-2.jpg"
+                        data-src="../../static/images/mock/product-2.jpg"
                         alt="mock/product-2"
                       />
                       <div class="mz-order-item__content">
@@ -1732,7 +1810,7 @@
                     <div class="mz-order-item">
                       <img
                         class="mz-image mz-order-item__image"
-                        data-src="/static/images/mock/product-3.jpg"
+                        data-src="../../static/images/mock/product-3.jpg"
                         alt="mock/product-3"
                       />
                       <div class="mz-order-item__content">
@@ -1750,7 +1828,7 @@
                     <div class="mz-order-item">
                       <img
                         class="mz-image mz-order-item__image"
-                        data-src="/static/images/mock/bundle-1.jpg"
+                        data-src="../../static/images/mock/bundle-1.jpg"
                         alt="mock/bundle-1"
                       />
                       <div class="mz-order-item__content">
@@ -1810,7 +1888,7 @@
                     <div class="mz-order-item">
                       <img
                         class="mz-image mz-order-item__image"
-                        data-src="/static/images/mock/product-9.jpg"
+                        data-src="../../static/images/mock/product-9.jpg"
                         alt="mock/product-9"
                       />
                       <div class="mz-order-item__content">
@@ -1829,7 +1907,7 @@
                   <div class="mz-order-status__action">
                     <button
                       type="button"
-                      class="mz-button btn btn-lg --secondary --medium --original-blue mz-order-status__action-button"
+                      class="mz-button btn btn-lg --secondary --medium --original-blue mz-order-status__action-button" data-toggle="modal" data-target="#clear-order"
                     >
                       <span>ยกเลิกคำสั่งซื้อ</span>
                     </button>
@@ -1843,12 +1921,30 @@
                 <h5>฿ 289,338</h5>
               </div>
               <a
-                href="/payment-method"
+                href="../../payment-method"
                 class="mz-button btn btn-lg --primary --large --original-blue mz-order-status__pay-again-button"
               >
                 <span>ชำระเงินทันที</span>
               </a>
             </section>
+            <div id="clear-order" class="mz-modal modal fade --mobile-full" style="display: none;">
+
+              <section class="oa-cancle-mordal-content">
+                  คุณต้องการยกเลิกคำสั่งซื้อทั้งหมดหรือไม่
+                  <br>
+                  <Strong>โดยคำสั่งซื้อชุดนี้จะถูกยกเลิกทั้งหมด</Strong>
+                  <form action="/clear-order">
+                      <div class="btn-cancle-contain">
+                          <button type="submit" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button">
+                          <span>ยกเลิกคำสั่งซื้อ</span>
+                      </button>
+                          <button type="button" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button" data-dismiss="modal">
+                          <span>ไม่ยกเลิก</span>
+                      </button>
+                      </div>
+                  </form>
+              </section>
+          </div>
           </main>
         </div>
         <footer class="mz-footer">Footer</footer>
@@ -1864,23 +1960,23 @@
       integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
       crossorigin="anonymous"
     ></script>
-    <script src="/v2/Common/js/global.js"></script>
-    <script src="/v2/Common/js/Image.js"></script>
-    <script src="/v2/OrderStatus/js/OrderStatusSection.js"></script>
-    <script src="/v2/OrderStatus/js/PaymentInfo.js"></script>
-    <script src="/v2/Common/js/Input.js"></script>
-    <script src="/lib/js/bodyScrollLock.min.js"></script>
-    <script src="/v2/Common/js/Dropdown.js"></script>
-    <script src="/v2/Common/js/SearchableDropdown.js"></script>
-    <script src="/v1/Header/js/PickupAddressModal.js"></script>
-    <script src="/v1/Common/js/image.js"></script>
-    <script src="/v1/Search/js/SearchModal.js"></script>
-    <script src="/v1/Header/js/UserMenu.js"></script>
-    <script src="/v1/Header/js/ProductMenu.js"></script>
-    <script src="/v2/Common/js/DimLayer.js"></script>
-    <script src="/v2/Common/js/ToggleButton.js"></script>
-    <script src="/v1/Header/js/GlobalDeliveryMethods.js"></script>
-    <script src="/v1/Header/js/LanguageSwitcher.js"></script>
-    <script src="/v2/Layout/js/MainLayout.js"></script>
+    <script src="../../v2/Common/js/global.js"></script>
+    <script src="../../v2/Common/js/Image.js"></script>
+    <script src="../../v2/OrderStatus/js/OrderStatusSection.js"></script>
+    <script src="../../v2/OrderStatus/js/PaymentInfo.js"></script>
+    <script src="../../v2/Common/js/Input.js"></script>
+    <script src="../../lib/js/bodyScrollLock.min.js"></script>
+    <script src="../../v2/Common/js/Dropdown.js"></script>
+    <script src="../../v2/Common/js/SearchableDropdown.js"></script>
+    <script src="../../v1/Header/js/PickupAddressModal.js"></script>
+    <script src="../../v1/Common/js/image.js"></script>
+    <script src="../../v1/Search/js/SearchModal.js"></script>
+    <script src="../../v1/Header/js/UserMenu.js"></script>
+    <script src="../../v1/Header/js/ProductMenu.js"></script>
+    <script src="../../v2/Common/js/DimLayer.js"></script>
+    <script src="../../v2/Common/js/ToggleButton.js"></script>
+    <script src="../../v1/Header/js/GlobalDeliveryMethods.js"></script>
+    <script src="../../v1/Header/js/LanguageSwitcher.js"></script>
+    <script src="../../v2/Layout/js/MainLayout.js"></script>
   </body>
 </html>
