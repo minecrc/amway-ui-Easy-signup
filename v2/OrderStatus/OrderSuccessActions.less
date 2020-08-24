@@ -1,0 +1,71 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-order-success-actions {
+  &__buttons {
+    padding: @spacing[m] 0;
+    border-top: solid @spacing[xxs] @colors[grey-200];
+    background: @colors[white];
+
+    .mz-container();
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      background: transparent;
+    }
+  }
+
+  &__button:not(:last-child) {
+    margin-bottom: @spacing[xs];
+  }
+
+  &__policies {
+    padding-top: @spacing[s];
+    padding-bottom: @spacing[m];
+    color: @colors[grey-400];
+
+    h6 {
+      color: inherit;
+    }
+
+    .mz-container();
+  }
+
+  &__policy-title {
+    margin-top: @spacing[xs];
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    &__buttons {
+      display: flex;
+      padding: @spacing[l] 0 @spacing[m];
+      border-top: none;
+    }
+
+    &__button {
+      flex: 3;
+
+      &:not(:last-child) {
+        margin-right: @spacing[s];
+        margin-bottom: 0;
+      }
+    }
+
+    &__policies {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: @spacing[m] 0 0;
+      border-top: solid 1px @colors[grey-200];
+
+      header {
+        flex: 1 0 100%;
+      }
+    }
+
+    &__policy-column {
+      &:not(:last-child) {
+        margin-right: @spacing[xxl];
+      }
+    }
+  }
+}

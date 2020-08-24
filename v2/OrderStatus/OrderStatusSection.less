@@ -1,0 +1,55 @@
+@import '../Common/variables.less';
+
+.mz-order-status-section {
+  border-top: solid @spacing[xxs] @colors[grey-200];
+  background: @colors[white];
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: @spacing[s];
+  }
+
+  &__icon {
+    font-size: @icon-sizes[xs];
+  }
+
+  &__header[aria-expanded='true'] &__icon {
+    transform: scaleY(-1);
+  }
+
+  &__content {
+    padding: 0 @spacing[s];
+    transform: translateY(-@spacing[xs]);
+
+    &:after {
+      content: '';
+      display: block;
+      height: @spacing[xs];
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    border-top: none;
+
+    &__header {
+      height: @input-height;
+      padding: 0 @spacing[m];
+      background: @colors[grey-200];
+    }
+
+    &__icon {
+      display: none;
+    }
+
+    &__content {
+      padding: @spacing[s] @spacing[m] @spacing[m];
+      transform: none;
+
+      &:after {
+        content: none;
+      }
+    }
+  }
+}

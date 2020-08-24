@@ -22,6 +22,52 @@
             flex-wrap: wrap;
         }
         
+        .btn.btn-sm {
+            max-width: 160px;
+            width: 100%;
+        }
+        
+        .btn-cancle-contain {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 15px;
+        }
+        
+        .oa-cancle-mordal-content {
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+        
+        #clear-order.mz-modal {
+            min-width: 200px;
+            max-width: 440px;
+            max-height: 260px;
+            min-height: 200px;
+            height: auto;
+            background-color: #ffffff;
+            margin: 0 auto;
+            top: 20vh;
+            padding: 0 !important;
+        }
+        
+        #clear-order.mz-modal .mz-order-cancle__title {
+            position: absolute;
+            height: 40px;
+            top: 0;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            background-color: #002f5f;
+        }
+        
+        #clear-order.mz-modal .mz-order-cancle__title h6 {
+            color: #fff;
+        }
+        
         @media screen and (min-width: 1024px) {
             .mz-cart-layout__bars-and-options,
             .mz-cart-layout__wallet-section {
@@ -850,7 +896,7 @@
                             <header class="mz-cart-layout__header">
                                 <div class="mz-cart-layout__header-content">
                                     <h4 class="mz-cart-layout__title">ตะกร้าสินค้า</h4>
-                                    <button id="empty-cart" type="button" class="mz-clear-cart-button">
+                                    <button id="empty-cart" type="button" class="mz-clear-cart-button" data-toggle="modal" data-target="#clear-order">
                                         ลบทั้งตะกร้า
                                     </button>
                                 </div>
@@ -2242,44 +2288,58 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div>
-                    </section>
+                            <div id="clear-order" class="mz-modal modal fade --mobile-full" style="display: none;">
+
+                                <section class="oa-cancle-mordal-content">
+                                    <Strong>   คุณต้องการลบสินค้าทั้งตะกร้าใชหรือไม่</Strong>
+                                    <form action="/clear-cart">
+                                        <div class="btn-cancle-contain">
+                                            <button type="button" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button" data-dismiss="modal">
+                                            <span>ไม่ใช่</span>
+                                        </button>
+                                            <button type="submit" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button">
+                                            <span>ใช่</span>
+                                        </button>
+                                    </form>
+                                    </div>
+                            </div>
+                            </section>
                 </main>
+                </div>
+                <footer class="mz-footer">Footer</footer>
             </div>
-            <footer class="mz-footer">Footer</footer>
         </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="../v2/Common/js/global.js"></script>
-    <script src="../v2/Common/js/IntegerInput.js"></script>
-    <script src="../v2/Common/js/Image.js"></script>
-    <script src="../v2/Common/js/ToggleButton.js"></script>
-    <script src="../v2/Cart/js/GpvBar.js"></script>
-    <script src="../v2/Common/js/Input.js"></script>
-    <script src="../v2/Cart/js/WalletSection.js"></script>
-    <script src="../v2/Cart/js/CouponSection.js"></script>
-    <script src="../v2/Cart/js/PromoCodeInput.js"></script>
-    <script src="../v2/Cart/js/CartDetailSection.js"></script>
-    <script src="../v2/Common/js/DimLayer.js"></script>
-    <script src="../v2/Common/js/Dropdown.js"></script>
-    <script src="../v2/Common/js/DropdownInput.js"></script>
-    <script src="../lib/js/bodyScrollLock.min.js"></script>
-    <script src="../v2/Common/js/SearchableDropdown.js"></script>
-    <script src="../v2/Cart/js/CartLayout.js"></script>
-    <script src="../v1/Header/js/PickupAddressModal.js"></script>
-    <script src="../v1/Common/js/image.js"></script>
-    <script src="../v1/Search/js/SearchModal.js"></script>
-    <script src="../v1/Header/js/UserMenu.js"></script>
-    <script src="../v1/Header/js/ProductMenu.js"></script>
-    <script src="../v1/Header/js/GlobalDeliveryMethods.js"></script>
-    <script src="../v1/Header/js/LanguageSwitcher.js"></script>
-    <script src="../v2/Layout/js/MainLayout.js"></script>
-    <script src="../lib/js/validator.min.js"></script>
-    <script src="../lib/js/jquery.validate.min.js"></script>
-    <script src="../v2/Common/js/formValidationDefaults.js"></script>
-    <script src="../v2/Cart/js/Cart.js"></script>
-    <script src="../v2/Cart/js/useMockPromoCodes.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="../v2/Common/js/global.js"></script>
+        <script src="../v2/Common/js/IntegerInput.js"></script>
+        <script src="../v2/Common/js/Image.js"></script>
+        <script src="../v2/Common/js/ToggleButton.js"></script>
+        <script src="../v2/Cart/js/GpvBar.js"></script>
+        <script src="../v2/Common/js/Input.js"></script>
+        <script src="../v2/Cart/js/WalletSection.js"></script>
+        <script src="../v2/Cart/js/CouponSection.js"></script>
+        <script src="../v2/Cart/js/PromoCodeInput.js"></script>
+        <script src="../v2/Cart/js/CartDetailSection.js"></script>
+        <script src="../v2/Common/js/DimLayer.js"></script>
+        <script src="../v2/Common/js/Dropdown.js"></script>
+        <script src="../v2/Common/js/DropdownInput.js"></script>
+        <script src="../lib/js/bodyScrollLock.min.js"></script>
+        <script src="../v2/Common/js/SearchableDropdown.js"></script>
+        <script src="../v2/Cart/js/CartLayout.js"></script>
+        <script src="../v1/Header/js/PickupAddressModal.js"></script>
+        <script src="../v1/Common/js/image.js"></script>
+        <script src="../v1/Search/js/SearchModal.js"></script>
+        <script src="../v1/Header/js/UserMenu.js"></script>
+        <script src="../v1/Header/js/ProductMenu.js"></script>
+        <script src="../v1/Header/js/GlobalDeliveryMethods.js"></script>
+        <script src="../v1/Header/js/LanguageSwitcher.js"></script>
+        <script src="../v2/Layout/js/MainLayout.js"></script>
+        <script src="../lib/js/validator.min.js"></script>
+        <script src="../lib/js/jquery.validate.min.js"></script>
+        <script src="../v2/Common/js/formValidationDefaults.js"></script>
+        <script src="../v2/Cart/js/Cart.js"></script>
+        <script src="../v2/Cart/js/useMockPromoCodes.js"></script>
 </body>
 
 </html>

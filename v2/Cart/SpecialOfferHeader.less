@@ -1,0 +1,68 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-special-offer-header {
+  .mz-cart-responsive-padding(@v-padding: @spacing[xs]);
+
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 -1px; // make content align with one outside special offer section
+  overflow: hidden;
+  background: @colors[blue-200];
+  color: @colors[blue-300];
+  text-align: left;
+
+  &__image {
+    display: none;
+
+    @media screen and (min-width: @breakpoints[md]) {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: @spacing[m];
+      height: 80px;
+      transform: translateY(-50% + @spacing[s]);
+    }
+  }
+
+  &__title {
+    @side-spacing: @spacing[s];
+
+    flex: 1 1 auto;
+    margin-right: @side-spacing;
+
+    .mz-font-style(body, bold);
+
+    @media screen and (min-width: @breakpoints[md]) {
+      flex: none;
+      margin-left: @side-spacing;
+      text-align: center;
+
+      .mz-font-style(heading-5, bold);
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    flex: none;
+    justify-content: flex-end;
+
+    @media screen and (min-width: @breakpoints[md]) {
+      flex: 1 1 0;
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[md]) {
+    @v-padding: @spacing[xs] + @spacing[xxs];
+
+    padding-top: @v-padding;
+    padding-bottom: @v-padding;
+
+    &:before {
+      content: '';
+      flex: 1 1 0;
+    }
+  }
+}

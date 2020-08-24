@@ -1,0 +1,90 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-order-status {
+  &__total {
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+  }
+
+  &__total-title {
+    .mz-font-style(small, bold);
+  }
+
+  &__pay-again-button {
+    flex: 0 1 220px;
+    width: auto;
+    margin-left: @spacing[m];
+  }
+
+  &__value-row {
+    &:not(:first-child) {
+      margin-top: @spacing[xxs];
+
+      @media screen and (min-width: @breakpoints[xl]) {
+        margin-top: @spacing[xs];
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: @colors[amway-500];
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: @colors[amway-500];
+    }
+
+    &:not(:last-child) {
+      margin-right: @spacing[l];
+    }
+  }
+
+  &__link-icon {
+    margin-right: @spacing[xs];
+  }
+
+  &__credit-info {
+    display: flex;
+    margin-top: @spacing[xs];
+  }
+
+  &__credit-info-image {
+    width: 22px;
+  }
+
+  &__credit-info-dots {
+    margin: 0 @spacing[s] 0 @spacing[xs];
+  }
+
+  &__action {
+    position: relative;
+    padding: @spacing[m] @spacing[s] @spacing[xl];
+    border-top: solid 4px @colors[grey-200];
+    background: @colors[white];
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      margin-top: @spacing[l];
+      padding: 0;
+      border-top: none;
+      background: transparent;
+    }
+  }
+
+  &__action-button {
+    @media screen and (min-width: @breakpoints[xl]) {
+      max-width: 220px;
+      margin: 0 auto;
+    }
+  }
+}

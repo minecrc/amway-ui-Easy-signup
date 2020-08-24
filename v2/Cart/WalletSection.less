@@ -1,0 +1,36 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-wallet-section {
+  .mz-cart-section();
+  .mz-cart-responsive-padding();
+
+  background-size: 100% auto;
+
+  &:not(:first-child) {
+    margin-top: @spacing[xs];
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: @spacing[xs] + @spacing[xxs];
+  }
+
+  &__input-group {
+    .mz-input-group();
+  }
+
+  &__button {
+    flex: 0 0 94px;
+  }
+
+  &__error {
+    display: none;
+
+    &.--active {
+      display: block;
+    }
+  }
+}

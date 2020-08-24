@@ -1,0 +1,72 @@
+@import '../Common/variables.less';
+
+.mz-share-button {
+  @image-size: @spacing[xxl];
+  @icon-size: @icon-sizes[m];
+  @icon-margin-left: @spacing[xs];
+
+  display: flex;
+
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  height: @input-height;
+  margin-bottom: @spacing[m];
+  padding: 0 @spacing[s] 0 @spacing[xs];
+  transition: border-color 0.1s;
+  border: solid 1px transparent;
+  border-radius: @border-radiuses[s];
+  background: @colors[amway-100];
+
+  &,
+  &:hover,
+  &:focus {
+    color: @colors[amway-500];
+  }
+
+  &:hover {
+    @media (hover: hover) {
+      border-color: @colors[amway-500];
+    }
+  }
+
+  &:active {
+    background: @colors[amway-500];
+    color: @colors[white];
+  }
+
+  &__image {
+    width: @image-size;
+    height: @image-size;
+    transform: translateY(-@spacing[xs]);
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__icon {
+    margin-left: @icon-margin-left;
+    font-size: @icon-size;
+  }
+
+  @media screen and (min-width: @breakpoints[sm]) {
+    justify-content: center;
+    padding: 0 @spacing[s] 0 @spacing[s];
+
+    &__image {
+      position: absolute;
+      bottom: @spacing[xs];
+      left: @spacing[s];
+      transform: none;
+    }
+
+    &__text {
+      padding-left: @icon-size + @icon-margin-left;
+    }
+  }
+
+  @media screen and (min-width: @breakpoints[xl]) {
+    margin-bottom: @spacing[l];
+  }
+}

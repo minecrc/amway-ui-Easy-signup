@@ -1,0 +1,72 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-order-summary {
+  &__login-section,
+  &__info-section {
+    padding: @spacing[s];
+    background: @colors[white];
+
+    @media screen and (min-width: @breakpoints[sm]) {
+      border-radius: @border-radiuses[s];
+    }
+  }
+
+  &__login-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      padding: @spacing[s] @spacing[m];
+    }
+  }
+
+  &__info-section {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      padding: @spacing[s] @spacing[m] @spacing[m];
+    }
+  }
+
+  &__login-button {
+    flex: 0 0 120px;
+    width: auto;
+    margin-left: @spacing[l];
+  }
+
+  &__info-block {
+    flex: 1 0 100%;
+
+    &:not(:last-child) {
+      margin-bottom: @spacing[s];
+    }
+
+    @media screen and (min-width: @breakpoints[md]) {
+      flex: 1 0 50%;
+    }
+  }
+
+  &__info-title {
+    margin-bottom: @spacing[xxs];
+  }
+
+  &__number {
+    margin-right: @spacing[xs];
+  }
+
+  &__phone {
+    margin-top: @spacing[xs];
+  }
+
+  &__footer {
+    margin: @spacing[m] @spacing[s] @spacing[xl];
+
+    @media screen and (min-width: @breakpoints[sm]) {
+      max-width: 220px;
+      margin: @spacing[l] auto;
+    }
+  }
+}

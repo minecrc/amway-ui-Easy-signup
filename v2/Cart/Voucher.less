@@ -1,0 +1,74 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-voucher {
+  display: flex;
+  flex: none;
+  width: 100%;
+  overflow: hidden;
+  border-radius: @border-radiuses[s];
+  background: @colors[green-100];
+
+  &__section {
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: @spacing[xs] @spacing[s];
+    text-align: center;
+
+    &:not(:first-child) {
+      &:after {
+        content: '';
+        position: absolute;
+        top: @spacing[xs];
+        bottom: @spacing[xs];
+        left: 0;
+        width: 1px;
+        transform: translateX(-50%);
+        opacity: 0.5;
+        background: linear-gradient(
+          to bottom,
+          @colors[green-300],
+          @colors[green-300] 40%,
+          transparent 40%,
+          transparent,
+          transparent
+        );
+        background-size: 1px 5.2px;
+      }
+    }
+  }
+
+  &__title {
+    color: @colors[grey-400];
+    .mz-font-style(small);
+  }
+
+  &__value {
+    .mz-font-style(small);
+  }
+
+  &__amount {
+    @height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 94px;
+    height: @height;
+    padding: 0 @spacing[s];
+    border-radius: @height / 2;
+    background: @colors[green-200];
+    color: @colors[green-300];
+    white-space: nowrap;
+
+    .mz-font-style(body,bold);
+  }
+
+  & + & {
+    margin-top: @spacing[xxs];
+  }
+}

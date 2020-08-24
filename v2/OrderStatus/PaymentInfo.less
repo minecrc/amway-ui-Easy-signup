@@ -1,0 +1,107 @@
+@import '../Common/variables.less';
+@import '../Common/mixins.less';
+
+.mz-payment-info {
+  &__ref {
+    @media screen and (min-width: @breakpoints[xl]) {
+      & + & {
+        margin-top: @spacing[xxs];
+      }
+    }
+  }
+
+  &__total {
+    @media screen and (min-width: @breakpoints[xl]) {
+      margin-top: @spacing[s];
+    }
+  }
+
+  &__copy-button {
+    display: flex;
+    align-items: center;
+
+    input {
+      .mz-hidden-input;
+      border: 0;
+      text-align: right;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+      @media screen and (min-width: @breakpoints[xl]) {
+        display: inline-block;
+        position: static;
+      }
+    }
+  }
+
+  &__value {
+    @media screen and (min-width: @breakpoints[xl]) {
+      display: none;
+    }
+  }
+
+  &__copy {
+    display: flex;
+    position: relative;
+    margin-left: @spacing[xs];
+  }
+
+  &__copy-icon {
+    color: @colors[purple-300];
+    vertical-align: initial;
+  }
+
+  &__copy-tooltip {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    padding: @spacing[xs];
+    border-radius: @border-radiuses[s];
+    opacity: 0;
+    background: @colors[purple-300];
+    box-shadow: @shadows[s];
+    color: @colors[white];
+    white-space: nowrap;
+    pointer-events: none;
+    .mz-font-style(small);
+
+    &.--active {
+      animation: tooltip-in 1 1s;
+    }
+
+    @media screen and (min-width: @breakpoints[xl]) {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
+  &__action-button {
+    margin-top: @spacing[s];
+
+    &.--desktop-only {
+      display: none;
+
+      @media screen and (min-width: @breakpoints[xl]) {
+        display: flex;
+      }
+    }
+  }
+}
+
+@keyframes tooltip-in {
+  from {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
