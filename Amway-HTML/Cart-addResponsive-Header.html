@@ -15,6 +15,17 @@
             flex-wrap: wrap;
         }
         
+        .mz-promo-code-section {
+            padding: 0 16px 16px;
+            background: #fff;
+        }
+        
+        .mz-cart-layout__summary-no-animation {
+            position: relative;
+            z-index: 603;
+            transition: transform .5s;
+        }
+        
         h6 {
             color: #2c2c2c;
             font-size: 16px;
@@ -1909,186 +1920,135 @@
                                     <div class="mz-cart-layout__detail">
                                         <div class="mz-cart-layout__detail-toggler" data-dropdown-bottom-restrict="true">
                                             <span class="mz-cart-layout__show-detail">
-                                                ดูรายละเอียด
-                                            </span>
+                                          ดูสรุปรายการชำระเงิน
+                                        </span>
                                             <span class="mz-cart-layout__hide-detail">
-                                                ซ่อนรายละเอียด
-                                            </span>
+                                          ซ่อนสรุปรายการชำระเงิน
+                                        </span>
                                             <span class="mz-icon --arrow-up mz-cart-layout__arrow"></span>
                                         </div>
-                                        <section class="mz-cart-detail-section">
+                                        <section class="mz-promo-code-section">
                                             <div class="mz-cart-value-row">
                                                 <span class="mz-cart-value-row__title">
-                                                    รวมค่าสินค้า
-                                                </span>
-                                                <span>
-                                                    <span class="mz-cart-detail-section__row-value">
-                                                        ฿ 289,563
-                                                    </span>
-                                                </span>
+                                            รวมค่าสินค้า
+                                          </span>
+                                                <span>฿ 21,908</span>
                                             </div>
                                             <div class="mz-cart-value-row">
                                                 <span class="mz-cart-value-row__title">
-                                                    ค่าจัดส่ง
-                                                </span>
-                                                <span>
-                                                    <span class="mz-cart-detail-section__row-value">
-                                                        ฿ 75
-                                                    </span>
-                                                </span>
+                                            ค่าจัดส่ง
+                                          </span>
+                                                <span>฿ 75</span>
                                             </div>
                                             <div class="mz-cart-value-row --red">
                                                 <span class="mz-cart-value-row__title">
-                                                    ส่วนลดค่าจัดส่ง
+                                            ส่วนลดทั้งหมด
+                                          </span>
+                                                <span>
+                                            <span>
+                                              - ฿
+                                              <span class="mz-promo-code-section__discount-value">
+                                                225
+                                              </span>
+                                                </span>
+                                                </span>
+                                            </div>
+                                            <div id="discount-template" class="mz-cart-value-row --nested --red">
+                                                <div class="mz-cart-value-row__nested-area">
+                                                    <button type="button" class="mz-cart-value-row__remove-button">
+                                              <span class="mz-icon --delete"></span>
+                                            </button>
+                                                </div>
+                                                <span class="mz-cart-value-row__title">
+                                            <span class="mz-promo-code-section__discount-code"></span>
                                                 </span>
                                                 <span>
-                                                    <span class="mz-cart-detail-section__row-value">
-                                                        - ฿ 75
-                                                    </span>
+                                            <span>
+                                              - ฿
+                                              <span class="mz-promo-code-section__discount-value">
+                                                0
+                                              </span>
+                                                </span>
                                                 </span>
                                             </div>
-                                            <div id="AMWAYABO50-discount-row" class="mz-cart-value-row --red">
-                                                <button type="button" class="mz-cart-value-row__remove-button">
-                                                    <span class="mz-icon --delete"></span>
-                                                </button>
+                                            <div class="mz-cart-value-row --nested --red">
+                                                <div class="mz-cart-value-row__nested-area"></div>
                                                 <span class="mz-cart-value-row__title">
-                                                    <span class="mz-cart-detail-section__row-title"></span>
-                                                </span>
+                                            ส่วนลดค่าจัดส่ง
+                                          </span>
                                                 <span>
-                                                    <span class="mz-cart-detail-section__row-value">
-                                                        ฿ 0
-                                                    </span>
+                                            <span>
+                                              - ฿
+                                              <span class="mz-promo-code-section__discount-value">
+                                                75
+                                              </span>
+                                                </span>
                                                 </span>
                                             </div>
-                                            <div id="AMWAYABO100-discount-row" class="mz-cart-value-row --red">
-                                                <button type="button" class="mz-cart-value-row__remove-button">
-                                                    <span class="mz-icon --delete"></span>
-                                                </button>
-                                                <span class="mz-cart-value-row__title">
-                                                    <span class="mz-cart-detail-section__row-title"></span>
-                                                </span>
-                                                <span>
-                                                    <span class="mz-cart-detail-section__row-value">
-                                                        ฿ 0
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div id="discount-template" class="mz-cart-value-row --red">
-                                                <button type="button" class="mz-cart-value-row__remove-button">
-                                                    <span class="mz-icon --delete"></span>
-                                                </button>
-                                                <span class="mz-cart-value-row__title">
-                                                    <span class="mz-cart-detail-section__row-title"></span>
-                                                </span>
-                                                <span>
-                                                    <span class="mz-cart-detail-section__row-value">
-                                                        ฿ 0
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div id="voucher-row" class="mz-cart-value-row mz-cart-detail-section__wallet-row --voucher">
-                                                <button type="button" class="mz-cart-value-row__remove-button">
-                                                    <span class="mz-icon --delete"></span>
-                                                </button>
-                                                <span class="mz-cart-value-row__title">
-                                                    ชำระด้วยใบสำคัญลดหนี้
-                                                </span>
-                                                <span>
-                                                    <span class="mz-cart-detail-section__row-value">
-                                                        ฿ 0
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div id="ar-row" class="mz-cart-value-row mz-cart-detail-section__wallet-row --ar">
-                                                <button type="button" class="mz-cart-value-row__remove-button">
-                                                    <span class="mz-icon --delete"></span>
-                                                </button>
-                                                <span class="mz-cart-value-row__title">
-                                                    ชำระด้วย AR
-                                                </span>
-                                                <span>
-                                                    <span class="mz-cart-detail-section__row-value">
-                                                        ฿ 0
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="mz-cart-value-row mz-cart-detail-section__row --mobile --grey">
-                                                <span class="mz-cart-value-row__title">
-                                                    PV/BV จากการสั่งซื้อ
-                                                </span>
-                                                <span>1,100 / 2,200</span>
-                                            </div>
-                                            <div class="mz-cart-value-row mz-cart-detail-section__row --mobile --grey">
-                                                <span class="mz-cart-value-row__title">
-                                                    ยอดปรับปรุง PV/BV
-                                                </span>
-                                                <span>- 100 / - 200</span>
-                                            </div>
-                                            <div class="mz-promo-code-input mz-cart-detail-section__enter --desktop">
-                                                <h6 class="mz-cart-layout__section-title">
-                                                    สิทธิ์ส่วนลดและโปรโมชั่นโค้ด
-                                                </h6>
+                                            <div class="mz-promo-code-input mz-promo-code-section__enter">
                                                 <div class="mz-input mz-promo-code-input__input">
                                                     <input type="text" id="promo-code-input" name="promo-code" placeholder="พิมพ์รหัสโค้ดส่วนลด" class="mz-input__input --with-clear-button">
                                                     <button type="button" class="mz-input__clear-button">
-                                                        <span class="mz-icon --delete"></span>
-                                                    </button>
+                                              <span class="mz-icon --delete"></span>
+                                            </button>
                                                 </div>
                                                 <button type="button" class="mz-button btn btn-lg --primary --large --original-blue mz-promo-code-input__button --square">
-                                                    <span>ใช้ส่วนลด</span>
-                                                </button>
+                                            <span>ใช้ส่วนลด</span>
+                                          </button>
                                             </div>
-                                            <p class="mz-error mz-promo-code-input__error --valid">
+                                            <p class="mz-error mz-promo-code-input__error --invalid">
                                                 <small>โปรโมชั่นโค้ดนี้ไม่สามารถใช้ได้</small>
-                                            </p>
-                                            <p class="mz-error mz-promo-code-input__error --is-pass">
-                                                <small>โปรโมชั่นโค้ดนี้สามารถใช้ได้</small>
                                             </p>
                                             <p class="mz-error mz-promo-code-input__error --is-used">
                                                 <small>คุณใช้โปรโมชั่นโค้ดนี้ไปแล้ว</small>
                                             </p>
                                         </section>
                                     </div>
+                                    <div class="mz-cart-layout__summary-no-animation">
+                                        <section class="mz-cart-summary">
+                                            <div class="mz-cart-summary__rows">
+                                                <div class="mz-cart-value-row mz-cart-summary__row --desktop">
+                                                    <span class="mz-cart-value-row__title">
+                                              <strong>สรุปยอดชำระ</strong>
+                                            </span>
+                                                    <span>
+                                              <span class="mz-cart-summary__total">
+                                                ฿ 21,758
+                                              </span>
+                                                    </span>
+                                                </div>
+                                                <div class="mz-cart-summary__row --mobile">
+                                                    <span class="mz-cart-summary__total">฿ 21,758</span>
+                                                </div>
+                                                <div class="mz-cart-value-row mz-cart-summary__row --desktop">
+                                                    <span class="mz-cart-value-row__title">
+                                              PV/BV ที่จะได้รับ
+                                            </span>
+                                                    <span>1,000 / 2,000</span>
+                                                </div>
+                                                <div class="mz-cart-summary__row --mobile">
+                                                    + PV 1,000 / + BV 2,000
+                                                </div>
+                                                <div class="mz-cart-value-row mz-cart-summary__row --desktop --red">
+                                                    <span class="mz-cart-value-row__title">
+                                              ยอดปรับปรุง PV/BV
+                                            </span>
+                                                    <span>10,000 / 20,000</span>
+                                                </div>
+                                                <div class="mz-cart-summary__row --mobile --red">
+                                                    ปรับปรุง PV 10,000 / BV 20,000
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="mz-button btn btn-lg --primary --large --original-blue mz-cart-summary__button">
+                                          <span>สรุปรายการ</span>
+                                        </button>
+                                        </section>
+                                        <section class="mz-discount-bar">
+                                            รับส่วนลด 20% ทันที! เมื่อซื้อครบ ฿30,000
+                                        </section>
+                                    </div>
                                 </div>
-                                <div class="mz-cart-layout__summary-no-animaiton">
-                                    <section class="mz-discount-bar">
-                                        รับส่วนลด 20% ทันที! เมื่อซื้อครบ ฿30,000
-                                    </section>
-                                    <section class="mz-cart-summary">
-                                        <div class="mz-cart-summary__rows">
-                                            <div class="mz-cart-value-row mz-cart-summary__row --no-title-mobile">
-                                                <span class="mz-cart-value-row__title">
-                                                        <strong>สรุปยอดชำระ</strong>
-                                                    </span>
-                                                <span>
-                                                        <span class="mz-cart-summary__total" data-total="true">฿ 0</span>
-                                                </span>
-                                            </div>
-                                            <div class="mz-cart-value-row mz-cart-summary__row --points">
-                                                <span class="mz-cart-value-row__title">
-                                                        PV/BV ที่จะได้รับ
-                                                    </span>
-                                                <span>1,000 / 2,000</span>
-                                            </div>
-                                            <div class="mz-cart-value-row mz-cart-summary__row --desktop">
-                                                <span class="mz-cart-value-row__title">
-                                                        PV/BV จากการสั่งซื้อ
-                                                    </span>
-                                                <span>1,100 / 2,200</span>
-                                            </div>
-                                            <div class="mz-cart-value-row mz-cart-summary__row --desktop">
-                                                <span class="mz-cart-value-row__title">
-                                                        ยอดปรับปรุง PV/BV
-                                                    </span>
-                                                <span>- 100 / - 200</span>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="mz-button btn btn-lg --primary --large --original-blue mz-cart-summary__button">
-                                                <span>สั่งซื้อ</span>
-                                            </button>
-                                    </section>
 
-                                </div>
                                 <div class="mz-cart-layout__bars-and-options">
                                     <section class="mz-gpv-bar" data-init="true">
                                         <p class="mz-gpv-bar__content">
