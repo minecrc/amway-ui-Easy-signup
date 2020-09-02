@@ -116,9 +116,7 @@
                                     <input type="radio" class="mz-toggle-button__input" id="global-delivery" name="global-delivery-method" value="global-delivery" readonly="" checked="" />
                                     <label for="global-delivery" class="mz-toggle-button__button oa-global-delivery-methods__delivery-methods-toggle-option --active">
                       <span>
-                        <span
-                          class="oa-global-delivery-methods__delivery-option"
-                        >
+                        <span class="oa-global-delivery-methods__delivery-option" >
                           จัดส่งที่บ้าน
                         </span>
                       </span>
@@ -1326,11 +1324,12 @@
                     <div id="clear-order" class="mz-modal modal fade --mobile-full" style="display: none;">
                         <section class="oa-cancle-mordal-content">
                             <div class="header">
-                                คุณต้องการยกเลิกคำสั่งซื้อทั้งหมดหรือไม่
+                                <strong> คุณต้องการยกเลิกคำสั่งซื้อทั้งหมดหรือไม่</strong>
                             </div>
                             <br>
 
                             <form action="/clear-order">
+                                <span>โปรดเลือกเหตุผลที่ต้องการยกเลิกคำสั่งซื้อ</span>
                                 <select name="reason">
                                     <option value="1">เพิ่ม/ลด จำนวนสินค้า</option>
                                     <option value="2">ไม่ได้ต้องการซื้อสินค้านี้</option>
