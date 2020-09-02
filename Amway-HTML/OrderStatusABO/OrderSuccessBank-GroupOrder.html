@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" href="../../styles/common.8e7db5e747870b108a2a.css" />
     <link rel="stylesheet" href="../../styles/RegularOrder___OrderStatusMember___OrderSuccessFull.bb0d448f6940e44a7bb5.css" />
-    <link rel="stylesheet" href="../../styles/common.ebcd0de550622749325e.css" />
+
     <style>
         #clear-order.mz-modal {
             min-width: 200px;
@@ -65,11 +65,16 @@
             text-align: center;
         }
         
+        .oa-cancle-mordal-content .header,
+        .oa-cancle-mordal-content .content-inner {
+            margin: 20px 0 0 0;
+        }
+        
         .btn-cancle-contain {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin: 15px;
+            margin: 35px 0 0 0;
         }
         
         .order-summary-detail {
@@ -1549,24 +1554,38 @@
                             </div>
                         </div>
                         <div id="clear-order" class="mz-modal modal fade --mobile-full" style="display: none;">
-
                             <section class="oa-cancle-mordal-content">
-                                คุณต้องการยกเลิกคำสั่งซื้อทั้งหมดหรือไม่
-                                <br>
-                                <Strong>โดยคำสั่งซื้อชุดนี้จะถูกยกเลิกทั้งหมด</Strong>
-                                <form action="/clear-order">
-                                    <div class="btn-cancle-contain">
-                                        <button type="submit" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button">
-                                        <span>ยกเลิกคำสั่งซื้อ</span>
-                                    </button>
-                                        <button type="button" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button" data-dismiss="modal">
-                                        <span>ไม่ยกเลิก</span>
-                                    </button>
-                                    </div>
-                                </form>
+                                <div class="header">
+                                    <Strong>  คุณต้องการยกเลิกคำสั่งซื้อทั้งหมดหรือไม่</Strong>
+                                    <br>
+                                    <Strong>โดยคำสั่งซื้อชุดนี้จะถูกยกเลิกทั้งหมด</Strong>
+
+                                </div>
+                                <div class="content-inner">
+                                    <form action="/clear-order">
+
+                                        <Span>โปรดเลือกเหตุผลที่ต้องการยกเลิกคำสั่งซื้อ</Span>
+                                        <select name="reason">
+                                            <option value="1">เพิ่ม/ลด จำนวนสินค้า</option>
+                                            <option value="2">ไม่ได้ต้องการซื้อสินค้านี้</option>
+                                            <option value="3">สั่งสินค้าผิด</option>
+                                            <option value="4">การคำนวนยอด SOP ไม่ถูกต้อง</option>
+                                            <option value="5">ไม่ได้สิทธิ์โปรโมชั่น</option>
+                                            <option value="6">อื่นๆ</option>
+                                        </select>
+                                        <div class="btn-cancle-contain">
+                                            <button type="submit" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button">
+                                            <span>ยกเลิกคำสั่งซื้อ</span>
+                                        </button>
+                                            <button type="button" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button" data-dismiss="modal">
+                                            <span>ไม่ยกเลิก</span>
+                                        </button>
+                                        </div>
+                                    </form>
+                                </div>
+
                             </section>
                         </div>
-
                     </section>
             </div>
             </section>

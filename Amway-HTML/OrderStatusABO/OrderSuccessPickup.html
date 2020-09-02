@@ -17,6 +17,18 @@
             margin: 45px 15px 15px 15px;
         }
         
+        .oa-cancle-mordal-content .header,
+        .oa-cancle-mordal-content .content-inner {
+            margin: 20px 0 0 0;
+        }
+        
+        .btn-cancle-contain {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 35px 0 0 0;
+        }
+        
         #re-order.mz-modal {
             min-width: 200px;
             max-width: 440px;
@@ -1312,12 +1324,21 @@
                         </div>
                     </section>
                     <div id="clear-order" class="mz-modal modal fade --mobile-full" style="display: none;">
-         
                         <section class="oa-cancle-mordal-content">
-                            คุณต้องการยกเลิกคำสั่งซื้อทั้งหมดหรือไม่
+                            <div class="header">
+                                คุณต้องการยกเลิกคำสั่งซื้อทั้งหมดหรือไม่
+                            </div>
                             <br>
-                            <Strong>โดยคำสั่งซื้อชุดนี้จะถูกยกเลิกทั้งหมด</Strong>
+
                             <form action="/clear-order">
+                                <select name="reason">
+                                    <option value="1">เพิ่ม/ลด จำนวนสินค้า</option>
+                                    <option value="2">ไม่ได้ต้องการซื้อสินค้านี้</option>
+                                    <option value="3">สั่งสินค้าผิด</option>
+                                    <option value="4">การคำนวนยอด SOP ไม่ถูกต้อง</option>
+                                    <option value="5">ไม่ได้สิทธิ์โปรโมชั่น</option>
+                                    <option value="6">อื่นๆ</option>
+                                </select>
                                 <div class="btn-cancle-contain">
                                     <button type="submit" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button">
                                     <span>ยกเลิกคำสั่งซื้อ</span>
