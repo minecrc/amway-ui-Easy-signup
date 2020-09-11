@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" href="../styles/common.6d195332c6a01d6fcf4b.css" />
     <link rel="stylesheet" href="../styles/SignUpABO___SignUpABOPersonalDetails.f14810ea78e92f2511db.css" />
+    <style>
+        .oa-sign-up-personal-details-form__edit-photos {
+            display: flex;
+            justify-content: center !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -702,12 +708,13 @@
                                 เลขที่บัตรประชาชน : 1-2345-67890-12-3
                             </div>
                             <div class="oa-sign-up-personal-details-form__edit-photos">
-                                <img class="oa-image oa-sign-up-personal-details-form__photo" data-src="../static/images/upload-id-card-selfie.svg" alt="upload-id-card-selfie" />
-                                <img class="oa-image oa-sign-up-personal-details-form__photo" data-src="../static/images/upload-id-card.svg" alt="upload-id-card" />
                                 <button type="button" class="oa-button btn btn-lg --secondary --auto --small oa-sign-up-personal-details-form__reupload-button">
-                <span class="oa-icon --camera oa-button__icon"></span>
-                <span>แก้ไขรูปถ่าย</span>
-              </button>
+                                    <span class="oa-icon --camera oa-button__icon"></span>
+                                    <span>ถ่ายรูปทำบัตร</span>
+                                </button>
+                                <p class="oa-sign-up-form-layout__description">
+                                    * คำแนะนำ: ถ่ายรูปในที่ที่มีแสงสว่างเพียงพอ หันหน้าตรง ไม่ใส่หมวกหรือแว่นตา
+                                </p>
                             </div>
                         </section>
                         <section class="oa-sign-up-form-section">
@@ -771,7 +778,7 @@
                                         <label class="oa-input__label" for="mobile">
                                     <small>เบอร์โทรศัพท์</small>
                                   </label>
-                                        <input id="clsNumOnly" type="text" id="mobile" name="mobile" placeholder="ตัวอย่าง: 0812223333" class="oa-input__input input-lg form-control --undefined" />
+                                        <input id="clsNumOnly" type="text" id="mobile" name="mobile" disabled="" placeholder="ตัวอย่าง: 0812223333" class="oa-input__input input-lg form-control --undefined" />
                                     </div>
                                     <p class="oa-message --error oa-input-group__error-message">
                                         <small id="mobile-error"></small>
@@ -782,7 +789,7 @@
                                         <label class="oa-input__label" for="email">
                     <small>อีเมล</small>
                   </label>
-                                        <input type="text" id="email" name="email" placeholder="customeramway@gmail.com" disabled="" class="oa-input__input input-lg form-control --undefined" />
+                                        <input type="text" id="email" name="email" placeholder="customeramway@gmail.com" class="oa-input__input input-lg form-control --undefined" />
                                     </div>
                                     <p class="oa-message --error oa-input-group__error-message">
                                         <small id="email-error"></small>
