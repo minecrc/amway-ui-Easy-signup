@@ -10,8 +10,30 @@
     <link rel="stylesheet" href="../../styles/common.8e7db5e747870b108a2a.css" />
     <link rel="stylesheet" href="../../styles/SignUpMember___SignUpMemberEditPersonalDetails.d67696f7a1088b081cdd.css" />
     <style>
-        .oa-sign-up-personal-details-form__photo {
-            width: 100%;
+        .oa-sign-up-personal-details-form__reupload-button {
+            margin: 0 !important;
+        }
+        
+        @media (min-width: 767px) {
+            .oa-sign-up-personal-details-form__photo {
+                width: 100%;
+                max-width: 325px;
+            }
+            .oa-sign-up-personal-details-form__edit-photos {
+                justify-content: space-between !important;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 766px) {
+            .oa-sign-up-personal-details-form__photo {
+                width: 100%;
+                max-width: 80%;
+            }
+            .oa-sign-up-personal-details-form__edit-photos {
+                justify-content: center !important;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -923,8 +945,7 @@
                                 เลขที่บัตรประชาชน : 1-2345-67890-12-3
                             </div>
                             <div class="oa-sign-up-personal-details-form__edit-photos">
-                                <img class="oa-image oa-sign-up-personal-details-form__photo" data-src="../../static/images/upload-id-card-selfie.svg" alt="upload-id-card-selfie" />
-                                <!-- <img class="oa-image oa-sign-up-personal-details-form__photo" data-src="../../static/images/upload-id-card.svg" alt="upload-id-card" /> -->
+                                <img class="oa-image oa-sign-up-personal-details-form__photo" data-src="../../static/images/Group 9.png" alt="upload-id-card-selfie" />
                                 <button type="button" class="oa-button btn btn-lg --secondary --auto --small oa-sign-up-personal-details-form__reupload-button">
                 <span class="oa-icon --camera oa-button__icon"></span>
                 <span>แก้ไขรูปถ่าย</span>
