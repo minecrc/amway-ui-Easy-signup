@@ -1305,11 +1305,17 @@
                         </div>
                     </section>
                     <div id="clear-order" class="mz-modal modal fade --mobile-full" style="display: none;">
-
                         <section class="oa-cancle-mordal-content">
-                            คุณต้องการยกเลิกคำสั่งซื้อทั้งหมดหรือไม่
-                            <br>
-                            <Strong>โดยคำสั่งซื้อชุดนี้จะถูกยกเลิกทั้งหมด</Strong>
+                            คุณต้องการยกเลิกคำสั่งซื้อทั้งหมดหรือไม่ <br>
+                            <br> โปรดระบุเหตุผลที่ต้องการยกเลิก <br>
+                            <select name="reason">
+                                <option value="1">เพิ่ม/ลด จำนวนสินค้า</option>
+                                <option value="2">ไม่ได้ต้องการซื้อสินค้านี้</option>
+                                <option value="3">สั่งสินค้าผิด</option>
+                                <option value="4">การคำนวนยอด SOP ไม่ถูกต้อง</option>
+                                <option value="5">ไม่ได้สิทธิ์โปรโมชั่น</option>
+                                <option value="6">อื่นๆ</option>
+                            </select>
                             <form action="/clear-order">
                                 <div class="btn-cancle-contain">
                                     <button type="submit" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button">

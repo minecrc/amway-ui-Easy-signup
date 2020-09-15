@@ -5,12 +5,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>OrderSuccessBank</title>
+    <title>OrderNotComplete</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" href="../../styles/common.8e7db5e747870b108a2a.css" />
-    <link rel="stylesheet" href="../../styles/RegularOrder___OrderStatusMember___OrderSuccessFull.bb0d448f6940e44a7bb5.css" />
+    <link rel="stylesheet" href="../../styles/RegularOrder___OrderStatusABO___OrderSuccessFull.648bf30e034efce5601f.css" />
 
     <style>
+        .btn-cancle-contain {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 45px 15px 15px 15px;
+        }
+        
         #clear-order.mz-modal,
         #clear-group-order.mz-modal {
             min-width: 200px;
@@ -42,28 +49,37 @@
             background-color: #002f5f;
         }
         
-        #clear-order.mz-modal .mz-order-cancle__title h6 {
-            color: #fff;
+        .content-inner {
+            margin-top: 20px;
         }
         
-        .btn.btn-lg {
-            max-width: 328px;
+        section.oa-cancle-mordal-content {
+            background: #ffffff;
+            padding: 25px;
         }
         
-        span.pv {
-            font-size: 10px;
-            margin-left: -40px;
-            display: flex;
-            color: #9EA0A3;
+        #re-order.mz-modal {
+            min-width: 200px;
+            max-width: 440px;
+            max-height: 260px;
+            min-height: 200px;
+            height: auto;
+            background-color: #ffffff;
+            margin: 0 auto;
+            top: 20vh;
+            padding: 0 !important;
         }
         
-        .order-summary {
+        .btn.btn-sm {
+            max-width: 131px;
+            width: 100%;
+        }
+        
+        .btn-cancle-contain {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            max-width: 110px;
-            width: 100%;
+            margin: 45px 15px 15px 15px;
         }
         
         .oa-cancle-mordal-content {
@@ -72,104 +88,35 @@
             text-align: center;
         }
         
-        .oa-cancle-mordal-content .header,
-        .oa-cancle-mordal-content .content-inner {
-            margin: 20px 0 0 0;
-        }
-        
-        .btn-cancle-contain {
+        #clear-order.mz-modal .mz-order-cancle__title {
+            position: absolute;
+            height: 40px;
+            top: 0;
             display: flex;
-            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+            text-align: center;
             justify-content: center;
-            margin: 35px 0 0 0;
+            background-color: #002f5f;
         }
         
-        .order-summary-detail {
-            max-width: 78%;
-            width: 100%;
-            margin-right: 6px;
-        }
-        
-        .btn.btn-sm {
-            max-width: 160px;
-            width: 100%;
-        }
-        
-        .mz-order-status-section__header-- {
-            height: 48px;
-            padding: 0 24px;
-            background: #ededed;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .mz-order-status-section__header--custom {
-            height: auto;
-            padding: 0 24px;
-            background: #ffff;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-top: 3px solid #ededed;
-        }
-        
-        .mz-order-status-section__header--custom[aria-expanded=true] .mz-order-status-section__icon {
-            transform: scaleY(-1)
-        }
-        
-        @media only screen and (min-width: 1204px) {
-            .--Desktop {
-                display: contents;
-            }
-            .--Mobile {
-                display: none;
-            }
-        }
-        
-        @media only screen and (max-width: 1204px) {
-            .--Desktop {
-                display: none;
-            }
-            .--Mobile {
-                display: block;
-            }
-            .--deleteboder {
-                border: none !important;
-            }
-            .mz-order-success-actions__buttons {
-                display: flex;
-            }
-        }
-        
-        @media only screen and (min-width: 1024px) {
-            .mz-order-success-actions__buttons {
-                display: flex;
-                padding: 32px 0 24px;
-                border-top: none;
-                justify-content: center;
-            }
-            .order-summary>.mz-order-status-section__icon {
-                display: block !important;
-            }
-            .mz-order-status-section {
-                border-top: 1px solid #ededed;
-                border-bottom: 1px solid #ededed !important;
-            }
+        #clear-order.mz-modal .mz-order-cancle__title h6 {
+            color: #fff;
         }
         
         @media only screen and (max-width: 1203px) {
-            .mz-button.btn.--medium {
-                margin: 0 auto;
+            .mz-order-success-actions__buttons {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
             }
-            .mz-order-item>.mz-order-status-section,
-            .mz-order-item>.mz-order-success-actions__buttons {
-                border-top: none;
-                border-bottom: 1px solid #ededed !important;
-                padding: 4px 16px;
+            .btn.btn-lg {
+                max-width: 46%;
+                width: 100%;
             }
         }
     </style>
+
 </head>
 
 <body>
@@ -187,7 +134,9 @@
                                     <input type="radio" class="mz-toggle-button__input" id="global-delivery" name="global-delivery-method" value="global-delivery" readonly="" checked="" />
                                     <label for="global-delivery" class="mz-toggle-button__button oa-global-delivery-methods__delivery-methods-toggle-option --active">
                       <span>
-                        <span class="oa-global-delivery-methods__delivery-option">
+                        <span
+                          class="oa-global-delivery-methods__delivery-option"
+                        >
                           จัดส่งที่บ้าน
                         </span>
                       </span>
@@ -201,7 +150,8 @@
                           >
                             รับที่สาขา
                           </span>
-                          <span class="oa-global-delivery-methods__pickup-selected"
+                          <span
+                            class="oa-global-delivery-methods__pickup-selected"
                           >
                             รับที่ :
                             <span
@@ -1003,7 +953,9 @@
                   readonly=""
                 />
                 <div class="oa-pickup-address-modal__address-label">
-                  <span  class="mz-icon --map-pin oa-pickup-address-modal__option-icon"></span>
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
                   แอมเวย์ ช็อป 2
                 </div>
                 <span
@@ -1078,31 +1030,31 @@
                                     <div id="order-summary-content" role="tabpanel" class="mz-order-status-section__content collapse in" aria-labelledby="order-summary">
                                         <div class="mz-cart-value-row mz-order-summary__row">
                                             <span class="mz-cart-value-row__title">
-                                    หมายเลขคำสั่งซื้อ
-                                  </span>
+                          หมายเลขคำสั่งซื้อ
+                        </span>
                                             <span>191027201419D20</span>
                                         </div>
                                         <div class="mz-cart-value-row mz-order-summary__row">
                                             <span class="mz-cart-value-row__title">
-                                    ผู้ทำการสั่งซื้อ
-                                  </span>
+                          ผู้ทำการสั่งซื้อ
+                        </span>
                                             <span>อมร ศิลปการสกุล</span>
                                         </div>
                                         <div class="mz-order-summary__number-row">00001111</div>
                                         <div class="mz-cart-value-row mz-order-summary__row">
                                             <span class="mz-cart-value-row__title">
-                                    วันที่สั่งซื้อ
-                                  </span>
+                          วันที่สั่งซื้อ
+                        </span>
                                             <span>
-                                    <span class="mz-order-summary__date">
-                                      11 พ.ย. 2562
-                                    </span> 17:47:14 น.
+                          <span class="mz-order-summary__date">
+                            11 พ.ย. 2562
+                          </span> 17:47:14 น.
                                             </span>
                                         </div>
                                         <div class="mz-cart-value-row mz-order-summary__row">
                                             <span class="mz-cart-value-row__title">
-                                    ช่องทางการสั่งซื้อ
-                                  </span>
+                          ช่องทางการสั่งซื้อ
+                        </span>
                                             <span>เว็บไซต์</span>
                                         </div>
                                     </div>
@@ -1116,9 +1068,9 @@
                                         <div class="mz-order-status__value-row">
                                             <strong>จัดส่ง:</strong>
                                             <span>
-                                    56/345 เดอะนิช โมโน สุขุมวิท 50 แขวงพระโขนง เขตคลองเตย
-                                    กรุงเทพมหานคร 10110
-                                  </span>
+                          56/345 เดอะนิช โมโน สุขุมวิท 50 แขวงพระโขนง เขตคลองเตย
+                          กรุงเทพมหานคร 10110
+                        </span>
                                         </div>
                                         <div class="mz-order-status__value-row">0882349087</div>
                                     </div>
@@ -1131,8 +1083,8 @@
                                     <div id="payment-amount-content" role="tabpanel" class="mz-order-status-section__content collapse in" aria-labelledby="payment-amount">
                                         <div class="mz-cart-value-row mz-order-status__value-row">
                                             <span class="mz-cart-value-row__title">
-                                    รวมค่าสินค้า
-                                  </span>
+                          รวมค่าสินค้า
+                        </span>
                                             <span>฿ 289,563</span>
                                         </div>
                                         <div class="mz-cart-value-row mz-order-status__value-row">
@@ -1141,27 +1093,36 @@
                                         </div>
                                         <div class="mz-cart-value-row mz-order-status__value-row --red">
                                             <span class="mz-cart-value-row__title">
-                                    ส่วนลดทั้งหมด
-                                  </span>
+                          ส่วนลดทั้งหมด
+                        </span>
                                             <span>- ฿ 100</span>
                                         </div>
                                         <div class="mz-cart-value-row mz-order-status__value-row">
                                             <span class="mz-cart-value-row__title">
-                                    ชำระด้วยใบสำคัญลดหนี้
-                                  </span>
+                          ชำระด้วยใบสำคัญลดหนี้
+                        </span>
                                             <span>- ฿ 100</span>
                                         </div>
                                         <div class="mz-cart-value-row mz-order-status__value-row">
                                             <span class="mz-cart-value-row__title">
-                                    ชำระด้วย AR
-                                  </span>
+                          ชำระด้วย AR
+                        </span>
                                             <span>- ฿ 100</span>
                                         </div>
                                         <div class="mz-cart-value-row mz-order-status__value-row">
                                             <span class="mz-cart-value-row__title">
-                                    ตัดบัญชีออนไลน์
-                                  </span>
+                          ชำระด้วยบัตรเครดิต / เดบิต
+                        </span>
                                             <span>- ฿ 289,338</span>
+                                        </div>
+                                        <div class="mz-order-status__credit-info">
+                                            <img class="mz-image mz-order-status__credit-info-image" data-src="../../static/images/payment-mastercard.svg" alt="payment-mastercard" />
+                                            <div class="mz-order-status__credit-info-dots">
+                                                • • • •
+                                            </div>
+                                            <div class="mz-order-status__credit-info-digits">
+                                                4578
+                                            </div>
                                         </div>
                                     </div>
                                 </section>
@@ -1173,58 +1134,33 @@
                                     <div id="points-info-content" role="tabpanel" class="mz-order-status-section__content collapse in" aria-labelledby="points-info">
                                         <div class="mz-cart-value-row mz-order-status__value-row --grey">
                                             <span class="mz-cart-value-row__title">
-                                    PV/BV จากการสั่งซื้อ
-                                  </span>
+                          PV/BV จากการสั่งซื้อ
+                        </span>
                                             <span>1,100 / 2,200</span>
                                         </div>
                                         <div class="mz-cart-value-row mz-order-status__value-row --grey">
                                             <span class="mz-cart-value-row__title">
-                                    ยอดปรับปรุง PV/BV
-                                  </span>
+                          ยอดปรับปรุง PV/BV
+                        </span>
                                             <span>- 100 / - 200</span>
                                         </div>
                                         <div class="mz-cart-value-row mz-order-status__value-row">
                                             <span class="mz-cart-value-row__title">
-                                    PV/BV ที่จะได้รับ
-                                  </span>
+                          PV/BV ที่จะได้รับ
+                        </span>
                                             <span>1,000 / 2,000</span>
                                         </div>
                                     </div>
                                 </section>
                             </div>
-
                             <div class="mz-order-status-layout__right-content">
-                                <div class="mz-order-status-section">
-                                    <header class="mz-order-status-section__header--">
+                                <section class="mz-order-status-section">
+                                    <header id="cart-items" role="tab" type="button" data-toggle="collapse" data-target="#cart-items-content" aria-controls="cart-items-content" aria-expanded="true" class="mz-order-status-section__header">
                                         <h6>สรุปรายการสินค้า</h6>
-                                    </header>
-
-                                </div>
-
-                                <section class="mz-order-status-section">
-                                    <header id="cart-items" role="tab" type="button" data-toggle="collapse" data-target="#cart-items-content-92224145" aria-controls="cart-items-content" aria-expanded="false" class="mz-order-status-section__header--custom --deleteboder">
-                                        <div class="order-detail">
-                                            เลขที่คำสั่งซื้อ <strong>92224145</strong>
-                                            <br> สั่งซื้อให้ <span class="ABO-id">2711647</span>
-                                            <span class="ABO-name --Desktop">
-                                                , <span class="ABO-name">ชมทิศา - พัณณ์ชิตา ประมาตรคุณ</span>
-                                            </span>
-
-                                        </div>
-                                        <div class="order-summary">
-                                            <div class="order-summary-detail">
-                                                <strong> ฿300,000</strong>
-                                                <br> <span class="pv">pv/bv: <span>2,000,000/400,000</span></span>
-                                            </div>
-                                            <span class="mz-icon --arrow-down mz-order-status-section__icon"></span>
-                                        </div>
-
+                                        <span class="mz-icon --arrow-down mz-order-status-section__icon"></span>
                                     </header>
                                 </section>
-                                <section id="cart-items-content-92224145" role="tabpanel" class="mz-order-status-section__children collapse" aria-labelledby="cart-items">
-                                    <span class="ABO-name --Mobile mz-order-status-section__header--custom --deleteboder">
-                                        <span class="ABO-name">ดาวน์ไลน์ ชมทิศา - พัณณ์ชิตา ประมาตรคุณ</span>
-                                    </span>
+                                <section id="cart-items-content" role="tabpanel" class="mz-order-status-section__children collapse in" aria-labelledby="cart-items">
                                     <div class="mz-order-item">
                                         <img class="mz-image mz-order-item__image" data-src="../../static/images/mock/product-1.jpg" alt="mock/product-1" />
                                         <div class="mz-order-item__content">
@@ -1350,180 +1286,16 @@
                                                 <strong>ฟรี</strong>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="mz-order-item">
-                                        <section class="mz-order-success-actions__buttons">
-                                            <a href="#" class="mz-button btn btn-lg --secondary --medium --original-blue mz-order-success-actions__button" data-toggle="modal" data-target="#clear-order">
-                                                <span>ยกเลิกคำสั่งซื้อ</span>
-                                            </a>
-                                        </section>
-                                    </div>
-                                </section>
-                                <section class="mz-order-status-section">
-                                    <header id="cart-items" role="tab" type="button" data-toggle="collapse" data-target="#cart-items-content-92224156" aria-controls="cart-items-content" aria-expanded="false" class="mz-order-status-section__header--custom --deleteboder">
-                                        <div class="order-detail">
-                                            เลขที่คำสั่งซื้อ <strong>92224156</strong>
-                                            <br> สั่งซื้อให้ <span class="ABO-id">2711647</span>
-                                            <span class="ABO-name --Desktop">
-                                                , <span class="ABO-name">ชมทิศา - พัณณ์ชิตา ประมาตรคุณ</span>
-                                            </span>
-                                        </div>
-                                        <div class="order-summary">
-                                            <div class="order-summary-detail">
-                                                <strong> ฿27,000</strong>
-                                                <br> <span class="pv">pv/bv:<span>10,000/27,000</span></span>
-                                            </div>
-                                            <span class="mz-icon --arrow-down mz-order-status-section__icon"></span>
-                                        </div>
-
-                                    </header>
-                                </section>
-                                <section id="cart-items-content-92224156" role="tabpanel" class="mz-order-status-section__children collapse" aria-labelledby="cart-items">
-                                    <span class="ABO-name --Mobile mz-order-status-section__header--custom --deleteboder">
-                                        <span class="ABO-name">ดาวน์ไลน์ ชมทิศา - พัณณ์ชิตา ประมาตรคุณ</span>
-                                    </span>
-                                    <div class="mz-order-item">
-                                        <img class="mz-image mz-order-item__image" data-src="../../static/images/mock/product-1.jpg" alt="mock/product-1" />
-                                        <div class="mz-order-item__content">
-                                            <p class="mz-order-item__barcode">รหัส#102345</p>
-                                            <header class="mz-order-item__title">
-                                                นิวทริไลท์เครื่องหมายการค้า ซีแอลเอ 500 จากน้ำมันดอกคำฝอยบรรจุ 180 แคปซูล
-                                            </header>
-                                            <p class="mz-order-item__description">สินค้าค้างจ่าย</p>
-                                            <div class="mz-order-item__price-and-quantity">
-                                                <span>2 x ฿ 1,070</span>
-                                                <strong>฿ 2,140</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mz-order-item">
-                                        <img class="mz-image mz-order-item__image" data-src="../../static/images/mock/product-1.jpg" alt="mock/product-1" />
-                                        <div class="mz-order-item__content">
-                                            <p class="mz-order-item__barcode">รหัส#102355</p>
-                                            <header class="mz-order-item__title">
-                                                นิวทริไลท์เครื่องหมายการค้า ซีแอลเอ 500 จากน้ำมันดอกคำฝอยบรรจุ 180 แคปซูล
-                                            </header>
-                                            <p class="mz-order-item__description">
-                                                สินค้า SOP ผ่อนชำระ x 4 เดือน
-                                            </p>
-                                            <div class="mz-order-item__price-and-quantity">
-                                                <span>1 x ฿ 1,070</span>
-                                                <strong>฿ 1,070</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mz-order-item">
-                                        <img class="mz-image mz-order-item__image" data-src="../../static/images/mock/product-2.jpg" alt="mock/product-2" />
-                                        <div class="mz-order-item__content">
-                                            <p class="mz-order-item__barcode">รหัส#102365</p>
-                                            <header class="mz-order-item__title">
-                                                เครื่องกรองอากาศ แอทโมสเฟียร์ สกาย
-                                            </header>
-                                            <p class="mz-order-item__description">
-                                                สินค้าผ่อนชำระ x 4 เดือน
-                                            </p>
-                                            <div class="mz-order-item__price-and-quantity">
-                                                <span>1 x ฿ 45,920</span>
-                                                <strong>฿ 45,920</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mz-order-item">
-                                        <img class="mz-image mz-order-item__image" data-src="../../static/images/mock/product-3.jpg" alt="mock/product-3" />
-                                        <div class="mz-order-item__content">
-                                            <p class="mz-order-item__barcode">รหัส#102375</p>
-                                            <header class="mz-order-item__title">
-                                                อาร์ทิสทรี ซิกเนเจอร์ คัลเลอร์ เชียร์ สีเรดคิส
-                                            </header>
-                                            <p class="mz-order-item__description"></p>
-                                            <div class="mz-order-item__price-and-quantity">
-                                                <span>2 x ฿ 880</span>
-                                                <strong>฿ 880</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mz-order-item">
-                                        <img class="mz-image mz-order-item__image" data-src="../../static/images/mock/bundle-1.jpg" alt="mock/bundle-1" />
-                                        <div class="mz-order-item__content">
-                                            <p class="mz-order-item__barcode">รหัส#102385</p>
-                                            <header class="mz-order-item__title">
-                                                บอดี้คีย์ บาย นิวทริไลท์ ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์ 2 กล่อง
-                                            </header>
-                                            <p class="mz-order-item__description">
-                                                สินค้าผ่อนชำระ x 4 เดือน
-                                            </p>
-                                            <div class="mz-order-item__bundle-item">
-                                                <div class="mz-order-item__bundle-item-quantity">
-                                                    x 5
-                                                </div>
-                                                <div>
-                                                    บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
-                                                </div>
-                                            </div>
-                                            <div class="mz-order-item__bundle-item">
-                                                <div class="mz-order-item__bundle-item-quantity">
-                                                    x 3
-                                                </div>
-                                                <div>นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์</div>
-                                            </div>
-                                            <div class="mz-order-item__bundle-item">
-                                                <div class="mz-order-item__bundle-item-quantity">
-                                                    x 1
-                                                </div>
-                                                <div>นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์</div>
-                                            </div>
-                                            <div class="mz-order-item__bundle-item">
-                                                <div class="mz-order-item__bundle-item-quantity">
-                                                    x 1
-                                                </div>
-                                                <div>
-                                                    อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น
-                                                </div>
-                                            </div>
-                                            <div class="mz-order-item__bundle-item">
-                                                <div class="mz-order-item__bundle-item-quantity">
-                                                    x 1
-                                                </div>
-                                                <div>
-                                                    แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 800 มล. 1 ใบ
-                                                </div>
-                                            </div>
-                                            <div class="mz-order-item__price-and-quantity">
-                                                <span>1 x ฿ 45,920</span>
-                                                <strong>฿ 45,920</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mz-order-item">
-                                        <img class="mz-image mz-order-item__image" data-src="../../static/images/mock/product-9.jpg" alt="mock/product-9" />
-                                        <div class="mz-order-item__content">
-                                            <p class="mz-order-item__barcode">รหัส#102395</p>
-                                            <header class="mz-order-item__title">
-                                                ลูกกลิ้งระงับเหงื่อและกลิ่นกาย จีแอนด์เอช โพรเท็คท์+
-                                            </header>
-                                            <p class="mz-order-item__description">สินค้าแถมฟรี</p>
-                                            <div class="mz-order-item__price-and-quantity">
-                                                <span>x 1</span>
-                                                <strong>ฟรี</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mz-order-item">
-                                        <section class="mz-order-success-actions__buttons">
-
-                                            <a href="#" class="mz-button btn btn-lg --secondary --medium --original-blue mz-order-success-actions__button" data-toggle="modal" data-target="#clear-order">
-                                                <span>ยกเลิกคำสั่งซื้อ</span>
-                                            </a>
-
-                                        </section>
                                     </div>
                                 </section>
                                 <section class="mz-order-success-actions__buttons">
-                                    <a href="#" class="mz-button btn btn-lg --secondary --medium --original-blue mz-order-success-actions__button" data-toggle="modal" data-target="#clear-group-order">
-                                        <span>ยกเลิกคำสั่งซื้อทั้งหมด</span>
-                                    </a>
+                                    <button type="button" class="mz-button btn btn-lg --secondary --medium --original-blue mz-order-success-actions__button" data-toggle="modal" data-target="#re-order">
+                                      <span>สั่งซื้ออีกครั้ง</span>
+                                    </button>
+                                    <button type="button" class="mz-button btn btn-lg --secondary --medium --original-blue mz-order-success-actions__button" data-toggle="modal" data-target="#clear-order">
+                                      <span>ยกเลิกคำสั่งซื้อ</span>
+                                    </button>
                                 </section>
-
                                 <section class="mz-order-success-actions__policies">
                                     <header>
                                         <h6>นโยบายยกเลิกคำสั่งซื้อ</h6>
@@ -1559,76 +1331,58 @@
                                 </section>
                             </div>
                         </div>
-                        <div id="clear-group-order" class="mz-modal modal fade --mobile-full" style="display: none;">
-                            <section class="oa-cancle-mordal-content">
-                                <div class="header">
-                                    <Strong>  คุณต้องการยกเลิกคำสั่งซื้อทั้งหมดหรือไม่</Strong>
-                                    <br>
-                                    <span style="font-size: 13px;background: #FDE9E9;color: #7F3E3E;padding: 2px 18px;">
-                                        คำสั่งซื้อชุดนี้จะถูกยกเลิกทั้งหมด
-                                    </span>
-                                </div>
-                                <div class="content-inner">
-                                    <form action="/clear-order">
-                                        <Span>โปรดระบุเหตุผลที่ต้องการยกเลิก</Span><br>
-                                        <select class="reason" name="reason">
-                                            <option value="1">เพิ่ม/ลด จำนวนสินค้า</option>
-                                            <option value="2">ไม่ได้ต้องการซื้อสินค้านี้</option>
-                                            <option value="3">สั่งสินค้าผิด</option>
-                                            <option value="4">การคำนวนยอด SOP ไม่ถูกต้อง</option>
-                                            <option value="5">ไม่ได้สิทธิ์โปรโมชั่น</option>
-                                            <option value="6">อื่นๆ</option>
-                                        </select>
-                                        <div class="btn-cancle-contain">
-                                            <button type="submit" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button">
-                                            <span>ยกเลิกคำสั่งซื้อ</span>
-                                        </button>
-                                            <button type="button" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button" data-dismiss="modal">
-                                            <span>ไม่ยกเลิก</span>
-                                        </button>
-                                        </div>
-                                    </form>
-                                </div>
-
-                            </section>
-                        </div>
-                        <div id="clear-order" class="mz-modal modal fade --mobile-full" style="display: none;">
-                            <section class="oa-cancle-mordal-content">
-                                <div class="header">
-                                    <Strong>  คุณต้องการยกเลิกคำสั่งซื้อทั้งหมดหรือไม่</Strong>
-                                    <br>
-                                </div>
-                                <div class="content-inner">
-                                    <form action="/clear-order">
-                                        <Span>โปรดระบุเหตุผลที่ต้องการยกเลิก</Span><br>
-                                        <select class="reason" name="reason">
-                                            <option value="1">เพิ่ม/ลด จำนวนสินค้า</option>
-                                            <option value="2">ไม่ได้ต้องการซื้อสินค้านี้</option>
-                                            <option value="3">สั่งสินค้าผิด</option>
-                                            <option value="4">การคำนวนยอด SOP ไม่ถูกต้อง</option>
-                                            <option value="5">ไม่ได้สิทธิ์โปรโมชั่น</option>
-                                            <option value="6">อื่นๆ</option>
-                                        </select>
-                                        <div class="btn-cancle-contain">
-                                            <button type="submit" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button">
-                                            <span>ยกเลิกคำสั่งซื้อ</span>
-                                        </button>
-                                            <button type="button" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button" data-dismiss="modal">
-                                            <span>ไม่ยกเลิก</span>
-                                        </button>
-                                        </div>
-                                    </form>
-                                </div>
-
-                            </section>
-                        </div>
                     </section>
+                    <div id="clear-order" class="mz-modal modal fade --mobile-full" style="display: none;">
+                        <section class="oa-cancle-mordal-content">
+                            <div class="header">
+                                <Strong>  คุณต้องการยกเลิกคำสั่งซื้อทั้งหมดหรือไม่</Strong>
+                                <br>
+                            </div>
+                            <div class="content-inner">
+                                <form action="/clear-order">
+                                    <Span>โปรดระบุเหตุผลที่ต้องการยกเลิก</Span><br>
+                                    <select class="reason" name="reason">
+                                        <option value="1">เพิ่ม/ลด จำนวนสินค้า</option>
+                                        <option value="2">ไม่ได้ต้องการซื้อสินค้านี้</option>
+                                        <option value="3">สั่งสินค้าผิด</option>
+                                        <option value="4">การคำนวนยอด SOP ไม่ถูกต้อง</option>
+                                        <option value="5">ไม่ได้สิทธิ์โปรโมชั่น</option>
+                                        <option value="6">อื่นๆ</option>
+                                    </select>
+                                    <div class="btn-cancle-contain">
+                                        <button type="submit" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button">
+                                        <span>ยกเลิกคำสั่งซื้อ</span>
+                                    </button>
+                                        <button type="button" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button" data-dismiss="modal">
+                                        <span>ไม่ยกเลิก</span>
+                                    </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </section>
+                    </div>
+
+                    <div id="re-order" class="mz-modal modal fade --mobile-full" style="display: none;">
+                        <section class="oa-cancle-mordal-content">
+                            <strong>คุณต้องการสั่งซื้อทั้งหมดอีกครั้งใช่หรือไม่</strong> <br>
+                            <br> หากคุณมีสินค้าที่มีอยู่ในตะกร้า สินค้าจะถูกลบ <br>และแทนที่ด้วยสินค้าในรายการคำสั่งซื้อนี้
+                            <form action="/re-order">
+                                <div class="btn-cancle-contain">
+                                    <button type="button" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button" data-dismiss="modal">
+                                    <span>ไม่ใช่</span>
+                                </button>
+                                    <button type="submit" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button">
+                                    <span> ใช่ </span>
+                                </button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </main>
             </div>
-            </section>
-            </main>
+            <footer class="mz-footer">Footer</footer>
         </div>
-        <footer class="mz-footer">Footer</footer>
-    </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
