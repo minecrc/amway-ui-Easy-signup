@@ -49,25 +49,9 @@
             background-color: #002f5f;
         }
         
-        .content-inner {
-            margin-top: 20px;
-        }
-        
         section.oa-cancle-mordal-content {
             background: #ffffff;
             padding: 25px;
-        }
-        
-        #re-order.mz-modal {
-            min-width: 200px;
-            max-width: 440px;
-            max-height: 260px;
-            min-height: 200px;
-            height: auto;
-            background-color: #ffffff;
-            margin: 0 auto;
-            top: 20vh;
-            padding: 0 !important;
         }
         
         .btn.btn-sm {
@@ -78,7 +62,7 @@
         .btn-cancle-contain {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-evenly;
             margin: 45px 15px 15px 15px;
         }
         
@@ -1333,33 +1317,13 @@
                         </div>
                     </section>
                     <div id="clear-order" class="mz-modal modal fade --mobile-full" style="display: none;">
-                        <section class="oa-cancle-mordal-content">
-                            <div class="header">
-                                <Strong>  คุณต้องการยกเลิกคำสั่งซื้อทั้งหมดหรือไม่</Strong>
-                                <br>
+                        <section class="oa-cancle-mordal-content" style="padding: 80px 80px 80px 80px;">
+                            <div id="cancle-error" class="header" style="margin-bottom: 30px;">
+                                ยังไม่สามารถยกเลิกคำสั่งซื้อนี้ได้ <br> กรุณาลองใหม่อีกครั้งภายหลัง
                             </div>
-                            <div class="content-inner">
-                                <form action="/clear-order">
-                                    <Span>โปรดระบุเหตุผลที่ต้องการยกเลิก</Span><br>
-                                    <select class="reason" name="reason">
-                                        <option value="1">เพิ่ม/ลด จำนวนสินค้า</option>
-                                        <option value="2">ไม่ได้ต้องการซื้อสินค้านี้</option>
-                                        <option value="3">สั่งสินค้าผิด</option>
-                                        <option value="4">การคำนวนยอด SOP ไม่ถูกต้อง</option>
-                                        <option value="5">ไม่ได้สิทธิ์โปรโมชั่น</option>
-                                        <option value="6">อื่นๆ</option>
-                                    </select>
-                                    <div class="btn-cancle-contain">
-                                        <button type="submit" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button">
-                                        <span>ยกเลิกคำสั่งซื้อ</span>
-                                    </button>
-                                        <button type="button" class="mz-button btn btn-sm --medium --secondary  --original-blue mz-order-success-actions__button" data-dismiss="modal">
-                                        <span>ไม่ยกเลิก</span>
-                                    </button>
-                                    </div>
-                                </form>
-                            </div>
-
+                            <button data-dismiss="modal" type="submit" class="mz-button btn btn-sm --medium --primary --original-blue mz-order-success-actions__button" style="margin: 0 auto;">
+                              <span> ตกลง </span>
+                          </button>
                         </section>
                     </div>
 
