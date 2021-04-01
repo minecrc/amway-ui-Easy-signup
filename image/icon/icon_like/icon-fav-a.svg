@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_5967" data-name="Group 5967" transform="translate(10709 10251)">
+    <g id="Group_5699" data-name="Group 5699" transform="translate(-10709 -10251)">
+      <g id="Icon_Check_Active" data-name="Icon/Check/Active" transform="translate(0 0)">
+        <path id="Shape" d="M4,0H20a4,4,0,0,1,4,4V20a4,4,0,0,1-4,4H4a4,4,0,0,1-4-4V4A4,4,0,0,1,4,0Z" transform="translate(0 0)" fill="none"/>
+      </g>
+      <rect id="Rectangle_3451" data-name="Rectangle 3451" width="24" height="24" rx="4" transform="translate(0 0)" fill="#38539a"/>
+      <path id="Path_16595" data-name="Path 16595" d="M641.448,243.721v1.8h1.8a.9.9,0,0,1,.9.9h0a.9.9,0,0,1-.9.9h-1.8v1.8a.9.9,0,0,1-.9.9h0a.9.9,0,0,1-.9-.9v-1.8h-1.8a.9.9,0,0,1-.9-.9h0a.9.9,0,0,1,.9-.9h1.8v-1.8a.9.9,0,0,1,.9-.9h0A.9.9,0,0,1,641.448,243.721Zm1.119-9.218a5.4,5.4,0,0,1,.864,6.51.894.894,0,0,1-1.4.155h0a.9.9,0,0,1-.139-1.081,3.6,3.6,0,0,0-5.541-4.45l-1.2,1.078-1.2-1.077a3.6,3.6,0,0,0-5.117,5.044l6.954,6.966a.9.9,0,0,1,0,1.272h0a.9.9,0,0,1-1.273,0l-6.994-7a5.4,5.4,0,0,1,7.631-7.617,5.4,5.4,0,0,1,7.417.205Z" transform="translate(-623.148 -229.622)" fill="#f1f2ff"/>
+    </g>
+  </g>
+</svg>

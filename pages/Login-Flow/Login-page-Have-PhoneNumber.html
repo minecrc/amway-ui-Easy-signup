@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login Confirmation</title>
+    <!-- do not copy this  -->
+    <!-- For FireBase Demo -->
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.21.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.21.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-performance.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <!-- do not copy above -->
+
+
+
+    <!-- Old Style From DIGITO Include -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/common.251e0dcdff5dc232292e.css" />
+    <link rel="stylesheet" href="../../styles/Header___Header.7c1ab78bbef29ad6a8f4.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/common/css/style.css" />
+    <link rel="stylesheet" href="../../styles/common/css/card.css" />
+    <link rel="stylesheet" href="../../styles/common/css/new_modal.css" />
+    <link rel="stylesheet" href="../../ShareBar/css/select_bundle.css" />
+    <link rel="stylesheet" href="../../ShareBar/css/choose_banner_Sharelist.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/shop-default.css" />
+    <link rel="stylesheet" href="../../Header_degito/css/header_creator.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/create-shop.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/shop-default.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/button.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/input-mod.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/checkout-step.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/input-error.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/noti-modal.css" />
+
+
+    <!-- End Old Style -->
+    <!-- Additional Include Style -->
+    <link rel="stylesheet" href="./css/login-confirm.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/@8bu/vue-otp-input@1.2.2/dist/vue-otp-input.umd.min.js"></script>
+    <!-- End  Additional Include-->
+</head>
+
+
+<body>
+    <div id="root">
+        <div class="amway-header-creator-area ">
+            <div class="amway-header-creator-container">
+                <div class="amway-header-creator-main ">
+                    <div class="amway-header-creator-left">
+                        <a class="amway-logo-icon-creator"></a>
+                    </div>
+                    <div class="amway-header-creator-right">
+                        <div class="amway-header-language  ">
+                            <div class="ahl-btn">English</div>
+                            <input type="hidden" value="en" name="inputLanguage" id="inputLanguage" class="inputLanguage">
+                            <div class="amway-header-modal for-changeLang ">
+                                <div class="bg-ahm sp"></div>
+                            </div>
+                            <div class="ahl-menu">
+                                <div class="ahl-menu-list" data-lang="th">ไทย</div>
+                                <div class="ahl-menu-list " data-lang="en">English</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="amway-main-layout " class="amway-main-layout step-creator">
+            <div class="amway-main-layout__content ">
+                <!-- content area -->
+
+                <div class="amway-creator-progress">
+                    <div class="acp-state" style="width: 50%;"></div>
+                </div>
+
+                <div class="amway-creator-step">
+                    <div class="amway-creator-step-content  --selected" data-stepContent="login" data-title="login" data-progress="50" id="contentTab01">
+                        <!-- <div class="amway-creator-title">What is Creator ?</div> -->
+                        <div class="amway-container ">
+                            <div class="checkout-box-area">
+                                <div class="checkout-box login-template">
+                                    <div class="checkout-login-social">
+                                        <div class="checkout-login-social-title">
+                                            เข้าสู่ระบบ
+                                        </div>
+                                        <div class="new-login-social-img hidden-lg hidden-md hidden-sm hidden-xs">
+                                            <img class="new-login-img-one" src="../../image/SocialLogin/Login-img-1.svg" alt="women check on her phone">
+                                        </div>
+                                        <div class="checkout-box-label-input mt-3">รหัสนักธุรกิจ / สมาชิกแอมเวย์</div>
+
+                                        <div class="amway-input-area">
+                                            <input type="tel" maxlength="11" class="amway-input" placeholder="ตัวอย่าง: 1234567" id="ABO-Number">
+                                        </div>
+                                        <div class="amway-input-error ">Incorrect information
+                                        </div>
+                                        <div class="checkout-box-label-input mt-3">รหัสผ่าน</div>
+                                        <div class="amway-input-area  ">
+                                            <input type="password" class="amway-input" placeholder="ตัวอย่าง: 1234567" id="password-field" value="ตัวอย่าง: 1234567">
+                                            <span toggle="#password-field" class="toggle-password"></span>
+                                        </div>
+                                        <div class="amway-input-error ">Incorrect information </div>
+                                        <div class="checkbox-remember-user">
+
+                                            <input type="checkbox" name="policy-creator-chx" class="policy-creator-chx" id="policy-creator-chx">
+                                            <label for="policy-creator-chx" class="policy-creator-label" style="margin: 4px;"></label>
+                                            <p class="mini-text">จดจำการล็อกอินของฉัน</p>
+                                        </div>
+                                        <button class="checkout-login-btn   next-step-creator" data-stepContent="login-step-2">
+                                         เข้าสู่ระบบ
+                                        </button>
+                                        <div class="checkout-login-social-subtitle">
+                                            <a href="http://" style="text-decoration: underline;">ลืมรหัสผ่าน</a>
+                                        </div>
+                                        <div class="checkout-login-social-subtitle social-title-box">
+                                            <p class="social-title">หรือ เข้าสู่ระบบด้วย</p>
+                                        </div>
+                                        <div class="checkout-login-social-area">
+                                            <button class="checkout-login-social-btn facebook  next-step-creator" data-stepcontent="login-step-2-facebook">
+                                                Facebook</button>
+                                            <button class="checkout-login-social-btn google  next-step-creator" data-stepcontent="login-step-2-facebook">
+                                                Google</button>
+                                            <button class="checkout-login-social-btn line  next-step-creator" data-stepcontent="login-step-2-line">
+                                                    Line</button>
+                                        </div>
+                                        <div class="checkout-login-social-subtitle" style="display: flex; justify-content:center;">
+                                            <p class="social-title" style="padding-right: 8px;"><span>  ฉันยังไม่มีบัญชี </span></p> <a href="http://" style="text-decoration: underline;">สมัครสมาชิก</a>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="amway-creator-step-content" data-stepContent="login-step-2-facebook" data-backContentTab="login" data-title="Confirm Information" data-progress="60" id="contentTab02">
+                        <div class="amway-container ">
+
+                            <div class="checkout-box-area">
+
+                                <div class="checkout-box  login-template">
+                                    <!-- <div class="breadcum-back-mobile">
+                                        <button class="back-step-creator" data-backContentTab="login">
+                                            กลับ
+                                        </button>
+                                    </div> -->
+                                    <div class="checkout-box-text">ยืนยันข้อมูลของคุณ</div>
+                                    <div class="new-login-social-img ">
+                                        <img class="new-login-img-one" src="../../image/SocialLogin/Login-img-2.svg" alt="man waving hand">
+                                    </div>
+                                    <div class="checkout-box-label-input mt-3">รหัสนักธุรกิจ / สมาชิกแอมเวย์*</div>
+                                    <div class="amway-input-area ">
+                                        <input type="tel" class="amway-input abo-member-number" placeholder="กรุณาพิมพ์รหัสของคุณ" maxlength="11" id="abo-member-number">
+                                    </div>
+                                    <div class="amway-input-error ">Incorrect information</div>
+
+                                    <div class="checkout-box-label-input mt-3">เลขบัตรประชาชน 4 ตัวสุดท้าย*</div>
+                                    <div class="amway-input-area ">
+                                        <input type="tel" class="amway-input last4digit-id-card" placeholder="ตัวอย่าง: 5678" maxlength="4" id="last4digit-id-card">
+                                    </div>
+                                    <div class="amway-input-error ">Incorrect information</div>
+                                    <div class="checkout-box-footer">
+                                        <button class="checkout-login-btn next-step-creator" data-stepContent="login-step-3">ตกลง</button>
+                                    </div>
+                                    <div class="checkout-login-social-subtitle" style="display: flex; justify-content:center;">
+                                        <p class="social-title" style="padding-right: 8px;"><span>หากคุณไม่มีบัญชี</span></p><a href="http://" style="text-decoration: underline;">สมัครสมาชิกได้ที่นี่</a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="amway-creator-step-content" data-stepContent="login-step-2-line" data-backContentTab="login" data-title="Confirm Information" data-progress="60" id="contentTab02">
+                        <div class="amway-container ">
+
+                            <div class="checkout-box-area">
+
+                                <div class="checkout-box  login-template">
+                                    <!-- <div class="breadcum-back-mobile">
+                                        <button class="back-step-creator" data-backContentTab="login">
+                                            กลับ
+                                        </button>
+                                    </div> -->
+                                    <div class="checkout-box-text">ยืนยันข้อมูลของคุณ</div>
+                                    <div class="new-login-social-img ">
+                                        <img class="new-login-img-one" src="../../image/SocialLogin/Login-img-2.svg" alt="man waving hand">
+                                    </div>
+                                    <div class="checkout-box-label-input mt-3">รหัสนักธุรกิจ / สมาชิกแอมเวย์*</div>
+                                    <div class="amway-input-area ">
+                                        <input type="tel" class="amway-input abo-member-number" placeholder="กรุณาพิมพ์รหัสของคุณ" maxlength="11" id="abo-member-number">
+                                    </div>
+                                    <div class="amway-input-error ">Incorrect information</div>
+
+                                    <div class="checkout-box-label-input mt-3">เลขบัตรประชาชน 4 ตัวสุดท้าย*</div>
+                                    <div class="amway-input-area ">
+                                        <input type="tel" class="amway-input last4digit-id-card" placeholder="ตัวอย่าง: 5678" maxlength="4" id="last4digit-id-card">
+                                    </div>
+                                    <div class="amway-input-error ">Incorrect information</div>
+                                    <div class="checkout-box-footer">
+                                        <button class="checkout-login-btn next-step-creator" data-stepContent="login-step-3">ตกลง</button>
+                                    </div>
+                                    <div class="checkout-login-social-subtitle" style="display: flex; justify-content:center;">
+                                        <p class="social-title" style="padding-right: 8px;"><span>หากคุณไม่มีบัญชี</span></p><a href="http://" style="text-decoration: underline;">สมัครสมาชิกได้ที่นี่</a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="amway-creator-step-content" data-stepContent="login-step-2" data-backContentTab="login" data-title="Confirm Information" data-progress="60" id="contentTab02">
+                        <div class="amway-container ">
+
+                            <div class="checkout-box-area">
+
+                                <div class="checkout-box  login-template">
+                                    <!-- <div class="breadcum-back-mobile">
+                                        <button class="back-step-creator" data-backContentTab="login">
+                                            กลับ
+                                        </button>
+                                    </div> -->
+                                    <div class="checkout-box-text">ยืนยันข้อมูลของคุณ</div>
+                                    <div class="new-login-social-img">
+                                        <img class="new-login-img-one" src="../../image/SocialLogin/Login-img-2.svg" alt="man waving hand">
+                                    </div>
+                                    <div class="checkout-box-label-input mt-3">รหัสนักธุรกิจ / สมาชิกแอมเวย์*</div>
+                                    <div class="amway-input-area ">
+                                        <input type="tel" class="amway-input abo-member-number" placeholder="กรุณาพิมพ์รหัสของคุณ" maxlength="11" id="abo-member-number">
+                                    </div>
+                                    <div class="amway-input-error ">Incorrect information</div>
+
+                                    <div class="checkout-box-label-input mt-3">เลขบัตรประชาชน 4 ตัวสุดท้าย*</div>
+                                    <div class="amway-input-area ">
+                                        <input type="tel" class="amway-input last4digit-id-card" placeholder="ตัวอย่าง: 5678" maxlength="4" id="last4digit-id-card">
+                                    </div>
+                                    <div class="amway-input-error ">Incorrect information</div>
+                                    <div class="checkout-box-footer">
+                                        <button class="checkout-login-btn next-step-creator" data-stepContent="login-step-3">ตกลง</button>
+                                    </div>
+                                    <div class="checkout-login-social-subtitle" style="display: flex; justify-content:center;">
+                                        <p class="social-title" style="padding-right: 8px;"><span>หากคุณไม่มีบัญชี</span></p><a href="http://" style="text-decoration: underline;">สมัครสมาชิกได้ที่นี่</a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="amway-creator-step-content" data-stepContent="login-step-3" data-backContentTab="login-step-2" data-title="Mobile-confirm" data-progress="65" id="contentTab03">
+                        <div class="checkout-box-area login-template">
+                            <div class="checkout-box">
+                                <!-- <div class="breadcum-back-mobile">
+                                    <button class="back-step-creator" data-backContentTab="login-step-3">
+                                        กลับ
+                                    </button>
+                                </div> -->
+                                <div class="checkout-box-text">ยืนยันตัวตนด้วย OTP</div>
+                                <ul>
+                                    <li>
+                                        <div class="sub-text">ระบบได้ส่งรหัส OTP ไปที่ <br class="hidden-md hidden-lg"> <strong class="checkout-box-number">  0897896789</strong> </div>
+                                    </li>
+                                    <li class="otp-ref"> เลขอ้างอิง: FmmhsC2SodQ7 </li>
+                                    <li style="text-align: center;"> OTP จะหมดอายุภายใน 10 นาที</li>
+                                </ul>
+                                <div class="new-login-social-img">
+                                    <img class="new-login-img-one" src="../../image/SocialLogin/Login-img-3.svg" alt="hand holding mobile phone">
+                                </div>
+                                <div id="vue-otp">
+                                    <otp-input v-model="token" class="digit-group" size="24"></otp-input>
+                                </div>
+
+                                <!-- <form method="get" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+                                    <input type="text" maxlength="1" class=" checkout-box-otp" id="digit-1" name="digit-1" data-next="digit-2" onkeyup="clickEvent(this,'digit-2')">
+                                    <input type="text" maxlength="1" class=" checkout-box-otp" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" onkeyup="clickEvent(this,'digit-3')">
+                                    <input type="text" maxlength="1" class=" checkout-box-otp" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2" onkeyup="clickEvent(this,'digit-4')">
+                                    <input type="text" maxlength="1" class=" checkout-box-otp" id="digit-4" name="digit-4" data-next="digit-4" data-previous="digit-3" onkeyup="clickEvent(this,'digit-4')">
+                                </form> -->
+                                <div class="digitOtp-error ">Incorrect information</div>
+                                <div class="checkout-box-otp-send-area">
+                                    <div class="checkout-box-otp-send-text">
+                                        ไม่ได้รับรหัส ?
+                                    </div>
+                                    <a class="checkout-box-otp-send-btn">
+                                        ส่ง OTP อีกครั้ง
+                                    </a>
+                                </div>
+                                <div class="checkout-box-footer">
+                                    <button class="btn-black btn-checkout-step next-step-creator" data-stepContent="login-step-5">ยืนยัน</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="amway-creator-step-content" data-stepContent="login-step-5" data-backContentTab="login-step-4" data-title="end-Mobile-confirm" data-progress="100" id="contentTab05">
+                        <div class="checkout-box-area login-template">
+                            <div class="checkout-box" style="padding-top: 20px;">
+                                <!-- <div class="breadcum-back-mobile">
+                                    <button class="back-step-creator" data-backContentTab="login-step-3">
+                                        กลับ
+                                    </button>
+                                </div> -->
+                                <div class="new-login-social-end">
+                                    <img class="new-login-social-end" src="../../image/SocialLogin/end-login-confirmation.png" alt="man and women congretulation">
+                                </div>
+
+                                <div class="checkout-box-text">ยินดีด้วย</div>
+                                <div class="sub-text">
+                                    <p><strong>คุณ ลักษมี จงอุดมสมบัติ รหัสนักธุรกิจ 2711647</strong></p>
+                                    <p>สามารถเข้าสู่ระบบผ่าน Social Media ได้แล้ว</p>
+                                </div>
+                                <div class="checkout-box-footer">
+                                    <button class="btn-black btn-checkout-step "> ช้อปปิ้งเลย </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end content area -->
+            </div>
+            <div class="shop-footer">
+                <div class="amway-container ">
+                    <div class="shop-footer-area">
+                        <div class="shop-f-content-call">
+                            <div class="shop-f-content-call-title">
+                                ต้องการความช่วยเหลือ ?
+                            </div>
+                            <div class="shop-f-content-call-number">
+                                <div class="shop-f-content-call-number-area">
+                                    <a href="tel:0-2725-8000">
+
+
+                                        <div class="shop-f-cc-n-icon">
+
+                                        </div>
+                                    </a>
+                                    <a href="tel:0-2725-8000" class="shop-f-cc-n-number">
+                                        0-2725-8000
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="shop-f-content-address">
+                            บริษัท แอมเวย์ (ประเทศไทย) จำกัด 1199/1 ถนนรามคำแหง แขวงหัวหมาก เขตบางกะปิ กรุงเทพ ฯ 10240
+                        </div>
+                        <div class="shop-f-content-language">
+                            <div class="shop-f-content-language-btn" onclick="openModal('shopChangeLangF')">
+                                <div class="shop-f-content-language-icon">
+
+                                </div>
+                                <div class="shop-f-content-language-text">
+                                    <div class="shop-f-content-language-text-list " data-lang="th">
+                                        ไทย
+                                    </div>
+                                    <div class="shop-f-content-language-text-list" data-lang="en">
+                                        English
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="shop-f-content-logo-area">
+                            <div class="shop-f-content-logo">
+                            </div>
+                        </div>
+                        <div class="shop-f-content-copyright">Copyright 2020,Amway(Thailand) Ltd,.</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="shop-change-lang-modal" id="shopChangeLangF">
+                <div class="bg-modal " onclick="closeModal('shopChangeLangF')"></div>
+                <div class="shop-change-lang-footer">
+                    <div class="shop-change-lang-footer-btn" onclick="closeModal('shopChangeLangF')" data-lang="th">
+                        <div class="shop-change-lang-footer-btn-text">
+                            ไทย
+                        </div>
+
+                    </div>
+                    <div class="shop-change-lang-footer-btn " onclick="closeModal('shopChangeLangF')" data-lang="en">
+                        <div class="shop-change-lang-footer-btn-text">
+                            English
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="amway-policy-modal  policy" id="policy">
+                <div class="bg-modal "></div>
+                <div class="amway-modal-policy ">
+                    <div class="amway-plc-header">
+                        <div class="amway-plc-close" onclick="closePolicy('policy')"> </div>
+                        <div class="amway-plc-h-title">Create My Shop</div>
+                    </div>
+                    <div class="amway-plc-title">Terms and conditions</div>
+                    <div class="amway-plc-content">
+                        การเข้าถึงและใช้ส่วนที่มีการใช้รหัสป้องกันและ/หรือรักษาความปลอดภัยของแพลตฟอร์มและ/หรือการใช้บริการจะจำกัดไว้สำหรับลูกค้าที่มีบัญชีผู้ใช้เท่านั้นท่านต้องไม่เข้าใช้หรือพยายามเข้าใช้ส่วนดังกล่าวของแพลตฟอร์มนี้และ/หรือบริการหรือยังข้อมูลอื่นใดที่มีการป้องกันโดยไม่ได้รับอนุญาตผ่านทางช่องทางใด
+                        ๆ ที่เราไม่ได้เจตนาเปิดให้ใช้สำหรับการใช้งานโดยเฉพาะของท่าน การฝ่าฝืนข้อกำหนดนี้อาจจะเป็นความผิดตามพระราชบัญญัติว่าด้วยการกระทำผิดเกี่ยวกับคอมพิวเตอร์ พ.ศ. 2550 ของประเทศไทย
+                        </br>
+                        </br>
+                        </br>
+                        หากท่านอายุต่ำกว่า 20 ปี: ท่านต้องได้รับความยินยอมจากบิดามารดาหรือผู้ปกครองตามกฎหมายของท่านและบุคคลดังกล่าวจะต้องยอมรับเงื่อนไขการใช้บริการนี้และรับผิดชอบต่อ: (1) การกระทำของท่าน (2) ค่าบริการใด ๆ ที่เกี่ยวข้องกับการใช้บริการใดๆ หรือการซื้อสินค้าของท่าน
+                        และ (3) การยอมรับและปฏิบัติตามเงื่อนไขในการใช้บริการนี้ของท่าน หากท่านไม่ได้รับความยินยอมจากบิดามารดาหรือผู้ปกครองตามกฎหมายของท่านท่านต้องหยุดการใช้งาน/การเข้าใช้ แพลตฟอร์มและการใช้บริการ
+                    </div>
+                    <div class="amway-plc-footer padding-space-on-mb">
+                        <button class=" btn-black btn-h40 next-step-creator Accept btn-mod-single" data-stepContent="info" onclick="closePolicy('policy')">Accept</button>
+                    </div>
+                </div>
+            </div>
+            <div class="amway-modal middle" id="deleteItem">
+                <input type="hidden" class="input-for-use-something" value="">
+                <div class="bg-modal"></div>
+                <div class="amway-modal-content ">
+                    <div class="close-modal-bar">
+                        <div class="btn-close-modal"></div>
+                    </div>
+                    <div class="amway-modal-content-title text-center mb-3">คุณต้องการลบรายการนี้ใช่หรือไม่</div>
+                    <div class="amway-modal-content-subtitle text-center ">
+                        สินค้าบางรายการอาจอยู่ภายใต้เงื่อนไขโปรโมชั่น
+                        <br>ซึ่งอาจทำให้คุณไม่ได้รับสิทธิ์พิเศษ
+                    </div>
+                    <div class="amway-modal-content-footer center deleteItem-footer">
+                        <button class="btn-outlin-black btn-h40 mr-3" onclick="closeModal('deleteItem')">
+                            ไม่ใช่</button> <button class="btn-black btn-h40 confirm " onclick="openNoti('notiDelItem'); closeModal('deleteItem');">ใช่</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="amway-noti-modal --success" id="notiDelItem">
+                <div class="amway-noti-modal-box">
+                    <div class="amway-noti-modal-content-box">
+                        <div class="amway-noti-modal-box-icon">
+                        </div>
+                        <div class="amway-noti-modal-box-title">
+                            สินค้าถูกลบออกจากตะกร้าแล้ว
+                        </div>
+                    </div>
+
+                    <div class="amway-noti-modal-box-close" onclick="closeNoti('notiDelItem')">
+                    </div>
+                </div>
+            </div>
+            <div class="amway-modal middle" id="deletePromo">
+                <input type="hidden" class="input-for-use-something" value="">
+                <div class="bg-modal"></div>
+                <form class="amway-modal-content ">
+                    <div class="close-modal-bar">
+                        <div class="btn-close-modal"></div>
+                    </div>
+                    <div class="amway-modal-content-title text-center mb-3">คุณต้องการลบโค้ดส่วนลด/คูปองใช่หรือไม่</div>
+                    <div class="amway-modal-content-subtitle text-center ">
+                        คุณสามารถเลือกใช้ส่วนลดนี้ได้ภายหลัง
+                    </div>
+                    <div class="amway-modal-content-footer center deleteItem-footer">
+                        <button class="btn-outlin-black btn-h40 mr-3" onclick="closeModal('deletePromo')">
+                            ไม่ใช่</button> <button type="submit" class="btn-black btn-h40 confirm ">ใช่</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="../../Header_degito/js/creator_change_language.js"></script>
+    <script src="../../Header_degito/js/change_delivery.js"></script>
+    <script src="../../Header_degito/js/search_action_fullslide.js"></script>
+    <script src="../../Header_degito/js/header_action.js"></script>
+    <script src="../../Header_degito/js/hamburger_action.js"></script>
+    <script src="../../Header_degito/js/custom_dropdown.js"></script>
+    <script src="../../Header_degito/js/header_action_creator.js"></script>
+    <!-- Add on -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+    <script src="../../Common/js/Modal.js"></script>
+    <script src="../../AmwayCreator/js/create-shop.js"></script>
+    <script src="./js/common.js"></script>
+    <!-- end AddOns -->
+    <script>
+        var reg = /^([A-Za-z0-9_\-ก-๏\.])/;
+
+        var inputChx = $('#ShopNameurl');
+
+        activeUrlInput()
+        inputChx.on('change', () => {
+            activeUrlInput()
+        })
+
+        function activeUrlInput() {
+            if (reg.test(inputChx.val()) == false) {
+                $('.amway-info-url-status-state.available').removeClass('active');
+                $('.amway-info-url-status-state.unavailable').addClass('active')
+            } else {
+                $('.amway-info-url-status-state.available').addClass('active');
+                $('.amway-info-url-status-state.unavailable').removeClass('active');
+            }
+
+        }
+    </script>
+</body>
+
+</html>

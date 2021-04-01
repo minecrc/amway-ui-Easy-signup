@@ -1,0 +1,31 @@
+.ah-submrnu-list-arae-col {
+    width: auto;
+    padding: 0 1rem;
+}
+
+.ah-submrnu-list {
+    width: 100%;
+}
+
+.ah-submrnu-list-main-sub {
+    font-size: 0.8rem;
+}
+
+.ah-submrnu-area {
+    padding: .5rem 0 !important;
+}
+
+@media only screen and (max-width: 1400px) {
+    .ah-submrnu-area {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 0.2rem 0;
+    }
+    /* .ah-submrnu-list-main {
+        margin-bottom: 0.45rem;
+    }
+    .ah-submrnu-list-main-sub-area {
+        margin-bottom: 0.525rem;
+    } */
+}

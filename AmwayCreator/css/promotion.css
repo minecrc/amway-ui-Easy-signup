@@ -1,0 +1,112 @@
+.list-promotion-area {
+    background: #EDEDED;
+}
+
+.list-promotion-card-tag {
+    width: 6.25rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+    background: #38539A;
+    color: #F1F2FF;
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.list-promotion-card-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-promotion-card-text {
+    width: calc(100% - 5rem);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.list-promotion-card-img-area {
+    width: 5rem;
+    height: 4rem;
+    padding-left: 1rem;
+}
+
+.list-promotion-card-img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.625rem;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+@media(min-width:1024px) {
+    .list-promotion-title {
+        padding-top: 1rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: #ffffff;
+        height: 10rem;
+        width: 100%;
+        border-radius: 0.625rem;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-bottom: 1.5rem;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    }
+    .list-promotion-card {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        background: #ffffff;
+        border-radius: 0.625rem;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    }
+}
+
+@media(max-width:1023px) {
+    .listPromotion-back {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+        background: #ffffff;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        justify-content: center;
+    }
+    .listPromotion-title {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+        position: absolute;
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+    }
+    .listPromotion-back .amway-header-creator-back-text {
+        display: none;
+    }
+    .list-promotion-title {
+        display: none;
+    }
+    .list-promotion-card {
+        width: 100%;
+        margin-top: 0.75rem;
+        padding: 1rem 1.5rem;
+        background: #ffffff;
+    }
+}

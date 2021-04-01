@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Group_6131" data-name="Group 6131" transform="translate(-1054 -593)">
+    <rect id="Icon_Heart_background" data-name="Icon/Heart background" width="32" height="32" transform="translate(1054 593)" fill="none"/>
+    <g id="Group_6130" data-name="Group 6130" transform="translate(74.542 69.325)">
+      <g id="Ellipse_367" data-name="Ellipse 367">
+        <g id="Group_6130-2" data-name="Group 6130">
+          <path id="Path_16659" data-name="Path 16659" d="M998.066,549.329a10.028,10.028,0,0,1-11.943-6.065.773.773,0,0,1,.5-1.03l.066-.019a.778.778,0,0,1,.936.49,8.4,8.4,0,1,0-.011-6.031.786.786,0,0,1-.955.452h0a.807.807,0,0,1-.519-1.075,10,10,0,1,1,11.93,13.278Z" fill="#38539a"/>
+        </g>
+      </g>
+      <path id="Path" d="M996.677,540.472l-1.841,1.835a.8.8,0,0,0,1.137,1.136l3.2-3.2a.825.825,0,0,0,0-1.136l-3.2-3.2a.8.8,0,0,0-1.137,1.136l1.841,1.829H986.258a.8.8,0,0,0,0,1.6Z" fill="#38539a"/>
+    </g>
+  </g>
+</svg>

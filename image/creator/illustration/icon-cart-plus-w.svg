@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Primary_2" data-name="Primary 2" transform="translate(-15 -8)">
+    <g id="Group_5231" data-name="Group 5231" transform="translate(0)">
+      <g id="Group_5580" data-name="Group 5580" transform="translate(-7)">
+        <g id="Group_5657" data-name="Group 5657" transform="translate(-2)">
+          <g id="right-icon-1" transform="translate(24.001 8)">
+            <rect id="Icon_Header_Cart_Inactive_background" data-name="Icon/Header/Cart/Inactive background" width="24" height="24" fill="none"/>
+            <path id="icon" d="M14.25,18.9a1.843,1.843,0,0,1-1.763-2.4H8.813a1.849,1.849,0,1,1-3.613.55,1.832,1.832,0,0,1,.086-.55H3.85a1.85,1.85,0,1,1,0-3.7H5.042L2.527,1.3H.65A.65.65,0,1,1,.65,0h2.4a.645.645,0,0,1,.635.511L4.273,3.2H19.85a.672.672,0,0,1,.247.048.652.652,0,0,1,.354.355.636.636,0,0,1,0,.5l-4,9.6a.643.643,0,0,1-.6.4h-12a.55.55,0,1,0,0,1.1h14.8a.65.65,0,1,1,0,1.3H16.013a1.841,1.841,0,0,1-1.763,2.4Zm0-2.4a.55.55,0,1,0,.551.55A.55.55,0,0,0,14.249,16.5Zm-7.2,0a.55.55,0,1,0,.551.55A.55.55,0,0,0,7.049,16.5ZM4.558,4.5l1.815,8.3h9.043l3.459-8.3Z" transform="translate(1.75 3)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Icon_Qty_Add" data-name="Icon / Qty / Add" transform="translate(18.542 10)">
+      <path id="Path" d="M4.086.157a.53.53,0,0,0-.752,0L2.121,1.375.909.157A.532.532,0,0,0,.157.909L1.375,2.121.157,3.334a.532.532,0,1,0,.752.752L2.121,2.868,3.334,4.086a.532.532,0,1,0,.752-.752L2.868,2.121,4.086.909a.53.53,0,0,0,0-.752Z" transform="translate(6.458 9.458) rotate(-45)" fill="#fafafa" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

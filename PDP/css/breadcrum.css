@@ -1,0 +1,38 @@
+.breadcrumb-bar {
+    padding-top: 0.813rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+}
+
+.breadcrumb-bar-list {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-bar-list::after {
+    content: '/';
+    display: block;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.breadcrumb-bar-list.active {
+    font-weight: 400;
+}
+
+.breadcrumb-bar-list.active::after {
+    display: none;
+}
+
+.breadcrumb-bar-list:hover .breadcrumb-bar-list-text,
+.breadcrumb-bar-list:focus .breadcrumb-bar-list-text {
+    text-decoration: underline;
+}
+
+.breadcrumb-bar-list.active:hover .breadcrumb-bar-list-text,
+.breadcrumb-bar-list.active:focus .breadcrumb-bar-list-text {
+    text-decoration: none;
+}

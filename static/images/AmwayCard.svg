@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="22" viewBox="0 0 32 22">
+  <g id="Amway_Card" data-name="Amway Card" transform="translate(-2.594 -7.412)">
+    <rect id="Rectangle_5116" data-name="Rectangle 5116" width="32" height="22" rx="2" transform="translate(2.593 7.412)" fill="#2c2c2c"/>
+    <path id="Path_87839" data-name="Path 87839" d="M4,18H8.131" transform="translate(2.374 7.33)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_87840" data-name="Path 87840" d="M8,18h4.131" transform="translate(5.143 7.33)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_87841" data-name="Path 87841" d="M12,18h4.131" transform="translate(7.912 7.33)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_87842" data-name="Path 87842" d="M16,18h4.131" transform="translate(10.682 7.33)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_87843" data-name="Path 87843" d="M7.675,11.532l-.02,0-.642,2.6H8.351Zm3.008,5.294c-.034,0-.058,0-.082,0-.468,0-.937,0-1.405,0a.1.1,0,0,1-.112-.086c-.116-.424-.239-.847-.356-1.272-.019-.069-.044-.1-.122-.1q-.914.006-1.827,0c-.077,0-.1.025-.123.1-.115.428-.236.854-.352,1.282-.014.052-.032.076-.091.076-.477,0-.955,0-1.433,0-.018,0-.035,0-.063-.007.011-.04.02-.074.031-.108q1.034-3.294,2.066-6.589A.15.15,0,0,1,6.99,10c.459.006.918,0,1.377,0a.1.1,0,0,1,.117.082q1.086,3.33,2.176,6.66C10.667,16.767,10.673,16.79,10.683,16.826Z" transform="translate(1.577 1.792)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_87844" data-name="Path 87844" d="M12.391,14.736c-.065.23-.065.23-.283.255l-4.45.513-3.574.414a.833.833,0,0,1-.084,0c.107-.2.207-.386.312-.571.011-.019.051-.027.079-.029l2.2-.162,3.178-.232q1.223-.088,2.445-.173C12.269,14.748,12.327,14.742,12.391,14.736Z" transform="translate(1.08 5.07)" fill="#fff" fill-rule="evenodd"/>
+  </g>
+</svg>

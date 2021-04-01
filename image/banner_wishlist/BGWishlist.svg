@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="288" viewBox="0 0 1440 288">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3471" data-name="Rectangle 3471" width="1440" height="288" transform="translate(8872 7826)" fill="#f1f2ff"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_3487" data-name="Rectangle 3487" width="470.723" height="450.601" fill="#e3e5ff"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="Rectangle_3487-2" data-name="Rectangle 3487" width="283.013" height="270.916" fill="#e3e5ff"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <rect id="Rectangle_3487-3" data-name="Rectangle 3487" width="71.404" height="68.352" fill="#e3e5ff"/>
+    </clipPath>
+  </defs>
+  <g id="Group_6849" data-name="Group 6849" transform="translate(-8872 -7826)">
+    <rect id="Rectangle_3471-2" data-name="Rectangle 3471" width="1440" height="288" transform="translate(8872 7826)" fill="#f1f2ff"/>
+    <g id="Mask_Group_28" data-name="Mask Group 28" clip-path="url(#clip-path)">
+      <g id="Group_6848" data-name="Group 6848">
+        <g id="Group_6200" data-name="Group 6200" transform="translate(9778.124 7953.456)" style="isolation: isolate">
+          <g id="Group_6199" data-name="Group 6199" transform="translate(-11 -1)" clip-path="url(#clip-path-2)">
+            <path id="Path_23921" data-name="Path 23921" d="M445.861,281.8c-16.086,60.906-61.41,112.424-114.933,145.641-14.375,8.921-29.83,16.438-46.361,20.034-17.512,3.81-35.7,3.115-53.514,1.136C160.239,440.746,89.966,411.079,43.3,357.239,15.617,325.3-3.379,283.352,1.542,241.371c3.677-31.36,20.388-60.139,42.233-82.938s48.664-40.2,76-56A946.947,946.947,0,0,1,276.788,29.9C323.432,13.338,397.876-7.572,421.908,4.207S502.713,66.526,445.861,281.8Z" transform="translate(-0.191 -0.191)" fill="#e3e5ff" style="mix-blend-mode: multiply;isolation: isolate"/>
+          </g>
+        </g>
+        <g id="Group_6207" data-name="Group 6207" transform="matrix(0.961, -0.276, 0.276, 0.961, 8935.39, 8005.924)" style="isolation: isolate">
+          <g id="Group_6199-2" data-name="Group 6199" clip-path="url(#clip-path-3)">
+            <path id="Path_23921-2" data-name="Path 23921" d="M15.482,169.732c9.671,36.618,36.921,67.593,69.1,87.564,8.643,5.363,17.935,9.883,27.874,12.045,10.529,2.29,21.464,1.873,32.174.683,42.576-4.729,84.826-22.565,112.882-54.936,16.645-19.2,28.066-44.423,25.107-69.664-2.211-18.855-12.258-36.157-25.392-49.865s-29.258-24.167-45.693-33.67a569.336,569.336,0,0,0-94.4-43.607C89.09,8.324,44.332-4.247,29.883,2.835S-18.7,40.3,15.482,169.732Z" transform="translate(-0.42 -0.42)" fill="#e3e5ff" style="mix-blend-mode: multiply;isolation: isolate"/>
+          </g>
+        </g>
+        <g id="Group_6258" data-name="Group 6258" transform="matrix(-0.407, -0.914, 0.914, -0.407, 9903.859, 7935.922)" style="isolation: isolate">
+          <g id="Group_6199-3" data-name="Group 6199" clip-path="url(#clip-path-4)">
+            <path id="Path_23921-3" data-name="Path 23921" d="M4.479,43.4c2.44,9.239,9.315,17.054,17.434,22.092a22.619,22.619,0,0,0,7.033,3.039,25.17,25.17,0,0,0,8.118.172c10.742-1.193,21.4-5.693,28.48-13.86,4.2-4.845,7.081-11.208,6.334-17.576a22.39,22.39,0,0,0-6.406-12.581,50.963,50.963,0,0,0-11.528-8.495,143.642,143.642,0,0,0-23.818-11C23.05,2.672,11.757-.5,8.112,1.287S-4.145,10.74,4.479,43.4Z" transform="translate(-0.678 -0.678)" fill="#e3e5ff" style="mix-blend-mode: multiply;isolation: isolate"/>
+          </g>
+        </g>
+        <path id="Path_23920" data-name="Path 23920" d="M28.655,462.777c33.96,65.838,109.839,100.642,184.623,116.246,96.915,20.222,207.2.94,294.48-58.99S655.8,358.6,656.331,258.94c.635-118.655-86.044-221.293-199.919-249.9S182.044,29.5,115.074,106.5C86.361,139.517-59.242,292.37,28.655,462.777Z" transform="translate(9094.979 7348.823)" fill="#f7f8ff"/>
+      </g>
+    </g>
+  </g>
+</svg>

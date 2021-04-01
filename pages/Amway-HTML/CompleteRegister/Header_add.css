@@ -1,0 +1,39 @@
+.amway-cart {
+    position: relative;
+}
+
+.amway-cart::after {
+    max-width: 1rem;
+    width: 100%;
+    height: 1rem;
+    content: '20';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #D91734;
+    text-align: center;
+    border-radius: 25rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .6rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.amway-header-second.non-login .amway-myList,
+.amway-header-second.member .amway-myList {
+    display: none;
+}
+
+.member .dashboard,
+.member .bu-center {
+    display: none;
+}
+
+@media only screen and (min-width: 991px) {
+    .amway-header-second.member .amway-search {
+        right: 2.5rem;
+    }
+}

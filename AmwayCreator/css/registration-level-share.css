@@ -1,0 +1,84 @@
+.registration-level-area {
+    margin-bottom: 1.25rem;
+}
+
+.registration-level-checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem 1rem 0.25rem 0.5rem;
+}
+
+.registration-level-checkbox-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.25rem 1rem 0.25rem 0.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border: 0.125rem solid #EDEDED;
+    border-radius: 0.625rem;
+    cursor: pointer;
+}
+
+.checkbox-in-registration-level-checkbox {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid #2c2c2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration-level-checkbox-input {
+    opacity: 0;
+}
+
+.registration-level-checkbox-input:checked~.registration-level-checkbox-box {
+    border: 0.125rem solid #2c2c2c;
+}
+
+.registration-level-checkbox-input:checked~.registration-level-checkbox-box .checkbox-in-registration-level-checkbox::after {
+    content: '';
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background: #2c2c2c;
+}
+
+.registration-level-checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 1rem);
+    padding-left: 0.5rem;
+}
+
+.registration-level-checkbox-title {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.registration-level-checkbox-price {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 800;
+}
+
+@media(max-width:1023px) and (max-height:414px) {
+    .amway-modal-content.share-social-with-registration {
+        max-height: 100%;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+}

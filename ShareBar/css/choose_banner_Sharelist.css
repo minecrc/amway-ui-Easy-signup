@@ -1,0 +1,117 @@
+.choose-banner-wishlist {
+    margin-top: 1rem;
+}
+
+.cbw-list {
+    width: 5.5rem !important;
+    height: 5.5rem;
+    position: relative;
+}
+
+.cbw-list-image {
+    width: calc(100% - 0.5rem);
+    position: relative;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.cbw-list-image.active {
+    border: 0.063rem solid #2c2c2c;
+}
+
+.cbw-list-image.active::before {
+    position: absolute;
+    content: 'g';
+    font-family: Amway Icon !important;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #2c2c2c;
+    bottom: -0.063rem;
+    right: -0.063rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.cbw-list-image:after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+.ctw-btn-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ctw-del-list {
+    width: 100%;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.ctw-del-list-btn {
+    color: #9EA0A3;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    text-decoration: underline;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+@media(min-width:1024px) {
+    .amway-modal-content-fullpage-onMb.choose-theme-wishlist {
+        width: 36rem;
+    }
+    .ctw-btn-area {
+        margin-top: 2.5rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .ctw-btn-area button:first-child {
+        margin-right: 1.5rem !important;
+    }
+    .ctw-btn-area button {
+        width: 9.5rem !important;
+        min-width: 9.5rem !important;
+    }
+    .content-create-wl {
+        padding-left: 1.5rem;
+        padding-top: 1.5rem;
+    }
+    .content-create-wl .aw-md-full-sub-title {
+        padding-right: 1.5rem;
+    }
+    .content-create-wl .amway-input-area,
+    .content-create-wl .amway-textarea-area {
+        margin-right: 1.5rem;
+    }
+    .cbw-list {
+        width: 6rem !important;
+        height: 6rem;
+    }
+    .ctw-btn-area {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1.5rem;
+        background-color: #FFF;
+    }
+    .aw-for-scroll.editlist {
+        height: calc(100% - 5.4rem);
+    }
+}

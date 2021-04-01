@@ -1,0 +1,1336 @@
+.amway-creator-progress {
+    width: 100%;
+    height: 0.5rem;
+    background: #EDEDED;
+}
+
+.acp-state {
+    height: 0.5rem;
+    border-radius: 0;
+    /*  border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem; */
+    background: #2c2c2c;
+    transition: 0.2s linear;
+}
+
+.amway-creatorinfo-content-area {}
+
+.amway-creator-step-content {
+    width: 100%;
+    max-height: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.amway-creator-step-content.--selected {
+    opacity: 1;
+    display: block;
+    height: auto;
+    padding-bottom: 2.5rem;
+    max-height: 1200px;
+}
+
+@media(min-width:1024px) {
+    .amway-creator-progress {
+        position: fixed;
+        z-index: 1499;
+        top: 4.5rem;
+        right: 0;
+        left: 0;
+    }
+    .amway-header-creator {
+        display: none;
+    }
+}
+
+@media(max-width:1023px) {
+    .amway-main-layout.step-creator {
+        padding-top: 4rem;
+    }
+    .amway-creator-progress {
+        position: fixed;
+        z-index: 1500;
+        top: 3.5rem;
+        right: 0;
+        left: 0;
+    }
+    .amway-header-creator {
+        position: fixed;
+        z-index: 1501;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 3.5rem;
+        background: #ffffff;
+        -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ah-creator {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.625rem;
+        text-align: center;
+    }
+    .ah-back {
+        position: fixed;
+        z-index: 1501;
+        top: 0;
+        left: 0;
+        width: 3.5rem;
+        height: 3.5rem;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .ah-back.active {
+        display: flex;
+    }
+    .ah-back::after {
+        content: 'b';
+        font-family: Amway Icon !important;
+        color: #2c2c2c;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        font-weight: 400;
+    }
+}
+
+
+/*  */
+
+.amway-creator-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+@media(min-width:1024px) {
+    .amway-creator-title {
+        padding-top: 2rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .amway-creator-title {
+        padding-top: 1.75rem;
+    }
+}
+
+
+/* creator-about */
+
+.ca-content {
+    text-align: center;
+    width: 100%;
+    padding: 0 1rem;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.ca-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #ffffff;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slick-center .ca-content::before {
+    display: none;
+    z-index: -1 !important;
+}
+
+.ca-content-img-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ca-content-img {
+    max-width: 40%;
+    width: 100%;
+    height: auto;
+}
+
+.ca-content-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.ca-content-subtitle {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-bottom: 1.5rem;
+}
+
+.creator-about {
+    width: calc(100%);
+    position: relative;
+}
+
+.creator-about .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.creator-about .slick-dots li {
+    font-size: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background: #EDEDED;
+}
+
+.creator-about .slick-dots li.slick-active {
+    background: #2c2c2c;
+}
+
+.btn-slide-content {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    background: #ffffff;
+    -webkit-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(44, 44, 44, 0.10);
+    -moz-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(44, 44, 44, 0.10);
+    box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(44, 44, 44, 0.10);
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-slide-content::before {
+    font-family: Amway Icon !important;
+    color: #2c2c2c;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.btn-slide-content.prev {
+    left: 1rem;
+}
+
+.btn-slide-content.next {
+    right: 1rem;
+}
+
+.btn-slide-content.prev::before {
+    content: 'b';
+}
+
+.btn-slide-content.next::before {
+    content: 'c';
+}
+
+.btn-slide-content.slick-disabled {
+    display: none !important;
+}
+
+@media(max-width:1023px) {
+    .ca-content {
+        transform: scale(0.8);
+    }
+    .slick-active .ca-content {
+        transform: scale(1);
+    }
+    .creator-about {
+        width: 100%;
+    }
+    .ca-content-title {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+    }
+}
+
+@media(max-width:767px) {
+    .ca-content-img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* policy-creator */
+
+.policy-creator-chx-area {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.policy-creator-chx {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.policy-creator-label {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.25rem;
+    background: #EDEDED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    transition: 0.2s cubic-bezier(1, 0, 0, 1);
+    cursor: pointer;
+}
+
+.create-shop {
+    transition: 0.2s cubic-bezier(1, 0, 0, 1);
+}
+
+.policy-creator-chx:checked~.policy-creator-label {
+    background: #2c2c2c;
+}
+
+.policy-creator-label::before {
+    content: 'g';
+    font-family: Amway Icon !important;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+.policy-creator-chx-text {
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 700;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.amway-modal-policy {
+    background: #FFFFFF;
+}
+
+.amway-plc-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amway-plc-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.amway-plc-content {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+@media(min-width:1024px) {
+    .amway-modal-policy {
+        padding: 1.5rem;
+        border-radius: .5rem;
+        width: 30.625rem;
+        height: 32rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        transition: 0.3s ease;
+    }
+    .amway-policy-modal {
+        opacity: 0;
+        z-index: -99999999;
+    }
+    .amway-policy-modal.active .amway-modal-policy {
+        transform: translate(-50%, -50%);
+    }
+    .amway-policy-modal.active {
+        opacity: 1;
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1500;
+    }
+    .amway-plc-title {
+        padding-bottom: 1.5rem;
+    }
+    .amway-plc-content {
+        height: calc(100% - 8rem);
+        overflow: hidden;
+        overflow-y: auto;
+        padding-bottom: 1rem;
+        padding-right: 0.5rem;
+    }
+    .amway-plc-footer {
+        padding-top: 1rem;
+    }
+    .amway-plc-content::-webkit-scrollbar {
+        /* width */
+        width: 0.375rem;
+    }
+    .amway-plc-content::-webkit-scrollbar-track {
+        /* Track */
+        background: #EDEDED;
+        border-radius: 0.188rem;
+    }
+    .amway-plc-content::-webkit-scrollbar-thumb {
+        /* Handle */
+        background: #2c2c2c;
+        border-radius: 0.188rem;
+    }
+    .amway-plc-content::-webkit-scrollbar-thumb:hover {
+        /* Handle on hover */
+        background: #2c2c2c;
+    }
+    .amway-plc-h-title {
+        display: none;
+    }
+    .amway-plc-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background: url('../../image/icon/icon-close.svg');
+        background-size: 1.125rem 1.125rem;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+@media(min-width:1024px) and (max-height:767px) {
+    .amway-modal-policy {
+        max-height: calc(100% - 2rem);
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .amway-modal-policy::-webkit-scrollbar {
+        /* width */
+        width: 0.375rem;
+    }
+    .amway-modal-policy::-webkit-scrollbar-track {
+        /* Track */
+        background: #EDEDED;
+        border-radius: 0.188rem;
+    }
+    .amway-modal-policy::-webkit-scrollbar-thumb {
+        /* Handle */
+        background: #D5D5D5;
+        border-radius: 0.188rem;
+    }
+    .amway-modal-policy::-webkit-scrollbar-thumb:hover {
+        /* Handle on hover */
+        background: #D5D5D5;
+    }
+}
+
+@media(max-width:1023px) {
+    .amway-policy-modal {
+        z-index: 1502;
+    }
+    .amway-policy-modal.active {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1502;
+    }
+    .amway-modal-policy {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(100%);
+        transition: 0.3s ease;
+    }
+    .amway-policy-modal.active .amway-modal-policy {
+        transform: translateX(0%);
+    }
+    .amway-plc-content {
+        height: calc(100% - 12rem);
+        overflow: hidden;
+        overflow-y: auto;
+        padding-top: 1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .amway-plc-header {
+        position: fixed;
+        z-index: 1501;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 3.5rem;
+        background: #ffffff;
+        -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        line-height: 1.625rem;
+        font-weight: 700;
+    }
+    .amway-plc-close {
+        position: fixed;
+        z-index: 1502;
+        top: 0;
+        left: 0;
+        width: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .amway-plc-close::before {
+        content: 'b';
+        font-family: Amway Icon !important;
+        color: #2c2c2c;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        font-weight: 400;
+    }
+    .amway-plc-title {
+        padding-top: 6rem;
+    }
+}
+
+
+/* info */
+
+.amway-creatorinfo-title {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+}
+
+.amway-info-input-area {
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.625rem;
+    border: 0.125rem solid #EDEDED;
+    padding: .5rem 1rem;
+}
+
+.amway-info-input-area:focus-within {
+    border: 0.125rem solid #2c2c2c;
+}
+
+.amway-info-input {
+    width: 100%;
+    height: 100%;
+    border-color: transparent;
+    color: #2C2C2C;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2rem;
+    height: 2rem;
+}
+
+.amway-info-textarea {
+    width: 100%;
+    border-radius: 0.625rem;
+    border: 0.125rem solid #EDEDED;
+    padding: .5rem 1rem;
+    resize: none;
+    color: #2C2C2C;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.amway-info-textarea:focus {
+    border: 0.125rem solid #2c2c2c;
+}
+
+.amway-info-input::-webkit-input-placeholder,
+.amway-info-input::-moz-placeholder,
+.amway-info-input:-ms-input-placeholder,
+.amway-info-input:-moz-placeholder,
+.amway-info-textarea::-webkit-input-placeholder,
+.amway-info-textarea::-moz-placeholder,
+.amway-info-textarea:-ms-input-placeholder,
+.amway-info-textarea:-moz-placeholder {
+    color: #9EA0A3;
+}
+
+.amway-info-label-title {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+}
+
+.amway-info-label-title-required {
+    color: #CB5454;
+}
+
+.amway-info-label-subtitle {
+    font-size: 0.813rem;
+    line-height: 1.313rem;
+    font-weight: 700;
+    color: #9EA0A3;
+    padding-bottom: 0.5rem;
+}
+
+.amway-info-url-area {
+    display: flex;
+    align-items: center;
+}
+
+.amway-info-url {
+    width: 11rem;
+    padding-right: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.amway-info-url-status-state {
+    display: none;
+    align-items: center;
+}
+
+.amway-info-url-status-state.active {
+    display: flex;
+}
+
+.amway-info-url-status-state-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 1.5rem 1.5rem !important;
+    margin-right: 0.5rem;
+}
+
+.amway-info-url-status-state-text {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 500;
+}
+
+.available .amway-info-url-status-state-icon {
+    background: url('../../image/icon/icon_status_stock/available.svg');
+}
+
+.available .amway-info-url-status-state-text {
+    color: #74B86D;
+}
+
+.unavailable .amway-info-url-status-state-icon {
+    background: url('../../image/icon/icon_status_stock/outOfStock.svg');
+}
+
+.unavailable .amway-info-url-status-state-text {
+    color: #C84249;
+}
+
+.social-info-list {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-info-list-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1.5rem;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.social-info-list-area {
+    width: calc(100% - 4rem);
+}
+
+@media(min-width:1024px) {
+    .amway-creatorinfo-content-area {
+        width: 50%;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-left: -0.625rem;
+        margin-right: -0.625rem;
+    }
+    .amway-creatorinfo-content {
+        width: 100%;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        padding-top: 1.5rem;
+    }
+    .amway-creatorinfo-title {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        font-weight: 700;
+        padding: 2.5rem 1.5rem;
+    }
+    .amway-creatorinfo-content-line {
+        width: 100%;
+        height: 0.063rem;
+        background: #EDEDED;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .amway-info-footer {
+        margin-top: 4rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .amway-creatorinfo-content-area {
+        width: 100%;
+    }
+    .amway-creatorinfo-content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 1.5rem;
+    }
+    .amway-creatorinfo-title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        padding: 2rem 1.5rem;
+        padding-top: 5rem;
+    }
+    .amway-info-footer {
+        margin-top: 2.5rem;
+    }
+    .btn-modal.next-step-creator,
+    .btn-modal.to-create {
+        width: 12.5rem;
+    }
+}
+
+
+/* theme */
+
+.creator-theme {
+    padding-top: 8rem;
+}
+
+.creator-theme .slick-dots {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.creator-theme .slick-dots li {
+    font-size: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background: #EDEDED;
+}
+
+.creator-theme .slick-dots li.slick-active {
+    background: #2c2c2c;
+}
+
+.creator-theme {
+    position: relative;
+    width: 100%;
+}
+
+.creator-theme .btn-slide-content.prev {
+    left: 36%;
+}
+
+.creator-theme .btn-slide-content.next {
+    right: 36%;
+}
+
+.theme-item {
+    transform: scale(0.8);
+    transition: 0.5s ease;
+    padding-bottom: 2.75rem;
+}
+
+.theme-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    opacity: 0.5;
+}
+
+.slick-center .theme-item::after {
+    display: none;
+}
+
+.slick-center .theme-item {
+    transform: scale(1);
+}
+
+.theme-item {
+    width: 100%;
+}
+
+.theme-content-theme {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative;
+}
+
+.theme-content-theme::after {
+    content: '';
+    display: inline-block;
+    padding-bottom: 76%;
+    width: 100%;
+    height: 100%;
+}
+
+.theme-content-theme.pink {
+    background: url('../../image/creator/banner/pink-list-mb.svg');
+}
+
+.theme-content-theme.orange {
+    background: url('../../image/creator/banner/orange-list-mb.svg');
+}
+
+.theme-content-theme.yellow {
+    background: url('../../image/creator/banner/yellow-list-mb.svg');
+}
+
+.theme-content-theme.green {
+    background: url('../../image/creator/banner/green-list-mb.svg');
+}
+
+.theme-content-theme.blue {
+    background: url('../../image/creator/banner/blue-list-mb.svg');
+}
+
+.theme-content-theme.purple {
+    background: url('../../image/creator/banner/purple-list-mb.svg');
+}
+
+.theme-content-profile {
+    width: 5.5rem;
+    height: 5.5rem;
+    position: absolute;
+    bottom: 9.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.theme-content-theme-profile {
+    /* opacity: 0; */
+    /*  position: absolute;
+    left: 50%;
+    bottom: -2.75rem; */
+    width: 5.5rem;
+    height: 5.5rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 5.5rem 5.5rem !important;
+    /*  transform: translateX(-50%); */
+}
+
+
+/* .slick-center .theme-item .theme-content-theme-profile {
+    opacity: 1;
+} */
+
+.theme-content-theme.pink .theme-content-theme-profile,
+.theme-content-profile.pink .theme-content-theme-profile {
+    background: url('../../image/creator/theme/pink.svg');
+}
+
+.theme-content-theme.orange .theme-content-theme-profile,
+.theme-content-profile.orange .theme-content-theme-profile {
+    background: url('../../image/creator/theme/orange.svg');
+}
+
+.theme-content-theme.yellow .theme-content-theme-profile,
+.theme-content-profile.yellow .theme-content-theme-profile {
+    background: url('../../image/creator/theme/yellow.svg');
+}
+
+.theme-content-theme.green .theme-content-theme-profile,
+.theme-content-profile.green .theme-content-theme-profile {
+    background: url('../../image/creator/theme/green.svg');
+}
+
+.theme-content-theme.blue .theme-content-theme-profile,
+.theme-content-profile.blue .theme-content-theme-profile {
+    background: url('../../image/creator/theme/blue.svg');
+}
+
+.theme-content-theme.purple .theme-content-theme-profile,
+.theme-content-profile.purple .theme-content-theme-profile {
+    background: url('../../image/creator/theme/purple.svg');
+}
+
+.theme-content-theme-input-area {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.theme-content-theme-label {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+    background: #EDEDED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.theme-content-theme-input:checked~.theme-content-theme-label,
+.slick-center .theme-item .theme-content-theme-label {
+    background: #2c2c2c;
+}
+
+.theme-content-theme-label::before {
+    content: 'g';
+    font-family: Amway Icon !important;
+    color: #ffffff;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+
+.theme-content-theme-input {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    opacity: 0;
+}
+
+.thhem-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.thhem-subtitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.btn-slide-content.slick-arrow {
+    top: 55%;
+}
+
+.creator-theme::before {
+    content: 'g';
+    font-family: Amway Icon !important;
+    color: #ffffff;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    position: absolute;
+    display: inline-block;
+    top: 6.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3.5rem;
+    height: 2rem;
+    background: #2c2c2c;
+    border-radius: 2.5rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width:1024px) {
+    .creator-theme::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        top: 7.25rem;
+        left: calc(50% + 0.05rem);
+        transform: translateX(-50%);
+        width: calc(25% + 0.25rem);
+        height: calc(100% - 13.25rem);
+        background: transparent;
+        border-radius: 1.5rem;
+        border: 0.125rem solid #2c2c2c;
+        z-index: -1;
+    }
+    .creator-theme .btn-slide-content.prev {
+        left: calc(36% - 2rem);
+    }
+    .creator-theme .btn-slide-content.next {
+        right: calc(36% - 2rem);
+    }
+    .creator-theme .btn-slide-content {
+        top: 52%;
+    }
+}
+
+@media (max-width:1023px) {
+    .creator-theme::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        top: 7.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 30% - 0.7rem);
+        height: calc(100% - 13.7rem);
+        background: transparent;
+        border-radius: 1rem;
+        border: 0.125rem solid #2c2c2c;
+        z-index: -1;
+    }
+    .theme-item {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .creator-theme .btn-slide-content.prev {
+        left: calc(15% - 3rem);
+    }
+    .creator-theme .btn-slide-content.next {
+        right: calc(15% - 3rem);
+    }
+    .theme-content-theme {
+        border-radius: 0.5rem;
+    }
+    .creator-theme .btn-slide-content {
+        top: 52%;
+    }
+}
+
+
+/* congrate */
+
+.amway-congratulations {
+    display: none;
+}
+
+.amway-congratulations.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1502;
+}
+
+.amway-congratulations-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: url('../../image/creator/theme/welcome.svg');
+    background-position: bottom !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.amway-congratulations-img::after {
+    content: '';
+    display: inline-block;
+    padding-bottom: 86%;
+    width: 100%;
+    height: 100%;
+}
+
+.goToShop {
+    position: absolute;
+    left: 50%;
+    bottom: 1.5rem;
+    transform: translateX(-50%);
+}
+
+.amway-congratulations-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+}
+
+@media(min-width:1024px) {
+    .amway-modal-congratulations {
+        border-radius: .5rem;
+        width: 30.625rem;
+        /*  height: 32rem; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #ffffff;
+    }
+    .amway-modal-congratulations-title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 2rem;
+        font-size: 2.5rem;
+        line-height: 3rem;
+        font-weight: 700;
+        text-align: center;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media(min-width:1024px) and (max-height:767px) {
+    .amway-modal-congratulations {
+        border-radius: .5rem;
+        width: 30.625rem;
+        position: absolute;
+        background: #ffffff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .amway-modal-congratulations {
+        overflow: hidden;
+        overflow-y: auto;
+        max-height: calc(100vh - 3rem);
+    }
+    .amway-modal-congratulations::-webkit-scrollbar {
+        /* width */
+        width: 0.375rem;
+    }
+    .amway-modal-congratulations::-webkit-scrollbar-track {
+        /* Track */
+        background: #EDEDED;
+        border-radius: 0.188rem;
+    }
+    .amway-modal-congratulations::-webkit-scrollbar-thumb {
+        /* Handle */
+        background: #D5D5D5;
+        border-radius: 0.188rem;
+    }
+    .amway-modal-congratulations::-webkit-scrollbar-thumb:hover {
+        /* Handle on hover */
+        background: #D5D5D5;
+    }
+}
+
+@media(min-width:1024px) and (max-height:560px) {
+    .amway-modal-congratulations {
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .amway-modal-congratulations-title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+    }
+    .amway-congratulations-img {
+        left: 50%;
+        width: calc(100vh - 3rem);
+        transform: translateX(-50%);
+    }
+    .goToShop {
+        position: relative;
+        width: 12.5rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .amway-modal-congratulations {
+        border-radius: .5rem;
+        width: calc(100% - 3rem);
+        max-width: calc(100vh - 3rem);
+        max-height: calc(100vh - 3rem);
+        position: absolute;
+        background: #ffffff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* .amway-modal-congratulations::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 100%;
+    } */
+    .amway-modal-congratulations-title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 1.5rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        text-align: center;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .amway-congratulations-img {
+        left: 50%;
+        max-width: calc(100vh - 5rem);
+        transform: translateX(-50%);
+    }
+}
+
+
+/* @media(max-width:1023px) and (max-height:425px) {
+    .amway-modal-congratulations {
+        border-radius: .5rem;
+        min-width: calc(100vh - 3rem);
+        max-width: calc(100vw - 3rem);
+        height: auto;
+        position: absolute;
+        background: #ffffff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+} */
+
+
+/* new my list */
+
+.amway-mylist-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.amway-mylist-title {
+    text-align: center;
+    font-weight: 500;
+}
+
+.amway-mylist-text-advt {
+    text-align: center;
+    font-weight: 700;
+}
+
+.amway-mylist-text-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+}
+
+.policy-creator-chx-text-btn {
+    text-decoration: underline;
+}
+
+@media(min-width:1024px) {
+    .amway-mylist-img-area {
+        padding-top: 3rem;
+        width: 20.313rem;
+    }
+    .amway-mylist-title {
+        margin-top: 2rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    .amway-mylist-text-advt {
+        margin-top: 0.5rem;
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .amway-mylist-text-description {
+        margin-top: 0.5rem;
+        width: 40rem;
+        /* padding-left: 6rem;
+        padding-right: 6rem; */
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .amway-mylist-img-area {
+        padding-top: 3rem;
+        width: 14rem;
+    }
+    .amway-mylist-title {
+        margin-top: 1.75rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .amway-mylist-text-advt {
+        margin-top: 0.25rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    .amway-mylist-text-description {
+        margin-top: 0.25rem;
+        font-size: 0.813rem;
+        line-height: 1.25rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}

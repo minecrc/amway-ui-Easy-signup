@@ -1,0 +1,21 @@
+<svg id="dashboard" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <rect id="Icon_Header_User_background" data-name="Icon Header User background" width="32" height="32" fill="none"/>
+  <g id="Group_6127" data-name="Group 6127" transform="translate(-1059 -421.5)">
+    <g id="Path_16819" data-name="Path 16819" transform="translate(1065 427.5)">
+      <path id="Path_16822" data-name="Path 16822" d="M0,0H9V12H0Z" fill="none"/>
+      <path id="Path_16823" data-name="Path 16823" d="M1.6,1.6v8.8H7.4V1.6H1.6M0,0H9V12H0Z" fill="#38539a"/>
+    </g>
+    <g id="Path_16818" data-name="Path 16818" transform="translate(1076 435.5)">
+      <path id="Path_16824" data-name="Path 16824" d="M0,0H9V12H0Z" fill="none"/>
+      <path id="Path_16825" data-name="Path 16825" d="M1.6,1.6v8.8H7.4V1.6H1.6M0,0H9V12H0Z" fill="#38539a"/>
+    </g>
+    <g id="Path_16817" data-name="Path 16817" transform="translate(1065 441.5)">
+      <path id="Path_16826" data-name="Path 16826" d="M0,0H9V6H0Z" fill="none"/>
+      <path id="Path_16827" data-name="Path 16827" d="M1.6,1.6V4.4H7.4V1.6H1.6M0,0H9V6H0Z" fill="#38539a"/>
+    </g>
+    <g id="Path_16816" data-name="Path 16816" transform="translate(1076 427.5)">
+      <path id="Path_16828" data-name="Path 16828" d="M0,0H9V6H0Z" fill="none"/>
+      <path id="Path_16829" data-name="Path 16829" d="M1.6,1.6V4.4H7.4V1.6H1.6M0,0H9V6H0Z" fill="#38539a"/>
+    </g>
+  </g>
+</svg>

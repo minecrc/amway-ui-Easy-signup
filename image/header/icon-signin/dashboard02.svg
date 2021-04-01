@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Group_6037" data-name="Group 6037" transform="translate(-1193.969 -8)">
+    <g id="Group_6016" data-name="Group 6016" transform="translate(1193.969 8)">
+      <rect id="Icon_Header_User_background" data-name="Icon Header User background" width="32" height="32" transform="translate(0 0)" fill="none"/>
+      <g id="Group_6127" data-name="Group 6127" transform="translate(-1059 -421.5)">
+        <g id="Rectangle_3492" data-name="Rectangle 3492" transform="translate(1065 427.5)" fill="none" stroke="#2c2c2c" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6">
+          <rect width="9" height="12" stroke="none"/>
+          <rect x="0.8" y="0.8" width="7.4" height="10.4" fill="none"/>
+        </g>
+        <g id="Rectangle_3496" data-name="Rectangle 3496" transform="translate(1076 435.5)" fill="none" stroke="#2c2c2c" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6">
+          <rect width="9" height="12" stroke="none"/>
+          <rect x="0.8" y="0.8" width="7.4" height="10.4" fill="none"/>
+        </g>
+        <g id="Rectangle_3495" data-name="Rectangle 3495" transform="translate(1065 441.5)" fill="none" stroke="#2c2c2c" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6">
+          <rect width="9" height="6" stroke="none"/>
+          <rect x="0.8" y="0.8" width="7.4" height="4.4" fill="none"/>
+        </g>
+        <g id="Rectangle_3497" data-name="Rectangle 3497" transform="translate(1076 427.5)" fill="none" stroke="#2c2c2c" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6">
+          <rect width="9" height="6" stroke="none"/>
+          <rect x="0.8" y="0.8" width="7.4" height="4.4" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

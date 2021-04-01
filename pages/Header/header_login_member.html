@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Header Member</title>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.21.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.21.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-performance.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <!-- do not copy above -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/common.251e0dcdff5dc232292e.css" />
+    <link rel="stylesheet" href="../../styles/common/css/style.css" />
+    <link rel="stylesheet" href="../../Header_degito/css/header.css" />
+    <link rel="stylesheet" href="./adjust.css" />
+    <link rel="stylesheet" href="./Header_add.css" />
+</head>
+
+<body>
+    <div id="root">
+        <div class="amway-header" data-dropdown-top-restrict="true">
+            <div class="amway-header-first">
+                <div class="amway-header-container">
+                    <div class="ahf-header">
+                        <div class="ahf-header-left">
+                            <div class="amway-header-language">
+                                <div class="ahl-btn">ไทย</div>
+                                <input type="hidden" value="th" name="inputLanguage" id="inputLanguage" class="inputLanguage">
+                                <div class="amway-header-modal for-changeLang">
+                                    <div class="bg-ahm sp"></div>
+                                </div>
+                                <div class="ahl-menu">
+                                    <div class="ahl-menu-list active" data-lang="th">
+                                        <div class="ahl-menu-list-text">ไทย</div>
+                                    </div>
+                                    <div class="ahl-menu-list " data-lang="en">
+                                        <div class="ahl-menu-list-text">English</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="amway-header-delivery-onDesktop">
+                                <div class="ahd-bar delivery">
+                                    <input type="hidden" name="inputDelivery" id="inputDelivery" value="delivery" class="inputDelivery">
+                                    <div class="ahd-bar-list --active" data-delivery="delivery">จัดส่งที่บ้าน</div>
+                                    <div class="ahd-bar-list" data-delivery="pickup">รับที่สาขา</div>
+                                </div>
+                                <div class="amway-header-delivery-addressShow delivery active" data-delivery="delivery">
+                                    <div class="ahd-delivery-addressShow">
+                                        <div class="ahd-delivery-area">
+                                            <div class="ahd-delivery-icon"></div>
+                                            <div class="ahd-delivery-text">
+                                                <p class="default">เลือกที่อยู่</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="amway-header-delivery-addressShow pickup" data-delivery="pickup">
+                                    <div class="ahd-delivery-addressShow">
+                                        <div class="ahd-delivery-area">
+                                            <div class="ahd-delivery-icon"></div>
+                                            <div class="ahd-delivery-text">
+                                                <p class="default">เลือกสาขา</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ahd-choose-menu delivery" data-delivery="delivery">
+                                    <div class="ahd-choose-menu-de-scroll">
+
+
+                                        <div class="ahd-scroll">
+                                            <div class="ahd-choose-delivery" data-addressIndex="1">
+                                                <div class="ahd-cd-text">
+                                                    บริษัท แอมเวย์ (ประเทศไทย) จำกัด 1199/1 ถนนรามคำแหง แขวงหัวหมาก เขตบางกะปิ กรุงเทพฯ 10240
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="ahd-choose-delivery-addnew">
+                                            <div class="ahd-cd-text">
+                                                Add Address
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ahd-choose-menu pickup " data-delivery="pickup">
+                                    <div class="ahd-choose-menu-scroll">
+                                        <div class="ahd-pickup-search">
+                                            <div class="ahd-ps-icon"></div>
+                                            <input type="text" placeholder="ค้นหาสถานที่..." class="ahd-ps-input" id="ahd-ps-input">
+                                        </div>
+
+                                        <div class="amway-dd-select-wrapper">
+                                            <div class="amway-dd-select">
+                                                <div class="amway-dd-select__trigger "><span>
+                                                        <p class="default">เลือกจังหวัด
+                                                        </p>
+                                                    </span>
+
+                                                </div>
+                                                <div class="amway-dd-options">
+                                                    <span class="amway-dd-option d-none selected" data-value="df">df</span>
+                                                    <span class="amway-dd-option " data-value="กรุงเทพมหานคร">กรุงเทพมหานคร</span>
+                                                    <span class="amway-dd-option" data-value="กระบี่">กระบี่</span>
+                                                    <span class="amway-dd-option" data-value="กาฬสินธุ์">กาฬสินธุ์</span>
+                                                    <span class="amway-dd-option" data-value="กำแพงเพชร">กำแพงเพชร</span>
+                                                    <span class="amway-dd-option" data-value="ขอนแก่น">ขอนแก่น</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ahd-pickup-title">
+                                            <div class="ahd-pickup-title-text">
+                                                ค้นพบ
+                                            </div>
+                                            <div class="ahd-pickup-title-text">
+                                                <div class="ahd-pickup-title-count">
+                                                    7
+                                                </div>
+                                                แอมเวย์ช็อปที่พบ
+                                            </div>
+                                        </div>
+                                        <div class="ahd-pickup-select">
+                                            <div class="ahd-pickup-select-list" data-shopIndex="1">
+                                                <div class="ahd-pickup-select-list-text">
+                                                    แอมเวย์ ช็อป ธนบุรี
+                                                </div>
+                                            </div>
+                                            <div class="ahd-pickup-select-list" data-shopIndex="2">
+                                                <div class="ahd-pickup-select-list-text">
+                                                    แอมเวย์ ช็อป พระราม 2
+                                                </div>
+                                            </div>
+                                            <div class="ahd-pickup-select-list" data-shopIndex="3">
+                                                <div class="ahd-pickup-select-list-text">
+                                                    แอมเวย์ ช็อป สำนักงานใหญ่
+                                                </div>
+                                            </div>
+                                            <div class="ahd-pickup-select-list" data-shopIndex="4">
+                                                <div class="ahd-pickup-select-list-text">
+                                                    แอมเวย์ ช็อป สีลม
+                                                </div>
+                                            </div>
+                                            <div class="ahd-pickup-select-list" data-shopIndex="5">
+                                                <div class="ahd-pickup-select-list-text">
+                                                    แอมเวย์ ช็อป สุขุมวิท
+                                                </div>
+                                            </div>
+                                            <div class="ahd-pickup-select-list" data-shopIndex="6">
+                                                <div class="ahd-pickup-select-list-text">
+                                                    แอมเวย์ ช็อป พระราม 3
+                                                </div>
+                                            </div>
+                                            <div class="ahd-pickup-select-list" data-shopIndex="7">
+                                                <div class="ahd-pickup-select-list-text">
+                                                    แอมเวย์ ช็อป สำนักงาน
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ahd-pickup-select-line"></div>
+                                    </div>
+
+                                </div>
+                                <div class="amway-header-modal for-changeAddress ">
+                                    <div class="bg-ahm sp"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ahf-header-right">
+                            <a class="ahf-list-menu">ศูนย์การเรียนรู้</a>
+                            <a class="ahf-list-menu">แดชบอร์ด</a>
+                            <a class="ahf-list-menu">บิซซิเนส เซ็นเตอร์</a>
+                            <div class="ahf-list-menu sign-in-bar amwayBtnlogin" data-login="yes">
+                                <div class="amway-user ">
+                                    <div class="amway-user-img" style=" background: url('../../image/header/user-ex.svg');">
+                                    </div>
+
+
+                                </div>
+                                <div class="sib-name">คุณณหทัย ลงใจ</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="amway-header-second member">
+                <div class="amway-header-container">
+                    <div class="ahs-header">
+                        <div class="ahs-header-left">
+                            <div class="amway-hamburger"></div>
+                            <a class="amway-logo-icon"></a>
+                            <div class="amway-category-list">
+                                <div class="acl-menu-list promotion">
+                                    <p><a href="">โปรโมชั่น</a></p>
+                                </div>
+                                <div class="acl-menu-list has-sub " data-submenu="brands">
+                                    <p>แบรนด์</p>
+                                </div>
+                                <div class="acl-menu-list has-sub" data-submenu="products">
+                                    <p>ผลิตภัณฑ์</p>
+                                </div>
+                                <div class="acl-menu-list ">
+                                    <p><a href="">SOP</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ahs-header-right">
+                            <div class="amway-search-mock">
+                            </div>
+
+                            <div class="amway-myList">
+                            </div>
+                            <div class="amway-cart">
+                            </div>
+                            <div class="amway-user amwayBtnlogin" data-login="yes">
+                                <div class="amway-user-img" style=" background: url('../../image/header/user-ex.svg');">
+                                </div>
+                                <div class="amway-user-noti">23</div>
+
+                            </div>
+                        </div>
+                        <div class="amway-search">
+                        </div>
+                        <div class="amway-search-area">
+
+                            <div class="asa-search-tool">
+
+                                <div class="asa-input-area">
+                                    <input type="text" class="asa-input" id="asa-input" name="asa-input" autocomplete="off">
+                                    <div class="asa-scan"></div>
+                                    <div class="asa-voice"></div>
+                                </div>
+                                <div class="asa-close"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="amway-header-delivery delivery">
+                <div class="ahd-delivery-type">
+                    <div class="ahd-type active" data-delivery="delivery">
+                        จัดส่งที่บ้าน
+                    </div>
+                    <div class="ahd-type" data-delivery="pickup">
+                        รับที่สาขา
+                    </div>
+                </div>
+                <div class="ahd-address-bar ahd-delivery-addressShow delivery active" data-delivery="delivery">
+                    <div class="ahd-delivery-area">
+                        <div class="ahd-delivery-icon"></div>
+                        <div class="ahd-delivery-text">
+                            <p class="default">เลือกที่อยู่</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ahd-address-bar ahd-delivery-addressShow pickup" data-delivery="pickup">
+                    <div class="ahd-delivery-area">
+                        <div class="ahd-delivery-icon"></div>
+                        <div class="ahd-delivery-text">
+                            <p class="default">เลือกสาขา</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="amway-header-noti alert ">
+                <div class="amway-header-noti-container">
+                    <div class="amway-header-noti-content">
+                        <div class="amway-header-noti-icon"></div>
+                        <div class="amway-header-noti-text">ไม่สามารถเพิ่มสินค้าลงในตะกร้าได้</div>
+                    </div>
+                    <div class="amway-header-noti-close"></div>
+                </div>
+            </div>
+        </div>
+        <div class="amway-header-modal-all">
+            <div class="amway-header-modal amwayMenuLogin" data-login="no">
+                <div class="bg-ahm"></div>
+                <div class="ahm-content-right">
+                    <div class="ahm-on-scroll">
+                        <div class="ahm-close"></div>
+                        <div class="ah-container-signin">
+                            <div class="ah-title-signin">
+                                Sign In
+                            </div>
+                            <div class="ah-line"></div>
+                            <a class="ah-subtitle-signin">
+                                <div class="ah-subtitle-signin-icon icon-signin"></div>
+                                <div class="ah-subtitle-signin-text">Sign in</div>
+                            </a>
+                            <a class="ah-subtitle-signin">
+                                <div class="ah-subtitle-signin-icon icon-register"></div>
+                                <div class="ah-subtitle-signin-text">Resigter</div>
+                            </a>
+                            <div class="ah-line mt-0"></div>
+                            <a class="ah-subtitle-signin visible-mobile">
+                                <div class="ah-subtitle-signin-icon icon-delivery"></div>
+                                <div class="ah-subtitle-signin-text">Delivery status</div>
+                            </a>
+                            <a class="ah-subtitle-signin visible-mobile">
+                                <div class="ah-subtitle-signin-icon icon-business"></div>
+                                <div class="ah-subtitle-signin-text">Business Center</div>
+                            </a>
+                            <a class="ah-subtitle-signin visible-mobile">
+                                <div class="ah-subtitle-signin-icon icon-dashboard"></div>
+                                <div class="ah-subtitle-signin-text">Dashboard</div>
+                            </a>
+                            <a class="ah-subtitle-signin visible-mobile">
+                                <div class="ah-subtitle-signin-icon icon-learning"></div>
+                                <div class="ah-subtitle-signin-text">Learning Center</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="amway-header-modal amwayMenuLogin" data-login="yes">
+                <div class="bg-ahm"></div>
+                <div class="ahm-content-right">
+                    <div class="ahm-on-scroll">
+                        <div class="ah-ifu-id o-version"># 2742899</div>
+                        <div class="ahm-close"></div>
+                        <div class="ah-info-user o-version">
+                            <div class="ah-ifu-profile">
+                                <div class="ah-ifu-pf-img" style="background: url('../../image/header/user-ex.svg');">
+                                </div>
+                            </div>
+                            <div class="ah-ifu-info">
+                                <div class="ah-ifu-name o-version">
+                                    คุณณหทัย ลงใจ
+                                </div>
+                            </div>
+                            <div class="ah-ifu-scbo-bar">
+                                <div class="ah-ifu-point-area">
+                                    <div class="ah-ifu-point-details">
+                                        <div class="ah-ifu-point-icon">
+                                            <!-- <img src="../../image/header/amplus-point.svg" alt=""> -->
+                                        </div>
+                                        <div class="ah-ifu-point-detail">
+                                            <div class="ah-ifu-point-title">
+                                                Amplus Point
+                                            </div>
+                                            <div class="ah-ifu-point">
+                                                <span>1,239,687</span>คะแนน
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ah-ifu-total">
+                                        คิดเป็นเงิน ฿ 2,500.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ah-container-scroll">
+                            <div class="ah-container-info">
+                                <a class="ah-subtitle-signin">
+                                    <div class="ah-subtitle-signin-icon icon-order"></div>
+                                    <div class="ah-subtitle-signin-text">ประวัติการสั่งซื้อ</div>
+                                </a>
+                                <a class="ah-subtitle-signin">
+                                    <div class="ah-subtitle-signin-icon icon-signin"></div>
+                                    <div class="ah-subtitle-signin-text">บัญชีของฉัน</div>
+                                </a>
+                                <a class="ah-subtitle-signin">
+                                    <div class="ah-subtitle-signin-icon icon-heart"></div>
+                                    <div class="ah-subtitle-signin-text">รายการโปรด</div>
+                                </a>
+                                <a class="ah-subtitle-signin">
+                                    <div class="ah-subtitle-signin-icon icon-sop"></div>
+                                    <div class="ah-subtitle-signin-text">รายการ SOP ของฉัน</div>
+                                </a>
+
+                                <div class="mbo-upgrade-banner">
+                                    <div class="mbo-upgrade-banner-content">
+                                        <div class="mbo-banner-detail">
+                                            <div class="mbo-banner-text">
+                                                <b>อัพเกรดเป็นนักธุรกิจแอมเวย์</b>
+                                                <br> ได้รับส่วนลดและสิทธิพิเศษมากมาย
+                                            </div>
+                                            <div class="mbo-banner-btn">
+                                                <button type="button" class="btn-mbo-upgrade">
+                                                    สมัคร
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ah-line"></div>
+                                <a class="ah-subtitle-signin">
+                                    <div class="ah-subtitle-signin-icon icon-signout"></div>
+                                    <div class="ah-subtitle-signin-text">ออกจากระบบ</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="amway-header-modal under-nav amwayMenuSearch" id="amwayMenuSearch">
+                <div class="bg-ahm"></div>
+                <div class="ahm-content-middle">
+                    <div class="ahm-on-scroll">
+                        <div class="ahm-menu-search-text">
+                            <div class="ahm-menu-search-text-title">
+                                Showing results for
+                            </div>
+                            <div class="ahm-menu-search-text-text">
+                                <a>Artristry</a>
+                            </div>
+                            <div class="ahm-menu-search-text-text">
+                                <a>Art2500</a>
+                            </div>
+                            <div class="ah-line visible-mobile mt-0"></div>
+                        </div>
+                        <div class="ahm-menu-search-product">
+                            <div class="ahm-menu-search-product-title">
+                                <a class="ahm-menu-search-product-title-text">
+                                    Products
+                                </a>
+                                <a class="ahm-menu-search-product-title-all">
+                                    <p>View all</p>
+
+                                </a>
+                            </div>
+                            <div class="ahm-menu-search-product-item-area">
+                                <div class="ahm-menu-search-product-item">
+                                    <div class="ahm-ms-pi">
+                                        <a class="ahm-ms-pi-img" style="background:url('../../image/header/ex-product/ex-pd01.svg')">
+
+                                        </a>
+                                        <div class="ahm-ms-pi-text">
+                                            <a class="ahm-ms-pi-title">
+                                                Artistry Pressed Powder Translucent Refilled
+                                            </a>
+
+                                            <div class="ahm-ms-pi-tool">
+                                                <div class="ahm-ms-pi-price">
+                                                    ฿964
+                                                </div>
+                                                <button class="ahm-ms-pi-btn">
+                                                    Add to cart
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ahm-menu-search-product-item">
+                                    <div class="ahm-ms-pi">
+                                        <a class="ahm-ms-pi-img" style="background:url('../../image/header/ex-product/ex-pd02.svg')">
+
+                                        </a>
+                                        <div class="ahm-ms-pi-text has-choose">
+                                            <a class="ahm-ms-pi-title ">
+                                                Artistry Signature Color Lipstick
+                                            </a>
+                                            <div class="ahm-ms-pi-choose">
+                                                16 colors
+                                            </div>
+                                            <div class="ahm-ms-pi-tool">
+                                                <div class="ahm-ms-pi-price">
+                                                    ฿2,500
+                                                </div>
+                                                <button class="ahm-ms-pi-btn">
+                                                    Choose
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ahm-menu-search-product-item">
+                                    <div class="ahm-ms-pi">
+                                        <a class="ahm-ms-pi-img" style="background:url('../../image/header/ex-product/ex-pd03.svg')">
+
+                                        </a>
+                                        <div class="ahm-ms-pi-text has-choose">
+                                            <a class="ahm-ms-pi-title ">
+                                                Artistry SOP6 Months Set
+                                            </a>
+                                            <div class="ahm-ms-pi-choose">
+                                                16 colors
+                                            </div>
+                                            <div class="ahm-ms-pi-tool">
+                                                <div class="ahm-ms-pi-price">
+                                                    ฿10,000 - 30,000
+                                                </div>
+                                                <button class="ahm-ms-pi-btn">
+                                                    Choose
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="amway-header-modal nav-hamburger" data-nav="nav-hamburger">
+                <div class="bg-ahm"></div>
+
+                <div class="ahm-content-left">
+                    <div class="ahm-ham-bar">
+                        <div class="ahm-close"></div>
+                        <div class="ahm-ham-bar-title">SHOPPING</div>
+                    </div>
+                    <div class="ahm-on-scroll for-ham">
+                        <div class="ahm-ham-content">
+                            <div class="ahm-ham-main">
+                                <div class="ahm-ham-main-content ">
+                                    โปรโมชั่น
+                                </div>
+                            </div>
+                            <div class="ahm-ham-main" data-collapse="brands">
+                                <div class="ahm-ham-main-content collapse-btn">
+                                    แบรนด์
+                                </div>
+                                <div class="ahm-ham-main-content-sub collapse-content">
+                                    <div class="ah-submrnu-area-boxAll">
+                                        <div class="ah-submrnu-img-item">
+                                            <div class="ah-submrnu-img-box">
+                                                <img class="ah-submrnu-img" src="../../image/header/brand/nutrilite.svg">
+                                            </div>
+                                        </div>
+                                        <div class="ah-submrnu-img-item">
+                                            <div class="ah-submrnu-img-box">
+                                                <img class="ah-submrnu-img" src="../../image/header/brand/artistry.svg">
+                                            </div>
+                                        </div>
+                                        <div class="ah-submrnu-img-item">
+                                            <div class="ah-submrnu-img-box">
+                                                <img class="ah-submrnu-img" src="../../image/header/brand/glister.svg">
+                                            </div>
+                                        </div>
+                                        <div class="ah-submrnu-img-item">
+                                            <div class="ah-submrnu-img-box">
+                                                <img class="ah-submrnu-img" src="../../image/header/brand/GnH.svg">
+                                            </div>
+                                        </div>
+                                        <div class="ah-submrnu-img-item">
+                                            <div class="ah-submrnu-img-box">
+                                                <img class="ah-submrnu-img" src="../../image/header/brand/satinique.svg">
+                                            </div>
+                                        </div>
+                                        <div class="ah-submrnu-img-item">
+                                            <div class="ah-submrnu-img-box">
+                                                <img class="ah-submrnu-img" src="../../image/header/brand/AtomosphereskyNavNodeImage.svg">
+                                            </div>
+                                        </div>
+                                        <div class="ah-submrnu-img-item">
+                                            <div class="ah-submrnu-img-box">
+                                                <img class="ah-submrnu-img" src="../../image/header/brand/espring.svg">
+                                            </div>
+                                        </div>
+                                        <div class="ah-submrnu-img-item">
+                                            <div class="ah-submrnu-img-box">
+                                                <img class="ah-submrnu-img" src="../../image/header/brand/amwayhome.svg">
+                                            </div>
+                                        </div>
+                                        <div class="ah-submrnu-img-item">
+                                            <div class="ah-submrnu-img-box">
+                                                <img class="ah-submrnu-img" src="../../image/header/brand/xs.svg">
+                                            </div>
+                                        </div>
+                                        <div class="ah-submrnu-img-item">
+                                            <div class="ah-submrnu-img-box">
+                                                <img class="ah-submrnu-img" src="../../image/header/brand/nutriplant.svg">
+                                            </div>
+                                        </div>
+                                        <div class="ah-submrnu-img-item">
+                                            <div class="ah-submrnu-img-box">
+                                                <img class="ah-submrnu-img" src="../../image/header/brand/AtomospheredriveNavNodeImage.svg">
+                                            </div>
+                                        </div>
+                                        <div class="ah-submrnu-img-item">
+                                            <div class="ah-submrnu-img-box">
+                                                <img class="ah-submrnu-img" src="../../image/header/brand/musthaveitem.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="ahm-ham-main" data-collapse="products">
+                                <div class="ahm-ham-main-content collapse-btn">
+                                    ผลิตภัณฑ์
+                                </div>
+                                <div class="ahm-ham-main-content-sub collapse-content">
+                                    <!-- <div class="ahm-ham-main-sub ">
+                                        <div class="ahm-ham-main-sub-content ">
+                                            ALL PRODUCTS
+                                        </div>
+                                    </div> -->
+                                    <div class="ahm-ham-main-sub " data-collapse="NUTRITION">
+                                        <div class="ahm-ham-main-sub-content collapse-btn">
+                                            <div class="ahm-ham-icon-area">
+                                                <div class="ahm-ham-icon-img" style="background: url('../../image/header/icon-menu/nutrition.svg');">
+                                                </div>
+                                                NUTRITION & WELLNESS
+                                            </div>
+                                        </div>
+                                        <div class="ahm-ham-main-sub-content-sub collapse-content">
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    All Nutrition & Wellness
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Vitamins & Supplements
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Weight Management
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Truevivity
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Nutrition Accessories
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Food & Beverage
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Health Equipment
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ahm-ham-main-sub " data-collapse="beauty">
+                                        <div class="ahm-ham-main-sub-content collapse-btn">
+                                            <div class="ahm-ham-icon-area">
+                                                <div class="ahm-ham-icon-img" style="background: url('../../image/header/icon-menu/beauty.svg');">
+                                                </div>
+                                                BEAUTY
+                                            </div>
+                                        </div>
+                                        <div class="ahm-ham-main-sub-content-sub collapse-content">
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    All Beauty
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub" data-collapse="skincares">
+                                                <div class="ahm-ham-sub-content collapse-btn">
+                                                    Skin Cares
+                                                </div>
+                                                <div class="ahm-ham-sub-content-sub collapse-content">
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            All Skin Cares
+                                                        </div>
+                                                    </div>
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            Cleanser
+                                                        </div>
+                                                    </div>
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            Toner
+                                                        </div>
+                                                    </div>
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            Serum
+                                                        </div>
+                                                    </div>
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            Moisturizer
+                                                        </div>
+                                                    </div>
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            Sun Screen
+                                                        </div>
+                                                    </div>
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            Eye Cream
+                                                        </div>
+                                                    </div>
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            Mask / Scrub
+                                                        </div>
+                                                    </div>
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            Treatment
+                                                        </div>
+                                                    </div>
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            For Men
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="ahm-ham-sub" data-collapse="Makeup">
+                                                <div class="ahm-ham-sub-content collapse-btn">
+                                                    Makeup
+                                                </div>
+                                                <div class="ahm-ham-sub-content-sub collapse-content">
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            All Makeup
+                                                        </div>
+                                                    </div>
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            Face
+                                                        </div>
+                                                    </div>
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            Lips
+                                                        </div>
+                                                    </div>
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            Eyes
+                                                        </div>
+                                                    </div>
+                                                    <div class="ahm-ham-subLast">
+                                                        <div class="ahm-ham-subLast-content ">
+                                                            Accessories
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content">
+                                                    Fragrance
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content">
+                                                    Treatment Courses
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content">
+                                                    Artistry™ Studio
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ahm-ham-main-sub " data-collapse="PERSONALCARE">
+                                        <div class="ahm-ham-main-sub-content collapse-btn">
+                                            <div class="ahm-ham-icon-area">
+                                                <div class="ahm-ham-icon-img" style="background: url('../../image/header/icon-menu/personal.svg');">
+                                                </div>
+                                                PERSONAL CARE
+                                            </div>
+                                        </div>
+                                        <div class="ahm-ham-main-sub-content-sub collapse-content">
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    All Personal Care
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Bath & Body Care
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Hair Care
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Oral Care
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Hand Wash
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ahm-ham-main-sub " data-collapse="home">
+                                        <div class="ahm-ham-main-sub-content collapse-btn">
+                                            <div class="ahm-ham-icon-area">
+                                                <div class="ahm-ham-icon-img" style="background: url('../../image/header/icon-menu/home.svg');">
+                                                </div>
+                                                HOME AND TECHNOLOGY
+                                            </div>
+                                        </div>
+                                        <div class="ahm-ham-main-sub-content-sub collapse-content">
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    All Home and Technology
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Air Treatment
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Cookware
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Dish
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Disinfectant Cleaners
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Laundry
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Surface Cleaners
+                                                </div>
+                                            </div>
+                                            <div class="ahm-ham-sub">
+                                                <div class="ahm-ham-sub-content ">
+                                                    Water Treatment
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ahm-ham-main-sub " data-collapse="agriculture">
+                                        <div class="ahm-ham-main-sub-content ">
+                                            <div class="ahm-ham-icon-area">
+                                                <div class="ahm-ham-icon-img" style="background: url('../../image/header/icon-menu/agriculture.svg');">
+                                                </div>
+                                                AGRICULTURE
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ahm-ham-main-sub " data-collapse="XS">
+                                        <div class="ahm-ham-main-sub-content ">
+                                            <div class="ahm-ham-icon-area">
+                                                <div class="ahm-ham-icon-img" style="background: url('../../image/header/icon-menu/xs.svg');">
+                                                </div>
+                                                XS
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ahm-ham-main-sub " data-collapse="other">
+                                        <div class="ahm-ham-main-sub-content ">
+                                            <div class="ahm-ham-icon-area">
+                                                <div class="ahm-ham-icon-img" style="background: url('../../image/header/icon-menu/other.svg');">
+                                                </div>
+                                                OTHER PRODUCTS
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ahm-ham-main" data-collapse="FOA">
+                                <div class="ahm-ham-main-content ">
+                                    สินค้าแนะนำ
+                                </div>
+                            </div>
+                            <div class="ahm-ham-main" data-collapse="SOP">
+                                <div class="ahm-ham-main-content ">
+                                    SOP
+                                </div>
+                            </div>
+
+                            <div class="amway-header-language-list " data-lang="th">
+
+                                <div class="ahl-l-text">
+                                    ไทย
+                                </div>
+                                <div class="ahl-l-icon">
+
+                                </div>
+                            </div>
+                            <div class="amway-header-language-list " data-lang="en">
+
+                                <div class="ahl-l-text">
+                                    English
+                                </div>
+                                <div class="ahl-l-icon">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="amway-header-modal under-nav  amwaySubmenu brands " id="brands" data-submenu="brands">
+                <div class="bg-ahm"></div>
+                <div class="ahm-content-full">
+                    <div class="ahm-on-scroll">
+                        <div class="amway-header-container">
+                            <div class="ah-submrnu-area">
+                                <div class="ah-submrnu-area-boxAll">
+                                    <div class="ah-submrnu-img-item">
+                                        <div class="ah-submrnu-img-box">
+                                            <img class="ah-submrnu-img" src="../../image/header/brand/nutrilite.svg">
+                                        </div>
+                                    </div>
+                                    <div class="ah-submrnu-img-item">
+                                        <div class="ah-submrnu-img-box">
+                                            <img class="ah-submrnu-img" src="../../image/header/brand/artistry.svg">
+                                        </div>
+                                    </div>
+                                    <div class="ah-submrnu-img-item">
+                                        <div class="ah-submrnu-img-box">
+                                            <img class="ah-submrnu-img" src="../../image/header/brand/glister.svg">
+                                        </div>
+                                    </div>
+                                    <div class="ah-submrnu-img-item">
+                                        <div class="ah-submrnu-img-box">
+                                            <img class="ah-submrnu-img" src="../../image/header/brand/GnH.svg">
+                                        </div>
+                                    </div>
+                                    <div class="ah-submrnu-img-item">
+                                        <div class="ah-submrnu-img-box">
+                                            <img class="ah-submrnu-img" src="../../image/header/brand/satinique.svg">
+                                        </div>
+                                    </div>
+                                    <div class="ah-submrnu-img-item">
+                                        <div class="ah-submrnu-img-box">
+                                            <img class="ah-submrnu-img" src="../../image/header/brand/AtomosphereskyNavNodeImage.svg">
+                                        </div>
+                                    </div>
+                                    <div class="ah-submrnu-img-item">
+                                        <div class="ah-submrnu-img-box">
+                                            <img class="ah-submrnu-img" src="../../image/header/brand/espring.svg">
+                                        </div>
+                                    </div>
+                                    <div class="ah-submrnu-img-item">
+                                        <div class="ah-submrnu-img-box">
+                                            <img class="ah-submrnu-img" src="../../image/header/brand/amwayhome.svg">
+                                        </div>
+                                    </div>
+                                    <div class="ah-submrnu-img-item">
+                                        <div class="ah-submrnu-img-box">
+                                            <img class="ah-submrnu-img" src="../../image/header/brand/xs.svg">
+                                        </div>
+                                    </div>
+                                    <div class="ah-submrnu-img-item">
+                                        <div class="ah-submrnu-img-box">
+                                            <img class="ah-submrnu-img" src="../../image/header/brand/nutriplant.svg">
+                                        </div>
+                                    </div>
+                                    <div class="ah-submrnu-img-item">
+                                        <div class="ah-submrnu-img-box">
+                                            <img class="ah-submrnu-img" src="../../image/header/brand/AtomospheredriveNavNodeImage.svg">
+                                        </div>
+                                    </div>
+                                    <div class="ah-submrnu-img-item">
+                                        <div class="ah-submrnu-img-box">
+                                            <img class="ah-submrnu-img" src="../../image/header/brand/musthaveitem.svg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="amway-header-modal under-nav  amwaySubmenu products " id="products" data-submenu="products">
+                <div class="bg-ahm"></div>
+                <div class="ahm-content-full">
+                    <div class="ahm-on-scroll">
+                        <div class="amway-header-container">
+                            <div class="ah-submrnu-area">
+                                <div class="ah-submrnu-list">
+                                    <!-- <div class="ah-submrnu-list-all">
+                                        <a>Shop All Brands</a>
+                                    </div> -->
+                                    <div class="ah-submrnu-list-arae">
+                                        <div class="ah-submrnu-list-arae-col">
+                                            <div class="ah-submrnu-list-main">
+                                                <a>สินค้าแนะนำ</a>
+                                            </div>
+                                        </div>
+                                        <div class="ah-submrnu-list-arae-col">
+                                            <div class="ah-submrnu-list-main">
+                                                <a>สุขภาพ</a>
+                                            </div>
+                                            <div class="ah-submrnu-list-sub">
+                                                <a>นิวทริไลท์ - อาหารเสริมและวิตามิน</a>
+                                            </div>
+                                            <div class="ah-submrnu-list-sub">
+                                                <a>บอดี้คีย์ - โปรแกรมควบคุมน้ำหนัก</a>
+                                            </div>
+                                            <div class="ah-submrnu-list-sub">
+                                                <a>ผลิตภัณฑ์เสริมอาหารสำหรับความงาม</a>
+                                            </div>
+                                            <div class="ah-submrnu-list-sub">
+                                                <a>อุปกรณ์เสริม</a>
+                                            </div>
+                                        </div>
+                                        <div class="ah-submrnu-list-arae-col">
+                                            <div class="ah-submrnu-list-main">
+                                                <a>ความงาม</a>
+                                            </div>
+                                            <div class="ah-submrnu-list-main-sub-area">
+                                                <div class="ah-submrnu-list-main-sub">
+                                                    <a>บำรุงผิว</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/cleanser">คลีนเซอร์</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="toner">โทนเนอร์</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="serum"> เซรั่ม</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="moisturizer"> มอยส์เจอไรเซอร์</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="uvprotection">กันแดด</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="eyecare"> อายครีม</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="maskexfoliatofacemassage"> มาสค์ / สครับ</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="specialtreatment">ทรีทเมนท์</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="men"> ดูแลผิวผู้ชาย</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="bodytreatments">บำรุงผิวกาย</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="ah-submrnu-list-main-sub-area">
+                                                <div class="ah-submrnu-list-main-sub">
+                                                    <a>เมคอัพ</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="face"> ใบหน้า</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="eyes"> ดวงตาและแก้ม</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="lips"> ริมฝีปาก</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="beautyaccessories">  อุปกรณ์ดูแลผิวและแต่งหน้า </a>
+                                                </div>
+
+                                            </div>
+                                            <div class="ah-submrnu-list-main-sub-area">
+                                                <div class="ah-submrnu-list-main-sub">
+                                                    <a>น้ำหอม</a>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="ah-submrnu-list-arae-col">
+                                            <div class="ah-submrnu-list-main-sub-area">
+                                                <div class="ah-submrnu-list-main-sub">
+                                                    <a>อาร์ทิสทรี สปา</a>
+                                                </div>
+                                            </div>
+                                            <div class="ah-submrnu-list-main-sub-area">
+                                                <div class="ah-submrnu-list-main-sub">
+                                                    <a>คอลเลกชัน-ความงาม</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/sknbalancing" class="oa-product-menu__sub-category-item"> สกิน นิวทริชั่น บาลานซิ่ง – ผิวธรรมดา-ผิวมัน </a>
+
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/sknbalancing" class="oa-product-menu__sub-category-item"> สกิน นิวทริชั่น บาลานซิ่ง – ผิวธรรมดา-ผิวมัน </a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/sknhydrating" class="oa-product-menu__sub-category-item"> สกิน นิวทริชั่น ไฮเดรทติ้ง – ผิวธรรมดา-ผิวแห้ง </a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/artistryidealradiance" class="oa-product-menu__sub-category-item"> ไอดีล เรเดียนซ์ - ผิวกระจ่างใส </a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/artistryyouthxtend" class="oa-product-menu__sub-category-item"> ยูธ เอ็กซ์เทนด์ - ผิวมีริ้วรอย </a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/artistryyouthxtendultra" class="oa-product-menu__sub-category-item"> ยูธ เอ็กซ์เทนด์ อัลตร้า - ผิวหย่อนคล้อย </a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/artistrycremelx" class="oa-product-menu__sub-category-item"> ซูพรีม แอลเอ็กซ์ - ผิวย้อนวัย </a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/shanghaiedition" class="oa-product-menu__sub-category-item"> อาร์ทิสทรี สตูดิโอ เซี่ยงไฮ้ เอดิชั่น </a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/artistrycollection" class="oa-product-menu__sub-category-item"> อาร์ทิสทรี สตูดิโอ คอลเลกชัน </a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/artistryselect" class="oa-product-menu__sub-category-item"> อาร์ทิสทรี ซีเล็กต์ </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ah-submrnu-list-arae-col">
+                                            <div class="ah-submrnu-list-main-sub-area">
+                                                <div class="ah-submrnu-list-main">
+                                                    <a href="/c/personalcare"> เรือนร่าง</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/body">จีแอนด์เอช - ดูแลผิวกาย</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/oral">กลิสเทอร์ - ดูแลปากและฟัน</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/hair">ซาทินิค - ดูแลเส้นผม</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/pursue-handgel">เพอร์ซู แซนิไทเซอร์ แฮนด์ เจล</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="ah-submrnu-list-main-sub-area">
+                                                <div class="ah-submrnu-list-main-sub">
+                                                    <a href="/c/homeliving"> บ้านและเทคโนโลยี</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/watertreatmentsystem">เครื่องกรองน้ำ อีสปริง</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/air-treatment">เครื่องกรองอากาศ แอทโมสเฟียร์</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/kitchenware">เครื่องครัว แอมเวย์ ควีน</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/homeandcar">ทำความสะอาดบ้านและรถยนต์</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="ah-submrnu-list-arae-col">
+                                            <div class="ah-submrnu-list-main-sub-area">
+                                                <div class="ah-submrnu-list-main">
+                                                    <a>XS</a>
+                                                </div>
+                                            </div>
+                                            <div class="ah-submrnu-list-main-sub-area">
+                                                <div class="ah-submrnu-list-main-sub">
+                                                    <a href="/c/agriculture"> การเกษตร</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/adjuvant"> สารเสริมประสิทธิภาพ</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/micronutrientelementfertilizer">  ปุ๋ยธาตุอาหารรอง-เสริม</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/macronutrientelementfertilizer">  ปุ๋ยธาตุอาหารหลัก</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="ah-submrnu-list-main-sub-area">
+                                                <div class="ah-submrnu-list-main-sub">
+                                                    <a href="/c/others"> ผลิตภัณฑ์อื่นๆ</a>
+
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/foodandbeverage">อาหารและเครื่องดื่ม</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/health-equipment">ดูแลสุขภาพ</a>
+                                                </div>
+                                                <div class="ah-submrnu-list-sub">
+                                                    <a href="/c/health-equipment">ดูแลสุขภาพ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="amway-header-modal nav-delivery ">
+                <div class="bg-ahm "></div>
+                <div class="ahm-content-right">
+                    <div class="ahm-ham-bar">
+                        <div class="ahm-close"></div>
+                        <div class="ahm-ham-bar-title">กรุณาเลือกรูปแบบการรับสินค้า</div>
+                    </div>
+                    <div class="ahm-on-scroll for-ham">
+                        <div class="ahd-bar-menu-area">
+                            <div class="ahd-bar delivery">
+                                <div class="ahd-bar-list --active" data-delivery="delivery">จัดส่งที่บ้าน</div>
+                                <div class="ahd-bar-list" data-delivery="pickup">รับที่สาขา</div>
+                            </div>
+                        </div>
+                        <div class="ahd-bar-menu-select-area active" data-delivery="delivery">
+                            <div class="ahd-choose-delivery-line"></div>
+                            <div class="ahd-choose-delivery" data-addressIndex="1">
+                                <div class="ahd-cd-text">
+                                    บริษัท แอมเวย์ (ประเทศไทย) จำกัด 1199/1 ถนนรามคำแหง แขวงหัวหมาก เขตบางกะปิ กรุงเทพฯ 10240
+                                </div>
+                            </div>
+
+
+                            <div class="ahd-choose-delivery-addnew">
+                                <div class="ahd-cd-text">
+                                    Add Address
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="ahd-bar-menu-select-area " data-delivery="pickup">
+                            <div class="ahd-pickup-search">
+                                <div class="ahd-ps-icon"></div>
+                                <input type="text" placeholder="ค้นหาสถานที่..." class="ahd-ps-input" id="ahd-ps-input-mb">
+                            </div>
+
+                            <div class="amway-dd-select-wrapper">
+                                <div class="amway-dd-select">
+                                    <div class="amway-dd-select__trigger "><span>
+                                            <p class="default">เลือกจังหวัด
+                                            </p>
+                                        </span>
+
+                                    </div>
+                                    <div class="amway-dd-options">
+                                        <span class="amway-dd-option d-none selected" data-value="df">df</span>
+                                        <span class="amway-dd-option " data-value="กรุงเทพมหานคร">กรุงเทพมหานคร</span>
+                                        <span class="amway-dd-option" data-value="กระบี่">กระบี่</span>
+                                        <span class="amway-dd-option" data-value="กาฬสินธุ์">กาฬสินธุ์</span>
+                                        <span class="amway-dd-option" data-value="กำแพงเพชร">กำแพงเพชร</span>
+                                        <span class="amway-dd-option" data-value="ขอนแก่น">ขอนแก่น</span>
+                                    </div>
+                                    <div class="bg-select"></div>
+                                </div>
+                            </div>
+                            <div class="ahd-pickup-title">
+                                <div class="ahd-pickup-title-text">
+                                    ค้นพบ
+                                </div>
+                                <div class="ahd-pickup-title-text">
+                                    <div class="ahd-pickup-title-count">
+                                        7
+                                    </div>
+                                    แอมเวย์ช็อปที่พบ
+                                </div>
+                            </div>
+                            <div class="ahd-pickup-select">
+                                <div class="ahd-pickup-select-list" data-shopIndex="1">
+                                    <div class="ahd-pickup-select-list-text">
+                                        แอมเวย์ ช็อป ธนบุรี
+                                    </div>
+                                </div>
+                                <div class="ahd-pickup-select-list" data-shopIndex="2">
+                                    <div class="ahd-pickup-select-list-text">
+                                        แอมเวย์ ช็อป พระราม 2
+                                    </div>
+                                </div>
+                                <div class="ahd-pickup-select-list" data-shopIndex="3">
+                                    <div class="ahd-pickup-select-list-text">
+                                        แอมเวย์ ช็อป สำนักงานใหญ่
+                                    </div>
+                                </div>
+                                <div class="ahd-pickup-select-list" data-shopIndex="4">
+                                    <div class="ahd-pickup-select-list-text">
+                                        แอมเวย์ ช็อป สีลม
+                                    </div>
+                                </div>
+                                <div class="ahd-pickup-select-list" data-shopIndex="5">
+                                    <div class="ahd-pickup-select-list-text">
+                                        แอมเวย์ ช็อป สุขุมวิท
+                                    </div>
+                                </div>
+                                <div class="ahd-pickup-select-list" data-shopIndex="6">
+                                    <div class="ahd-pickup-select-list-text">
+                                        แอมเวย์ ช็อป พระราม 3
+                                    </div>
+                                </div>
+                                <div class="ahd-pickup-select-list" data-shopIndex="7">
+                                    <div class="ahd-pickup-select-list-text">
+                                        แอมเวย์ ช็อป สำนักงาน
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ahd-pickup-select-line"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mz-main-layout " class="mz-main-layout">
+            <div class="mz-main-layout__content d-block">
+                <!-- content area -->
+
+                <div class=" min-vh-100 middle-with-flex" style="height: calc(100vh); background: url('../../image/header/ex-product/ex-img.svg'); background-position: center; background-size: cover;">
+
+                </div>
+
+
+                <!-- end content area -->
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Add on -->
+    <script src="../../Header_degito/js/change_language.js"></script>
+    <script src="../../Header_degito/js/change_delivery.js"></script>
+    <script src="../../Header_degito/js/search_action_fullslide.js"></script>
+    <script src="../../Header_degito/js/header_action.js"></script>
+    <script src="../../Header_degito/js/hamburger_action.js"></script>
+    <script src="../../Header_degito/js/custom_dropdown.js"></script>
+    <script src="../../Header_degito/js/menu_scroll.js"></script>
+</body>
+
+</html>

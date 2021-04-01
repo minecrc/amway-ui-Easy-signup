@@ -1,0 +1,198 @@
+.checkout-box-upload-label.full-width {
+    width: 100%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border: 0.125rem dashed #9EA0A3;
+}
+
+.checkout-box-upload-label.full-width .checkout-box-upload-label-icon-area {
+    padding-top: 0;
+    padding-bottom: 0.25rem;
+}
+
+.upload-example {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    background-color: #FAFAFA;
+}
+
+.upload-example-image {
+    width: 2rem;
+    height: 2rem;
+}
+
+.upload-example-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.upload-example-text {
+    margin-left: 0.75rem;
+    font-size: 0.813rem;
+    font-weight: 500;
+    line-height: 1.313rem;
+    text-decoration: underline;
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    cursor: pointer;
+}
+
+.upload-file-image-area {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.upload-file-image-area::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.upload-file-image-area img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.625rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.upload-file-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0.75rem 0.5rem 1rem;
+    border-radius: 0.625rem;
+    background-color: #EDEDED;
+}
+
+.upload-file-title {
+    width: calc(100% - 1.25rem);
+    padding-right: 0.5rem;
+    font-size: 0.813rem;
+    font-weight: 700;
+    line-height: 1.313rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.upload-file-delete {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.upload-file-delete::before {
+    content: "";
+    display: block;
+    width: 0.875rem;
+    height: 0.875rem;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../image/FOA/icon/icon-bin.svg");
+}
+
+.image-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.image-popup.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(44, 44, 44, 0.8);
+}
+
+.image-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.image-area img {
+    z-index: 9999;
+    max-width: 100%;
+    max-height: 80%;
+}
+
+.image-popup-close {
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 1rem;
+    color: #ffffff;
+}
+
+.image-popup-close::before {
+    content: 'r';
+    font-weight: 700;
+    font-family: Amway Icon !important;
+}
+
+@media (min-width: 1024px) {
+    .upload-file-image-area {
+        max-width: 15.5rem;
+        max-height: 15.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .image-popup-close {
+        top: 1rem;
+        right: 1rem;
+    }
+    .image-popup-close::before {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .upload-file-image-area {
+        width: 100%;
+        height: 100%;
+    }
+    .image-popup-close {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+    .image-popup-close::before {
+        font-size: 1.5rem;
+    }
+}

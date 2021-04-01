@@ -1,0 +1,200 @@
+.wishlist-banner-list {
+    width: 100%;
+    height: 14rem;
+    position: relative;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.wishlist-banner-list.normal {
+    height: 10rem;
+}
+
+.wishlist-banner-list.pink {
+    background: url('../../image/banner_wishlist/pink-list.svg');
+}
+
+.wishlist-banner-list.orange {
+    background: url('../../image/banner_wishlist/orange-list.svg');
+}
+
+.wishlist-banner-list.yellow {
+    background: url('../../image/banner_wishlist/yellow-list.svg');
+}
+
+.wishlist-banner-list.green {
+    background: url('../../image/banner_wishlist/green-list.svg');
+}
+
+.wishlist-banner-list.blue {
+    background: url('../../image/banner_wishlist/blue-list.svg');
+}
+
+.wishlist-banner-list.purple {
+    background: url('../../image/banner_wishlist/purple-list.svg');
+}
+
+.wishlist-banner-list.normal {
+    background: url('../../image/banner_wishlist/BGWishlist.svg');
+}
+
+.wbl-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wbl-title {
+    margin-top: 2rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.wbl-sub {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.wishlist-banner-list.pink .wbl-title {
+    color: #7F3E3E;
+}
+
+.wishlist-banner-list.orange .wbl-title {
+    color: #A76C47;
+}
+
+.wishlist-banner-list.yellow .wbl-title {
+    color: #62625A;
+}
+
+.wishlist-banner-list.green .wbl-title {
+    color: #73793B;
+}
+
+.wishlist-banner-list.blue .wbl-title {
+    color: #396E75;
+}
+
+.wishlist-banner-list.purple .wbl-title {
+    color: #38539A;
+}
+
+.wishlist-banner-list.normal .wbl-title {
+    color: #38539A;
+}
+
+@media(min-width:1024px) {
+    .wishlist-banner-list.normal .wbl-content {
+        display: flex;
+        align-items: center;
+    }
+    .wishlist-banner-list.normal .wbl-area {
+        height: 100%;
+    }
+}
+
+@media(max-width:1023px) {
+    .wishlist-banner-list {
+        margin-top: 3.5rem;
+        height: 18rem;
+        background-position: top center !important;
+    }
+    .wishlist-banner-list.pink {
+        background: url('../../image/banner_wishlist/pink-list-mb.svg');
+    }
+    .wishlist-banner-list.orange {
+        background: url('../../image/banner_wishlist/orange-list-mb.svg');
+    }
+    .wishlist-banner-list.yellow {
+        background: url('../../image/banner_wishlist/yellow-list-mb.svg');
+    }
+    .wishlist-banner-list.green {
+        background: url('../../image/banner_wishlist/green-list-mb.svg');
+    }
+    .wishlist-banner-list.blue {
+        background: url('../../image/banner_wishlist/blue-list-mb.svg');
+    }
+    .wishlist-banner-list.purple {
+        background: url('../../image/banner_wishlist/purple-list-mb.svg');
+    }
+    .wishlist-banner-list.normal {
+        height: 10rem;
+    }
+    .wbl-content {
+        display: block;
+        width: calc(100% - 4rem);
+        margin: auto;
+        margin-top: 1.5rem;
+    }
+    .wbl-title {
+        text-align: center;
+        margin: auto;
+    }
+    .wbl-sub {
+        text-align: center;
+        margin: auto;
+        width: calc(100% - 6rem);
+        margin-top: 0.5rem;
+    }
+    .wbl-img {
+        margin: auto;
+        width: 7.5rem;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        margin-bottom: 1.25rem;
+    }
+    .wbl-img::after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+    .wishlist-banner-list.pink .wbl-img {
+        background: url('../../image/banner_wishlist/img-pink.svg');
+    }
+    .wishlist-banner-list.orange .wbl-img {
+        background: url('../../image/banner_wishlist/img-orange.svg');
+    }
+    .wishlist-banner-list.yellow .wbl-img {
+        background: url('../../image/banner_wishlist/img-yellow.svg');
+    }
+    .wishlist-banner-list.green .wbl-img {
+        background: url('../../image/banner_wishlist/img-green.svg');
+    }
+    .wishlist-banner-list.blue .wbl-img {
+        background: url('../../image/banner_wishlist/img-blue.svg');
+    }
+    .wishlist-banner-list.purple .wbl-img {
+        background: url('../../image/banner_wishlist/img-purple.svg');
+    }
+    .wishlist-banner-list.normal .wbl-img {
+        width: 1rem;
+    }
+    .wishlist-banner-list.normal .wbl-title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+@media(max-width:767px) {
+    .wishlist-banner-list.normal {
+        height: 14rem;
+    }
+    .wishlist-banner-list.normal .wbl-img {
+        margin: auto;
+        width: 2.5rem;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        margin-bottom: 1.25rem;
+    }
+}

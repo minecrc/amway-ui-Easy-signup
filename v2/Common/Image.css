@@ -1,0 +1,24 @@
+.mz-image {
+  position: relative;
+  white-space: nowrap;
+}
+.mz-image,
+.mz-image img {
+  transition: opacity 0.2s;
+}
+.mz-image img[data-src],
+.mz-image img[data-src-set],
+.mz-image[data-src],
+.mz-image[data-background-src] {
+  opacity: 0;
+}
+.mz-image.--insert-animation,
+.mz-image.--insert-animation img {
+  transition: transform 0.5s cubic-bezier(0.4, 0.1, 0.5, 1.5), opacity 0.5s;
+}
+.mz-image.--insert-animation img[data-src],
+.mz-image.--insert-animation img[data-src-set],
+.mz-image.--insert-animation[data-src],
+.mz-image.--insert-animation[data-background-src] {
+  transform: translateY(-10%);
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>dropdown_search</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/common.251e0dcdff5dc232292e.css" />
+    <link rel="stylesheet" href="../../styles/Header___Header.7c1ab78bbef29ad6a8f4.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/common/css/style.css" />
+
+    <link rel="stylesheet" href="../../Header_degito/css/header_creator.css" />
+
+    <link rel="stylesheet" href="../../AmwayCreator/css/button.css" />
+
+
+
+    <link rel="stylesheet" href="../../AmwayCreator/css/input-mod.css" />
+
+</head>
+
+
+<body>
+    <div id="root">
+        <div class="amway-header-creator-area " data-dropdown-top-restrict="true">
+            <div class="amway-header-creator-container">
+                <div class="amway-header-creator-main">
+                    <div class="amway-header-creator-left">
+
+
+                        <a class="amway-logo-icon-creator"></a>
+                    </div>
+                    <div class="amway-header-creator-right">
+
+                        <div class="ahf-list-menu sign-in-bar amwayBtnlogin " data-login="yes">
+                            <div class="amway-user ">
+                                <div class="amway-user-img" style=" background: url('../../image/header/user-ex.svg');">
+                                </div>
+
+
+                            </div>
+                            <div class="sib-name ">Miss Amornpan Apicharaporn</div>
+                        </div>
+                        <div class="amway-header-language  visible-desktop">
+                            <div class="ahl-btn">English</div>
+                            <input type="hidden" value="en" name="inputLanguage" id="inputLanguage" class="inputLanguage">
+                            <div class="amway-header-modal for-changeLang ">
+                                <div class="bg-ahm sp"></div>
+                            </div>
+                            <div class="ahl-menu">
+                                <div class="ahl-menu-list" data-lang="th">ไทย</div>
+                                <div class="ahl-menu-list " data-lang="en">English</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="amway-header-creator-modal-all">
+            <div class="amway-header-modal  amwayMenuLogin " data-login="yes">
+                <div class="bg-ahm"></div>
+                <div class="ahm-content-right">
+                    <div class="ahm-on-scroll">
+                        <div class="ahm-close"></div>
+                        <div class="ah-container-signin">
+                            <div class="ah-title-signin">
+                                Hello, Olivia Madison
+                            </div>
+                            <div class="ah-line"></div>
+
+                            <a class="ah-subtitle-signin ">
+                                <div class="ah-subtitle-signin-icon icon-signout"></div>
+                                <div class="ah-subtitle-signin-text">Sign Out</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="amway-main-layout " class="amway-main-layout step-creator">
+            <div class="amway-main-layout__content ">
+                <!-- content area -->
+                <div class=" middle-with-flex mt-5">
+                    <div class="amway-headerlist-filter ">
+                        <input name="filter-instalment" id="filter-instalment" class="mz-dropdown-input__input" value="newItem" readonly="" />
+                        <div class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown dd-marke-check filter-in">
+                            <button id="filter-instalment-dropdown" type="button" class="mz-dropdown__button" data-placeholder="จัดเรียงโดย" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="mz-dropdown__button-text --selected">
+                                    <div class="mz-dropdown__text">
+                                        เรียงตามแนะนำ
+                                    </div>
+                                </div>
+                                <span class="mz-icon --arrow-down mz-dropdown__icon"></span>
+                            </button>
+                            <ul class="mz-dropdown__menu dropdown-menu" aria-labelledby="filter-instalment-dropdown">
+                                <li class="mz-dropdown__option-mod-title">
+                                    <div class="mz-dropdown__text">
+                                        จัดเรียงโดย
+                                    </div>
+                                    <div class="mz-dropdown__close"></div>
+                                </li>
+                                <li data-value="newItem" class="mz-dropdown__option">
+                                    <div class="mz-dropdown__text">
+                                        เรียงตามแนะนำ
+                                    </div>
+                                </li>
+                                <li data-value="priceHL" class="mz-dropdown__option">
+                                    <div class="mz-dropdown__text">
+                                        เรียงตามเงินที่จะได้ (สูง-ตํ่า)
+                                    </div>
+                                </li>
+                                <li data-value="priceLH" class="mz-dropdown__option">
+                                    <div class="mz-dropdown__text">
+                                        เรียงตามเงินที่จะได้ (ตํ่า-สูง)
+                                    </div>
+                                </li>
+                                <li data-value="nameAZ" class="mz-dropdown__option">
+                                    <div class="mz-dropdown__text">
+                                        ชื่อสินค้า (A - Z)
+                                    </div>
+                                </li>
+                                <li data-value="nameZA" class="mz-dropdown__option">
+                                    <div class="mz-dropdown__text">
+                                        ชื่อสินค้า (Z - A)
+                                    </div>
+                                </li>
+                                <li data-value="nameFL" class="mz-dropdown__option">
+                                    <div class="mz-dropdown__text">
+                                        ชื่อสินค้า (ก - ฮ)
+                                    </div>
+                                </li>
+                                <li data-value="nameLF" class="mz-dropdown__option">
+                                    <div class="mz-dropdown__text">
+                                        ชื่อสินค้า (ฮ - ก)
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <!-- end content area -->
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="../../Header_degito/js/creator_change_language.js"></script>
+    <script src="../../Header_degito/js/change_delivery.js"></script>
+    <script src="../../Header_degito/js/search_action_fullslide.js"></script>
+    <script src="../../Header_degito/js/header_action.js"></script>
+    <script src="../../Header_degito/js/hamburger_action.js"></script>
+    <script src="../../Header_degito/js/custom_dropdown.js"></script>
+    <script src="../../Header_degito/js/header_action_creator.js"></script>
+    <!-- Add on -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous"></script>
+    <script src="../../Common/js/Modal.js"></script>
+    <script src="../../AmwayCreator/js/shop-card.js"></script>
+    <script src="../../ShareBar/js/myList-modal.js"></script>
+    <script src="../../AmwayCreator/js/search-pd.js"></script>
+
+
+    <script src="../../Common/js/IntegerInput-mod.js"></script>
+    <script src="../../ShareBar/js/select-color.js"></script>
+    <script src="../../AmwayCreator/js/select-bundle-creator.js"></script>
+    <script src="../../ShareBar/js/lightbox-modal.js"></script>
+    <script src="../../AmwayCreator/js/edit-shop.js"></script>
+    <script src="../../FOA/js/foa-recommand-card.js"></script>
+
+    <script src="../../v2/Common/js/global.js"></script>
+    <script src="../../v2/Common/js/Input.js"></script>
+    <script src="../../v2/Common/js/Image.js"></script>
+    <script src="../../lib/js/bodyScrollLock.min.js"></script>
+    <script src="../../Common/js/Dropdown-mod-border.js"></script>
+    <script src="../../Common/js/DropdownInput.js"></script>
+    <script src="../../v2/Common/js/SearchableDropdown.js"></script>
+    <script src="../../v1/Header/js/PickupAddressModal.js"></script>
+    <script src="../../v1/Common/js/image.js"></script>
+</body>
+
+</html>

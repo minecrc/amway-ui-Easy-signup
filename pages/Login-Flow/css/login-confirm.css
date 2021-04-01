@@ -1,0 +1,417 @@
+.checkout-login-social-btn.line {
+    background: #00c30000;
+    border: 2px solid #00C300;
+    color: #00c300;
+    margin: auto;
+}
+
+.checkout-login-social-btn.google {
+    border: 2px solid #D44638;
+    border-radius: 25px;
+    color: #d44638;
+    margin: auto;
+}
+
+html input[disabled] {
+    cursor: default;
+    background-color: transparent;
+}
+
+.checkout-box-number {
+    font-weight: 700;
+    margin-right: 0.5rem;
+    font-size: 1.2em;
+}
+
+.style-1 .otp-input-8-field {
+    border-radius: 4px;
+    border: 1px solid #f5cd79;
+}
+
+.style-1 .otp-input-8-field:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+li.otp-input-8-field input {
+    width: 3.375rem;
+    height: 3.375rem;
+    border-radius: 0.625rem;
+    border: 0.125rem solid #EDEDED;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.digitOtp-errorMessage li.otp-input-8-field input {
+    border-color: #D91734;
+}
+
+.otp-ref {
+    text-align: center;
+    color: #9EA0A3;
+}
+
+.amway-input-error-new.alert_error {
+    display: flex;
+    align-items: center;
+}
+
+.amway-input-error-new {
+    display: none;
+    color: #D91734;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+}
+
+.checkout-box.login-template,
+.login-template .checkout-box {
+    max-width: 378px !important;
+    width: 100% !important;
+    padding-top: 15px;
+}
+
+.checkout-login-social-subtitle {
+    padding-bottom: .7rem !important;
+}
+
+.checkout-login-social-title,
+.checkout-box-text {
+    padding-top: .75rem !important;
+    padding-bottom: .7rem;
+}
+
+.new-login-social-img {
+    max-width: 110px;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.amway-input-area.disabled {
+    background: #F4F4F4;
+}
+
+.new-login-social-end {
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.new-login-social-img-2 {
+    max-width: 110px;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.sub-text {
+    width: 100%;
+    text-align: center;
+}
+
+.new-login-img-one {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.new-login-social-img::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 50px 100% 100% 100%;
+    overflow: visible;
+}
+
+.checkout-login-social-btn.line::before {
+    background: url('../../../image/SocialLogin/line.svg');
+    background-repeat: no-repeat !important;
+    background-position: -10% center !important;
+    background-size: 29px !important;
+}
+
+.checkout-login-social-btn.google::before {
+    background: url('../../../image/SocialLogin/google.svg');
+    background-repeat: no-repeat !important;
+    background-position: 10% center !important;
+    background-size: 25px !important;
+    width: 2.5rem;
+    height: 2rem;
+    content: '';
+}
+
+.icon-unsuccess-red::before {
+    background: url(../../../image/icon/icon-info/icon-unsuccess-red.svg);
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 13px !important;
+    width: 14px;
+    height: 14px;
+    content: '';
+}
+
+.checkout-login-social-btn {
+    max-width: 7.2rem;
+}
+
+.icon-unsuccess-red {
+    width: 14px;
+    height: 14px;
+    display: flex;
+    margin-right: 2px;
+}
+
+.checkout-login-social-btn.facebook::before {
+    background: url('../../../image/SocialLogin/facebook.svg');
+    background-position: center center !important;
+    background-position-x: center !important;
+    background-position-y: center !important;
+    background-size: 2rem 2.3em !important;
+    content: '';
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: -10px;
+}
+
+.checkout-login-social-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkout-login-btn:hover {
+    color: #2C2C2C;
+    border: 2px solid #2C2C2C;
+    background: #2c2c2c38;
+}
+
+.checkout-login-btn {
+    background: #2C2C2C;
+    color: #ffffff;
+    border: 2px solid #2C2C2C;
+    max-width: 100%;
+    margin: 18px auto;
+    width: 100%;
+    height: 3rem;
+    border-radius: 1.5rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.checkout-login-social-title,
+.checkout-box-text {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem;
+}
+
+.checkbox-remember-user {
+    margin: 15px auto;
+    font-weight: 700;
+    display: flex;
+}
+
+.checkout-box-input .amway-input {
+    font-weight: 700;
+}
+
+.checkout-box-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: .2rem;
+    padding-bottom: .1rem;
+}
+
+.checkout-login-social-btn.facebook {
+    background: #3c5a9600;
+    color: #3C5A96;
+    border: 2px solid #3C5A96;
+    margin: auto;
+}
+
+.social-title {
+    color: #808080;
+    font-weight: 500;
+}
+
+.social-title-box {
+    width: 100%;
+    position: relative;
+}
+
+.social-title-box .social-title:before {
+    content: '';
+    position: absolute;
+    width: 25%;
+    display: block;
+    height: 1px;
+    background-color: #CACACA;
+    top: 20%;
+    left: 0;
+    z-index: 1;
+}
+
+.checkout-box-label-input.mt-3.text-center {
+    padding-bottom: 0.55rem;
+}
+
+.amway-creator-progress {
+    display: none;
+}
+
+.social-title-box .social-title:after {
+    content: '';
+    position: absolute;
+    width: 25%;
+    display: block;
+    height: 1px;
+    background-color: #CACACA;
+    top: 20%;
+    right: 0;
+    z-index: 1;
+}
+
+.checkout-login-social-btn.line:hover {
+    background: #00c30030;
+    border: 2px solid #00c30000;
+    color: #01b902 !important;
+}
+
+.checkout-login-social-btn.google:hover {
+    background: #ffffff;
+    border: 2px solid #d1a489;
+    color: #d36754 !important;
+}
+
+.checkout-login-social-btn.facebook:hover {
+    background: #3c5a965e;
+    border: 2px solid #00c30000;
+    color: #3C5096;
+}
+
+.breadcum-back-mobile {
+    width: 100%;
+    display: block;
+}
+
+.field-icon {
+    float: right;
+    margin-left: -30px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 2;
+}
+
+span.toggle-password {
+    position: relative;
+}
+
+span.toggle-password:before {
+    content: '';
+    width: 24px;
+    max-height: 24px;
+    background: url('../../../image/SocialLogin/eyeClose.svg');
+    padding: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px;
+    position: absolute;
+    left: -2rem;
+    top: -.5rem;
+}
+
+span.toggle-password.fa-eye.fa-eye-slash::before {
+    background: url('../../../image/SocialLogin/eyeOpen.svg');
+    padding: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px;
+}
+
+.mini-text {
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+@media (max-width: 1280px) {}
+
+@media (max-width: 1070px) {}
+
+@media(max-width: 768px) {
+    .checkout-login-social-btn.facebook,
+    .checkout-login-social-btn.line {
+        max-width: 45%;
+    }
+    .mini-text {
+        font-size: small;
+    }
+}
+
+@media(max-width: 490px) {
+    .checkout-login-social-title,
+    .checkout-box-text {
+        padding-top: 0.5rem !important;
+        padding-bottom: 1.5rem;
+    }
+    .new-login-social-img {
+        max-width: 120px;
+        position: relative;
+        width: 100%;
+        margin: auto;
+    }
+    .checkout-box-label-input.mt-3 {
+        margin-top: 0.2rem !important;
+    }
+    .amway-input-area {
+        height: 2.3rem;
+        border-radius: .25rem;
+        padding: 0rem 0.5rem !important;
+    }
+    .checkbox-remember-user {
+        margin: 9px auto;
+        font-weight: 700;
+        display: flex;
+    }
+    .checkout-login-social-area {
+        padding-bottom: 0.7rem;
+    }
+    .amway-input {
+        width: 100%;
+        height: 100%;
+        border-color: transparent;
+        color: #2C2C2C;
+        font-size: 0.7rem !important;
+        font-weight: 500;
+        line-height: 2rem;
+    }
+    input[type="password" i] {
+        -webkit-text-security: disc !important;
+        padding: 1px 2px;
+        font-size: 0.7rem !important;
+        font: small-caption;
+    }
+}

@@ -1,0 +1,6 @@
+<svg id="Add_to_Cart" data-name="Add to Cart" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <circle id="Oval" cx="18" cy="18" r="18" fill="#fff"/>
+  <g id="Icon_Arrow_Right" data-name="Icon / Arrow / Right" transform="translate(13.315 10.715)">
+    <path id="Path" d="M8.025,10.518a.591.591,0,0,1,0,.843.613.613,0,0,1-.856,0L.177,4.422a.591.591,0,0,1,0-.843l6.993-6.94a.613.613,0,0,1,.856,0,.591.591,0,0,1,0,.843L1.459,4Z" transform="translate(0 3.536)" fill="#2c2c2c"/>
+  </g>
+</svg>

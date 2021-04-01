@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shop list detail FOA nothank</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/common.251e0dcdff5dc232292e.css" />
+    <link rel="stylesheet" href="../../styles/Header___Header.7c1ab78bbef29ad6a8f4.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/common/css/style.css" />
+
+    <link rel="stylesheet" href="../../styles/common/css/new_modal.css" />
+    <link rel="stylesheet" href="../../ShareBar/css/select_bundle.css" />
+    <link rel="stylesheet" href="../../ShareBar/css/choose_banner_Sharelist.css" />
+
+    <link rel="stylesheet" href="../../Header_degito/css/header_creator.css" />
+
+    <link rel="stylesheet" href="../../AmwayCreator/css/button.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/shop-default.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/checkout-step.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/input-mod.css" />
+    <link rel="stylesheet" href="../../FOA/css/foa-cart.css" />
+</head>
+
+
+<body>
+    <div id="root">
+        <div class="amway-header-creator-area visible-desktop" data-dropdown-top-restrict="true">
+            <div class="amway-header-creator-container">
+                <div class="amway-header-creator-main">
+                    <div class="amway-header-creator-left">
+
+
+                        <a class="amway-logo-icon-creator"></a>
+                    </div>
+                    <div class="amway-header-creator-right">
+
+
+                        <div class="amway-header-language  visible-desktop">
+                            <div class="ahl-btn">English</div>
+                            <input type="hidden" value="en" name="inputLanguage" id="inputLanguage" class="inputLanguage">
+                            <div class="amway-header-modal for-changeLang ">
+                                <div class="bg-ahm sp"></div>
+                            </div>
+                            <div class="ahl-menu">
+                                <div class="ahl-menu-list" data-lang="th">ไทย</div>
+                                <div class="ahl-menu-list " data-lang="en">English</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="amway-main-layout " class="amway-main-layout  cart-mylist ">
+            <div class="amway-main-layout__content ">
+                <div class="foa-cart-nav visible-mobile">
+                    <div class="foa-cart-nav-back">
+
+                    </div>
+                    <div class="foa-cart-nav-text">
+                        ตะกร้าสินค้า
+                    </div>
+                </div>
+                <div class="amway-container">
+
+                    <div class="mylist-cart">
+
+                        <div class="mylist-cart-title visible-desktop">
+                            ตะกร้าสินค้า
+                        </div>
+                        <div class="mylist-cart-register visible-mobile">
+                            <div class="mylist-cart-register-content">
+                                <div class="mylist-cart-register-content-text">
+                                    <div class="mylist-cart-register-content-text-title">
+                                        คุ้มกว่า! สมัครวันนี้
+                                    </div>
+                                    <div class="mylist-cart-register-content-text-sub">
+                                        ประหยัดได้ถึง
+                                    </div>
+                                    <div class="mylist-cart-register-content-text-price">
+                                        ฿ 1,400
+                                    </div>
+                                </div>
+                                <div class="mylist-cart-register-content-icon">
+
+                                </div>
+                            </div>
+                            <form action="#" class="mylist-cart-register-select">
+                                <div class="mylist-cart-register-select-title">
+                                    Select Registration Level
+                                </div>
+                                <div class="mylist-cart-register-select-item">
+                                    <input type="radio" class="mylist-cart-register-select-item-input" id="mbo" name="radio-group">
+                                    <label for="mbo" class="mylist-cart-register-select-item-label">
+                                        <div class="mylist-cart-register-select-item-icon"></div>
+                                        <div class="mylist-cart-register-select-item-content">
+                                            <div class="mylist-cart-register-select-item-content-header">
+                                                <div class="mylist-cart-register-select-item-content-title">
+                                                    Register Amplus Point
+                                                </div>
+                                                <div class="mylist-cart-register-select-item-content-price">
+                                                    ฿ 100
+                                                </div>
+                                            </div>
+                                            <div class="mylist-cart-register-select-item-content-text">
+                                                Enjoy shopping with a member price, and get Amplus Point 300 points
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="mylist-cart-register-select-item">
+                                    <input type="radio" class="mylist-cart-register-select-item-input" id="abo" name="radio-group">
+                                    <label for="abo" class="mylist-cart-register-select-item-label">
+                                        <div class="mylist-cart-register-select-item-icon"></div>
+                                        <div class="mylist-cart-register-select-item-content">
+                                            <div class="mylist-cart-register-select-item-content-header">
+                                                <div class="mylist-cart-register-select-item-content-title">
+                                                    Register Amway Business
+                                                </div>
+                                                <div class="mylist-cart-register-select-item-content-price">
+                                                    ฿ 900
+                                                </div>
+                                            </div>
+                                            <div class="mylist-cart-register-select-item-content-text">
+                                                Enjoy doing business with Amway, get maximum cash back. 21% every month
+                                            </div>
+                                            <div class="mylist-cart-register-select-item-content-text --bold">
+                                                Apply today, get a discount of 300 baht
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="mylist-cart-register-select-text">
+                                    *กรุณาเตรียมบัตรประชาชนเพื่อใช้ในการสมัคร
+                                </div>
+                                <div class="mylist-cart-register-select-item">
+                                    <input type="radio" class="mylist-cart-register-select-item-input" id="no" name="radio-group" checked>
+                                    <label for="no" class="mylist-cart-register-select-item-label">
+                                        <div class="mylist-cart-register-select-item-icon"></div>
+                                        <div class="mylist-cart-register-select-item-content">
+                                            <div class="mylist-cart-register-select-item-content-nothank">
+                                                ไม่เป็นไร , ฉันต้องการซื้อสินค้าราคาปกติ
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </form>
+
+
+                        </div>
+
+                        <div class="checkout-cart-area">
+                            <div class="checkout-cart-product">
+
+                                <div class="mylist-cart-list-title">
+                                    รายการสินค้า (5 ชิ้น)
+                                </div>
+
+                                <div class="checkout-card first">
+                                    <div class="checkout-card-del" onclick="openModal('deleteItem')"></div>
+                                    <div class="checkout-card-img-area">
+                                        <img class="checkout-card-img" src="../../image/creator/product/normal.svg">
+                                    </div>
+                                    <div class="checkout-card-content">
+                                        <div class="checkout-card-code">
+                                            Item # 118209
+                                        </div>
+                                        <div class="checkout-card-name">
+                                            Artistry Signature Select™ Firming Body Lotion
+                                        </div>
+                                        <div class="checkout-card-status">
+
+                                        </div>
+                                        <div class="checkout-card-pc-area">
+                                            <div class="checkout-card-price">
+                                                <div class="checkout-card-price-member">
+                                                    <div class="checkout-card-price-member-price">
+                                                        ฿ 1,728
+                                                    </div>
+                                                    <div class="checkout-card-price-member-title">
+                                                        Member
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-card-price-customer">
+                                                    <div class="checkout-card-price-customer-price">
+                                                        ฿ 1,928
+                                                    </div>
+                                                    <div class="checkout-card-price-customer-title">
+                                                        Customer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-card-count">
+                                                X2
+                                            </div>
+                                        </div>
+                                        <div class="checkout-card-free-product">
+                                            <div class="checkout-card-free-product-item">
+                                                <div class="checkout-card-free-product-item-img-area">
+                                                    <img class="checkout-card-free-product-item-img" src="../../image/creator/product/normal.svg">
+
+                                                </div>
+                                                <div class="checkout-card-free-product-item-content">
+                                                    <div class="checkout-card-free-product-item-content-tag">
+                                                        Free
+                                                    </div>
+                                                    <div class="checkout-card-free-product-item-content-area">
+                                                        <div class="checkout-card-free-product-item-content-name">
+                                                            Artistry Signature Select™ Firming Body Lotion
+                                                        </div>
+                                                        <div class="checkout-card-free-product-item-count">
+                                                            X1
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout-card">
+                                    <div class="checkout-card-del" onclick="openModal('deleteItem')"></div>
+                                    <div class="checkout-card-img-area">
+                                        <img class="checkout-card-img" src="../../image/creator/product/bundle.svg">
+                                    </div>
+                                    <div class="checkout-card-content">
+                                        <div class="checkout-card-code">
+                                            Item # 118209
+                                        </div>
+                                        <div class="checkout-card-name">
+                                            Nutrilite™ Strong Living Bundle
+                                        </div>
+                                        <div class="checkout-card-status --backOrder">
+                                            <div class="checkout-card-status-icon"></div>
+                                            <div class="checkout-card-status-text">Accrued product. Ready on 22/02/20
+                                            </div>
+                                        </div>
+                                        <div class="checkout-card-pc-area">
+                                            <div class="checkout-card-price">
+                                                <div class="checkout-card-price-member">
+                                                    <div class="checkout-card-price-member-price">
+                                                        ฿ 2,990
+                                                    </div>
+                                                    <div class="checkout-card-price-member-title">
+                                                        Member
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-card-price-customer">
+                                                    <div class="checkout-card-price-customer-price">
+                                                        ฿ 3,990
+                                                    </div>
+                                                    <div class="checkout-card-price-customer-title">
+                                                        Customer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-card-count">
+                                                X2
+                                            </div>
+                                        </div>
+
+                                        <div class="checkout-card-free-product">
+
+                                        </div>
+                                    </div>
+                                    <div class="checkout-card-content-bundle">
+                                        <div class="checkout-card-content-bundle-title">
+                                            Products in this package
+                                        </div>
+                                        <div class="checkout-card-content-bundle-list-area">
+                                            <div class="checkout-card-content-bundle-list">
+                                                <div class="checkout-card-content-bundle-list-count">
+                                                    x2
+                                                </div>
+                                                <div class="checkout-card-content-bundle-list-content">
+                                                    <div class="checkout-card-content-bundle-list-text">
+                                                        Nutrilite™ Vitamin C Extended Release
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-card-content-bundle-list">
+                                                <div class="checkout-card-content-bundle-list-count">
+                                                    x2
+                                                </div>
+                                                <div class="checkout-card-content-bundle-list-content">
+                                                    <div class="checkout-card-content-bundle-list-text">
+                                                        Nutrilite™ Vitamin C Extended Release
+                                                    </div>
+                                                    <div class="checkout-card-status --backOrder">
+                                                        <div class="checkout-card-status-icon"></div>
+                                                        <div class="checkout-card-status-text">Accrued product. Ready on 22/02/20
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-card-content-bundle-list">
+                                                <div class="checkout-card-content-bundle-list-count">
+                                                    x2
+                                                </div>
+                                                <div class="checkout-card-content-bundle-list-content">
+                                                    <div class="checkout-card-content-bundle-list-text">
+                                                        Nutrilite™ Vitamin C Extended Release
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-card-content-bundle-list">
+                                                <div class="checkout-card-content-bundle-list-count">
+                                                    x2
+                                                </div>
+                                                <div class="checkout-card-content-bundle-list-content">
+                                                    <div class="checkout-card-content-bundle-list-text">
+                                                        Nutrilite™ Vitamin C Extended Release
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout-card">
+                                    <div class="checkout-card-del" onclick="openModal('deleteItem')"></div>
+                                    <div class="checkout-card-img-area">
+                                        <img class="checkout-card-img" src="../../image/creator/product/color.svg">
+                                    </div>
+                                    <div class="checkout-card-content">
+                                        <div class="checkout-card-code">
+                                            Item # 118209
+                                        </div>
+                                        <div class="checkout-card-name">
+                                            Artistry Studio Bangkok Edition 2-In-1 Matte Lip Crayon
+                                        </div>
+                                        <div class="checkout-card-status">
+
+                                        </div>
+                                        <div class="checkout-card-color">
+                                            Color : Rose Goddess
+                                        </div>
+                                        <div class="checkout-card-pc-area">
+                                            <div class="checkout-card-price">
+                                                <div class="checkout-card-price-member">
+                                                    <div class="checkout-card-price-member-price">
+                                                        ฿ 600
+                                                    </div>
+                                                    <div class="checkout-card-price-member-title">
+                                                        Member
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-card-price-customer">
+                                                    <div class="checkout-card-price-customer-price">
+                                                        ฿ 700
+                                                    </div>
+                                                    <div class="checkout-card-price-customer-title">
+                                                        Customer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-card-count">
+                                                X2
+                                            </div>
+                                        </div>
+                                        <div class="checkout-card-free-product">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-cart-sumary">
+                                <div class="mylist-cart-register visible-desktop">
+                                    <div class="mylist-cart-register-content">
+                                        <div class="mylist-cart-register-content-text">
+                                            <div class="mylist-cart-register-content-text-title">
+                                                คุ้มกว่า! สมัครวันนี้
+                                            </div>
+                                            <div class="mylist-cart-register-content-text-sub">
+                                                ประหยัดได้ถึง
+                                            </div>
+                                            <div class="mylist-cart-register-content-text-price">
+                                                ฿ 1,400
+                                            </div>
+                                        </div>
+                                        <div class="mylist-cart-register-content-icon">
+
+                                        </div>
+                                    </div>
+                                    <form action="#" class="mylist-cart-register-select">
+                                        <div class="mylist-cart-register-select-title">
+                                            Select Registration Level
+                                        </div>
+                                        <div class="mylist-cart-register-select-item">
+                                            <input type="radio" class="mylist-cart-register-select-item-input" id="mbo-dt" name="radio-group">
+                                            <label for="mbo-dt" class="mylist-cart-register-select-item-label">
+                                                <div class="mylist-cart-register-select-item-icon"></div>
+                                                <div class="mylist-cart-register-select-item-content">
+                                                    <div class="mylist-cart-register-select-item-content-header">
+                                                        <div class="mylist-cart-register-select-item-content-title">
+                                                            Register Amplus Point
+                                                        </div>
+                                                        <div class="mylist-cart-register-select-item-content-price">
+                                                            ฿ 100
+                                                        </div>
+                                                    </div>
+                                                    <div class="mylist-cart-register-select-item-content-text">
+                                                        Enjoy shopping with a member price, and get Amplus Point 300
+                                                        points
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="mylist-cart-register-select-item">
+                                            <input type="radio" class="mylist-cart-register-select-item-input" id="abo-dt" name="radio-group">
+                                            <label for="abo-dt" class="mylist-cart-register-select-item-label">
+                                                <div class="mylist-cart-register-select-item-icon"></div>
+                                                <div class="mylist-cart-register-select-item-content">
+                                                    <div class="mylist-cart-register-select-item-content-header">
+                                                        <div class="mylist-cart-register-select-item-content-title">
+                                                            Register Amway Business
+                                                        </div>
+                                                        <div class="mylist-cart-register-select-item-content-price">
+                                                            ฿ 900
+                                                        </div>
+                                                    </div>
+                                                    <div class="mylist-cart-register-select-item-content-text">
+                                                        Enjoy doing business with Amway, get maximum cash back. 21%
+                                                        every month
+                                                    </div>
+                                                    <div class="mylist-cart-register-select-item-content-text --bold">
+                                                        Apply today, get a discount of 300 baht
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="mylist-cart-register-select-text">
+                                            *กรุณาเตรียมบัตรประชาชนเพื่อใช้ในการสมัคร
+                                        </div>
+                                        <div class="mylist-cart-register-select-item">
+                                            <input type="radio" class="mylist-cart-register-select-item-input" id="no-dt" name="radio-group" checked>
+                                            <label for="no-dt" class="mylist-cart-register-select-item-label">
+                                                <div class="mylist-cart-register-select-item-icon"></div>
+                                                <div class="mylist-cart-register-select-item-content">
+                                                    <div class="mylist-cart-register-select-item-content-nothank">
+                                                        ไม่เป็นไร , ฉันต้องการซื้อสินค้าราคาปกติ
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </form>
+
+
+                                </div>
+                                <div class="checkout-cart-delivery-cost">
+                                    <div class="checkout-cart-delivery-cost-title">Delivery cost</div>
+                                    <div class="checkout-cart-delivery-cost-price">
+                                        <div class="checkout-cart-delivery-cost-price-before">฿ 75</div>
+                                        <div class="checkout-cart-delivery-cost-price-after">Free</div>
+                                    </div>
+                                </div>
+                                <div class="checkout-promotion-area">
+                                    <div class="checkout-promotion-title ">
+                                        Promotion Code
+                                    </div>
+                                    <div class="checkout-promotion-addOn-area " id="promotion-addOn">
+                                        <div class="checkout-promotion-card ">
+                                            <div class="checkout-promotion-card-area">
+                                                <div class="checkout-promotion-card-close " onclick="openModal('deletePromo')">
+
+                                                </div>
+                                                <div class="checkout-promotion-card-text ">
+                                                    You get a 500 baht discount
+                                                </div>
+                                            </div>
+                                            <div class="checkout-promotion-card-price">
+                                                - ฿ 500
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="checkout-promotion-insert">
+                                        <div class="checkout-promotion-insert-input">
+                                            <div class="amway-input-area">
+                                                <input type="text" placeholder="Promo code" class="amway-input">
+                                            </div>
+
+                                        </div>
+                                        <div class="checkout-promotion-insert-btn">
+                                            <button class="btn-black " disabled> Apply </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <div class="checkout-cart-bar-area">
+                            <div class="checkout-cart-bar">
+                                <div class="checkout-cart-bar-box">
+                                    <div class="checkout-cart-bar-price-box">
+                                        <div class="checkout-cart-bar-price-area">
+                                            <div class="checkout-cart-bar-price retail-price">
+                                                ฿ 8,546
+                                            </div>
+
+                                        </div>
+                                        <div class="checkout-cart-bar-price-title">
+                                            ราคาปลีก
+                                        </div>
+                                    </div>
+                                    <div class="checkout-cart-bar-btn-box">
+                                        <button class="btn-black next-step-checkout" data-nextNumTo="2" data-nextContentTo="login">สั่งซื้อสินค้า</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end content area -->
+
+            </div>
+            <div class="shop-footer">
+                <div class="amway-container ">
+                    <div class="shop-footer-area">
+                        <div class="shop-f-content-call">
+                            <div class="shop-f-content-call-title">
+                                ต้องการความช่วยเหลือ ?
+                            </div>
+                            <div class="shop-f-content-call-number">
+                                <div class="shop-f-content-call-number-area">
+                                    <a href="tel:0-2725-8000">
+
+
+                                        <div class="shop-f-cc-n-icon">
+
+                                        </div>
+                                    </a>
+                                    <a href="tel:0-2725-8000" class="shop-f-cc-n-number">
+                                        0-2725-8000
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="shop-f-content-address">
+                            บริษัท แอมเวย์ (ประเทศไทย) จำกัด 1199/1 ถนนรามคำแหง แขวงหัวหมาก เขตบางกะปิ กรุงเทพ ฯ 10240
+                        </div>
+                        <div class="shop-f-content-language">
+                            <div class="shop-f-content-language-btn" onclick="openModal('shopChangeLangF')">
+                                <div class="shop-f-content-language-icon">
+
+                                </div>
+                                <div class="shop-f-content-language-text">
+                                    <div class="shop-f-content-language-text-list " data-lang="th">
+                                        ไทย
+                                    </div>
+                                    <div class="shop-f-content-language-text-list" data-lang="en">
+                                        English
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="shop-f-content-logo-area">
+                            <div class="shop-f-content-logo">
+                            </div>
+                        </div>
+                        <div class="shop-f-content-copyright">Copyright 2020,Amway(Thailand) Ltd,.</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="shop-change-lang-modal" id="shopChangeLangF">
+                <div class="bg-modal " onclick="closeModal('shopChangeLangF')"></div>
+                <div class="shop-change-lang-footer">
+                    <div class="shop-change-lang-footer-btn" onclick="closeModal('shopChangeLangF')" data-lang="th">
+                        <div class="shop-change-lang-footer-btn-text">
+                            ไทย
+                        </div>
+
+                    </div>
+                    <div class="shop-change-lang-footer-btn " onclick="closeModal('shopChangeLangF')" data-lang="en">
+                        <div class="shop-change-lang-footer-btn-text">
+                            English
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="amway-modal middle" id="deleteList">
+                <div class="bg-modal"></div>
+                <form class="amway-modal-content ">
+                    <div class="close-modal-bar">
+                        <div class="btn-close-modal"></div>
+                    </div>
+                    <div class="amway-modal-content-title text-center">ลบรายการแชร์ !</div>
+                    <div class="amway-modal-content-subtitle text-center">เมื่อลบแล้ว คุณจะไม่สามารถเข้าถึง แก้ไข หรือแชร์ได้อีก!
+                    </div>
+                    <div class="amway-modal-content-footer center">
+                        <button class="btn-outlin-black btn-h40 mr-3" onclick="closeModal('deleteList')">
+                            ยกเลิก</button>
+                        <button type="submit" class="btn-black btn-h40 confirm ">ยืนยัน</button>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="amway-modal middle" id="deleteItem">
+                <input type="hidden" class="input-for-use-something" value="">
+                <div class="bg-modal"></div>
+                <form class="amway-modal-content ">
+                    <div class="close-modal-bar">
+                        <div class="btn-close-modal"></div>
+                    </div>
+                    <div class="amway-modal-content-title text-center">ลบรายการ !</div>
+                    <div class="amway-modal-content-subtitle text-center">เมื่อลบแล้ว คุณจะไม่สามารถเข้าถึง แก้ไข หรือแชร์ได้อีก
+                    </div>
+                    <div class="amway-modal-content-footer center deleteItem-footer">
+                        <button class="btn-outlin-black btn-h40 mr-3" onclick="closeModal('deleteItem')">
+                            ยกเลิก</button> <button type="submit" class="btn-black btn-h40 confirm ">ยืนยัน</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="../../Header_degito/js/creator_change_language.js"></script>
+    <script src="../../Header_degito/js/change_delivery.js"></script>
+    <script src="../../Header_degito/js/search_action_fullslide.js"></script>
+    <script src="../../Header_degito/js/header_action.js"></script>
+    <script src="../../Header_degito/js/hamburger_action.js"></script>
+    <script src="../../Header_degito/js/custom_dropdown.js"></script>
+    <script src="../../Header_degito/js/header_action_creator.js"></script>
+    <!-- Add on -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+
+    <script src="../../Common/js/Modal.js"></script>
+    <script src="../../Common/js/IntegerInput-mod.js"></script>
+
+    <script src="../../FOA/js/btn-purcase.js"></script>
+</body>
+
+</html>

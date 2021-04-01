@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Checkout validate id card</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/common.251e0dcdff5dc232292e.css" />
+    <link rel="stylesheet" href="../../styles/Header___Header.7c1ab78bbef29ad6a8f4.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/common/css/style.css" />
+    <link rel="stylesheet" href="../../Header_degito/css/header_creator.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/shop-default.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/button.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/input-mod.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/checkout-step.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/input-error.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/noti-modal.css" />
+</head>
+
+
+<body>
+    <div id="root">
+        <div class="amway-header-creator-area " data-dropdown-top-restrict="true">
+            <div class="amway-header-creator-container">
+                <div class="amway-header-creator-main ">
+                    <div class="amway-header-creator-left">
+                        <a class="amway-logo-icon-creator"></a>
+                    </div>
+
+
+                    <div class="amway-header-creator-right">
+
+
+                        <div class="amway-header-language  visible-desktop">
+                            <div class="ahl-btn">English</div>
+                            <input type="hidden" value="en" name="inputLanguage" id="inputLanguage" class="inputLanguage">
+                            <div class="amway-header-modal for-changeLang ">
+                                <div class="bg-ahm sp"></div>
+                            </div>
+                            <div class="ahl-menu">
+                                <div class="ahl-menu-list" data-lang="th">ไทย</div>
+                                <div class="ahl-menu-list " data-lang="en">English</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="amway-main-layout " class="amway-main-layout step-creator">
+            <div class="amway-main-layout__content ">
+                <!-- content area -->
+                <div class="amway-container">
+                    <div class="checkout-title-area">
+                        <div class="checkout-title-text" id="checkout-title-text">
+                            ข้อมูลการสมัคร
+                        </div>
+                    </div>
+                    <div class="checkout-progress-trackers-for-five">
+                        <div class="checkout-progress-trackers-number success " data-trackNumber="1" data-titleTrack="ตรวจสอบตะกร้าสินค้า">
+                            <div class="checkout-progress-trackers-number-text">
+                                1
+                            </div>
+
+                        </div>
+                        <div class="checkout-progress-trackers-line pass" data-trackNumber="1"></div>
+                        <div class="checkout-progress-trackers-number success" data-trackNumber="2" data-titleTrack="เข้าสู่ระบบ">
+                            <div class="checkout-progress-trackers-number-text">
+                                2
+                            </div>
+
+                        </div>
+                        <div class="checkout-progress-trackers-line pass" data-trackNumber="2"></div>
+                        <div class="checkout-progress-trackers-number success" data-trackNumber="3" data-titleTrack="ที่อยู่จัดส่งสินค้า">
+                            <div class="checkout-progress-trackers-number-text">
+                                3
+                            </div>
+
+                        </div>
+                        <div class="checkout-progress-trackers-line pass" data-trackNumber="3"></div>
+                        <div class="checkout-progress-trackers-number active" data-trackNumber="4" data-titleTrack="ข้อมูลการสมัคร">
+                            <div class="checkout-progress-trackers-number-text">
+                                4
+                            </div>
+
+                        </div>
+                        <div class="checkout-progress-trackers-line" data-trackNumber="4"></div>
+                        <div class="checkout-progress-trackers-number" data-trackNumber="5" data-titleTrack="ตรวจสอบข้อมูลก่อนชำระเงิน">
+                            <div class="checkout-progress-trackers-number-text">
+                                5
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="checkout-progress-trackers-content-area">
+                        <div class="checkout-progress-trackers-content-box " data-Content="cart" data-Num="1">
+                            <div class="checkout-discount ">
+                                <div class="checkout-discount-area">
+                                    <div class="checkout-discount-box">
+                                        <div class="checkout-discount-box-img-area">
+                                            <img class="checkout-discount-box-img" src="../../image/creator/illustration/ask.svg">
+                                        </div>
+                                        <div class="checkout-discount-box-content">
+                                            <div class="checkout-discount-box-content-area">
+                                                <div class="checkout-discount-box-content-sub">
+                                                    ซื้อตอนนี้ลดทันที!
+                                                </div>
+                                                <div class="checkout-discount-box-content-title">
+                                                    1,400
+                                                    <span class="checkout-discount-box-content-unit">บาท</span>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-cart-area">
+                                <div class="checkout-cart-product">
+
+                                    <div class="checkout-card">
+                                        <div class="checkout-card-del" onclick="openModal('deleteItem')"></div>
+                                        <div class="checkout-card-img-area">
+                                            <img class="checkout-card-img" src="../../image/creator/product/normal.svg">
+                                        </div>
+                                        <div class="checkout-card-content">
+                                            <div class="checkout-card-code">
+                                                Item # 118209
+                                            </div>
+                                            <div class="checkout-card-name">
+                                                Artistry Signature Select™ Firming Body Lotion
+                                            </div>
+                                            <div class="checkout-card-status">
+
+                                            </div>
+                                            <div class="checkout-card-pc-area">
+                                                <div class="checkout-card-price">
+                                                    <div class="checkout-card-price-member">
+                                                        <div class="checkout-card-price-member-price">
+                                                            ฿ 1,728
+                                                        </div>
+                                                        <div class="checkout-card-price-member-title">
+                                                            Member
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkout-card-price-customer">
+                                                        <div class="checkout-card-price-customer-price">
+                                                            ฿ 1,928
+                                                        </div>
+                                                        <div class="checkout-card-price-customer-title">
+                                                            Customer
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-card-count">
+                                                    X2
+                                                </div>
+                                            </div>
+                                            <div class="checkout-card-free-product">
+                                                <div class="checkout-card-free-product-item">
+                                                    <div class="checkout-card-free-product-item-img-area">
+                                                        <img class="checkout-card-free-product-item-img" src="../../image/creator/product/normal.svg">
+
+                                                    </div>
+                                                    <div class="checkout-card-free-product-item-content">
+                                                        <div class="checkout-card-free-product-item-content-tag">
+                                                            Free
+                                                        </div>
+                                                        <div class="checkout-card-free-product-item-content-area">
+                                                            <div class="checkout-card-free-product-item-content-name">
+                                                                Artistry Signature Select™ Firming Body Lotion
+                                                            </div>
+                                                            <div class="checkout-card-free-product-item-count">
+                                                                X1
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-card">
+                                        <div class="checkout-card-del" onclick="openModal('deleteItem')"></div>
+                                        <div class="checkout-card-img-area">
+                                            <img class="checkout-card-img" src="../../image/creator/product/bundle.svg">
+                                        </div>
+                                        <div class="checkout-card-content">
+                                            <div class="checkout-card-code">
+                                                Item # 118209
+                                            </div>
+                                            <div class="checkout-card-name">
+                                                Nutrilite™ Strong Living Bundle
+                                            </div>
+                                            <div class="checkout-card-status --backOrder">
+                                                <div class="checkout-card-status-icon"></div>
+                                                <div class="checkout-card-status-text">Accrued product. Ready on 22/02/20
+                                                </div>
+                                            </div>
+                                            <div class="checkout-card-pc-area">
+                                                <div class="checkout-card-price">
+                                                    <div class="checkout-card-price-member">
+                                                        <div class="checkout-card-price-member-price">
+                                                            ฿ 2,990
+                                                        </div>
+                                                        <div class="checkout-card-price-member-title">
+                                                            Member
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkout-card-price-customer">
+                                                        <div class="checkout-card-price-customer-price">
+                                                            ฿ 3,990
+                                                        </div>
+                                                        <div class="checkout-card-price-customer-title">
+                                                            Customer
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-card-count">
+                                                    X2
+                                                </div>
+                                            </div>
+
+                                            <div class="checkout-card-free-product">
+
+                                            </div>
+                                        </div>
+                                        <div class="checkout-card-content-bundle">
+                                            <div class="checkout-card-content-bundle-title">
+                                                Products in this package
+                                            </div>
+                                            <div class="checkout-card-content-bundle-list-area">
+                                                <div class="checkout-card-content-bundle-list">
+                                                    <div class="checkout-card-content-bundle-list-count">
+                                                        x2
+                                                    </div>
+                                                    <div class="checkout-card-content-bundle-list-content">
+                                                        <div class="checkout-card-content-bundle-list-text">
+                                                            Nutrilite™ Vitamin C Extended Release
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-card-content-bundle-list">
+                                                    <div class="checkout-card-content-bundle-list-count">
+                                                        x2
+                                                    </div>
+                                                    <div class="checkout-card-content-bundle-list-content">
+                                                        <div class="checkout-card-content-bundle-list-text">
+                                                            Nutrilite™ Vitamin C Extended Release
+                                                        </div>
+                                                        <div class="checkout-card-status --backOrder">
+                                                            <div class="checkout-card-status-icon"></div>
+                                                            <div class="checkout-card-status-text">Accrued product. Ready on 22/02/20</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-card-content-bundle-list">
+                                                    <div class="checkout-card-content-bundle-list-count">
+                                                        x2
+                                                    </div>
+                                                    <div class="checkout-card-content-bundle-list-content">
+                                                        <div class="checkout-card-content-bundle-list-text">
+                                                            Nutrilite™ Vitamin C Extended Release
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-card-content-bundle-list">
+                                                    <div class="checkout-card-content-bundle-list-count">
+                                                        x2
+                                                    </div>
+                                                    <div class="checkout-card-content-bundle-list-content">
+                                                        <div class="checkout-card-content-bundle-list-text">
+                                                            Nutrilite™ Vitamin C Extended Release
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-card">
+                                        <div class="checkout-card-del" onclick="openModal('deleteItem')"></div>
+                                        <div class="checkout-card-img-area">
+                                            <img class="checkout-card-img" src="../../image/creator/product/color.svg">
+                                        </div>
+                                        <div class="checkout-card-content">
+                                            <div class="checkout-card-code">
+                                                Item # 118209
+                                            </div>
+                                            <div class="checkout-card-name">
+                                                Artistry Studio Bangkok Edition 2-In-1 Matte Lip Crayon
+                                            </div>
+                                            <div class="checkout-card-status">
+
+                                            </div>
+                                            <div class="checkout-card-color">
+                                                Color : Rose Goddess
+                                            </div>
+                                            <div class="checkout-card-pc-area">
+                                                <div class="checkout-card-price">
+                                                    <div class="checkout-card-price-member">
+                                                        <div class="checkout-card-price-member-price">
+                                                            ฿ 600
+                                                        </div>
+                                                        <div class="checkout-card-price-member-title">
+                                                            Member
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkout-card-price-customer">
+                                                        <div class="checkout-card-price-customer-price">
+                                                            ฿ 700
+                                                        </div>
+                                                        <div class="checkout-card-price-customer-title">
+                                                            Customer
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-card-count">
+                                                    X2
+                                                </div>
+                                            </div>
+                                            <div class="checkout-card-free-product">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout-cart-sumary">
+
+                                    <div class="checkout-cart-delivery-cost">
+                                        <div class="checkout-cart-delivery-cost-title">Delivery cost</div>
+                                        <div class="checkout-cart-delivery-cost-price">
+                                            <div class="checkout-cart-delivery-cost-price-before">฿ 75</div>
+                                            <div class="checkout-cart-delivery-cost-price-after">Free</div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-promotion-area">
+                                        <div class="checkout-promotion-title ">
+                                            Promotion Code
+                                        </div>
+                                        <div class="checkout-promotion-addOn-area " id="promotion-addOn">
+                                            <div class="checkout-promotion-card ">
+                                                <div class="checkout-promotion-card-area">
+                                                    <div class="checkout-promotion-card-close " onclick="openModal('deletePromo')">
+
+                                                    </div>
+                                                    <div class="checkout-promotion-card-text ">
+                                                        You get a 500 baht discount
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-promotion-card-price">
+                                                    - ฿ 500
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="checkout-promotion-insert">
+                                            <div class="checkout-promotion-insert-input">
+                                                <div class="amway-input-area input-errorMessage">
+                                                    <input type="text" placeholder="Promo code" class="amway-input">
+                                                </div>
+                                                <div class="amway-input-error alert_error">Incorrect information</div>
+                                            </div>
+                                            <div class="checkout-promotion-insert-btn">
+                                                <button class="btn-black "> Apply </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="padding-x-for-mb">
+                                        <div class="checkout-line"></div>
+                                    </div>
+
+                                    <div class="checkout-registration-area">
+                                        <div class="checkout-registration-title">Select Registration Level</div>
+                                        <form action="#" class="checkout-registration-checkbox-all">
+                                            <div class="checkout-registration-checkbox-area">
+                                                <input type="radio" id="checkout-registration-ap" class="checkout-registration-input" name="radio-group" checked>
+                                                <label for="checkout-registration-ap" class="checkout-registration-label">
+                                                    <div class="checkout-registration-checkbox">
+
+                                                    </div>
+                                                    <div class="checkout-registration-content">
+                                                        <div class="checkout-registration-content-area">
+                                                            <div class="checkout-registration-content-title">
+                                                                Register Amplus Point
+                                                            </div>
+                                                            <div class="checkout-registration-content-price">
+                                                                ฿ 100
+                                                            </div>
+                                                        </div>
+                                                        <div class="checkout-registration-content-description">
+                                                            Enjoy shopping with a member price, and get Amplus Point 300
+                                                            points
+                                                        </div>
+                                                    </div>
+
+                                                </label>
+
+                                            </div>
+                                            <div class="checkout-registration-checkbox-area">
+                                                <input type="radio" id="checkout-registration-ab" class="checkout-registration-input" name="radio-group">
+                                                <label for="checkout-registration-ab" class="checkout-registration-label">
+                                                    <div class="checkout-registration-checkbox">
+
+                                                    </div>
+                                                    <div class="checkout-registration-content">
+                                                        <div class="checkout-registration-content-area">
+                                                            <div class="checkout-registration-content-title">
+                                                                Register Amway Business
+                                                            </div>
+                                                            <div class="checkout-registration-content-price">
+                                                                ฿ 900
+                                                            </div>
+                                                        </div>
+                                                        <div class="checkout-registration-content-description">
+                                                            Enjoy doing business with Amway, get maximum cash back. 21%
+                                                            every month
+                                                        </div>
+                                                        <div class="checkout-registration-content-description-sub">
+                                                            Apply today, get a discount of 300 baht
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-cart-bar-area">
+                                <div class="checkout-cart-bar">
+                                    <div class="checkout-cart-bar-box">
+                                        <div class="checkout-cart-bar-price-box">
+                                            <div class="checkout-cart-bar-price-area">
+                                                <div class="checkout-cart-bar-price">
+                                                    ฿ 7,146
+                                                </div>
+                                                <div class="checkout-cart-bar-price-before">
+                                                    ฿ 8,546
+                                                </div>
+                                            </div>
+                                            <div class="checkout-cart-bar-price-title">
+                                                ราคาสมาชิก
+                                            </div>
+                                        </div>
+                                        <div class="checkout-cart-bar-btn-box">
+                                            <button class="btn-black next-step-checkout" data-nextNumTo="2" data-nextContentTo="login">สั่งซื้อสินค้า</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-progress-trackers-content-box " data-Content="login" data-Num="2">
+
+                            <div class="checkout-box-area">
+                                <div class="checkout-box">
+
+                                    <div class="checkout-login-social">
+                                        <div class="checkout-login-social-title">
+                                            สวัสดีคุณลูกค้า
+                                        </div>
+                                        <div class="checkout-login-social-subtitle">
+                                            กรุณาเลือกช่องทางดำเนินการต่อ
+                                        </div>
+                                        <div class="checkout-login-social-area">
+                                            <button class="checkout-login-social-btn line next-step-checkout" data-nextNumTo="2" data-nextContentTo="findByPhone">ดำเนินการต่อด้วย
+                                                LINE</button>
+                                            <button class="checkout-login-social-btn facebook next-step-checkout" data-nextNumTo="2" data-nextContentTo="findByPhone">ดำเนินการต่อด้วย
+                                                Facebook</button>
+                                        </div>
+                                        <div class="checkout-login-social-text">เพื่อดำเนินการต่อ คุณอ่านและยอมรับ</div>
+                                        <a class="checkout-login-social-textA" onclick="openPolicy('policy')">เงื่อนไขการให้บริการและนโยบายความเป็นส่วนตัว</a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="checkout-progress-trackers-content-box" data-Content="findByPhone" data-Num="2">
+                            <div class="checkout-box-area">
+                                <div class="checkout-box">
+                                    <div class="checkout-box-text">ค้นหาบัญชีด้วยหมายเลขโทรศัพท์</div>
+                                    <div class="checkout-box-label-input">เบอร์โทรศัพท์มือถือ*</div>
+                                    <div class="amway-input-area input-errorMessage">
+                                        <input type="tel" class="amway-input phonenumber" placeholder="เบอร์โทรศัพท์มือถือ" id="phonenumber">
+                                    </div>
+                                    <div class="amway-input-error alert_error">Incorrect information</div>
+                                    <div class="checkout-box-footer">
+                                        <button class="btn-black btn-checkout-step next-step-checkout" data-nextNumTo="2" data-nextContentTo="memberConfirm">ถัดไป</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-progress-trackers-content-box   " data-Content="otp" data-Num="2">
+                            <div class="checkout-box-area">
+                                <div class="checkout-box">
+                                    <div class="checkout-box-text">ยืนยันบัญชีด้วย SMS</div>
+                                    <div class="checkout-box-text-sub">รหัสได้ส่งไปยัง เบอร์โทรศัพท์</div>
+                                    <div class="checkout-box-number-area">
+                                        <div class="checkout-box-number">
+                                            089-888-9999
+                                        </div>
+                                        <div class="checkout-box-number-btn next-step-checkout" data-nextNumTo="2" data-nextContentTo="findByPhone">
+                                            เปลี่ยน
+                                        </div>
+                                    </div>
+                                    <form method="get" class="digit-group digitOtp-errorMessage" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+                                        <input type="text" class=" checkout-box-otp" id="digit-1" name="digit-1" data-next="digit-2" onkeyup="clickEvent(this,'digit-2')">
+                                        <input type="text" class=" checkout-box-otp" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" onkeyup="clickEvent(this,'digit-3')">
+                                        <input type="text" class=" checkout-box-otp" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2" onkeyup="clickEvent(this,'digit-4')">
+                                        <input type="text" class=" checkout-box-otp" id="digit-4" name="digit-4" data-next="digit-4" data-previous="digit-3" onkeyup="clickEvent(this,'digit-4')">
+                                    </form>
+                                    <div class="digitOtp-error alert_error">Incorrect information</div>
+                                    <div class="checkout-box-otp-send-area">
+                                        <div class="checkout-box-otp-send-text">
+                                            ไม่ได้รับรหัส ?
+                                        </div>
+                                        <a class="checkout-box-otp-send-btn">
+                                            ส่ง OTP อีกครั้ง
+                                        </a>
+                                    </div>
+                                    <div class="checkout-box-footer">
+                                        <button class="btn-black btn-checkout-step next-step-checkout" data-nextNumTo="3" data-nextContentTo="shippingInfo">ยืนยัน</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-progress-trackers-content-box" data-Content="memberConfirm" data-Num="2">
+                            <div class="checkout-box-area">
+                                <div class="checkout-box">
+                                    <div class="checkout-box-text">เราพบว่าคุณเป็น นักธุรกิจหรือสมาชิกแอมเวย์
+                                    </div>
+                                    <div class="checkout-box-text-sub ">กรุณาระบุเลขรหัสสมาชิก นธอ. และเลข 4 ตัวท้ายของบัตรประชาชน
+                                    </div>
+                                    <div class="checkout-box-label-input mt-4">รหัสสมาชิก นธอ.</div>
+                                    <div class="amway-input-area checkout-box-input input-errorMessage ">
+                                        <input type="text" class="amway-input " placeholder="รหัสสมาชิก นธอ." id="abo-code">
+                                    </div>
+                                    <div class="amway-input-error alert_error">Incorrect information</div>
+                                    <div class="checkout-box-label-input mt-3">เลข 4 ตัวท้ายของบัตรประชาชน</div>
+                                    <div class="amway-input-area checkout-box-input input-errorMessage">
+                                        <input type="tel" maxlength="4" class="amway-input" placeholder="เลข 4 ตัวท้ายของบัตรประชาชน" id="last-four-degitIdcard">
+                                    </div>
+                                    <div class="amway-input-error alert_error">Incorrect information</div>
+
+                                    <div class="checkout-box-footer">
+                                        <button class="btn-black btn-checkout-step next-step-checkout" data-nextNumTo="3" data-nextContentTo="shippingInfo">ยืนยัน</button>
+                                    </div>
+                                    <div class="checkout-box-call-when-prob">
+                                        หากคุณกำลังประสบปัญหาในการเข้าสู่ระบบบัญชี <br> กรุณาติดต่อเจ้าหนาที่
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-progress-trackers-content-box " data-Content="shippingInfo" data-Num="3">
+                            <div class="checkout-box-area">
+                                <div class="checkout-box">
+                                    <div class="checkout-box-label-input mt-3">ชื่อ (ภาษาไทย)*</div>
+                                    <div class="amway-input-area checkout-box-input input-errorMessage">
+                                        <input type="text" class="amway-input" placeholder="ชื่อ (ภาษาไทย)" id="name">
+                                    </div>
+                                    <div class="amway-input-error alert_error">Incorrect information</div>
+                                    <div class="checkout-box-label-input mt-3">นามสกุล (ภาษาไทย)*</div>
+                                    <div class="amway-input-area checkout-box-input input-errorMessage">
+                                        <input type="text" class="amway-input" placeholder="นามสกุล (ภาษาไทย)" id="last-name">
+                                    </div>
+                                    <div class="amway-input-error alert_error">Incorrect information</div>
+                                    <div class="checkout-box-label-input mt-3">ที่อยู่ *</div>
+                                    <textarea rows="3" class="amway-textarea checkout-box-textarea textarea-errorMessage" placeholder="บ้านเลขที่,อาคาร,ถนน" autocomplete="off" autofocus=""></textarea>
+                                    <div class="amway-textarea-error alert_error">Incorrect information</div>
+                                    <div class="checkout-box-select-two-area">
+                                        <div class="checkout-box-select-two">
+                                            <div class="checkout-box-label-input mt-3">จังหวัด</div>
+                                            <div class="checkout-box-select ">
+                                                <input name="province-instalment" id="province-instalment" class="mz-dropdown-input__input" value="newItem" readonly="" />
+                                                <div class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown checkout-box-selectOption dd-marke-check selectOption-error">
+                                                    <button id="province-instalment-dropdown" type="button" class="mz-dropdown__button" data-placeholder="เลือกจังหวัด" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <div class="mz-dropdown__button-text --selected">
+                                                            <div class="mz-dropdown__text">
+                                                                เลือกจังหวัด
+                                                            </div>
+                                                        </div>
+                                                        <span class="mz-icon --arrow-down mz-dropdown__icon"></span>
+                                                    </button>
+                                                    <ul class="mz-dropdown__menu dropdown-menu" aria-labelledby="province-instalment-dropdown">
+                                                        <div class="mod_mz-dropdown__menu">
+                                                            <li data-value="priceHL" class="mz-dropdown__option">
+                                                                <div class="mz-dropdown__text">
+                                                                    กรุงเทพมหานคร
+                                                                </div>
+                                                            </li>
+                                                            <li data-value="priceLH" class="mz-dropdown__option">
+                                                                <div class="mz-dropdown__text">
+                                                                    กระบี่
+                                                                </div>
+                                                            </li>
+                                                            <li data-value="nameAZ" class="mz-dropdown__option">
+                                                                <div class="mz-dropdown__text">
+                                                                    กาญจนบุรี
+                                                                </div>
+                                                            </li>
+                                                        </div>
+
+
+
+                                                    </ul>
+                                                </div>
+                                                <div class="amway-input-error alert_error">Please select an option.
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="checkout-box-select-two">
+                                            <div class="checkout-box-label-input mt-3">เขต/อำเภอ</div>
+                                            <div class="checkout-box-select ">
+                                                <input name="district-instalment" id="district-instalment" class="mz-dropdown-input__input" value="newItem" readonly="" />
+                                                <div class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown checkout-box-selectOption dd-marke-check selectOption-error">
+                                                    <button id="district-instalment-dropdown" type="button" class="mz-dropdown__button" data-placeholder="เลือกเขต/อำเภอ" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <div class="mz-dropdown__button-text --selected">
+                                                            <div class="mz-dropdown__text">
+                                                                เลือกเขต/อำเภอ
+                                                            </div>
+                                                        </div>
+                                                        <span class="mz-icon --arrow-down mz-dropdown__icon"></span>
+                                                    </button>
+                                                    <ul class="mz-dropdown__menu dropdown-menu" aria-labelledby="district-instalment-dropdown">
+                                                        <div class="mod_mz-dropdown__menu">
+                                                            <li data-value="priceHL" class="mz-dropdown__option">
+                                                                <div class="mz-dropdown__text">
+                                                                    คลองสาน
+                                                                </div>
+                                                            </li>
+                                                            <li data-value="priceLH" class="mz-dropdown__option">
+                                                                <div class="mz-dropdown__text">
+                                                                    คลองสามวา
+                                                                </div>
+                                                            </li>
+                                                            <li data-value="nameAZ" class="mz-dropdown__option">
+                                                                <div class="mz-dropdown__text">
+                                                                    คลองเตย
+                                                                </div>
+                                                            </li>
+
+                                                        </div>
+
+
+                                                    </ul>
+                                                </div>
+                                                <div class="amway-input-error alert_error">Please select an option.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-box-select-two-area">
+                                        <div class="checkout-box-select-two">
+                                            <div class="checkout-box-label-input mt-3">แขวง / ตำบล</div>
+                                            <div class="checkout-box-select ">
+                                                <input name="subDistrict-instalment" id="subDistrict-instalment" class="mz-dropdown-input__input" value="newItem" readonly="" />
+                                                <div class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown checkout-box-selectOption dd-marke-check selectOption-error">
+                                                    <button id="subDistrict-instalment-dropdown" type="button" class="mz-dropdown__button" data-placeholder="แขวง / ตำบล" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <div class="mz-dropdown__button-text --selected">
+                                                            <div class="mz-dropdown__text">
+                                                                เลือกแขวง / ตำบล
+                                                            </div>
+                                                        </div>
+                                                        <span class="mz-icon --arrow-down mz-dropdown__icon"></span>
+                                                    </button>
+                                                    <ul class="mz-dropdown__menu dropdown-menu" aria-labelledby="subDistrict-instalment-dropdown">
+                                                        <div class="mod_mz-dropdown__menu">
+                                                            <li data-value="priceHL" class="mz-dropdown__option">
+                                                                <div class="mz-dropdown__text">
+                                                                    คลองต้นไทร
+                                                                </div>
+                                                            </li>
+                                                            <li data-value="priceLH" class="mz-dropdown__option">
+                                                                <div class="mz-dropdown__text">
+                                                                    คลองสาน
+                                                                </div>
+                                                            </li>
+                                                            <li data-value="nameAZ" class="mz-dropdown__option">
+                                                                <div class="mz-dropdown__text">
+                                                                    บางลำภูล่าง
+                                                                </div>
+                                                            </li>
+
+                                                        </div>
+
+
+                                                    </ul>
+                                                </div>
+                                                <div class="amway-input-error alert_error">Please select an option.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="checkout-box-select-two">
+                                            <div class="checkout-box-label-input mt-3">รหัสไปรษณีย์</div>
+                                            <div class="amway-input-area checkout-box-input input-errorMessage">
+                                                <input type="tel" maxlength="5" class="amway-input" placeholder="รหัสไปรษณีย์" id="postcode">
+                                            </div>
+                                            <div class="amway-input-error alert_error">Incorrect information</div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-box-footer">
+                                        <button class="btn-black btn-checkout-step next-step-checkout" data-nextNumTo="4" data-nextContentTo="register">ถัดไป</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="checkout-progress-trackers-content-box --selected" data-Content="register" data-Num="4">
+                            <div class="checkout-box-area">
+                                <div class="checkout-box">
+                                    <div class="checkout-box-label-input mt-3">เลขบัตรประชาชน 13 หลัก*</div>
+                                    <div class="amway-input-area checkout-box-input input-errorMessage">
+                                        <input type="text" class="amway-input" placeholder="กรุณากรอกหมายเลขบัตร 13 หลัก" id="idcard">
+                                    </div>
+                                    <div class="amway-input-error has-btn alert_error">
+                                        <div class="amway-input-error-text">
+                                            เราพบว่าคุณมีบัญชีกับแอมเวย์ <br>กรุณาเข้าสู่ระบบ
+                                        </div>
+                                        <div class="amway-input-error-btn-area">
+                                            <button class="amway-input-error-btn btn-black">เข้าสู่ระบบ</button>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-box-label-input mt-3">วัน / เดือน / ปีเกิด (dd/mm/yyyy)*</div>
+                                    <div class="amway-input-area checkout-box-input ">
+                                        <input type="text" class="amway-input" placeholder="dd/mm/yyyy" id="birthdayDate">
+                                    </div>
+                                    <div class="amway-input-error ">Incorrect information</div>
+                                    <div class="checkout-box-label-input mt-3">
+                                        รูปถ่ายบัตรประชาชนของคุณ*</div>
+                                    <div class="checkout-box-upload-area">
+                                        <div class="checkout-box-upload-img-area">
+                                            <img class="checkout-box-upload-img" src="../../image/creator/illustration/id-card.svg" id="checkout-box-upload-img">
+                                        </div>
+
+                                        <input type='file' class="checkout-box-upload-input" id="checkout-box-upload-input" />
+                                        <label for="checkout-box-upload-input" class="checkout-box-upload-label ">
+                                            <div class="checkout-box-upload-label-icon-area">
+                                                <div class="checkout-box-upload-label-icon">
+                                                </div>
+                                            </div>
+                                            <div class="checkout-box-upload-label-text">
+                                                อัพโหลดรูปภาพ
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="amway-upload-error ">Please upload a photo of your ID card.
+                                    </div>
+                                    <div class="checkout-box-upload-text mt-2">อัพโหลดไฟล์. jpg .jpeg หรือ. png และไม่เกิน 5M</div>
+                                    <div class="checkout-box-footer">
+                                        <button class="btn-black btn-checkout-step next-step-checkout" data-nextNumTo="5" data-nextContentTo="verifyInfoToPayment" disabled>ถัดไป</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-progress-trackers-content-box " data-Content="verifyInfoToPayment" data-Num="5">
+                            <div class="checkout-box-garuntee visible-mobile">
+                                <div class="checkout-box-garuntee-area">
+                                    <div class="checkout-box-garuntee-box">
+                                        <div class="checkout-box-garuntee-content">
+                                            <div class="checkout-box-garuntee-content-title">
+                                                รับประกันความพึงพอใจ
+                                            </div>
+                                            <div class="checkout-box-garuntee-content-text">
+                                                คืนสินค้าได้ภายใต้เงื่อนไขที่บริษัทกำหนด
+                                            </div>
+                                        </div>
+                                        <div class="checkout-box-garuntee-img-area">
+                                            <img class="checkout-box-garuntee-img" src="../../image/creator/illustration/garuntee.svg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-cart-area">
+                                <div class="checkout-cart-product">
+                                    <div class="checkout-shipping-area checkout-box-edit" id="shipping-box">
+                                        <div class="checkout-box-edit-title-area">
+                                            <div class="checkout-box-edit-title">
+                                                Shipping information
+                                            </div>
+                                            <div class="checkout-box-edit-btn">
+                                                <div class="checkout-box-edit-btn-edit" onclick="editBox('shipping-box')">
+                                                    <div class="checkout-box-edit-btn-edit-icon">
+
+                                                    </div>
+                                                    <div class="checkout-box-edit-btn-edit-text">
+                                                        Edit
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="checkout-box-edit-content-text">
+                                            <div class="checkout-box-labelSub-input">
+                                                1199/1 Ramkhamhaeng Road, Huamark Subdistrict, Bangkapi District Bangkok 10240
+                                            </div>
+
+                                        </div>
+                                        <div class="checkout-box-edit-content-edit">
+                                            <div class="checkout-box-label-input mt-3">ที่อยู่ *</div>
+                                            <textarea rows="3" class="amway-textarea checkout-box-textarea textarea-errorMessage " placeholder="บ้านเลขที่,อาคาร,ถนน" autocomplete="off" autofocus=""></textarea>
+                                            <div class="amway-textarea-error alert_error">Incorrect information</div>
+                                            <div class="checkout-box-select-two-area">
+                                                <div class="checkout-box-select-two">
+                                                    <div class="checkout-box-label-input mt-3">จังหวัด</div>
+                                                    <div class="checkout-box-select ">
+                                                        <input name="provinceEdit-instalment" id="provinceEdit-instalment" class="mz-dropdown-input__input" value="newItem" readonly="" />
+                                                        <div class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown checkout-box-selectOption dd-marke-check selectOption-error">
+                                                            <button id="provinceEdit-instalment-dropdown" type="button" class="mz-dropdown__button" data-placeholder="เลือกจังหวัด" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <div class="mz-dropdown__button-text --selected">
+                                                                    <div class="mz-dropdown__text">
+                                                                        เลือกจังหวัด
+                                                                    </div>
+                                                                </div>
+                                                                <span
+                                                                    class="mz-icon --arrow-down mz-dropdown__icon"></span>
+                                                            </button>
+                                                            <ul class="mz-dropdown__menu dropdown-menu" aria-labelledby="provinceEdit-instalment-dropdown">
+                                                                <div class="mod_mz-dropdown__menu">
+                                                                    <li data-value="priceHL" class="mz-dropdown__option">
+                                                                        <div class="mz-dropdown__text">
+                                                                            กรุงเทพมหานคร
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-value="priceLH" class="mz-dropdown__option">
+                                                                        <div class="mz-dropdown__text">
+                                                                            กระบี่
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-value="nameAZ" class="mz-dropdown__option">
+                                                                        <div class="mz-dropdown__text">
+                                                                            กาญจนบุรี
+                                                                        </div>
+                                                                    </li>
+
+                                                                </div>
+
+
+                                                            </ul>
+                                                        </div>
+                                                        <div class="amway-input-error alert_error">Please select an option.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-box-select-two">
+                                                    <div class="checkout-box-label-input mt-3">เขต/อำเภอ</div>
+                                                    <div class="checkout-box-select ">
+                                                        <input name="districtEdit-instalment" id="districtEdit-instalment" class="mz-dropdown-input__input" value="newItem" readonly="" />
+                                                        <div class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown checkout-box-selectOption dd-marke-check selectOption-error">
+                                                            <button id="districtEdit-instalment-dropdown" type="button" class="mz-dropdown__button" data-placeholder="เลือกเขต/อำเภอ" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <div class="mz-dropdown__button-text --selected">
+                                                                    <div class="mz-dropdown__text">
+                                                                        เลือกเขต/อำเภอ
+                                                                    </div>
+                                                                </div>
+                                                                <span
+                                                                    class="mz-icon --arrow-down mz-dropdown__icon"></span>
+                                                            </button>
+                                                            <ul class="mz-dropdown__menu dropdown-menu" aria-labelledby="districtEdit-instalment-dropdown">
+                                                                <div class="mod_mz-dropdown__menu">
+                                                                    <li data-value="priceHL" class="mz-dropdown__option">
+                                                                        <div class="mz-dropdown__text">
+                                                                            คลองสาน
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-value="priceLH" class="mz-dropdown__option">
+                                                                        <div class="mz-dropdown__text">
+                                                                            คลองสามวา
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-value="nameAZ" class="mz-dropdown__option">
+                                                                        <div class="mz-dropdown__text">
+                                                                            คลองเตย
+                                                                        </div>
+                                                                    </li>
+                                                                </div>
+
+
+
+                                                            </ul>
+                                                        </div>
+                                                        <div class="amway-input-error alert_error">Please select an option.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-box-select-two-area">
+                                                <div class="checkout-box-select-two">
+                                                    <div class="checkout-box-label-input mt-3">แขวง / ตำบล</div>
+                                                    <div class="checkout-box-select ">
+                                                        <input name="subDistrictEdit-instalment" id="subDistrictEdit-instalment" class="mz-dropdown-input__input" value="newItem" readonly="" />
+                                                        <div class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown checkout-box-selectOption dd-marke-check selectOption-error">
+                                                            <button id="subDistrictEdit-instalment-dropdown" type="button" class="mz-dropdown__button" data-placeholder="แขวง / ตำบล" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <div class="mz-dropdown__button-text --selected">
+                                                                    <div class="mz-dropdown__text">
+                                                                        เลือกแขวง / ตำบล
+                                                                    </div>
+                                                                </div>
+                                                                <span
+                                                                    class="mz-icon --arrow-down mz-dropdown__icon"></span>
+                                                            </button>
+                                                            <ul class="mz-dropdown__menu dropdown-menu" aria-labelledby="subDistrictEdit-instalment-dropdown">
+                                                                <div class="mod_mz-dropdown__menu">
+                                                                    <li data-value="priceHL" class="mz-dropdown__option">
+                                                                        <div class="mz-dropdown__text">
+                                                                            คลองต้นไทร
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-value="priceLH" class="mz-dropdown__option">
+                                                                        <div class="mz-dropdown__text">
+                                                                            คลองสาน
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-value="nameAZ" class="mz-dropdown__option">
+                                                                        <div class="mz-dropdown__text">
+                                                                            บางลำภูล่าง
+                                                                        </div>
+                                                                    </li>
+                                                                </div>
+
+
+
+                                                            </ul>
+                                                        </div>
+                                                        <div class="amway-input-error alert_error">Please select an option.
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="checkout-box-select-two">
+                                                    <div class="checkout-box-label-input mt-3">รหัสไปรษณีย์</div>
+                                                    <div class="amway-input-area checkout-box-input input-errorMessage">
+                                                        <input type="tel" maxlength="5" class="amway-input" placeholder="รหัสไปรษณีย์" id="postcodeEdit">
+                                                    </div>
+                                                    <div class="amway-input-error alert_error">Incorrect information
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-box-edit-content-edit-footer">
+                                                <button class="btn-black" onclick="closeEditBox('shipping-box')">บันทึก</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-phonenumber-area checkout-box-edit" id="phonenumber-box">
+                                        <div class="checkout-box-edit-title-area">
+                                            <div class="checkout-box-edit-title">
+                                                Phone number
+                                            </div>
+                                            <div class="checkout-box-edit-btn">
+                                                <div class="checkout-box-edit-btn-edit" onclick="editBox('phonenumber-box')">
+                                                    <div class="checkout-box-edit-btn-edit-icon">
+
+                                                    </div>
+                                                    <div class="checkout-box-edit-btn-edit-text">
+                                                        Edit
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="checkout-box-edit-content-text">
+                                            <div class="checkout-box-labelSub-input">
+                                                089-888-9999
+                                            </div>
+                                        </div>
+                                        <div class="checkout-box-edit-content-edit">
+                                            <div class="checkout-box-label-input mt-3">เบอร์โทรศัพท์มือถือ*</div>
+                                            <div class="amway-input-area checkout-box-input input-errorMessage">
+
+                                                <input type="tel" class="amway-input phonenumber" placeholder="เบอร์โทรศัพท์มือถือ" id="phonenumberEdit">
+                                            </div>
+                                            <div class="amway-input-error alert_error">Incorrect information</div>
+                                            <div class="checkout-box-edit-content-edit-footer">
+                                                <button class="btn-black" onclick="closeEditBox('phonenumber-box')">บันทึก</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-personalinformation-area checkout-box-edit" id="personalinformation-box">
+                                        <div class="checkout-box-edit-title-area">
+                                            <div class="checkout-box-edit-title">
+                                                Personal information
+                                            </div>
+                                            <div class="checkout-box-edit-btn">
+                                                <div class="checkout-box-edit-btn-edit" onclick="editBox('personalinformation-box')">
+                                                    <div class="checkout-box-edit-btn-edit-icon">
+
+                                                    </div>
+                                                    <div class="checkout-box-edit-btn-edit-text">
+                                                        Edit
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="checkout-box-edit-content-text">
+                                            <div class="checkout-box-label-input mt-3">ชื่อ - นามสกุล</div>
+                                            <div class="checkout-box-labelSub-input">อัจฉราพรรณ รัตนานุกูลชัย</div>
+                                            <div class="checkout-box-label-input mt-3">เลขบัตรประชาชน 13 หลัก</div>
+                                            <div class="checkout-box-labelSub-input">1-2345-67891-01-2</div>
+                                            <div class="checkout-box-label-input mt-3">วัน / เดือน / ปีเกิด</div>
+                                            <div class="checkout-box-labelSub-input">01 / 01 / 2020</div>
+                                        </div>
+                                        <div class="checkout-box-edit-content-edit">
+                                            <div class="checkout-box-label-input mt-3">ชื่อ</div>
+                                            <div class="amway-input-area checkout-box-input input-errorMessage">
+                                                <input type="text" class="amway-input" placeholder="ชื่อ (ภาษาไทย)" id="nameEdit">
+                                            </div>
+                                            <div class="amway-input-error alert_error">Incorrect information</div>
+                                            <div class="checkout-box-label-input mt-3">นามสกุล</div>
+                                            <div class="amway-input-area checkout-box-input input-errorMessage">
+                                                <input type="text" class="amway-input" placeholder="นามสกุล (ภาษาไทย)" id="last-nameEdit">
+                                            </div>
+                                            <div class="amway-input-error alert_error">Incorrect information</div>
+                                            <div class="checkout-box-label-input mt-3">เลขบัตรประชาชน 13 หลัก</div>
+                                            <div class="amway-input-area checkout-box-input input-errorMessage">
+                                                <input type="text" class="amway-input" placeholder="กรุณากรอกหมายเลขบัตร 13 หลัก" id="idcardEdit">
+                                            </div>
+                                            <div class="amway-input-error alert_error">Incorrect information</div>
+                                            <div class="checkout-box-label-input mt-3">วัน / เดือน / ปีเกิด (dd/mm/yyyy)*
+                                            </div>
+                                            <div class="amway-input-area checkout-box-input input-errorMessage">
+                                                <input type="text" class="amway-input" placeholder="dd/mm/yyyy" id="birthdayDateEdit">
+                                            </div>
+                                            <div class="amway-input-error alert_error">Incorrect information</div>
+                                            <div class="checkout-box-edit-content-edit-footer">
+                                                <button class="btn-black" onclick="closeEditBox('personalinformation-box')">บันทึก</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-box-sponsors">
+                                        <div class="checkout-box-sponsors-title">
+                                            Sponsors information
+                                        </div>
+                                        <div class="checkout-box-label-input mt-3">ABO sponsor</div>
+                                        <div class="checkout-box-sponsors-name">
+                                            <div class="checkout-box-labelSub-input">312654 - Robert Shawn</div>
+                                            <div class="checkout-box-foreignSponser-name" id="checkout-box-foreignSponser-name">
+                                                <div class="checkout-box-label-input ">ABO foreign sponsor</div>
+                                                <div class="checkout-box-labelSub-input">312654 - Robert Shawn</div>
+                                            </div>
+                                        </div>
+                                        <div class="checkout-foreignSponser-edit" id="foreignSponser-edit">
+                                            <div class="checkout-box-label-input mt-3">ABO foreign sponsor</div>
+                                            <div class="checkout-foreignSponser-choose-country mt-3">
+
+                                                <div class="checkout-box-select ">
+                                                    <input name="countryEdit-instalment" id="countryEdit-instalment" class="mz-dropdown-input__input" value=" " readonly="" />
+                                                    <div class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown checkout-box-selectOption dd-marke-check selectOption-error">
+                                                        <button id="countryEdit-instalment-dropdown" type="button" class="mz-dropdown__button" data-placeholder="แขวง / ตำบล" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <div class="mz-dropdown__button-text --selected">
+                                                                <div class="mz-dropdown__text">
+                                                                    เลือกประเทศ
+                                                                </div>
+                                                            </div>
+                                                            <span class="mz-icon --arrow-down mz-dropdown__icon"></span>
+                                                        </button>
+                                                        <ul class="mz-dropdown__menu dropdown-menu" aria-labelledby="countryEdit-instalment-dropdown">
+                                                            <div class="mod_mz-dropdown__menu">
+                                                                <li data-value="priceHL" class="mz-dropdown__option">
+                                                                    <div class="mz-dropdown__text">
+                                                                        Afghanistan
+                                                                    </div>
+                                                                </li>
+                                                                <li data-value="priceLH" class="mz-dropdown__option">
+                                                                    <div class="mz-dropdown__text">
+                                                                        Albania
+                                                                    </div>
+                                                                </li>
+                                                                <li data-value="nameAZ" class="mz-dropdown__option">
+                                                                    <div class="mz-dropdown__text">
+                                                                        Algeria
+                                                                    </div>
+                                                                </li>
+                                                            </div>
+
+
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="amway-input-error alert_error">Please select an option.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="amway-input-area checkout-box-input mt-3  input-errorMessage">
+                                                <input type="text" class="amway-input" placeholder="หมายเลขนักธุรกิจต่างชาติ" id="foreignSponserEdit">
+                                            </div>
+                                            <div class="amway-input-error alert_error">Incorrect information</div>
+                                            <div class="checkout-box-edit-content-edit-footer">
+                                                <button class="btn-outline-black mr-3" onclick="closeSponserEditBox('foreignSponser-edit')">ยกเลิก</button>
+                                                <button class="btn-black" onclick="saveSponserEditBox('foreignSponser-edit')">บันทึก</button>
+                                            </div>
+                                        </div>
+                                        <div class="checkout-box-sponser-link" onclick="editSponserBox('foreignSponser-edit')" id="foreignSponserEditbtn">+ Add foreign sponsor</div>
+
+                                    </div>
+                                </div>
+                                <div class="checkout-cart-sumary">
+                                    <div class="checkout-box-garuntee visible-desktop">
+                                        <div class="checkout-box-garuntee-area">
+                                            <div class="checkout-box-garuntee-box">
+                                                <div class="checkout-box-garuntee-content">
+                                                    <div class="checkout-box-garuntee-content-title">
+                                                        รับประกันความพึงพอใจ
+                                                    </div>
+                                                    <div class="checkout-box-garuntee-content-text">
+                                                        คืนสินค้าได้ภายใต้เงื่อนไขที่บริษัทกำหนด
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-box-garuntee-img-area">
+                                                    <img class="checkout-box-garuntee-img" src="../../image/creator/illustration/garuntee.svg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-order-area">
+                                        <div class="checkout-order-title">
+                                            Order information
+                                        </div>
+                                        <div class="checkout-order-text">
+                                            (5item)
+                                        </div>
+                                    </div>
+                                    <div class="checkout-order-pic-area">
+                                        <div class="checkout-order-pic-img">
+                                            <img class="checkout-order-pic-image" src="../../image/creator/product/normal.svg">
+                                        </div>
+                                        <div class="checkout-order-pic-img">
+                                            <img class="checkout-order-pic-image" src="../../image/creator/product/bundle.svg">
+                                        </div>
+                                        <div class="checkout-order-pic-img">
+                                            <img class="checkout-order-pic-image" src="../../image/creator/product/color.svg">
+                                        </div>
+                                        <div class="checkout-order-pic-img-action ">
+                                            <div class="actionShowPic">+2</div>
+                                            <img class="checkout-order-pic-image" src="../../image/creator/product/pd01.svg">
+                                        </div>
+                                        <div class="checkout-order-pic-img orderHide">
+                                            <img class="checkout-order-pic-image" src="../../image/creator/product/pd01.svg">
+                                        </div>
+                                        <div class="checkout-order-pic-img orderHide">
+                                            <img class="checkout-order-pic-image" src="../../image/creator/product/pd02.svg">
+                                        </div>
+                                    </div>
+                                    <div class="checkout-order-sumary-area">
+                                        <div class="checkout-order-sumary-Subtotal-area">
+                                            <div class="checkout-order-sumary-Subtotal-title">
+                                                Sub-total
+                                            </div>
+                                            <div class="checkout-order-sumary-Subtotal-price">
+                                                ฿ 6,000
+                                            </div>
+                                        </div>
+                                        <div class="checkout-order-sumary-discounts-area">
+                                            <div class="checkout-order-sumary-discounts-title">
+                                                Discounts
+
+                                            </div>
+                                            <div class="checkout-order-sumary-discounts-price">
+                                                ฿ 1,100
+                                            </div>
+                                        </div>
+                                        <div class="checkout-order-sumary-discounts-area">
+                                            <div class="checkout-order-sumary-discounts-title">
+                                                Discount coupons
+
+                                            </div>
+                                            <div class="checkout-order-sumary-discounts-price">
+                                                ฿ 300
+
+                                            </div>
+                                        </div>
+                                        <div class="checkout-order-sumary-discounts-area">
+                                            <div class="checkout-order-sumary-discounts-title">
+                                                Shipping cost
+                                            </div>
+                                            <div class="checkout-order-sumary-discounts-price">
+                                                Free
+                                            </div>
+                                        </div>
+                                        <div class="checkout-order-sumary-total-area">
+                                            <div class="checkout-order-sumary-total-title">
+                                                Total
+                                            </div>
+                                            <div class="checkout-order-sumary-total-price">
+                                                ฿ 7,146
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-cart-bar-area">
+                                <div class="checkout-cart-bar">
+                                    <div class="checkout-cart-bar-box">
+                                        <div class="checkout-cart-bar-price-box">
+                                            <div class="checkout-cart-bar-price-area">
+                                                <div class="checkout-cart-bar-price">
+                                                    ฿ 7,146
+                                                </div>
+                                                <div class="checkout-cart-bar-price-before">
+                                                    ฿ 8,546
+                                                </div>
+                                            </div>
+                                            <div class="checkout-cart-bar-price-title">
+                                                ราคาสมาชิก
+                                            </div>
+                                        </div>
+                                        <div class="checkout-cart-bar-btn-box">
+                                            <a class="btn-black" href="payment.html">สั่งซื้อสินค้า</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <!-- end content area -->
+            </div>
+            <div class="shop-footer">
+                <div class="amway-container ">
+                    <div class="shop-footer-area">
+                        <div class="shop-f-content-call">
+                            <div class="shop-f-content-call-title">
+                                ต้องการความช่วยเหลือ ?
+                            </div>
+                            <div class="shop-f-content-call-number">
+                                <div class="shop-f-content-call-number-area">
+                                    <a href="tel:0-2725-8000">
+
+
+                                        <div class="shop-f-cc-n-icon">
+
+                                        </div>
+                                    </a>
+                                    <a href="tel:0-2725-8000" class="shop-f-cc-n-number">
+                                        0-2725-8000
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="shop-f-content-address">
+                            บริษัท แอมเวย์ (ประเทศไทย) จำกัด 1199/1 ถนนรามคำแหง แขวงหัวหมาก เขตบางกะปิ กรุงเทพ ฯ 10240
+                        </div>
+                        <div class="shop-f-content-language">
+                            <div class="shop-f-content-language-btn" onclick="openModal('shopChangeLangF')">
+                                <div class="shop-f-content-language-icon">
+
+                                </div>
+                                <div class="shop-f-content-language-text">
+                                    <div class="shop-f-content-language-text-list " data-lang="th">
+                                        ไทย
+                                    </div>
+                                    <div class="shop-f-content-language-text-list" data-lang="en">
+                                        English
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="shop-f-content-logo-area">
+                            <div class="shop-f-content-logo">
+                            </div>
+                        </div>
+                        <div class="shop-f-content-copyright">Copyright 2020,Amway(Thailand) Ltd,.</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="shop-change-lang-modal" id="shopChangeLangF">
+                <div class="bg-modal " onclick="closeModal('shopChangeLangF')"></div>
+                <div class="shop-change-lang-footer">
+                    <div class="shop-change-lang-footer-btn" onclick="closeModal('shopChangeLangF')" data-lang="th">
+                        <div class="shop-change-lang-footer-btn-text">
+                            ไทย
+                        </div>
+
+                    </div>
+                    <div class="shop-change-lang-footer-btn " onclick="closeModal('shopChangeLangF')" data-lang="en">
+                        <div class="shop-change-lang-footer-btn-text">
+                            English
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="amway-policy-modal  policy" id="policy">
+                <div class="bg-modal "></div>
+                <div class="amway-modal-policy ">
+                    <div class="amway-plc-header">
+                        <div class="amway-plc-close" onclick="closePolicy('policy')"> </div>
+                        <div class="amway-plc-h-title">Create My Shop</div>
+                    </div>
+                    <div class="amway-plc-title">Terms and conditions</div>
+                    <div class="amway-plc-content">
+                        การเข้าถึงและใช้ส่วนที่มีการใช้รหัสป้องกันและ/หรือรักษาความปลอดภัยของแพลตฟอร์มและ/หรือการใช้บริการจะจำกัดไว้สำหรับลูกค้าที่มีบัญชีผู้ใช้เท่านั้นท่านต้องไม่เข้าใช้หรือพยายามเข้าใช้ส่วนดังกล่าวของแพลตฟอร์มนี้และ/หรือบริการหรือยังข้อมูลอื่นใดที่มีการป้องกันโดยไม่ได้รับอนุญาตผ่านทางช่องทางใด
+                        ๆ ที่เราไม่ได้เจตนาเปิดให้ใช้สำหรับการใช้งานโดยเฉพาะของท่าน การฝ่าฝืนข้อกำหนดนี้อาจจะเป็นความผิดตามพระราชบัญญัติว่าด้วยการกระทำผิดเกี่ยวกับคอมพิวเตอร์ พ.ศ. 2550 ของประเทศไทย
+                        </br>
+                        </br>
+                        </br>
+                        หากท่านอายุต่ำกว่า 20 ปี: ท่านต้องได้รับความยินยอมจากบิดามารดาหรือผู้ปกครองตามกฎหมายของท่านและบุคคลดังกล่าวจะต้องยอมรับเงื่อนไขการใช้บริการนี้และรับผิดชอบต่อ: (1) การกระทำของท่าน (2) ค่าบริการใด ๆ ที่เกี่ยวข้องกับการใช้บริการใดๆ หรือการซื้อสินค้าของท่าน
+                        และ (3) การยอมรับและปฏิบัติตามเงื่อนไขในการใช้บริการนี้ของท่าน หากท่านไม่ได้รับความยินยอมจากบิดามารดาหรือผู้ปกครองตามกฎหมายของท่านท่านต้องหยุดการใช้งาน/การเข้าใช้ แพลตฟอร์มและการใช้บริการ
+                    </div>
+                    <div class="amway-plc-footer padding-space-on-mb">
+                        <button class=" btn-black btn-h40 next-step-creator Accept btn-mod-single" data-stepContent="info" onclick="closePolicy('policy')">Accept</button>
+                    </div>
+                </div>
+            </div>
+            <div class="amway-modal middle" id="deleteItem">
+                <input type="hidden" class="input-for-use-something" value="">
+                <div class="bg-modal"></div>
+                <div class="amway-modal-content ">
+                    <div class="close-modal-bar">
+                        <div class="btn-close-modal"></div>
+                    </div>
+                    <div class="amway-modal-content-title text-center mb-3">คุณต้องการลบรายการนี้ใช่หรือไม่</div>
+                    <div class="amway-modal-content-subtitle text-center ">
+                        สินค้าบางรายการอาจอยู่ภายใต้เงื่อนไขโปรโมชั่น
+                        <br>ซึ่งอาจทำให้คุณไม่ได้รับสิทธิ์พิเศษ
+                    </div>
+                    <div class="amway-modal-content-footer center deleteItem-footer">
+                        <button class="btn-outlin-black btn-h40 mr-3" onclick="closeModal('deleteItem')">
+                            ไม่ใช่</button> <button class="btn-black btn-h40 confirm " onclick="openNoti('notiDelItem'); closeModal('deleteItem');">ใช่</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="amway-noti-modal --success" id="notiDelItem">
+                <div class="amway-noti-modal-box">
+                    <div class="amway-noti-modal-content-box">
+                        <div class="amway-noti-modal-box-icon">
+                        </div>
+                        <div class="amway-noti-modal-box-title">
+                            สินค้าถูกลบออกจากตะกร้าแล้ว
+                        </div>
+                    </div>
+
+                    <div class="amway-noti-modal-box-close" onclick="closeNoti('notiDelItem')">
+                    </div>
+                </div>
+            </div>
+            <div class="amway-modal middle" id="deletePromo">
+                <input type="hidden" class="input-for-use-something" value="">
+                <div class="bg-modal"></div>
+                <form class="amway-modal-content ">
+                    <div class="close-modal-bar">
+                        <div class="btn-close-modal"></div>
+                    </div>
+                    <div class="amway-modal-content-title text-center mb-3">คุณต้องการลบโค้ดส่วนลด/คูปองใช่หรือไม่</div>
+                    <div class="amway-modal-content-subtitle text-center ">
+                        คุณสามารถเลือกใช้ส่วนลดนี้ได้ภายหลัง
+                    </div>
+                    <div class="amway-modal-content-footer center deleteItem-footer">
+                        <button class="btn-outlin-black btn-h40 mr-3" onclick="closeModal('deletePromo')">
+                            ไม่ใช่</button> <button type="submit" class="btn-black btn-h40 confirm ">ใช่</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="../../Header_degito/js/creator_change_language.js"></script>
+    <script src="../../Header_degito/js/change_delivery.js"></script>
+    <script src="../../Header_degito/js/search_action_fullslide.js"></script>
+    <script src="../../Header_degito/js/header_action.js"></script>
+    <script src="../../Header_degito/js/hamburger_action.js"></script>
+    <script src="../../Header_degito/js/custom_dropdown.js"></script>
+    <script src="../../Header_degito/js/header_action_creator.js"></script>
+    <!-- Add on -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+    <script src="../../Common/js/Modal.js"></script>
+    <script src="../../AmwayCreator/js/editbox.js"></script>
+    <script src="../../AmwayCreator/js/checkout-step.js"></script>
+    <script src="../../AmwayCreator/js/noti-modal.js"></script>
+    <script src="../../Common/js/Dropdown-mod-border.js"></script>
+    <script src="../../v2/Common/js/DropdownInput.js"></script>
+</body>
+
+</html>

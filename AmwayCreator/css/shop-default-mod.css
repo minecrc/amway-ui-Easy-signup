@@ -1,0 +1,753 @@
+@media(min-width:1024px) {
+    .no-inMobile-mylist {
+        padding-top: 4.5rem;
+    }
+}
+
+@media(max-width:1023px) {}
+
+.amway-shop-banner {
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.amway-shop-banner-area {
+    position: relative;
+    width: 100%;
+}
+
+.amway-shop-content-area {
+    padding-bottom: 1rem;
+}
+
+@media(min-width:1024px) {
+    .amway-shop-banner {
+        background-position: center top !important;
+        width: 100%;
+        min-height: 11rem;
+        height: auto;
+        padding-bottom: 1rem;
+        background: url('../../image/creator/banner/banner-dt.svg');
+    }
+    .amway-shop-content-area {
+        position: relative;
+        background: #ffffff;
+        width: 100%;
+        height: auto;
+        padding-top: 2rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .amway-shop-banner {
+        width: 100%;
+        min-height: 21rem;
+        background: url('../../image/creator/banner/banner-mb.svg');
+        position: relative;
+    }
+    .amway-shop-banner.customer_view,
+    .amway-shop-banner.abo_view {
+        min-height: 21rem;
+    }
+    .amway-shop-banner.abo_view .amway-shop-banner-area {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .amway-shop-content-area {
+        background: #ffffff;
+        width: 100%;
+        height: auto;
+        padding-top: 2rem;
+        margin-top: -2rem;
+    }
+    .amway-shop-banner::before {
+        content: '';
+        position: absolute;
+        /*  top: 10rem; */
+        bottom: -6rem;
+        left: 0;
+        width: 100%;
+        height: 18rem;
+        background: url('../../image/creator/illustration/background-pad.svg');
+        background-position: top center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+}
+
+
+/* @media(max-width:896px) {
+    .amway-shop-banner::before {
+        top: 11rem;
+    }
+}
+*/
+
+@media(max-width:708px) {
+    .amway-shop-banner::before {
+        bottom: -9rem;
+    }
+}
+
+@media(max-width:430px) {
+    .amway-shop-banner::before {
+        bottom: -12rem;
+    }
+}
+
+@media(max-width:425px) {
+    .amway-shop-banner {
+        width: 100%;
+        min-height: 22rem;
+    }
+    .amway-shop-banner.customer_view {
+        min-height: 15rem;
+    }
+    .amway-shop-banner.abo_view {
+        min-height: 15rem;
+    }
+    .amway-shop-banner.abo_view .amway-shop-banner-area {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media(max-width:492px) and (min-width:431px) {
+    .amway-shop-banner::before {
+        bottom: -10rem;
+    }
+}
+
+
+/* garuntee */
+
+.amway-shop-guarantee {
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amway-shop-guarantee-box {
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background: url('../../image/creator/banner/garuntee-mb.svg');
+    display: flex;
+}
+
+.amway-shop-guarantee-content {}
+
+.amway-shop-guarantee-content-title {
+    font-weight: 700;
+    color: #38539A;
+}
+
+.amway-shop-guarantee-content-subtitle {
+    font-weight: 500;
+    color: #38539A;
+}
+
+.amway-shop-guarantee-img-box {}
+
+.amway-shop-guarantee-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+}
+
+@media(min-width:1024px) {
+    .amway-shop-guarantee-box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .amway-shop-guarantee-box-area {
+        width: 32rem;
+        height: 7rem;
+        padding-right: 0.5rem;
+        display: flex;
+    }
+    .amway-shop-guarantee-content {
+        width: calc(100% - 11rem);
+        padding: 2rem 1rem;
+    }
+    .amway-shop-guarantee-content-title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .amway-shop-guarantee-content-subtitle {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .amway-shop-guarantee-img-box {
+        margin-top: -2.25rem;
+        width: 11rem;
+        height: 9.25rem;
+    }
+    .amway-shop-guarantee-img {}
+}
+
+@media(max-width:1023px) {
+    .amway-shop-guarantee {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .amway-shop-guarantee.mb-breakfree {
+        padding: 0;
+    }
+    .amway-shop-guarantee-box {
+        width: 100%;
+        height: 4rem;
+        padding-right: 0.25rem;
+        border-radius: 0.5rem;
+    }
+    .amway-shop-guarantee.mb-breakfree .amway-shop-guarantee-box {
+        border-radius: 0rem;
+    }
+    .amway-shop-guarantee-box-area {
+        display: flex;
+        width: 100%;
+    }
+    .amway-shop-guarantee-content {
+        width: calc(100% - 5.75rem);
+        padding: 0.625rem 0.75rem;
+        padding-right: 0;
+    }
+    .amway-shop-guarantee.mb-breakfree .amway-shop-guarantee-box {
+        padding-left: 0.75rem;
+        padding-right: 1.25rem;
+    }
+    .amway-shop-guarantee-content-title {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+    .amway-shop-guarantee-content-subtitle {
+        font-size: 0.813rem;
+        line-height: 1.25rem;
+    }
+    .amway-shop-guarantee-img-box {
+        margin-top: -1.125rem;
+        width: 5.75rem;
+        height: 5.188rem;
+    }
+    .amway-shop-guarantee-img {}
+}
+
+
+/*  */
+
+.amway-shop-banner-social-area {
+    display: flex;
+    align-items: center;
+}
+
+.amway-shop-banner-social-area .shop-detail-social-btn {
+    background: #38539A;
+    cursor: pointer;
+}
+
+.amway-shop-banner-name {
+    font-weight: 700;
+    color: #38539A;
+}
+
+.amway-shop-banner-title {
+    font-weight: 700;
+}
+
+.amway-shop-banner-subtitle {
+    font-weight: 500;
+}
+
+.add-pd-area-text {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.btn-add-pd {
+    width: 9rem;
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1.25rem;
+    background: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: #2c2c2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-list-banner-edit-area {
+    display: flex;
+    align-items: center;
+}
+
+.amway-shop-banner-del {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    background: #ffffff;
+    -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    margin-left: 0.5rem;
+}
+
+.amway-shop-banner-del::after {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 0.75rem 0.75rem !important;
+}
+
+.shop-list-banner.pink .amway-shop-banner-del {
+    background: #7F3E3E;
+    color: #FFE2E2;
+}
+
+.shop-list-banner.orange .amway-shop-banner-del {
+    background: #A76C47;
+    color: #FFF1E8;
+}
+
+.shop-list-banner.yellow .amway-shop-banner-del {
+    background: #62625A;
+    color: #F8F8E7;
+}
+
+.shop-list-banner.green .amway-shop-banner-del {
+    background: #73793B;
+    color: #F0FAE5;
+}
+
+.shop-list-banner.blue .amway-shop-banner-del {
+    background: #396E75;
+    color: #E5FDFF;
+}
+
+.shop-list-banner.purple .amway-shop-banner-del {
+    background: #38539A;
+    color: #F1F2FF;
+}
+
+.shop-list-banner.pink .amway-shop-banner-del::after {
+    background: url('../../image/creator/bin/bin-red.svg')
+}
+
+.shop-list-banner.orange .amway-shop-banner-del::after {
+    background: url('../../image/creator/bin/bin-orange.svg')
+}
+
+.shop-list-banner.yellow .amway-shop-banner-del::after {
+    background: url('../../image/creator/bin/bin-yellow.svg')
+}
+
+.shop-list-banner.green .amway-shop-banner-del::after {
+    background: url('../../image/creator/bin/bin-green.svg')
+}
+
+.shop-list-banner.blue .amway-shop-banner-del::after {
+    background: url('../../image/creator/bin/bin-blue.svg')
+}
+
+.shop-list-banner.purple .amway-shop-banner-del::after {
+    background: url('../../image/creator/bin/bin-purple.svg')
+}
+
+@media(min-width:1024px) {
+    .amway-shop-banner-content-right {
+        position: absolute;
+        top: 1.75rem;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .amway-shop-banner-area {
+        padding-top: 1.75rem;
+    }
+    .shop-list-banner-name-area {
+        display: flex;
+        align-items: center;
+    }
+    .amway-shop-banner-name {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        display: flex;
+        align-items: baseline;
+        width: calc(100% - 9rem);
+    }
+    .amway-shop-banner-name-text {
+        max-width: calc(100% - 18rem);
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        margin-right: 1rem;
+    }
+    .no-social .amway-shop-banner-name {
+        width: 100%;
+    }
+    .no-social .amway-shop-banner-name-text {
+        max-width: calc(100% - 7rem);
+    }
+    .no-social .amway-shop-banner-edit-area {
+        min-width: 7rem;
+    }
+    .amway-shop-banner-title {
+        margin-top: 0.25rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .amway-shop-banner-subtitle {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .amway-shop-banner-edit {
+        font-size: 0;
+    }
+    .shop-list-banner-name-area .amway-shop-banner-edit,
+    .shop-list-banner-name-area .amway-shop-banner-del {
+        margin-top: 2rem;
+    }
+    .amway-shop-banner-share {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.5rem;
+        border-radius: 1.25rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: 1.5rem;
+        font-size: 1rem;
+        line-height: 2rem;
+        font-weight: 500;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        background: #ffffff;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    }
+    .amway-shop-banner-share::before {
+        content: '';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0.25rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: url('../../image/icon/icon-shere.svg');
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 1rem 1rem !important;
+        cursor: pointer;
+        margin-right: 0.125rem;
+    }
+    .amway-shop-banner-edit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.5rem;
+        border-radius: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        /*  margin-left: 1.5rem; */
+        font-size: 0.813rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        background: #38539A;
+        color: #F1F2FF;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    }
+    .amway-shop-banner-edit::before {
+        content: '';
+        width: 1.25rem;
+        height: 1.25rem;
+        display: inline-block;
+        border-radius: 1.25rem;
+        background: url('../../image/creator/edit/purple.svg');
+        background-size: 0.75rem 0.75rem;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        margin-right: 0.25rem;
+    }
+    .shop-list-banner.pink .amway-shop-banner-edit {
+        background: #7F3E3E;
+        color: #FFE2E2;
+    }
+    .shop-list-banner.orange .amway-shop-banner-edit {
+        background: #A76C47;
+        color: #FFF1E8;
+    }
+    .shop-list-banner.yellow .amway-shop-banner-edit {
+        background: #62625A;
+        color: #F8F8E7;
+    }
+    .shop-list-banner.green .amway-shop-banner-edit {
+        background: #73793B;
+        color: #F0FAE5;
+    }
+    .shop-list-banner.blue .amway-shop-banner-edit {
+        background: #396E75;
+        color: #E5FDFF;
+    }
+    .shop-list-banner.purple .amway-shop-banner-edit {
+        background: #38539A;
+        color: #F1F2FF;
+    }
+    .shop-list-banner.pink .amway-shop-banner-edit::before {
+        background: url('../../image/creator/edit/pink.svg');
+    }
+    .shop-list-banner.orange .amway-shop-banner-edit::before {
+        background: url('../../image/creator/edit/orange.svg');
+    }
+    .shop-list-banner.yellow .amway-shop-banner-edit::before {
+        background: url('../../image/creator/edit/yellow.svg');
+    }
+    .shop-list-banner.green .amway-shop-banner-edit::before {
+        background: url('../../image/creator/edit/green.svg');
+    }
+    .shop-list-banner.blue .amway-shop-banner-edit::before {
+        background: url('../../image/creator/edit/blue.svg');
+    }
+    .shop-list-banner.purple .amway-shop-banner-edit::before {
+        background: url('../../image/creator/edit/purple.svg');
+    }
+    .add-pd-area {
+        padding-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .deleteItem-footer {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .amway-shop-banner-area {
+        padding-top: 2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .amway-shop-banner-name {
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    .amway-shop-banner-name-text {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .amway-shop-banner-title {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .amway-shop-banner-subtitle {
+        text-align: center;
+        font-size: 0.813rem;
+        line-height: 1.25rem;
+    }
+    .amway-shop-banner-social-area {
+        margin-top: 1.75rem;
+        justify-content: center;
+    }
+    .amway-shop-banner-share {
+        font-size: 0;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        background: #ffffff;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    }
+    .amway-shop-banner-share::before {
+        content: '';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0.25rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: url('../../image/icon/icon-shere.svg');
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 1.25rem 1.25rem !important;
+        cursor: pointer;
+        margin-right: 0.125rem;
+    }
+    .amway-shop-banner-edit-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 0.5rem;
+    }
+    .amway-shop-banner-edit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.5rem;
+        border-radius: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        /*  margin-left: 1.5rem; */
+        font-size: 0.813rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        background: #38539A;
+        color: #F1F2FF;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    }
+    .amway-shop-banner-edit::before {
+        content: '';
+        width: 1.25rem;
+        height: 1.25rem;
+        display: inline-block;
+        border-radius: 1.25rem;
+        background: url('../../image/creator/edit/purple.svg');
+        background-size: 0.75rem 0.75rem;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        margin-right: 0.25rem;
+    }
+    .add-pd-area {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .shop-list-banner-edit-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 0.5rem;
+    }
+    .shop-list-banner-name-area .amway-shop-banner-edit::before {
+        content: '';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: url('../../image/icon/icon_input/icon-edit.svg');
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 1rem 1rem !important;
+        cursor: pointer;
+        margin: 0;
+    }
+    .shop-list-banner-name-area {
+        justify-content: center;
+    }
+    .shop-list-banner-name {
+        /* margin: 0;
+        margin-right: 1rem; */
+    }
+    .shop-list-banner.pink .amway-shop-banner-edit {
+        background: #7F3E3E;
+        color: #FFE2E2;
+    }
+    .shop-list-banner.orange .amway-shop-banner-edit {
+        background: #A76C47;
+        color: #FFF1E8;
+    }
+    .shop-list-banner.yellow .amway-shop-banner-edit {
+        background: #62625A;
+        color: #F8F8E7;
+    }
+    .shop-list-banner.green .amway-shop-banner-edit {
+        background: #73793B;
+        color: #F0FAE5;
+    }
+    .shop-list-banner.blue .amway-shop-banner-edit {
+        background: #396E75;
+        color: #E5FDFF;
+    }
+    .shop-list-banner.purple .amway-shop-banner-edit {
+        background: #38539A;
+        color: #F1F2FF;
+    }
+    .shop-list-banner.pink .amway-shop-banner-edit::before {
+        background: url('../../image/creator/edit/pink.svg');
+    }
+    .shop-list-banner.orange .amway-shop-banner-edit::before {
+        background: url('../../image/creator/edit/orange.svg');
+    }
+    .shop-list-banner.yellow .amway-shop-banner-edit::before {
+        background: url('../../image/creator/edit/yellow.svg');
+    }
+    .shop-list-banner.green .amway-shop-banner-edit::before {
+        background: url('../../image/creator/edit/green.svg');
+    }
+    .shop-list-banner.blue .amway-shop-banner-edit::before {
+        background: url('../../image/creator/edit/blue.svg');
+    }
+    .shop-list-banner.purple .amway-shop-banner-edit::before {
+        background: url('../../image/creator/edit/purple.svg');
+    }
+    .amway-shop-banner-for-content {
+        padding-bottom: 5rem;
+    }
+}

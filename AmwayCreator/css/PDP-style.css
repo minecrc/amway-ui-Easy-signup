@@ -1,0 +1,28 @@
+@media(min-width:1024px) {
+    .aba-detail-price {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: calc(50% - 14rem);
+        max-width: calc(50% - 14rem);
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width:1023px) {
+    .amway-dt-btn-add-list {
+        position: relative;
+        background: transparent;
+        box-shadow: none;
+        top: unset;
+        right: unset;
+        margin-right: 0.5rem;
+    }
+    .amway-dt-btn-add-list::after {
+        margin-top: 0rem;
+    }
+    .amway-dt-btn-bar {
+        z-index: 1498;
+    }
+}

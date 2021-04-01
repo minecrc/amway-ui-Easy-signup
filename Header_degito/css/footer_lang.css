@@ -1,0 +1,186 @@
+/* footer lang */
+
+.shop-f-content-language {
+    width: 100%;
+    padding-bottom: 1.5rem;
+}
+
+.shop-f-content-language-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.shop-f-content-language-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+}
+
+.shop-f-content-language-icon::after {
+    content: '';
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url('../../image/creator/global.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.25rem 1.25rem;
+}
+
+.shop-f-content-language-text {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 500;
+}
+
+.shop-f-content-language-text::after {
+    content: 'a';
+    font-family: Amway Icon !important;
+    display: block;
+    color: #9EA0A3;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    text-transform: none;
+    text-decoration: none;
+    margin-left: 0.125rem;
+}
+
+.shop-f-content-language-text-list {
+    display: none;
+}
+
+.shop-f-content-language-text-list.active {
+    display: block;
+}
+
+@media(min-width:1024px) {
+    .shop-f-content-language {
+        display: none;
+    }
+}
+
+/* modal lang */
+.shop-change-lang-modal {
+    z-index: 1488;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.shop-change-lang-modal.active {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1505;
+}
+
+.shop-change-lang-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    background: #ffffff;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.shop-change-lang-modal.active .shop-change-lang-footer {
+    transform: translateY(0%);
+}
+
+.shop-change-lang-modal .shop-change-lang-footer {
+    transform: translateY(calc(100%));
+    transition: 0.3s ease;
+}
+
+.shop-change-lang-footer-btn-text {
+    width: 5rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 700;
+}
+
+.shop-change-lang-footer-btn {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 700;
+    padding-left: 1.5rem;
+    padding-right: 1.25rem;
+    cursor: pointer;
+}
+
+.shop-change-lang-footer-btn.active::after {
+    content: '';
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1.25rem 1.25rem !important;
+    background: url('../../image/header/icon-menu/check.svg');
+}
+
+.shop-change-lang-middle {
+    position: fixed;
+    border-radius: 1rem;
+    background: #ffffff;
+    padding: 1.5rem;
+    width: calc(100% - 3rem);
+    height: auto;
+    max-height: calc(100% - 3rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shop-change-lang-middle-title {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+
+.shop-change-lang-middle-btn-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.shop-change-lang-middle-btn {
+    height: 3rem;
+    width: 8rem;
+    border-radius: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-change-lang-middle-btn:first-child {
+    margin-right: 1rem;
+}
+
+@media(min-width:1024px) {
+    .shop-change-lang-modal {
+        display: none;
+        overflow: hidden;
+    }
+}

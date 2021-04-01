@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="right_copy" data-name="right copy" transform="translate(48 48) rotate(180)">
+    <circle id="Oval" cx="24" cy="24" r="24" fill="rgba(237,237,237,0.8)" opacity="0.8"/>
+    <g id="Icon_Arrow_Up_Copy_2" data-name="Icon/Arrow/Up Copy 2" transform="translate(8 40) rotate(-90)" opacity="0.8">
+      <path id="Path" d="M8.98,13.966a1.182,1.182,0,0,1,0,1.686,1.227,1.227,0,0,1-1.712,0L.353,8.843a1.182,1.182,0,0,1,0-1.686L7.268.348a1.227,1.227,0,0,1,1.712,0,1.182,1.182,0,0,1,0,1.686L2.918,8Z" transform="translate(24.667 11.333) rotate(90)" fill="#9ea0a3"/>
+    </g>
+  </g>
+</svg>

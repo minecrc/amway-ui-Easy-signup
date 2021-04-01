@@ -1,0 +1,323 @@
+.oa-sign-up-section:last-child {
+    margin-right: 48px;
+    padding: 0 !important;
+}
+
+.oa-sign-up-abo-details-form-error,
+.oa-sign-up-personal-details-form__photo-error {
+    display: flex;
+    width: 100%;
+    color: #ce183d;
+}
+
+.Title-Header-container {
+    text-align: center;
+    margin: 1rem 2rem;
+}
+
+.mz-dropdown-modal__button-text {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.oa-checkable-input__container {
+    box-shadow: none !important;
+    border-radius: 20px;
+}
+
+.oa-sign-up-form-section {
+    width: 100%;
+    padding: 15px;
+}
+
+.oa-sign-up-form-layout {
+    padding: 0;
+}
+
+.oa-checkable-input.--with-background>.oa-checkable-input__input:checked:not(:disabled)+.oa-checkable-input__container,
+.oa-checkable-input.--with-background>.oa-checkable-input__input:not(:disabled)+.oa-checkable-input__container:hover {
+    background: #f1f9fd;
+    color: #09498b;
+    border: 1px solid #09498b;
+}
+
+.contain-wrapper {
+    max-width: 360px;
+    width: 100%;
+}
+
+.oa-sign-up-personal-details-form__edit-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img.oa-image.oa-sign-up-personal-details-form__photo {
+    height: 91%;
+    width: 91%;
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+    margin: 5px auto;
+}
+
+li.mz-dropdown-modal__option {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.oa-sign-up-abo-details-form-error {
+    margin: 7px auto !important;
+}
+
+.mz-bank-method__button-text-bank>div {
+    display: block;
+}
+
+.oa-sign-up-form-layout__title {
+    margin: 10px auto 20px auto;
+    color: #002f5f;
+}
+
+.oa-checkable-input.--with-background>.oa-checkable-input__container {
+    padding: 16px 8px;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.oa-row input,
+.oa-row label,
+.oa-row .dropdown,
+.oa-row .oa-sign-up-abo-details-form-error {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.bank-account-detail .oa-row {
+    justify-content: center;
+}
+
+.oa-input input.--with-left-icon,
+.oa-input textarea.--with-left-icon {
+    padding-left: 40px;
+    border-radius: 9px;
+}
+
+.oa-checkable-input__container {
+    box-shadow: -3px 5px 6px #00000029;
+    border-radius: 20px;
+}
+
+.oa-checkable-input__container,
+.oa-checkable-input {
+    width: 100%;
+    border-radius: 9px;
+    max-width: 440px;
+    border-radius: 9px;
+    margin: 0 auto;
+}
+
+.bubble {
+    position: absolute;
+    top: -11%;
+    right: -4%;
+    width: 14%;
+    height: auto;
+}
+
+a.black-link {
+    color: #2C2C2C;
+    font-weight: bold;
+}
+
+a.black-link:hover {
+    text-decoration: underline;
+}
+
+.oa-sign-up-form-layout {
+    margin: 20px auto;
+    width: 100%;
+}
+
+.oa-sign-up-form-layout__header {
+    text-align: center;
+}
+
+.package-abo {
+    max-width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .mz-dropdown-modal__option:last-child {
+        position: relative;
+        margin-bottom: 0;
+    }
+    .oa-sign-up-illustration {
+        align-items: flex-end;
+        width: 312px;
+        height: 290px;
+        padding-bottom: 40px;
+        z-index: -1;
+    }
+    .sample-bookbank {
+        max-width: 35vw;
+    }
+    .oa-sign-up-form-layout__header.desktop {
+        text-align: left;
+        padding-left: 18%;
+    }
+    .oa-checkable-input__container,
+    .oa-checkable-input {
+        width: 100%;
+        border-radius: 9px;
+    }
+    .oa-sign-up-verification-layout.--with-back-button {
+        padding-top: 0px;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        font-family: inherit;
+        line-height: 1.1;
+    }
+    .package-abo {
+        border-bottom: 0;
+    }
+    .oa-row input,
+    .oa-row label,
+    .oa-row .dropdown,
+    .oa-row .oa-sign-up-abo-details-form-error {
+        width: 60%;
+    }
+    .oa-sign-up-form-layout__header {
+        text-align: center;
+        width: 100%;
+    }
+    .oa-sign-up-personal-details-form__edit-photos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 65%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .package-abo {
+        border-bottom: 1px solid hsl(0, 0%, 79%);
+    }
+    .sample-bookbank {
+        max-width: 65vw;
+    }
+    .package-abo,
+    .bank-account-detail {
+        max-width: 100%;
+        padding: 0 15px 0 15px;
+    }
+    .oa-checkable-input__container,
+    .oa-checkable-input {
+        width: 100%;
+        border-radius: 9px;
+    }
+    .container {
+        max-width: 970px;
+        padding: 0;
+        margin: 0 auto;
+    }
+    img.oa-image.oa-sign-up-personal-details-form__photo {
+        height: 91%;
+        width: 91%;
+    }
+    .col-lg-1,
+    .col-lg-10,
+    .col-lg-11,
+    .col-lg-12,
+    .col-lg-2,
+    .col-lg-3,
+    .col-lg-4,
+    .col-lg-5,
+    .col-lg-6,
+    .col-lg-7,
+    .col-lg-8,
+    .col-lg-9,
+    .col-md-1,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-sm-1,
+    .col-sm-10,
+    .col-sm-11,
+    .col-sm-12,
+    .col-sm-2,
+    .col-sm-3,
+    .col-sm-4,
+    .col-sm-5,
+    .col-sm-6,
+    .col-sm-7,
+    .col-sm-8,
+    .col-sm-9,
+    .col-xs-1,
+    .col-xs-10,
+    .col-xs-11,
+    .col-xs-12,
+    .col-xs-2,
+    .col-xs-3,
+    .col-xs-4,
+    .col-xs-5,
+    .col-xs-6,
+    .col-xs-7,
+    .col-xs-8,
+    .col-xs-9 {
+        padding: 0 !important;
+    }
+    .oa-row input,
+    .oa-row label,
+    .oa-row .dropdown,
+    .oa-row .oa-sign-up-abo-details-form-error {
+        width: 100%;
+    }
+}
+
+.error_pic {
+    width: 100% !important;
+    text-align: center;
+    justify-content: center;
+}
+
+.bank-account-detail {
+    max-width: 440px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+a.btn-black.btn-checkout-step {
+    width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .oa-row input,
+    .oa-row label,
+    .oa-row .dropdown,
+    .oa-row .oa-sign-up-abo-details-form-error {
+        width: 90%;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 600px) {
+    .sample-bookbank {
+        max-width: 90vw;
+    }
+}

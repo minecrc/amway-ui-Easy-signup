@@ -1,0 +1,910 @@
+.shop-list-banner {
+    width: 100%;
+    height: 14rem;
+    position: relative;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.shop-list-banner.pink {
+    background: url('../../image/creator/theme-list-banner/pink.svg');
+}
+
+.shop-list-banner.orange {
+    background: url('../../image/creator/theme-list-banner/orange.svg');
+}
+
+.shop-list-banner.yellow {
+    background: url('../../image/creator/theme-list-banner/yellow.svg');
+}
+
+.shop-list-banner.green {
+    background: url('../../image/creator/theme-list-banner/green.svg');
+}
+
+.shop-list-banner.blue {
+    background: url('../../image/creator/theme-list-banner/blue.svg');
+}
+
+.shop-list-banner.purple {
+    background: url('../../image/creator/theme-list-banner/purple.svg');
+}
+
+.shop-list-banner.pink .shop-list-banner-name {
+    color: #7F3E3E;
+}
+
+.shop-list-banner.orange .shop-list-banner-name {
+    color: #A76C47;
+}
+
+.shop-list-banner.yellow .shop-list-banner-name {
+    color: #62625A;
+}
+
+.shop-list-banner.green .shop-list-banner-name {
+    color: #73793B;
+}
+
+.shop-list-banner.blue .shop-list-banner-name {
+    color: #396E75;
+}
+
+.shop-list-banner.purple .shop-list-banner-name {
+    color: #38539A;
+}
+
+.shop-list-banner.normal .shop-list-banner-name {
+    color: #38539A;
+}
+
+.shop-list-banner-name {
+    margin-top: 2rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    width: fit-content;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+.shop-list-banner.pink .shop-list-banner-detail {
+    color: #7F3E3E;
+}
+
+.shop-list-banner.orange .shop-list-banner-detail {
+    color: #A76C47;
+}
+
+.shop-list-banner.yellow .shop-list-banner-detail {
+    color: #62625A;
+}
+
+.shop-list-banner.green .shop-list-banner-detail {
+    color: #73793B;
+}
+
+.shop-list-banner.blue .shop-list-banner-detail {
+    color: #396E75;
+}
+
+.shop-list-banner.purple .shop-list-banner-detail {
+    color: #38539A;
+}
+
+.shop-list-banner.normal .shop-list-banner-detail {
+    color: #38539A;
+}
+
+.shop-list-banner-detail {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.shop-list-edit {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+}
+
+.shop-list-edit-btn {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.shop-list-edit-btn::before {
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border-radius: 3.75rem;
+    -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    background: url('../../image/icon/icon_tool_img/icon-edit.svg');
+    background-size: 2rem 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.shop-list-edit-backdrop {}
+
+.shop-list-edit-menu {
+    position: absolute;
+    background: #ffffff;
+    font-size: 1rem;
+    line-height: 1.625rem;
+}
+
+.shop-list-edit-menu-list {
+    padding-bottom: 1rem;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.shop-list-btn-back {
+    margin-left: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.shop-list-btn-back::before {
+    content: 'b';
+    font-family: Amway Icon !important;
+    color: #2c2c2c;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0.25rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border-radius: 3.75rem;
+    -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.shop-list-share {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: #ffffff;
+    -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+}
+
+.shop-list-share::before {
+    content: '';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('../../image/icon/icon-shere.svg');
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1.5rem 1.5rem !important;
+    cursor: pointer;
+    margin-right: 0.125rem;
+}
+
+.shop-list-banner-area-btn {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.shop-list-banner-area-btn .btn-white-shop:first-child {
+    margin-right: 1rem;
+}
+
+.shop-list-banner-area-btn.no-pd .btn-white-shop:first-child {
+    margin-right: 0rem;
+}
+
+.btn-white-shop {
+    width: 8.25rem;
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1.25rem;
+    background: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: #2c2c2c;
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-white-shop.edit::before {
+    content: '';
+    width: 0.875rem;
+    height: 0.875rem;
+    background: url('../../image/icon/icon_input/icon-edit.svg');
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 0.875rem 0.875rem !important;
+    cursor: pointer;
+    margin-right: 0.25rem;
+}
+
+.btn-white-shop.add::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    background: url('../../image/icon/icon_input/icon-plus.svg');
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 0.5rem 0.5rem !important;
+    cursor: pointer;
+    margin-right: 0.25rem;
+}
+
+@media(min-width:1024px) {
+    .shop-list-banner-area {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .shop-list-edit-backdrop {
+        display: none;
+    }
+    .shop-list-edit-menu {
+        display: none;
+    }
+    .shop-list-edit.selected .shop-list-edit-menu {
+        display: block;
+        top: 100%;
+        right: 100%;
+        width: 12rem;
+        height: auto;
+        padding: 1rem;
+        padding-bottom: 0;
+        -webkit-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+        border-radius: .5rem;
+        z-index: 1;
+    }
+    .shop-list-share {
+        align-self: start;
+    }
+}
+
+@media(max-width:1023px) {
+    .shop-list-banner {
+        padding-top: 1.5rem;
+        height: 21.5rem;
+        background-position: top center !important;
+        position: relative;
+    }
+    .shop-list-banner.pink {
+        background: url('../../image/creator/theme-list-banner/pink-mb.svg');
+    }
+    .shop-list-banner.orange {
+        background: url('../../image/creator/theme-list-banner/orange-mb.svg');
+    }
+    .shop-list-banner.yellow {
+        background: url('../../image/creator/theme-list-banner/yellow-mb.svg');
+    }
+    .shop-list-banner.green {
+        background: url('../../image/creator/theme-list-banner/green-mb.svg');
+    }
+    .shop-list-banner.blue {
+        background: url('../../image/creator/theme-list-banner/blue-mb.svg');
+    }
+    .shop-list-banner.purple {
+        background: url('../../image/creator/theme-list-banner/purple-mb.svg');
+    }
+    .shop-list-banner::before {
+        content: '';
+        position: absolute;
+        /*  top: 10rem; */
+        bottom: -6rem;
+        left: 0;
+        width: 100%;
+        height: 18rem;
+        background: url('../../image/creator/illustration/background-pad.svg');
+        background-position: top center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+    .shop-list-banner-img {
+        margin: auto;
+        width: 7.5rem;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        margin-bottom: 1.25rem;
+    }
+    .shop-list-banner-img::after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+    .shop-list-banner.pink .shop-list-banner-img {
+        background: url('../../image/banner_wishlist/img-pink.svg');
+    }
+    .shop-list-banner.orange .shop-list-banner-img {
+        background: url('../../image/banner_wishlist/img-orange.svg');
+    }
+    .shop-list-banner.yellow .shop-list-banner-img {
+        background: url('../../image/banner_wishlist/img-yellow.svg');
+    }
+    .shop-list-banner.green .shop-list-banner-img {
+        background: url('../../image/banner_wishlist/img-green.svg');
+    }
+    .shop-list-banner.blue .shop-list-banner-img {
+        background: url('../../image/banner_wishlist/img-blue.svg');
+    }
+    .shop-list-banner.purple .shop-list-banner-img {
+        background: url('../../image/banner_wishlist/img-purple.svg');
+    }
+    .shop-list-banner-area {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-top: 0.5rem;
+    }
+    .shop-list-banner-name {
+        text-align: center;
+        margin: auto;
+    }
+    .shop-list-banner-detail {
+        text-align: center;
+        margin: auto;
+        width: calc(100% - 6rem);
+        margin-top: 0.5rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .shop-list-banner-area-btn {
+        display: flex;
+        justify-content: center;
+    }
+    .shop-list-edit {
+        display: block;
+        position: absolute;
+        right: 1.5rem;
+        width: 2.5rem;
+        height: 100%;
+        top: -0.25rem;
+        bottom: 0;
+    }
+    .shop-list-edit-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 1.25rem;
+    }
+    .shop-list-edit-backdrop {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(44, 44, 44, 0.7);
+        z-index: 1501;
+    }
+    .shop-list-edit.selected .shop-list-edit-backdrop {
+        display: block;
+    }
+    .shop-list-edit-menu {
+        padding: 1.5rem;
+        padding-top: 2.5rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transform: translateY(100%);
+        transition: 0.6s ease;
+        z-index: 1502;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+    .shop-list-edit.selected .shop-list-edit-menu {
+        transform: translateY(0%);
+    }
+    .shop-list-share {
+        position: absolute;
+        right: 1.5rem;
+        top: 0rem;
+    }
+}
+
+@media(max-width:708px) {
+    .shop-list-banner::before {
+        bottom: -9rem;
+    }
+}
+
+@media(max-width:430px) {
+    .shop-list-banner::before {
+        bottom: -12rem;
+    }
+}
+
+@media(max-width:425px) {
+    .shop-list-banner {
+        width: 100%;
+        min-height: 22rem;
+    }
+}
+
+@media(max-width:492px) and (min-width:431px) {
+    .amway-shop-banner::before {
+        bottom: -10rem;
+    }
+}
+
+@media(max-width:767px) {
+    .shop-list-banner-detail {
+        width: calc(100% - 3rem);
+    }
+}
+
+
+/* no-pd */
+
+.shop-list-no-pd {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.shop-list-no-pd-img {
+    background: url('../../image/creator/no-pd.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 1rem;
+}
+
+.shop-list-no-pd-img::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 121%;
+}
+
+.shop-list-no-pd-text {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+@media(min-width:1024px) {
+    .shop-list-no-pd-img {
+        width: 8rem;
+    }
+    .shop-list-no-pd-text {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .shop-list-no-pd-img {
+        width: 4rem;
+    }
+    .shop-list-no-pd-text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+.btn-shop-share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    background: #ffffff;
+    -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+}
+
+.btn-shop-share::before {
+    content: '';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(../../image/icon/icon-shere.svg);
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1rem 1rem !important;
+    cursor: pointer;
+    margin-right: 0.125rem;
+}
+
+
+/* navbar */
+
+@media(min-width:1024px) {
+    .shop-list-navbar {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .shop-list-navbar-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .shop-list-navbar.sticky {
+        display: flex;
+        width: 100%;
+        height: 3.5rem;
+        background-position: center top !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        position: fixed;
+        top: 4.25rem;
+        left: 0;
+        right: 0;
+        z-index: 1500;
+        -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgb(56 83 154 / 10%);
+        -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        box-shadow: 0rem 0.25rem 0.5rem 0rem rgb(56 83 154 / 10%);
+    }
+    .shop-list-navbar.pink {
+        background: url('../../image/creator/theme-list-banner/pink-mb.svg');
+    }
+    .shop-list-navbar.orange {
+        background: url('../../image/creator/theme-list-banner/orange-mb.svg');
+    }
+    .shop-list-navbar.yellow {
+        background: url('../../image/creator/theme-list-banner/yellow-mb.svg');
+    }
+    .shop-list-navbar.green {
+        background: url('../../image/creator/theme-list-banner/green-mb.svg');
+    }
+    .shop-list-navbar.blue {
+        background: url('../../image/creator/theme-list-banner/blue-mb.svg');
+    }
+    .shop-list-navbar.purple {
+        background: url('../../image/creator/theme-list-banner/purple-mb.svg');
+    }
+    .shop-list-navbar.pink .shop-list-navbar-title {
+        color: #7F3E3E;
+    }
+    .shop-list-navbar.orange .shop-list-navbar-title {
+        color: #A76C47;
+    }
+    .shop-list-navbar.yellow .shop-list-navbar-title {
+        color: #62625A;
+    }
+    .shop-list-navbar.green .shop-list-navbar-title {
+        color: #73793B;
+    }
+    .shop-list-navbar.blue .shop-list-navbar-title {
+        color: #396E75;
+    }
+    .shop-list-navbar.purple .shop-list-navbar-title {
+        color: #38539A;
+    }
+    .shop-list-navbar-title {
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .shop-list-navbar-back {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+    }
+    .shop-list-navbar-back::before {
+        content: 'b';
+        font-family: Amway Icon !important;
+        color: #2c2c2c;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0.25rem;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+        border-radius: 3.75rem;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        background: #ffffff;
+        cursor: pointer;
+    }
+    .shop-list-navbar-share {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+        background: #ffffff;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    }
+    .shop-list-navbar-share::before {
+        content: '';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0.25rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: url('../../image/icon/icon-shere.svg');
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 1.5rem 1.5rem !important;
+        cursor: pointer;
+        margin-right: 0.125rem;
+    }
+    .shop-list-banner-name {
+        max-width: calc(100% - 6.5rem);
+        width: auto;
+    }
+}
+
+@media(max-width:1023px) {
+    .shop-list-navbar-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .shop-list-navbar {
+        display: none;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .shop-list-navbar.sticky {
+        display: flex;
+        width: 100%;
+        height: 3.5rem;
+        background-position: center top !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1500;
+        -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgb(56 83 154 / 10%);
+        -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        box-shadow: 0rem 0.25rem 0.5rem 0rem rgb(56 83 154 / 10%);
+    }
+    .shop-list-navbar.pink {
+        background: url('../../image/creator/theme-list-banner/pink-mb.svg');
+    }
+    .shop-list-navbar.orange {
+        background: url('../../image/creator/theme-list-banner/orange-mb.svg');
+    }
+    .shop-list-navbar.yellow {
+        background: url('../../image/creator/theme-list-banner/yellow-mb.svg');
+    }
+    .shop-list-navbar.green {
+        background: url('../../image/creator/theme-list-banner/green-mb.svg');
+    }
+    .shop-list-navbar.blue {
+        background: url('../../image/creator/theme-list-banner/blue-mb.svg');
+    }
+    .shop-list-navbar.purple {
+        background: url('../../image/creator/theme-list-banner/purple-mb.svg');
+    }
+    .shop-list-navbar.pink .shop-list-navbar-title {
+        color: #7F3E3E;
+    }
+    .shop-list-navbar.orange .shop-list-navbar-title {
+        color: #A76C47;
+    }
+    .shop-list-navbar.yellow .shop-list-navbar-title {
+        color: #62625A;
+    }
+    .shop-list-navbar.green .shop-list-navbar-title {
+        color: #73793B;
+    }
+    .shop-list-navbar.blue .shop-list-navbar-title {
+        color: #396E75;
+    }
+    .shop-list-navbar.purple .shop-list-navbar-title {
+        color: #38539A;
+    }
+    .shop-list-navbar-title {
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .shop-list-navbar-back {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+    }
+    .shop-list-navbar-back::before {
+        content: 'b';
+        font-family: Amway Icon !important;
+        color: #2c2c2c;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0.25rem;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+        border-radius: 3.75rem;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        background: #ffffff;
+        cursor: pointer;
+    }
+    .shop-list-navbar-share {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+        background: #ffffff;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    }
+    .shop-list-navbar-share::before {
+        content: '';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0.25rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: url('../../image/icon/icon-shere.svg');
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 1.5rem 1.5rem !important;
+        cursor: pointer;
+        margin-right: 0.125rem;
+    }
+    .shop-list-banner-name {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}

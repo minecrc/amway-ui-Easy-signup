@@ -11,6 +11,7 @@
         input.prop('checked', input.attr('data-default-checked'));
 
         const content = $(`#${input.attr('id')}-content`);
+        console.log(content );
         content.collapse('hide');
       });
 

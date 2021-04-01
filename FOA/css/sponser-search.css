@@ -1,0 +1,103 @@
+.sponsor-search-input-box {
+    position: relative;
+}
+
+.sponsor-search-result {
+    width: 100%;
+    max-height: 7rem;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.sponsor-search-result::-webkit-scrollbar {
+    /* width */
+    width: 0.375rem;
+}
+
+.sponsor-search-result::-webkit-scrollbar-track {
+    /* Track */
+    background: #EDEDED;
+    border-radius: 0.188rem;
+}
+
+.sponsor-search-result::-webkit-scrollbar-thumb {
+    /* Handle */
+    background: #D5D5D5;
+    border-radius: 0.188rem;
+}
+
+.sponsor-search-result::-webkit-scrollbar-thumb:hover {
+    /* Handle on hover */
+    background: #D5D5D5;
+}
+
+.sponsor-search-result-box {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 0.5rem;
+    max-height: 8.25rem;
+    padding: 0.25rem;
+}
+
+.sponsor-search-result-box-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.sponsor-search-input-box {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.sponsor-search-input-box::before {
+    content: '';
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url('../../image/FOA/icon/Icon-search.svg');
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1.25rem 1.25rem !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.5rem;
+}
+
+.amway-input-area.sponsor-search-input-box:focus-within::before,
+.amway-input-area.active.sponsor-search-input-box::before {
+    background: url('../../image/FOA/icon/Icon-search-b.svg');
+}
+
+.sponser-list-result {
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1rem;
+}
+
+.sponser-list-result:hover,
+.sponser-list-result:focus {
+    background: #e8e8e8;
+}
+
+.sponser-list-result::before {
+    content: '';
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url('../../image/FOA/icon/Icon-search-b.svg');
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1.25rem 1.25rem !important;
+    margin-right: 0.5rem;
+}

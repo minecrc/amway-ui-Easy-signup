@@ -1,0 +1,44 @@
+.wldli-codeSt {
+    display: flex;
+    align-items: center;
+}
+
+.amway-wishlist-statut {
+    display: flex;
+    align-items: center;
+    font-size: 0.813rem;
+    line-height: 1.313rem;
+}
+
+.amway-wishlist-statut .stock-status-icon {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 1rem 1rem !important;
+    margin-right: .5rem;
+}
+
+.amway-wishlist-statut.--soon {
+    color: #E38A62;
+}
+
+.amway-wishlist-statut.--available {
+    color: #74B86D;
+}
+
+.amway-wishlist-statut.--backOrder {
+    color: #FBBF46;
+}
+
+.amway-wishlist-statut.--outOfStock {
+    color: #C84249;
+}
+
+@media(max-width:1023px) {
+    .amway-wishlist-statut {
+        margin-top: 0.5rem;
+    }
+}

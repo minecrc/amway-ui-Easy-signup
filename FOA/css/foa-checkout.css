@@ -1,0 +1,448 @@
+.checkout-login-amway-subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.checkout-login-amway-link,
+.checkout-login-amway-link:hover {
+    text-decoration: underline;
+}
+
+.checkout-login-box {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.checkout-login-box::before,
+.checkout-login-box::after {
+    content: '';
+    width: calc(50% - 5rem);
+    height: 0.125rem;
+    background: #F8F8F8;
+}
+
+.checkout-login-box-text {
+    width: 10rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.checkout-login-box-text.gray {
+    color: #9EA0A3;
+}
+
+.checkout-cart-bar-price.retail-price {
+    color: #2c2c2c;
+}
+
+.checkout-summary-title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    padding-top: 0.875rem;
+}
+
+.checkout-order-sumary-Subtotal-title,
+.checkout-order-sumary-discounts-title {
+    color: #9EA0A3;
+}
+
+.checkout-order-sumary-total-title {
+    color: #2c2c2c;
+}
+
+.checkout-tax-invoice {
+    padding-top: 1rem;
+}
+
+.checkout-tax-invoice-label {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.checkout-tax-invoice-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 0.25rem;
+    border: 0.125rem solid #2c2c2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.checkout-tax-invoice-input {
+    position: absolute;
+    z-index: -9999;
+    opacity: 0;
+}
+
+.checkout-tax-invoice-input:checked~.checkout-tax-invoice-label .checkout-tax-invoice-icon::after {
+    content: 'g';
+    font-family: Amway Icon !important;
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: #2C2C2C;
+}
+
+.checkout-tax-invoice-id-box {
+    max-height: 0;
+    overflow: hidden;
+    height: 0;
+    transition: max-height 0.4s ease;
+}
+
+.checkout-tax-invoice-input:checked~.checkout-tax-invoice-id-box {
+    max-height: 5rem;
+    height: auto;
+}
+
+.checkout-login-box-social {
+    display: flex;
+}
+
+.checkout-login-box-register {
+    margin-top: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: #9EA0A3;
+}
+
+.register-text-link,
+.register-text-link:hover {
+    color: #2c2c2c;
+    text-decoration: underline;
+}
+
+.checkout-box-call-when-prob {
+    text-decoration: underline;
+}
+
+.checkout-box-ismember-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+@media(min-width:1024px) {
+    .checkout-fix-box-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+    .checkout-summary {
+        padding-bottom: 1.5rem;
+        border-top: 0.125rem solid #EDEDED;
+    }
+    .checkout-summary:first-child {
+        border: none;
+    }
+    .checkout-box-mb {
+        width: 23.438rem;
+    }
+    .checkout-summary-title {
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1.5rem;
+    }
+    .checkout-summary.on-bt {
+        border-bottom: 0.125rem solid #EDEDED;
+    }
+}
+
+@media(max-width:1023px) {
+    .checkout-fix-box-footer {
+        z-index: 1503;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 5rem;
+        background: #FFFFFF;
+        display: flex;
+        align-items: center;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .min-vh-100-mb {
+        min-height: 100vh;
+    }
+    .checkout-summary {
+        border: none;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        border-top: 0.25rem solid #F8F8F8;
+        padding-bottom: 2.5rem;
+    }
+    .checkout-order-area.has-border {
+        border: none;
+        border-top: 0.25rem solid #F8F8F8;
+    }
+    .checkout-order-sumary-area.has-border {
+        border: none;
+        border-bottom: 0.25rem solid #F8F8F8;
+        padding-bottom: 1.5rem;
+    }
+    .checkout-box-mb {
+        width: 23.438rem;
+    }
+    .checkout-summary.on-bt {
+        border-bottom: 0.25rem solid #F8F8F8;
+    }
+}
+
+@media(max-width:425px) {
+    .checkout-box-mb {
+        width: 100%;
+    }
+}
+
+.shipping-box-info {
+    display: flex;
+    align-items: center;
+}
+
+.shipping-box-info-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('../../image/FOA/icon/icon-car-b.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 0.5rem;
+}
+
+.shipping-box-info-text {
+    font-size: 0.813rem;
+    font-weight: 500;
+    line-height: 1rem;
+    color: #38539A;
+}
+
+.shippinginfo .customer-right-full-header {
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+}
+
+.shippinginfo-list-select {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.shippinginfo-list-select-card-input {
+    position: absolute;
+    z-index: -9999;
+    opacity: 0;
+}
+
+.shippinginfo-list-select-card-label-icon {
+    margin-top: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid #EDEDED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shippinginfo-list-select-card-label-text {
+    width: calc(100% - 1rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1rem;
+}
+
+.shippinginfo-list-select-card-label-text-content {
+    padding-bottom: 0.5rem;
+}
+
+.shippinginfo-list-select-card-input:checked~.shippinginfo-list-select-card-label .shippinginfo-list-select-card-label-icon {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid #2c2c2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shippinginfo-list-select-card-input:checked~.shippinginfo-list-select-card-label .shippinginfo-list-select-card-label-icon::before {
+    content: '';
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background: #2c2c2c;
+}
+
+.shippinginfo-list-select-card-label {
+    border-radius: 0.625rem;
+    border: 0.125rem solid #EDEDED;
+    width: 100%;
+    height: 100%;
+    padding-left: 0.25rem;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.shippinginfo-list-select-card-input:checked~.shippinginfo-list-select-card-label {
+    border-radius: 0.625rem;
+    border: 0.125rem solid #2c2c2c;
+}
+
+.shippinginfo-list-select-card-input:checked~.shippinginfo-list-select-card-label .shippinginfo-list-select-card-label-text {
+    font-weight: 700;
+}
+
+.customer-right-full-on-scroll-footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.75rem;
+}
+
+.btn-on-bt {
+    width: 100%;
+    height: 3rem;
+    border-radius: 1.5rem;
+}
+
+.shippinginfoAdd-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media(min-width:1024px) {
+    .shippinginfo .customer-right-full-on-scroll {
+        overflow: hidden;
+        overflow-y: auto;
+        height: calc(100% - 7.75rem);
+    }
+}
+
+@media (max-width: 1023px) {
+    .shippinginfo .customer-right-full-on-scroll {
+        margin-top: 3rem;
+        overflow: hidden;
+        overflow-y: scroll;
+        height: calc(100% - 7.75rem);
+    }
+}
+
+
+/* nationality slected  */
+
+.checkout-choose-nationality-select-box {
+    display: flex;
+    align-items: center;
+}
+
+.checkout-choose-nationality-item {
+    position: relative;
+    width: 50%;
+}
+
+.checkout-choose-nationality-item:first-child {
+    margin-right: 0.5rem;
+}
+
+.checkout-choose-nationality-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkout-choose-nationality-input {
+    position: absolute;
+    z-index: -9999;
+    opacity: 0;
+}
+
+.checkout-choose-nationality-text {
+    font-size: 0.813rem;
+    font-weight: 700;
+    line-height: 1rem;
+}
+
+.checkout-choose-nationality-icon {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid #EDEDED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+}
+
+.checkout-choose-nationality-input:checked~.checkout-choose-nationality-label .checkout-choose-nationality-icon::before {
+    content: '';
+    display: block;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 0.313rem;
+    background: #2c2c2c;
+}
+
+.checkout-choose-nationality-input:checked~.checkout-choose-nationality-label .checkout-choose-nationality-icon {
+    border-color: #2c2c2c;
+}
+
+.checkout-choose-nationality-box {
+    max-height: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.checkout-choose-nationality-box.selected {
+    max-height: 125rem;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+}
+
+.border-bt-none {
+    border-bottom: none;
+}
+
+@media(min-width:1024px) {}
+
+@media (max-width: 1023px) {}

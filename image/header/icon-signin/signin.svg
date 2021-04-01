@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Group_6036" data-name="Group 6036" transform="translate(-1193.969 -8)">
+    <g id="Group_6016" data-name="Group 6016" transform="translate(1193.969 8)">
+      <rect id="Icon_Header_User_background" data-name="Icon Header User background" width="32" height="32" transform="translate(0 0)" fill="none"/>
+      <path id="Path_16641" data-name="Path 16641" d="M965.345,541.777a6.172,6.172,0,0,0,0-10.182,6.073,6.073,0,0,0-3.5-1.042h0a6.073,6.073,0,0,0-3.5,1.042,6.172,6.172,0,0,0,0,10.182,10.713,10.713,0,0,0-7.162,9.179.833.833,0,1,0,1.659.128,9.033,9.033,0,0,1,18.009,0,.833.833,0,1,0,1.659-.128A10.713,10.713,0,0,0,965.345,541.777Zm-3.5-.575h0a4.514,4.514,0,1,1,0-9.028h0a4.514,4.514,0,1,1,0,9.028Z" transform="translate(-945.843 -525.219)" fill="#2c2c2c"/>
+    </g>
+  </g>
+</svg>

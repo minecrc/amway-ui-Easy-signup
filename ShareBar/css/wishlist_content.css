@@ -1,0 +1,227 @@
+.wbp-bci-edit-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border-radius: 3.75rem;
+    -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    background: url('../../image/icon/icon_tool_img/icon-edit.svg');
+    background-size: 2rem 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.wbp-bci-edit {
+    position: absolute;
+    top: 5.5rem;
+    left: 5.5rem;
+    display: flex;
+}
+
+.wishlist-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+}
+
+.whb-title {
+    display: flex;
+    align-items: center;
+}
+
+.whb-t-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url('../../image/icon/icon_wishlist/icon-title.svg');
+    background-size: 2.5rem 2.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 1rem;
+}
+
+.whb-t-text {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+.wbp-edit-menu {
+    position: absolute;
+    background: #ffffff;
+}
+
+.wbp-edit-menu-list {
+    padding-bottom: 1rem;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.noWishlist-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.noWishlist-img {
+    width: 5.5rem;
+    height: 5.5rem;
+    background: url('../../image/icon/icon_wishlist/icon-title.svg');
+    background-size: 5.5rem 5.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+
+.noWishlist-title {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+.noWishlist-sub {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.noWishlist-btn {
+    margin: auto;
+}
+
+.noProductList {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.wldc-ni-img {
+    width: 6.125rem;
+    position: relative;
+    background: url('../../image/action/no-pd-list.svg');
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    text-align: center;
+    margin: auto;
+}
+
+.wldc-ni-img::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+@media(min-width:1024px) {
+    .wbp-bci-edit .wbp-edit-menu {
+        display: none;
+    }
+    .wbp-bci-edit.selected .wbp-edit-menu {
+        display: block;
+        top: 100%;
+        left: 100%;
+        width: 12rem;
+        height: auto;
+        padding: 1rem;
+        padding-bottom: 0;
+        -webkit-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+        border-radius: .5rem;
+        z-index: 1;
+    }
+    .wbp-edit-backdrop {
+        display: none;
+    }
+    .editPop {
+        display: none;
+    }
+    .wldc-ni-title {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .wldc-ni-sub {
+        font-size: 1rem;
+        line-height: 2rem;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+@media(max-width:1023px) {
+    .wbp-edit-menu {
+        display: none;
+    }
+    .wbp-edit-menu-content {
+        padding: 1.5rem;
+        padding-top: 2.5rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transform: translateY(100%);
+        transition: 0.6s ease;
+        z-index: 1502;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+        background: #ffffff;
+    }
+    .amway-modal.active .wbp-edit-menu-content {
+        transform: translateY(0%);
+    }
+    .wishlist-header-bar {
+        padding: 0rem 1.5rem 2rem 1.5rem;
+    }
+    .noWishlist-area {
+        padding-top: 0;
+    }
+    .noWishlist-img {
+        display: none;
+    }
+    .noWishlist-title {
+        text-align: center;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+    }
+    .wldc-ni {
+        display: flex;
+        align-items: center;
+    }
+    .wldc-ni-img {
+        width: 5.5rem;
+        margin-right: 1.5rem;
+    }
+    .wldc-ni-title {
+        font-size: 1.25rem;
+        line-height: 2rem;
+        font-weight: 700;
+    }
+    .wldc-ni-sub {
+        font-size: 1rem;
+        line-height: 2rem;
+        font-weight: 500;
+    }
+}

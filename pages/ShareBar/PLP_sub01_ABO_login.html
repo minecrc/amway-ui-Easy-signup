@@ -1,0 +1,2245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PLP sub01 ABO</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/common.251e0dcdff5dc232292e.css" />
+    <link rel="stylesheet" href="../../styles/Header___Header.7c1ab78bbef29ad6a8f4.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/common/css/style.css" />
+    <link rel="stylesheet" href="../../styles/common/css/card.css" />
+    <link rel="stylesheet" href="../../styles/common/css/new_modal.css" />
+    <link rel="stylesheet" href="../../ShareBar/css/select_bundle.css" />
+    <link rel="stylesheet" href="../../ShareBar/css/choose_banner_Sharelist.css" />
+</head>
+
+
+<body>
+    <div id="root">
+        <header class="mz-main-layout__header --initial">
+            <div class="mz-main-layout__nav-container">
+                <nav class="oa-topmost-bar mz-main-layout__topmost-bar" aria-label="secondary">
+                    <section class="oa-topmost-bar__container">
+                        <div class="oa-language-switcher oa-topmost-bar__language-switcher" data-language-key="en">
+                        </div>
+                        <div class="oa-global-delivery-methods oa-topmost-bar__delivery-methods">
+                            <span class="mz-icon --map-pin oa-global-delivery-methods__map-pin-icon"></span>
+                            <div class="mz-toggle-button oa-global-delivery-methods__delivery-methods-toggle-button --small --original-blue-inverted">
+                                <div class="mz-toggle-button__container">
+                                    <div class="mz-toggle-button__active-background oa-global-delivery-methods__delivery-methods-toggle-background" style="transform: translate3d(0%, 0, 0);"></div>
+                                    <input type="radio" class="mz-toggle-button__input" id="global-delivery" name="global-delivery-method" value="global-delivery" readonly="" checked="" />
+                                    <label for="global-delivery" class="mz-toggle-button__button oa-global-delivery-methods__delivery-methods-toggle-option --active">
+                                        <span>
+                                            <span class="oa-global-delivery-methods__delivery-option">
+                                                จัดส่งที่บ้าน
+                                            </span>
+                                        </span>
+                                    </label>
+                                    <input type="radio" class="mz-toggle-button__input" id="global-pickup" name="global-delivery-method" value="global-pickup" readonly="" />
+                                    <label for="global-pickup" class="mz-toggle-button__button oa-global-delivery-methods__delivery-methods-toggle-option">
+                                        <span>
+                                            <div class="oa-global-delivery-methods__pickup-option">
+                                                <span class="oa-global-delivery-methods__pickup-placeholder">
+                                                    รับที่สาขา
+                                                </span>
+                                                <span class="oa-global-delivery-methods__pickup-selected">
+                                                    รับที่ :
+                                                    <span data-selected-pickup-address-label="true"></span>
+                                                </span>
+                                            </div>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="oa-topmost-bar__links">
+                            <li class="oa-topmost-bar__link">
+                                <a href="/ศูนย์การเรียนรู้">
+                                    <small>ศูนย์การเรียนรู้</small>
+                                </a>
+                            </li>
+                            <li class="oa-topmost-bar__link">
+                                <a href="/เกี่ยวกับแอมเวย์">
+                                    <small>เกี่ยวกับแอมเวย์</small>
+                                </a>
+                            </li>
+                            <li class="oa-topmost-bar__link">
+                                <a href="/แอมเวย์ช็อป"><small>แอมเวย์ช็อป</small></a>
+                            </li>
+                            <li class="oa-topmost-bar__link --outstanding">
+                                <a href="/บิซซิเนส-เซ็นเตอร์">
+                                    <small>บิซซิเนส เซ็นเตอร์</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </nav>
+                <nav class="oa-navigation-bar mz-main-layout__navigation-bar" aria-label="primary" data-dropdown-top-restrict="true">
+                    <div class="oa-navigation-bar__container">
+                        <section class="oa-navigation-bar__section --left">
+                            <button id="oa-hamburger" class="oa-navigation-bar__hamburger" type="button">
+                                <span class="oa-icon --hamburger"></span>
+                            </button>
+                            <a class="oa-navigation-bar__logo" href="/">
+                                <img class="oa-image" data-src="../../static/images/amway-logo-white.svg" alt="amway-logo-white" />
+                            </a>
+                            <div class="oa-navigation-bar__search-input">
+                                <div class="oa-input oa-search-input">
+                                    <span class="oa-icon --search oa-input__icon --left"></span>
+                                    <input type="text" placeholder="Search by Name / Product ID" class="oa-input__input input-lg form-control --round --inverse --small --with-left-icon" />
+                                </div>
+                            </div>
+                        </section>
+                        <section class="oa-navigation-bar__section --right">
+                            <button id="oa-search-button" type="button" class="oa-navigation-bar__search-button">
+                                <span class="oa-icon --search oa-navigation-bar__icon"></span>
+                            </button>
+                            <span class="oa-navigation-bar__icon --heart">
+                                <span class="oa-icon --heart"></span>
+                            </span>
+                            <span class="oa-navigation-bar__icon">
+                                <span class="oa-icon --cart"></span>
+                            </span>
+                            <div id="oa-user" class="oa-navigation-bar__user" data-logged-in="true">
+                                <span class="oa-icon --user oa-navigation-bar__user-icon"></span>
+                                <div class="oa-navigation-bar__user-info">
+                                    <div class="oa-navigation-bar__user-name">
+                                        <small>Mr. Amorn Apichartikul</small>
+                                    </div>
+                                    <div class="oa-id-badge">2711647</div>
+                                    <span class="oa-icon --arrow-down oa-navigation-bar__user-arrow"></span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </nav>
+                <nav id="oa-menu-bar" class="oa-menu-bar" aria-label="menu">
+                    <ul class="oa-menu-bar__container">
+                        <li class="oa-menu-bar__item --outstanding" data-id="promotions">
+                            <span class="oa-menu-bar__text">Promotions</span>
+                        </li>
+                        <li class="oa-menu-bar__item" data-id="brands">
+                            <span class="oa-menu-bar__text">Brands</span>
+                        </li>
+                        <li class="oa-menu-bar__item" data-id="nutrition">
+                            <span class="oa-menu-bar__text">Nutrition</span>
+                        </li>
+                        <li class="oa-menu-bar__item" data-id="beauty">
+                            <span class="oa-menu-bar__text">Beauty</span>
+                        </li>
+                        <li class="oa-menu-bar__item" data-id="personal-care">
+                            <span class="oa-menu-bar__text">Personal Care</span>
+                        </li>
+                        <li class="oa-menu-bar__item" data-id="home-living">
+                            <span class="oa-menu-bar__text">Home Living</span>
+                        </li>
+                        <li class="oa-menu-bar__item" data-id="agriculture">
+                            <span class="oa-menu-bar__text">Agriculture</span>
+                        </li>
+                        <li class="oa-menu-bar__item" data-id="energy-drink">
+                            <span class="oa-menu-bar__text">Energy Drink</span>
+                        </li>
+                        <li class="oa-menu-bar__item" data-id="sop">
+                            <span class="oa-menu-bar__text">SOP</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mz-main-layout__messages-container">
+                <div class="mz-error-notification alert alert-dismissible fade in --primary  d-none">
+                    <div class="mz-error-notification__container">
+                        <span class="mz-icon --info mz-error-notification__info-icon"></span>
+                        <div class="mz-error-notification__message">
+                            ไม่สามารถเพิ่มสินค้าลงในตะกร้าได้
+                        </div>
+                        <button class="mz-error-notification__close" type="button" onclick="hideError()" aria-label="Close">
+                            <span class="mz-icon --close"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="main-dim-layer" class="mz-dim-layer"></div>
+        <nav id="oa-product-menu" class="oa-popup-menu --left oa-product-menu" data-level="1" aria-label="menu">
+            <div id="oa-product-menu-arrow" class="oa-menu-arrow --white"></div>
+            <header class="oa-popup-menu__header">
+                <span class="oa-icon --close oa-product-menu__close-button"></span>
+                <span class="oa-icon --back oa-product-menu__back-button"></span>
+                <h6 class="oa-product-menu__title">
+                    <span data-title-level="1">Shopping</span>
+                    <span data-title-level="2"></span>
+                    <span data-title-level="3"></span>
+                </h6>
+            </header>
+            <div class="oa-popup-menu__container">
+                <div class="oa-product-menu__container">
+                    <ul class="oa-product-menu__categories">
+                        <li>
+                            <a class="oa-product-menu__category --outstanding" data-id="promotions" data-title="Promotions" href="/promotions">
+                                <span class="oa-product-menu__text --desktop">
+                                    Promotions
+                                </span>
+                                <span class="oa-product-menu__text --mobile">Promotions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="brands" data-title="Shop by Brand" href="/brands">
+                                <span class="oa-product-menu__text --desktop">Brands</span>
+                                <span class="oa-product-menu__text --mobile">
+                                    Shop by Brand
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="nutrition" data-title="Nutrition" href="/nutrition">
+                                <img class="oa-image oa-product-menu__icon" data-src="../../static/images/category-nutrition.svg" alt="Nutrition" />
+                                <span class="oa-product-menu__text --desktop">Nutrition</span>
+                                <span class="oa-product-menu__text --mobile">Nutrition</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="beauty" data-title="Beauty" href="/beauty">
+                                <img class="oa-image oa-product-menu__icon" data-src="../../static/images/category-beauty.svg" alt="Beauty" />
+                                <span class="oa-product-menu__text --desktop">Beauty</span>
+                                <span class="oa-product-menu__text --mobile">Beauty</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="personal-care" data-title="Personal Care" href="/personal-care">
+                                <img class="oa-image oa-product-menu__icon" data-src="../../static/images/category-personal-care.svg" alt="Personal Care" />
+                                <span class="oa-product-menu__text --desktop">
+                                    Personal Care
+                                </span>
+                                <span class="oa-product-menu__text --mobile">
+                                    Personal Care
+                                </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="home-living" data-title="Home Living" href="/home-living">
+                                <img class="oa-image oa-product-menu__icon" data-src="../../static/images/category-home-living.svg" alt="Home Living" />
+                                <span class="oa-product-menu__text --desktop">
+                                    Home Living
+                                </span>
+                                <span class="oa-product-menu__text --mobile">
+                                    Home Living
+                                </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="agriculture" data-title="Agriculture" href="/agriculture">
+                                <img class="oa-image oa-product-menu__icon" data-src="../../static/images/category-agriculture.svg" alt="Agriculture" />
+                                <span class="oa-product-menu__text --desktop">
+                                    Agriculture
+                                </span>
+                                <span class="oa-product-menu__text --mobile">
+                                    Agriculture
+                                </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="energy-drink" data-title="Energy Drink" href="/energy-drink">
+                                <img class="oa-image oa-product-menu__icon" data-src="../../static/images/category-energy-drink.svg" alt="Energy Drink" />
+                                <span class="oa-product-menu__text --desktop">
+                                    Energy Drink
+                                </span>
+                                <span class="oa-product-menu__text --mobile">
+                                    Energy Drink
+                                </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="others" data-title="Others" href="/others">
+                                <img class="oa-image oa-product-menu__icon" data-src="../../static/images/category-others.svg" alt="Others" />
+                                <span class="oa-product-menu__text --desktop">Others</span>
+                                <span class="oa-product-menu__text --mobile">Others</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="sop" data-title="SOP" href="/sop">
+                                <img class="oa-image oa-product-menu__icon" data-src="../../static/images/category-sop.svg" alt="SOP" />
+                                <span class="oa-product-menu__text --desktop">SOP</span>
+                                <span class="oa-product-menu__text --mobile">SOP</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="brands-detail" class="oa-product-menu__category-detail --brands">
+                        <li>
+                            <a href="/brand/nutrilite">
+                                <img class="oa-image oa-product-menu__brand" data-src="../../static/images/brand-nutrilite.svg" alt="brand-nutrilite" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/artistry">
+                                <img class="oa-image oa-product-menu__brand" data-src="../../static/images/brand-artistry.svg" alt="brand-artistry" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/glister">
+                                <img class="oa-image oa-product-menu__brand" data-src="../../static/images/brand-glister.svg" alt="brand-glister" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/g-h">
+                                <img class="oa-image oa-product-menu__brand" data-src="../../static/images/brand-g-h.svg" alt="brand-g-h" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/satinique">
+                                <img class="oa-image oa-product-menu__brand" data-src="../../static/images/brand-satinique.svg" alt="brand-satinique" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/atmosphere-sky">
+                                <img class="oa-image oa-product-menu__brand" data-src="../../static/images/brand-atmosphere-sky.svg" alt="brand-atmosphere-sky" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/e-spring">
+                                <img class="oa-image oa-product-menu__brand" data-src="../../static/images/brand-e-spring.svg" alt="brand-e-spring" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/amway-home">
+                                <img class="oa-image oa-product-menu__brand" data-src="../../static/images/brand-amway-home.svg" alt="brand-amway-home" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/amway-queen">
+                                <img class="oa-image oa-product-menu__brand" data-src="../../static/images/brand-amway-queen.svg" alt="brand-amway-queen" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/bodykey">
+                                <img class="oa-image oa-product-menu__brand" data-src="../../static/images/brand-bodykey.svg" alt="brand-bodykey" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/nutriplant">
+                                <img class="oa-image oa-product-menu__brand" data-src="../../static/images/brand-nutriplant.svg" alt="brand-nutriplant" />
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="beauty-detail" class="oa-product-menu__category-detail --sub-categories">
+                        <li>
+                            <a class="oa-product-menu__see-all" href="/beauty">See all</a>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/skin-care" data-id="skin-care" data-title="Skin Care">
+                                <span class="oa-product-menu__text">Skin Care</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="skin-care-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/skin-care">
+                                        See all
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/cleansing">
+                                        Cleansing
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/serun">
+                                        Serum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/moisturizer">
+                                        Moisturizer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/serum-moisturizer">
+                                        Serum &amp; Moisturizer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/eye-cream">
+                                        Eye Cream
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/sun-screen">
+                                        Sun Screen
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/mask">
+                                        Mask
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/for-men">
+                                        For Men
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/special-treatment">
+                                        Special Treatment
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/make-up" data-id="make-up" data-title="Make Up">
+                                <span class="oa-product-menu__text">Make Up</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="make-up-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/make-up">
+                                        See all
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/facial">
+                                        Facial
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/eyes">
+                                        Eyes
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/lips">
+                                        Lips
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/cheeks">
+                                        Cheeks
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/collection" data-id="collection" data-title="Collection">
+                                <span class="oa-product-menu__text">Collection</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="collection-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/collection">
+                                        See all
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/paris-set-edition">
+                                        Paris Set Edition
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/bangkok-set-edition">
+                                        Bangkok Set Edition
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/perfume" data-id="perfume" data-title="Perfume">
+                                <span class="oa-product-menu__text">Perfume</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="perfume-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/perfume">
+                                        See all
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/flora-chic">
+                                        Flora Chic
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/unknown">
+                                        Unknown
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/accessories" data-id="accessories" data-title="Accessories">
+                                <span class="oa-product-menu__text">Accessories</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="accessories-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/accessories">
+                                        See all
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/make-up-tools">
+                                        Make Up Tools
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/facial-care-tools">
+                                        Facial Care Tools
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/cleansing-cloth">
+                                        Cleansing Cloth
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/facial-hygienic">
+                                        Facial Hygienic
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul id="agriculture-detail" class="oa-product-menu__category-detail --sub-categories">
+                        <li>
+                            <a class="oa-product-menu__see-all" href="/agriculture">
+                                See all
+                            </a>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/mineral-supplements" data-id="mineral-supplements" data-title="Mineral Supplements">
+                                <span class="oa-product-menu__text">Mineral Supplements</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="mineral-supplements-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/mineral-supplements">
+                                        See all
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/supplement-fertilizer" data-id="supplement-fertilizer" data-title="Supplement Fertilizer">
+                                <span class="oa-product-menu__text">
+                                    Supplement Fertilizer
+                                </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="supplement-fertilizer-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/supplement-fertilizer">
+                                        See all
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/plant-fertilizer" data-id="plant-fertilizer" data-title="Plant Fertilizer">
+                                <span class="oa-product-menu__text">Plant Fertilizer</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="plant-fertilizer-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/plant-fertilizer">
+                                        See all
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav id="oa-user-menu" class="oa-popup-menu --right oa-user-menu --inverse" data-logged-in="true" aria-label="menu">
+            <div id="oa-user-menu-arrow" class="oa-menu-arrow --amway-500"></div>
+            <header class="oa-popup-menu__header">
+                <div class="oa-user-menu__header">
+                    <span class="oa-icon --close oa-user-menu__close-button"></span>
+                    <a class="oa-user-menu__button" href="/favorite">
+                        <span class="oa-icon --heart"></span>
+                    </a>
+                    <a class="oa-user-menu__button" href="/notification">
+                        <span class="oa-icon --bell"></span>
+                    </a>
+                </div>
+            </header>
+            <div class="oa-popup-menu__container">
+                <section class="oa-user-menu__profile">
+                    <div class="oa-user-menu__info">
+                        <img class="oa-user-menu__avatar" src="../../static/images/default-avatar.png" alt="avatar" />
+                        <div class="oa-user-menu__name">
+                            Mr. Amorn Apichartikul
+                            <br />
+                            <div class="oa-id-badge">2711647</div>
+                        </div>
+                    </div>
+                    <div class="oa-user-menu__status">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th><small>Personal</small></th>
+                                    <th><small>Group</small></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PV</td>
+                                    <td>399</td>
+                                    <td>399</td>
+                                </tr>
+                                <tr>
+                                    <td>BV</td>
+                                    <td>1,196</td>
+                                    <td>1,196</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <div class="oa-user-menu__bonus">Bonus 9%</div>
+                <ul>
+                    <li>
+                        <a class="oa-user-menu__item --outstanding" href="/business-center">
+                            Business Center
+                        </a>
+                    </li>
+                    <li>
+                        <a class="oa-user-menu__item" href="/awaiting-payment">
+                            Awaiting Payment
+                            <img class="oa-image oa-user-menu__noti" data-src="../../static/images/new.svg" alt="new" />
+                        </a>
+                    </li>
+                    <li><a class="oa-user-menu__item" href="/my-sop">My SOP</a></li>
+                    <li>
+                        <a class="oa-user-menu__item" href="/education">Education</a>
+                    </li>
+                    <li>
+                        <a class="oa-user-menu__item" href="/store-locator">
+                            Store Locator
+                        </a>
+                    </li>
+                    <li>
+                        <a class="oa-user-menu__item" href="/about-amway">About Amway</a>
+                    </li>
+                    <li>
+                        <a class="oa-user-menu__logout" href="/">
+                            <span class="oa-icon --logout oa-user-menu__logout-icon"></span>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="oa-search-modal" class="oa-search-modal">
+            <header class="oa-search-modal__header">
+                <div class="oa-input oa-search-input">
+                    <span class="oa-icon --search oa-input__icon --left"></span>
+                    <input type="text" placeholder="Search by Name / Product ID" class="oa-input__input input-lg form-control --round --small --with-left-icon" />
+                </div>
+                <button id="oa-search-modal-close-button" type="button" class="oa-search-modal__close-button">
+                    <small>Cancel</small>
+                </button>
+            </header>
+            <section class="oa-search-modal__section">
+                <header>
+                    <h6 class="oa-search-modal__title">Matching Keywords</h6>
+                </header>
+                <ul class="oa-search-modal__keywords">
+                    <li>
+                        <a class="oa-search-modal__keyword" href="/beauty/artistry">
+                            <span>Artistry</span>
+                            <span>
+                                Search in
+                                <strong>Beauty</strong>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="oa-search-modal__keyword" href="/nutrition/arabica">
+                            <span>Arabica</span>
+                            <span>
+                                Search in
+                                <strong>Nutrition</strong>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="oa-search-modal__section">
+                <header>
+                    <h6 class="oa-search-modal__title">Products</h6>
+                    <a href="/see-all-matching-keywords" class="oa-link oa-search-modal__see-all">
+                        <small>see all</small>
+                        <span class="oa-icon --arrow-right"></span>
+                    </a>
+                </header>
+                <ul class="oa-search-modal__products">
+                    <li>
+                        <a class="oa-search-modal__product" href="/product/artistry-exact-fit™-perfecting-loose-powder-light}">
+                            <img class="oa-image oa-search-modal__product-image" data-src="../../static/images/mock-search-result-artistry-powder.jpeg" alt="mock-search-result-artistry-powder" />
+                            <div class="oa-search-modal__product-info">
+                                <p class="oa-search-modal__product-title">
+                                    Artistry Exact Fit™ Perfecting Loose Powder - Light
+                                </p>
+                                <p class="oa-search-modal__product-description"></p>
+                                <div class="oa-search-modal__product-checkout">
+                                    <span class="oa-search-modal__product-price">฿964</span>
+                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
+                                        <span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="oa-search-modal__product" href="/product/artistry-signature-color™-lipstick}">
+                            <img class="oa-image oa-search-modal__product-image" data-src="../../static/images/mock-search-result-artistry-lipstick.jpeg" alt="mock-search-result-artistry-lipstick" />
+                            <div class="oa-search-modal__product-info">
+                                <p class="oa-search-modal__product-title">
+                                    Artistry Signature Color™ Lipstick
+                                </p>
+                                <p class="oa-search-modal__product-description">16 colors</p>
+                                <div class="oa-search-modal__product-checkout">
+                                    <span class="oa-search-modal__product-price">880</span>
+                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
+                                        <span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="oa-search-modal__product" href="/product/artistry-exact-fit™-perfecting-loose-powder}">
+                            <img class="oa-image oa-search-modal__product-image" data-src="../../static/images/mock-search-result-artistry-powder.jpeg" alt="mock-search-result-artistry-powder" />
+                            <div class="oa-search-modal__product-info">
+                                <p class="oa-search-modal__product-title">
+                                    Artistry Exact Fit™ Perfecting Loose Powder
+                                </p>
+                                <p class="oa-search-modal__product-description"></p>
+                                <div class="oa-search-modal__product-checkout">
+                                    <span class="oa-search-modal__product-price">
+                                        ฿964 ~ ฿1,564
+                                    </span>
+                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
+                                        <span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="oa-pickup-address-modal">
+            <div class="mz-searchable-dropdown dropdown oa-pickup-address-modal__dropdown">
+                <button type="button" class="mz-searchable-dropdown__button oa-pickup-address-modal__dropdown-button --with-left-icon" data-placeholder="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="mz-searchable-dropdown__button-icon --left">
+                        <span class="mz-icon --search oa-pickup-address-modal__search-icon"></span>
+                    </div>
+                    <div class="mz-searchable-dropdown__button-icon --right"></div>
+                    <span class="mz-searchable-dropdown__button-text">
+                        เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า
+                    </span>
+                </button>
+                <div class="mz-searchable-dropdown__modal">
+                    <button type="button" class="mz-searchable-dropdown__close-button">
+                        <span class="mz-icon --close"></span>
+                    </button>
+                    <div class="mz-input mz-searchable-dropdown__input">
+                        <div class="mz-input__icon --left">
+                            <span class="mz-icon --search oa-pickup-address-modal__search-icon"></span>
+                        </div>
+                        <input type="text" id="global-pickup-address" placeholder="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า" class="mz-input__input --with-left-icon" value="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า" />
+                    </div>
+                    <div class="mz-searchable-dropdown__menu oa-pickup-address-modal__dropdown-menu">
+                        <label class="mz-searchable-dropdown__option" for="global-pickup-address:after-sales">
+                            <input type="radio" class="mz-searchable-dropdown__option-input"
+                                id="global-pickup-address:after-sales" name="global-pickup-address" value="after-sales"
+                                data-label="AFTER SALES SERVICE" readonly="" />
+                            <div class="oa-pickup-address-modal__address-label">
+                                <span class="mz-icon --map-pin oa-pickup-address-modal__option-icon"></span>
+                                AFTER SALES SERVICE
+                            </div>
+                            <span class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"></span>
+                        </label>
+                        <label class="mz-searchable-dropdown__option" for="global-pickup-address:shop-rama-ii">
+                            <input type="radio" class="mz-searchable-dropdown__option-input"
+                                id="global-pickup-address:shop-rama-ii" name="global-pickup-address"
+                                value="shop-rama-ii" data-label="แอมเวย์ ช็อป พระราม 2" readonly="" />
+                            <div class="oa-pickup-address-modal__address-label">
+                                <span class="mz-icon --map-pin oa-pickup-address-modal__option-icon"></span>
+                                แอมเวย์ ช็อป พระราม 2
+                            </div>
+                            <span class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"></span>
+                        </label>
+                        <label class="mz-searchable-dropdown__option" for="global-pickup-address:shop-hq">
+                            <input type="radio" class="mz-searchable-dropdown__option-input"
+                                id="global-pickup-address:shop-hq" name="global-pickup-address" value="shop-hq"
+                                data-label="แอมเวย์ ช็อป สำนักงานใหญ่" readonly="" />
+                            <div class="oa-pickup-address-modal__address-label">
+                                <span class="mz-icon --map-pin oa-pickup-address-modal__option-icon"></span>
+                                แอมเวย์ ช็อป สำนักงานใหญ่
+                            </div>
+                            <span class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"></span>
+                        </label>
+                        <label class="mz-searchable-dropdown__option" for="global-pickup-address:shop-1">
+                            <input type="radio" class="mz-searchable-dropdown__option-input"
+                                id="global-pickup-address:shop-1" name="global-pickup-address" value="shop-1"
+                                data-label="แอมเวย์ ช็อป 1" readonly="" />
+                            <div class="oa-pickup-address-modal__address-label">
+                                <span class="mz-icon --map-pin oa-pickup-address-modal__option-icon"></span>
+                                แอมเวย์ ช็อป 1
+                            </div>
+                            <span class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"></span>
+                        </label>
+                        <label class="mz-searchable-dropdown__option" for="global-pickup-address:shop-2">
+                            <input type="radio" class="mz-searchable-dropdown__option-input"
+                                id="global-pickup-address:shop-2" name="global-pickup-address" value="shop-2"
+                                data-label="แอมเวย์ ช็อป 2" readonly="" />
+                            <div class="oa-pickup-address-modal__address-label">
+                                <span class="mz-icon --map-pin oa-pickup-address-modal__option-icon"></span>
+                                แอมเวย์ ช็อป 2
+                            </div>
+                            <span class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"></span>
+                        </label>
+                        <label class="mz-searchable-dropdown__option" for="global-pickup-address:shop-3">
+                            <input type="radio" class="mz-searchable-dropdown__option-input"
+                                id="global-pickup-address:shop-3" name="global-pickup-address" value="shop-3"
+                                data-label="แอมเวย์ ช็อป 3" readonly="" />
+                            <div class="oa-pickup-address-modal__address-label">
+                                <span class="mz-icon --map-pin oa-pickup-address-modal__option-icon"></span>
+                                แอมเวย์ ช็อป 3
+                            </div>
+                            <span class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"></span>
+                        </label>
+                        <label class="mz-searchable-dropdown__option" for="global-pickup-address:shop-4">
+                            <input type="radio" class="mz-searchable-dropdown__option-input"
+                                id="global-pickup-address:shop-4" name="global-pickup-address" value="shop-4"
+                                data-label="แอมเวย์ ช็อปสาขานี้ชื่อยาวมากเพื่อเป็นการทดสอบ implementation ที่ถูกต้อง"
+                                readonly="" />
+                            <div class="oa-pickup-address-modal__address-label">
+                                <span class="mz-icon --map-pin oa-pickup-address-modal__option-icon"></span>
+                                แอมเวย์ ช็อปสาขานี้ชื่อยาวมากเพื่อเป็นการทดสอบ implementation
+                                ที่ถูกต้อง
+                            </div>
+                            <span class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"></span>
+                        </label>
+                        <div class="mz-searchable-dropdown__footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mz-main-layout " class="mz-main-layout">
+            <div class="mz-main-layout__content d-block">
+                <!-- content area -->
+                <div class="amway-navbar-back">
+                    <div class="btn-backto-main">หน้าหลัก</div>
+                </div>
+                <div class="amway-banner-with-action  " style=" background: linear-gradient(#F8F8E7, #DFF5C8);">
+
+                    <div class="amway-banner-with-tab text-center">
+                        <img class="amway-banner-img" src="../../image/products/banner01.png">
+                    </div>
+                    <div class="amway-container ">
+                        <div class="amway-breadcrumb visible-desktop ">
+                            <div class="amway-bc-list ">หน้าหลัก</div>
+                            <a href="PLP_ABO_login.html" class="amway-bc-list  ">ความงาม</a>
+                            <div class="amway-bc-list active ">บำรุงผิว</div>
+                        </div>
+                        <div class="amway-title-banner-with-tab-area text-center">
+                            <div class="amway-title-banner-with-tab">
+                                <div class="amway-title-banner-with-tab-title">บำรุงผิว</div>
+                                <div class="amway-title-banner-with-tab-detail">ความงามที่มีชีวิตชีวา เปี่ยมด้วยพลัง สร้างสรรค์ แรงบันดาลใจ เพราะเราเชื่อว่าความสุขที่แท้จริงคือการมีชีวิตที่สมดุล ทั้งเรื่องสุขภาพที่แข็งแรง
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="amway-tab-to-submenu">
+                        <div class="amway-tab-to-submenu-area">
+                            <div class="amway-sub-menulist owl-carousel" id="amway-sub-menulist">
+                                <div class="item">
+                                    <a href="PLP_sub02_ABO_login.html">
+                                        <button class="amway-tab-to-submenu-link ">เคล็นเซอร์</button>
+                                    </a>
+                                </div>
+
+                                <div class="item">
+                                    <a href="PLP_sub02_ABO_login.html">
+                                        <button class="amway-tab-to-submenu-link ">โทนเนอร์</button>
+                                    </a>
+                                </div>
+
+                                <div class="item">
+                                    <a href="PLP_sub02_ABO_login.html">
+                                        <button class="amway-tab-to-submenu-link ">เซรั่ม</button>
+                                    </a>
+                                </div>
+
+                                <div class="item">
+                                    <a href="PLP_sub02_ABO_login.html">
+                                        <button class="amway-tab-to-submenu-link ">มอยส์เจอไรเซอร์</button>
+                                    </a>
+                                </div>
+
+                                <div class="item">
+                                    <a href="PLP_sub02_ABO_login.html">
+                                        <button class="amway-tab-to-submenu-link ">กันแดด</button>
+                                    </a>
+                                </div>
+
+                                <div class="item">
+                                    <a href="PLP_sub02_ABO_login.html">
+                                        <button class="amway-tab-to-submenu-link ">อายครีม</button>
+                                    </a>
+                                </div>
+
+                                <div class="item">
+                                    <a href="PLP_sub02_ABO_login.html">
+                                        <button class="amway-tab-to-submenu-link ">มาสค์ / สครับ</button>
+                                    </a>
+                                </div>
+
+                                <div class="item">
+                                    <a href="PLP_sub02_ABO_login.html">
+                                        <button class="amway-tab-to-submenu-link ">ทรีทเมนท์</button>
+                                    </a>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="amway-container">
+                    <div class="amway-headerlist ">
+                        <div class="amway-headerlist-header">
+                            <div class="amway-headerlist-title">ความงาม</div>
+                            <div class="amway-headerlist-result">(119 ผลลัพธ์)</div>
+                        </div>
+                        <div class="amway-headerlist-filter ">
+                            <input name="filter-instalment" id="filter-instalment" class="mz-dropdown-input__input" value="newItem" readonly="" />
+                            <div class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown dd-marke-check filter-in">
+                                <button id="filter-instalment-dropdown" type="button" class="mz-dropdown__button" data-placeholder="จัดเรียงโดย" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="mz-dropdown__button-text --selected">
+                                        <div class="mz-dropdown__text">
+                                            สินค้าใหม่
+                                        </div>
+                                    </div>
+                                    <span class="mz-icon --arrow-down mz-dropdown__icon"></span>
+                                </button>
+                                <ul class="mz-dropdown__menu dropdown-menu" aria-labelledby="filter-instalment-dropdown">
+                                    <li class="mz-dropdown__option-mod-title">
+                                        <div class="mz-dropdown__text">
+                                            จัดเรียงโดย
+                                        </div>
+                                        <div class="mz-dropdown__close"></div>
+                                    </li>
+                                    <li data-value="newItem" class="mz-dropdown__option">
+                                        <div class="mz-dropdown__text">
+                                            สินค้าใหม่
+                                        </div>
+                                    </li>
+                                    <li data-value="priceHL" class="mz-dropdown__option">
+                                        <div class="mz-dropdown__text">
+                                            ราคา (มาก - น้อย)
+                                        </div>
+                                    </li>
+                                    <li data-value="priceLH" class="mz-dropdown__option">
+                                        <div class="mz-dropdown__text">
+                                            ราคา (น้อย - มาก)
+                                        </div>
+                                    </li>
+                                    <li data-value="nameAZ" class="mz-dropdown__option">
+                                        <div class="mz-dropdown__text">
+                                            ชื่อสินค้า (A - Z)
+                                        </div>
+                                    </li>
+                                    <li data-value="nameZA" class="mz-dropdown__option">
+                                        <div class="mz-dropdown__text">
+                                            ชื่อสินค้า (Z - A)
+                                        </div>
+                                    </li>
+                                    <li data-value="nameFL" class="mz-dropdown__option">
+                                        <div class="mz-dropdown__text">
+                                            ชื่อสินค้า (ก - ฮ)
+                                        </div>
+                                    </li>
+                                    <li data-value="nameLF" class="mz-dropdown__option">
+                                        <div class="mz-dropdown__text">
+                                            ชื่อสินค้า (ฮ - ก)
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row-ten mb-5 ">
+                        <div class="amway-card-list ">
+
+                            <div class="amway-card ">
+                                <div class="amway-card-check">
+                                    <input type="checkbox" class="acc-input" id="001-acc-input">
+                                    <label for="001-acc-input" class="acc-label"></label>
+                                </div>
+                                <div class="amway-card-share active" onclick="openModal('addShareListActive')">
+                                </div>
+                                <a href="PDP_choose_flavour_ABO_login.html">
+                                    <div class="amway-card-box-img ">
+
+                                        <img class="amway-card-img " src="../../image/products/pd_d01.png " />
+                                        <div class="amway-promotion-in-card">
+                                            <div class="amway-promotion-in-card-area">
+                                                <img class="amway-promotion-in-card-img" src="../../image/promotion/save-15.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="amway-card-container ">
+                                    <div class="amway-card-code ">
+                                        รหัส#0102345
+                                    </div>
+
+                                    <div class="amway-card-text ">
+                                        <a href="PDP_choose_flavour_ABO_login.html">
+                                            <div class="amway-card-name ">
+                                                ชุดนิวทริไลท์ ออล แพลนท์ โปรตีน + นิวทริไลท์ โปรตีน เบอร์รี่
+
+                                            </div>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="amway-card-price ">
+                                        <div class="amway-card-price-m ">
+                                            <div class="price ">฿ 1,728</div>
+                                            <div class="PVBV">PV 933 / BV 2800</div>
+                                        </div>
+                                    </div>
+                                    <div class="amway-card-bar ">
+                                        <div class="amway-card-statut --soon">
+                                            <div class="stock-status-icon --soon"></div>
+                                            เร็วๆนี้
+                                        </div>
+                                        <button class="amway-card-btn "></button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="amway-card ">
+                                <div class="amway-card-check">
+                                    <input type="checkbox" class="acc-input" id="002-acc-input">
+                                    <label for="002-acc-input" class="acc-label"></label>
+                                </div>
+                                <div class="amway-card-share " onclick="openModal('addShareList')">
+                                </div>
+                                <a href="PDP_ABO_login.html">
+                                    <div class="amway-card-box-img ">
+
+                                        <img class="amway-card-img " src="../../image/products/pd-d02.png " />
+                                        <div class="amway-promotion-in-card">
+                                            <div class="amway-promotion-in-card-area">
+                                                <img class="amway-promotion-in-card-img" src="../../image/promotion/sp-price.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="amway-card-container ">
+                                    <div class="amway-card-code ">
+                                        รหัส#0102345
+                                    </div>
+
+                                    <div class="amway-card-text ">
+                                        <a href="PDP_ABO_login.html">
+                                            <div class="amway-card-name ">
+                                                อาร์ทิสทรี ยูธ เอ็กซ์เทนด์ เอ็นริชชิ่ง ครีม
+
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                    <div class="amway-card-price ">
+                                        <div class="amway-card-price-m ">
+                                            <div class="price ">฿ 1,728</div>
+                                            <div class="PVBV">PV 933 / BV 2800</div>
+                                        </div>
+                                    </div>
+                                    <div class="amway-card-bar ">
+                                        <div class="amway-card-statut --backOrder">
+                                            <div class="stock-status-icon --backOrder"></div>
+                                            สินค้าค้างจ่าย
+                                        </div>
+                                        <button class="amway-card-btn "></button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="amway-card ">
+
+                                <div class="amway-card-share" onclick="openModal('choose-color')">
+                                </div>
+                                <a href="PDP_choose_color_ABO_login.html">
+                                    <div class="amway-card-box-img ">
+
+                                        <img class="amway-card-img " src="../../image/products/pd_d04.png " />
+                                        <div class="amway-promotion-in-card">
+                                            <div class="amway-promotion-in-card-area">
+                                                <img class="amway-promotion-in-card-img" src="../../image/promotion/1get1.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="amway-card-container ">
+                                    <div class="amway-card-code ">
+                                        รหัส#0102345
+                                    </div>
+
+                                    <div class="amway-card-text ">
+                                        <a href="PDP_choose_color_ABO_login.html">
+                                            <div class="amway-card-name ">
+                                                อาร์ทิสทรี สตูดิโอ แบงค็อก เอดิชั่น ทู-อิน-วันแมท ลิป เครยอง
+
+                                            </div>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="amway-card-price ">
+                                        <div class="amway-card-price-m ">
+                                            <div class="price ">฿ 1,728</div>
+                                            <div class="PVBV">PV 933 / BV 2800</div>
+                                        </div>
+                                    </div>
+                                    <div class="amway-card-bar ">
+                                        <div class="amway-card-statut --outOfStock">
+                                            <div class="stock-status-icon --outOfStock"></div>
+                                            หมดชั่วคราว
+                                        </div>
+                                        <button class="amway-card-btn "></button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="amway-card ">
+
+                                <div class="amway-card-share " onclick="openModal('choose-bundle')">
+                                </div>
+                                <a href="PDP_choose_bundle_ABO_login.html">
+                                    <div class="amway-card-box-img ">
+
+                                        <img class="amway-card-img " src="../../image/products/pd_d03.png " />
+                                    </div>
+                                </a>
+                                <div class="amway-card-container ">
+                                    <div class="amway-card-code ">
+                                        รหัส#0102345
+                                    </div>
+
+                                    <div class="amway-card-text ">
+                                        <a href="PDP_choose_bundle_ABO_login.html">
+                                            <div class="amway-card-name ">
+                                                ชุดบอดี้คีย์ รีเชพ พร้อมแก้วเชคสแตนเลส สตีลบอดี้คีย์
+
+                                            </div>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="amway-card-price ">
+                                        <div class="amway-card-price-m ">
+                                            <div class="price ">฿ 18,146 - 18,986</div>
+                                            <div class="PVBV">PV 17,796 - 18,636 <span class=" visible-desktop">/</span>
+                                                <div class="BV">BV 17,796 - 18,636</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="amway-card-bar ">
+                                        <div class="amway-card-statut --available">
+                                            <div class="stock-status-icon --available"></div>
+                                            พร้อมจำหน่าย
+                                        </div>
+                                        <button class="amway-card-btn "></button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="amway-card ">
+                                <div class="amway-card-check">
+                                    <input type="checkbox" class="acc-input" id="005-acc-input">
+                                    <label for="005-acc-input" class="acc-label"></label>
+                                </div>
+                                <div class="amway-card-share active" onclick="openModal('addShareListActive')">
+                                </div>
+                                <a href="PDP_choose_flavour_ABO_login.html">
+                                    <div class="amway-card-box-img ">
+
+                                        <img class="amway-card-img " src="../../image/products/pd_d01.png " />
+                                        <div class="amway-promotion-in-card">
+                                            <div class="amway-promotion-in-card-area">
+                                                <img class="amway-promotion-in-card-img" src="../../image/promotion/save-15.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="amway-card-container ">
+                                    <div class="amway-card-code ">
+                                        รหัส#0102345
+                                    </div>
+
+                                    <div class="amway-card-text ">
+                                        <a href="PDP_choose_flavour_ABO_login.html">
+                                            <div class="amway-card-name ">
+                                                ชุดนิวทริไลท์ ออล แพลนท์ โปรตีน + นิวทริไลท์ โปรตีน เบอร์รี่
+
+                                            </div>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="amway-card-price ">
+                                        <div class="amway-card-price-m ">
+                                            <div class="price ">฿ 1,728</div>
+                                            <div class="PVBV">PV 933 / BV 2800</div>
+                                        </div>
+                                    </div>
+                                    <div class="amway-card-bar ">
+                                        <div class="amway-card-statut --available">
+                                            <div class="stock-status-icon --available"></div>
+                                            พร้อมจำหน่าย
+                                        </div>
+                                        <button class="amway-card-btn "></button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="amway-card ">
+                                <div class="amway-card-check">
+                                    <input type="checkbox" class="acc-input" id="007-acc-input">
+                                    <label for="007-acc-input" class="acc-label"></label>
+                                </div>
+                                <div class="amway-card-share " onclick="openModal('addShareList')">
+                                </div>
+                                <a href="PDP_ABO_login.html">
+                                    <div class="amway-card-box-img ">
+
+                                        <img class="amway-card-img " src="../../image/products/pd-d02.png " />
+                                        <div class="amway-promotion-in-card">
+                                            <div class="amway-promotion-in-card-area">
+                                                <img class="amway-promotion-in-card-img" src="../../image/promotion/sp-price.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="amway-card-container ">
+                                    <div class="amway-card-code ">
+                                        รหัส#0102345
+                                    </div>
+
+                                    <div class="amway-card-text ">
+                                        <a href="PDP_ABO_login.html">
+                                            <div class="amway-card-name ">
+                                                อาร์ทิสทรี ยูธ เอ็กซ์เทนด์ เอ็นริชชิ่ง ครีม
+
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                    <div class="amway-card-price ">
+                                        <div class="amway-card-price-m ">
+                                            <div class="price ">฿ 1,728</div>
+                                            <div class="PVBV">PV 933 / BV 2800</div>
+                                        </div>
+                                    </div>
+                                    <div class="amway-card-bar ">
+                                        <div class="amway-card-statut --backOrder">
+                                            <div class="stock-status-icon --backOrder"></div>
+                                            สินค้าค้างจ่าย
+                                        </div>
+                                        <button class="amway-card-btn "></button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="amway-card ">
+
+                                <div class="amway-card-share" onclick="openModal('choose-color')">
+                                </div>
+                                <a href="PDP_choose_color_ABO_login.html">
+                                    <div class="amway-card-box-img ">
+
+                                        <img class="amway-card-img " src="../../image/products/pd_d04.png " />
+                                        <div class="amway-promotion-in-card">
+                                            <div class="amway-promotion-in-card-area">
+                                                <img class="amway-promotion-in-card-img" src="../../image/promotion/1get1.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="amway-card-container ">
+                                    <div class="amway-card-code ">
+                                        รหัส#0102345
+                                    </div>
+
+                                    <div class="amway-card-text ">
+                                        <a href="PDP_choose_color_ABO_login.html">
+                                            <div class="amway-card-name ">
+                                                อาร์ทิสทรี สตูดิโอ แบงค็อก เอดิชั่น ทู-อิน-วันแมท ลิป เครยอง
+
+                                            </div>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="amway-card-price ">
+                                        <div class="amway-card-price-m ">
+                                            <div class="price ">฿ 1,728</div>
+                                            <div class="PVBV">PV 933 / BV 2800</div>
+                                        </div>
+                                    </div>
+                                    <div class="amway-card-bar ">
+                                        <div class="amway-card-statut --outOfStock">
+                                            <div class="stock-status-icon --outOfStock"></div>
+                                            หมดชั่วคราว
+                                        </div>
+                                        <button class="amway-card-btn "></button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="amway-card ">
+
+                                <div class="amway-card-share " onclick="openModal('choose-bundle')">
+                                </div>
+                                <a href="PDP_choose_bundle_ABO_login.html">
+                                    <div class="amway-card-box-img ">
+
+                                        <img class="amway-card-img " src="../../image/products/pd_d03.png " />
+                                    </div>
+                                </a>
+                                <div class="amway-card-container ">
+                                    <div class="amway-card-code ">
+                                        รหัส#0102345
+                                    </div>
+
+                                    <div class="amway-card-text ">
+                                        <a href="PDP_choose_bundle_ABO_login.html">
+                                            <div class="amway-card-name ">
+                                                ชุดบอดี้คีย์ รีเชพ พร้อมแก้วเชคสแตนเลส สตีลบอดี้คีย์
+
+                                            </div>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="amway-card-price ">
+                                        <div class="amway-card-price-m ">
+                                            <div class="price ">฿ 18,146 - 18,986</div>
+                                            <div class="PVBV">PV 17,796 - 18,636 <span class=" visible-desktop">/</span>
+                                                <div class="BV">BV 17,796 - 18,636</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="amway-card-bar ">
+                                        <div class="amway-card-statut --available">
+                                            <div class="stock-status-icon --available"></div>
+                                            พร้อมจำหน่าย
+                                        </div>
+                                        <button class="amway-card-btn "></button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- end content area -->
+            </div>
+            <footer class="mz-footer">Footer</footer>
+            <!--   <div class="amway-modal " id="toCart">
+                <div class="bg-modal"></div>
+                <form class="amway-modal-content ">
+                    <div class="close-modal-bar">
+                        <div class="btn-close-modal"></div>
+                    </div>
+                    <div class="amway-modal-content-header mb-3">
+                        <div class="amway-modal-content-title ">สินค้าที่เลือก</div>
+                        <div class="amway-modal-content-title-sub">จำนวน 3 รายการ</div>
+                    </div>
+                    <div class="amway-modal-content-product">
+                        <div class="amway-to-cart-list">
+                            <div class="amway-to-cart-pic-area">
+
+                                <img class="amway-to-cart-pic" src="../../image/products/wishlist/pd01.png">
+
+                            </div>
+                            <div class="amway-to-cart-product">
+
+                                <div class="amway-to-cart-product-alldetail">
+                                    <div class="amway-to-cart-product-code">รหัส#0102345</div>
+                                    <a href="PDP_choose_flavour_ABO_login.html" class="amway-to-cart-product-name">ชุดนิวทริไลท์ ออล แพลนท์ โปรตีน +
+                                        นิวทริไลท์ โปรตีน เบอร์รี่</a>
+
+
+                                </div>
+                            </div>
+                            <div class="amway-to-cart-area">
+
+                                <div class="amway-to-cart-quantity">
+                                    <div class="mz-integer-input ">
+                                        <div class="mz-integer-input__quantity --active has_bin">
+                                            <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                <span class="mz-icon --minus"></span>
+                                                <div class="btn-del-bin"
+                                                    onclick="openModalInput('deleteItem', 'pd-0001')"></div>
+                                            </button>
+                                            <input type="tel" id="001-quantity" name="001-quantity" class="mz-integer-input__input" min="1" value="1" max="6">
+                                            <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                <span class="mz-icon --add"></span>
+                                            </button>
+                                        </div>
+                                        <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                        </button>
+                                    </div>
+                                    <div class="amway-to-cart-price-perproduct">( 2 x ฿ 1,728 )</div>
+                                </div>
+                                <div class="amway-to-cart-price-score">
+                                    <div class="amway-to-cart-price-totalproduct">฿ 3,456</div>
+                                    <div class="amway-to-cart-score">PV 1,152 / BV 3,456</div>
+                                </div>
+
+
+                            </div>
+                            <div class="amway-to-cart-delete">
+                                <div class="btn-del-item" onclick="openModalInput('deleteItem', 'pd-0001')"></div>
+                            </div>
+                        </div>
+                        <div class="amway-to-cart-list">
+                            <div class="amway-to-cart-pic-area">
+
+                                <img class="amway-to-cart-pic" src="../../image/products/pd_d04.png">
+
+                            </div>
+                            <div class="amway-to-cart-product">
+
+                                <div class="amway-to-cart-product-alldetail">
+                                    <div class="amway-to-cart-product-code">รหัส#0102345</div>
+                                    <a href="PDP_choose_color_ABO_login.html" class="amway-to-cart-product-name">อาร์ทิสทรี สตูดิโอ แบงค็อก เอดิชั่น
+                                        ทู-อิน-วันแมท ลิป เครยอง</a>
+
+
+                                </div>
+                            </div>
+                            <div class="amway-to-cart-area">
+
+                                <div class="amway-to-cart-quantity">
+                                    <div class="mz-integer-input ">
+                                        <div class="mz-integer-input__quantity --active has_bin">
+                                            <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                <span class="mz-icon --minus"></span>
+                                                <div class="btn-del-bin"
+                                                    onclick="openModalInput('deleteItem', 'pd-0002')"></div>
+                                            </button>
+                                            <input type="tel" id="002-quantity" name="002-quantity" class="mz-integer-input__input" min="1" value="1" max="6">
+                                            <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                <span class="mz-icon --add"></span>
+                                            </button>
+                                        </div>
+                                        <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                        </button>
+                                    </div>
+                                    <div class="amway-to-cart-price-perproduct">( 2 x ฿ 1,728 )</div>
+                                </div>
+                                <div class="amway-to-cart-price-score">
+                                    <div class="amway-to-cart-price-totalproduct">฿ 3,456</div>
+                                    <div class="amway-to-cart-score">PV 1,152 / BV 3,456</div>
+                                </div>
+
+
+                            </div>
+                            <div class="amway-to-cart-delete">
+                                <div class="btn-del-item" onclick="openModalInput('deleteItem', 'pd-0002')"></div>
+                            </div>
+                        </div>
+                        <div class="amway-to-cart-list">
+                            <div class="amway-to-cart-pic-area">
+
+                                <img class="amway-to-cart-pic" src="../../image/products/pd_d04.png">
+
+                            </div>
+                            <div class="amway-to-cart-product">
+
+                                <div class="amway-to-cart-product-alldetail">
+                                    <div class="amway-to-cart-product-code">รหัส#0102345</div>
+                                    <a href="PDP_choose_color_ABO_login.html" class="amway-to-cart-product-name">อาร์ทิสทรี สตูดิโอ แบงค็อก เอดิชั่น
+                                        ทู-อิน-วันแมท ลิป เครยอง</a>
+
+
+                                </div>
+                            </div>
+                            <div class="amway-to-cart-area">
+
+                                <div class="amway-to-cart-quantity">
+                                    <div class="mz-integer-input ">
+                                        <div class="mz-integer-input__quantity --active has_bin">
+                                            <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                <span class="mz-icon --minus"></span>
+                                                <div class="btn-del-bin"
+                                                    onclick="openModalInput('deleteItem', 'pd-0003')"></div>
+                                            </button>
+                                            <input type="tel" id="003-quantity" name="003-quantity" class="mz-integer-input__input" min="1" value="1" max="6">
+                                            <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                <span class="mz-icon --add"></span>
+                                            </button>
+                                        </div>
+                                        <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                        </button>
+                                    </div>
+                                    <div class="amway-to-cart-price-perproduct">( 2 x ฿ 1,728 )</div>
+                                </div>
+                                <div class="amway-to-cart-price-score">
+                                    <div class="amway-to-cart-price-totalproduct">฿ 3,456</div>
+                                    <div class="amway-to-cart-score">PV 1,152 / BV 3,456</div>
+                                </div>
+
+
+                            </div>
+                            <div class="amway-to-cart-delete">
+                                <div class="btn-del-item" onclick="openModalInput('deleteItem', 'pd-0003')"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="amway-modal-content-footer center to-cart-btn">
+                        <button type="submit" class="btn-default-amway btn-h40 confirm " onclick="closeModal('toCart')">เลือกสินค้าเพิ่ม</button>
+                    </div>
+
+                </form>
+
+            </div> -->
+            <div class="amway-modal-fullPageOnMb  " id="newShareList">
+                <div class="bg-modal"></div>
+                <div class="amway-modal-content-fullpage-onMb choose-theme-wishlist">
+                    <div class="aw-header-bar">
+                        <div class="aw-header-bar-btn-back" onclick="closeModal('newShareList')"></div>
+                        <div class="aw-header-bar-title visible-mobile">สร้างรายการแชร์ใหม่</div>
+                    </div>
+                    <div class="aw-for-scroll">
+                        <div class="content-create-wl">
+
+                            <div class="aw-md-full-sub-title">เลือกภาพหน้าปก</div>
+                            <input type="hidden" name="themeSharelist" id="themeSharelist" value="pink">
+                            <div class="choose-banner-wishlist mb-3">
+                                <div class="cbw-list">
+                                    <div class="cbw-list-image active" data-theme="pink" style="background:url('../../image/banner_wishlist/pink.svg')">
+                                    </div>
+                                </div>
+                                <div class="cbw-list">
+                                    <div class="cbw-list-image" data-theme="orange" style="background:url('../../image/banner_wishlist/orange.svg')"></div>
+                                </div>
+                                <div class="cbw-list">
+                                    <div class="cbw-list-image" data-theme="yellow" style="background:url('../../image/banner_wishlist/yellow.svg')"></div>
+                                </div>
+                                <div class="cbw-list">
+                                    <div class="cbw-list-image" data-theme="green" style="background:url('../../image/banner_wishlist/green.svg')">
+                                    </div>
+                                </div>
+                                <div class="cbw-list">
+                                    <div class="cbw-list-image" data-theme="blue" style="background:url('../../image/banner_wishlist/blue.svg')">
+                                    </div>
+                                </div>
+                                <div class="cbw-list">
+                                    <div class="cbw-list-image" data-theme="purple" style="background:url('../../image/banner_wishlist/purple.svg')"></div>
+                                </div>
+                            </div>
+                            <div class="aw-md-full-sub-title">ชื่อ</div>
+                            <div class="amway-input-area my-3">
+                                <input type="text" class="amway-input" placeholder="ตั้งชื่อรายการแชร์นี้" required name="nameShareList" id="nameShareList" autocomplete="off" autofocus>
+                            </div>
+                            <div class="aw-md-full-sub-title">เพิ่มเติมคำอธิบาย</div>
+                            <div class="amway-textarea-area my-3">
+                                <textarea class="amway-textarea " placeholder="เพิ่มคำอธิบาย" autocomplete="off" autofocus></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="ctw-btn-area">
+                        <button class="btn-outlin-black btn-h40 mr-3" onclick="closeModal('newShareList')">ยกเลิก</button>
+                        <button class="btn-black btn-h40 confirm" disabled onclick="openModal('shareSucess')">บันทึก</button>
+                    </div>
+                </div>
+            </div>
+            <div class="amway-modal " id="addShareListActive">
+                <div class="bg-modal"></div>
+                <form class="amway-modal-content ">
+                    <div class="close-modal-bar">
+                        <div class="btn-close-modal"></div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <div class="amway-modal-content-title mb-3">My List</div>
+
+                        <div class="btn-outlin-black btn-h40 ml-3 min-w-auto" onclick="openModal('newShareList')">+ เพิ่ม
+                        </div>
+
+                    </div>
+
+                    <div class="add-to-share">
+                        <div class="add-to-share-list">
+                            <input type="checkbox" class="add-to-share-input" id="add-to-share-list-001-01" checked>
+                            <label for="add-to-share-list-001-01" class="add-to-share-label">
+                                <div class="add-to-share-label-text">คุณสมหญิง</div>
+                            </label>
+                        </div>
+                        <div class="add-to-share-list">
+                            <input type="checkbox" class="add-to-share-input" id="add-to-share-list-002-01">
+                            <label for="add-to-share-list-002-01" class="add-to-share-label">
+                                <div class="add-to-share-label-text">คุณสมชาย</div>
+                            </label>
+                        </div>
+                        <div class="add-to-share-list">
+                            <input type="checkbox" class="add-to-share-input" id="add-to-share-list-003-01">
+                            <label for="add-to-share-list-003-01" class="add-to-share-label">
+                                <div class="add-to-share-label-text">ผลิตภัณฑ์ความงามและสุขภาพ</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="amway-modal-content-footer center add-to-share-btn">
+
+                        <div class="add-to-share-btn-list">
+                            <button type="submit" class="btn-black btn-h40 confirm ">บันทึก</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="amway-modal " id="addShareList">
+                <div class="bg-modal"></div>
+                <div class="amway-modal-content ">
+                    <div class="close-modal-bar">
+                        <div class="btn-close-modal"></div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <div class="amway-modal-content-title mb-3">My List</div>
+
+                        <div class="btn-outlin-black btn-h40 ml-3 min-w-auto" onclick="openModal('newShareList')">+ เพิ่ม
+                        </div>
+
+                    </div>
+                    <div class="add-to-share">
+                        <div class="add-to-share-list">
+                            <input type="checkbox" class="add-to-share-input" id="add-to-share-list-001-02">
+                            <label for="add-to-share-list-001-02" class="add-to-share-label">
+                                <div class="add-to-share-label-text">คุณสมหญิง</div>
+                            </label>
+                        </div>
+                        <div class="add-to-share-list">
+                            <input type="checkbox" class="add-to-share-input" id="add-to-share-list-002-02">
+                            <label for="add-to-share-list-002-02" class="add-to-share-label">
+                                <div class="add-to-share-label-text">คุณสมชาย</div>
+                            </label>
+                        </div>
+                        <div class="add-to-share-list">
+                            <input type="checkbox" class="add-to-share-input" id="add-to-share-list-003-02">
+                            <label for="add-to-share-list-003-02" class="add-to-share-label">
+                                <div class="add-to-share-label-text">ผลิตภัณฑ์ความงามและสุขภาพ</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="amway-modal-content-footer center add-to-share-btn">
+                        <div class="add-to-share-btn-list">
+                            <button class="btn-black btn-h40 confirm " onclick="openModal('shareSucess')">บันทึก</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="amway-modal " id="shareSucess">
+                <div class="bg-modal ts"></div>
+                <div class="amway-modal-content amway-modal-like">
+                    <div class="content">
+                        <img class="mr-2" src="../../image/icon/icon_like/icon-like-active.svg">
+                        <span><strong>เพิ่มไปยังรายการแชร์แล้ว</strong></span>
+                    </div>
+
+                    <a class=" amway-tab-to-like btn-black" href="wishlist_ABO_login_new.html">ดูรายการ</a>
+                </div>
+
+            </div>
+            <div class="amway-modal middle" id="deleteItem">
+                <input type="hidden" class="input-for-use-something" value="">
+                <div class="bg-modal"></div>
+                <form class="amway-modal-content ">
+                    <div class="close-modal-bar">
+                        <div class="btn-close-modal"></div>
+                    </div>
+                    <div class="amway-modal-content-title text-center">ลบรายการ !</div>
+                    <div class="amway-modal-content-subtitle text-center">คุณยืนยันที่จะลบรายการนี้หรือไม่
+                    </div>
+                    <div class="amway-modal-content-footer center">
+                        <button class="btn-default-outline-amway btn-h40 mr-3" onclick="closeModal('deleteItem')">
+                            ยกเลิก</button> <button type="submit" class="btn-default-amway btn-h40 confirm ">ยืนยัน</button>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="amway-add-cart">
+                <div class="aac-content">
+                    <div class="acc-product-detail">
+                        <div class="acc-product-list">
+                            <div class="acc-pdl-detail">สินค้าที่เลือกแล้ว <span class="acc-choose-product"></span> รายการ
+                            </div>
+                            <!-- <div class="acc-btn-list" onclick="openModal('toCart')">ดูสินค้าที่เลือก</div> -->
+                        </div>
+                        <div class="acc-total">
+                            <div class="acc-total-price">฿ 1,728</div>
+                            <div class="acc-PVBV">PV 933 / BV 2800</div>
+                        </div>
+
+                    </div>
+
+                    <div class="acc-btn-cart-area">
+                        <div class="acc-btn-cart " onclick="showError()"><img class="icon-cart mr-2" src="../../image/icon/icon-cart.svg ">หยิบใส่ตะกร้า</div>
+                    </div>
+                </div>
+            </div>
+            <div class="amway-modal-color " id="choose-color">
+                <div class="bg-modal"></div>
+                <div class="amway-modal-color-content">
+                    <div class="aw-header-bar ">
+                        <div class="aw-header-bar-btn-back"></div>
+                        <div class="aw-header-bar-title">จัดการตัวเลือก</div>
+                    </div>
+                    <div class="aw-for-scroll">
+                        <div class="aw-product">
+                            <div class="aw-product-pic-area" onclick="openLModal('choose-color-lightbox')">
+                                <div class="aw-product-pic">
+                                    <div class="aw-product-img" style="background: url('../../image/products/pd_d04.svg')"></div>
+                                </div>
+                            </div>
+                            <div class="aw-product-detail">
+                                <div class="aw-product-detail-code">รหัส#0102345</div>
+                                <div class="aw-product-detail-name">อาร์ทิสทรี สตูดิโอ แบงค็อก เอดิชั่น ทู-อิน-วันแมท ลิป เครยอง </div>
+                                <div class="aw-product-detail-price">฿ 600</div>
+                                <div class="aw-product-detail-score">PV 933 / BV 2800</div>
+                            </div>
+                        </div>
+                        <div class="select-color">
+                            <input type="text" class="select-color-input-val" value="0001" readonly>
+                            <input type="text" class="select-color-input-id" value="pd-0002" readonly>
+                            <input type="text" class="select-color-input-src" value="../../image/products/color/rose-goddess.png" readonly>
+                            <input type="text" class="select-color-input-alt" value="rose-goddess" readonly>
+                            <div class="select-color-selected-header">
+                                <div class="select-color-selected-title">เลือกสี : </div>
+                                <div class="select-color-selected-result">สีโรส ก็อตเดส</div>
+                            </div>
+                            <div class="select-color-selected-menu">
+                                <div class="select-color-option --selected" data-value="0001" data-text="สีโรส ก็อตเดส">
+                                    <img class="mz-image sco-img " data-src="../../image/products/color/rose-goddess.png" alt="rose-goddess" />
+                                </div>
+                                <div class="select-color-option" data-value="0002" data-text="สีรูบี้ ก็อดเดส">
+                                    <img class="mz-image sco-img" data-src="../../image/products/color/ruby-goddess.png" alt="ruby-goddess" />
+                                </div>
+                                <div class="select-color-option" data-value="0003" data-text="สีสไปซ์ด ก็อดเดส">
+                                    <img class="mz-image sco-img" data-src="../../image/products/color/spiced-goddess.png" alt="spiced-goddess" />
+                                </div>
+                                <div class="select-color-option" data-value="0004" data-text="สีซันเซ็ต ก๊อดเดส">
+                                    <img class="mz-image sco-img" data-src="../../image/products/color/sunset-goddess.png" alt="sunset-goddess" />
+                                </div>
+                                <div class="select-color-option" data-value="0005" data-text="สีฟูเซีย ก๊อดเดส">
+                                    <img class="mz-image sco-img" data-src="../../image/products/color/fuuchsia-goddess.png" alt="fuuchsia-goddess" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aw-footer-bar">
+                        <button class="btn-black btn-h40 confirm" onclick="openModal('addShareList')">ต่อไป</button>
+                    </div>
+                </div>
+                <div class="amway-model-lightbox" id="choose-color-lightbox">
+                    <div class="am-lb-bg"></div>
+                    <div class="am-lb-close" onclick="closeLModal('choose-color-lightbox')"></div>
+                    <div class="am-lb-img" style="background:url('../../image/products/pd_d04.svg')"></div>
+                </div>
+            </div>
+            <div class=" amway-modal-bundle " id="choose-bundle">
+                <div class="bg-modal"></div>
+                <div class="amway-modal-bundle-content">
+                    <div class="aw-header-bar">
+                        <div class="aw-header-bar-btn-back"></div>
+                        <div class="aw-header-bar-title">จัดการตัวเลือก</div>
+                    </div>
+                    <div class="aw-for-scroll">
+                        <div class="aw-product">
+                            <div class="aw-product-pic-area" onclick="openLModal('choose-bundle-lightbox')">
+                                <div class="aw-product-pic">
+                                    <div class="aw-product-img" style="background: url('../../image/products/pd_d03.svg')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="aw-product-detail">
+                                <div class="aw-product-detail-code">รหัส#0102345</div>
+                                <div class="aw-product-detail-name">ชุดบอดี้คีย์ รีเชพ พร้อมแก้วเชคสแตนเลส สตีล บอดี้คีย์ (ชุด 4) </div>
+                                <div class="aw-product-detail-price">฿ 600</div>
+                                <div class="aw-product-detail-score">PV 933 / BV 2800</div>
+                            </div>
+                        </div>
+                        <div class="bundle-select-area">
+                            <div class="bundle-select">
+                                <input type="hidden" class="select-bundle-count-input" min="0" max="3" value="0" id="set-01">
+                                <div class="bundle-select-head">
+                                    <div class="select-bundle-title">
+                                        เลือกโปรตีนให้ครบ 3 ชิ้น
+                                    </div>
+                                    <div class="select-bundle-count-area">
+                                        <div class="select-bundle-count">
+                                            <div class="select-bundle-count-select">0</div>/
+                                            <div class="select-bundle-count-total">3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-select-list">
+                                    <div class="bsl-img-area">
+                                        <div class="bsl-img" style="background: url('../../image/products/pd_bundle.svg');"></div>
+                                    </div>
+                                    <div class="bsl-pdname">
+                                        โปรตีน กลิ่นเบอร์รี - ขนาด 500 กรัม
+                                    </div>
+                                    <div class="bsl-input">
+                                        <div class="mz-integer-input ">
+                                            <div class="mz-integer-input__quantity --active sop_dt">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                    <span class="mz-icon --minus"></span>
+
+                                                </button>
+                                                <input type="tel" id="001-select-01" name="001-select-01" class="mz-integer-input__input" min="0" value="0" max="3" />
+                                                <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                    <span class="mz-icon --add"></span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-select-list">
+                                    <div class="bsl-img-area">
+                                        <div class="bsl-img" style="background: url('../../image/products/pd_bundle.svg');"></div>
+                                    </div>
+                                    <div class="bsl-pdname">
+                                        โปรตีน กลิ่นเบอร์รี - ขนาด 500 กรัม
+                                    </div>
+                                    <div class="bsl-input">
+                                        <div class="mz-integer-input ">
+                                            <div class="mz-integer-input__quantity --active sop_dt">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                    <span class="mz-icon --minus"></span>
+
+                                                </button>
+                                                <input type="tel" id="001-select-02" name="001-select-02" class="mz-integer-input__input" min="0" value="0" max="3" />
+                                                <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                    <span class="mz-icon --add"></span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-select-list">
+                                    <div class="bsl-img-area">
+                                        <div class="bsl-img" style="background: url('../../image/products/pd_bundle.svg');"></div>
+                                    </div>
+                                    <div class="bsl-pdname">
+                                        โปรตีน กลิ่นเบอร์รี - ขนาด 500 กรัม
+                                    </div>
+                                    <div class="bsl-input">
+                                        <div class="mz-integer-input ">
+                                            <div class="mz-integer-input__quantity --active sop_dt">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                    <span class="mz-icon --minus"></span>
+
+                                                </button>
+                                                <input type="tel" id="001-select-03" name="001-select-03" class="mz-integer-input__input" min="0" value="0" max="3" />
+                                                <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                    <span class="mz-icon --add"></span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bundle-select">
+                                <input type="hidden" class="select-bundle-count-input" min="0" max="3" value="0" id="set-02">
+                                <div class="bundle-select-head">
+                                    <div class="select-bundle-title">
+                                        เลือกโปรตีนให้ครบ 3 ชิ้น
+                                    </div>
+                                    <div class="select-bundle-count-area">
+                                        <div class="select-bundle-count">
+                                            <div class="select-bundle-count-select">0</div>/
+                                            <div class="select-bundle-count-total">3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-select-list">
+                                    <div class="bsl-img-area">
+                                        <div class="bsl-img" style="background: url('../../image/products/pd_bundle.svg');"></div>
+                                    </div>
+                                    <div class="bsl-pdname">
+                                        โปรตีน กลิ่นเบอร์รี - ขนาด 500 กรัม
+                                    </div>
+                                    <div class="bsl-input">
+                                        <div class="mz-integer-input ">
+                                            <div class="mz-integer-input__quantity --active sop_dt">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                    <span class="mz-icon --minus"></span>
+
+                                                </button>
+                                                <input type="tel" id="002-select-01" name="002-select-01" class="mz-integer-input__input" min="0" value="0" max="3" />
+                                                <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                    <span class="mz-icon --add"></span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-select-list">
+                                    <div class="bsl-img-area">
+                                        <div class="bsl-img" style="background: url('../../image/products/pd_bundle.svg');"></div>
+                                    </div>
+                                    <div class="bsl-pdname">
+                                        โปรตีน กลิ่นเบอร์รี - ขนาด 500 กรัม
+                                    </div>
+                                    <div class="bsl-input">
+                                        <div class="mz-integer-input ">
+                                            <div class="mz-integer-input__quantity --active sop_dt">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                    <span class="mz-icon --minus"></span>
+
+                                                </button>
+                                                <input type="tel" id="002-select-02" name="002-select-02" class="mz-integer-input__input" min="0" value="0" max="3" />
+                                                <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                    <span class="mz-icon --add"></span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-select-list">
+                                    <div class="bsl-img-area">
+                                        <div class="bsl-img" style="background: url('../../image/products/pd_bundle.svg');"></div>
+                                    </div>
+                                    <div class="bsl-pdname">
+                                        โปรตีน กลิ่นเบอร์รี - ขนาด 500 กรัม
+                                    </div>
+                                    <div class="bsl-input">
+                                        <div class="mz-integer-input ">
+                                            <div class="mz-integer-input__quantity --active sop_dt">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                    <span class="mz-icon --minus"></span>
+
+                                                </button>
+                                                <input type="tel" id="002-select-03" name="002-select-03" class="mz-integer-input__input" min="0" value="0" max="3" />
+                                                <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                    <span class="mz-icon --add"></span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bundle-select is-selectbox">
+                                <input type="hidden" class="select-bundle-count-input" min="0" max="3" value="0" id="set-03">
+                                <div class="bundle-select-head">
+                                    <div class="select-bundle-title">
+                                        บอดี้คีย์ ผลิตภัณฑ์ทดแทนมื้ออาหาร (ฟรี) 1 ชิ้น
+                                    </div>
+                                </div>
+                                <div class="bundle-select-list">
+                                    <div class="bsl-img-area">
+                                        <div class="bsl-img" style="background: url('../../image/products/pd_bundle.svg');"></div>
+                                    </div>
+                                    <div class="bsl-pdname">
+                                        โปรตีน กลิ่นเบอร์รี - ขนาด 500 กรัม
+                                    </div>
+                                    <div class="bsl-select">
+                                        <section class="mz-cart-item__left-section">
+
+                                            <input name="flavour-instalment" id="flavour-instalment" class="mz-dropdown-input__input" value="0%4m" readonly="" />
+                                            <div class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown dd-marke-check on-modal">
+                                                <button id="102385-instalment-dropdown" type="button" class="mz-dropdown__button" data-placeholder="รสชาติ" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <div class="mz-dropdown__button-text --selected">
+                                                        <div class="mz-dropdown__text">
+                                                            รสวานิลลา
+                                                        </div>
+                                                    </div>
+                                                    <span class="mz-icon --arrow-down mz-dropdown__icon"></span>
+                                                </button>
+                                                <ul class="mz-dropdown__menu dropdown-menu" aria-labelledby="flavour-instalment-dropdown">
+                                                    <li data-value="0%4m" class="mz-dropdown__option">
+                                                        <div class="mz-dropdown__text">
+                                                            รสวานิลลา
+                                                        </div>
+                                                    </li>
+                                                    <li data-value="2.5%12m" class="mz-dropdown__option">
+                                                        <div class="mz-dropdown__text">
+                                                            รสช็อคโกแลต
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </section>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="bundle-sumary">
+                                <div class="bundle-sumary-header">
+                                    สินค้าอื่นๆ ในชุดผลิตภัณฑ์นี้
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-name">นิวทริไลท์ ดับเบิ้ลเอ็กซ์ ไฟโตเบลนด์</div>
+                                    <div class="bundle-sumary-piece">x2</div>
+                                    <div class="bundle-sumary-price">฿2,148</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-name">นิวทริไลท์เครื่องหมายการค้า ออล แพ ลนท์ โปรตีน - ขนาด 900 กรัม</div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price">฿2,148</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-name">กระเป๋าบอดี้คีย์</div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price free">Free</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-name">เมนูบอดี้คีย์</div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price free">Free</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-name">คู่มือบอดี้คีย์</div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price free">Free</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-name">อินบอดี้วอทช์ (นาฬิกาเพื่อสุขภาพอิน บอดี้) InBody WATCH สีดำ - M/L</div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price free">Free</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-name">นิวทริไลท์เครื่องหมายการค้า กรีน-ที พลัส (ฟรี)
+                                    </div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price free">Free</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-name">โบรชัวร์คู่มือการใช้งานอินบอดี้วอทช์ และแอพพลิเคชั่นบอดี้คีย์ 2.1</div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price free">Free</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-name">โบรชัวร์ คู่มือการแข่งขันบอดี้คีย์ 2.1</div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price free">Free</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-name">อุปกรณ์เสริมบอดี้ตีย์ พร้อมโบรชัวร์การแข่งขันลดน้ำหนักและสลายไขมัน ด้วยโปรแกรมบอดี้คีย์ 2020</div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price">฿5,000</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="aw-footer-bar">
+                        <button class="btn-black btn-h40 confirm" disabled onclick="openModal('addShareList')">ต่อไป</button>
+                    </div>
+
+                </div>
+                <div class="amway-model-lightbox" id="choose-bundle-lightbox">
+                    <div class="am-lb-bg"></div>
+                    <div class="am-lb-close" onclick="closeLModal('choose-bundle-lightbox')"></div>
+                    <div class="am-lb-img" style="background:url('../../image/products/pd_d03.svg')"></div>
+                </div>
+            </div>
+
+            <div class="amway-modal" id="Unshare">
+                <div class="bg-modal"></div>
+                <form class="amway-modal-content amway-modal-like un-like">
+                    <div class="content">
+                        <img class="mr-2" src="../../image/icon/icon_like/icon-unlike.svg">
+                        <span><strong>นำออกจากรายการแชร์แล้ว</strong></span>
+                    </div>
+
+                    <button class="btn-default-amway amway-tab-to-like">ดูรายการ</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Add on -->
+
+    <script src="../../Common/js/tab.js "></script>
+    <script src="../../Common/js/horizontal-scroll.js "></script>
+
+    <script src="../../Common/js/Dropdown-mod.js "></script>
+    <script src="../../Common/js/products-check-list.js "></script>
+    <script src="../../Common/js/IntegerInput-mod.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+    <script src="../../Common/js/Modal.js"></script>
+    <script src="../../ShareBar/js/myList-modal.js"></script>
+    <script src="../../ShareBar/js/select-color.js"></script>
+    <script src="../../ShareBar/js/select-bundle.js"></script>
+    <script src="../../ShareBar/js/lightbox-modal.js"></script>
+    <script>
+        hideError()
+
+        function hideError() {
+            $('.mz-main-layout__messages-container .mz-error-notification').addClass('d-none');
+        }
+
+
+        function showError() {
+            $('.mz-main-layout__messages-container .mz-error-notification').removeClass('d-none');
+        }
+        submenuSol()
+        tabAction('amway-sub-menulist', 'amway-tab-to-submenu-link');
+        var widthchx = $(window).width();
+
+        $(window).resize(function() {
+            if ($(this).width() !== widthchx) {
+                widthchx = $(this).width();
+                submenuSol()
+            }
+
+        });
+
+
+        function submenuSol() {
+            var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            var item = $('#amway-sub-menulist .amway-tab-to-submenu-link').length;
+            var owlPost = $(".amway-sub-menulist");
+            if (item > 8) {
+                $('.amway-sub-menulist').owlCarousel({
+                    nav: true,
+                    navText: ["<div class='amway-slick-back'></div>", "<div class='amway-slick-forward'></div>"],
+                    margin: 24,
+                    loop: false,
+                    autoWidth: true,
+                    items: 8,
+                    dots: false,
+                    responsive: {
+                        0: {
+                            nav: false,
+
+                        },
+                        1024: {
+                            nav: true,
+
+                        }
+                    }
+
+                });
+
+            } else if (item <= 8 && width < 992) {
+                owlPost.addClass('owl-carousel');
+                $('.amway-sub-menulist').owlCarousel({
+                    nav: false,
+                    margin: 16,
+                    loop: false,
+                    autoWidth: true,
+                    items: 4,
+                    dots: false
+                });
+
+            } else {
+                if (typeof owlPost.data('owl.carousel') != 'undefined') {
+                    owlPost.data('owl.carousel').destroy();
+                }
+                owlPost.removeClass('owl-carousel');
+            }
+
+        }
+        var reg = /^([A-Za-z0-9_\-ก-๏\.])/;
+        var modalInput = $("#editName");
+        var inputChx = modalInput.find('.amway-input');
+        var btnSend = modalInput.find('.confirm');
+        $('.bundle-select-area .bsl-input').on('click', () => {
+            $('.amway-modal-bundle .confirm').attr('disabled', false);
+        })
+        activeSend();
+
+        function activeSend() {
+            if (reg.test(inputChx.val()) == false) {
+                btnSend.removeClass('active');
+                btnSend.attr('disabled', true);
+            } else {
+                btnSend.addClass('active');
+                btnSend.attr('disabled', false);
+            }
+
+        }
+
+        inputChx.change(() => {
+            activeSend();
+        });
+    </script>
+
+
+    <script src="../../v2/Common/js/global.js "></script>
+    <script src="../../v2/Common/js/Input.js "></script>
+    <script src="../../v2/Common/js/Image.js"></script>
+    <script src="../../lib/js/bodyScrollLock.min.js "></script>
+    <script src="../../v2/Common/js/DropdownInput.js"></script>
+    <script src="../../v2/Common/js/SearchableDropdown.js "></script>
+    <script src="../../v1/Header/js/PickupAddressModal.js "></script>
+    <script src="../../v1/Common/js/image.js "></script>
+    <script src="../../v1/Search/js/SearchModal.js "></script>
+    <script src="../../v1/Header/js/UserMenu.js "></script>
+    <script src="../../v1/Header/js/ProductMenu.js "></script>
+    <script src="../../v2/Common/js/DimLayer.js "></script>
+    <script src="../../v2/Common/js/ToggleButton.js "></script>
+    <script src="../../v1/Header/js/GlobalDeliveryMethods.js "></script>
+    <script src="../../v1/Header/js/LanguageSwitcher.js "></script>
+    <script src="../../v2/Layout/js/MainLayout.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="Group_6174" data-name="Group 6174" transform="translate(-14 -68)">
+    <rect id="Icon_Header_Menu_background" data-name="Icon/Header/Menu background" width="48" height="48" transform="translate(14 68)" fill="none"/>
+    <g id="menu" transform="translate(28 83.875)">
+      <path id="Combined_Shape" data-name="Combined Shape" d="M.625,16A.73.73,0,0,1,0,15.2a.729.729,0,0,1,.625-.8H19.375a.729.729,0,0,1,.625.8.73.73,0,0,1-.625.8Zm0-7.2A.73.73,0,0,1,0,8a.729.729,0,0,1,.625-.8H19.375A.729.729,0,0,1,20,8a.73.73,0,0,1-.625.8Zm0-7.2A.729.729,0,0,1,0,.8.729.729,0,0,1,.625,0H19.375A.729.729,0,0,1,20,.8a.729.729,0,0,1-.625.8Z" transform="translate(0 0.125)" fill="#2c2c2c"/>
+    </g>
+  </g>
+</svg>

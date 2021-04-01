@@ -1,0 +1,462 @@
+.wishlist-all-list {
+    padding-bottom: 3.5rem;
+}
+
+.wishlist-list {
+    width: 100%;
+    height: 15rem;
+    border-radius: 0.5rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.wishlist-list.pink {
+    background: url('../../image/banner_wishlist/pink-card.svg');
+}
+
+.wishlist-list.orange {
+    background: url('../../image/banner_wishlist/orange-card.svg');
+}
+
+.wishlist-list.yellow {
+    background: url('../../image/banner_wishlist/yellow-card.svg');
+}
+
+.wishlist-list.green {
+    background: url('../../image/banner_wishlist/green-card.svg');
+}
+
+.wishlist-list.blue {
+    background: url('../../image/banner_wishlist/blue-card.svg');
+}
+
+.wishlist-list.purple {
+    background: url('../../image/banner_wishlist/purple-card.svg');
+}
+
+.wishlist-list.normal {
+    background: url('../../image/banner_wishlist/purple-card.svg');
+}
+
+.wl-l-content {
+    width: 15.5rem;
+}
+
+.wllc-btn {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.wllc-btn::after {
+    content: 'c';
+    font-family: Amway Icon !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.wl-l-list {
+    width: calc(100% - 16rem);
+}
+
+.wlll-item {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.wlll-item-pd {
+    border-radius: 0.5rem;
+    width: 100%;
+    position: relative;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+}
+
+.wlll-item-pd::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+.wll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    border-radius: 1.25rem;
+    background: #FFFFFF;
+    z-index: 1;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.wll-prev {
+    left: -0.75rem;
+}
+
+.wll-next {
+    right: -0.75rem;
+}
+
+.wll-btn::after {
+    font-family: Amway Icon !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+.wll-prev::after {
+    content: 'b';
+}
+
+.wll-next::after {
+    content: 'c';
+}
+
+.wll-btn.slick-disabled {
+    display: none !important;
+}
+
+.wllc-name {
+    width: calc(100% - 2rem);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.wllc-value {
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+.wlll-Noitem {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 0.063rem solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wishlist-list.pink .wlll-Noitem {
+    border-color: rgba(127, 62, 62, 0.16) !important;
+}
+
+.wishlist-list.orange .wlll-Noitem {
+    border-color: rgba(167, 108, 71, 0.16) !important;
+}
+
+.wishlist-list.yellow .wlll-Noitem {
+    border-color: rgba(98, 98, 90, 0.16) !important;
+}
+
+.wishlist-list.green .wlll-Noitem {
+    border-color: rgba(115, 121, 59, 0.16) !important;
+}
+
+.wishlist-list.blue .wlll-Noitem {
+    border-color: rgba(57, 110, 117, 0.16) !important;
+}
+
+.wishlist-list.purple .wlll-Noitem {
+    border-color: rgba(56, 83, 154, 0.16) !important;
+}
+
+.wishlist-list.normal .wlll-Noitem {
+    border-color: rgba(56, 83, 154, 0.16) !important;
+}
+
+.wlll-ni {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wlll-ni-img {
+    width: 5.5rem;
+    background: url('../../image/action/no-pd-list.svg');
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    margin-right: 1.5rem;
+}
+
+.wlll-ni-img::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+.wlll-ni-title {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+.wlll-ni-sub {
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+.wishlist-list.pink .wll-btn::after,
+.wishlist-list.pink .wllc-name,
+.wishlist-list.pink .wlll-ni-title {
+    color: #7F3E3E;
+}
+
+.wishlist-list.orange .wll-btn::after,
+.wishlist-list.orange .wllc-name,
+.wishlist-list.orange .wlll-ni-title {
+    color: #A76C47;
+}
+
+.wishlist-list.yellow .wll-btn::after,
+.wishlist-list.yellow .wllc-name,
+.wishlist-list.yellow .wlll-ni-title {
+    color: #62625A;
+}
+
+.wishlist-list.green .wll-btn::after,
+.wishlist-list.green .wllc-name,
+.wishlist-list.green .wlll-ni-title {
+    color: #73793B;
+}
+
+.wishlist-list.blue .wll-btn::after,
+.wishlist-list.blue .wllc-name,
+.wishlist-list.blue .wlll-ni-title {
+    color: #396E75;
+}
+
+.wishlist-list.purple .wll-btn::after,
+.wishlist-list.purple .wllc-name,
+.wishlist-list.purple .wlll-ni-title {
+    color: #38539A;
+}
+
+.wishlist-list.normal .wll-btn::after,
+.wishlist-list.normal .wllc-name,
+.wishlist-list.normal .wlll-ni-title {
+    color: #38539A;
+}
+
+.wllc-img {
+    margin-left: calc(100% - 8.5rem);
+    width: 7rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+}
+
+.wllc-img::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+.wishlist-list.pink .wllc-img {
+    background: url('../../image/banner_wishlist/img-pink.svg');
+}
+
+.wishlist-list.orange .wllc-img {
+    background: url('../../image/banner_wishlist/img-orange.svg');
+}
+
+.wishlist-list.yellow .wllc-img {
+    background: url('../../image/banner_wishlist/img-yellow.svg');
+}
+
+.wishlist-list.green .wllc-img {
+    background: url('../../image/banner_wishlist/img-green.svg');
+}
+
+.wishlist-list.blue .wllc-img {
+    background: url('../../image/banner_wishlist/img-blue.svg');
+}
+
+.wishlist-list.purple .wllc-img {
+    background: url('../../image/banner_wishlist/img-purple.svg');
+}
+
+.wishlist-list.normal .wllc-img {
+    background: transparent;
+}
+
+@media(min-width:1024px) {
+    .wishlist-list {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        padding-right: 0.5rem;
+        margin-bottom: 1rem;
+        height: 100%;
+    }
+    .wllc-btn {
+        margin-top: -1.5rem;
+    }
+    .wlll-Noitem {
+        width: 100%;
+        height: 13.5rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .wishlist-list {
+        width: 100%;
+        height: 11.5rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1.125rem;
+    }
+    .wl-l-content {
+        width: calc(100% - 1rem);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .wl-l-list {
+        margin-left: -0.5rem;
+        margin-top: .5rem;
+        width: calc(100% + 0.5rem);
+    }
+    .wlll-item {
+        width: 6.5rem !important;
+    }
+    .wishlist-all-list {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    .wllc-img {
+        display: none;
+    }
+    .wllc-name {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .wllc-btn {
+        align-self: flex-start;
+        font-size: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+        border-radius: 1.25rem;
+        background: #FFFFFF;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .wishlist-list.pink .wllc-btn::after {
+        color: #7F3E3E;
+    }
+    .wishlist-list.orange .wllc-btn::after {
+        color: #A76C47;
+    }
+    .wishlist-list.yellow .wllc-btn::after {
+        color: #62625A;
+    }
+    .wishlist-list.green .wllc-btn::after {
+        color: #73793B;
+    }
+    .wishlist-list.blue .wllc-btn::after {
+        color: #396E75;
+    }
+    .wishlist-list.purple .wllc-btn::after {
+        color: #38539A;
+    }
+    .wishlist-list.normal .wllc-btn::after {
+        color: #38539A;
+    }
+    .wishlist-list.pink .wllc-btn {
+        background: #F9E9EA;
+    }
+    .wishlist-list.orange .wllc-btn {
+        background: #FFF1E8;
+    }
+    .wishlist-list.yellow .wllc-btn {
+        background: #F1F1D1;
+    }
+    .wishlist-list.green .wllc-btn {
+        background: #F0FAE5;
+    }
+    .wishlist-list.blue .wllc-btn {
+        background: #CDFBFF;
+    }
+    .wishlist-list.purple .wllc-btn {
+        background: #E3E5FF;
+    }
+    .wishlist-list.normal .wllc-btn {
+        background: #E3E5FF;
+    }
+    .wl-l-list.Noitem {
+        height: 5.5rem;
+        padding-left: .5rem;
+        padding-right: 1rem;
+    }
+    .wlll-ni-title {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .wlll-ni-sub {
+        font-size: 0.813rem;
+        line-height: 1.5rem;
+    }
+    .wlll-ni-img {
+        width: 3.5rem;
+    }
+    .wishlist-list.pink {
+        background: url('../../image/banner_wishlist/pink-card-mb.svg');
+    }
+    .wishlist-list.orange {
+        background: url('../../image/banner_wishlist/orange-card-mb.svg');
+    }
+    .wishlist-list.yellow {
+        background: url('../../image/banner_wishlist/yellow-card-mb.svg');
+    }
+    .wishlist-list.green {
+        background: url('../../image/banner_wishlist/green-card-mb.svg');
+    }
+    .wishlist-list.blue {
+        background: url('../../image/banner_wishlist/blue-card-mb.svg');
+    }
+    .wishlist-list.purple {
+        background: url('../../image/banner_wishlist/purple-card-mb.svg');
+    }
+    .wishlist-list.normal {
+        background: url('../../image/banner_wishlist/purple-card-mb.svg');
+    }
+    .wlll-Noitem {
+        width: 100%;
+        height: 100%;
+    }
+}

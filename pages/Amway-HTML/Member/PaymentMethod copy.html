@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PaymentMethod</title>
+    <!-- For FireBase Demo -->
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.21.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.21.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-performance.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <!-- For FireBase Demo -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/styles/common.7d20030e3dcee5e61c0b.css" />
+    <link rel="stylesheet" href="/styles/FullPaymentABO___PaymentMethod.d404dbfb84466023e943.css" />
+
+    <style>
+        .mz-bank-method__button-text-bank>div {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div id="mz-main-layout" class="mz-main-layout --main-bar-only">
+            <div class="mz-main-layout__content">
+
+                <div class="mz-dropdown-modal dropdown">
+                    <button id="bank-method" type="button" class="mz-dropdown-modal__button" data-placeholder="เลือกธนาคาร" data-toggle="dropdown" aria-haspopup="true">
+                             <div class="mz-dropdown-modal__button-text">เลือกธนาคาร </div> 
+                             <span class="mz-icon --arrow-down mz-dropdown-modal__icon"></span>  
+                    </button>
+                    <div class="mz-dropdown-modal__menu mz-dropdown-modal" aria-labelledby="bank-method">
+                        <button type="button" class="mz-dropdown-modal__close-button">
+                                <span class="mz-icon --close"></span>   
+                        </button>
+                        <ul class="mz-dropdown-modal__list">
+                            <li class="mz-dropdown-modal__option " data-value="kbank">
+                                <div class="mz-bank-method-option --kbank">
+                                    <input type="radio" id="kbank" name="bank" value="kbank" readonly="" />
+                                    <label for="kbank" class="mz-bank-method-option__bank-toggle" data-target="#content-kbank">   
+                                            <img class="mz-image mz-bank-method-option__bank-image" data-src="/static/images/bank-kbank.svg" alt="bank-kbank"  />   
+                                            <div class="mz-bank-method-option__bank-text"> ธนาคารกสิกรไทย    </div>   
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="mz-dropdown-modal__option " data-value="scb">
+                                <div class="mz-bank-method-option --scb">
+                                    <input type="radio" id="scb" name="bank" value="scb" readonly="" />
+                                    <label for="scb" class="mz-bank-method-option__bank-toggle" data-target="#content-scb">
+                                            <img    class="mz-image mz-bank-method-option__bank-image"    data-src="/static/images/bank-scb.svg"    alt="bank-scb"  /> 
+                                            <div    class="mz-bank-method-option__bank-text"  >    ธนาคารไทยพาณิชย์  </div> 
+                                        </label>
+
+                                </div>
+                            </li>
+                            <li class="mz-dropdown-modal__option " data-value="bbl">
+                                <div class="mz-bank-method-option --bbl">
+                                    <input type="radio" id="bbl" name="bank" value="bbl" readonly="" />
+                                    <label for="bbl" class="mz-bank-method-option__bank-toggle" data-target="#content-bbl">
+                                            <img  class="mz-image mz-bank-method-option__bank-image"  data-src="/static/images/bank-bbl.svg"  alt="bank-bbl"/>
+                                            <div  class="mz-bank-method-option__bank-text">  ธนาคารกรุงเทพ</div>
+                                        </label>
+                                </div>
+                            </li>
+                            <li class="mz-dropdown-modal__option " data-value="bay">
+                                <div class="mz-bank-method-option --bay">
+                                    <input type="radio" id="bay" name="bank" value="bay" readonly="" />
+                                    <label for="bay" class="mz-bank-method-option__bank-toggle" data-target="#content-kbank">
+                                            <img  class="mz-image mz-bank-method-option__bank-image"  data-src="/static/images/bank-bay.svg"  alt="bank-bay"/>
+                                            <div  class="mz-bank-method-option__bank-text">  ธนาคารกรุงศรีอยุธยา</div>
+                                        </label>
+                                </div>
+                            </li>
+                            <li class="mz-dropdown-modal__option " data-value="ktb">
+                                <div class="mz-bank-method-option --ktb">
+                                    <input type="radio" id="ktb" name="bank" value="ktb" readonly="" />
+                                    <label for="ktb" class="mz-bank-method-option__bank-toggle" data-target="#content-ktb">
+                                            <img  class="mz-image mz-bank-method-option__bank-image"  data-src="/static/images/bank-ktb.svg"  alt="bank-ktb"/>
+                                            <div  class="mz-bank-method-option__bank-text">  ธนาคารกรุงไทย</div>
+                                        </label>
+                                </div>
+                            </li>
+                            <li class="mz-dropdown-modal__option " data-value="tmb">
+                                <div class="mz-bank-method-option --tmb">
+                                    <input type="radio" id="tmb" name="bank" value="tmb" readonly="" />
+                                    <label for="tmb" class="mz-bank-method-option__bank-toggle" data-target="#content-tmb">
+                                            <img  class="mz-image mz-bank-method-option__bank-image"  data-src="/static/images/bank-tmb.svg"  alt="bank-tmb"/>
+                                            <div  class="mz-bank-method-option__bank-text">  ธนาคารทหารไทย</div>
+                                        </label>
+                                </div>
+                            </li>
+                            <li class="mz-dropdown-modal__option " data-value="uob">
+                                <div class="mz-bank-method-option --uob">
+                                    <input type="radio" id="uob" name="bank" value="uob" readonly="" />
+                                    <label for="uob" class="mz-bank-method-option__bank-toggle" data-target="#content-uob">
+                                            <img  class="mz-image mz-bank-method-option__bank-image"  data-src="/static/images/bank-uob.svg"  alt="bank-uob"/>
+                                            <div  class="mz-bank-method-option__bank-text">  ธนาคารยูโอบี</div>
+                                        </label>
+                                </div>
+                            </li>
+                            <li class="mz-dropdown-modal__option " data-value="tbank">
+                                <div class="mz-bank-method-option --tbank">
+                                    <input type="radio" id="tbank" name="bank" value="tbank" readonly="" />
+                                    <label for="tbank" class="mz-bank-method-option__bank-toggle" data-target="#content-tbank">
+                                            <img class="mz-image mz-bank-method-option__bank-image"   data-src="/static/images/bank-tbank.svg"  alt="bank-tbank"/>
+                                            <div  class="mz-bank-method-option__bank-text">  ธนาคารธนชาติ</div>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mz-bank-method__button-text-template">
+                        <div class="mz-bank-method__button-text-bank"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/v2/Common/js/global.js"></script>
+    <script src="/v2/Common/js/DimLayer.js"></script>
+    <script src="/v2/Common/js/Image.js"></script>
+    <script src="/v2/Common/js/Input.js"></script>
+    <script src="/lib/js/bodyScrollLock.min.js"></script>
+    <script src="/v2/Common/js/Dropdown.js"></script>
+    <script src="/v2/Common/js/DropdownModal.js"></script>
+
+    <script src="/v2/Common/js/Popover.js"></script>
+    <script src="/lib/js/card-validator.min.js"></script>
+    <script src="/v2/Common/js/cardTypes.js"></script>
+    <script src="/v2/Payment/js/NewCreditDebit.js"></script>
+    <script src="/v2/Payment/js/SavedCreditDebit.js"></script>
+    <script src="/v2/Payment/js/PaymentLayout.js"></script>
+    <script src="/v1/Common/js/image.js"></script>
+    <script src="/v1/Search/js/SearchModal.js"></script>
+    <script src="/v1/Header/js/UserMenu.js"></script>
+    <script src="/v1/Header/js/ProductMenu.js"></script>
+    <script src="/v2/Layout/js/MainLayout.js"></script>
+    <script src="/lib/js/validator.min.js"></script>
+    <script src="/lib/js/jquery.validate.min.js"></script>
+    <script src="/v2/Common/js/formValidationDefaults.js"></script>
+    <script src="/v2/Common/js/cardValidationDefaults.js"></script>
+    <script src="/v2/Payment/js/UpdateOnlyBank.js"></script>
+    <!-- <script src="/v2/Payment/js/PaymentMethod.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,563 @@
+.favorite-list {
+    /* padding-bottom: 3.5rem; */
+}
+
+.favorite-list-card {
+    position: relative;
+    width: 100%;
+    border-radius: 0.5rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    margin-bottom: 1.5rem;
+    -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+}
+
+.favorite-list-card.pink {
+    background: url('../../image/creator/theme-list-banner/pink.svg');
+}
+
+.favorite-list-card.orange {
+    background: url('../../image/creator/theme-list-banner/orange.svg');
+}
+
+.favorite-list-card.yellow {
+    background: url('../../image/creator/theme-list-banner/yellow.svg');
+}
+
+.favorite-list-card.green {
+    background: url('../../image/creator/theme-list-banner/green.svg');
+}
+
+.favorite-list-card.blue {
+    background: url('../../image/creator/theme-list-banner/blue.svg');
+}
+
+.favorite-list-card.purple {
+    background: url('../../image/creator/theme-list-banner/purple.svg');
+}
+
+.favorite-list-card.normal {
+    background: url('../../image/creator/theme-list-banner/purple.svg');
+}
+
+.fl-card-name {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.favorite-list-card.pink .fl-card-name {
+    color: #7F3E3E;
+}
+
+.favorite-list-card.orange .fl-card-name {
+    color: #A76C47;
+}
+
+.favorite-list-card.yellow .fl-card-name {
+    color: #62625A;
+}
+
+.favorite-list-card.green .fl-card-name {
+    color: #73793B;
+}
+
+.favorite-list-card.blue .fl-card-name {
+    color: #396E75;
+}
+
+.favorite-list-card.purple .fl-card-name {
+    color: #38539A;
+}
+
+.favorite-list-card.pink .fl-card-detail {
+    color: #7F3E3E;
+}
+
+.favorite-list-card.orange .fl-card-detail {
+    color: #A76C47;
+}
+
+.favorite-list-card.yellow .fl-card-detail {
+    color: #62625A;
+}
+
+.favorite-list-card.green .fl-card-detail {
+    color: #73793B;
+}
+
+.favorite-list-card.blue .fl-card-detail {
+    color: #396E75;
+}
+
+.favorite-list-card.purple .fl-card-detail {
+    color: #38539A;
+}
+
+.favorite-list-card.normal .fl-card-detail {
+    color: #38539A;
+}
+
+.fl-card-detail {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.fl-card-viewall {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.fl-card-viewall::after {
+    content: 'c';
+    font-family: Amway Icon !important;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    FONT-WEIGHT: 100;
+    line-height: 1.5rem;
+}
+
+.fl-card-pd-noitem {
+    position: absolute;
+    top: 1.25rem;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    left: 1.25rem;
+    width: calc(100% - 2rem);
+    height: calc(100% - 5rem);
+    margin-top: 3rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+@media(min-width:1024px) {
+    .favorite-list-card {
+        padding: 1.25rem;
+        position: relative;
+    }
+    .favorite-list-card {
+        display: flex;
+    }
+    .fl-card-content {
+        width: 25%;
+    }
+    .fl-card-pd {
+        width: calc(75% + 0.5rem);
+        margin-right: -0.5rem;
+        padding-left: 1rem;
+    }
+    .fl-card-viewall {
+        /*  position: absolute;
+        left: 1.25rem;
+        bottom: 1.25rem; */
+    }
+    .favorite-list-card.noItem .fl-card-viewall {
+        z-index: 1;
+        /* display: none; */
+    }
+    .favorite-list-card.noItem {
+        height: 15rem;
+    }
+    /* .favorite-list-card {
+        height: 15rem;
+    } */
+    .fl-card-share {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2rem;
+        border-radius: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-right: 1rem;
+        font-size: 1rem;
+        line-height: 2rem;
+        font-weight: 500;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        background: #ffffff;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    }
+    .fl-card-share::before {
+        content: '';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0.25rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: url('../../image/creator/icon/icon-share.svg');
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 1rem 1rem !important;
+        cursor: pointer;
+        margin-right: 0.125rem;
+    }
+    .fl-card-tool {
+        position: absolute;
+        left: 1.25rem;
+        bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+    }
+    .favorite-list-card.noItem .fl-card-tool {
+        z-index: 1;
+        /* display: none; */
+    }
+}
+
+@media(max-width:1023px) {
+    .fl-card-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .favorite-list-area {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .favorite-list-card {
+        padding: 1rem;
+    }
+    .favorite-list-card.noItem {
+        height: 15rem;
+    }
+    .favorite-list-card.pink {
+        background: url('../../image/creator/theme-list-banner/pink-mb.svg');
+    }
+    .favorite-list-card.orange {
+        background: url('../../image/creator/theme-list-banner/orange-mb.svg');
+    }
+    .favorite-list-card.yellow {
+        background: url('../../image/creator/theme-list-banner/yellow-mb.svg');
+    }
+    .favorite-list-card.green {
+        background: url('../../image/creator/theme-list-banner/green-mb.svg');
+    }
+    .favorite-list-card.blue {
+        background: url('../../image/creator/theme-list-banner/blue-mb.svg');
+    }
+    .favorite-list-card.purple {
+        background: url('../../image/creator/theme-list-banner/purple-mb.svg');
+    }
+    .favorite-list-card.normal {
+        background: url('../../image/creator/theme-list-banner/purple-mb.svg');
+    }
+    .fl-card-viewall {
+        display: none;
+        order: 2;
+        align-self: flex-start;
+        font-size: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        -webkit-box-shadow: 0rem 0.125rem 0.063rem 0rem rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0rem 0.125rem 0.063rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.063rem 0rem rgba(0, 0, 0, 0.16);
+        border-radius: 1.25rem;
+        background: #FFFFFF;
+        /* display: flex !important; */
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .favorite-list-card.pink .fl-card-viewall::after {
+        color: #7F3E3E;
+    }
+    .favorite-list-card.orange .fl-card-viewall::after {
+        color: #A76C47;
+    }
+    .favorite-list-card.yellow .fl-card-viewall::after {
+        color: #62625A;
+    }
+    .favorite-list-card.green .fl-card-viewall::after {
+        color: #73793B;
+    }
+    .favorite-list-card.blue .fl-card-viewall::after {
+        color: #396E75;
+    }
+    .favorite-list-card.purple .fl-card-viewall::after {
+        color: #38539A;
+    }
+    .favorite-list-card.normal .fl-card-viewall::after {
+        color: #38539A;
+    }
+    .favorite-list-card.pink .fl-card-name-area::after {
+        color: #7F3E3E;
+    }
+    .favorite-list-card.orange .fl-card-name-area::after {
+        color: #A76C47;
+    }
+    .favorite-list-card.yellow .fl-card-name-area::after {
+        color: #62625A;
+    }
+    .favorite-list-card.green .fl-card-name-area::after {
+        color: #73793B;
+    }
+    .favorite-list-card.blue .fl-card-name-area::after {
+        color: #396E75;
+    }
+    .favorite-list-card.purple .fl-card-name-area::after {
+        color: #38539A;
+    }
+    .favorite-list-card .fl-card-viewall {
+        background: #fafafa;
+    }
+    /*  .favorite-list-card.pink .fl-card-viewall {
+        background: #F9CECF;
+    }
+    .favorite-list-card.orange .fl-card-viewall {
+        background: #FFE3D3;
+    }
+    .favorite-list-card.yellow .fl-card-viewall {
+        background: #F1F1D1;
+    }
+    .favorite-list-card.green .fl-card-viewall {
+        background: #F1F1D1;
+    }
+    .favorite-list-card.blue .fl-card-viewall {
+        background: #CDFBFF;
+    }
+    .favorite-list-card.purple .fl-card-viewall {
+        background: #E3E5FF;
+    }
+    .favorite-list-card.normal .fl-card-viewall {
+        background: #E3E5FF;
+    } */
+    .fl-card-name {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        width: auto;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .fl-card-name-area {
+        display: flex;
+        width: calc(100% - 8rem);
+    }
+    .fl-card-name-area::after {
+        content: 'c';
+        font-family: Amway Icon !important;
+        line-height: 1rem;
+        margin-top: 0.25rem;
+    }
+    .fl-card-detail {
+        width: calc(100% - 3rem);
+        order: 3;
+        padding-top: 0.5rem;
+        font-size: 0.813rem;
+        line-height: 1rem;
+        font-weight: 500;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .fl-card-pd-noitem {
+        padding-top: 2rem;
+        top: 1rem;
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        z-index: 0;
+    }
+    .fl-card-pd {
+        overflow: hidden;
+        width: calc(100% + 1.5rem);
+        margin-left: -0.5rem;
+        padding-top: 1rem;
+    }
+    .fl-card-pd-list {
+        width: calc(85%);
+    }
+    .fl-card-pd-list .owl-stage-outer {
+        margin-right: -18%;
+    }
+    .fl-card-share {
+        /*  font-size: 0; */
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        /*  width: 2rem; */
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: 2rem;
+        border-radius: 1rem;
+        font-size: 1rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        background: #ffffff;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    }
+    .fl-card-share::before {
+        content: '';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0.25rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: url('../../image/creator/icon/icon-share.svg');
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 1rem 1rem !important;
+        cursor: pointer;
+        margin-right: 0.125rem;
+    }
+    .favorite-list-card.noItem .fl-card-tool {
+        z-index: 1;
+        /*  display: none; */
+    }
+}
+
+
+/* list */
+
+.fl-card-pd-list .item {
+    padding: 0.5rem;
+}
+
+.fl-card {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+}
+
+.fl-card-img {
+    width: 100%;
+    height: auto;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+.fl-card-img::after {
+    content: '';
+    display: inline-block;
+    padding-bottom: 100%;
+    width: 100%;
+}
+
+
+/* arrow */
+
+.favorite-list-card-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    border-radius: 1.25rem;
+    background: #FFFFFF;
+    z-index: 1;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.favorite-list-card-arrow-prev {
+    left: -0.75rem;
+}
+
+.favorite-list-card-arrow-next {
+    right: -0.75rem;
+}
+
+.favorite-list-card-arrow::after {
+    font-family: Amway Icon !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+.favorite-list-card-arrow-prev::after {
+    content: 'b';
+}
+
+.favorite-list-card-arrow-next::after {
+    content: 'c';
+}
+
+.disabled .favorite-list-card-arrow {
+    display: none !important;
+}
+
+.favorite-list-card.pink .favorite-list-card-arrow::after {
+    color: #7F3E3E;
+}
+
+.favorite-list-card.orange .favorite-list-card-arrow::after {
+    color: #A76C47;
+}
+
+.favorite-list-card.yellow .favorite-list-card-arrow::after {
+    color: #62625A;
+}
+
+.favorite-list-card.green .favorite-list-card-arrow::after {
+    color: #73793B;
+}
+
+.favorite-list-card.blue .favorite-list-card-arrow::after {
+    color: #396E75;
+}
+
+.favorite-list-card.purple .favorite-list-card-arrow::after {
+    color: #38539A;
+}
+
+.favorite-list-card.normal .favorite-list-card-arrow::after {
+    color: #38539A;
+}
+
+.favorite-list-card .owl-nav {
+    height: 0;
+}

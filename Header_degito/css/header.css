@@ -1,0 +1,3608 @@
+html {
+    -webkit-overflow-scrolling: touch;
+    height: 100%
+}
+
+#root,
+body {
+    display: flex;
+    width: 100%
+}
+
+#root {
+    flex-direction: column
+}
+
+body {
+    min-height: 100%;
+    color: #2c2c2c;
+    font-family: Sukhumvit Tadmai, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 400
+}
+
+#root,
+body {
+    display: flex;
+    width: 100%;
+}
+
+*::-moz-selection {
+    background: #2c2c2c;
+    color: #FFFFFF;
+}
+
+*::selection {
+    background: #2c2c2c;
+    color: #FFFFFF;
+}
+
+*::-webkit-selection {
+    background: #2c2c2c;
+    color: #FFFFFF;
+}
+
+.amway-header {
+    display: block;
+    width: 100%;
+    position: fixed;
+    z-index: 1500;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #FFFFFF;
+}
+
+.amway-header-container {
+    width: 100%;
+    height: 100%;
+    max-width: 1212px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.amway-header-first {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 0;
+    border-bottom: 0.063rem solid #EDEDED;
+}
+
+.amway-header-second {
+    width: 100%;
+    position: relative;
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+}
+
+.ahf-header,
+.ahs-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ahf-header-left,
+.ahf-header-right,
+.ahs-header-left,
+.ahs-header-right {
+    display: flex;
+    align-items: center;
+}
+
+.ahf-header-right,
+.ahs-header-right {
+    justify-content: right;
+}
+
+.ahs-header-left {
+    height: 100%;
+}
+
+.amway-main-layout {
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
+.amway-main-layout__content {
+    display: block;
+    flex: 1;
+    width: 100%;
+}
+
+@media(min-width:1024px) {
+    .amway-header-container {
+        padding-right: 16px;
+        padding-left: 16px;
+        position: relative;
+    }
+    .amway-header {
+        height: 7rem;
+    }
+    .amway-header-second {
+        height: 4.5rem;
+    }
+    .ahf-header-left {
+        width: calc(50% - 1rem);
+    }
+    .modal-show-mb {
+        overflow: visible;
+    }
+    .modal-show-d {
+        overflow: hidden;
+    }
+    .amway-main-layout {
+        padding-top: 112px;
+    }
+}
+
+@media(max-width:1250px) {
+    .ahf-header-left {
+        width: calc(50% - 2.6rem);
+    }
+}
+
+@media(max-width:1150px) {
+    .ahf-header-left {
+        width: calc(50% - 6rem);
+    }
+}
+
+@media(max-width:1050px) {
+    .ahf-header-left {
+        width: calc(50% - 10rem);
+    }
+}
+
+@media(max-width:1023px) {
+    .amway-main-layout {
+        padding-top: 6rem;
+    }
+    .amway-main-layout.no-inMobile {
+        padding-top: 0;
+    }
+    .amway-header {
+        height: 3.5rem;
+    }
+    .amway-header-first {
+        display: none;
+    }
+    .amway-header-second {
+        height: 3.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .modal-show-mb {
+        overflow: hidden;
+    }
+    .modal-show-d {
+        overflow: visible;
+    }
+}
+
+
+/* amway-header-language  */
+
+.amway-header-language {
+    position: relative;
+    height: 1.875rem;
+    padding: 0 1rem;
+    margin-left: -1rem;
+    width: 6rem;
+    min-width: 6rem !important;
+}
+
+.ahl-btn {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+    color: #2C2C2C;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.ahl-btn::after {
+    content: 'a';
+    font-family: Amway Icon !important;
+    color: #9EA0A3;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    margin-left: 0.125rem;
+}
+
+.amway-header-language.active .ahl-btn::after {
+    transform: rotate(180deg);
+}
+
+.amway-header-language .ahl-menu {
+    display: none;
+}
+
+.amway-header-language.active .ahl-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    padding: 0.5rem 0;
+    background: #FFFFFF;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+    z-index: 1500;
+    cursor: pointer;
+}
+
+.ahl-menu-list {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+    color: #2C2C2C;
+    padding: 0.25rem 1rem;
+    padding-right: 0.25rem;
+    margin-bottom: 0.5rem;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ahl-menu-list-text {
+    width: 3rem;
+}
+
+.ahl-menu-list.--active {
+    /* color: #9EA0A3; */
+}
+
+.ahl-menu-list.--active::after {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1.5rem 1.5rem !important;
+    background: url('../../image/header/icon-menu/check.svg');
+}
+
+.amway-header-language-list {
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    cursor: pointer;
+}
+
+.ahl-l-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1.5rem 1.5rem !important;
+}
+
+.--selected .ahl-l-icon {
+    background: url('../../image/header/icon-menu/check.svg');
+}
+
+.ahl-l-text {
+    width: 5rem;
+    padding-left: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 500;
+}
+
+
+/* amway-header-delivery */
+
+.amway-header-delivery-onDesktop {
+    display: flex;
+    align-items: center;
+}
+
+.ahd-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 13rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+    background: #FAFAFA;
+    position: relative;
+    z-index: 1;
+    -webkit-box-shadow: 0rem 0.063rem 0.125rem 0rem rgba(62, 83, 149, 0.10);
+    -moz-box-shadow: 0rem 0.063rem 0.125rem 0rem rgba(62, 83, 149, 0.10);
+    box-shadow: 0rem 0.063rem 0.125rem 0rem rgba(62, 83, 149, 0.10);
+}
+
+.ahd-bar::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: #2C2C2C;
+    width: 6rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+    border: 0.125rem solid #FAFAFA;
+    -webkit-box-shadow: 0.125rem 0rem 0.125rem 0rem rgba(56, 83, 154, 0.10);
+    -moz-box-shadow: 0.125rem 0rem 0.125rem 0rem rgba(56, 83, 154, 0.10);
+    box-shadow: 0.125rem 0rem 0.125rem 0rem rgba(56, 83, 154, 0.10);
+    transition: transform 0.3s ease;
+}
+
+.ahd-bar.delivery::before {
+    transform: translateX(0);
+}
+
+.ahd-bar.pickup::before {
+    transform: translateX(calc(100%));
+}
+
+.ahd-bar-list {
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+    z-index: 1;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.ahd-bar-list.--active {
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.amway-header-delivery-onDesktop {
+    position: relative;
+}
+
+.amway-header-delivery {
+    position: fixed;
+    top: 3.5rem;
+    width: 100%;
+    height: 2.5rem;
+    right: 0;
+    left: 0;
+    color: #FFFFFF;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 0.013rem solid #EDEDED;
+}
+
+.ahd-delivery-addressShow {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.ahd-delivery-addressShow::after {
+    content: 'a';
+    font-family: Amway Icon !important;
+    color: #2c2c2c;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    text-transform: none;
+    margin-left: 0.125rem;
+}
+
+.non-login.ahd-delivery-addressShow::after {
+    content: none;
+}
+
+.ahd-delivery-area {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.ahd-delivery-type {
+    background: #2C2C2C;
+    width: 7.5rem;
+    height: 100%;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ahd-delivery-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.25rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1.5rem 1.5rem !important;
+}
+
+.amway-header-delivery.delivery .ahd-delivery-icon,
+.amway-header-delivery-addressShow.delivery .ahd-delivery-icon {
+    background: url('../../image/header/icon-menu/address.svg');
+}
+
+.amway-header-delivery.pickup .ahd-delivery-icon,
+.amway-header-delivery-addressShow.pickup .ahd-delivery-icon {
+    background: url('../../image/header/icon-menu/shop.svg');
+}
+
+.ahd-delivery-text {
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+    color: #2c2c2c;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ahd-delivery-text .default {
+    color: #9EA0A3;
+}
+
+.ahd-choose-menu {
+    display: none;
+}
+
+.ahd-choose-menu.active {
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 12.5rem;
+    top: calc(100% + 0.25rem);
+    width: calc(100% - 12.5rem);
+    max-width: 16.875rem;
+    min-width: 14rem;
+    padding: 0.75rem;
+    background: #FFFFFF;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+    z-index: 1500;
+    cursor: pointer;
+}
+
+.ahd-choose-delivery {
+    display: flex;
+    align-items: flex-start;
+    border-radius: 0;
+    border-top: 0.031rem solid #EDEDED;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.ahd-choose-delivery:first-child {
+    border-top: none;
+}
+
+.ahd-choose-delivery-addnew {
+    display: flex;
+    align-items: center;
+    border-radius: 0;
+    border-top: 0.031rem solid #EDEDED;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0.25rem;
+    cursor: pointer;
+}
+
+.ahd-choose-delivery::before,
+.ahd-choose-delivery-addnew::before {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.25rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1.5rem 1.5rem !important;
+    background: url('../../image/header/icon-menu/address.svg')
+}
+
+.ahd-choose-delivery-addnew::before {
+    background: url('../../image/header/icon-menu/addressNew.svg')
+}
+
+.ahd-cd-text {
+    width: calc(100% - 1.75rem);
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ahd-pickup-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.813rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0;
+    border-bottom: 0.031rem solid #EDEDED;
+    margin-bottom: 0.125rem;
+}
+
+.ahd-pickup-title-text {
+    display: flex;
+    align-items: center;
+}
+
+.ahd-pickup-title-count {
+    margin-right: 0.25rem;
+}
+
+.ahd-pickup-select-list {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0;
+    border-top: 0.031rem solid #EDEDED;
+    cursor: pointer;
+}
+
+.ahd-pickup-select-list:first-child {
+    border-top: none;
+}
+
+.ahd-pickup-select-list::before {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.25rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1.5rem 1.5rem !important;
+    background: url('../../image/header/icon-menu/shop.svg')
+}
+
+.ahd-pickup-select-list:hover::before {
+    background: url('../../image/header/icon-menu/shop-w.svg')
+}
+
+.ahd-pickup-select-list-text {
+    width: calc(100% - 1.75rem);
+    font-size: 0.875rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+    padding-right: 0.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.ahd-pickup-search {
+    width: 100%;
+    height: 2rem;
+    border-radius: 0;
+    border-bottom: 0.031rem solid #2c2c2c;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.ahd-pickup-select-list:hover {
+    background: #2C2C2C;
+    color: #ffffff;
+}
+
+.ahd-ps-icon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.25rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1rem 1rem !important;
+    background: url('../../image/header/icon-menu/search.svg')
+}
+
+.ahd-ps-input {
+    width: calc(100% - 1.25rem);
+    border: none;
+    font-size: 0.875rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+    color: #2C2C2C;
+}
+
+.ahd-ps-input::-webkit-input-placeholder,
+.ahd-ps-input::-moz-placeholder,
+.ahd-ps-input:-ms-input-placeholder,
+.ahd-ps-input:-moz-placeholder {
+    color: #9EA0A3;
+}
+
+@media(min-width:1024px) {
+    .amway-header-delivery {
+        display: none;
+    }
+    .ahd-delivery-addressShow {
+        width: 100%;
+        max-width: 16.875rem;
+        min-width: 14rem;
+        margin-left: 0.5rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        height: 1.5rem;
+        border-radius: 0.75rem;
+        background: #ffffff;
+        position: relative;
+        z-index: 1;
+    }
+    .ahd-delivery-addressShow.active {
+        -webkit-box-shadow: 0rem 0.063rem 0.125rem 0rem rgba(62, 83, 149, 0.10);
+        -moz-box-shadow: 0rem 0.063rem 0.125rem 0rem rgba(62, 83, 149, 0.10);
+        box-shadow: 0rem 0.063rem 0.125rem 0rem rgba(62, 83, 149, 0.10);
+    }
+    .amway-header-delivery-onDesktop,
+    .amway-header-delivery-addressShow {
+        width: 100%;
+    }
+    .amway-header-delivery-addressShow {
+        display: none;
+    }
+    .amway-header-delivery-addressShow.active {
+        display: flex;
+    }
+    .ahd-scroll {
+        overflow: hidden;
+        overflow-y: auto;
+        width: 100%;
+        height: 100%;
+        max-height: 10rem;
+        padding-left: 0.25rem;
+    }
+    .ahd-scroll::-webkit-scrollbar {
+        /* width */
+        width: 0.375rem;
+    }
+    .ahd-scroll::-webkit-scrollbar-track {
+        /* Track */
+        background: #EDEDED;
+        border-radius: 0.188rem;
+    }
+    .ahd-scroll::-webkit-scrollbar-thumb {
+        /* Handle */
+        background: #2C2C2C;
+        border-radius: 0.188rem;
+    }
+    .ahd-scroll::-webkit-scrollbar-thumb:hover {
+        /* Handle on hover */
+        background: #2C2C2C;
+    }
+    .ahd-main-scroll {
+        width: 100%;
+        height: 100%;
+    }
+    .ahd-pickup-select-line {
+        margin-top: 0.25rem;
+        border-radius: 0;
+        border-bottom: 0.031rem solid #EDEDED;
+    }
+    .ahd-pickup-select {
+        overflow: hidden;
+        overflow-y: auto;
+        width: 100%;
+        height: 100%;
+        max-height: 10rem;
+    }
+    .ahd-pickup-select::-webkit-scrollbar {
+        /* width */
+        width: 0.375rem;
+    }
+    .ahd-pickup-select::-webkit-scrollbar-track {
+        /* Track */
+        background: #EDEDED;
+        border-radius: 0.188rem;
+    }
+    .ahd-pickup-select::-webkit-scrollbar-thumb {
+        /* Handle */
+        background: #2C2C2C;
+        border-radius: 0.188rem;
+    }
+    .ahd-pickup-select::-webkit-scrollbar-thumb:hover {
+        /* Handle on hover */
+        background: #2C2C2C;
+    }
+    .ah-container-scroll::-webkit-scrollbar {
+        /* width */
+        width: 0.375rem;
+    }
+    .ah-container-scroll::-webkit-scrollbar-track {
+        /* Track */
+        background: #EDEDED;
+        border-radius: 0.188rem;
+    }
+    .ah-container-scroll::-webkit-scrollbar-thumb {
+        /* Handle */
+        background: #D2D2D2;
+        border-radius: 0.188rem;
+    }
+    .ah-container-scroll::-webkit-scrollbar-thumb:hover {
+        /* Handle on hover */
+        background: #D2D2D2;
+    }
+}
+
+@media(min-width:1024px) and (max-height:767px) {
+    .ahd-choose-menu-de-scroll {
+        overflow: hidden;
+        overflow-y: auto;
+        max-height: calc(100vh - 5rem);
+        margin-right: -0.5rem;
+        padding-right: 0.25rem;
+    }
+    .ahd-choose-menu-de-scroll::-webkit-scrollbar {
+        /* width */
+        width: 0.375rem;
+    }
+    .ahd-choose-menu-de-scroll::-webkit-scrollbar-track {
+        /* Track */
+        background: #EDEDED;
+        border-radius: 0.188rem;
+    }
+    .ahd-choose-menu-de-scroll::-webkit-scrollbar-thumb {
+        /* Handle */
+        background: #D2D2D2;
+        border-radius: 0.188rem;
+    }
+    .ahd-choose-menu-de-scroll::-webkit-scrollbar-thumb:hover {
+        /* Handle on hover */
+        background: #D2D2D2;
+    }
+}
+
+@media(max-width:1023px) {
+    .ahd-address-bar,
+    .ahd-type {
+        display: none;
+    }
+    .ahd-address-bar.active,
+    .ahd-type.active {
+        display: flex;
+    }
+    .ahd-delivery-addressShow {
+        width: calc(100% - 7.5rem);
+        padding-left: 0.75rem;
+        padding-right: 1.25rem;
+    }
+    .ahd-pickup-search {
+        width: 100%;
+        height: 2.531rem;
+        border-radius: 0;
+        border-bottom: 0.031rem solid #2c2c2c;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+    }
+    .ahd-ps-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-size: 1.5rem 1.5rem !important;
+    }
+    .ahd-ps-input {
+        width: calc(100% - 1.75rem);
+    }
+}
+
+.amway-header-delivery-onDesktop.non-login .ahd-bar-list[data-delivery="delivery"],
+.nav-delivery.non-login .ahd-bar-list[data-delivery="delivery"] {
+    display: none;
+}
+
+.amway-header-delivery-onDesktop.non-login .ahd-bar.pickup::before,
+.nav-delivery.non-login .ahd-bar.pickup::before {
+    transform: translateX(0%);
+}
+
+.amway-header-delivery-onDesktop.non-login .ahd-bar {
+    width: 6rem;
+}
+
+.amway-header-delivery-onDesktop.non-login .ahd-choose-menu.active {
+    left: 6.5rem;
+    width: calc(100% - 6.5rem);
+}
+
+.nav-delivery.non-login .ahd-bar {
+    width: 100%;
+}
+
+@media (max-width: 1023px) {
+    .nav-delivery.non-login .ahd-bar-list {
+        width: 100%;
+        height: 2.5rem;
+    }
+    .nav-delivery.non-login .ahd-bar::before {
+        width: 100%;
+        height: 2.5rem;
+        border-radius: 1.25rem;
+    }
+}
+
+
+/* ahf-list-menu */
+
+.ahf-list-menu {
+    font-size: 0.75rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+    color: #2C2C2C;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    cursor: pointer;
+}
+
+.sign-in-bar {
+    display: flex;
+    align-items: center;
+    padding-right: 0;
+}
+
+.sign-in-bar::after {
+    content: 'a';
+    font-family: Amway Icon !important;
+    color: #9EA0A3;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    margin-left: 0.125rem;
+}
+
+.sign-in-bar .amway-user.no-img {
+    width: 2rem !important;
+}
+
+.sib-name {
+    font-weight: 700;
+    max-width: 8.125rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.amwayBtnlogin {
+    cursor: pointer;
+}
+
+
+/* amway-header-second */
+
+.amway-hamburger {
+    width: 3rem;
+    height: 3rem;
+    background: url('../../image/header/icon-ham.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 3rem 3rem;
+    margin-left: -0.85rem;
+    cursor: pointer;
+}
+
+.amway-logo-icon {
+    width: 7.5rem;
+    height: 2.5rem;
+    background: url('../../image/header/logo-amway.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 7.5rem 2.5rem;
+}
+
+.amway-category-list {
+    display: flex;
+    align-items: center;
+}
+
+.acl-menu-list {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-left: 1.688rem;
+    padding-right: 1.688rem;
+    display: flex;
+    align-items: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.acl-menu-list a {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.acl-menu-list.promotion {
+    padding-left: 3.5rem;
+    color: #38539A;
+}
+
+.acl-menu-list.has-sub::after {
+    content: 'a';
+    font-family: Amway Icon !important;
+    color: #9EA0A3;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    text-transform: none;
+    margin-left: 0.125rem;
+    transition: 0.3s ease;
+}
+
+.acl-menu-list.has-sub.active::after {
+    transform: rotate(180deg);
+}
+
+.acl-menu-list.active p {
+    text-decoration: underline;
+}
+
+
+/* new */
+
+.amway-search {
+    width: 3rem;
+    height: 3rem;
+    background: url('../../image/header/icon-search.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 5.5rem;
+    transition: 0.3s ease;
+}
+
+.amway-search.active {
+    right: calc(100% - 14rem);
+    z-index: 2;
+}
+
+.amway-search-mock {
+    width: 3rem;
+    height: 3rem;
+}
+
+.amway-search-area {
+    position: absolute;
+    background: #FFFFFF;
+    padding-left: 5rem;
+    left: 9rem;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0s ease;
+}
+
+.amway-search-area.active {
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.amway-search-area.active::before {
+    content: '';
+    right: 0;
+    height: 0;
+    background: #FFFFFF;
+    width: 8rem;
+}
+
+.ahs-header-right.active::after {
+    content: '';
+    background: #fff;
+    width: 8rem;
+    height: 100%;
+    position: absolute;
+}
+
+.asa-search-tool {
+    width: 8rem;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: 0.3s linear;
+}
+
+.asa-search-tool.active {
+    right: 11rem;
+    width: calc(100% - 16rem);
+    transition: 0.3s linear;
+}
+
+.asa-btn {
+    width: 3rem;
+    height: 3rem;
+    background: url('../../image/header/icon-search.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+    cursor: pointer;
+}
+
+.asa-input-area {
+    height: 2.5rem;
+    border-radius: 0;
+    border-bottom: 0.063rem solid #2C2C2C;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 2.5rem);
+}
+
+.asa-input {
+    width: calc(100% - 3rem);
+    border: none;
+    padding: 0.125rem 0rem;
+    padding-right: 1rem;
+    margin-bottom: 0.063rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+.asa-scan {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('../../image/header/icon-scan.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+    cursor: pointer;
+    margin-right: 0.75rem;
+}
+
+.asa-voice {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('../../image/header/icon-voice.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+    cursor: pointer;
+}
+
+.asa-close {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: url('../../image/header/icon-close-bg-gray.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2rem 2rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amway-myList {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url('../../image/icon/icon-mylist/icon-mylist.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+    cursor: pointer;
+}
+
+.amway-cart {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url('../../image/header/icon-cart.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+    cursor: pointer;
+}
+
+.amway-user {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amway-user::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.625rem;
+    height: 1.625rem;
+    border-radius: 0.8125rem;
+    background: #2c2c2c;
+    z-index: -1;
+}
+
+.amway-user-img {
+    width: 1.375rem;
+    height: 1.375rem;
+    border-radius: 0.6875rem;
+    border: 0.125rem solid #ffffff;
+    background-size: cover !important;
+}
+
+.amway-user-noti {
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 0.625rem;
+    background: #2c2c2c;
+    border: 0.125rem solid #ffffff;
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amway-user.no-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url('../../image/header/icon-user.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.25rem 1.25rem;
+    cursor: pointer;
+    margin: 0;
+}
+
+.amway-user.no-img .amway-user-img,
+.amway-user.no-img::before,
+.amway-user.no-img .amway-user-noti {
+    display: none;
+}
+
+.amway-header-second.non-login .amway-myList {
+    display: none;
+}
+
+.amway-header-second.non-login .amway-search {
+    right: 2.5rem;
+}
+
+.amway-header-second.non-login .amway-search.active {
+    right: calc(100% - 14rem);
+    z-index: 2;
+}
+
+@media(min-width:1024px) {
+    .header-second,
+    .amway-hamburger,
+    .ahs-header-right .amway-user {
+        display: none;
+    }
+    .amway-header-search {
+        transition: 0.3s linear;
+        right: 0;
+    }
+    .amway-header-search.active {
+        width: calc(100% - 8.5rem);
+        height: 100%;
+        padding-left: 4rem;
+        right: 0rem;
+    }
+    .ahst-input-area {
+        width: calc(100% - 15rem);
+    }
+    .amway-cart {
+        margin-right: -0.5rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .amway-category-list,
+    .amway-myList {
+        display: none;
+    }
+    .amway-logo-icon {
+        width: 5.875rem;
+        height: 2rem;
+        background-size: 5.875rem 2rem;
+    }
+    .amway-user {
+        margin-right: 0rem !important;
+    }
+    .amway-user.no-img {
+        margin-right: -0.35rem !important;
+        background-position: 1rem 0.7rem;
+    }
+    .ahst-voice,
+    .ahst-scan {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-size: 1.25rem 1.25rem;
+    }
+    .amway-cart,
+    .amway-search {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-size: 1.25rem 1.25rem;
+    }
+    .amway-search,
+    .amway-header-second.non-login .amway-search {
+        right: 6.5rem;
+    }
+    .amway-search-area {
+        left: 0;
+    }
+    .amway-search-area.active {
+        padding-left: 4rem;
+    }
+    .amway-search.active,
+    .amway-header-second.non-login .amway-search.active {
+        right: calc(100% - 3.5rem);
+    }
+    .asa-search-tool.active {
+        right: 1.5rem;
+        width: calc(100% - 5rem);
+    }
+}
+
+@media(max-width:767px) {
+    .asa-search-tool.active {
+        transition: 0.2s linear;
+    }
+}
+
+
+/* amway-header-modal */
+
+.amway-header-modal {
+    position: fixed;
+    z-index: 1500;
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.amway-header-modal.nav-hamburger {
+    transition: 0.3s ease;
+    opacity: 1;
+}
+
+.amway-header-modal.amwayMenuLogin {
+    transition: 0.3s ease;
+    opacity: 1;
+}
+
+.amway-header-modal.active {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1505;
+}
+
+.amway-header-modal.for-changeLang.active,
+.amway-header-modal.for-changeAddress.active {
+    z-index: -1;
+}
+
+.amway-header-modal.under-nav {
+    z-index: 1499;
+}
+
+.amway-header-modal.under-nav.active {
+    opacity: 1;
+    position: fixed;
+    top: 7rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1499;
+}
+
+.bg-ahm {
+    background: rgba(44, 44, 44, 0.7);
+    width: 100%;
+    height: 100%;
+}
+
+.bg-ahm.sp {
+    background: transparent;
+}
+
+.ahm-content-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 26.125rem;
+    height: 100%;
+    background: #FFFFFF;
+    z-index: 1500;
+}
+
+.amway-header-modal.active .ahm-content-right {
+    transform: translateX(0%);
+}
+
+.amway-header-modal .ahm-content-right {
+    transform: translateX(100%);
+    transition: 0.3s ease;
+}
+
+.ahm-content-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 1500;
+}
+
+.amway-header-modal.active .ahm-content-left {
+    transform: translateX(0%);
+}
+
+.amway-header-modal .ahm-content-left {
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+}
+
+.ahm-content-middle {
+    position: fixed;
+    top: 7rem;
+    left: 50%;
+    bottom: 0;
+    max-width: 1212px;
+    width: 100%;
+    height: 21rem;
+    background: #ffffff;
+    z-index: 1499;
+}
+
+.amway-header-modal.active .ahm-content-middle {
+    transform: translate(-50%, 0%);
+}
+
+.amway-header-modal .ahm-content-middle {
+    transform: translate(-50%, calc(-100% - 7rem));
+    transition: 0.65s ease;
+}
+
+.ahm-content-full {
+    position: fixed;
+    top: 7rem;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    z-index: 1499;
+}
+
+.amway-header-modal.active .ahm-content-full {
+    transform: translateY(0%);
+}
+
+.amway-header-modal .ahm-content-full {
+    transform: translateY(calc(-100% - 7rem));
+    transition: 0.3s ease;
+}
+
+.ahm-on-scroll {
+    width: 100%;
+    height: 100%;
+}
+
+.ahm-close {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.amway-header-modal:not(.nav-hamburger).amway-header-modal:not(.nav-delivery) .ahm-close {
+    position: fixed;
+    right: 1.3rem;
+    top: 1.75rem;
+}
+
+.ahm-close::before {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('../../image/header/icon-header-close.svg');
+    background-position: center;
+    background-size: 1.5rem 1.5rem;
+}
+
+.ahm-noti {
+    position: fixed;
+    z-index: 1;
+    top: 2.25rem;
+    left: 2.125rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    background-color: #FAFAFA;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("../../image/header/icon-signin/notification.svg");
+}
+
+.ahm-noti span {
+    position: absolute;
+    right: 0.375rem;
+    bottom: 0.063rem;
+    font-size: 0.625rem;
+    font-weight: 700;
+    line-height: 1rem;
+    color: #ffffff;
+}
+
+.ahd-bar-menu-area {
+    width: 100%;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(min-width:1024px) {
+    .nav-hamburger,
+    .nav-delivery {
+        display: none;
+    }
+}
+
+@media(min-width:1024px) and (max-height:770px) {
+    .amwaySubmenu.products .ahm-content-full {
+        max-height: 100%;
+        height: auto;
+        bottom: 0;
+    }
+}
+
+@media(min-width:1024px) and (max-height:495px) {
+    .amwaySubmenu.brands .ahm-content-full {
+        max-height: 100%;
+        height: auto;
+        bottom: 0;
+    }
+}
+
+@media(min-width:1024px) and (max-height:495px) {
+    .ahm-content-middle {
+        max-height: 100%;
+        height: auto;
+    }
+}
+
+@media(min-width:1024px) and (max-height:767px) {
+    .ahm-on-scroll {
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .ahm-on-scroll::-webkit-scrollbar {
+        /* width */
+        width: 0.375rem;
+    }
+    .ahm-on-scroll::-webkit-scrollbar-track {
+        /* Track */
+        background: #EDEDED;
+        border-radius: 0.188rem;
+    }
+    .ahm-on-scroll::-webkit-scrollbar-thumb {
+        /* Handle */
+        background: #D5D5D5;
+        border-radius: 0.188rem;
+    }
+    .ahm-on-scroll::-webkit-scrollbar-thumb:hover {
+        /* Handle on hover */
+        background: #D2D2D2;
+    }
+}
+
+@media(max-width:1023px) {
+    .amwayMenuSearch.under-nav.active {
+        top: 3.5rem;
+    }
+    .amwayMenuSearch .ahm-content-middle {
+        top: 3.5rem;
+        height: calc(100% - 3.5rem);
+    }
+    .ahm-on-scroll {
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .ahm-content-right {
+        width: 100%;
+    }
+    .amway-header-modal:not(.nav-hamburger):not(.nav-delivery) .ahm-close {
+        right: 0.9rem;
+        top: 1.5rem;
+        cursor: pointer;
+    }
+    .amwaySubmenu {
+        display: none !important;
+    }
+    .ahd-bar-menu-area {
+        padding: 1.5rem;
+    }
+    .ahd-bar-list {
+        width: 50%;
+        height: 2.5rem;
+    }
+    .ahd-bar::before {
+        width: 50%;
+        height: 2.5rem;
+        border-radius: 1.25rem;
+    }
+    .ahd-bar {
+        width: 100%;
+        height: 2.5rem;
+        border-radius: 1.25rem;
+    }
+    .ahd-bar-menu-select-area {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        display: none;
+    }
+    .ahd-bar-menu-select-area.active {
+        display: block;
+    }
+    .ahd-choose-delivery {
+        padding: 1.5rem 0;
+    }
+    .ahd-choose-delivery-line {
+        border-radius: 0;
+        border-top: 0.031rem solid #EDEDED;
+    }
+    .amway-header-modal.under-nav.active {
+        z-index: 1499;
+    }
+}
+
+
+/* amway header sigin*/
+
+.ah-line {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 0.063rem;
+    background: #EDEDED;
+}
+
+.ah-title-signin {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 2.375rem;
+}
+
+.ah-subtitle-signin {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+}
+
+.ah-subtitle-signin:hover .ah-subtitle-signin-text,
+.ah-subtitle-signin:focus .ah-subtitle-signin-text {
+    color: #38539A;
+    text-decoration: underline;
+}
+
+.ah-subtitle-signin-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 2rem 2rem !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    font-size: 2rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ah-subtitle-signin:hover .ah-subtitle-signin-icon,
+.ah-subtitle-signin:focus .ah-subtitle-signin-icon {
+    color: #38539A;
+}
+
+.icon-business {
+    background: url('../../image/header/icon-signin/business.svg');
+}
+
+.icon-delivery {
+    background: url('../../image/header/icon-signin/delivery.svg');
+}
+
+.icon-learning {
+    background: url('../../image/header/icon-signin/learning.svg');
+}
+
+.icon-mylist {
+    background: url('../../image/header/icon-signin/icon-mylist.svg');
+}
+
+.icon-amwayCreator {
+    background: url('../../image/header/icon-signin/amwayCreator.svg');
+}
+
+.icon-register {
+    background: url('../../image/header/icon-signin/register.svg');
+}
+
+.icon-signin {
+    background: url('../../image/header/icon-signin/signin.svg');
+}
+
+.icon-signout {
+    background: url('../../image/header/icon-signin/signout.svg');
+}
+
+.icon-dashboard {
+    background: url('../../image/header/icon-signin/dashboard.svg');
+}
+
+.icon-order {
+    background: url('../../image/header/icon-signin/order-history.svg');
+}
+
+.icon-heart {
+    background: url('../../image/header/icon-signin/mylist.svg');
+}
+
+.icon-sop {
+    background: url('../../image/header/icon-signin/icon-mysop.svg');
+}
+
+.icon-downline-sop {
+    background: url('../../image/header/icon-signin/downline-sop.svg');
+}
+
+.ah-subtitle-signin:hover .icon-business,
+.ah-subtitle-signin:focus .icon-business {
+    background: url('../../image/header/icon-signin/blue/business.svg');
+}
+
+.ah-subtitle-signin:hover .icon-delivery,
+.ah-subtitle-signin:focus .icon-delivery {
+    background: url('../../image/header/icon-signin/blue/delivery.svg');
+}
+
+.ah-subtitle-signin:hover .icon-learning,
+.ah-subtitle-signin:focus .icon-learning {
+    background: url('../../image/header/icon-signin/blue/learning.svg');
+}
+
+.ah-subtitle-signin:hover .icon-mylist,
+.ah-subtitle-signin:focus .icon-mylist {
+    background: url('../../image/header/icon-signin/blue/icon-mylist.svg');
+}
+
+.ah-subtitle-signin:hover .icon-amwayCreator,
+.ah-subtitle-signin:focus .icon-amwayCreator {
+    background: url('../../image/header/icon-signin/blue/amwayCreator.svg');
+}
+
+.ah-subtitle-signin:hover .icon-register,
+.ah-subtitle-signin:focus .icon-register {
+    background: url('../../image/header/icon-signin/blue/register.svg');
+}
+
+.ah-subtitle-signin:hover .icon-signin,
+.ah-subtitle-signin:focus .icon-signin {
+    background: url('../../image/header/icon-signin/blue/signin.svg');
+}
+
+.ah-subtitle-signin:hover .icon-signout,
+.ah-subtitle-signin:focus .icon-signout {
+    background: url('../../image/header/icon-signin/blue/signout.svg');
+}
+
+.ah-subtitle-signin:hover .icon-dashboard,
+.ah-subtitle-signin:focus .icon-dashboard {
+    background: url('../../image/header/icon-signin/blue/dashboard.svg');
+}
+
+.ah-subtitle-signin:hover .icon-order,
+.ah-subtitle-signin:focus .icon-order {
+    background: url('../../image/header/icon-signin/blue/order-history.svg');
+}
+
+.ah-subtitle-signin:hover .icon-heart,
+.ah-subtitle-signin:focus .icon-heart {
+    background: url('../../image/header/icon-signin/blue/mylist.svg');
+}
+
+.ah-subtitle-signin:hover .icon-sop,
+.ah-subtitle-signin:focus .icon-sop {
+    background: url('../../image/header/icon-signin/blue/icon-mysop.svg');
+}
+
+.ah-subtitle-signin:hover .icon-downline-sop,
+.ah-subtitle-signin:focus .icon-downline-sop {
+    background: url('../../image/header/icon-signin/blue/downline-sop.svg');
+}
+
+.ah-subtitle-signin-text {
+    width: calc(100% - 2.5rem);
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.625rem;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-left: 1rem;
+}
+
+@media(min-width:1024px) {
+    .ah-container-signin {
+        padding: 2rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .ah-container-signin {
+        padding: 1.5rem;
+    }
+}
+
+
+/* amway header info user  */
+
+.ah-info-user {
+    width: 100%;
+    /* min-height: 18rem; */
+    /* background: #2c2c2c; */
+    background: #FAFAFA;
+    position: relative;
+    margin-bottom: 3.5rem;
+    padding-bottom: 5rem;
+}
+
+.ah-info-user.o-version {
+    background: #2c2c2c;
+}
+
+.ah-info-user.ah-ifu-foa {
+    margin-bottom: 2.188rem;
+    padding-bottom: 2rem;
+}
+
+.ah-ifu-id {
+    display: table;
+    background: #EDEDED;
+    height: 1.25rem;
+    border-radius: 0.625rem;
+    font-size: 0.813rem;
+    font-weight: 700;
+    line-height: 1.313rem;
+    color: #2c2c2c;
+    padding: 0rem 0.5rem;
+    margin: 0 auto;
+}
+
+.ah-ifu-id.o-version {
+    position: absolute;
+    z-index: 99;
+    background: #FFFFFF;
+}
+
+.ah-ifu-profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ah-ifu-pf-img {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2.5rem;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    border: 0.125rem solid #FFFFFF;
+}
+
+.ah-ifu-pf-icon {
+    position: absolute;
+    right: -1.9rem;
+    top: -0.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 3.5rem 3.5rem !important;
+}
+
+.ah-ifu-pf-icon.lv-01 {
+    background: url('../../image/header/icon-level/lv-01.svg');
+}
+
+.ah-ifu-pf-icon.lv-02 {
+    background: url('../../image/header/icon-level/lv-02.svg');
+}
+
+.ah-ifu-pf-icon.lv-03 {
+    background: url('../../image/header/icon-level/lv-03.svg');
+}
+
+.ah-ifu-pf-icon.lv-03 {
+    background: url('../../image/header/icon-level/lv-03.svg');
+}
+
+.ah-ifu-pf-icon.lv-04 {
+    background: url('../../image/header/icon-level/lv-04.svg');
+}
+
+.ah-ifu-pf-icon.lv-05 {
+    background: url('../../image/header/icon-level/lv-05.svg');
+}
+
+.ah-ifu-pf-icon.lv-06 {
+    background: url('../../image/header/icon-level/lv-06.svg');
+}
+
+.ah-ifu-pf-icon.lv-07 {
+    background: url('../../image/header/icon-level/lv-07.svg');
+}
+
+.ah-ifu-pf-icon.lv-08 {
+    background: url('../../image/header/icon-level/lv-08.svg');
+}
+
+.ah-ifu-pf-icon.lv-09 {
+    background: url('../../image/header/icon-level/lv-09.svg');
+}
+
+.ah-ifu-pf-icon.lv-10 {
+    background: url('../../image/header/icon-level/lv-10.svg');
+}
+
+.ah-ifu-pf-icon.lv-11 {
+    background: url('../../image/header/icon-level/lv-11.svg');
+}
+
+.ah-ifu-pf-icon.lv-12 {
+    background: url('../../image/header/icon-level/lv-12.svg');
+}
+
+.ah-ifu-pf-icon.lv-13 {
+    background: url('../../image/header/icon-level/lv-13.svg');
+}
+
+.ah-ifu-pf-icon.lv-14 {
+    background: url('../../image/header/icon-level/lv-14.svg');
+}
+
+.ah-ifu-pf-icon.lv-15 {
+    background: url('../../image/header/icon-level/lv-15.svg');
+}
+
+.ah-ifu-pf-icon.lv-16 {
+    background: url('../../image/header/icon-level/lv-16.svg');
+}
+
+.ah-ifu-pf-icon.lv-17 {
+    background: url('../../image/header/icon-level/lv-17.svg');
+}
+
+.ah-ifu-pf-icon.lv-18 {
+    background: url('../../image/header/icon-level/lv-18.svg');
+}
+
+.ah-ifu-pf-icon.lv-19 {
+    background: url('../../image/header/icon-level/lv-19.svg');
+}
+
+.ah-ifu-pf-icon.lv-20 {
+    background: url('../../image/header/icon-level/lv-20.svg');
+}
+
+.ah-ifu-pf-icon.lv-21 {
+    background: url('../../image/header/icon-level/lv-21.svg');
+}
+
+.ah-ifu-pf-icon.lv-22 {
+    background: url('../../image/header/icon-level/lv-22.svg');
+}
+
+.ah-ifu-info {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.ah-ifu-name {
+    text-align: center;
+    /* color: #FAFAFA; */
+    color: #2C2C2C;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.438rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 0.25rem;
+}
+
+.ah-ifu-name.o-version {
+    color: #FAFAFA;
+}
+
+@media (max-width: 1023px) {
+    .ah-ifu-name {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.ah-ifu-position {
+    text-align: center;
+    /* color: #FAFAFA; */
+    color: #2C2C2C;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.ah-ifu-position.o-version {
+    color: #FAFAFA;
+}
+
+.btn-switch-account {
+    display: table;
+    width: auto;
+    margin: 0.75rem auto 0;
+    padding: 0.125rem 1.625rem;
+    border-radius: 1rem;
+    font-weight: 700;
+}
+
+.ah-ifu-scbo-bar {
+    position: absolute;
+    bottom: -2rem;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ah-ifu-point-area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 5.5rem;
+    padding: 0.75rem 1rem 0.875rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(62, 83, 149, 0.10);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(62, 83, 149, 0.10);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(62, 83, 149, 0.10);
+}
+
+.ah-ifu-point-details {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.ah-ifu-point-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 0.375rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../image/header/amplus-point.svg");
+}
+
+.ah-ifu-point-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.ah-ifu-point-detail {
+    display: flex;
+    align-items: flex-end;
+    width: calc(100% - 1.75rem);
+    padding-bottom: 0.75rem;
+}
+
+.ah-ifu-point-title {
+    width: 35%;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1rem;
+}
+
+@media (max-width: 1023px) {
+    .ah-ifu-point-title {
+        font-size: 0.875rem;
+    }
+}
+
+.ah-ifu-point {
+    width: 65%;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1rem;
+    text-align: right;
+}
+
+.ah-ifu-point span {
+    margin-right: 0.5rem;
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.625rem;
+}
+
+.ah-ifu-total {
+    width: 100%;
+    margin-left: 2.125rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1rem;
+}
+
+.ah-ifu-score-area {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 7rem);
+    /* background: #FAFAFA; */
+    background: #ffffff;
+    border-radius: 1rem;
+    border: 0.125rem solid #FAFAFA;
+    height: 6rem;
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(62, 83, 149, 0.10);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(62, 83, 149, 0.10);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(62, 83, 149, 0.10);
+}
+
+.ah-ifu-score {
+    width: 100%;
+}
+
+.ah-ifu-score-header,
+.ah-ifu-score-content {
+    display: flex;
+    align-items: center;
+}
+
+.ah-ifu-score-h-title,
+.ah-ifu-score-c-title {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ah-ifu-score-h-person,
+.ah-ifu-score-c-person,
+.ah-ifu-score-h-group,
+.ah-ifu-score-c-group {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+
+.ah-ifu-score-h-person,
+.ah-ifu-score-h-group {
+    font-size: 0.813rem;
+    line-height: 1rem;
+    font-weight: 400;
+}
+
+.ah-ifu-score-c-title {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 700;
+}
+
+.ah-ifu-score-c-person,
+.ah-ifu-score-c-group {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 800;
+}
+
+.ah-ifu-bonus {
+    width: 6rem;
+    height: 6rem;
+    background: #F1F2FF;
+    border-radius: 1rem;
+    border: 0.125rem solid #FAFAFA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(62, 83, 149, 0.10);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(62, 83, 149, 0.10);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(62, 83, 149, 0.10);
+}
+
+.ah-ifu-bonus.o-version {
+    background: #2c2c2c;
+}
+
+.ah-ifu-bonus-icon {
+    width: 100%;
+    height: 1.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-image: url("../../image/header/icon-signin/blue/bonus.svg");
+}
+
+.ah-ifu-bonus-title {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: #38539A;
+}
+
+.ah-ifu-bonus-score {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 2rem;
+    color: #38539A;
+}
+
+.ah-ifu-bonus.o-version .ah-ifu-bonus-title,
+.ah-ifu-bonus.o-version .ah-ifu-bonus-score {
+    color: #ffffff;
+}
+
+.ah-container-scroll {
+    overflow-y: auto;
+}
+
+@media(min-width:1024px) {
+    .ah-ifu-id.o-version {
+        top: 2rem;
+        left: 2rem;
+    }
+    .ah-ifu-profile {
+        padding-top: 2rem;
+    }
+    .ah-ifu-scbo-bar,
+    .ah-container-info {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .ah-ifu-id.o-version {
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+    .ah-ifu-profile {
+        padding-top: 1.5rem;
+    }
+    .ah-ifu-scbo-bar,
+    .ah-container-info {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+
+/* amwayMenuSearch */
+
+.ahm-menu-search-text-title {
+    font-size: 0.875rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+    color: #9EA0A3;
+    padding-bottom: 0.75rem;
+}
+
+.ahm-menu-search-text-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: #2C2C2C;
+    padding-bottom: 0.75rem;
+}
+
+.ahm-menu-search-text-text a {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: #2C2C2C;
+}
+
+.ahm-menu-search-text-text:hover a,
+.ahm-menu-search-text-text:focus a {
+    color: #38539A;
+    text-decoration: underline;
+}
+
+.ahm-menu-search-product-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ahm-menu-search-product-title-text,
+.ahm-menu-search-product-title-all {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 800;
+}
+
+.ahm-menu-search-product-title-all {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 800;
+    /* color: #38539A; */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ahm-menu-search-product-title-all::after {
+    content: 'c';
+    font-family: Amway Icon !important;
+    display: block;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    text-transform: none;
+    text-decoration: none;
+    margin-left: 0.125rem;
+    transition: 0.2s ease;
+}
+
+.ahm-menu-search-product-title-all:hover p {
+    text-decoration: underline;
+    /* color: #38539A; */
+}
+
+.ahm-menu-search-product-title-all:hover::after {
+    transform: translateX(0.25rem);
+}
+
+.ahm-menu-search-product-item-area {
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+}
+
+.ahm-ms-pi {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+    padding: 0.75rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.ahm-ms-pi-img {
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+.ahm-ms-pi-text {
+    padding-left: 0.75rem;
+    position: relative;
+}
+
+.ahm-ms-pi-title {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: #2C2C2C;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.has-choose .ahm-ms-pi-title {
+    -webkit-line-clamp: 1;
+}
+
+.ahm-ms-pi-choose {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: #9EA0A3;
+}
+
+.ahm-ms-pi-tool {
+    position: absolute;
+    bottom: 0;
+    left: 0.875rem;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ahm-ms-pi-price {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.ahm-ms-pi-btn {
+    width: 6rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: #2C2C2C;
+    color: #FFFFFF;
+    padding: 0 0.75rem;
+    font-size: 0.813rem;
+    line-height: 1.313rem;
+    font-weight: 500;
+}
+
+.has-choose .ahm-ms-pi-btn {
+    background: #FFFFFF;
+    color: #2C2C2C;
+    border: 0.063rem solid #2c2c2c;
+}
+
+.ahm-ms-pi-btn:hover {
+    border-color: #464646;
+    background: #464646;
+    color: #FFFFFF;
+}
+
+.ahm-ms-pi-btn:focus {
+    border-color: #2C2C2C;
+    background: #2C2C2C;
+    color: #FFFFFF;
+}
+
+.ahm-ms-pi-btn.disabled,
+.ahm-ms-pi-btn:disabled,
+.ahm-ms-pi-btn[disabled] {
+    border-color: #EDEDED;
+    background: #EDEDED;
+    color: #9EA0A3;
+}
+
+@media(min-width:1024px) {
+    .ahm-menu-search-text {
+        padding-top: 1.5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .ahm-menu-search-product {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .ahm-menu-search-product-item-area {
+        display: flex;
+        align-content: center;
+        margin-left: -0.875rem;
+        margin-right: -0.875rem;
+    }
+    .ahm-menu-search-product-item {
+        width: 33.33%;
+        padding: 0 0.875rem;
+    }
+    .ahm-ms-pi-img {
+        width: 5rem;
+        height: 5rem;
+    }
+    .ahm-ms-pi-text {
+        width: calc(100% - 5rem);
+    }
+    .ahm-ms-pi-text {
+        height: 5.5rem;
+    }
+}
+
+@media(max-width:1200px) {
+    .ahm-ms-pi-btn {
+        width: auto;
+    }
+    .ahm-ms-pi-img {
+        width: 4rem;
+        height: 4rem;
+    }
+    .ahm-ms-pi-text {
+        width: calc(100% - 4rem);
+    }
+}
+
+@media(max-width:1023px) {
+    .ahm-menu-search-text {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 1.5rem;
+    }
+    .ahm-menu-search-text-title {
+        padding-bottom: 1.5rem;
+    }
+    .ahm-menu-search-text-text {
+        padding-bottom: 1.5rem;
+    }
+    .ahm-menu-search-product {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .ahm-menu-search-product-item {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+    .ahm-ms-pi-text {
+        height: 5rem;
+    }
+    .ahm-ms-pi-btn {
+        width: 5.5rem;
+        text-align: center;
+        padding: 0;
+    }
+}
+
+
+/* amwaySubmenu Desktop*/
+
+.ah-submrnu-area {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 2.5rem 0;
+}
+
+.ah-submrnu-list {
+    width: 48.75rem;
+}
+
+.ah-submrnu-ads {
+    width: calc(100% - 48.75rem);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ah-submrnu-ads-area {
+    max-width: 17.5rem;
+    width: 100%;
+}
+
+.ah-submrnu-ads-title {
+    height: 1.25rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.ah-submrnu-ads-title-img {
+    display: block;
+    width: auto;
+    max-height: 100%;
+    height: 100%;
+}
+
+.ah-submrnu-ads-img {
+    width: 100%;
+    height: auto;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.ah-submrnu-ads-img::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.ah-submrnu-ads-btn {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    line-height: 1.813rem;
+    font-weight: 800;
+}
+
+.pink .ah-submrnu-ads-btn {
+    color: #7F3E3E;
+    background: #F9E9EA;
+}
+
+.orange .ah-submrnu-ads-btn {
+    color: #A76C47;
+    background: #FFF1E8;
+}
+
+.yellow .ah-submrnu-ads-btn {
+    color: #62625A;
+    background: #F1F1D1;
+}
+
+.green .ah-submrnu-ads-btn {
+    color: #73793B;
+    background: #F0FAE5;
+}
+
+.blue .ah-submrnu-ads-btn {
+    color: #396E75;
+    background: #CDFBFF;
+}
+
+.purple .ah-submrnu-ads-btn {
+    color: #38539A;
+    background: #E3E5FF;
+}
+
+.ah-submrnu-ads-btn.disabled,
+.ah-submrnu-ads-btn:disabled,
+.ah-submrnu-ads-btn[disabled] {
+    border-color: #EDEDED;
+    background: #EDEDED;
+    color: #9EA0A3;
+}
+
+.ah-submrnu-list-arae {
+    width: 100%;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-top: 1.5rem;
+    display: flex;
+}
+
+.ah-submrnu-list-arae-col {
+    width: 25%;
+    padding: 0 1rem;
+}
+
+.ah-submrnu-list-all {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+}
+
+.ah-submrnu-list-main {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+.ah-submrnu-list-main-sub-area {
+    margin-bottom: 1.125rem;
+}
+
+.ah-submrnu-list-main-sub {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+}
+
+.ah-submrnu-list-sub {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+}
+
+.ah-submrnu-area-boxAll {
+    width: calc(100% + 1rem);
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+
+.ah-submrnu-img-item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 16.66%;
+    max-width: 16.66%;
+    width: 100%;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.ah-submrnu-img-box {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 0.125rem solid #EDEDED;
+    position: relative;
+    cursor: pointer;
+}
+
+.ah-submrnu-img-box::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 56.25%;
+}
+
+.ah-submrnu-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: calc(100% - 1rem);
+    max-height: calc(100% - 1rem);
+    width: calc(100% - 1rem);
+    height: auto;
+}
+
+@media(max-width:1023px) {
+    .ah-submrnu-area-boxAll {
+        width: 100%;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        padding: 1rem;
+        background: #FAFAFA;
+    }
+    .ah-submrnu-img-item {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 33.33%;
+        max-width: 33.33%;
+        width: 100%;
+        position: relative;
+        padding: 0.5rem;
+    }
+    .ah-submrnu-img-box {
+        background: #FFFFFF;
+    }
+}
+
+@media(max-width:767px) {
+    .ah-submrnu-img-item {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 50%;
+        max-width: 50%;
+        width: 100%;
+        position: relative;
+        padding: 0.5rem;
+    }
+}
+
+
+/* nav-hamburger */
+
+.ahm-ham-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3.5rem;
+    /*  z-index: 1501; */
+    background: #FFFFFF;
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+}
+
+.ahm-ham-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-hamburger .ahm-close,
+.nav-delivery .ahm-close {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.ahm-ham-bar-title {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.ahm-on-scroll.for-ham {
+    position: fixed;
+    top: 3.5rem;
+    height: auto;
+    bottom: 0;
+}
+
+.ahm-ham-content {
+    padding-bottom: 3.5rem;
+}
+
+.ahm-ham-icon-area {
+    display: flex;
+    align-items: center;
+}
+
+.ahm-ham-icon-img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.75rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 2rem 2rem !important;
+}
+
+.ahm-ham-main-content,
+.ahm-ham-main-sub-content,
+.ahm-ham-sub-content,
+.ahm-ham-subLast-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0;
+    border-bottom: 0.031rem solid #EDEDED;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.ahm-ham-main-content {
+    background: #FFFFFF;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 800;
+}
+
+.ahm-ham-main-sub-content {
+    background: #FAFAFA;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 800;
+    color: #464646;
+}
+
+.ahm-ham-sub-content {
+    background: #EDEDED;
+    border-color: #FAFAFA;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 700;
+    color: #464646;
+}
+
+.ahm-ham-subLast-content {
+    background: #C3C4C5;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 500;
+}
+
+.collapse-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collapse-btn::after {
+    content: 'a';
+    font-family: Amway Icon !important;
+    color: #9EA0A3;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    text-transform: none;
+    margin-left: 0.125rem;
+    transition: 0.3s ease;
+}
+
+.collapse-btn.active::after {
+    color: #2C2C2C;
+    transform: rotate(180deg);
+}
+
+.collapse-content {
+    width: 100%;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+}
+
+.collapse-content.--show {
+    max-height: 3000px;
+    transition: max-height 0.5s ease-in;
+}
+
+@media(min-width:1024px) {}
+
+@media(max-width:1023px) {}
+
+
+/* custom select*/
+
+.amway-dd-select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+}
+
+.amway-dd-select {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.amway-dd-select__trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.625;
+    height: 2rem;
+    background: #ffffff;
+    cursor: pointer;
+    border: 0.063rem solid #9EA0A3;
+}
+
+.amway-dd-select__trigger .default {
+    color: #9EA0A3;
+}
+
+.amway-dd-options {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 0.063rem solid #9EA0A3;
+    border-top: 0;
+    background: #fff;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.amway-dd-select.open .amway-dd-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.amway-dd-option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.625;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.amway-dd-option:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #2C2C2C;
+}
+
+.amway-dd-option.selected {}
+
+.amway-dd-select__trigger::after {
+    content: 'a';
+    font-family: Amway Icon !important;
+    color: #2c2c2c;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    margin-left: 0.125rem;
+}
+
+.open .amway-dd-select__trigger::after {
+    transform: rotate(180deg);
+}
+
+.amway-dd-options {
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    min-height: 8rem;
+    max-height: 15rem;
+}
+
+@media (min-width:1024px) {
+    .ahd-choose-menu .amway-dd-options {
+        min-height: 13rem;
+    }
+    .amway-dd-options::-webkit-scrollbar {
+        /* width */
+        width: 0.375rem;
+    }
+    .amway-dd-options::-webkit-scrollbar-track {
+        /* Track */
+        background: #EDEDED;
+        border-radius: 0.188rem;
+    }
+    .amway-dd-options::-webkit-scrollbar-thumb {
+        /* Handle */
+        background: #2C2C2C;
+        border-radius: 0.188rem;
+    }
+    .amway-dd-options::-webkit-scrollbar-thumb:hover {
+        /* Handle on hover */
+        background: #2C2C2C;
+    }
+}
+
+@media (min-width:1024px) and (max-height:345px) {
+    .ahd-choose-menu-scroll {
+        overflow: hidden;
+        overflow-y: scroll;
+        max-height: calc(100vh - 5rem);
+        padding-right: 0.25rem;
+        margin-right: -0.5rem;
+    }
+    .ahd-choose-menu .amway-dd-options {
+        min-height: 13rem;
+    }
+    .ahd-choose-menu-scroll::-webkit-scrollbar {
+        /* width */
+        width: 0.375rem;
+    }
+    .ahd-choose-menu-scroll::-webkit-scrollbar-track {
+        /* Track */
+        background: #EDEDED;
+        border-radius: 0.188rem;
+    }
+    .ahd-choose-menu-scroll::-webkit-scrollbar-thumb {
+        /* Handle */
+        background: #D5D5D5;
+        border-radius: 0.188rem;
+    }
+    .ahd-choose-menu-scroll::-webkit-scrollbar-thumb:hover {
+        /* Handle on hover */
+        background: #D5D5D5;
+    }
+    .ahd-choose-menu .amway-dd-options {
+        min-height: 5rem;
+        max-height: 5rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .amway-dd-select__trigger {
+        padding: 0 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.75rem;
+        height: 2.5rem;
+    }
+    .ahd-bar-menu-select-area .amway-dd-options {
+        position: fixed;
+        top: unset;
+        bottom: 0;
+        border: 0;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        padding: 1.5rem 0;
+        max-height: 60%;
+        overflow: hidden !important;
+        overflow-y: auto !important;
+    }
+    .ahd-bar-menu-select-area .amway-dd-option {
+        height: 2.5rem;
+        padding: 0 1.5rem;
+    }
+    .ahd-bar-menu-select-area .amway-dd-options {
+        overflow: visible;
+    }
+    .ahd-bar-menu-select-area .amway-dd-select.open .amway-dd-options {
+        transform: translateY(0%);
+    }
+    .ahd-bar-menu-select-area .amway-dd-select .amway-dd-options {
+        transform: translateY(100%);
+    }
+    .ahd-bar-menu-select-area .amway-dd-select.open .bg-select {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: rgba(44, 44, 44, 0.7);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+
+
+/* amway-header-noti */
+
+.amway-header-noti {
+    width: 100%;
+    height: 3rem;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    display: none;
+}
+
+.amway-header-noti.active {
+    display: block;
+}
+
+.amway-header-noti.alert {
+    background-color: #ffe2e2;
+    color: #cb5454;
+}
+
+.amway-header-noti.--error_someitems {
+    color: #62625A;
+    background-color: #F8F8E7;
+}
+
+.amway-header-noti-container {
+    width: 100%;
+    height: 100%;
+    max-width: 1212px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.amway-header-noti-content {
+    display: flex;
+    align-items: center;
+}
+
+.amway-header-noti-icon {
+    margin-right: 0.5rem;
+}
+
+.alert .amway-header-noti-icon:before {
+    content: "\6e";
+    display: flex;
+    color: inherit;
+    font-family: Amway Icon CI !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal !important;
+    font-variant: normal !important;
+    font-weight: 400 !important;
+    line-height: inherit;
+    text-transform: none !important;
+    speak: none;
+}
+
+.amway-header-noti-close {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.amway-header-noti-close:before {
+    color: #2C2C2C !important;
+    content: "\65";
+    display: flex;
+    color: inherit;
+    font-family: Amway Icon CI !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal !important;
+    font-variant: normal !important;
+    font-weight: 400 !important;
+    line-height: inherit;
+    text-transform: none !important;
+    speak: none;
+}
+
+@media(min-width:1024px) {
+    .amway-header-noti-container {
+        padding-right: 16px;
+        padding-left: 16px;
+        position: relative;
+    }
+}
+
+@media(max-width:1023px) {
+    .amway-header-noti-container {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .header-sub-nav-back {
+        position: absolute;
+        z-index: 1;
+        left: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+        -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header-sub-nav-back::after {
+        content: 'b';
+        font-family: Amway Icon !important;
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2rem;
+        color: #2C2C2C;
+        margin-right: 0.25rem;
+    }
+    .header-sub-nav {
+        position: fixed;
+        z-index: 1502;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 3.5rem;
+        background: #fff;
+        -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.mbo-upgrade-banner {
+    width: 100%;
+    height: 7.5rem;
+    margin-top: 1.5rem;
+    border-radius: 0.625rem;
+    background-size: 100%;
+    background-repeat: repeat;
+    background-color: #FFF1E8;
+    background-image: url("../../image/header/member-bg.svg");
+}
+
+.mbo-upgrade-banner-content {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.625rem;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-image: url("../../image/header/member-person.svg");
+}
+
+.mbo-banner-detail {
+    width: 75%;
+}
+
+.mbo-banner-text {
+    margin-bottom: 0.625rem;
+    color: #A76C47;
+    font-weight: 500;
+}
+
+.btn-mbo-upgrade {
+    cursor: pointer;
+    width: 9.5rem;
+    height: 2.25rem;
+    border-radius: 1.5rem;
+    background: #A76C47;
+    color: #FFF1E8;
+    font-weight: 700;
+}
+
+.btn-mbo-upgrade:hover,
+.btn-mbo-upgrade:focus {
+    background: #8d5b3c;
+}
+
+.foa-upgrade-banner {
+    width: 100%;
+    height: 7.5rem;
+    margin-top: 1.5rem;
+    border-radius: 0.625rem;
+    background-size: 100%;
+    background-repeat: repeat;
+    background-color: #F1F2FF;
+    background-image: url("../../image/header/foa-bg.svg");
+}
+
+.foa-upgrade-banner-content {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.625rem;
+    background-size: auto 90%;
+    background-repeat: no-repeat;
+    background-position: 95% 1rem;
+    background-image: url("../../image/header/upgrade.svg");
+}
+
+.foa-banner-detail {
+    width: 75%;
+}
+
+.foa-banner-text {
+    margin-bottom: 0.625rem;
+    color: #38539A;
+    font-weight: 500;
+}
+
+.btn-foa-register {
+    cursor: pointer;
+    width: 9.5rem;
+    height: 2.25rem;
+    border-radius: 1.5rem;
+    background: #38539A;
+    color: #FAFAFA;
+    font-weight: 700;
+}
+
+.btn-foa-register:hover,
+.btn-foa-register:focus {
+    background: #304781;
+}
+
+.ah-swa-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 6.438rem;
+    padding: 0 2rem;
+}
+
+.ah-swa-bar-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 2.438rem;
+    border-bottom: 0.063rem solid #EDEDED;
+}
+
+.ah-swa-content {
+    padding: 2rem;
+}
+
+.input-user-account {
+    display: none;
+}
+
+.label-user-account {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.625rem;
+    border: 0.125rem solid #EDEDED;
+}
+
+.user-img {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    border: 0.125rem solid #EDEDED;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.user-content {
+    width: calc(100% - 3rem);
+    padding-left: 1rem;
+}
+
+.user-state {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-id {
+    height: 1.25rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-radius: 2.625rem;
+    background-color: #FAFAFA;
+    color: #2C2C2C;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.188rem;
+}
+
+.user-status {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.813rem;
+    font-weight: 800;
+    line-height: 1.313rem;
+}
+
+.user-status.user-status-active {
+    color: #107F47;
+    background-color: #F0FAE5;
+}
+
+.user-status.user-status-expires {
+    color: #62625A;
+    background-color: #F8F8E7;
+}
+
+.user-status.user-status-canceled {
+    color: #C3C4C5;
+    background-color: #EDEDED;
+}
+
+.user-name {
+    margin-top: 0.375rem;
+    margin-right: 3rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    color: #2C2C2C;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.user-caution {
+    display: flex;
+    align-items: center;
+    margin-top: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+    color: #62625A;
+}
+
+.user-caution::before {
+    content: "";
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-right: 0.25rem;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../image/header/exclamation.svg");
+}
+
+.input-user-account:disabled~.label-user-account {
+    background-color: #FAFAFA;
+    border: 0.125rem solid #FAFAFA;
+}
+
+.input-user-account:disabled~.label-user-account .user-img {
+    background-blend-mode: overlay;
+    background-color: #C3C4C5;
+    border: none;
+}
+
+.input-user-account:disabled~.label-user-account .user-id {
+    color: #C3C4C5;
+    background-color: #EDEDED;
+}
+
+.input-user-account:disabled~.label-user-account .user-name,
+.input-user-account:disabled~.label-user-account .user-caution {
+    color: #C3C4C5;
+}
+
+.input-user-account:disabled~.label-user-account .user-caution::before {
+    background-image: url("../../image/header/exclamation-cancel.svg");
+}
+
+.input-user-account:checked~.label-user-account,
+.input-user-account:checked~.label-user-account .user-img {
+    border: 0.125rem solid #2C2C2C;
+}
+
+.input-user-account:checked~.label-user-account .user-img::before {
+    content: "g";
+    color: #ffffff;
+    font-family: Amway Icon !important;
+    position: absolute;
+    right: -0.125rem;
+    bottom: -0.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color: #2C2C2C;
+}
+
+.ah-ifu-renew {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.625rem;
+    border: 0.063rem solid #F5F5C9;
+    background-color: #F8F8E7;
+}
+
+.ah-ifu-renew-icon {
+    width: 2rem;
+    height: 2rem;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../image/header/icon-signin/renew.svg");
+}
+
+.ah-ifu-renew-info {
+    width: calc(100% - 6.063rem);
+    padding-left: 0.75rem;
+    color: #62625A;
+}
+
+.ah-ifu-renew-header {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+}
+
+.ah-ifu-renew-text {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.btn-green {
+    width: 4.063rem;
+    height: 2.25rem;
+    border-radius: 0.625rem;
+    background-color: #62625A;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #F8F8E7;
+}
+
+@media (max-width: 1023px) and (max-height: 425px) {
+    .ahm-on-scroll {
+        position: relative;
+    }
+    .ahm-noti {
+        position: absolute;
+    }
+    .amway-header-modal:not(.nav-hamburger).amway-header-modal:not(.nav-delivery) .ahm-close {
+        position: absolute;
+    }
+}
+
+
+/* 
+
+@media(min-width:1024px) {}
+@media(max-width:1023px) {} 
+*/

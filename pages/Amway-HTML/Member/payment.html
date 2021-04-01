@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Payment</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../../styles/common.251e0dcdff5dc232292e.css" />
+    <link rel="stylesheet" href="../../../styles/Header___Header.7c1ab78bbef29ad6a8f4.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../../styles/common/css/style.css" />
+    <link rel="stylesheet" href="../../../Header_degito/css/header_creator.css" />
+    <link rel="stylesheet" href="../../../AmwayCreator/css/shop-default.css" />
+    <link rel="stylesheet" href="../../../AmwayCreator/css/button.css" />
+    <link rel="stylesheet" href="../../../AmwayCreator/css/input-mod.css" />
+    <link rel="stylesheet" href="../../../AmwayCreator/css/payment.css" />
+</head>
+
+
+<body>
+    <div id="root">
+        <div class="amway-header-creator-area " data-dropdown-top-restrict="true">
+            <div class="amway-header-creator-container">
+                <div class="amway-header-creator-main has-center">
+                    <div class="amway-header-creator-left">
+                        <a href="checkout_page_ordersum.html" class="amway-header-creator-back checkoutPayment-back">
+                            <div class="amway-header-creator-back-text">Pre-payment</div>
+                        </a>
+                    </div>
+                    <div class="amway-header-creator-center">
+                        <div class="checkoutPayment-title visible-mobile">เลือกวิธีชำระเงิน</div>
+                        <div class="amway-logo-icon-creator visible-desktop"></div>
+                    </div>
+
+                    <div class="amway-header-creator-right">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="amway-main-layout " class="amway-main-layout step-creator">
+            <div class="amway-main-layout__content ">
+                <!-- content area -->
+
+                <div class="amway-container">
+                    <div class="checkout-payment-title">
+                        เลือกวิธีชำระเงิน
+                    </div>
+                    <div class="checkout-payment-box">
+                        <form action="#" class="checkout-payment-box-area">
+                            <div class="checkout-payment-box-check">
+                                <input type="radio" id="checkout-payment-box-input-1" name="radio-group" class="checkout-payment-box-input" checked>
+                                <label for="checkout-payment-box-input-1" class="checkout-payment-box-label">
+                                    <div class="checkout-payment-box-label-icon"></div>
+                                    <div class="checkout-payment-box-label-content">
+                                        <div class="checkout-payment-box-label-content-area">
+                                            <div class="checkout-payment-box-label-content-title">
+                                                บัตรเครดิต / บัตรเดบิต
+                                            </div>
+                                            <div class="checkout-payment-box-label-content-img-box">
+                                                <img class="checkout-payment-box-credit"
+                                                    src="../../../image/creator/illustration/icon-credit.svg">
+                                            </div>
+                                        </div>
+                                        <div class="checkout-payment-box-label-content-text">
+                                            กรุณาชำระเงินก่อนเวลา 22:30 น.
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="checkout-payment-box-check">
+                                <input type="radio" id="checkout-payment-box-input-2" name="radio-group" class="checkout-payment-box-input">
+                                <label for="checkout-payment-box-input-2" class="checkout-payment-box-label">
+                                    <div class="checkout-payment-box-label-icon"></div>
+                                    <div class="checkout-payment-box-label-content">
+                                        <div class="checkout-payment-box-label-content-area">
+                                            <div class="checkout-payment-box-label-content-title">
+                                                โอนผ่านบัญชีธนาคาร
+                                            </div>
+
+                                        </div>
+                                        <div class="checkout-payment-box-label-content-text">
+                                            แอพพลิเคชั่น / ATM / เคาน์เตอร์หรือเว็บไซต์ธนาคาร
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="checkout-payment-box-check">
+                                <input type="radio" id="checkout-payment-box-input-3" name="radio-group" class="checkout-payment-box-input">
+                                <label for="checkout-payment-box-input-3" class="checkout-payment-box-label">
+                                    <div class="checkout-payment-box-label-icon"></div>
+                                    <div class="checkout-payment-box-label-content">
+                                        <div class="checkout-payment-box-label-content-area">
+                                            <div class="checkout-payment-box-label-content-title">
+                                                เคาน์เตอร์เซอร์วิส
+                                            </div>
+                                            <div class="checkout-payment-box-label-content-img-box">
+                                                <img class="checkout-payment-box-counter"
+                                                    src="../../../image/creator/illustration/icon-counter.svg">
+                                            </div>
+                                        </div>
+                                        <div class="checkout-payment-box-label-content-text">
+                                            กรุณาชำระเงินก่อนเวลา 22:30 น.
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="checkout-payment-bar-area">
+                        <div class="checkout-payment-bar">
+                            <div class="checkout-payment-bar-box">
+                                <div class="checkout-payment-bar-price-box">
+                                    <div class="checkout-payment-bar-price-area">
+                                        <div class="checkout-payment-bar-price">
+                                            ฿ 7,146
+                                        </div>
+
+                                    </div>
+                                    <div class="checkout-payment-bar-price-title">
+                                        ราคาสมาชิก
+                                    </div>
+                                </div>
+                                <div class="checkout-payment-bar-btn-box">
+                                    <a href="order_success.html" class="btn-black ">ชำระเงิน</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- end content area -->
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="../../Header_degito/js/creator_change_language.js"></script>
+    <script src="../../Header_degito/js/change_delivery.js"></script>
+    <script src="../../Header_degito/js/search_action_fullslide.js"></script>
+    <script src="../../Header_degito/js/header_action.js"></script>
+    <script src="../../Header_degito/js/hamburger_action.js"></script>
+    <script src="../../Header_degito/js/custom_dropdown.js"></script>
+    <script src="../../Header_degito/js/header_action_creator.js"></script>
+    <!-- Add on -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+    <script src="../../Common/js/Modal.js"></script>
+
+</body>
+
+</html>

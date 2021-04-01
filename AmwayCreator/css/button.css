@@ -1,0 +1,87 @@
+.btn-h40 {
+    font-size: 1rem;
+    padding: .5rem 1.5rem;
+    height: 2.5rem;
+    min-width: 12.5rem;
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-standard {
+    font-size: 1rem;
+    padding: .5rem 1.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-modal {
+    font-size: 1rem;
+    padding: .5rem 1.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(min-width:1024px) {
+    .btn-modal {
+        width: 12.5rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .btn-modal {
+        width: 9.5rem;
+    }
+}
+
+.btn-h48 {
+    font-size: 1rem;
+    padding: .5rem 1.5rem;
+    height: 3rem;
+    min-width: 12.5rem;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-mod-double,
+.btn-mod-single {
+    height: 3rem;
+    border-radius: 1.5rem;
+}
+
+.btn-outlin-black.btn-mod-double,
+.btn-outline-black.btn-mod-double,
+.btn-outlin-black.btn-mod-single,
+.btn-outline-black.btn-mod-single {
+    border: 0.125rem solid #2c2c2c;
+}
+
+@media(max-width:767px) {
+    .padding-space-on-mb {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .two-btn {
+        width: 100%;
+    }
+    .btn-mod-double {
+        width: calc(50% - 0.5rem) !important;
+        min-width: calc(50% - 0.5rem) !important;
+        height: 3rem;
+        border-radius: 1.5rem;
+    }
+    .btn-mod-single {
+        width: 100% !important;
+        height: 3rem;
+        border-radius: 1.5rem;
+    }
+}

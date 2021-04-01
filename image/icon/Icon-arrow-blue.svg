@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+  <g id="Icon_Arrow_Down" data-name="Icon/Arrow/Down" transform="translate(0 8) rotate(-90)">
+    <path id="Path" d="M4.811,6.983a.564.564,0,0,1,0,.843.691.691,0,0,1-.917,0l-3.7-3.4a.564.564,0,0,1,0-.843l3.7-3.4a.691.691,0,0,1,.917,0,.564.564,0,0,1,0,.843L1.563,4Z" transform="translate(0 5) rotate(-90)" fill="#002f5f"/>
+  </g>
+</svg>

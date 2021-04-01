@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Order failed payment</title>
+    <!-- For FireBase Demo -->
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.21.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.21.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-performance.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../../styles/common.251e0dcdff5dc232292e.css" />
+    <link rel="stylesheet" href="../../../styles/Header___Header.7c1ab78bbef29ad6a8f4.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../../styles/common/css/style.css" />
+    <link rel="stylesheet" href="../../../Header_degito/css/header_creator.css" />
+    <link rel="stylesheet" href="../../../AmwayCreator/css/shop-default.css" />
+    <link rel="stylesheet" href="../../../AmwayCreator/css/button.css" />
+    <link rel="stylesheet" href="../../../AmwayCreator/css/input-mod.css" />
+    <link rel="stylesheet" href="../../../AmwayCreator/css/checkout-step.css" />
+    <link rel="stylesheet" href="../../../AmwayCreator/css/order-success.css" />
+</head>
+
+
+<body>
+    <div id="root">
+        <div class="amway-header-creator-area ">
+            <div class="amway-header-creator-container">
+                <div class="amway-header-creator-main">
+                    <div class="amway-header-creator-left">
+
+
+                        <a class="amway-logo-icon-creator"></a>
+                    </div>
+                    <div class="amway-header-creator-right">
+
+                        <a href="checkout_page_member.html" class="amway-header-creator-cart">
+
+                        </a>
+                        <div class="amway-header-language  visible-desktop">
+                            <div class="ahl-btn">English</div>
+                            <input type="hidden" value="en" name="inputLanguage" id="inputLanguage" class="inputLanguage">
+                            <div class="amway-header-modal for-changeLang ">
+                                <div class="bg-ahm sp"></div>
+                            </div>
+                            <div class="ahl-menu">
+                                <div class="ahl-menu-list" data-lang="th">ไทย</div>
+                                <div class="ahl-menu-list " data-lang="en">English</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="amway-main-layout " class="amway-main-layout step-creator">
+            <div class="amway-main-layout__content ">
+                <!-- content area -->
+                <div class="checkout-success-banner failed">
+                    <div class="amway-container ">
+                        <div class="checkout-success-banner-area">
+
+                            <div class="checkout-success-banner-img-area">
+                                <div class="checkout-success-banner-img">
+
+                                </div>
+                            </div>
+                            <div class="checkout-success-banner-content">
+                                <div class="checkout-success-banner-text">
+                                    การชำระเงินไม่สำเร็จ
+                                </div>
+                                <div class="checkout-success-banner-detail">
+                                    <div class="checkout-success-banner-detail-failed">
+                                        <div class="checkout-success-banner-detail-failed-icon">
+                                        </div>
+                                        <div class="checkout-success-banner-detail-failed-text">
+                                            ข้อมูลบัตรนี้ไม่น่าไว้วางใจ กรุณาติดต่อ ธนาคารเจ้าของบัตร
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="checkout-success-area">
+                    <div class="box-content-payment-checkout">
+                        <div class="amway-container">
+                            <div class="checkout-order-container">
+                                <div class="checkout-order-container-box">
+                                    <div class="checkout-waitting-alert-box">
+                                        <div class="checkout-waitting-alert-text-box">
+                                            <div class="checkout-waitting-alert-text">
+                                                เพื่อป้องกันการสั่งซื้อถูกยกเลิก
+                                            </div>
+                                            <div class="checkout-waitting-alert-text">
+                                                กรุณาชำระเงินให้เสร็จสมบูรณ์ก่อน 23:00 น.
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="checkout-failed">
+                                        <div class="checkout-failed-box">
+                                            <div class="checkout-failed-list">
+                                                <div class="checkout-failed-list-title">
+                                                    หมายเลขคำสั่งซื้อ
+                                                </div>
+                                                <div class="checkout-failed-list-num">
+                                                    #917098283
+                                                </div>
+                                            </div>
+                                            <div class="checkout-failed-list">
+                                                <div class="checkout-failed-list-title">
+                                                    จำนวนเงิน
+                                                </div>
+                                                <div class="checkout-failed-list-num">
+                                                    ฿ 900.00
+                                                </div>
+                                            </div>
+                                            <div class="checkout-failed-box-tool">
+                                                <button class="btn-black btn-cft">ชำระเงินอีกครั้ง</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-order-payment">
+                                        <div class="checkout-order-payment-content">
+                                            <div class="checkout-order-payment-title">
+                                                ข้อมูลการชำระเงิน
+                                            </div>
+                                            <div class="checkout-order-payment-title-des">
+                                                คุณสามารถชำระเงินได้ที่ แอปพลิเคชั่นของธนาคาร และ เอทีเอ็ม
+                                            </div>
+                                            <div class="checkout-order-payment-box">
+                                                <img class="checkout-order-payment-qr" src="../../../image/creator/illustration/qr.svg">
+                                            </div>
+                                            <div class="checkout-order-payment-box">
+                                                <img class="checkout-order-payment-barcode" src="../../../image/creator/illustration/barcode.svg">
+                                            </div>
+                                            <div class="checkout-order-payment-ref">
+                                                <div class="checkout-order-payment-ref-title">
+                                                    หมายเลขคำสั่งซื้อ (Ref 1)
+                                                </div>
+                                                <div class="checkout-order-payment-ref-number">
+                                                    917098283
+                                                    <div class="checkout-order-copy"></div>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-order-payment-ref">
+                                                <div class="checkout-order-payment-ref-title">
+                                                    หมายเลขอ้างอิง (Ref 2)
+                                                </div>
+                                                <div class="checkout-order-payment-ref-number">
+                                                    2711647
+                                                    <div class="checkout-order-copy"></div>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-order-payment-ref">
+                                                <div class="checkout-order-payment-ref-title">
+                                                    จำนวนเงิน
+                                                </div>
+                                                <div class="checkout-order-payment-ref-number">
+                                                    ฿ 900.00
+                                                </div>
+                                            </div>
+                                            <div class="checkout-order-payment-note">
+                                                กรุณาใส่หมายเลขคำสั่งซื้อ (Ref 1) และจำนวนเงินให้ถูกต้อง มิฉะนั้นการสมัครจะไม่สมบูรณ์ หากบางธนาคารมีให้ระบุหมายเลขอ้างอิง กรุณาใส่หมายเลขนักธุรกิจแอมเวย์ (Ref 2)
+                                            </div>
+                                            <div class="checkout-order-payment-note-title">
+                                                คุณสามารถชำระเงินค่าสมัครได้ตามช่องทางดังนี้
+                                            </div>
+                                            <ul class="checkout-order-payment-note-ul">
+                                                <li class="checkout-order-payment-note-li">
+                                                    เคาท์เตอร์ เซอร์วิส ได้ตลอด 24 ชม.
+                                                </li>
+                                                <li class="checkout-order-payment-note-li">
+                                                    แอมเวย์ ช็อป ภายในเวลา 21:00 น.
+                                                </li>
+                                                <li class="checkout-order-payment-note-li">
+                                                    ตู้ ATM / เคาท์เตอร์ธนาคาร / Internet Mobile Banking ภายในเวลา 4 ทุ่ม
+                                                </li>
+                                            </ul>
+                                            <div class="checkout-order-payment-tool ">
+                                                <button class=" btn-outline-black btn-cop">
+                                                    ดูรายละเอียดคำสั่งซื้อ
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="amway-container">
+
+                        <div class="checkout-success-box">
+                            <div class="checkout-success-left">
+                                <div class="checkout-address-area">
+                                    <div class="checkout-address-title">
+                                        ที่อยู่จัดส่ง
+                                    </div>
+                                    <div class="checkout-address-name">
+                                        มนตรี แสงวันดี
+                                    </div>
+                                    <div class="checkout-address">
+                                        151/933 เดอะทรัสต์ เรสซิเด้นซ์ ปิ่นเกล้า ถ.บรมราชชนนีแขวงอรุณอมรินทร์ เขตบางกอกน้อย กรุงเทพฯ 10700
+                                    </div>
+                                </div>
+                                <div class="checkout-phone-area">
+                                    <div class="checkout-phone-title">
+                                        เบอร์โทรศัพท์
+                                    </div>
+                                    <div class="checkout-phone-number">
+                                        08-888-88888
+                                    </div>
+                                </div>
+                                <div class="checkout-card-main-title">
+                                    รายละเอียดคำสั่งซื้อ
+                                </div>
+                                <div class="checkout-card first">
+
+                                    <div class="checkout-card-img-area">
+                                        <img class="checkout-card-img" src="../../../image/creator/product/normal.svg">
+                                    </div>
+                                    <div class="checkout-card-content">
+                                        <div class="checkout-card-code">
+                                            Item # 118209
+                                        </div>
+                                        <div class="checkout-card-name">
+                                            Artistry Signature Select™ Firming Body Lotion
+                                        </div>
+                                        <div class="checkout-card-status">
+
+                                        </div>
+                                        <div class="checkout-card-price-and-count">
+                                            <div class="checkout-card-count-success">2 x ฿ 864</div>
+                                            <div class="checkout-card-price-success">฿ 1,728</div>
+                                        </div>
+                                        <div class="checkout-card-free-product">
+                                            <div class="checkout-card-free-product-item">
+                                                <div class="checkout-card-free-product-item-img-area">
+                                                    <img class="checkout-card-free-product-item-img" src="../../../image/creator/product/normal.svg">
+
+                                                </div>
+                                                <div class="checkout-card-free-product-item-content">
+                                                    <div class="checkout-card-free-product-item-content-tag">
+                                                        Free
+                                                    </div>
+                                                    <div class="checkout-card-free-product-item-content-area">
+                                                        <div class="checkout-card-free-product-item-content-name">
+                                                            Artistry Signature Select™ Firming Body Lotion
+                                                        </div>
+                                                        <div class="checkout-card-free-product-item-count">
+                                                            X1
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout-card">
+
+                                    <div class="checkout-card-img-area">
+                                        <img class="checkout-card-img" src="../../../image/creator/product/bundle.svg">
+                                    </div>
+                                    <div class="checkout-card-content">
+                                        <div class="checkout-card-code">
+                                            Item # 118209
+                                        </div>
+                                        <div class="checkout-card-name">
+                                            Nutrilite™ Strong Living Bundle
+                                        </div>
+                                        <div class="checkout-card-status --backOrder">
+                                            <div class="checkout-card-status-icon"></div>
+                                            <div class="checkout-card-status-text">Accrued product. Ready on 22/02/20
+                                            </div>
+                                        </div>
+                                        <div class="checkout-card-price-and-count">
+                                            <div class="checkout-card-count-success">1 x ฿ 2,990</div>
+                                            <div class="checkout-card-price-success">฿ 2,990</div>
+                                        </div>
+
+                                        <div class="checkout-card-free-product">
+
+                                        </div>
+                                    </div>
+                                    <div class="checkout-card-content-bundle">
+                                        <div class="checkout-card-content-bundle-title">
+                                            Products in this package
+                                        </div>
+                                        <div class="checkout-card-content-bundle-list-area">
+                                            <div class="checkout-card-content-bundle-list">
+                                                <div class="checkout-card-content-bundle-list-count">
+                                                    x2
+                                                </div>
+                                                <div class="checkout-card-content-bundle-list-content">
+                                                    <div class="checkout-card-content-bundle-list-text">
+                                                        Nutrilite™ Vitamin C Extended Release
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-card-content-bundle-list">
+                                                <div class="checkout-card-content-bundle-list-count">
+                                                    x2
+                                                </div>
+                                                <div class="checkout-card-content-bundle-list-content">
+                                                    <div class="checkout-card-content-bundle-list-text">
+                                                        Nutrilite™ Vitamin C Extended Release
+                                                    </div>
+                                                    <div class="checkout-card-status --backOrder">
+                                                        <div class="checkout-card-status-icon"></div>
+                                                        <div class="checkout-card-status-text">Accrued product. Ready on 22/02/20
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-card-content-bundle-list">
+                                                <div class="checkout-card-content-bundle-list-count">
+                                                    x2
+                                                </div>
+                                                <div class="checkout-card-content-bundle-list-content">
+                                                    <div class="checkout-card-content-bundle-list-text">
+                                                        Nutrilite™ Vitamin C Extended Release
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-card-content-bundle-list">
+                                                <div class="checkout-card-content-bundle-list-count">
+                                                    x2
+                                                </div>
+                                                <div class="checkout-card-content-bundle-list-content">
+                                                    <div class="checkout-card-content-bundle-list-text">
+                                                        Nutrilite™ Vitamin C Extended Release
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout-card">
+
+                                    <div class="checkout-card-img-area">
+                                        <img class="checkout-card-img" src="../../../image/creator/product/color.svg">
+                                    </div>
+                                    <div class="checkout-card-content">
+                                        <div class="checkout-card-code">
+                                            Item # 118209
+                                        </div>
+                                        <div class="checkout-card-name">
+                                            Artistry Studio Bangkok Edition 2-In-1 Matte Lip Crayon
+                                        </div>
+
+                                        <div class="checkout-card-color">
+                                            Color : Rose Goddess
+                                        </div>
+                                        <div class="checkout-card-status">
+
+                                        </div>
+                                        <div class="checkout-card-price-and-count">
+                                            <div class="checkout-card-count-success">1 x ฿ 600</div>
+                                            <div class="checkout-card-price-success">฿ 600</div>
+                                        </div>
+                                        <div class="checkout-card-free-product">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-success-right">
+                                <div class="checkout-success-member-price-area">
+                                    <div class="checkout-success-member-price-title">ค่าสมัครนักธุรกิจ
+                                    </div>
+                                    <div class="checkout-success-member-price-price">฿ 900</div>
+                                </div>
+                                <div class="checkout-success-summary">
+                                    <div class="checkout-success-summary-area">
+                                        <div class="checkout-success-summary-title">
+                                            รวม
+                                        </div>
+                                        <div class="checkout-success-summary-price">
+                                            ฿ 8,546
+                                        </div>
+                                    </div>
+                                    <div class="checkout-success-summary-area">
+                                        <div class="checkout-success-summary-title">
+                                            ส่วนลด
+                                        </div>
+                                        <div class="checkout-success-summary-price">
+                                            ฿ 1,100
+
+                                        </div>
+                                    </div>
+                                    <div class="checkout-success-summary-area">
+                                        <div class="checkout-success-summary-title">
+
+                                            ส่วนลดคูปอง
+                                        </div>
+                                        <div class="checkout-success-summary-price">
+                                            ฿ 300
+
+                                        </div>
+                                    </div>
+                                    <div class="checkout-success-summary-area">
+                                        <div class="checkout-success-summary-title">
+
+                                            ค่าจัดส่ง
+                                        </div>
+                                        <div class="checkout-success-summary-price">
+                                            ฟรี
+                                        </div>
+                                    </div>
+                                    <div class="checkout-success-summary-total-area">
+                                        <div class="checkout-success-summary-total-title">
+                                            ยอดสุทธิ
+                                        </div>
+                                        <div class="checkout-success-summary-total-price">
+                                            ฿ 7,146
+                                        </div>
+                                    </div>
+                                    <div class="checkout-success-summary-area">
+                                        <div class="checkout-success-summary-title">
+
+                                            PV/BV ที่จะได้รับ
+                                        </div>
+                                        <div class="checkout-success-summary-price">
+                                            0 / 0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- end content area -->
+            </div>
+            <div class="checkout-success-footer-area failed">
+                <div class="checkout-success-footer">
+                    <div class="amway-container">
+
+                        <div class="checkout-success-footer-title">ติดตาม Olivia Madison &#128516;ได้ที่</div>
+                        <div class="checkout-success-social-area">
+                            <div class="shop-detail-social-btn line"></div>
+                            <div class="shop-detail-social-btn fb"></div>
+                            <div class="shop-detail-social-btn ig"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="checkout-return-footer-area">
+                <div class="checkout-return-footer">
+                    <a class="checkout-return-link">การยกเลิกคำสั่งซื้อ และการรับเงินคืน</a> <span class="checkout-return-line">|</span> <a class="checkout-return-link">นโยบายการคืนสินค้า</a>
+
+                </div>
+            </div>
+            <div class="shop-footer">
+                <div class="amway-container ">
+                    <div class="shop-footer-area">
+                        <div class="shop-f-content-call">
+                            <div class="shop-f-content-call-title">
+                                ต้องการความช่วยเหลือ ?
+                            </div>
+                            <div class="shop-f-content-call-number">
+                                <div class="shop-f-content-call-number-area">
+                                    <a href="tel:0-2725-8000">
+
+
+                                        <div class="shop-f-cc-n-icon">
+
+                                        </div>
+                                    </a>
+                                    <a href="tel:0-2725-8000" class="shop-f-cc-n-number">
+                                        0-2725-8000
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="shop-f-content-address">
+                            บริษัท แอมเวย์ (ประเทศไทย) จำกัด 1199/1 ถนนรามคำแหง แขวงหัวหมาก เขตบางกะปิ กรุงเทพ ฯ 10240
+                        </div>
+                        <div class="shop-f-content-language">
+                            <div class="shop-f-content-language-btn" onclick="openModal('shopChangeLangF')">
+                                <div class="shop-f-content-language-icon">
+
+                                </div>
+                                <div class="shop-f-content-language-text">
+                                    <div class="shop-f-content-language-text-list " data-lang="th">
+                                        ไทย
+                                    </div>
+                                    <div class="shop-f-content-language-text-list" data-lang="en">
+                                        English
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="shop-f-content-logo-area">
+                            <div class="shop-f-content-logo">
+                            </div>
+                        </div>
+                        <div class="shop-f-content-copyright">Copyright 2020,Amway(Thailand) Ltd,.</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="shop-change-lang-modal" id="shopChangeLangF">
+                <div class="bg-modal " onclick="closeModal('shopChangeLangF')"></div>
+                <div class="shop-change-lang-footer">
+                    <div class="shop-change-lang-footer-btn" onclick="closeModal('shopChangeLangF')" data-lang="th">
+                        <div class="shop-change-lang-footer-btn-text">
+                            ไทย
+                        </div>
+
+                    </div>
+                    <div class="shop-change-lang-footer-btn " onclick="closeModal('shopChangeLangF')" data-lang="en">
+                        <div class="shop-change-lang-footer-btn-text">
+                            English
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="../../../Header_degito/js/creator_change_language.js"></script>
+    <script src="../../../Header_degito/js/change_delivery.js"></script>
+    <script src="../../../Header_degito/js/search_action_fullslide.js"></script>
+    <script src="../../../Header_degito/js/header_action.js"></script>
+    <script src="../../../Header_degito/js/hamburger_action.js"></script>
+    <script src="../../../Header_degito/js/custom_dropdown.js"></script>
+    <script src="../../../Header_degito/js/header_action_creator.js"></script>
+    <!-- Add on -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+    <script src="../../../Common/js/Modal.js"></script>
+
+</body>
+
+</html>

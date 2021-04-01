@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SignUpMemberPersonalDetails</title>
+        <!-- For FireBase Demo -->
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.21.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.21.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-performance.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <!-- For FireBase Demo -->
+    <link
+      rel href="https://ma integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vb crossorigin="anonymous"  <link rel="stylesheet" href="/styles/common.8e7db5e747870b108a2a.css" />
+    <link
+      rel href="/styles/Si  head>
+<body>
+
+  <div id="root">
+      <header class="mz-main-layout__header --initial">
+          <div class="mz-main-layout__nav-container">
+              <nav
+                <nav aria-label="secondary" >
+                      <div
+                        <div data-language-key="en" /div><div
+                        <div >
+                              cla /span><div
+                           ><div>
+                                  <div
+                                    <div style="transform: translate3d(0%, 0, 0);"</div><input
+                                    <input class="mz-to id="global-delivery" name="global-deliver value="global-delivery" readonly="" checked=""  />
+                                      for= class="mz-toggle-butt   <span>
+                        <span
+                          class="oa-global-delivery-methods__delivery-option"
+                        >
+                          จัดส่งที่บ้าน
+                        </span>
+                      </span>
+                    </label>
+                    <input
+                                    <input class="mz-to id="global-pickup" name="global-deliv value="global-pickup" readonly=""> />
+                                      for= class="mz-toggle-bu  <span>
+                        <div class="oa-global-delivery-methods__pickup-option">
+                          <span
+                            class="oa-global-delivery-methods__pickup-placeholder"
+                          >
+                            รับที่สาขา
+                          </span>
+                          <span
+                            class="oa-global-delivery-methods__pickup-selected"
+                          >
+                            รับที่ :
+                            <span
+                              data-selected-pickup-address-label="true"
+                            ></span>
+                          </span>
+                        </div>
+                      </span>
+                    </label>
+                  </div>
+                              </div>
+                          </div>
+                        <ul class="oa-topmost-bar__links">
+                          <li class="oa-topmost-bar__link">
+                              <a href="/ศูนย์การเรียนรู้">
+                                  <small>ศูนย์การเรียนรู้</small>
+                        </          a>
+                 </             li>
+                            <li class="oa-topmost-bar__link">
+                              <a href="/เกี่ยวกับแอมเวย์">
+                                  <small>เกี่ยวกับแอมเวย์</small>
+                         </         a>
+                  </            li>
+                            <li class="oa-topmost-bar__link">
+                              <a href="/แอมเวย์ช็อป"><small>แอมเวย์ช็อป</small></a>
+                          </    li>
+                            <li class="oa-topmost-bar__link --outstanding">
+                              <a href="/บิซซิเนส-เซ็นเตอร์">
+                                  <small>บิซซิเนส เซ็นเตอร์</small>
+                  </                a>
+                </              li>
+              </            ul>
+            </          section>
+          </        nav>
+                <nav
+                <nav aria-label="primary" data-dropdown-top-re>
+                      <section class="oa-navigation-bar__section --left">
+                          <button
+                            <button class="oa-navigat type="button"   <span class="oa-icon --hamburger"></span>
+                </button>
+                <a class="oa-navigation-bar__logo" href="/">
+                              <img
+                                <img data-src="/stati alt="amway-logo-white"  />
+                </          </a>
+                              <div class="oa-input oa-search-input">
+                                  <span class="oa-icon --search oa-input__icon --left"></span>
+                                    <input
+                                    <input placeholder class="oa-input__input input-lg form-cont/ />
+                               <div>
+                        </  section>
+                        <section class="oa-navigation-bar__section --right">
+                          <button
+                            <button type="button" class="oa-nav   <span class="oa-icon --search oa-navigation-bar__icon"></span>
+                </button>
+                <span class="oa-navigation-bar__icon">
+                              <span class="oa-icon --cart"></span>
+                </span>
+                            <div id="oa-user" class="oa-navigation-bar__user">
+                              <span
+                               ><span</span>></span>
+                                  <a class="oa-navigation-bar__login" href="/login">Login</a>
+                    <span>/</span>
+                    <a class="oa-navigation-bar__register" href="/register">
+                                  Register
+                    </a>
+                  </span>
+                   </           div>
+                          </section>
+            </          div>
+            </      nav>
+                <nav id="oa-menu-bar" class="oa-menu-bar" aria-label="menu">
+                  <ul class="oa-menu-bar__container">
+                      <li class="oa-menu-bar__item --outstanding" data-id="promotions">
+                          <span class="oa-menu-bar__text">Promotions</span>
+                        </  li>
+                        <li class="oa-menu-bar__item" data-id="brands">
+                          <span class="oa-menu-bar__text">Brands</span>
+                          </li>
+                        <li class="oa-menu-bar__item" data-id="nutrition">
+                          <span class="oa-menu-bar__text">Nutrition</span>
+                 </         li>
+                        <li class="oa-menu-bar__item" data-id="beauty">
+                          <span class="oa-menu-bar__text">Beauty</span>
+                    </      li>
+                        <li class="oa-menu-bar__item" data-id="personal-care">
+                          <span class="oa-menu-bar__text">Personal Care</span>
+                      </    li>
+                        <li class="oa-menu-bar__item" data-id="home-living">
+                          <span class="oa-menu-bar__text">Home Living</span>
+                         </ li>
+                        <li class="oa-menu-bar__item" data-id="agriculture">
+                          <span class="oa-menu-bar__text">Agriculture</span>
+                </          li>
+                        <li class="oa-menu-bar__item" data-id="energy-drink">
+                          <span class="oa-menu-bar__text">Energy Drink</span>
+                  </        li>
+                        <li class="oa-menu-bar__item" data-id="sop">
+                          <span class="oa-menu-bar__text">SOP</span>
+                     </     li>
+                  </    ul>
+                  </nav>
+        </      div>
+            <div class="mz-main-layout__messages-container"></div>
+       </   header>
+        <div id="main-dim-layer" class="mz-dim-layer"></div>
+        <nav
+          id class="oa-popup-menu data-level="1" aria-label="me >
+            <header class="oa-popup-menu__header">
+              <span class="oa-icon --close oa-product-menu__close-button"></span>
+                <span class="oa-icon --back oa-product-menu__back-button"></span>
+                <h6 class="oa-product-menu__title">
+                  <span data-title-level="1">Shopping</span>
+                    <span data-title-level="2"></span>
+                    <span data-title-level="3"></span>
+                  </h6>
+        </      header>
+            <div class="oa-popup-menu__container">
+              <div class="oa-product-menu__container">
+                  <ul class="oa-product-menu__categories">
+                      <li>
+                          <a
+                            <a data-id="promotions" data-title="Promotio href="/promotions" >
+                                  Promotions
+                  </span>
+                  <span class="oa-product-menu__text --mobile">Promotions</span>
+                        </      a>
+                    </      li>
+                        <li>
+                          <a
+                            <a data-id="brands" data-title="Shop href="/brands" >
+                                <span class="oa-product-menu__text --mobile">
+                                  Shop by Brand
+                  </span>
+                </a>
+                   </       li>
+                        <li>
+                          <a
+                            <a data-id="nutrition" data-title="Nutriti href="/nutrition" >
+                                  cl data-src="/static/images/category-nutr alt="Nutrition"  />
+                                <span class="oa-product-menu__text --mobile">Nutrition</span>
+                                <span
+                                <span>/span>></span>
+                   </       </a>
+        </              <li>
+                          <a
+                            <a data-id="beauty" data-title="Beau href="/beauty" >
+                                  cl data-src="/static/images/category-beau alt="Beauty"  />
+                                <span class="oa-product-menu__text --mobile">Beauty</span>
+                                <span
+                                <span /span>></span>
+                </          </a>
+        </              <li>
+                          <a
+                            <a data-id="personal-care" data-title="Personal Ca href="/personal-care">
+                                  cl data-src="/static/images/category-pers alt="Personal Care"  />
+                                  Personal Care
+                  </span>
+                  <span class="oa-product-menu__text --mobile">
+                                  Personal Care
+                  </span>
+                  <span
+                                <span /span>></span>
+                </          </a>
+        </              <li>
+                          <a
+                            <a data-id="home-living" data-title="Home Livi href="/home-living">
+                                  cl data-src="/static/images/category-home alt="Home Living"  />
+                                  Home Living
+                  </span>
+                  <span class="oa-product-menu__text --mobile">
+                                  Home Living
+                  </span>
+                  <span
+                                <span /span>></span>
+                </          </a>
+    </                  <li>
+                        <li>
+                            <a data-id="agriculture" data-title="Agricultu href="/agriculture" >
+                                  cl data-src="/static/images/category-agri alt="Agriculture"  />
+                                  Agriculture
+                  </span>
+                  <span class="oa-product-menu__text --mobile">
+                                  Agriculture
+                  </span>
+                  <span
+                                <span /span>></span>
+                </          </a>
+    </                  <li>
+                        <li>
+                            <a data-id="energy-drink" data-title="Energy Dri href="/energy-drink" >
+                                  cl data-src="/static/images/category-ener alt="Energy Drink"  />
+                                  Energy Drink
+                  </span>
+                  <span class="oa-product-menu__text --mobile">
+                                  Energy Drink
+                  </span>
+                  <span
+                                <span /span>></span>
+                </          </a>
+    </                  <li>
+                        <li>
+                            <a data-id="others" data-title="Othe href="/others" >
+                                  cl data-src="/static/images/category-othe alt="Others"  />
+                                <span class="oa-product-menu__text --mobile">Others</span>
+                                <span
+                                <span /span>></span>
+                    </      </a>
+        </              <li>
+                          <a
+                            <a data-id="sop" data-title="S href="/sop">
+                                  cl data-src="/static/images/category-sop. alt="SOP"> />
+                                <span class="oa-product-menu__text --mobile">SOP</span>
+                              </a>
+                          </li>
+                      </ul>
+                    <ul
+                    <ul class="oa-product->
+                          <a href="/brand/nutrilite">
+                              <img
+                                <img data-src="/static/images/brand-nutrilit alt="brand-nutrilite"> />
+                    </      </a>
+        </              <li>
+                          <a href="/brand/artistry">
+                              <img
+                                <img data-src="/static/images/brand-artistry alt="brand-artistry"> />
+                    </      </a>
+        </              <li>
+                          <a href="/brand/glister">
+                              <img
+                                <img data-src="/static/images/brand-glister. alt="brand-glister"> />
+                    </      </a>
+        </              <li>
+                          <a href="/brand/g-h">
+                              <img
+                                <img data-src="/static/images/brand-g-h.svg" alt="brand-g-h"> />
+                    </      </a>
+        </              <li>
+                          <a href="/brand/satinique">
+                              <img
+                                <img data-src="/static/images/brand-satiniqu alt="brand-satinique"> />
+                    </      </a>
+        </              <li>
+                          <a href="/brand/atmosphere-sky">
+                              <img
+                                <img data-src="/static/images/brand-atmosphe alt="brand-atmosphere-sky"> />
+                    </      </a>
+        </              <li>
+                          <a href="/brand/e-spring">
+                              <img
+                                <img data-src="/static/images/brand-e-spring alt="brand-e-spring"/ />
+                </          </a>
+    </                  <li>
+                          <a href="/brand/amway-home">
+                              <img
+                                <img data-src="/static/images/brand-amway-ho alt="brand-amway-home"  />
+                </          </a>
+    </                  <li>
+                          <a href="/brand/amway-queen">
+                              <img
+                                <img data-src="/static/images/brand-amway-qu alt="brand-amway-queen"> />
+                   </       </a>
+       </               <li>
+                          <a href="/brand/bodykey">
+                              <img
+                                <img data-src="/static/images/brand-bodykey. alt="brand-bodykey"  />
+                    </      </a>
+        </              <li>
+                          <a href="/brand/nutriplant">
+                              <img
+                                <img data-src="/static/images/brand-nutripla alt="brand-nutriplant"> />
+                   </       </a>
+       </             </ul>
+                    <ul
+                    <ul class="oa-product- >
+                          <a class="oa-product-menu__see-all" href="/beauty">See all</a>
+                   </       li>
+                        <li class="oa-product-menu__category-item">
+                          <a
+                            <a href="/skin-care" data-id="skin-car data-title="Skin Ca >
+                                <span
+                                <span</span>></span>
+                </          <ul
+                            <ul class="oa-product-men >
+                                  <a class="oa-product-menu__see-all" href="/skin-care">
+                                      See all
+                    </a>
+                  </li>
+                                <li>
+                                  <a
+                                    <a href="/cleansing" href="/cleansing">
+                    >C
+                    </a  Cleansing
+                    </          </li>
+            </                  <i>
+                                      Serum
+                    </a>
+                  </li>
+                                <li>
+                                <li>
+                                    <a href="/moisturizer" href="/moisturizer">
+                    >M
+                    </a  Moisturizer
+                    </          lili
+                                  <a
+                                    <a href="/serum-moisturizer"  Serum &amp; Moisturizer
+                    </a>
+                  </li>
+                                <li>
+                                  <a
+                                    <a href="/eye-cream"em" hrf="/eye-crea>
+                    >E C
+                    </a  Eye Cream
+         </                  </lili
+                                  <a
+                                    <a href="/sun-screen"" href="/sun-screen>
+                    >S S
+                    </a  Sun Screen
+                    </         </li>
+            </                  <i>
+                                      Mask
+                    </a>
+                  </li>
+                                <li>
+                                  <a
+                                    <a href="/for-men" href="/for-men">
+                    >F M
+                    </a  For Men
+         </                  </lili
+                                  <a
+                                    <a href="/special-treatment"   Special Treatment
+                    </a>
+                  </li>
+                </              ul>
+                       </   li>
+                        <li class="oa-product-menu__category-item">
+                          <a
+                            <a href="/make-up" data-id="make-u data-title="Make  >
+                                <span
+                                <span /span>></span>
+                </          <ul
+                            <ul class="oa-product-m>
+                                  <a class="oa-product-menu__see-all" href="/make-up">
+                                      See all
+                    </a>
+                  </li>
+                                <li>
+                                  <a
+                                    <a href="/facial"" href="/facial>
+                    >F
+                    </a  Facial
+                       </       </li>
+           </                   <i>
+                                      Eyes
+                    </a>
+                  </li>
+                                <li>
+                                  <a class="oa-product-menu__sub-category-item" href="/lips">
+                                      Lips
+                    </a>
+                  </li>
+                                <li>
+                                  <a
+                                    <a href="/cheeks"" href=/cheeks">
+                    >C
+                    </a  Cheeks
+                    </          </li>
+        </                </ulu>
+                 </     lii
+                          <a
+                            <a href="/collection" data-id="collectio data-title="Collecti >
+                                <span
+                               ><span</span>></span>
+           </               <ul
+                            <ul class="oa-product-menu >
+                                  <a class="oa-product-menu__see-all" href="/collection">
+                                      See all
+                    </a>
+                  </li>
+                                <li>
+                                  <a
+                                    <a href="/paris-set-edition"   Paris Set Edition
+                    </a>
+                  </li>
+                                <li>
+                                <li>
+                                    <a href="/bangkok-set-edition"   Bangkok Set Edition
+                    </a>
+                  </li>
+                              </ul>
+                          </li>
+                        <li class="oa-product-menu__category-item">
+                          <a
+                            <a href="/perfume" data-id="perfum data-title="Perfu >
+                                <span
+                               ><span</span>></span>
+           </               <ul
+                            <ul class="oa-product-m >
+                                  <a class="oa-product-menu__see-all" href="/perfume">
+                                      See all
+                    </a>
+                  </li>
+                                <li>
+                                  <a
+                                    <a href="/flora-chic"" href="/flora-chic>
+                    >F C
+                    </a  Flora Chic
+                  </            lili
+                                  <a
+                                    <a href="/unknown" href="/unknown">
+                    >U
+                    </a  Unknown
+                    </          </li>
+        </                </ulu>
+                      </lii
+                          <a
+                            <a href="/accessories" data-id="accessorie data-title="Accessori >
+                                <span
+                                <span /span>></span>
+                </          <ul
+                            <ul class="oa-product-menu_ >
+                                  <a class="oa-product-menu__see-all" href="/accessories">
+                                      See all
+                    </a>
+                  </li>
+                                <li>
+                                  <a
+                                    <a href="/make-up-tools"   Make Up Tools
+                    </a>
+                  </li>
+                                <li>
+                                  <a
+                                    <a href="/facial-care-tools"   Facial Care Tools
+                    </a>
+                  </li>
+                                <li>
+                                  <a
+                                    <a href="/cleansing-cloth"   Cleansing Cloth
+                    </a>
+                  </li>
+                                <li>
+                                  <a
+                                    <a href="/facial-hygienic"   Facial Hygienic
+                    </a>
+                  </li>
+                </              ul>
+                       </   li>
+                     </ ul>
+                    <ul
+                    <ul class="oa-product-menu_>>
+                          <a class="oa-product-menu__see-all" href="/agriculture">
+                              See all
+                </a>
+              </li>
+                        <li class="oa-product-menu__category-item">
+                          <a
+                            <a href="/mineral-supplements" data-id="mineral-supplement data-title="Mineral Supplemen >
+                                <span
+                                <span</span>></span>
+          </                <ul
+                            <ul class="oa-product-menu__sub-cat >
+                                  <a
+                                    <a href="/mineral-supplements" >
+                      See all
+                 </</>
+                        </      </li>
+          </              </li>
+                        <li class="oa-product-menu__category-item">
+                          <a
+                            <a href="/supplement-fertilizer" data-id="supplement-fertilize data-title="Supplement Fertiliz >
+                                  Supplement Fertilizer
+                  </span>
+                  <span
+                                <span /span>></span>
+                </          <ul
+                            <ul class="oa-product-menu__sub-categ >
+                                  <a
+                                    <a href="/supplement-fertilizer" >
+                      See all
+                 </</>
+                        </      </li>
+          </              </li>
+                        <li class="oa-product-menu__category-item">
+                          <a
+                            <a href="/plant-fertilizer" data-id="plant-fertilize data-title="Plant Fertiliz >
+                                <span
+                                <span /span>></span>
+          </                <ul
+                            <ul class="oa-product-menu__sub- >
+                                  <a
+                                    <a href="/plant-fertilizer" >
+                      See all
+                 </</>
+                        </      </li>
+          </              </li>
+                     </ ul>
+          </        div>
+        </      div>
+      </    nav>
+        <nav
+          id class="oa-popup-m aria-label="menu">>
+            <header class="oa-popup-menu__header">
+              <div class="oa-user-menu__header">
+                  <span class="oa-icon --close oa-user-menu__close-button"></span>
+                 </ div>
+             </ header>
+            <div class="oa-popup-menu__container">
+              <div class="oa-user-menu__entry">
+                  <a
+                    <a class="oa-but >
+                        a>
+                    </a>
+                    <a class="oa-button>
+                      </a>
+                  </div>
+                <ul>
+                  <li>
+                      <a
+                        <a href="/business-center"   Business Center
+              </a>
+            </li>
+                    <li>
+                      <a class="oa-user-menu__item" href="/awaiting-payment">
+                          Awaiting Payment
+                <img
+                  class="oa-image oa-user-menu__noti"
+                  data-src="/static/images/new.svg"
+                  alt="new"
+                />
+              </a>
+            </li>
+                    <li><a class="oa-user-menu__item" href="/my-sop">My SOP</a></li>
+                    <li>
+                      <a class="oa-user-menu__item" href="/education">Education</a>
+            </          li>
+                    <li>
+                      <a class="oa-user-menu__item" href="/store-locator">
+                          Store Locator
+              </a>
+            </li>
+                    <li>
+                      <a class="oa-user-menu__item" href="/about-amway">About Amway</a>
+                  </    li>
+                    <li>
+                      <a class="oa-user-menu__logout" href="/">
+                          <span class="oa-icon --logout oa-user-menu__logout-icon"></span>
+                            <span>Logout</span>
+                  </        a>
+               </       li>
+               </   ul>
+           </   div>
+        </  nav>
+        <div id="oa-search-modal" class="oa-search-modal">
+          <header class="oa-search-modal__header">
+              <div class="oa-input oa-search-input">
+                  <span class="oa-icon --search oa-input__icon --left"></span>
+                    <input
+                    <input placeholder class="oa-input__input input-lg form-cont/ />
+                <button
+                  id="o type="button" class="oa-sea   <small>Cancel</small>
+          </button>
+        </header>
+            <section class="oa-search-modal__section">
+              <header>
+                  <h6 class="oa-search-modal__title">Matching Keywords</h6>
+          </        header>
+                <ul class="oa-search-modal__keywords">
+                  <li>
+                      <a class="oa-search-modal__keyword" href="/beauty/artistry">
+                          <span>Artistry</span>
+                            <span>
+                              Search in
+                  <strong>Beauty</strong>
+                </span>
+              </a>
+            </          li>
+                    <li>
+                      <a class="oa-search-modal__keyword" href="/nutrition/arabica">
+                          <span>Arabica</span>
+                            <span>
+                              Search in
+                  <strong>Nutrition</strong>
+                </span>
+              </a>
+            </          li>
+          </        ul>
+        </      section>
+            <section class="oa-search-modal__section">
+              <header>
+                  <h6 class="oa-search-modal__title">Products</h6>
+                    <a
+                    <a class="oa-link oa-search-modal__s>
+                        <span class="oa-icon --arrow-right"></span>
+                      </a>
+                  </header>
+                <ul class="oa-search-modal__products">
+                  <li>
+                      <a
+                        <a href="/product/artistry-exact-fi>
+                              cl data-src="/static/images/mock-search-result-art alt="mock-search-result-artistry-powder"> />
+                              <p class="oa-search-modal__product-title">
+                                  Artistry Exact Fit™ Perfecting Loose Powder - Light
+                              </    p>
+                                <p class="oa-search-modal__product-description"></p>
+                                <div class="oa-search-modal__product-checkout">
+                                  <span class="oa-search-modal__product-price">฿964</span>
+                                    <button
+                                    <button class="oa-but   <span>Add to Cart</span>
+                    </button>
+                  </div>
+                             </ div>
+                         </ a>
+                      </li>
+                    <li>
+                      <a
+                        <a href="/product/artistry-signatur >
+                              cl data-src="/static/images/mock-search-result-art alt="mock-search-result-artistry-lipstick"  />
+                              <p class="oa-search-modal__product-title">
+                                  Artistry Signature Color™ Lipstick
+                               </   p>
+                                <p class="oa-search-modal__product-description">16 colors</p>
+                                <div class="oa-search-modal__product-checkout">
+                                  <span class="oa-search-modal__product-price">880</span>
+                                    <button
+                                    <button class="oa-but   <span>Add to Cart</span>
+                    </button>
+                  </div>
+                              </div>
+                          </a>
+                      </li>
+                    <li>
+                      <a
+                        <a href="/product/artistry-exact-fi >
+                              cl data-src="/static/images/mock-search-result-art alt="mock-search-result-artistry-powder"  />
+                              <p class="oa-search-modal__product-title">
+                                  Artistry Exact Fit™ Perfecting Loose Powder
+                               </   p>
+                                <p class="oa-search-modal__product-description"></p>
+                                <div class="oa-search-modal__product-checkout">
+                                  <span class="oa-search-modal__product-price">
+                                      ฿964 ~ ฿1,564
+                    </span>
+                    <button
+                                    <button class="oa-but   <span>Add to Cart</span>
+                    </button>
+                  </div>
+                             </ div>
+                         </ a>
+                      </li>
+          </        ul>
+            </  section>
+          </div>
+        <div class="oa-pickup-address-modal">
+          <div
+              cl>>
+                  type= class="mz-sea data-placeholder="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false   <div class="mz-searchable-dropdown__button-icon --left">
+              <span
+                class="mz-icon --search oa-pickup-address-modal__search-icon"
+              ></span>
+            </div>
+            <div class="mz-searchable-dropdown__button-icon --right"></div>
+            <span class="mz-searchable-dropdown__button-text">
+              เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้า
+            </span>
+          </button>
+          <div class="mz-searchable-dropdown__modal">
+                  <button type="button" class="mz-searchable-dropdown__close-button">
+                      <span class="mz-icon --close"></span>
+            </button>
+            <div class="mz-input mz-searchable-dropdown__input">
+                      <div class="mz-input__icon --left">
+                          <span
+                            <span /span>></span>
+              </        <input
+                        <input id="global- placeholder="เลือกสาขาแอมเ class="mz-input__input --with-left-icon" value="เลือกสาขาแอมเวย์ช็อปเพื่อรับสินค้/ />
+                    <div
+                    <div >
+                          clas for="global-pickup-address:after-sales   <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:after-sales"
+                  name="global-pickup-address"
+                  value="after-sales"
+                  data-label="AFTER SALES SERVICE"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  AFTER SALES SERVICE
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                        <label for="global-pickup-address:shop-rama-i   <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-rama-ii"
+                  name="global-pickup-address"
+                  value="shop-rama-ii"
+                  data-label="แอมเวย์ ช็อป พระราม 2"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป พระราม 2
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                        <label for="global-pickup-address:shop-hq"   <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-hq"
+                  name="global-pickup-address"
+                  value="shop-hq"
+                  data-label="แอมเวย์ ช็อป สำนักงานใหญ่"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป สำนักงานใหญ่
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                        <label for="global-pickup-address:shop-1"   <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-1"
+                  name="global-pickup-address"
+                  value="shop-1"
+                  data-label="แอมเวย์ ช็อป 1"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป 1
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                        <label for="global-pickup-address:shop-2"   <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-2"
+                  name="global-pickup-address"
+                  value="shop-2"
+                  data-label="แอมเวย์ ช็อป 2"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป 2
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                        <label for="global-pickup-address:shop-3"   <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-3"
+                  name="global-pickup-address"
+                  value="shop-3"
+                  data-label="แอมเวย์ ช็อป 3"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อป 3
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <label
+                        <label for="global-pickup-address:shop-4"   <input
+                  type="radio"
+                  class="mz-searchable-dropdown__option-input"
+                  id="global-pickup-address:shop-4"
+                  name="global-pickup-address"
+                  value="shop-4"
+                  data-label="แอมเวย์ ช็อปสาขานี้ชื่อยาวมากเพื่อเป็นการทดสอบ implementation ที่ถูกต้อง"
+                  readonly=""
+                />
+                <div class="oa-pickup-address-modal__address-label">
+                  <span
+                    class="mz-icon --map-pin oa-pickup-address-modal__option-icon"
+                  ></span>
+                  แอมเวย์ ช็อปสาขานี้ชื่อยาวมากเพื่อเป็นการทดสอบ implementation
+                  ที่ถูกต้อง
+                </div>
+                <span
+                  class="mz-icon --checkbox-checked mz-searchable-dropdown__check-icon"
+                ></span>
+              </label>
+              <div class="mz-searchable-dropdown__footer"></div>
+                      </div>
+                 </ div>
+             </ div>
+        </  div>
+        <div id="mz-main-layout" class="mz-main-layout">
+          <div class="mz-main-layout__content">
+              <main class="oa-sign-up-form-layout">
+                  <header class="oa-sign-up-form-layout__header">
+                      <div class="step-progress-bar">
+                          <div class="step-progress-bar__step" style="order: 4;">
+                              <div class="step-progress-bar__label">
+                                  5
+                                    <span class="step-progress-bar__text">. ชำระเงิน</span>
+                        </          div>
+                             </ div>
+                            <div class="step-progress-bar__step" style="order: 3;">
+                              <div class="step-progress-bar__label">
+                                  4
+                                    <span class="step-progress-bar__text">
+                                      . ข้อมูลการจัดส่ง
+                    </span>
+                  </div>
+                </              <div class="step-progress-bar__step" style="order: 2;">
+                             / <d>iv class="step-progress-bar__label">
+                            <div   3   <span class="st>ep-progress-bar__text">
+                                  </span>
+                        </          div>
+                             </di   v>
+                <div class="step-progress-bar__step" style="order: 1;">
+                  <div class="step-progress-bar__label">
+                                  2
+                                <span class="step-progress-bar__text">
+                                  . ที่อยู่ปัจจุบัน
+                                  </span>
+                                </  div>
+                          </di      v>
+                <div
+                  class="step-progress-bar__step --current"
+                                style="order: 0;"
+                            >
+                              <div class="step-progress-bar__label">
+                                  1
+                                    <span class="step-progress-bar__text">. ข้อมูลส่วนตัว</span>
+                       </           div>
+                            </  div>
+                        </  div>
+                        <h3 class="oa-sign-up-form-layout__title">ข้อมูลส่วนตัว</h3>
+            </          header>
+                        <form
+                        class="oa-form --extra-wide"
+                      action="#"
+                      id="sign-up-personal-details-form"
+            >          <divsection class="oa-sign-up-form-section">>
+                              <h header> iv class="oa-sign-up-personal-deta เลขที่บัตร />ประชาชน : 1-2345-67890-12-3
+                            <div <img   class="oa-image oa-sign-up-personal-details   data-src="/static/images/up />load-id-card-selfie.svg"
+                            />
+                          <img
+                            class="oa-image oa-sign-up-personal-details-form__photo"
+                              data-src="/static/images/upload-id-card.svg"
+                                alt="upload-id-card"
+                            />
+                            <button
+                                type="button"
+                                class="oa-button btn btn-lg --secondary --auto --small oa-sign-up-personal-details-form__reupload-button"
+                                >
+                                    <span class="oa-icon --camera oa-button__icon"></span>
+                                    <input tton>  n>  class="oa-sign-up-form-sectio r class="oa-sign-up-form-section__header"> />
+                  <h            <p class="oa-sign-up-form-section__description">
+                                  กรุณากรอกข้อมูลกรอกใน (*) ให้ครบทุกช่องและครบถ้วน
+                  </                p>
+                </              header>
+                <d              <buttonlass="oa-row o<div class="oa-input-group --inline-desktop --inline">
+                    <div class="oa-input oa-input-group__input">
+                      <label class="oa-input__label" for="first-name">
+                                    <small>ชื่อ (ภาษาไทย)*</small>
+                                  </label>
+                                    <input
+                        type="text"
+                        id="first-name"
+                        name="first-name"
+                        placeholder="ชื่อ (ภาษาไทย)"
+                        class="oa-input__input input-lg form-control --undefined"
+                                  />
+                              </div>
+                            <p class="oa-message --error oa-input-group__error-message">
+                            <small id="first-name-error"></small>
+                        </p>
+                      </div>
+                    <div class="oa-input-group --inline-desktop --inline">
+                    <div class="oa-input oa-input-group__input">
+                              <small>นามสกุล (ภาษาไทย)*</small>                 </label>                 <input                    type="text"
+                              name="last-name"                   placeholder="นามสกุล (ภาษาไทย)"                   class                  />
+                    </div>
+                    <p class="oa-message --error oa-input-group__error-message">
+                      <small id="last-name-error"></small>
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="oa-row oa-sign-up-personal-details-form__general-info-2"
+                >
+                  <div class="oa-input-group --inline-desktop --inline">
+                    <div class="oa-input oa-input-group__input">
+                      <label class="oa-input__label" for="mobile">
+                        <small>เบอร์โทรศัพท์</small>
+                      </label>
+                      <input
+                        type="text"
+                        id="mobile"
+                        name="mobile"
+                        placeholder="ตัวอย่าง: 0812223333"
+       
+               class="oa-input__input input-lg form-control --undefined"
+                           </div>
+                    <p class="oa-message --error oa-input-group__error-message">
+                      <small id="mobile-error"></small>
+                    </p>
+                  </div>
+                  <div class="oa-input-group --inline-desktop --inline">
+                    <div class="oa-input oa-input-group__input">
+                      <label class="oa-input__label" for="email">
+                        <small>อีเมล</small>
+                      </label>
+                      <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="customeramway@gmail.com"
+                        disabled=""
+                        class="oa-input__input input-lg form-control --undefined"
+                      />
+                    </div>
+                    <p class="oa-message --error oa-input-group__error-message">
+                      <small id="email-error"></small>
+                    </p>
+                  </div>
+                </div>
+                <h6>เพศ</h6>
+                <div class="oa-row oa-sign-up-personal-details-form__gender">
+                  <div class="oa-option-button">
+                    <input
+                      type="radio"
+                      name="gender"
+                      id="male"
+                      class="oa-option-button__input"
+                      readonly=""
+                      checked=""
+                    />
+                    <label for="male" class="oa-option-button__label">
+                      <span>ชาย</span>
+                    </label>
+                  </div>
+                  <div class="oa-option-button">
+                    <input
+                      type="radio"
+                      name="gender"
+                      id="female"
+                      class="oa-option-button__input"
+                      readonly=""
+                    />
+                    <label for="female" class="oa-option-button__label">
+                      <span>หญิง</span>
+                    </label>
+                  </div>
+                  <p class="oa-message --error">
+                    <small id="gender-error"></small>
+                  </p>
+                </div>
+                <h6>วัน เดือน ปีเกิด</h6>
+                <div class="oa-row oa-sign-up-personal-details-form__birthday">
+                  <div class="oa-dropdown dropdown">
+                    <small class="oa-dropdown__label">วัน</small>
+                    <button
+                      id="day"
+                      type="button"
+                      class="oa-dropdown__button"
+                      data-placeholder="วัน"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <div class="oa-dropdown__button-text">วัน</div>
+                      <span
+                        class="oa-icon --arrow-down oa-dropdown__icon"
+                      ></span>
+                    </button>
+                    <ul
+                      class="oa-dropdown__menu dropdown-menu"
+                      aria-labelledby="day"
+                    >
+                      <li data-value="01" class="oa-dropdown__option">01</li>
+                      <li data-value="02" class="oa-dropdown__option">02</li>
+                      <li data-value="03" class="oa-dropdown__option">03</li>
+                      <li data-value="04" class="oa-dropdown__option">04</li>
+                      <li data-value="05" class="oa-dropdown__option">05</li>
+                      <li data-value="06" class="oa-dropdown__option">06</li>
+                      <li data-value="07" class="oa-dropdown__option">07</li>
+                      <li data-value="08" class="oa-dropdown__option">08</li>
+                      <li data-value="09" class="oa-dropdown__option">09</li>
+                      <li data-value="10" class="oa-dropdown__option">10</li>
+                      <li data-value="11" class="oa-dropdown__option">11</li>
+                      <li data-value="12" class="oa-dropdown__option">12</li>
+                      <li data-value="13" class="oa-dropdown__option">13</li>
+                      <li data-value="14" class="oa-dropdown__option">14</li>
+                      <li data-value="15" class="oa-dropdown__option">15</li>
+                      <li data-value="16" class="oa-dropdown__option">16</li>
+                      <li data-value="17" class="oa-dropdown__option">17</li>
+                      <li data-value="18" class="oa-dropdown__option">18</li>
+                      <li data-value="19" class="oa-dropdown__option">19</li>
+                      <li data-value="20" class="oa-dropdown__option">20</li>
+                      <li data-value="21" class="oa-dropdown__option">21</li>
+                      <li data-value="22" class="oa-dropdown__option">22</li>
+                      <li data-value="23" class="oa-dropdown__option">23</li>
+                      <li data-value="24" class="oa-dropdown__option">24</li>
+                      <li data-value="25" class="oa-dropdown__option">25</li>
+                      <li data-value="26" class="oa-dropdown__option">26</li>
+                      <li data-value="27" class="oa-dropdown__option">27</li>
+                      <li data-value="28" class="oa-dropdown__option">28</li>
+                      <li data-value="29" class="oa-dropdown__option">29</li>
+                      <li data-value="30" class="oa-dropdown__option">30</li>
+                      <li data-value="31" class="oa-dropdown__option">31</li>
+                    </ul>
+                  </div>
+                  <div class="oa-dropdown dropdown">
+                    <small class="oa-dropdown__label">เดือน</small>
+                    <button
+                      id="month"
+                      type="button"
+                      class="oa-dropdown__button"
+                      data-placeholder="เดือน"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <div class="oa-dropdown__button-text">เดือน</div>
+                      <span
+                        class="oa-icon --arrow-down oa-dropdown__icon"
+                      ></span>
+                    </button>
+                    <ul
+                      class="oa-dropdown__menu dropdown-menu"
+                      aria-labelledby="month"
+                    >
+                      <li data-value="01" class="oa-dropdown__option">
+                        มกราคม
+                      </li>
+                      <li data-value="02" class="oa-dropdown__option">
+                        กุมภาพันธ์
+                      </li>
+                      <li data-value="03" class="oa-dropdown__option">
+                        มีนาคม
+                      </li>
+                      <li data-value="04" class="oa-dropdown__option">
+                        เมษายน
+                      </li>
+                      <li data-value="05" class="oa-dropdown__option">
+                        พฤษภาคม
+                      </li>
+                      <li data-value="06" class="oa-dropdown__option">
+                        มิถุนายน
+                      </li>
+                      <li data-value="07" class="oa-dropdown__option">
+                        กรกฎาคม
+                      </li>
+                      <li data-value="08" class="oa-dropdown__option">
+                        สิงหาคม
+                      </li>
+                      <li data-value="09" class="oa-dropdown__option">
+                        กันยายน
+                      </li>
+                      <li data-value="10" class="oa-dropdown__option">
+                        ตุลาคม
+                      </li>
+                      <li data-value="11" class="oa-dropdown__option">
+                        พฤศจิกายน
+                      </li>
+                      <li data-value="12" class="oa-dropdown__option">
+                        ธันวาคม
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="oa-dropdown dropdown">
+                    <small class="oa-dropdown__label">ปี</small>
+                    <button
+                      id="year"
+                      type="button"
+                      class="oa-dropdown__button"
+                      data-placeholder="ปี"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <div class="oa-dropdown__button-text">ปี</div>
+                      <span
+                        class="oa-icon --arrow-down oa-dropdown__icon"
+                      ></span>
+                    </button>
+                    <ul
+                      class="oa-dropdown__menu dropdown-menu"
+                      aria-labelledby="year"
+                    ></ul>
+                  </div>
+                </div>
+                <input name="birthday" id="birthday" readonly="" />
+                <p
+                  class="oa-message --error oa-sign-up-personal-details-form__birthday-error"
+                >
+                  <small id="birthday-error"></small>
+                </p>
+              </section>
+              <div class="oa-row">
+                <button
+                  type="submit"
+                  class="oa-button btn btn-lg --primary --narrow --regular --inline"
+                >
+                  <span>ขั้นตอนต่อไป</span>
+                </button>
+              </div>
+            </form>
+          </main>
+        </div>
+        <footer class="mz-footer">Footer</footer>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/v2/Common/js/global.js"></script>
+    <script src="/v1/Common/js/Dropdown.js"></script>
+    <script src="/v1/Common/js/image.js"></script>
+    <script src="/lib/js/validator.min.js"></script>
+    <script src="/lib/js/jquery.validate.min.js"></script>
+    <script src="/v2/Common/js/formValidationDefaults.js"></script>
+    <script src="/moment"></script>
+    <script src="/v1/SignUp/js/SignUpPersonalDetailsForm.js"></script>
+    <script src="/v2/Common/js/Input.js"></script>
+    <script src="/lib/js/bodyScrollLock.min.js"></script>
+    <script src="/v2/Common/js/Dropdown.js"></script>
+    <script src="/v2/Common/js/SearchableDropdown.js"></script>
+    <script src="/v1/Header/js/PickupAddressModal.js"></script>
+    <script src="/v1/Search/js/SearchModal.js"></script>
+    <script src="/v1/Header/js/UserMenu.js"></script>
+    <script src="/v1/Header/js/ProductMenu.js"></script>
+    <script src="/v2/Common/js/DimLayer.js"></script>
+    <script src="/v2/Common/js/ToggleButton.js"></script>
+    <script src="/v1/Header/js/GlobalDeliveryMethods.js"></script>
+    <script src="/v1/Header/js/LanguageSwitcher.js"></script>
+    <script src="/v2/Layout/js/MainLayout.js"></script>
+  </body>
+</html>

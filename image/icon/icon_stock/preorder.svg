@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Group_5440" data-name="Group 5440" transform="translate(-767 -134)">
+    <g id="Group_5438" data-name="Group 5438" transform="translate(766.5 138)">
+      <g id="Group_4993" data-name="Group 4993">
+        <circle id="Ellipse_365" data-name="Ellipse 365" cx="16" cy="16" r="16" transform="translate(0.5 -4)" fill="#fbbf46"/>
+      </g>
+    </g>
+    <g id="Icon_Status_Calendar" data-name="Icon / Status / Calendar" transform="translate(775 142)">
+      <g id="calendar_2_" data-name="calendar (2)" transform="translate(0)">
+        <path id="Shape" d="M14,14H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H14a2,2,0,0,1,2,2V12A2,2,0,0,1,14,14ZM1.333,4.693V12A.668.668,0,0,0,2,12.667H14A.668.668,0,0,0,14.667,12V4.693Z" transform="translate(0 2)" fill="#fef4e0"/>
+        <g id="Group" transform="translate(2.666)">
+          <path id="Path" d="M1.334,0H.667A.667.667,0,0,0,0,.667V3.334A.667.667,0,0,0,.667,4h.667A.667.667,0,0,0,2,3.334V.667A.667.667,0,0,0,1.334,0Z" transform="translate(0)" fill="#d99913"/>
+          <path id="Path-2" data-name="Path" d="M1.334,0H.667A.667.667,0,0,0,0,.667V3.334A.667.667,0,0,0,.667,4h.667A.667.667,0,0,0,2,3.333V.667A.668.668,0,0,0,1.334,0Z" transform="translate(8.667)" fill="#d99913"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Email Order</title>
+    <!-- do not copy this  -->
+    <!-- For FireBase Demo -->
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.21.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.21.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-performance.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <!-- do not copy above -->
+</head>
+
+<body>
+    <div style="margin:0 auto;padding:0px" bgcolor="#f2f2f2">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" role="presentation">
+            <tbody>
+                <tr>
+                    <td align="center" valign="middle" bgcolor="#f2f2f2">
+                        <table border="0" cellpadding="0" cellspacing="0" width="640" align="center" role="presentation" style="min-width:320px;max-width:640px">
+                            <tbody>
+                                <tr>
+                                    <td align="center" valign="middle" bgcolor="#003087" style="background-color:#FAFAFA">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="min-width:320px;background-color:#FAFAFA" role="presentation" bgcolor="#FAFAFA">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" valign="middle" style="color:rgb(255,255,255);background-color:#FAFAFA" bgcolor="#FAFAFA">
+                                                        <table border="0" cellpadding="0" cellspacing="0" align="center" role="presentation" bgcolor="#003087" style="background-color:#FAFAFA">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="center" valign="middle" height="70" style="vertical-align:middle;color:rgb(255,255,255);background-color:#FAFAFA" bgcolor="#FAFAFA">
+                                                                        <a href="http://amway.co.th/" style="text-decoration:none;color:rgb(255,255,255)" target="_blank" data-saferedirecturl="http://amway.co.th/">
+                                                                            <img src="https://media.amway.id/sys-master/images/hee/h5d/9059846422558/email-template-order-header.png" alt="AmwayTH" title="AmwayTH" height="25" border="0" style="display:block;font-family:'pp-sans-big-medium',Tahoma,Arial,sans-serif;font-size:32px;color:#ffffff">
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" valign="middle" bgcolor="#ffffff" style="padding-bottom:30px">
+                                        <table width="640" border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:640px" role="presentation">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" valign="middle" style="padding:0">
+                                                        <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" role="presentation">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="center" valign="middle" style="padding:30px 60px 0 60px">
+                                                                        <img src="https://media.amway.id/sys-master/images/h9f/h4f/9059846881310/email-template-content-email.png" alt="AmwayTH" title="AmwayTH" height="140" border="0" style="display:block;font-family:'pp-sans-big-medium',Tahoma,Arial,sans-serif;font-size:32px;color:#ffffff">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" valign="top" style="padding:20px 0px 0px 0px">
+                                                                        <p style="text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:19px;line-height:1.3;color:#2c2e2f;font-weight:bold;">
+                                                                            คำสั่งซื้อของคุณได้รับการบันทึกแล้ว รอการชำระเงิน
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" valign="top" style="padding:0px 0px 0px 0px">
+                                                                        <p style="text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height: 1;color:#2c2e2f;margin-top: 1px;">
+                                                                            คุณสมชาย รักแอมเวย์ และ คุณสมหญิง รักแอมเวย์
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle" style="padding:0px 60px 0 60px">
+                                                                        <p style="margin:0px;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:22px;color:#2c2e2f;">
+                                                                            ขอบคุณที่เลือกช้อปกับแอมเวย์ คำสั่งซื้อของคุณได้ถูกบันทึกเรียบร้อยแล้ว กรุณาชำระเงินตามช่องทางที่คุณเลือกภายใน
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle" style="padding:15px 60px 0 60px">
+                                                                        <span style="margin:0px;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:22px;color:#6c7378">วันที่</span>
+                                                                        <span style="text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size: 18px;line-height:1.3;color:#2c2e2f;">
+                                                                            28 ก.พ. 2564
+                                                                        </span>
+                                                                        <span style="margin:0px;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:22px;color:#6c7378">
+                                                                            เวลา
+                                                                        </span>
+                                                                        <span style="text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size: 18px;line-height:1.3;color:#2c2e2f;">
+                                                                            23:00 น.
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle" style="padding:15px 60px 0 60px">
+                                                                        <img src="https://media.amway.id/sys-master/images/hda/h12/9059850158110/mockup-email-qrCode.png" alt="QR" title="AmwayTH" height="140" border="0" style="display:block;font-family:'pp-sans-big-medium',Tahoma,Arial,sans-serif;font-size:32px;color:#ffffff">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" style="padding-top:0px">
+                                                                        <table width="100%" align="center" cellspacing="0" cellpadding="0" border="0" role="presentation" style="vertical-align:top">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center" valign="middle" style="padding:0px 60px 0 60px">
+                                                                                        <img src="https://media.amway.id/sys-master/images/he2/h04/9059850584094/email-mockup-Barcode.png" alt="AmwayTH" title="AmwayTH" width="100%" border="0" style="display:block;font-family:'pp-sans-big-medium',Tahoma,Arial,sans-serif;font-size:32px;color:#ffffff">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" style="padding-top:0px">
+                                                                        <table width="50%" align="center" cellspacing="0" cellpadding="0" border="0" role="presentation" style="vertical-align:top">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left" valign="middle" width="60%" style="padding: 15px 0px 0 0px;">
+                                                                                        <span style="margin:0px;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:22px;color:#2c2e2f;">
+                                                                                            หมายเลขคำสั่งซื้อ 
+                                                                                        </span>
+                                                                                        <span style="text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:1.3;color:#2c2e2f;font-weight:600;">
+                                                                                            (Ref 1)
+                                                                                        </span>
+                                                                                    </td>
+                                                                                    <td align="right" valign="middle" width="40%" style="padding: 15px 0px 0 0px;">
+                                                                                        <span style="text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:1.3;color:#2c2e2f;font-weight:bold;">
+                                                                                            936612837
+                                                                                        </span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" valign="middle" width="60%" style="padding: 15px 0px 0 0px;">
+                                                                                        <span style="margin:0px;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:22px;color:#2c2e2f;">
+                                                                                            รหัสนักธุรกิจ 
+                                                                                        </span>
+                                                                                        <span style="text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:1.3;color:#2c2e2f;font-weight:600;">
+                                                                                            (Ref 2)
+                                                                                        </span>
+                                                                                    </td>
+                                                                                    <td align="right" valign="middle" width="40%" style="padding: 15px 0px 0 0px;">
+                                                                                        <span style="text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:1.3;color:#2c2e2f;font-weight:bold;">
+                                                                                            1444200
+                                                                                        </span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" valign="middle" width="60%" style="padding: 15px 0px 0 0px;">
+                                                                                        <span style="margin:0px;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:22px;color:#2c2e2f;">
+                                                                                            จำนวนเงินที่ชำระ
+                                                                                        </span>
+
+                                                                                    </td>
+                                                                                    <td align="right" valign="middle" width="40%" style="padding: 15px 0px 0 0px;">
+                                                                                        <span style="text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:1.3;color:#2c2e2f;font-weight:bold;">
+                                                                                            ฿ 289,563.00
+                                                                                        </span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                        <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" role="presentation">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center" valign="middle" style="padding:20px 100px 0 100px">
+                                                                                        <p style="margin:0px;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:22px;color:#2c2e2f">
+                                                                                            คุณสามารถชำระเงินด้วยการสแกน คิวอาร์ หรือ บาร์โค้ด ผ่านแอปพลิเคชัน หรือ เอทีเอ็มของธนาคารที่คุณเลือก
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="center" valign="middle" style="padding:20px 60px 0 60px">
+                                                                                        <p style="margin:0px;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:22px;color:#9EA0A3">
+                                                                                            หรือใส่หมายเลขอ้างอิง Ref1, Ref2 และจำนวนเงินให้ถูกต้อง เพื่อดำเนินการชำระเงิน หรือ กรณีที่ธนาคารไม่มี Ref2 ให้ใส่ Ref1 และจำนวนเงินให้ถูกต้อง
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="center" valign="middle" style="padding:20px 60px 0 60px">
+                                                                                        <p style="margin:0px;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:22px;color:#9EA0A3">
+                                                                                            หากการชำระเงินของคุณเกินกำหนดเวลาดังกล่าว หรือใส่ข้อมูลไม่ถูกต้อง ทางบริษัทขอสงวนสิทธิ์ในการยกเลิกรายการสั่งซื้อของคุณโดยอัตโนมัติ
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="center" valign="middle" style="padding:20px 140px 0 140px">
+                                                                                        <p style="margin:0px;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:22px;color:#9EA0A3">
+                                                                                            คุณสามารถดูรายละเอียดเพิ่มเติมของการสั่งซื้อนี้ หรือเปลี่ยนวิธีการชำระเงิน ได้ที่นี่
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="center" valign="middle" style="padding:20px 100px 0 100px">
+                                                                                        <table border="0" cellpadding="0" cellspacing="0" align="center" width="60%" role="presentation">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td align="center" valign="middle" style="padding: 20px 0 0 0;">
+                                                                                                        <a href="http://amway.co.th/" style="text-decoration:none;display:block;font-family:'pp-sans-big-medium',Tahoma,Arial,sans-serif;font-size:14px;color:#2C2C2C;border: 2px solid #2c2c2c;border-radius:25px;padding: 10px 10px 10px 10px;" target="_blank" data-saferedirecturl="http://amway.co.th/">
+                                                                                                            ดูรายละเอียดคำสั่งซื้อนี้
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="center" valign="middle" style="padding:20px 100px 0 100px">
+                                                                                        <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" role="presentation">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td align="center" valign="middle" style="padding: 20px 0 0 0;">
+                                                                                                        <span style="font-size: 14px;"> ตรวจสอบสถานะการจ่ายเงินได้ที่ <a href="http://amway.co.th/" style="font-family:'pp-sans-big-medium',Tahoma,Arial,sans-serif;font-size:14px;"
+                                                                                                        target="_blank" data-saferedirecturl="http://amway.co.th/">
+                                                                                                        ประวัติการสั่งซื้อ
+                                                                                                    </a>หลังจากชำระแล้ว 30 นาที</span>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="middle" bgcolor="#ffffff" style="background-color:#ffffff">
+                                        <table width="560" border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:610px" role="presentation">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" valign="middle" style="padding:12px 20px 0 20px;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" role="presentation">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" valign="top" width="50" style="max-width:50px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" align="left" style="max-width:50px" role="presentation">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center" valign="top">
+                                                                                        <table cellpadding="0" cellspacing="0" border="0" align="center" width="100%" role="presentation">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td align="left" valign="top">
+                                                                                                        <img src="https://media.amway.id/sys-master/images/h41/hbe/9060039163934/e-truck-blue-icon.svg" alt="1" width="30" height="30" border="0" style="display:block;text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:12px;color:#000000"
+                                                                                                            title="1" class="CToWUd">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td align="center" valign="top">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" align="left" style="max-width:540px" role="presentation">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left" valign="top" style="padding:3px 0px 0px 0px">
+                                                                                        <b><p style="margin:0px;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:1.5;color:#2c2e2f;">จัดส่งที่</p></b>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" valign="middle" style="padding:0px 0px 0px 0px;background-color:#ffffff" bgcolor="#ffffff">
+                                        <table width="560" border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:560px" role="presentation">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" valign="middle" style="padding:10px 20px 0px 20px">
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" role="presentation">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="center" valign="middle" style="padding:0px 0px 0px 0px">
+                                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">
+                                                                            <span>123 ลาดพร้าว 101 แขวงบางกะปิ เขตห้วยขวาง กรุงเทพมหานคร 10240</span>
+                                                                        </p>
+                                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">
+                                                                            <span>โทร. 0882349087</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="middle" bgcolor="#ffffff" style="background-color:#ffffff">
+                                        <table width="560" border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:610px" role="presentation">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" valign="middle" style="padding:22px 20px 0 20px;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" role="presentation">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" valign="top" width="50" style="max-width:50px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" align="left" style="max-width:50px" role="presentation">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center" valign="top">
+                                                                                        <table cellpadding="0" cellspacing="0" border="0" align="center" width="100%" role="presentation">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td align="left" valign="top">
+                                                                                                        <img src="https://media.amway.id/sys-master/images/h17/h6f/9060038901790/shopping-bag.svg" alt="1" width="30" height="30" border="0" style="display:block;text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:12px;color:#000000"
+                                                                                                            title="1" class="CToWUd">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td align="center" valign="top">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" align="left" style="max-width:540px" role="presentation">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left" valign="top" style="padding:3px 0px 0px 0px">
+                                                                                        <b><p style="margin:0px;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:14px;line-height:1.5;color:#2c2e2f;">รายการสินค้า</p></b>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="middle" bgcolor="#ffffff" style="background-color:#ffffff">
+                                        <table width="560" border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:610px;padding: 20px 40px 10px 40px;border-bottom: 1px solid #d3d7de;" role="presentation">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <img src="https://media.amway.co.th/sys-master/images/h44/ha1/8868039196702/HL_2_120539TH_amway-WF_Product_588Wx588H" alt="1" width="64" height="64" border="0" style="display:block;text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:12px;color:#000000"
+                                                            title="1" class="CToWUd">
+                                                    </td>
+                                                    <td align="left" valign="top" style="max-width:210px;">
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:10px;line-height:1.5;color:#9EA0A3;text-align:left;">รหัส#0102345</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">เครื่องกรองอากาศ แอทโมสเฟียร์ สกาย</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:10px;line-height:1.5;color:#9EA0A3;text-align:left;">สินค้าผ่อนชำระ x 4 เดือน</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">1 x ฿ 45,920</p>
+                                                    </td>
+                                                    <td align="right" valign="bottom">
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;"> <b><span> ฿ 45,920</span></b></p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="middle" bgcolor="#ffffff" style="background-color:#ffffff">
+                                        <table width="560" border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:610px;padding: 20px 40px 10px 40px;border-bottom: 1px solid #d3d7de;" role="presentation">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <img src="https://media.amway.co.th/sys-master/images/h2b/h2c/8867910320158/BT_3_115399D_Product_588Wx588H" alt="1" width="64" height="64" border="0" style="display:block;text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:12px;color:#000000"
+                                                            title="1" class="CToWUd">
+                                                    </td>
+                                                    <td align="left" valign="top" style="max-width:210px;">
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:10px;line-height:1.5;color:#9EA0A3;text-align:left;">รหัส#0102345</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">อาร์ทิสทรี ซิกเนเจอร์ คัลเลอร์ เชียร์ สีเรดคิส</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:10px;line-height:1.5;color:#9EA0A3;text-align:left;"> &ThinSpace; </p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">1 x ฿ 1,160</p>
+                                                    </td>
+                                                    <td align="right" valign="bottom">
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;"> <b><span> ฿ 1,160</span></b></p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="middle" bgcolor="#ffffff" style="background-color:#ffffff">
+                                        <table width="560" border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:610px;padding: 20px 40px 10px 40px;border-bottom: 1px solid #d3d7de;" role="presentation">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <img src="https://media.amway.co.th/sys-master/images/h18/he1/8920001871902/NU_1_291527_1_Product_245Wx245H" alt="1" width="64" height="64" border="0" style="display:block;text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:12px;color:#000000"
+                                                            title="1" class="CToWUd">
+                                                    </td>
+                                                    <td align="left" valign="top" style="max-width:210px;">
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:10px;line-height:1.5;color:#9EA0A3;text-align:left;">รหัส#0102345</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:10px;line-height:1.5;color:#9EA0A3;text-align:left;">สินค้า SOP ผ่อนชำระ x 4 เดือน</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">x 5 บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">x 3 นิวทริไลท์ ออล แพลนท์ โปรตีน นิวทริไลท์</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">x 1 นิวทริไลท์ ดับเบิ้ล เอ็กซ์ ไฟโตเบลนด์</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">x 1 อุปกรณ์เสริมบอดี้คีย์ 1 ชุด มีอุปกรณ์ 2 ชิ้น</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">x 1 แก้วเชคบอดี้คีย์ (Bodykey Blender Bottle Shaker) ขนาด 800 มล. 1 ใบ</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">&ThinSpace;</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">1 x ฿ 45,920</p>
+                                                    </td>
+                                                    <td align="right" valign="bottom">
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;"> <b><span> ฿ 45,920</span></b></p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="middle" bgcolor="#ffffff" style="background-color:#ffffff">
+                                        <table width="560" border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:610px;padding: 20px 40px 10px 40px;" role="presentation">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <img src="https://media.amway.co.th/sys-master/images/h07/h49/8867778560030/NU_3_102567TH_Product_588Wx588H" alt="1" width="64" height="64" border="0" style="display:block;text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:12px;color:#000000"
+                                                            title="1" class="CToWUd">
+                                                    </td>
+                                                    <td align="left" valign="top" style="max-width:210px;">
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:10px;line-height:1.5;color:#9EA0A3;text-align:left;">รหัส#0102345</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">นิวทริไลท์เครื่องหมายการค้า ซีแอลเอ 500 จากน้ำมันดอกคำฝอยบรรจุ 180 แคปซูล</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:10px;line-height:1.5;color:#9EA0A3;text-align:left;">สินค้าผ่อนชำระ x 4 เดือน</p>
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;">2 x ฿ 1,070</p>
+                                                    </td>
+                                                    <td align="right" valign="bottom">
+                                                        <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size:12px;line-height:1.5;color:#2c2e2f;text-align:left;"> <b><span> ฿ 2,140</span></b></p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="middle" style="padding:10px 0px 0px 0px;background-color:#ffffff" bgcolor="#f5f7fa">
+                                        <table width="620" border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:620px;background-color:inherit" role="presentation">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" valign="middle">
+                                                        <a href="https://www.amway.co.th/promotion-launch" title="promotion" target="_blank" data-saferedirecturl="https://www.amway.co.th/promotion-launch">
+                                                            <img width="305" height="103" src="https://media.amway.id/sys-master/images/hb6/hee/9060535500830/email-promotion-link.png" alt="promotion-link">
+                                                        </a>
+                                                    </td>
+                                                    <td align="center" valign="middle">
+                                                        <a href="https://www.amway.co.th/Categories/%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B8%A0%E0%B8%B2%E0%B8%9E/c/nutritionandwellness" title="health-link" target="_blank" data-saferedirecturl="https://www.amway.co.th/Categories/%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B8%A0%E0%B8%B2%E0%B8%9E/c/nutritionandwellness">
+                                                            <img width="305" height="103" src="https://media.amway.id/sys-master/images/hf9/hb7/9060536057886/email-health-link.png" alt="health-link">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" valign="middle">
+                                                        <a href="https://www.amway.co.th/Categories/%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%87%E0%B8%B2%E0%B8%A1/c/beauty" title="beauty-link" target="_blank" data-saferedirecturl="https://www.amway.co.th/Categories/%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%87%E0%B8%B2%E0%B8%A1/c/beauty">
+                                                            <img width="305" height="103" src="https://media.amway.id/sys-master/images/h6a/had/9060536385566/email-beauty-link.png" alt="beauty-link">
+                                                        </a>
+                                                    </td>
+                                                    <td align="center" valign="middle">
+                                                        <a href="https://www.amway.co.th/Categories/%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%99%E0%B8%A3%E0%B9%88%E0%B8%B2%E0%B8%87/c/personalcare" title="body-link" target="_blank" data-saferedirecturl="https://www.amway.co.th/Categories/%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%99%E0%B8%A3%E0%B9%88%E0%B8%B2%E0%B8%87/c/personalcare">
+                                                            <img width="305" height="103" src="https://media.amway.id/sys-master/images/h0c/h99/9060536975390/email-body-link.png" alt="body-link">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <table border="0" cellpadding="0" cellspacing="0" align="center" width="260" role="presentation" style="padding-top: 20px;padding-bottom:20px;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="center" valign="middle">
+                                                                    <a href="https://www.facebook.com/amwaythailand">
+                                                                        <img src="https://media.amway.id/sys-master/images/h19/h41/9060537401374/fb%402x.png" alt="facebook" width="40" height="40" border="0" style="display:block;text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:12px;color:#000000"></a>
+                                                                </td>
+
+                                                                <td align="center" valign="middle">
+                                                                    <a href="https://line.me/R/ti/p/%40amwaythailand">
+                                                                        <img src="https://media.amway.id/sys-master/images/h94/h2c/9060538548254/line%402x.png" alt="line" width="40" height="40" border="0" style="display:block;text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:12px;color:#000000"></a>
+                                                                </td>
+                                                                <td align="center" valign="middle">
+                                                                    <a href="https://twitter.com/AmwayTHofficial">
+                                                                        <img src="https://media.amway.id/sys-master/images/h46/h88/9060539105310/twt%402x.png" alt="twitter" width="40" height="40" border="0" style="display:block;text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:12px;color:#000000"></a>
+                                                                </td>
+                                                                <td align="center" valign="middle">
+                                                                    <a href="https://www.youtube.com/user/AmwayTHofficial">
+                                                                        <img src="https://media.amway.id/sys-master/images/heb/h96/9060539596830/ig%402x.png" alt="youtube" width="40" height="40" border="0" style="display:block;text-align:center;font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:12px;color:#000000"></a>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="4">
+                                                                    <p style="margin:0px;font-family:'pp-sans-big-light',Tahoma,Arial,sans-serif;font-weight:normal;font-size: 9px;line-height:1.5;color:#9EA0A3;text-align: center;padding-top: 10px;">
+                                                                        ***อีเมลฉบับนี้ส่งโดยระบบอัตโนมัติ กรุณาอย่าตอบกลับ***
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="middle" style="padding:0px 0px 0px 0px;background-color:#f5f7fa" bgcolor="#f5f7fa">
+                                        <table width="620" border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:620px;background-color:inherit" role="presentation">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" valign="middle" style="padding:25px 20px 25px 20px">
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" role="presentation">
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td align="center" valign="middle" style="font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:13px;line-height:150%;color:#6c7378;padding-top:20px;">
+                                                                        <a title="นโยบายความเป็นส่วนตัว" href="https://epl.paypal-communication.com/T/v600000177adbb5bddbfff406e96638918/06e064aef93a44480000021ef3a0bccf/06e064ae-f93a-4448-bb4f-c1053b649128?__dU__=v0G4RBKTXg2GtDSXU69hUjn6ZGPAo1dkaY" style="text-decoration:none;color:#6c7378"
+                                                                            target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://epl.paypal-communication.com/T/v600000177adbb5bddbfff406e96638918/06e064aef93a44480000021ef3a0bccf/06e064ae-f93a-4448-bb4f-c1053b649128?__dU__%3Dv0G4RBKTXg2GtDSXU69hUjn6ZGPAo1dkaY&amp;source=gmail&amp;ust=1613708120641000&amp;usg=AFQjCNEyqBeqIiY_2qRwO9eegnk4HzFUAw">
+                                                                            <strong style="font-weight:bold">นโยบายความเป็นส่วนตัว</strong></a> |
+                                                                        <a title="ข้อตกลงและเงื่อนไขการใช้เว็บไซต์" href="https://epl.paypal-communication.com/T/v600000177adbb5bddbfff406e96638918/06e064aef93a44480000021ef3a0bcd0/06e064ae-f93a-4448-bb4f-c1053b649128?__dU__=v0G4RBKTXg2GtDSXU69hUjn6ZGPAo1dkaY" style="text-decoration:none;color:#6c7378"
+                                                                            target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://epl.paypal-communication.com/T/v600000177adbb5bddbfff406e96638918/06e064aef93a44480000021ef3a0bcd0/06e064ae-f93a-4448-bb4f-c1053b649128?__dU__%3Dv0G4RBKTXg2GtDSXU69hUjn6ZGPAo1dkaY&amp;source=gmail&amp;ust=1613708120641000&amp;usg=AFQjCNH3SGV1CPSjM5CA_r8Cwv0wS_Lwtw">
+                                                                            <strong style="font-weight:bold">ข้อตกลงและเงื่อนไขการใช้เว็บไซต์</strong>
+                                                                        </a>
+
+
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle" style="font-family:'pp-sans-small-regular',Tahoma,Arial,sans-serif;font-size:13px;line-height:150%;color:#6c7378;padding-bottom:20px;border-bottom:solid 1px #dddddd;word-break:keep-all">
+                                                                        <p style="line-height: 0.5;"> © สงวนลิขสิทธิ์ 2564 บริษัท แอมเวย์ (ประเทศไทย) จำกัด</p>
+                                                                        <p style="line-height: 0.5;"> Amway Contact Center : <b>0-2725-8000</b> </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img src="https://ci4.googleusercontent.com/proxy/yU7TLeAws7tspPsxS65qfa1ro-TB5irCSt4NBKuLLAWnnJUDCjrQDzhljRPmHlSCacss-nCXpeRqC1VQfgkWdNxzyAeoTGqvfBuDGe-QYkr_HM3ETGt32AidYa2ExuqRmSDdGBLj36owQjVVBA_G4dWLDmHpRX20zJ6cv_o=s0-d-e1-ft#https://epl.paypal-communication.com/O/v600000177adbb5bddbfff406e96638918/06e064aef93a444800004c5a42963aa1"
+    style="display:none;max-height:0px;font-size:0px;overflow:hidden" class="CToWUd"></div>

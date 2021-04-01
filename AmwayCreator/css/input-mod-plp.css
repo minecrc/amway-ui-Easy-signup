@@ -1,0 +1,28 @@
+.amway-input-area.onMD {
+    border-radius: 0.625rem;
+    border: 0.125rem solid #EDEDED;
+    padding: .5rem 1rem;
+}
+
+.amway-input-area.onMD:focus-within,
+.amway-input-area.onMD.active {
+    border: 0.125rem solid #2c2c2c;
+}
+
+.amway-input {
+    height: 2rem;
+}
+
+.amway-textarea.onMD {
+    border-radius: 0.625rem;
+    border: 0.125rem solid #EDEDED;
+}
+
+.amway-textarea.onMD:focus-within,
+.amway-textarea.onMD.active {
+    border: 0.125rem solid #2c2c2c;
+}
+
+.cbw-list-image.active.onMD {
+    border: 0.125rem solid #2c2c2c;
+}

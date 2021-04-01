@@ -1,0 +1,54 @@
+section.detail-sticky {
+    position: relative;
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+.right {
+    width: calc(50% - 0.75rem);
+    float: right;
+    margin-left: 25px;
+    margin-bottom: 10rem;
+}
+
+.left {
+    width: calc(50% - 13rem);
+    float: left;
+}
+
+.left-child {
+    display: block;
+    float: left;
+    width: 35rem;
+    height: 20rem;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 4px;
+    h2 {
+        font-size: 38px;
+    }
+    &.posFix {
+        position: fixed;
+        top: 56px;
+    }
+    &.posAbs {
+        position: absolute;
+        bottom: 56px;
+    }
+}
+
+@media(max-width:1023px) {
+    .right {
+        width: 100%;
+    }
+    .left {
+        width: 100%;
+        .left-child {
+            width: 100%;
+        }
+    }
+}

@@ -17,6 +17,7 @@
     return $('input[name="payment-method"][value="card"]').is(':checked');
   }
 
+
   const useNewCard = () => {
     return (
       isCardMethodSelected() &&

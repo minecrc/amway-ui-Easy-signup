@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+  <g id="Group_8977" data-name="Group 8977" transform="translate(-24 -135.5)">
+    <g id="Group_5920" data-name="Group 5920" transform="translate(24 135.5)">
+      <g id="Group_5438" data-name="Group 5438">
+        <g id="Group_4993" data-name="Group 4993">
+          <circle id="Ellipse_365" data-name="Ellipse 365" cx="6" cy="6" r="6" fill="#fbbf46"/>
+        </g>
+      </g>
+      <g id="Icon_Status_Calendar" data-name="Icon / Status / Calendar" transform="translate(3 3)">
+        <g id="calendar_2_" data-name="calendar (2)">
+          <path id="Shape" d="M5.25,5.25H.75A.751.751,0,0,1,0,4.5V.75A.751.751,0,0,1,.75,0h4.5A.751.751,0,0,1,6,.75V4.5A.751.751,0,0,1,5.25,5.25ZM.5,1.76V4.5a.251.251,0,0,0,.25.25h4.5A.251.251,0,0,0,5.5,4.5V1.76Z" transform="translate(0 0.75)" fill="#fef4e0"/>
+          <g id="Group" transform="translate(1)">
+            <path id="Path" d="M.5,0H.25A.25.25,0,0,0,0,.25v1a.25.25,0,0,0,.25.25H.5a.25.25,0,0,0,.25-.25v-1A.25.25,0,0,0,.5,0Z" transform="translate(0)" fill="#d99913"/>
+            <path id="Path-2" data-name="Path" d="M.5,0H.25A.25.25,0,0,0,0,.25v1a.25.25,0,0,0,.25.25H.5a.25.25,0,0,0,.25-.25v-1A.25.25,0,0,0,.5,0Z" transform="translate(3.25)" fill="#d99913"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

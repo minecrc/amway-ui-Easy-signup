@@ -1,0 +1,130 @@
+@media(min-width:1024px) {
+    .amway-modal-color-content {
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 0;
+        height: 32rem;
+    }
+    .amway-modal-color .aw-product {
+        margin-top: 1rem;
+        width: calc(100%);
+        height: auto;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        background: #FFF;
+        border-bottom: 0.5rem solid #F8F8F8;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .amway-modal-color .aw-header-bar {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        width: calc(100%);
+        margin-top: 0rem;
+        margin-left: 0rem;
+        margin-right: 05rem;
+        height: 4rem;
+        -webkit-box-shadow: 0rem 0rem 0.375rem 0rem rgba(0, 0, 0, 0.10);
+        -moz-box-shadow: 0rem 0rem 0.375rem 0rem rgba(0, 0, 0, 0.10);
+        box-shadow: 0rem 0rem 0.375rem 0rem rgba(0, 0, 0, 0.10);
+    }
+    .select-color {
+        height: 12.5rem;
+        height: calc(100% - 18.05rem);
+        overflow: hidden;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        overflow-y: auto;
+    }
+    .select-color::-webkit-scrollbar {
+        /* width */
+        width: 0.375rem;
+    }
+    .select-color::-webkit-scrollbar-track {
+        /* Track */
+        background: #EDEDED;
+        border-radius: 0.188rem;
+    }
+    .select-color::-webkit-scrollbar-thumb {
+        /* Handle */
+        background: #D5D5D5;
+        border-radius: 0.188rem;
+    }
+    .select-color::-webkit-scrollbar-thumb:hover {
+        /* Handle on hover */
+        background: #D2D2D2;
+    }
+    .amway-modal-color .aw-footer-bar {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: calc(100%);
+        margin-top: 1.875rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        margin-bottom: 0rem;
+        padding-bottom: 1.5rem;
+        -webkit-box-shadow: 0rem 0rem 0.375rem 0rem rgba(0, 0, 0, 0.10);
+        -moz-box-shadow: 0rem 0rem 0.375rem 0rem rgba(0, 0, 0, 0.10);
+        box-shadow: 0rem 0rem 0.375rem 0rem rgba(0, 0, 0, 0.10);
+        background: #FFF;
+        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        z-index: 1;
+    }
+}
+
+@media (max-height: 767px) and (min-width: 1024px) {
+    .amway-modal-color-content {
+        overflow: hidden;
+        overflow-y: auto !important;
+    }
+    .select-color {
+        height: 12.5rem;
+    }
+    .amway-modal-color .aw-footer-bar {
+        margin-top: 0;
+        border-bottom-right-radius: 0rem;
+    }
+    .amway-modal-color .aw-for-scroll {
+        height: auto;
+    }
+    .amway-modal-color .aw-footer-bar {
+        position: relative;
+        margin-bottom: -1.5rem;
+    }
+    .amway-modal-bundle .aw-footer-bar {
+        position: absolute;
+    }
+    .amway-modal-bundle-content .aw-for-scroll {
+        height: 100%;
+    }
+    .amway-modal-bundle-content {
+        overflow: hidden;
+    }
+}
+
+@media (max-height: 525px) and (min-width: 1024px) {
+    .amway-modal-bundle .aw-footer-bar {
+        position: relative;
+    }
+    .amway-modal-bundle-content .aw-for-scroll {
+        height: auto;
+    }
+    .amway-modal-bundle-content {
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .bundle-select-area {
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 12.5rem;
+    }
+}
+
+@media (max-width:1023px) {}

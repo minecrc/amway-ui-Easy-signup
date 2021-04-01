@@ -1,0 +1,93 @@
+.amway-input-error {
+    display: none;
+    color: #D91734;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.amway-input-error.alert_error {
+    display: block;
+}
+
+.amway-input-error.alert_error.has-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.amway-textarea-error {
+    display: none;
+    color: #D91734;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    margin-top: 0.125rem;
+}
+
+.amway-textarea-error.alert_error {
+    display: block;
+}
+
+.amway-upload-error {
+    display: none;
+    color: #D91734;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    margin-top: -0.5rem;
+}
+
+.amway-upload-error.alert_error {
+    display: block;
+}
+
+.input-errorMessage,
+.textarea-errorMessage {
+    border-color: #D91734;
+}
+
+.selectOption-error.checkout-box-selectOption.dd-marke-check .mz-dropdown__button {
+    border-color: #D91734;
+}
+
+.upload-errorMessage {
+    border-color: #D91734;
+}
+
+.digitOtp-error {
+    display: none;
+    color: #D91734;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    margin-top: 0.125rem;
+}
+
+.amway-input-error-text {
+    line-height: 1.25rem;
+}
+
+.digitOtp-error.alert_error {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.digitOtp-errorMessage .checkout-box-otp {
+    border-color: #D91734;
+}
+
+.amway-input-error-btn {
+    width: 6rem;
+    height: 2.25rem;
+    border-radius: 1.125rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,327 @@
+.container-area {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: .7rem;
+    position: relative;
+}
+
+.title-banner-row {
+    width: 100%;
+    text-align: center;
+    margin: .8rem auto 1.2rem auto;
+}
+
+.checkout-login-social-btn.facebook::before {
+    margin-left: -16px;
+}
+
+.checkout-login-social-btn.google::before {
+    margin-left: -8px;
+}
+
+.line-area {
+    text-align: center;
+    width: 100%;
+    max-width: 380px;
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+.registerComplete-bg {
+    background-image: url('../../../image/RC_PageHeader_BG.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    padding-top: 2rem;
+}
+
+.registerComplete-bg .center-img {
+    max-width: 102px;
+    width: 100%;
+    margin: .8rem auto .4rem auto;
+}
+
+.content-block .checkout-login-social-area {
+    padding-top: 1rem;
+}
+
+.center-img img {
+    width: 100%;
+}
+
+.title-banner {
+    color: #38539A;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.name-user {
+    color: #2C2C2C;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: .4rem;
+}
+
+.name-area {
+    margin: 1.2rem auto;
+    text-align: center;
+    width: 100%;
+}
+
+.content-block {
+    text-align: center;
+    width: 100%;
+}
+
+.content-e-kit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.e-kit-block.p-kit {
+    margin-bottom: .7rem;
+}
+
+.content-e-kit .e-kit-block,
+.content-e-kit .promotion-link-block {
+    margin: .5rem;
+}
+
+.promotion-link-block {
+    margin: 0rem auto 1.2rem auto;
+    text-align: center;
+    width: 100%;
+    max-width: 370px;
+}
+
+.e-kit-block {
+    width: 100%;
+}
+
+.e-kit-block img {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.e-kit-block.p-kit img {
+    max-width: 370px;
+    width: 100%;
+}
+
+.e-kit-block .p-kit {
+    max-width: 370px;
+}
+
+.promotion-link-block img {
+    width: 100%;
+}
+
+.static-text {
+    color: #2C2C2C;
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin-bottom: .4rem;
+}
+
+.user-abo-num {
+    color: #2C2C2C;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: .4rem;
+    letter-spacing: .3rem;
+}
+
+.icon-header-area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.center-space {
+    justify-content: space-evenly;
+}
+
+.delivery-address-content {
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.address-content {
+    padding: 15px 15px 15px 40px;
+    font-size: 1rem;
+}
+
+.header-address {
+    margin-left: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #38539a;
+}
+
+.left-side-content {
+    max-width: 750px;
+    width: 100%;
+}
+
+.order-register-detail {
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 570px;
+    width: 100%;
+}
+
+.sub-order-detail {
+    width: 95%;
+    margin-top: 10px;
+    margin: 0 auto;
+    background: #F1F2FF;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 1080px) {
+    .mz-main-layout__content {
+        padding-top: 5rem;
+    }
+}
+
+@media screen and (min-width: 1351px) {
+    .small-screen {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+    .address-block.for-point {
+        margin-top: 2rem;
+    }
+    .order-register-detail::before {
+        background: none;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .title-banner {
+        font-size: 1.2rem;
+    }
+    .address-block.for-point {
+        margin-top: 0rem;
+    }
+    .left-side-content,
+    .order-register-detail {
+        max-width: 100%;
+        width: 100%;
+    }
+    .desktop {
+        display: none;
+    }
+    .small-screen {
+        display: block;
+    }
+    .mz-cart-value-row.mz-order-summary__row,
+    .address-content,
+    .icon-header-area {
+        max-width: 360px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .sub-order-detail {
+        width: 100%;
+        margin-top: 10px;
+        background: #F1F2FF;
+        border-radius: 10px;
+    }
+    .border-mobile {
+        border-bottom: .2rem solid #EDEDED;
+    }
+    .border-mobile {
+        border-bottom: .2rem solid #EDEDED;
+    }
+    .border-top-mobile {
+        border-top: .2rem solid #EDEDED;
+    }
+    .delivery-address-content {
+        padding: 2% 0;
+    }
+    .name-user,
+    .static-text,
+    .user-abo-num {
+        font-size: 1rem;
+    }
+    .line-area {
+        font-size: .7rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .registerComplete-bg {
+        background: url(../../../image/Awaiting-payment-register/register-complete-de-mobile.png);
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+    .mz-main-layout__content {
+        padding-top: 105px;
+    }
+    .checkout-login-social-btn.facebook,
+    .checkout-login-social-btn.line {
+        max-width: 30%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .mz-cart-value-row.mz-order-summary__row,
+    .address-content,
+    .icon-header-area {
+        max-width: 353px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .line-area::before {
+        background: #CACACA;
+        content: '';
+        color: #CACACA;
+        width: 100px;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        height: 1px;
+    }
+    .line-area::after {
+        background: #CACACA;
+        content: '';
+        color: #CACACA;
+        width: 100px;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        height: 1px;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    .mz-main-layout__content {
+        padding-top: 95px;
+    }
+    .mz-cart-value-row.mz-order-summary__row,
+    .address-content,
+    .icon-header-area {
+        max-width: 308px;
+        width: 100%;
+        margin: 0 auto;
+        font-size: .8rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mz-main-layout__content {
+        padding-top: 6rem;
+    }
+}

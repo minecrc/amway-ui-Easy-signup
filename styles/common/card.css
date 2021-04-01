@@ -1,0 +1,273 @@
+.amway-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.has-filter {
+    display: flex;
+}
+
+.amway-card {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(25% - 1.25rem);
+    max-width: calc(25% - 1.25rem);
+    margin: 0.625rem;
+    padding-bottom: 0.625rem;
+    cursor: pointer;
+}
+
+.has-filter .amway-card {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(33.33% - 1.25rem);
+    max-width: calc(33.33% - 1.25rem);
+    margin: 0.625rem;
+    padding-bottom: 0.625rem;
+    cursor: pointer;
+}
+
+.amway-filter-pd {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(25% - 1.25rem);
+    max-width: calc(25% - 1.25rem);
+    width: 100%;
+    margin: 0.625rem;
+    padding-bottom: 0.625rem;
+}
+
+.afpd-main {
+    padding: .5rem 1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.afpd-main-control {
+    width: 1rem;
+    height: 0.125rem;
+    background: #9EA0A3;
+}
+
+.amway-filter-pd {
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(56, 83, 154, 0.16);
+    -moz-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(56, 83, 154, 0.16);
+    box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(56, 83, 154, 0.16);
+    border-radius: .5rem;
+}
+
+@media(max-width:1023px) {
+    .amway-card {
+        -webkit-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(56, 83, 154, 0.16);
+        -moz-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(56, 83, 154, 0.16);
+        box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(56, 83, 154, 0.16);
+        border-radius: .5rem;
+    }
+}
+
+@media(max-width:992px) {
+    .amway-filter-pd {
+        flex-basis: calc(33.33% - 1.25rem);
+        max-width: calc(33.33% - 1.25rem);
+    }
+    .amway-card {
+        flex-basis: calc(33.33% - 1.25rem);
+        max-width: calc(33.33% - 1.25rem);
+    }
+    .has-filter .amway-card {
+        flex-basis: calc(50% - 1.25rem);
+        max-width: calc(50% - 1.25rem);
+    }
+}
+
+@media(max-width:768px) {
+    .amway-filter-pd {
+        flex-basis: calc(50% - 1.25rem);
+        max-width: calc(50% - 1.25rem);
+    }
+    .amway-card {
+        flex-basis: calc(50% - 1.25rem);
+        max-width: calc(50% - 1.25rem);
+    }
+    .has-filter .amway-card {
+        flex-basis: calc(100% - 1.25rem);
+        max-width: calc(100% - 1.25rem);
+    }
+}
+
+.amway-card:hover {
+    -webkit-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(56, 83, 154, 0.16);
+    -moz-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(56, 83, 154, 0.16);
+    box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(56, 83, 154, 0.16);
+    border-radius: .5rem;
+}
+
+.amway-card-container {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+}
+
+.amway-card-box-img {
+    width: calc(100% - 2.5rem);
+    margin-right: 1.25rem;
+    margin-left: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: calc(100% - 2.5rem);
+    position: relative;
+    height: auto;
+}
+
+.amway-card-img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.amway-card-code {
+    color: #9EA0A3;
+    font-weight: 500;
+    font-size: 0.813rem;
+    line-height: 1.313rem;
+}
+
+.amway-card-text {
+    margin-bottom: 1.875rem;
+}
+
+@media(max-width:1023px) {
+    .amway-card-code {
+        /* padding-left: 24px;
+        padding-right: 24px; */
+    }
+    .amway-card-text {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.amway-card-name {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 3rem;
+}
+
+.amway-card-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+@media(max-width:1023px) {
+    .amway-card-bar {
+        align-items: flex-end;
+    }
+}
+
+.amway-card-price {
+    width: calc(50%);
+    font-size: 0.813rem;
+    line-height: 0.813rem;
+    font-weight: 500;
+}
+
+@media(max-width:1023px) {
+    .amway-card-price {
+        width: 5rem;
+    }
+}
+
+.amway-card-member-price {
+    display: flex;
+    align-items: center;
+    color: #2C2C2C;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+@media(max-width:1023px) {
+    .amway-card-member-price {
+        display: block;
+    }
+}
+
+.amway-card-member-price .price {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-left: .5rem;
+}
+
+.amway-card-retail-price {
+    display: flex;
+    align-items: center;
+}
+
+.amway-card-retail-price .price {
+    margin-left: .5rem;
+}
+
+@media(max-width:1023px) {
+    .amway-card-retail-price {
+        justify-content: flex-start;
+        color: #9EA0A3;
+        font-size: 0.813rem;
+        font-weight: 500;
+    }
+    .amway-card-member-price .price {
+        margin-left: 0rem;
+    }
+    .amway-card-retail-price .title {
+        margin-right: 0.25rem;
+    }
+    .amway-card-member-price .price {
+        font-size: 1.125rem;
+        line-height: 1.125rem;
+    }
+}
+
+.amway-card-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    background: #002F5F;
+    color: #FAFAFA;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amway-card-btn:hover {
+    background: #03274C;
+}
+
+.amway-card-btn .icon-cart {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+@media(max-width:1023px) {
+    .amway-card-btn .icon-cart {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+    .row-ten {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

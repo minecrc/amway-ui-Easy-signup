@@ -1,0 +1,4 @@
+<svg id="Icon_Heart" data-name="Icon/Heart" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <rect id="Icon_Heart_background" data-name="Icon/Heart background" width="32" height="32" fill="none"/>
+  <path id="Fill_1" data-name="Fill 1" d="M11.992,21.164a.943.943,0,0,1-.661-.276L1.989,11.544a6.757,6.757,0,1,1,9.555-9.556l.463.463L12.461,2a6.76,6.76,0,1,1,9.555,9.566l-9.362,9.328A.942.942,0,0,1,11.992,21.164ZM6.754,1.881a4.884,4.884,0,0,0-3.443,8.341L11.992,18.9l8.7-8.667a4.887,4.887,0,1,0-6.911-6.911L12.669,4.44a.958.958,0,0,1-1.326,0L10.217,3.316A4.861,4.861,0,0,0,6.754,1.881Z" transform="translate(4 5.5)" fill="#2c2c2c"/>
+</svg>

@@ -1,0 +1,544 @@
+@font-face {
+    font-family: Sukhumvit Tadmai;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../static/fonts/SukhumvitTadmai-Text.eot');
+    src: url('../../static/fonts/SukhumvitTadmai-Text.eot?#iefix') format("embedded-opentype"), url('../../static/fonts/SukhumvitTadmai-Text.woff2') format("woff2"), url('../../static/fonts/SukhumvitTadmai-Text.woff') format("woff")
+}
+
+@font-face {
+    font-family: Sukhumvit Tadmai;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../../static/fonts/SukhumvitTadmai-Medium.eot');
+    src: url('../../static/fonts/SukhumvitTadmai-Medium.eot?#iefix') format("embedded-opentype"), url('../../static/fonts/SukhumvitTadmai-Medium.woff2') format("woff2"), url('../../static/fonts/SukhumvitTadmai-Medium.woff') format("woff"), url('../../static/fonts/SukhumvitTadmai-Medium.otf') format("opentype")
+}
+
+@font-face {
+    font-family: Sukhumvit Tadmai;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../static/fonts/SukhumvitTadmai-Bold.eot');
+    src: url('../../static/fonts/SukhumvitTadmai-Bold.eot?#iefix') format("embedded-opentype"), url('../../static/fonts/SukhumvitTadmai-Bold.woff2') format("woff2"), url('../../static/fonts/SukhumvitTadmai-Bold.woff') format("woff"), url('../../static/fonts/SukhumvitTadmai-Bold.otf') format("opentype")
+}
+
+@font-face {
+    font-family: Sukhumvit Tadmai;
+    font-style: normal;
+    font-weight: 800;
+    src: url('../../static/fonts/SukhumvitTadmai-ExtraBold.eot');
+    src: url('../../static/fonts/SukhumvitTadmai-ExtraBold.eot?#iefix') format("embedded-opentype"), url('../../static/fonts/SukhumvitTadmai-ExtraBold.woff2') format("woff2"), url('../../static/fonts/SukhumvitTadmai-ExtraBold.woff') format("woff"), url('../../static/fonts/SukhumvitTadmai-ExtraBold.otf') format("opentype")
+}
+
+@font-face {
+    font-family: Amway Icon CI;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../static/fonts/amway-icon-ci.eot');
+    src: url('../../static/fonts/amway-icon-ci.eot?#iefix') format("embedded-opentype"), url('../../static/fonts/amway-icon-ci.woff') format("woff"), url('../../static/fonts/amway-icon-ci.ttf') format("truetype"), url('../../static/fonts/amway-icon-ci.svg#amway-icon-ci') format("svg")
+}
+
+@font-face {
+    font-family: Amway Icon;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../static/fonts/amway-icon.eot');
+    src: url('../../static/fonts/amway-icon.eot?#iefix') format("embedded-opentype"), url('../../static/fonts/amway-icon.woff') format("woff"), url('../../static/fonts/amway-icon.ttf') format("truetype"), url('../../static/fonts/amway-icon.svg#amway-icon') format("svg")
+}
+
+@font-face {
+    font-family: "GTWalsheim";
+    src: url("../../static/fonts/gt-walsheim-regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GTWalsheim";
+    src: url("../../static/fonts/gt-walsheim-medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GTWalsheim";
+    src: url("../../static/fonts/gt-walsheim-bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+html {
+    -webkit-overflow-scrolling: touch;
+    height: 100%
+}
+
+#root,
+body {
+    display: flex;
+    width: 100%
+}
+
+#root {
+    flex-direction: column
+}
+
+body {
+    min-height: 100%;
+    color: #2c2c2c;
+    font-family: Sukhumvit Tadmai, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif !important;
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: inherit;
+    line-height: 1.5
+}
+
+h1 {
+    font-size: 36px
+}
+
+h1,
+h2 {
+    font-weight: 700
+}
+
+h2 {
+    font-size: 32px
+}
+
+h3 {
+    font-size: 24px
+}
+
+h3,
+h4 {
+    font-weight: 700
+}
+
+h4 {
+    font-size: 20px
+}
+
+h5 {
+    font-size: 18px
+}
+
+h5,
+h6 {
+    font-weight: 700
+}
+
+h6 {
+    color: #2c2c2c;
+    font-size: 16px
+}
+
+small {
+    font-weight: 500;
+    font-size: 13px;
+    font-weight: 400
+}
+
+a {
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    cursor: pointer
+}
+
+a,
+a:focus,
+a:hover {
+    color: inherit;
+    text-decoration: none
+}
+
+button,
+input {
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: inherit
+}
+
+button:focus,
+button:focus:active {
+    outline: none;
+    box-shadow: inherit
+}
+
+input::placeholder {
+    font-style: inherit;
+    font-weight: 400
+}
+
+label {
+    margin-bottom: 0;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit
+}
+
+p {
+    margin: 0
+}
+
+ul {
+    margin-bottom: 0;
+    padding-inline-start: 0
+}
+
+li {
+    display: block
+}
+
+mz-icon {
+    display: inline-block;
+    flex: none;
+    vertical-align: middle
+}
+
+.mz-icon:before {
+    display: flex;
+    color: inherit;
+    font-family: Amway Icon CI !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal !important;
+    font-variant: normal !important;
+    font-weight: 400 !important;
+    line-height: inherit;
+    text-transform: none !important;
+    speak: none
+}
+
+.mz-icon.--add:before {
+    content: "\61"
+}
+
+.mz-icon.--arrow-down:before {
+    content: "\62"
+}
+
+.mz-icon.--arrow-up:before {
+    content: "\63"
+}
+
+.mz-icon.--close:before {
+    content: "\65"
+}
+
+.mz-icon.--edit:before {
+    content: "\67"
+}
+
+.mz-icon.--minus:before {
+    content: "\68"
+}
+
+.mz-icon.--radio-checked:before {
+    content: "\69"
+}
+
+.mz-icon.--search:before {
+    content: "\6a"
+}
+
+.mz-icon.--unchecked:before {
+    content: "\6b"
+}
+
+.mz-icon.--status-calendar:before {
+    content: "\6c"
+}
+
+.mz-icon.--check:before {
+    content: "\6d"
+}
+
+.mz-icon.--info:before {
+    content: "\6e"
+}
+
+.mz-icon.--delete:before {
+    content: "\6f"
+}
+
+.mz-icon.--checkbox-checked:before {
+    content: "\64"
+}
+
+.mz-icon.--question-mark:before {
+    content: "\71"
+}
+
+.mz-icon.--copy:before {
+    content: "\72"
+}
+
+.mz-icon.--back:before {
+    content: "\70"
+}
+
+.mz-icon.--call:before {
+    content: "\73"
+}
+
+.mz-icon.--map-pin:before {
+    content: "\66"
+}
+
+.mz-icon.--map-pin-filled:before {
+    content: "\74"
+}
+
+.mz-integer-input {
+    width: 96px;
+    height: 40px
+}
+
+.mz-integer-input__quantity {
+    display: none
+}
+
+.mz-integer-input__quantity.--active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 1px solid #c3c4c5;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700
+}
+
+.mz-integer-input .mz-integer-input__add-button {
+    display: none
+}
+
+.mz-integer-input .mz-integer-input__add-button.--active {
+    display: flex
+}
+
+.mz-integer-input__stepper {
+    display: flex;
+    flex: none;
+    justify-content: center;
+    padding: 8px;
+    font-size: 12px;
+    line-height: 1
+}
+
+.mz-integer-input__stepper[disabled] {
+    color: #c3c4c5
+}
+
+.mz-integer-input__input {
+    flex: 1;
+    width: 100%;
+    border: 0;
+    outline: none;
+    text-align: center
+}
+
+.mz-dropdown {
+    width: 100%;
+    user-select: none
+}
+
+.mz-dropdown__button {
+    width: 100%;
+    height: 48px;
+    padding: 2px 16px;
+    transition: none;
+    border: 1px solid #c3c4c5;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    color: #2c2c2c;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.mz-dropdown__button.--with-left-icon {
+    padding-left: 40px
+}
+
+.mz-dropdown__button.--with-right-icon {
+    padding-right: 40px
+}
+
+.mz-dropdown__button.--with-clear-button {
+    padding-right: 32px
+}
+
+.mz-dropdown__button.--has-error {
+    border-color: #cb5454
+}
+
+.mz-dropdown__button::placeholder {
+    color: #9ea0a3;
+    font-size: 16px;
+    font-weight: 400
+}
+
+.mz-dropdown__button:focus,
+.mz-dropdown__button:hover {
+    outline: none;
+    box-shadow: none
+}
+
+.mz-dropdown__button:disabled {
+    border-color: #c3c4c5;
+    background: #fafafa;
+    color: #9ea0a3
+}
+
+.mz-dropdown__button:disabled::placeholder {
+    color: #c3c4c5
+}
+
+.mz-dropdown__button-text {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-align: left
+}
+
+.mz-dropdown__icon {
+    margin-left: 8px;
+    font-size: 14px
+}
+
+.mz-dropdown__button[aria-expanded=true] .mz-dropdown__icon {
+    transform: scaleY(-1)
+}
+
+.mz-dropdown__menu.dropdown-menu {
+    width: auto;
+    min-width: auto;
+    position: fixed;
+    top: auto;
+    left: auto;
+    margin-top: 0;
+    padding: 0;
+    overflow-y: auto;
+    border: none;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(56, 83, 154, .1)
+}
+
+.mz-dropdown__option {
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    overflow: visible;
+    transition: background .2s;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400
+}
+
+.mz-dropdown__option:after {
+    position: absolute;
+    top: -1px;
+    right: 16px;
+    left: 16px;
+    height: 1px;
+    transition: background .2s;
+    background: #ededed
+}
+
+.mz-dropdown__option+.mz-dropdown__option,
+.mz-dropdown__option+:last-child {
+    position: relative;
+    margin-top: 1px
+}
+
+.mz-dropdown__option+.mz-dropdown__option:after,
+.mz-dropdown__option+:last-child:after {
+    content: ""
+}
+
+.mz-dropdown__option.--active,
+.mz-dropdown__option:hover {
+    background: #fafafa
+}
+
+.mz-dropdown__option.--active+.mz-dropdown__option:after,
+.mz-dropdown__option.--active+:last-child:after,
+.mz-dropdown__option.--active:after,
+.mz-dropdown__option:hover+.mz-dropdown__option:after,
+.mz-dropdown__option:hover+:last-child:after,
+.mz-dropdown__option:hover:after {
+    background: transparent
+}
+
+.mz-dropdown__option-image {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px
+}
+
+.mz-dropdown__text {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+h6+.mz-dropdown {
+    margin-top: 16px
+}
+
+.mz-dropdown-input__input {
+    position: absolute;
+    left: -9999px
+}
+
+.mz-dropdown-button__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.mz-dropdown-button__icon {
+    margin-left: 8px;
+    font-size: 14px
+}
+
+.mz-dropdown-button[aria-expanded=true] .mz-dropdown-button__icon {
+    transform: scaleY(-1)
+}
+
+.mz-footer {
+    width: 100%;
+    padding: 24px;
+    border-top: 1px solid #ededed;
+    background: #fafafa;
+    color: #c3c4c5;
+    letter-spacing: 5px;
+    text-align: center;
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="328" height="64" viewBox="0 0 328 64">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3911" data-name="Rectangle 3911" width="328" height="64" transform="translate(48 132)" fill="#fff1e8"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_3910" data-name="Rectangle 3910" width="328" height="64" transform="translate(24 132)" fill="#fff1e8"/>
+    </clipPath>
+  </defs>
+  <g id="Group_7962" data-name="Group 7962" transform="translate(-24 -132)">
+    <rect id="Rectangle_3909" data-name="Rectangle 3909" width="328" height="64" transform="translate(24 132)" fill="#fff1e8"/>
+    <g id="Mask_Group_50" data-name="Mask Group 50" transform="translate(-24)" clip-path="url(#clip-path)">
+      <g id="Group_7407" data-name="Group 7407" transform="translate(-25.293 89)">
+        <circle id="Ellipse_1505" data-name="Ellipse 1505" cx="43.5" cy="43.5" r="43.5" transform="translate(12.293 64)" fill="#ffe3d3"/>
+        <g id="Ellipse_1506" data-name="Ellipse 1506" transform="translate(376.293)" fill="none" stroke="#ffe3d3" stroke-width="16">
+          <circle cx="43.5" cy="43.5" r="43.5" stroke="none"/>
+          <circle cx="43.5" cy="43.5" r="35.5" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

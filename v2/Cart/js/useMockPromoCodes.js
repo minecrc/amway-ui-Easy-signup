@@ -1,16 +1,15 @@
 /* global $ */
 (() => {
-    const mockPromoCodes = {
-        AMWAYABO50: 50,
-        AMWAYABO100: 100,
-        AMWAYABO200: 200,
-    };
+  const mockPromoCodes = {
+    AMWAYABO50: 50,
+    AMWAYABO100: 100
+  };
 
-    $.getPromoCodeAmount = function getMockPromoCodeValue(title) {
-        return mockPromoCodes[title];
-    };
+  $.getPromoCodeValue = function getMockPromoCodeValue(title) {
+    return mockPromoCodes[title];
+  };
 
-    Object.keys(mockPromoCodes).forEach(code => {
-        $.createDiscountRow({ id: code, amount: mockPromoCodes[code] });
-    });
+  Object.keys(mockPromoCodes).forEach(code => {
+    $.createDiscountRow(code, mockPromoCodes[code]);
+  });
 })();

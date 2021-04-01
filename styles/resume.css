@@ -1,0 +1,253 @@
+.MyPhoto {
+    max-width: 195px;
+    width: 100%;
+    border-radius: 8%;
+    overflow: hidden;
+    text-align: right;
+    float: right;
+    margin-right: 15px;
+}
+
+.nav-tabs {
+    border-bottom: 0 !important;
+}
+
+h1 {
+    font-size: 25px !important;
+}
+
+.h4,
+h4,
+h3,
+.h3 {
+    font-size: 19px !important;
+}
+
+.nav-link {
+    display: block;
+    padding: 0;
+    margin: auto 15px;
+}
+
+.fa,
+.far,
+.fas {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: xx-large !important;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sidenav {
+    height: 52px;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.far.inner,
+.fas.inner {
+    font-size: small !important;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+body {
+    font-family: 'Prompt', sans-serif !important;
+    padding: 0;
+    background-image: url('/static/images/shutterstock_639949456.png');
+}
+
+.MyPhoto img {
+    width: 100%;
+}
+
+div.bg-gradient {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.title-row {
+    display: flex;
+    padding: 5px 15px 0 15px !important;
+    color: #ffffff !important;
+    background: rgb(29, 214, 253);
+    background: -moz-linear-gradient(117deg, rgba(29, 214, 253, 0.5830707282913166) 52%, rgba(204, 69, 252, 0.5998774509803921) 100%);
+    background: -webkit-linear-gradient(117deg, rgba(29, 214, 253, 0.5830707282913166) 52%, rgba(204, 69, 252, 0.5998774509803921) 100%);
+    background: linear-gradient(117deg, rgba(29, 214, 253, 0.5830707282913166) 52%, rgba(204, 69, 252, 0.5998774509803921) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#1dd6fd", endColorstr="#cc45fc", GradientType=1);
+}
+
+.fas.title,
+.far.title {
+    padding-left: 10px;
+    font-size: 27px !important;
+}
+
+.nav-tabs .nav-link {
+    border: 0px solid #0000 !important;
+    margin: 1px 0 5px;
+    border-bottom-right-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #000 !important;
+    font-weight: 600;
+    background: #fff;
+}
+
+h1.title-bar {
+    color: #ffffff !important;
+    font-weight: 200;
+}
+
+.tab-content>.active {
+    background-color: #f0f8ffeb;
+    z-index: 0;
+}
+
+.tab-content {
+    width: 90%;
+    margin: 2% auto;
+}
+
+.media-body {
+    -ms-flex: 1;
+    flex: 1;
+    z-index: 0 !important;
+}
+
+.nav {
+    display: inline-block !important;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    position: fixed;
+    top: 34%;
+    z-index: 1;
+}
+
+.media:first-child {
+    margin-top: 0;
+    align-items: center;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul>li {
+    font-family: 'Prompt', sans-serif !important;
+    list-style-type: dot;
+    padding: 0 15px;
+}
+
+section.title {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding-top: 5%;
+}
+
+.description-text {
+    margin-top: 20px;
+    border-bottom: 1px solid #3f3f3a;
+    padding-bottom: 20px !important;
+    padding-left: 10%;
+    margin-bottom: 35px;
+}
+
+#tab {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 0%;
+}
+
+@media(min-width: 769px) {
+    .nav-link:hover .sidenav {
+        width: 200px;
+        color: #fff;
+        text-align: center;
+        padding: 12;
+        left: 0;
+        margin-top: -11px;
+    }
+}
+
+@media(max-width: 768px) {
+    .directory h1 {
+        font-size: 2em;
+        line-height: 1.5em;
+        color: #000;
+        padding: 15px 10px;
+        margin: 0;
+    }
+    .MyPhoto {
+        max-width: 30% !important;
+        margin: 0px 15px;
+    }
+    .nav {
+        display: flex !important;
+        position: fixed !important;
+        bottom: 0 !important;
+        z-index: 1;
+        right: 6%;
+        top: unset !important;
+    }
+    .h3,
+    h3,
+    .h4,
+    h4 {
+        font-size: 20px !important;
+    }
+    .description-text {
+        padding: 0 15px;
+    }
+}
+
+@media(max-width: 500px) {
+    div.bg-gradient {
+        width: 100%;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}

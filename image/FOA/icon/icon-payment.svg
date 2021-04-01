@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_12605" data-name="Group 12605" transform="translate(-24 -200)">
+    <rect id="Rectangle_4358" data-name="Rectangle 4358" width="24" height="24" transform="translate(24 200)" fill="#e3a780" opacity="0"/>
+    <g id="credit-card" transform="translate(24 169.496)">
+      <g id="Group_12609" data-name="Group 12609" transform="translate(0 36.504)">
+        <g id="Group_12608" data-name="Group 12608">
+          <path id="Path_89139" data-name="Path 89139" d="M23.25,137a.75.75,0,0,0-.75.75V143H1.5v-9H9.75a.75.75,0,0,0,0-1.5H1.5v-3H9.75a.75.75,0,0,0,0-1.5H1.5A1.5,1.5,0,0,0,0,129.5V143a1.5,1.5,0,0,0,1.5,1.5h21A1.5,1.5,0,0,0,24,143v-5.25A.75.75,0,0,0,23.25,137Z" transform="translate(0 -127.996)" fill="#2c2c2c"/>
+        </g>
+      </g>
+      <g id="Group_12611" data-name="Group 12611" transform="translate(3 45.504)">
+        <g id="Group_12610" data-name="Group 12610">
+          <path id="Path_89140" data-name="Path 89140" d="M67.75,320h-3a.75.75,0,0,0,0,1.5h3a.75.75,0,0,0,0-1.5Z" transform="translate(-64 -319.996)" fill="#2c2c2c"/>
+        </g>
+      </g>
+      <g id="Group_12613" data-name="Group 12613" transform="translate(12 32.004)">
+        <g id="Group_12612" data-name="Group 12612">
+          <path id="Path_89141" data-name="Path 89141" d="M267.545,34.314l-5.25-2.25a.766.766,0,0,0-.592,0l-5.25,2.25A.752.752,0,0,0,256,35v3c0,4.126,1.526,6.539,5.626,8.9a.754.754,0,0,0,.747,0c4.1-2.356,5.626-4.768,5.626-8.9V35A.751.751,0,0,0,267.545,34.314ZM266.5,38c0,3.463-1.146,5.37-4.5,7.38-3.354-2.015-4.5-3.921-4.5-7.38V35.5L262,33.57l4.5,1.929Z" transform="translate(-256 -32.004)" fill="#2c2c2c"/>
+        </g>
+      </g>
+      <g id="Group_12615" data-name="Group 12615" transform="translate(15.001 36.505)">
+        <g id="Group_12614" data-name="Group 12614">
+          <path id="Path_89142" data-name="Path 89142" d="M325.73,128.179a.755.755,0,0,0-1.055.117l-2.358,2.949-.933-1.395a.75.75,0,1,0-1.248.831l1.5,2.25a.756.756,0,0,0,.592.335h.031a.75.75,0,0,0,.587-.282l3-3.75A.751.751,0,0,0,325.73,128.179Z" transform="translate(-320.011 -128.016)" fill="#2c2c2c"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

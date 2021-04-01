@@ -1,0 +1,103 @@
+.choose-banner-profile {
+    margin-top: 1rem;
+}
+
+.cbp-list {
+    width: 4.375rem !important;
+    height: 4.375rem;
+    position: relative;
+}
+
+.cbp-list-image {
+    width: calc(100% - 1rem);
+    position: relative;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    border-radius: 1.688rem;
+    cursor: pointer;
+}
+
+.cbp-list-image.active {
+    border: 0.063rem solid #2c2c2c;
+}
+
+.cbp-list-image.active::before {
+    position: absolute;
+    content: 'g';
+    font-family: Amway Icon !important;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.125rem;
+    height: 1.125rem;
+    background: #2c2c2c;
+    bottom: -0.063rem;
+    right: -0.063rem;
+    border-radius: 0.625rem;
+}
+
+.cbp-list-image:after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+.ctp-btn-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-list {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-list-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.social-list-input {
+    width: calc(100% - 4rem);
+}
+
+@media(min-width:1024px) {
+    .choose-theme-profile,
+    .choose-image-profile {
+        width: 28.25rem;
+    }
+    .show .choose-image-profile {
+        z-index: -1;
+        opacity: 0;
+    }
+    .choose-image-profile .aw-header-bar-title {
+        padding-top: 0;
+        padding-bottom: 1rem;
+    }
+    .choose-image-profile .aw-header-bar-btn-back {
+        position: absolute;
+        top: 2rem;
+        right: 1.5rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .content-create-wl {
+        padding-left: 1.5rem;
+        padding-top: 1.5rem;
+    }
+    .content-create-wl .aw-md-full-sub-title {
+        padding-right: 1.5rem;
+    }
+    .content-create-wl .amway-input-area,
+    .content-create-wl .amway-textarea-area {
+        margin-right: 1.5rem;
+    }
+}

@@ -1,0 +1,24 @@
+<svg id="Component_1_1" data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="Group_6560" data-name="Group 6560" transform="translate(-308 -383)">
+    <g id="Add_to_Cart" data-name="Add to Cart" transform="translate(308 383)">
+      <g id="Oval" fill="none" stroke="#2c2c2c" stroke-miterlimit="10" stroke-width="2">
+        <circle cx="18" cy="18" r="18" stroke="none"/>
+        <circle cx="18" cy="18" r="17" fill="none"/>
+      </g>
+    </g>
+    <path id="Path" d="M7.332.277,3.247,4.372,1.676,2.8A.952.952,0,1,0,.333,4.143L2.571,6.39a.954.954,0,0,0,1.343,0L8.675,1.629A.953.953,0,0,0,7.332.277Z" transform="translate(322 398)" fill="#2c2c2c"/>
+  </g>
+  <g id="Add_to_Cart-2" data-name="Add to Cart" transform="translate(0 36) rotate(-90)" opacity="0">
+    <circle id="Oval-2" data-name="Oval" cx="18" cy="18" r="18" fill="#2c2c2c"/>
+    <g id="Group_6558" data-name="Group 6558" transform="translate(4 3.75)">
+      <g id="Group_38" data-name="Group 38" transform="translate(8 8.25)">
+        <g id="Group_37" data-name="Group 37">
+          <g id="Group_37-2" data-name="Group 37">
+            <line id="Line_5" data-name="Line 5" y2="12" transform="translate(6)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+            <line id="Line_6" data-name="Line 6" x2="12" transform="translate(0 6)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg id="Group_6306" data-name="Group 6306" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="94.208" height="101.692" viewBox="0 0 94.208 101.692">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3785" data-name="Rectangle 3785" width="94.208" height="101.692" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_6306-2" data-name="Group 6306" transform="translate(0 0)" clip-path="url(#clip-path)">
+    <path id="Path_16883" data-name="Path 16883" d="M38.8,7.521A22.162,22.162,0,1,1,7.522,9.428,22.16,22.16,0,0,1,38.8,7.521" transform="translate(41.549 4.427)" fill="#ededed" fill-rule="evenodd"/>
+    <path id="Path_16884" data-name="Path 16884" d="M.578,22.851A28.54,28.54,0,1,0,34.237.578,28.541,28.541,0,0,0,.578,22.851m7.194,1.463a21.2,21.2,0,1,1,16.542,25,21.216,21.216,0,0,1-16.542-25" transform="translate(37.12 -0.001)" fill="#c3c4c5" fill-rule="evenodd"/>
+    <rect id="Rectangle_3784" data-name="Rectangle 3784" width="6.988" height="14.793" transform="translate(43.089 59.328) rotate(-138.504)" fill="#c3c4c5"/>
+    <path id="Path_16885" data-name="Path 16885" d="M58.11,17.856h0a8.1,8.1,0,0,1,.7,11.4L28.852,63.1A8.076,8.076,0,1,1,16.757,52.4l29.95-33.845a8.1,8.1,0,0,1,11.4-.7" transform="translate(-14.736 35.875)" fill="#c3c4c5" fill-rule="evenodd"/>
+    <path id="Path_16886" data-name="Path 16886" d="M58.11,17.856h0a8.1,8.1,0,0,1,.7,11.4l-12.1-10.707a8.1,8.1,0,0,1,11.4-.692M56.478,31.888l-12.1-10.7L19.086,49.765l12.1,10.7ZM28.853,63.1a8.077,8.077,0,1,1-12.1-10.7Z" transform="translate(-14.737 35.874)" fill="#777776" fill-rule="evenodd"/>
+    <path id="Path_16887" data-name="Path 16887" d="M9.237,13.476a2.426,2.426,0,1,1-3.9-2.893A18.437,18.437,0,0,1,7.03,8.607a17.442,17.442,0,0,1,10.7-5.182A16.113,16.113,0,0,1,28.973,6.468,16.394,16.394,0,0,1,30.7,7.954a2.422,2.422,0,0,1-3.393,3.458,10.867,10.867,0,0,0-1.234-1.042,11.262,11.262,0,0,0-7.866-2.136A12.6,12.6,0,0,0,10.491,12a14.528,14.528,0,0,0-1.254,1.476" transform="translate(46.904 7.569)" fill="#c3c4c5" fill-rule="evenodd"/>
+  </g>
+</svg>

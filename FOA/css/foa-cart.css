@@ -1,0 +1,1530 @@
+.mylist-cart {
+    padding-bottom: 3rem;
+}
+
+.mylist-cart-title {
+    padding-top: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+}
+
+.mylist-cart-register-content {
+    background: url('../../image/FOA/banner/register.svg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1rem;
+    border-radius: none;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+}
+
+.mylist-cart-register-content-text {
+    width: calc(100% - 9.5rem);
+    color: #A65523;
+}
+
+.mylist-cart-register-content-icon {
+    width: 9.5rem;
+    height: 100%;
+    background: url('../../image/FOA/illustration/ask-discount.svg');
+    background-position: bottom center;
+    background-size: 9.5rem 5.563rem;
+    background-repeat: no-repeat;
+}
+
+.mylist-cart-register-content-text-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.mylist-cart-register-content-text-sub {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+.mylist-cart-register-content-text-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.mylist-cart-register-select {
+    background: #FFF1E8;
+    margin-top: -1rem;
+    padding: 1rem 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.mylist-cart-register-select-item {
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.mylist-cart-register-select-item-label {
+    display: flex;
+    width: 100%;
+    border-radius: 0.625rem;
+    background: #fff;
+    border: 0.125rem solid #EDEDED;
+    padding: 0.75rem;
+    cursor: pointer;
+}
+
+.mylist-cart-register-select-item-icon {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid #EDEDED;
+}
+
+.mylist-cart-register-select-item-content {
+    width: calc(100% - 1rem);
+    padding-left: 1rem;
+    padding-right: 0.75rem;
+}
+
+.mylist-cart-register-select-item-content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.mylist-cart-register-select-item-input:checked~.mylist-cart-register-select-item-label .mylist-cart-register-select-item-icon {
+    border-color: #2C2C2C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mylist-cart-register-select-item-input:checked~.mylist-cart-register-select-item-label .mylist-cart-register-select-item-icon::after {
+    content: '';
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background: #2C2C2C;
+}
+
+.mylist-cart-register-select-item-input:checked~.mylist-cart-register-select-item-label {
+    border-color: #2C2C2C;
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+}
+
+.mylist-cart-register-select-item-input {
+    z-index: -99999;
+    position: absolute;
+    opacity: 0;
+}
+
+.mylist-cart-register-select-item-content-title {
+    font-size: 0.813rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+.mylist-cart-register-select-item-content-price {
+    font-size: 0.875rem;
+    font-weight: 800;
+    line-height: 1.25rem;
+}
+
+.mylist-cart-register-select-item-content-text {
+    font-size: 0.813rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+}
+
+.mylist-cart-register-select-item-content-text.--bold {
+    font-size: 0.813rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+.mylist-cart-register-select-item-content-nothank {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+.mylist-cart-register-select-text {
+    font-size: 0.813rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #9EA0A3;
+    padding-bottom: 1rem;
+}
+
+.mylist-cart-register-select-title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    margin-bottom: 0.875rem;
+}
+
+.mylist-cart-purchase {
+    display: none;
+}
+
+.mylist-cart-purchase.selected {
+    display: block;
+}
+
+.mylist-cart-purchase-title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mylist-cart-purchase-header {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #F1F2FF;
+    position: relative;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.mylist-cart-purchase-header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0.25rem;
+    right: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    background: url('../../image/FOA/illustration/star-bottom.svg');
+    background-position: center;
+    background-size: contain;
+}
+
+.mylist-cart-purchase-header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    background: url('../../image/FOA/illustration/star-top.svg');
+    background-position: center;
+    background-size: contain;
+}
+
+.mylist-cart-purchase-header-text {
+    font-size: 0.813rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    color: #38539A;
+    width: calc(100% - 5rem);
+}
+
+.mylist-cart-purchase-header-count {
+    font-size: 0.813rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    color: #38539A;
+}
+
+.mylist-cart-purchase-header-icon {
+    width: 2rem;
+    height: 2rem;
+    background: url('../../image/FOA/icon/icon-tag.svg');
+    background-position: center;
+    background-size: contain;
+}
+
+.mylist-cart-purchase-content-item {
+    background: #fff;
+    border-radius: 0.625rem;
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.mylist-cart-purchase-content-item-box {
+    display: flex;
+    padding: 0.75rem;
+    position: relative;
+}
+
+.mylist-cart-purchase-content-item-box.disable::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(248, 248, 248, 0.7);
+}
+
+.mylist-cart-purchase-content-item-content-price-box {
+    display: flex;
+    align-items: baseline;
+}
+
+.mylist-cart-purchase-content-item-content-tool {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.mylist-cart-purchase-content-item-content-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.mylist-cart-purchase-price-discount {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1rem;
+    color: #CB5454;
+    position: relative;
+    margin-right: 0.5rem;
+}
+
+.mylist-cart-purchase-price-discount::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 0.5rem);
+    height: 0.063rem;
+    background: #CB5454;
+}
+
+.mylist-cart-purchase-price-sale {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+.mylist-cart-purchase-price-free {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: #CB5454;
+}
+
+.mylist-cart-purchase-selected {
+    border-radius: 0.625rem;
+    border: 0.125rem solid #38539A;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.mylist-cart-purchase-selected.selected {
+    display: block;
+}
+
+.mylist-cart-purchase-selected .checkout-card {
+    width: calc(100% + 1rem);
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    padding-right: 0.5rem;
+}
+
+.checkout-card-edit {
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('../../image/FOA/icon/icon-edit.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mylist-cart-purchase-selected .checkout-card .checkout-card-del {
+    position: absolute;
+    right: 0.5rem;
+}
+
+.checkout-card.first {
+    border: none;
+}
+
+.mylist-cart-purchase-selected-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+.mylist-cart-list-title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.mylist-cart-purchase-content-item-content-btn-box-input {
+    position: relative;
+    height: 3rem;
+}
+
+.mylist-cart-purchase-integer-input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: 0.2s ease;
+    z-index: -1;
+}
+
+.mylist-cart-purchase-integer-input.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 1;
+    transition: 0.1s ease-out;
+}
+
+.mylist-cart-purchase-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 1.125rem;
+    position: relative;
+    transition: 0.2s ease;
+}
+
+.mylist-cart-purchase-btn.active {
+    opacity: 0;
+    z-index: -1;
+    transition: 0.2s ease;
+}
+
+.mylist-cart-purchase-btn::before {
+    content: '';
+    position: absolute;
+    top: 0rem;
+    left: -0.115rem;
+    bottom: 0;
+    display: block;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 1.125rem;
+    border: 0.125rem solid transparent;
+    background: url('../../image/creator/icon/icon-plus-w.svg');
+    background-position: center !important;
+    background-size: 0.75rem 0.75rem !important;
+    background-repeat: no-repeat !important;
+}
+
+.btn-purchase-del {
+    display: inline-block;
+    flex: none;
+    vertical-align: middle;
+}
+
+.btn-del-bin.btn-purchase-del {
+    display: none;
+}
+
+.btn-purchase-del.btn-del-bin.active {
+    display: block;
+    background: transparent;
+    width: auto;
+    height: auto;
+    color: #2c2c2c;
+}
+
+.btn-purchase-del::before {
+    content: "\68";
+    display: flex;
+    color: inherit;
+    font-family: Amway Icon CI !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal !important;
+    font-variant: normal !important;
+    font-weight: 400 !important;
+    line-height: inherit;
+    text-transform: none !important;
+    speak: none;
+}
+
+.checkout-cart-bar-price.retail-price {
+    color: #2C2C2C;
+}
+
+@media(min-width:1024px) {
+    .cart-mylist {
+        padding-top: 4.5rem;
+    }
+    .mylist-cart-register-content {
+        border-top-left-radius: 0.625rem;
+        border-top-right-radius: 0.625rem;
+    }
+    .mylist-cart-register-select {
+        border-bottom-left-radius: 0.625rem;
+        border-bottom-right-radius: 0.625rem;
+    }
+    .mylist-cart-register {
+        margin-bottom: 1rem;
+    }
+    .mylist-cart-purchase-content-item-img {
+        width: 5rem;
+        height: 5rem;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+    .mylist-cart-purchase-content-item-content {
+        width: calc(100% - 5rem);
+    }
+    .mylist-cart-purchase-selected .checkout-card {
+        width: calc(100% + 1rem);
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        padding-right: 1rem;
+    }
+    .mylist-cart-purchase-selected .checkout-card .checkout-card-del {
+        position: absolute;
+        right: 1rem;
+    }
+    .checkout-card-edit {
+        right: 1rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .cart-mylist {
+        padding-top: 3.5rem;
+    }
+    .foa-cart-nav-back {
+        position: absolute;
+        z-index: 1;
+        left: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+        -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .foa-cart-nav-back::after {
+        content: 'b';
+        font-family: Amway Icon !important;
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2rem;
+        color: #2C2C2C;
+        margin-right: 0.25rem;
+    }
+    .foa-cart-nav {
+        position: fixed;
+        z-index: 1502;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 3.5rem;
+        background: #fff;
+        -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .mylist-cart-purchase-content-item-img {
+        width: 3rem;
+        height: 3rem;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+    .mylist-cart-purchase-content-item-content {
+        width: calc(100% - 3rem);
+    }
+}
+
+@media(min-width:1024px) {
+    .regismember-content {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30.625rem;
+        height: auto;
+        position: absolute;
+    }
+}
+
+@media(min-width:1024px) and (max-height:466px) {
+    .regismember-content {
+        max-height: calc(100vh - 2rem);
+        overflow: hidden;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+    }
+    .regismember-content::-webkit-scrollbar {
+        /* width */
+        width: 0.375rem;
+    }
+    .regismember-content::-webkit-scrollbar-track {
+        /* Track */
+        background: #EDEDED;
+        border-radius: 0.188rem;
+    }
+    .regismember-content::-webkit-scrollbar-thumb {
+        /* Handle */
+        background: #D5D5D5;
+        border-radius: 0.188rem;
+    }
+    .regismember-content::-webkit-scrollbar-thumb:hover {
+        /* Handle on hover */
+        background: #D2D2D2;
+    }
+}
+
+@media(max-width:1023px) {
+    .regismember-content {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(100%);
+        transition: 0.3s ease;
+    }
+    .amway-modal.active .regismember-content {
+        transform: translateY(0%);
+    }
+}
+
+@media(max-width:1023px) and (max-height:425px) {
+    .regismember-content {
+        max-height: calc(100vh - 2rem);
+        overflow: hidden;
+    }
+    .regismember-content .mylist-cart-register-select {
+        height: 12rem;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+}
+
+.mylist-cart-register-box {
+    width: 100%;
+}
+
+.mylist-cart-register-box-content {
+    width: 100%;
+    height: 3.5rem;
+    background: #FFF1E8;
+    border-radius: 0.625rem;
+    position: relative;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mylist-cart-register-box-content::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    background: url('../../image/FOA/illustration/star-top-orange.svg');
+    background-position: center;
+    background-size: contain;
+}
+
+.mylist-cart-register-box-content::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0.25rem;
+    right: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    background: url('../../image/FOA/illustration/star-bottom-orange.svg');
+    background-position: center;
+    background-size: contain;
+}
+
+.mylist-cart-register-box-icon {
+    width: 1.625rem;
+    height: 1.625rem;
+    background: url('../../image/FOA/illustration/icon-star-regis.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.mylist-cart-register-box-text {
+    width: calc(100% - 5.625rem);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    color: #A65523;
+}
+
+.mylist-cart-purchase-box-slected,
+.mylist-cart-free-box-slected {
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 2rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    border: 0.125rem solid #38539A;
+    border-radius: 1rem;
+    color: #38539A;
+}
+
+.mylist-cart-register-box-slected {
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 2rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    border: 0.125rem solid #A65523;
+    border-radius: 1rem;
+    color: #A65523;
+}
+
+.mylist-cart-register-box-arrow {
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.mylist-cart-register-box-arrow::before {
+    content: 'a';
+    display: block;
+    font-family: Amway Icon !important;
+    color: #A65523;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+.eligibility-becoming-member-box {
+    max-height: 0;
+    overflow: hidden;
+    height: 0;
+    transition: max-height 0.4s ease;
+}
+
+.eligibility-becoming-member-box.selected {
+    max-height: 15rem;
+    height: auto;
+}
+
+.mylist-cart-purchase-box,
+.mylist-cart-free-box {
+    width: 100%;
+}
+
+.mylist-cart-purchase-box-content,
+.mylist-cart-free-box-content {
+    width: 100%;
+    height: 3.5rem;
+    background: #F1F2FF;
+    border-radius: 0.625rem;
+    position: relative;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mylist-cart-purchase-box-content::before,
+.mylist-cart-free-box-content::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    background: url('../../image/FOA/illustration/star-top.svg');
+    background-position: center;
+    background-size: contain;
+}
+
+.mylist-cart-purchase-box-content::after,
+.mylist-cart-free-box-content::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0.25rem;
+    right: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    background: url('../../image/FOA/illustration/star-bottom.svg');
+    background-position: center;
+    background-size: contain;
+}
+
+.mylist-cart-purchase-box-icon {
+    width: 1.625rem;
+    height: 1.625rem;
+    background: url('../../image/FOA/icon/icon-tag.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.mylist-cart-free-box-icon {
+    width: 1.625rem;
+    height: 1.625rem;
+    background: url('../../image/FOA/illustration/icon-free.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.mylist-cart-purchase-box-text,
+.mylist-cart-free-box-text {
+    width: calc(100% - 3.625rem);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    color: #38539A;
+}
+
+.mylist-cart-purchase-box-arrow,
+.mylist-cart-free-box-arrow {
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.mylist-cart-purchase-box-arrow::before,
+.mylist-cart-free-box-arrow::before {
+    content: 'a';
+    display: block;
+    font-family: Amway Icon !important;
+    color: #38539A;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+@media(min-width:1024px) {
+    .mylist-cart-register-box {
+        margin-top: 1rem;
+    }
+    .mylist-cart-purchase-box,
+    .mylist-cart-free-box {
+        padding-top: 1rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .mylist-cart-register-box {
+        padding: 1rem 1.5rem;
+        padding-bottom: 0;
+    }
+    .mylist-cart-purchase-box,
+    .mylist-cart-free-box {
+        padding: 1rem 1.5rem;
+        padding-bottom: 0;
+    }
+}
+
+.checkout-cart-delivery-cost-price-price {
+    color: #9EA0A3;
+}
+
+.checkout-cart-register-cost {
+    max-height: 0;
+    overflow: hidden;
+    height: 0;
+    transition: max-height 0.4s ease;
+}
+
+.checkout-cart-register-cost.selected {
+    max-height: 15rem;
+    height: auto;
+}
+
+.checkout-cart-register-cost-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+.checkout-cart-register-cost-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.checkout-cart-register-cost-content-price {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+.checkout-cart-register-cost-content-bin {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+    background: #EDEDED;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+}
+
+.checkout-cart-register-cost-content-bin::before {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('../../image/creator/icon/icon-bin-g.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+}
+
+.checkout-card-price-nonregis {
+    display: flex;
+    align-items: baseline;
+}
+
+.checkout-card-price-nonregis-price {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+.checkout-card-price-nonregis-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    margin-left: 0.5rem;
+}
+
+.checkout-card-price {
+    display: none;
+}
+
+.checkout-card-price.selected {
+    display: flex;
+}
+
+.checkout-card-price-nonregis.selected {
+    display: none;
+}
+
+.checkout-cart-bar-price-noregis-box {
+    width: calc(100% - 8rem);
+}
+
+.checkout-cart-bar-price-box {
+    display: none;
+}
+
+.checkout-cart-bar-price-box.selected {
+    display: block;
+}
+
+.checkout-cart-bar-price-noregis-box.selected {
+    display: none;
+}
+
+@media(max-width:1023px) {
+    .checkout-cart-register-cost-box {
+        padding: 1rem 1.5rem;
+        border-top: 0.25rem solid #F8F8F8;
+    }
+    .checkout-card-price.selected {
+        display: block;
+    }
+}
+
+.purchase-member-content {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 0.625rem;
+}
+
+.purchase-member-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3.5rem;
+    background: #F1F2FF;
+    border: none;
+    border-radius: 0.625rem;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+.purchase-member-header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    background: url('../../image/FOA/illustration/star-top.svg');
+    background-position: center;
+    background-size: contain;
+}
+
+.purchase-member-header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0.25rem;
+    right: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    background: url('../../image/FOA/illustration/star-bottom.svg');
+    background-position: center;
+    background-size: contain;
+}
+
+.purchase-member-content-box {
+    background: #FFFFFF;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-bottom-right-radius: 0.625rem;
+    border-bottom-left-radius: 0.625rem;
+}
+
+.purchase-member-card {
+    background: #FFFFFF;
+    border-radius: 0.625rem;
+    -webkit-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+    padding: 0.75rem;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.purchase-member-card-img {
+    width: 5rem;
+    height: 5rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.purchase-member-card-content {
+    width: calc(100% - 5rem);
+    padding-left: 0.5rem;
+}
+
+.purchase-member-card-content-tool {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.purchase-member-card-content-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1rem;
+}
+
+.purchase-member-card-price {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+.purchase-member-card-discount {
+    width: fit-content;
+    font-size: 0.625rem;
+    font-weight: 500;
+    line-height: 1rem;
+    position: relative;
+    margin-right: 0.5rem;
+    color: #CB5454;
+}
+
+.purchase-member-card-discount::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 0.5rem);
+    height: 0.063rem;
+    background: #CB5454;
+}
+
+.purchase-member-card-content-tool-btn {
+    width: 5.5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1rem;
+    background: #2c2c2c;
+    border: 0.125rem solid #2c2c2c;
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.purchase-member-card-content-tool-btn.selected {
+    border: 0.125rem solid #2c2c2c;
+    background: #FFFFFF;
+    color: #2C2C2C;
+}
+
+.purchase-member-card-content-tool-btn:hover {
+    background: #2c2c2c;
+    border: 0.125rem solid #2c2c2c;
+    color: #FFFFFF;
+}
+
+.purchase-unselect {
+    display: none;
+}
+
+.purchase-member-card-content-tool-btn.selected .purchase-unselect {
+    display: flex;
+}
+
+.purchase-member-card-content-tool-btn.selected .purchase-select {
+    display: none;
+}
+
+.purchase-member-content-box {
+    max-height: 28.25rem;
+    height: auto;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.purchase-member-content-box::-webkit-scrollbar {
+    /* width */
+    width: 0.375rem;
+}
+
+.purchase-member-content-box::-webkit-scrollbar-track {
+    /* Track */
+    background: #EDEDED;
+    border-radius: 0.188rem;
+}
+
+.purchase-member-content-box::-webkit-scrollbar-thumb {
+    /* Handle */
+    background: #D5D5D5;
+    border-radius: 0.188rem;
+}
+
+.purchase-member-content-box::-webkit-scrollbar-thumb:hover {
+    /* Handle on hover */
+    background: #D2D2D2;
+}
+
+.checkout-card-price-purchase-discount {
+    width: fit-content;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1rem;
+    position: relative;
+    margin-right: 0.5rem;
+    color: #CB5454;
+}
+
+.checkout-card-price-purchase-discount::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 0.5rem);
+    height: 0.063rem;
+    background: #CB5454;
+}
+
+.checkout-card-price-purchase {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+.checkout-card-price-free {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: #CB5454;
+}
+
+.free-member-card {
+    background: #FFFFFF;
+    border-radius: 0.625rem;
+    -webkit-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.free-member-card-header {
+    padding-bottom: 0.5rem;
+    display: flex;
+    border: none;
+    border-bottom: 0.125rem solid #EDEDED;
+}
+
+.free-member-card-img {
+    width: 5rem;
+    height: 5rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.free-member-card-content {
+    width: calc(100% - 5rem);
+    padding-left: 0.5rem;
+}
+
+.free-member-card-content-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1rem;
+}
+
+.free-member-card-content-price {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: #CB5454;
+}
+
+.free-member-card-select-box-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1rem;
+}
+
+.free-member-card-select-box-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.free-member-card-select-item {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    position: relative;
+    border: 0.063rem solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 0.25rem;
+}
+
+.free-member-card-select-item.selected {
+    border: 0.063rem solid #2c2c2c;
+}
+
+.free-member-card-select-item.selected::before {
+    content: 'g';
+    font-family: Amway Icon !important;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    background: #2c2c2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1rem;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: -0.125rem;
+    right: -0.125rem;
+    z-index: 1;
+}
+
+.free-member-card-select-item-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+.checkout-promotion-resulte {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkout-promotion-resulte.selected {
+    display: flex;
+}
+
+.checkout-promotion-insert.selected {
+    display: none;
+}
+
+.checkout-promotion-resulte-content-code {
+    font-size: 0.625rem;
+    font-weight: 500;
+    line-height: 1rem;
+}
+
+.checkout-promotion-resulte-content-namecode {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1rem;
+    color: #38539A;
+}
+
+.checkout-promotion-resulte-tool {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.checkout-promotion-resulte-btn {
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1rem;
+    text-decoration: underline;
+}
+
+.promotionCode {
+    max-height: 0;
+    overflow: hidden;
+    height: 0;
+    transition: max-height 0.4s ease;
+}
+
+.promotionCode.selected {
+    max-height: 15rem;
+    height: auto;
+    border: none;
+    border-bottom: 0.125rem solid #EDEDED;
+    padding-bottom: 1rem;
+}
+
+.purchase-member-content-box-input {
+    z-index: -999;
+    position: absolute;
+    opacity: 0;
+}
+
+.purchase-member-content-box-label {
+    border-radius: 0.625rem;
+    border: 0.125rem solid #EDEDED;
+    width: 100%;
+    height: 100%;
+    padding-left: 0.25rem;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.purchase-member-content-box-input:checked~.purchase-member-content-box-label {
+    border-radius: 0.625rem;
+    border: 0.125rem solid #38539A;
+    -webkit-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.188rem 0.375rem 0rem rgba(0, 0, 0, 0.16);
+}
+
+.purchase-member-content-box-icon {
+    margin-top: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid #EDEDED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.purchase-member-content-box-input:checked~.purchase-member-content-box-label .purchase-member-content-box-icon {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid #38539A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.purchase-member-content-box-input:checked~.purchase-member-content-box-label .purchase-member-content-box-icon::before {
+    content: '';
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background: #38539A;
+}
+
+.purchase-member-content-box-card-content {
+    width: calc(100% - 1rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.purchase-member-content-box-img {
+    width: 3rem;
+    height: 3rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.purchase-member-content-box-text {
+    width: calc(100% - 3rem);
+    padding-left: 1rem;
+}
+
+@media(max-width:1023px) {
+    .purchase-member-content {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+@media(max-width:1023px) and (max-height:425px) {
+    .purchase-member-content-box {
+        max-height: 12rem;
+    }
+}
+
+.checkout-promotion-title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+.checkout-cart-delivery-cost {
+    height: 3.5rem;
+}
+
+.checkout-cart-delivery-cost-header {
+    display: flex;
+    align-items: center;
+}
+
+.checkout-cart-delivery-cost-header-icon {
+    display: block;
+    width: 1.563rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    background: url('../../image/creator/icon/icon-car.svg');
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 1.563rem 1.5rem;
+}
+
+.checkout-cart-delivery-cost-header-title {
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.checkout-cart-delivery-cost-header-text {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+    color: #38539A;
+}

@@ -15,9 +15,6 @@
       }
     },
     messages: {
-      'recipient-mobile': {
-        required: 'กรุณากรอกเบอร์โทรติดต่อ'
-      },
       'pickup-address': 'กรุณาเลือกแอมเวย์ช็อปเพื่อรับสินค้า',
       'selected-downline': 'กรุณาเลือกดาวน์ไลน์'
     },

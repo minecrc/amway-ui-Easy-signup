@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SignUpABO</title>
+    <!-- For FireBase Demo -->
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.21.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.21.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/7.21.1/firebase-performance.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <!-- For FireBase Demo -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/Common/normalize.min.css" />
+    <link rel="stylesheet" href="/SignUp/SignUp.min.css" />
+    <link rel="stylesheet" href="/Footer/Footer.min.css" />
+    <link rel="stylesheet" href="/Common/Image.min.css" />
+    <link rel="stylesheet" href="/Header/MenuBar.min.css" />
+    <link rel="stylesheet" href="/Header/NavigationBar.min.css" />
+    <link rel="stylesheet" href="/Common/Icon.min.css" />
+    <link rel="stylesheet" href="/Header/IdBadge.min.css" />
+    <link rel="stylesheet" href="/Common/Input.min.css" />
+    <link rel="stylesheet" href="/Header/ProductMenu.min.css" />
+    <link rel="stylesheet" href="/Header/PopupMenu.min.css" />
+    <link rel="stylesheet" href="/Common/MenuArrow.min.css" />
+    <link rel="stylesheet" href="/Header/TopmostBar.min.css" />
+    <link rel="stylesheet" href="/Header/LanguageSwitcher.min.css" />
+    <link rel="stylesheet" href="/Header/UserMenu.min.css" />
+    <link rel="stylesheet" href="/Common/Button.min.css" />
+    <link rel="stylesheet" href="/Layout/MainLayout.min.css" />
+    <link rel="stylesheet" href="/Common/DimLayer.min.css" />
+    <link rel="stylesheet" href="/Search/SearchModal.min.css" />
+    <link rel="stylesheet" href="/Common/Link.min.css" />
+    <link rel="stylesheet" href="/Common/CheckableInput.min.css" />
+    <link rel="stylesheet" href="/Common/Form.min.css" />
+    <link rel="stylesheet" href="/Common/InputGroup.min.css" />
+    <link rel="stylesheet" href="/Common/Dropdown.min.css" />
+    <link rel="stylesheet" href="/Common/Message.min.css" />
+    <link rel="stylesheet" href="/SignUp/SignUpLayout.min.css" />
+    <link rel="stylesheet" href="/SignUp/SignUpSection.min.css" />
+</head>
+
+<body>
+    <div id="root">
+        <header class="oa-main-layout__header">
+            <nav class="oa-topmost-bar" aria-label="secondary">
+                <section class="oa-topmost-bar__container">
+                    <div class="oa-language-switcher" data-language-key="en"></div>
+                    <ul class="oa-topmost-bar__links">
+                        <li class="oa-topmost-bar__link">
+                            <a href="/education-center"><small>Education Center</small></a>
+                        </li>
+                        <li class="oa-topmost-bar__link">
+                            <a href="/about-amway"><small>About Amway</small></a>
+                        </li>
+                        <li class="oa-topmost-bar__link">
+                            <a href="/stores"><small>Stores</small></a>
+                        </li>
+                        <li class="oa-topmost-bar__link --outstanding">
+                            <a href="/business-center"><small>Business Center</small></a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+            <nav class="oa-navigation-bar" aria-label="primary" data-dropdown-top-restrict="true">
+                <div class="oa-navigation-bar__container">
+                    <section class="oa-navigation-bar__section --left">
+                        <button id="oa-hamburger" class="oa-navigation-bar__hamburger" type="button">
+                <img
+                  class="oa-image"
+                  data-src="/static/images/hamburger.svg"
+                  alt="hamburger"
+                />
+              </button>
+                        <a class="oa-navigation-bar__logo" href="/">
+                            <img class="oa-image" data-src="/static/images/amway-logo-white.svg" alt="amway-logo-white" />
+                        </a>
+                        <div class="oa-navigation-bar__search-input">
+                            <div class="oa-input oa-search-input">
+                                <span class="oa-icon --search oa-input__icon"></span>
+                                <input type="text" placeholder="Search by Name / Product ID" class="oa-input__input input-lg form-control --round --inverse --small --with-icon" />
+                            </div>
+                        </div>
+                    </section>
+                    <section class="oa-navigation-bar__section --right">
+                        <button id="oa-search-button" type="button" class="oa-navigation-bar__search-button">
+                <span class="oa-icon --search oa-navigation-bar__icon"></span>
+              </button>
+                        <span class="oa-icon --cart oa-navigation-bar__icon"></span>
+                        <div id="oa-user" class="oa-navigation-bar__user">
+                            <span class="oa-icon --user oa-navigation-bar__user-icon"></span>
+                            <span class="oa-navigation-bar__user-entry">
+                  <a class="oa-navigation-bar__login" href="/login">Login</a>
+                  <span>/</span>
+                            <a class="oa-navigation-bar__register" href="/register">
+                    Register
+                  </a>
+                            </span>
+                        </div>
+                    </section>
+                </div>
+            </nav>
+            <nav id="oa-menu-bar" class="oa-menu-bar" aria-label="menu">
+                <ul class="oa-menu-bar__container">
+                    <li class="oa-menu-bar__item --outstanding" data-id="promotions">
+                        <span class="oa-menu-bar__text">Promotions</span>
+                    </li>
+                    <li class="oa-menu-bar__item" data-id="brands">
+                        <span class="oa-menu-bar__text">Brands</span>
+                    </li>
+                    <li class="oa-menu-bar__item" data-id="nutrition">
+                        <span class="oa-menu-bar__text">Nutrition</span>
+                    </li>
+                    <li class="oa-menu-bar__item" data-id="beauty">
+                        <span class="oa-menu-bar__text">Beauty</span>
+                    </li>
+                    <li class="oa-menu-bar__item" data-id="personal-care">
+                        <span class="oa-menu-bar__text">Personal Care</span>
+                    </li>
+                    <li class="oa-menu-bar__item" data-id="home-living">
+                        <span class="oa-menu-bar__text">Home Living</span>
+                    </li>
+                    <li class="oa-menu-bar__item" data-id="agriculture">
+                        <span class="oa-menu-bar__text">Agriculture</span>
+                    </li>
+                    <li class="oa-menu-bar__item" data-id="energy-drink">
+                        <span class="oa-menu-bar__text">Energy Drink</span>
+                    </li>
+                    <li class="oa-menu-bar__item" data-id="sop">
+                        <span class="oa-menu-bar__text">SOP</span>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="dim-layer" class="oa-dim-layer"></div>
+        <nav id="oa-product-menu" class="oa-popup-menu --left oa-product-menu" data-level="1" aria-label="menu">
+            <div id="oa-product-menu-arrow" class="oa-menu-arrow --white"></div>
+            <header class="oa-popup-menu__header">
+                <span class="oa-icon --close oa-product-menu__close-button"></span>
+                <span class="oa-icon --back oa-product-menu__back-button"></span>
+                <h6 class="oa-product-menu__title">
+                    <span data-title-level="1">Shopping</span>
+                    <span data-title-level="2"></span>
+                    <span data-title-level="3"></span>
+                </h6>
+            </header>
+            <div class="oa-popup-menu__container">
+                <div class="oa-product-menu__container">
+                    <ul class="oa-product-menu__categories">
+                        <li>
+                            <a class="oa-product-menu__category --outstanding" data-id="promotions" data-title="Promotions" href="/promotions">
+                                <span class="oa-product-menu__text --desktop">
+                    Promotions
+                  </span>
+                                <span class="oa-product-menu__text --mobile">Promotions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="brands" data-title="Shop by Brand" href="/brands">
+                                <span class="oa-product-menu__text --desktop">Brands</span>
+                                <span class="oa-product-menu__text --mobile">
+                    Shop by Brand
+                  </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="nutrition" data-title="Nutrition" href="/nutrition">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-nutrition.svg" alt="Nutrition" />
+                                <span class="oa-product-menu__text --desktop">Nutrition</span>
+                                <span class="oa-product-menu__text --mobile">Nutrition</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="beauty" data-title="Beauty" href="/beauty">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-beauty.svg" alt="Beauty" />
+                                <span class="oa-product-menu__text --desktop">Beauty</span>
+                                <span class="oa-product-menu__text --mobile">Beauty</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="personal-care" data-title="Personal Care" href="/personal-care">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-personal-care.svg" alt="Personal Care" />
+                                <span class="oa-product-menu__text --desktop">
+                    Personal Care
+                  </span>
+                                <span class="oa-product-menu__text --mobile">
+                    Personal Care
+                  </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="home-living" data-title="Home Living" href="/home-living">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-home-living.svg" alt="Home Living" />
+                                <span class="oa-product-menu__text --desktop">
+                    Home Living
+                  </span>
+                                <span class="oa-product-menu__text --mobile">
+                    Home Living
+                  </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="agriculture" data-title="Agriculture" href="/agriculture">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-agriculture.svg" alt="Agriculture" />
+                                <span class="oa-product-menu__text --desktop">
+                    Agriculture
+                  </span>
+                                <span class="oa-product-menu__text --mobile">
+                    Agriculture
+                  </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="energy-drink" data-title="Energy Drink" href="/energy-drink">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-energy-drink.svg" alt="Energy Drink" />
+                                <span class="oa-product-menu__text --desktop">
+                    Energy Drink
+                  </span>
+                                <span class="oa-product-menu__text --mobile">
+                    Energy Drink
+                  </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="others" data-title="Others" href="/others">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-others.svg" alt="Others" />
+                                <span class="oa-product-menu__text --desktop">Others</span>
+                                <span class="oa-product-menu__text --mobile">Others</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="oa-product-menu__category" data-id="sop" data-title="SOP" href="/sop">
+                                <img class="oa-image oa-product-menu__icon" data-src="/static/images/category-sop.svg" alt="SOP" />
+                                <span class="oa-product-menu__text --desktop">SOP</span>
+                                <span class="oa-product-menu__text --mobile">SOP</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="brands-detail" class="oa-product-menu__category-detail --brands">
+                        <li>
+                            <a href="/brand/nutrilite">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-nutrilite.svg" alt="brand-nutrilite" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/artistry">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-artistry.svg" alt="brand-artistry" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/glister">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-glister.svg" alt="brand-glister" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/g-h">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-g-h.svg" alt="brand-g-h" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/satinique">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-satinique.svg" alt="brand-satinique" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/atmosphere-sky">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-atmosphere-sky.svg" alt="brand-atmosphere-sky" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/e-spring">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-e-spring.svg" alt="brand-e-spring" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/amway-home">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-amway-home.svg" alt="brand-amway-home" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/amway-queen">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-amway-queen.svg" alt="brand-amway-queen" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/bodykey">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-bodykey.svg" alt="brand-bodykey" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brand/nutriplant">
+                                <img class="oa-image oa-product-menu__brand" data-src="/static/images/brand-nutriplant.svg" alt="brand-nutriplant" />
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="beauty-detail" class="oa-product-menu__category-detail --sub-categories">
+                        <li>
+                            <a class="oa-product-menu__see-all" href="/beauty">See all</a>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/skin-care" data-id="skin-care" data-title="Skin Care">
+                                <span class="oa-product-menu__text">Skin Care</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="skin-care-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/skin-care">
+                      See all
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/cleansing">
+                      Cleansing
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/serun">
+                      Serum
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/moisturizer">
+                      Moisturizer
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/serum-moisturizer">
+                      Serum &amp; Moisturizer
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/eye-cream">
+                      Eye Cream
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/sun-screen">
+                      Sun Screen
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/mask">
+                      Mask
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/for-men">
+                      For Men
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/special-treatment">
+                      Special Treatment
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/make-up" data-id="make-up" data-title="Make Up">
+                                <span class="oa-product-menu__text">Make Up</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="make-up-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/make-up">
+                      See all
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/facial">
+                      Facial
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/eyes">
+                      Eyes
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/lips">
+                      Lips
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/cheeks">
+                      Cheeks
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/collection" data-id="collection" data-title="Collection">
+                                <span class="oa-product-menu__text">Collection</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="collection-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/collection">
+                      See all
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/paris-set-edition">
+                      Paris Set Edition
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/bangkok-set-edition">
+                      Bangkok Set Edition
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/perfume" data-id="perfume" data-title="Perfume">
+                                <span class="oa-product-menu__text">Perfume</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="perfume-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/perfume">
+                      See all
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/flora-chic">
+                      Flora Chic
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/unknown">
+                      Unknown
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/accessories" data-id="accessories" data-title="Accessories">
+                                <span class="oa-product-menu__text">Accessories</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="accessories-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/accessories">
+                      See all
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/make-up-tools">
+                      Make Up Tools
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/facial-care-tools">
+                      Facial Care Tools
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/cleansing-cloth">
+                      Cleansing Cloth
+                    </a>
+                                </li>
+                                <li>
+                                    <a class="oa-product-menu__sub-category-item" href="/facial-hygienic">
+                      Facial Hygienic
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul id="agriculture-detail" class="oa-product-menu__category-detail --sub-categories">
+                        <li>
+                            <a class="oa-product-menu__see-all" href="/agriculture">
+                  See all
+                </a>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/mineral-supplements" data-id="mineral-supplements" data-title="Mineral Supplements">
+                                <span class="oa-product-menu__text">Mineral Supplements</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="mineral-supplements-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/mineral-supplements">
+                      See all
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/supplement-fertilizer" data-id="supplement-fertilizer" data-title="Supplement Fertilizer">
+                                <span class="oa-product-menu__text">
+                    Supplement Fertilizer
+                  </span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="supplement-fertilizer-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/supplement-fertilizer">
+                      See all
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="oa-product-menu__category-item">
+                            <a class="oa-product-menu__sub-category" href="/plant-fertilizer" data-id="plant-fertilizer" data-title="Plant Fertilizer">
+                                <span class="oa-product-menu__text">Plant Fertilizer</span>
+                                <span class="oa-icon --arrow-right oa-product-menu__list-arrow"></span>
+                            </a>
+                            <ul id="plant-fertilizer-detail" class="oa-product-menu__sub-category-detail">
+                                <li>
+                                    <a class="oa-product-menu__see-all" href="/plant-fertilizer">
+                      See all
+                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav id="oa-user-menu" class="oa-popup-menu --right oa-user-menu --inverse" aria-label="menu">
+            <div id="oa-user-menu-arrow" class="oa-menu-arrow --amway-500"></div>
+            <header class="oa-popup-menu__header">
+                <div class="oa-user-menu__header">
+                    <span class="oa-icon --close oa-user-menu__close-button"></span>
+                </div>
+            </header>
+            <div class="oa-popup-menu__container">
+                <div class="oa-user-menu__entry">
+                    <a href="/login" class="oa-button btn btn-lg --primary --fill --regular">
+                        <span>Login</span>
+                    </a>
+                    <a href="/register" class="oa-button btn btn-lg --secondary --fill --regular">
+                        <span>Create Account</span>
+                    </a>
+                </div>
+                <ul>
+                    <li>
+                        <a class="oa-user-menu__item --outstanding" href="/business-center">
+                Business Center
+              </a>
+                    </li>
+                    <li>
+                        <a class="oa-user-menu__item" href="/awaiting-payment">
+                Awaiting Payment
+                <img
+                  class="oa-image oa-user-menu__noti"
+                  data-src="/static/images/new.svg"
+                  alt="new"
+                />
+              </a>
+                    </li>
+                    <li><a class="oa-user-menu__item" href="/my-sop">My SOP</a></li>
+                    <li>
+                        <a class="oa-user-menu__item" href="/education">Education</a>
+                    </li>
+                    <li>
+                        <a class="oa-user-menu__item" href="/store-locator">
+                Store Locator
+              </a>
+                    </li>
+                    <li>
+                        <a class="oa-user-menu__item" href="/about-amway">About Amway</a>
+                    </li>
+                    <li>
+                        <a class="oa-user-menu__logout" href="/">
+                            <span class="oa-icon --logout oa-user-menu__logout-icon"></span>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="oa-search-modal" class="oa-search-modal">
+            <header class="oa-search-modal__header">
+                <div class="oa-input oa-search-input">
+                    <span class="oa-icon --search oa-input__icon"></span>
+                    <input type="text" placeholder="Search by Name / Product ID" class="oa-input__input input-lg form-control --round --small --with-icon" />
+                </div>
+                <button id="oa-search-modal-close-button" type="button" class="oa-search-modal__close-button">
+            <small>Cancel</small>
+          </button>
+            </header>
+            <section class="oa-search-modal__section">
+                <header>
+                    <h6 class="oa-search-modal__title">Matching Keywords</h6>
+                </header>
+                <ul class="oa-search-modal__keywords">
+                    <li>
+                        <a class="oa-search-modal__keyword" href="/beauty/artistry">
+                            <span>Artistry</span>
+                            <span>
+                  Search in
+                  <strong>Beauty</strong>
+                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="oa-search-modal__keyword" href="/nutrition/arabica">
+                            <span>Arabica</span>
+                            <span>
+                  Search in
+                  <strong>Nutrition</strong>
+                </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="oa-search-modal__section">
+                <header>
+                    <h6 class="oa-search-modal__title">Products</h6>
+                    <a href="/see-all-matching-keywords" class="oa-link oa-search-modal__see-all">
+                        <small>see all</small>
+                        <span class="oa-icon --arrow-right"></span>
+                    </a>
+                </header>
+                <ul class="oa-search-modal__products">
+                    <li>
+                        <a class="oa-search-modal__product" href="/product/artistry-exact-fit™-perfecting-loose-powder-light}">
+                            <img class="oa-image oa-search-modal__product-image" data-src="/static/images/mock-search-result-artistry-powder.jpeg" alt="mock-search-result-artistry-powder" />
+                            <div class="oa-search-modal__product-info">
+                                <p class="oa-search-modal__product-title">
+                                    Artistry Exact Fit™ Perfecting Loose Powder - Light
+                                </p>
+                                <p class="oa-search-modal__product-description"></p>
+                                <div class="oa-search-modal__product-checkout">
+                                    <span class="oa-search-modal__product-price">฿964</span>
+                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
+                      <span>Add to Cart</span>
+                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="oa-search-modal__product" href="/product/artistry-signature-color™-lipstick}">
+                            <img class="oa-image oa-search-modal__product-image" data-src="/static/images/mock-search-result-artistry-lipstick.jpeg" alt="mock-search-result-artistry-lipstick" />
+                            <div class="oa-search-modal__product-info">
+                                <p class="oa-search-modal__product-title">
+                                    Artistry Signature Color™ Lipstick
+                                </p>
+                                <p class="oa-search-modal__product-description">16 colors</p>
+                                <div class="oa-search-modal__product-checkout">
+                                    <span class="oa-search-modal__product-price">880</span>
+                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
+                      <span>Add to Cart</span>
+                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="oa-search-modal__product" href="/product/artistry-exact-fit™-perfecting-loose-powder}">
+                            <img class="oa-image oa-search-modal__product-image" data-src="/static/images/mock-search-result-artistry-powder.jpeg" alt="mock-search-result-artistry-powder" />
+                            <div class="oa-search-modal__product-info">
+                                <p class="oa-search-modal__product-title">
+                                    Artistry Exact Fit™ Perfecting Loose Powder
+                                </p>
+                                <p class="oa-search-modal__product-description"></p>
+                                <div class="oa-search-modal__product-checkout">
+                                    <span class="oa-search-modal__product-price">
+                      ฿964 ~ ฿1,564
+                    </span>
+                                    <button type="button" class="oa-button btn btn-lg --secondary --auto --extra-small">
+                      <span>Add to Cart</span>
+                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div id="oa-main-layout" class="oa-main-layout">
+            <div class="oa-main-layout__content">
+                <main class="oa-sign-up-layout">
+                    <picture class="oa-image oa-sign-up-layout__cover-image --regular">
+                        <source media="(max-width: 375px)" srcset="/static/images/sign-up-mobile.png" />
+                        <source media="(max-width: 750px)" srcset="/static/images/sign-up-mobile@2x.png" />
+                        <source media="(max-width: 992px)" srcset="/static/images/sign-up-mobile@3x.png" />
+                        <source media="(max-width: 1325px) and (max-height: 848px)" srcset="/static/images/sign-up-desktop.png" />
+                        <source media="(max-width: 2650px) and (max-height: 1696px)" srcset="/static/images/sign-up-desktop@2x.png" />
+                        <source srcset="/static/images/sign-up-desktop@3x.png" />
+                        <img data-src="/static/images/sign-up-mobile@3x.png" alt="mobile cover" />
+                    </picture>
+                    <section class="oa-sign-up-section --right">
+                        <header class="oa-sign-up-layout__header --align-center">
+                            <h1 class="oa-sign-up-layout__title">
+                                มาร่วมเป็นส่วนหนึ่ง กับแอมเวย์
+                            </h1>
+                            <p class="oa-sign-up-layout__description"></p>
+                        </header>
+                        <form class="oa-form oa-sign-up__form --regular" action="#" id="sign-up-form">
+                            <div>
+                                <div class="oa-input-group">
+                                    <div class="oa-input oa-input-group__input">
+                                        <label class="oa-input__label" for="id-card">
+                        <small>เลขที่บัตรประชาชน</small>
+                      </label>
+                                        <input type="text" id="id-card" name="id-card" placeholder="เลขที่บัตรประชาชน" class="oa-input__input input-lg form-control --undefined" />
+                                    </div>
+                                    <p class="oa-message --error oa-input-group__error-message">
+                                        <small id="id-card-error"></small>
+                                    </p>
+                                </div>
+                                <div class="oa-checkable-input">
+                                    <input type="checkbox" id="agreement" name="agreement" class="oa-checkable-input__input --checkbox" data-toggle="collapse" data-target="#content-agreement-agreement:not(.in), .oa-checkable-input__content:not(#content-agreement-agreement).in" />
+                                    <div class="oa-checkable-input__container">
+                                        <label for="agreement" class="oa-checkable-input__label">
+                        <span
+                          class="oa-icon --unchecked oa-checkable-input__icon --unchecked"
+                        ></span>
+                        <span
+                          class="oa-icon --checkbox-checked oa-checkable-input__icon --checked"
+                        ></span>
+                        <span>
+                          คุณยอมรับ
+                          <a href="/" class="oa-link --bold">
+                            เงื่อนไขการสมัครสมาชิกแอมเวย์
+                          </a>
+                        </span>
+                      </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="oa-sign-up__form-footer">
+                                <button type="submit" disabled="" class="oa-button btn btn-lg --primary --fill --regular">
+                    <span>ลงทะเบียน</span>
+                  </button>
+                                <p>
+                                    คุณเป็นสมาชิกของแอมเวย์แล้ว
+                                    <a href="/" class="oa-link --bold">ลงชื่อเข้าใช้</a>
+                                </p>
+                            </div>
+                        </form>
+                    </section>
+                </main>
+                <footer class="oa-footer">
+                    <ul class="oa-footer__nav">
+                        <li>
+                            <a href="/" title="Privacy and Security">
+                  Privacy &amp; Security
+                </a>
+                        </li>
+                        <li><a href="/" title="Terms of Use">Terms of Use</a></li>
+                        <li><a href="/" title="Site Map">Site Map</a></li>
+                    </ul>
+                    <h4 class="oa-footer__contact-center">
+                        Amway Contact Center - 02 725 8000
+                    </h4>
+                    <div class="oa-footer__copyright">©2018 Amway (Thailand) Ltd.</div>
+                    <ul class="oa-footer__logos">
+                        <li>
+                            <a href="https://www.trustmarkthai.com/callbackData/popup.php?data=c-21-4-bd07975b07268923b0278916b1e0866c9fdfe37592f&amp;amp;markID=firstmark">
+                                <img class="oa-image" data-src="/static/images/tdsa.png" alt="tdsa" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wfdsa.org/">
+                                <img class="oa-image" data-src="/static/images/wfdsa.png" alt="wfdsa" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.tdsa.org/">
+                                <img class="oa-image" data-src="/static/images/dbd-registered.png" alt="dbd-registered" />
+                            </a>
+                        </li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/Common/js/image.js"></script>
+    <script src="/Search/js/SearchModal.js"></script>
+    <script src="/Header/js/UserMenu.js"></script>
+    <script src="/Header/js/ProductMenu.js"></script>
+    <script src="/Header/js/LanguageSwitcher.js"></script>
+    <script src="/Layout/js/MainLayout.js"></script>
+    <script src="/lib/js/jquery.validate.min.js"></script>
+    <script src="/lib/js/validator.min.js"></script>
+    <script src="/Common/js/formValidationDefaults.js"></script>
+    <script src="/SignUp/js/SignUp.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,747 @@
+.promotion-view-area {
+    width: 100%;
+    height: 4rem;
+    background: url('../../image/creator/banner/banner-mb.svg');
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    border-radius: 0.625rem;
+    display: flex;
+    justify-content: center;
+}
+
+.promotion-view {
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.promotion-view-img-area {
+    width: 4.25rem;
+    margin-top: -1.4rem;
+}
+
+.promotion-view-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.promotion-view-box {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: 100%;
+    display: flex;
+}
+
+.promotion-view-btn-area {
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.promotion-view-content {
+    padding-top: 0.5rem;
+    width: calc(100% - 9.25rem);
+    padding-left: 1rem;
+}
+
+.promotion-view-content-title,
+.promotion-view-content-text {
+    color: #38539A;
+}
+
+.promotion-view-content-title {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.promotion-view-content-text {
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.promotion-view-btn {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    background: #38539A;
+    border: 0.125rem solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+}
+
+.promotion-view-btn:hover {
+    color: #ffffff;
+}
+
+@media(min-width:1024px) {
+    .promotion-view {
+        padding-top: 2rem;
+        padding-bottom: 0rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .promotion-view-area {
+        width: 25rem;
+    }
+    /* .promotion-view-area {
+        width: 100%;
+        height: 8rem;
+        background: url('../../image/creator/banner/banner-dt.svg');
+        background-position: center !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        border-radius: 0.625rem;
+        display: flex;
+        justify-content: center;
+    }
+    .promotion-view-img-area {
+        width: 7.2rem;
+        margin-top: -1rem;
+    }
+    .promotion-view-img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+    .promotion-view-box {
+        width: 28.5rem;
+        display: flex;
+    }
+    .promotion-view-btn-area {
+        width: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .promotion-view-content {
+        padding-top: 2.5rem;
+        width: calc(100% - 15.2rem);
+        padding-left: 1rem;
+    }
+    .promotion-view-content-title,
+    .promotion-view-content-text {
+        color: #38539A;
+    }
+    .promotion-view-content-title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+    }
+    .promotion-view-content-text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+    }
+    .promotion-view-btn {
+        width: 100%;
+        height: 3rem;
+        border-radius: 1.5rem;
+        background: #38539A;
+        border: 0.125rem solid #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+        color: #ffffff;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    } */
+}
+
+@media(max-width:1023px) {
+    .promotion-view {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    /* .promotion-view-area {
+        width: 100%;
+        height: 4rem;
+        background: url('../../image/creator/banner/banner-mb.svg');
+        background-position: center !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        border-radius: 0.625rem;
+        display: flex;
+        justify-content: center;
+    }
+    .promotion-view {
+        padding-top: 2.5rem;
+        padding-bottom: 1rem;
+    }
+    .promotion-view-img-area {
+        width: 4.25rem;
+        margin-top: -1.4rem;
+    }
+    .promotion-view-img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+    .promotion-view-box {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        width: 100%;
+        display: flex;
+    }
+    .promotion-view-btn-area {
+        width: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .promotion-view-content {
+        padding-top: 0.5rem;
+        width: calc(100% - 9.25rem);
+        padding-left: 1rem;
+    }
+    .promotion-view-content-title,
+    .promotion-view-content-text {
+        color: #38539A;
+    }
+    .promotion-view-content-title {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+    }
+    .promotion-view-content-text {
+        font-size: 0.813rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+    }
+    .promotion-view-btn {
+        width: 100%;
+        height: 2.5rem;
+        border-radius: 1.25rem;
+        background: #38539A;
+        border: 0.125rem solid #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+        color: #ffffff;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    } */
+}
+
+@media(max-width:425px) {
+    .promotion-view {
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+    }
+}
+
+
+/* customer-right-full */
+
+.customer-right-full-header {
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.customer-right-full.promotion {
+    background: #EDEDED;
+}
+
+.amway-modal-customer-right.active {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1504;
+}
+
+@media(min-width:1024px) {
+    .customer-right-full-on-scroll::-webkit-scrollbar {
+        /* width */
+        width: 0.375rem;
+    }
+    .customer-right-full-on-scroll::-webkit-scrollbar-track {
+        /* Track */
+        background: #EDEDED;
+        border-radius: 0.188rem;
+    }
+    .customer-right-full-on-scroll::-webkit-scrollbar-thumb {
+        /* Handle */
+        background: #D5D5D5;
+        border-radius: 0.188rem;
+    }
+    .customer-right-full-on-scroll::-webkit-scrollbar-thumb:hover {
+        /* Handle on hover */
+        background: #D5D5D5;
+    }
+    .customer-right-full {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 23.438rem;
+        height: 100%;
+        background: #ffffff;
+        transform: translateX(100%);
+        transition: 0.4s ease;
+    }
+    .amway-modal-customer-right.active .customer-right-full {
+        transform: translateX(0%);
+    }
+    .customer-right-full-header {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        width: 100%;
+        height: 3rem;
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: #FFFFFF;
+    }
+    .customer-right-full-on-scroll {
+        overflow: hidden;
+        overflow-y: auto;
+        height: calc(100% - 3rem);
+    }
+    .customer-right-full-header-close {
+        width: 1.125rem;
+        height: 1.125rem;
+        background: url('../../image/creator/icon/icon-close.svg');
+        background-size: 1.125rem 1.125rem;
+        cursor: pointer;
+    }
+    .customer-right-full-header-title {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+    }
+}
+
+@media(max-width:1023px) {
+    .customer-right-full {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        transform: translateX(100%);
+        transition: 0.4s ease;
+        z-index: 15004;
+    }
+    .amway-modal-customer-right.active .customer-right-full {
+        transform: translateX(0%);
+    }
+    .customer-right-full-header {
+        width: 100%;
+        height: 3rem;
+        position: fixed;
+        z-index: 1500;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: #FFFFFF;
+        -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgb(56 83 154 / 10%);
+        -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(56, 83, 154, 0.10);
+        box-shadow: 0rem 0.25rem 0.5rem 0rem rgb(56 83 154 / 10%)
+    }
+    .customer-right-full-header-title {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+    }
+    .customer-right-full-on-scroll {
+        margin-top: 3rem;
+        overflow: hidden;
+        overflow-y: scroll;
+        height: calc(100% - 3rem);
+    }
+    .productDetial .customer-right-full-on-scroll {
+        margin-top: 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+        height: calc(100%);
+    }
+    .customer-right-full-header-close {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+        background: #ffffff;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .customer-right-full-header-close::before {
+        content: 'b';
+        font-family: Amway Icon !important;
+        color: #2c2c2c;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 400;
+    }
+    .pdp-mylist-area-close {
+        position: absolute;
+        top: 1rem;
+        left: 1.5rem;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+        background: #ffffff;
+        -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+        box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 15;
+    }
+    .pdp-mylist-area-close::before {
+        content: 'b';
+        font-family: Amway Icon !important;
+        color: #2c2c2c;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 400;
+    }
+}
+
+
+/* promo */
+
+.list-promotion-box-area {
+    padding-bottom: 3rem;
+}
+
+.list-promotion-card-tag {
+    width: 6.25rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+    background: #38539A;
+    color: #F1F2FF;
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.list-promotion-card-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-promotion-card-text {
+    width: calc(100% - 5rem);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.list-promotion-card-img-area {
+    width: 5rem;
+    height: 4rem;
+    padding-left: 1rem;
+    cursor: pointer;
+}
+
+.list-promotion-card-img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.625rem;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.listPromotion-back {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: #ffffff;
+    -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    -moz-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.125rem 0.25rem 0rem rgb(0 0 0 / 16%);
+    justify-content: center;
+}
+
+.listPromotion-title {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    position: absolute;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.listPromotion-back .amway-header-creator-back-text {
+    display: none;
+}
+
+.list-promotion-title {
+    display: none;
+}
+
+.list-promotion-card {
+    width: 100%;
+    margin-top: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: #ffffff;
+}
+
+
+/* pdp */
+
+.pdp-mylist-area-box {
+    position: relative;
+}
+
+.pdp-mylist-area {
+    padding-bottom: 3rem;
+}
+
+.pdp-mylist-img-area .item {
+    width: 100%;
+    position: relative;
+}
+
+@media(min-width:1024px) {
+    .pdp-mylist-img-area .item {
+        width: 23.438rem !important;
+    }
+}
+
+@media(max-width:1023px) {
+    .pdp-mylist-img-area .item {
+        width: 100vw !important;
+    }
+}
+
+.pdp-mylist-img-item {
+    width: 100%;
+    position: relative;
+}
+
+.pdp-mylist-img-item::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100%;
+}
+
+.pdp-mylist-img-item-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.pdp-mylist-img-area .owl-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+}
+
+.pdp-mylist-img-area .owl-dot {
+    color: transparent;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background: rgba(44, 44, 44, 0.5) !important;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.pdp-mylist-img-area .owl-dot.active {
+    color: transparent;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background: rgba(44, 44, 44, 1) !important;
+}
+
+.pdp-mylist-img-area .slick-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.pdp-mylist-img-area .slick-dots li {
+    width: 1rem;
+    height: 1rem;
+}
+
+.pdp-mylist-img-area .slick-dots li button {
+    color: transparent;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background: rgba(44, 44, 44, 0.5);
+}
+
+.pdp-mylist-img-area .slick-dots li.slick-active button {
+    color: transparent;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background: rgba(44, 44, 44, 1);
+}
+
+.pdp-mylist-info {
+    background: #EDEDED;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.688rem;
+    padding-bottom: 1rem;
+}
+
+.pdp-mylist-info-code {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: #9EA0A3;
+}
+
+.pdp-mylist-info-name {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+}
+
+.pdp-mylist-info-price {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+.pdp-mylist-info-score {
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.pdp-mylist-content-area {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.pdp-mylist-datail {
+    padding-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+    border: none;
+    border-bottom: 0.125rem solid #EDEDED;
+}
+
+.pdp-mylist-collapse-area {
+    border: none;
+    border-bottom: 0.125rem solid #EDEDED;
+    cursor: pointer;
+    padding-bottom: 1rem;
+}
+
+.pdp-mylist-collapse {
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    padding-top: 1rem;
+    justify-content: space-between;
+}
+
+.pdp-mylist-collapse-title {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+}
+
+.pdp-mylist-collapse-arrow {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.pdp-mylist-collapse-arrow::before {
+    content: 'a';
+    font-family: Amway Icon !important;
+    color: #2c2c2c;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+    transition: 0.3s ease;
+}
+
+.pdp-mylist-collapse.active .pdp-mylist-collapse-arrow::before {
+    transform: rotate(180deg);
+}
+
+.pdp-mylist-collapse-content {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    overflow: hidden;
+    height: 0;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
+
+.pdp-mylist-collapse-content.active {
+    height: auto;
+    max-height: 120rem;
+    padding-top: 1rem;
+}

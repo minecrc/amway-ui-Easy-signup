@@ -1,0 +1,895 @@
+.summary-box {
+    padding-bottom: 3rem;
+}
+.summary-box .checkout-box-content {
+    padding: 1rem 1.5rem;
+}
+.checkout-box-sub-title {
+    display: none;
+    margin-top: 0.5rem;
+    font-size: 0.813rem;
+    line-height: 1.313rem;
+}
+.checkout-box-sub-title.active {
+    display: block;
+}
+.checkout-box-edit-btn.active {
+    display: none;
+}
+.checkout-box-edit-btn-edit-text {
+    font-size: 0.813rem;
+}
+
+.checkout-box-add-bank {
+    margin-top: 0.5rem;
+    font-weight: 700;
+}
+.checkout-box-add-bank.active {
+    display: none;
+}
+
+.estarter-banner {
+    display: none;
+    height: 4rem;
+    margin-top: 1rem;
+    border-radius: 0.625rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../image/FOA/banner/estarter-bg.svg");
+}
+.estarter-banner-image img {
+    width: 100%;
+}
+.estarter-banner-content {
+    padding-left: 0.75rem;
+    color: #38539A;
+}
+.starterkit-banner {
+    display: none;
+    height: 4rem;
+    margin-top: 1rem;
+    border-radius: 0.625rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../image/FOA/banner/starter-bg.svg");
+}
+.estarter-banner.active, .starterkit-banner.active {
+    display: flex;
+    align-items: center;
+}
+.starter-banner-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.25rem 1rem;
+    color: #38539A;
+}
+.starter-banner-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-right: 0.75rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../../image/FOA/illustration/starter-kit.svg");
+}
+.starter-banner-content-title {
+    font-weight: 700;
+}
+.starter-banner-content-title span {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+.starter-banner-content-text {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+/* .starter-banner-content-coupon {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../image/FOA/illustration/coupon.svg");
+} */
+.starter-banner-content-link {
+    margin-top: 0.375rem;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.625rem;
+    text-decoration: underline;
+    text-align: center
+}
+
+.kit-address {
+    display: none;
+    /* margin-top: 1.125rem; */
+}
+.kit-address.active {
+    display: block;
+}
+.ka-date {
+    display: flex;
+    align-items: center;
+    color: #38539A;
+    font-weight: 500;
+}
+.ka-date-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.25rem;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.at-shop .ka-date-icon {
+    background-image: url("../../image/FOA/icon/icon-shop-b.svg");
+}
+.at-home .ka-date-icon {
+    background-image: url("../../image/FOA/icon/icon-car-b.svg");
+}
+.ka-address, .ka-contact {
+    margin-top: 0.688rem;
+}
+.ka-contact-title {
+    font-weight: 700;
+}
+
+.amplus-banner {
+    display: flex;
+    align-items: center;
+    height: 5.688rem;
+    border-radius: 0.625rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../image/FOA/banner/amplus-bg.svg");
+}
+.amplus-banner-image {
+    width: 4.25rem;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: url("../../image/FOA/illustration/amplus-point.svg");
+}
+.amplus-banner-content-title {
+    font-weight: 700;
+    line-height: 1.625rem;
+    color: #38539A;
+}
+.amplus-banner-content-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.375rem;
+    color: #2C2C2C;
+}
+
+/* starter kit */
+.amway-side-box {
+    position: fixed;
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.amway-side-box.active {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+}
+.side-box {
+    width: 100%;
+    max-width: 26.125rem;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    overflow-y: auto;
+    background-color: #ffffff;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+.amway-side-box.active .side-box {
+    visibility: visible;
+    transform: translateX(0%);
+}
+.side-box-bar {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 0.188rem 0.375rem rgba(56, 83, 154, 0.16);
+}
+.side-box-btn-back {
+    position: absolute;
+    top: 0.75rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 6rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(56, 83, 154, 0.16);
+}
+.side-box-btn-back::before {
+    content: "b";
+    font-size: 1.75rem;
+    font-family: Amway Icon !important;
+}
+.side-box-bar-title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.625rem;
+}
+/* Choose Starter Area */
+.foa-starter-area {
+    padding: 1rem;
+}
+.starter-checkbox-input {
+    position: absolute;
+    z-index: -9999;
+    opacity: 0;
+}
+.starter-checkbox-label {
+    border-radius: 0.625rem;
+    border: 0.125rem solid #EDEDED;
+    width: 100%;
+    height: 100%;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+    display: flex;
+}
+.starter-checkbox-content {
+    width: calc(100% - 1rem);
+    padding-left: 1rem;
+}
+.starter-checkbox-icon {
+    margin-top: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid #EDEDED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.starter-checkbox-content-area {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.starter-checkbox-content-title, .starter-checkbox-content-price {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    font-weight: 700;
+}
+.starter-checkbox-content-text {
+    margin-top: 0.25rem;
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+.starter-checkbox-input:checked~.starter-checkbox-label .starter-checkbox-icon {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid #2c2c2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.starter-checkbox-input:checked~.starter-checkbox-label .starter-checkbox-icon::before {
+    content: '';
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background: #2c2c2c;
+}
+.starter-checkbox-input:checked~.starter-checkbox-label {
+    border-radius: 0.625rem;
+    border: 0.125rem solid #2c2c2c;
+}
+
+.eStarter-kit-checkbox {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.starter-checkbox-content-recommend {
+    display: table;
+    width: auto;
+    padding: 0 1rem;
+    margin-top: -1.2rem;
+    color: #ffffff;
+    font-size: 0.625rem;
+    font-weight: 800;
+    line-height: 1.125rem;
+    border-radius: 2rem;
+    border: 0.125rem solid #C7CAF0;
+    background-color: #38539A;
+}
+.checkout-box-label {
+    font-size: 0.813rem;
+}
+/* Switch */
+.sidebox-starter-switch {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+.sidebox-switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 18rem;
+    height: 2.25rem;
+    border-radius: 1.5rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    border: 0.125rem solid #EDEDED;
+    -webkit-box-shadow: 0rem 0.063rem 0.125rem 0rem rgb(62 83 149 / 10%);
+    -moz-box-shadow: 0rem 0.063rem 0.125rem 0rem rgba(62, 83, 149, 0.10);
+    box-shadow: 0rem 0.063rem 0.125rem 0rem rgb(62 83 149 / 10%);
+}
+.sidebox-switch.at-shop::before {
+    transform: translateX(0);
+}
+.sidebox-switch.at-home::before {
+    transform: translateX(100%);
+}
+.sidebox-switch::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background-color: #EDEDED;
+    width: 8.875rem;
+    height: 2rem;
+    border-radius: 1.5rem;
+    -webkit-box-shadow: 0.125rem 0rem 0.125rem 0rem rgb(56 83 154 / 10%);
+    -moz-box-shadow: 0.125rem 0rem 0.125rem 0rem rgba(56, 83, 154, 0.10);
+    box-shadow: 0.125rem 0rem 0.125rem 0rem rgb(56 83 154 / 10%);
+    transition: transform 0.3s ease;
+}
+.starter-checkbox-input:checked~.starter-checkbox-label .sidebox-switch::before {
+    background-color: #2C2C2C;
+}
+.sidebox-switch-list {
+    width: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    color: #9EA0A3;
+}
+.starter-checkbox-input:checked~.starter-checkbox-label .sidebox-switch-list {
+    color: #2C2C2C;
+}
+.starter-checkbox-input:checked~.starter-checkbox-label .sidebox-switch-list.--active {
+    color: #FFFFFF;
+}
+.sidebox-switch-list-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.25rem;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.sidebox-switch-list-icon.at-shop {
+    background-image: url("../../image/FOA/icon/icon-shop-g.svg");
+}
+.sidebox-switch-list-icon.at-home {
+    background-image: url("../../image/FOA/icon/icon-car-g.svg");
+}
+.starter-checkbox-input:checked~.starter-checkbox-label .sidebox-switch-list-icon.at-shop {
+    background-image: url("../../image/FOA/icon/icon-shop.svg");
+}
+.starter-checkbox-input:checked~.starter-checkbox-label .sidebox-switch-list-icon.at-home {
+    background-image: url("../../image/FOA/icon/icon-car.svg");
+}
+.starter-checkbox-input:checked~.starter-checkbox-label .sidebox-switch-list.--active .sidebox-switch-list-icon.at-shop {
+    background-image: url("../../image/FOA/icon/icon-shop-w.svg");
+}
+.starter-checkbox-input:checked~.starter-checkbox-label .sidebox-switch-list.--active .sidebox-switch-list-icon.at-home {
+    background-image: url("../../image/FOA/icon/icon-car-w.svg");
+}
+.sidebox-switch-list-title {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+}
+
+/* End Switch */
+.switch-box-detail {
+    display: none;
+    margin-bottom: 1rem;
+}
+.switch-box-detail.--active {
+    display: block;
+}
+.switch-box-detail .mz-dropdown__button {
+    color: #9EA0A3;
+}
+.starter-checkbox-input:checked~.starter-checkbox-label .switch-box-detail .mz-dropdown__button {
+    color: #2c2c2c;
+}
+
+.address-checkbox {
+    margin-bottom: 1rem;
+}
+.address-checkbox-input {
+    position: absolute;
+    z-index: -9999;
+    opacity: 0;
+}
+.address-checkbox-label {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-top: 0.5rem;
+    padding-right: 3rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    border-radius: 0.625rem;
+    border: 0.125rem solid #EDEDED;
+}
+.address-checkbox-input:checked~.address-checkbox-label {
+    border: 0.125rem solid #EDEDED;
+}
+.starter-checkbox-input:checked~.starter-checkbox-label .address-checkbox-input:checked~.address-checkbox-label {
+    border-radius: 0.625rem;
+    border: 0.125rem solid #2c2c2c;
+}
+.address-checkbox-content-text {
+    font-size: 0.813rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+    color: #9EA0A3;
+}
+.starter-checkbox-input:checked~.starter-checkbox-label .address-checkbox-content-text {
+    color: #2c2c2c;
+}
+.address-checkbox-input:checked~.address-checkbox-label::after {
+    content: "g";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    background-color: #9EA0A3;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    font-family: Amway Icon !important;
+}
+.starter-checkbox-input:checked~.starter-checkbox-label .address-checkbox-input:checked~.address-checkbox-label::after {
+    background-color: #2C2C2C;
+}
+
+.add-address-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #EDEDED;
+    opacity: 0.5;
+}
+.starter-checkbox-input:checked~.starter-checkbox-label .add-address-btn {
+    opacity: 1;
+}
+.add-address-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.25rem;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../image/FOA/icon/icon-add-address.svg");
+}
+.add-address-text {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.375rem;
+}
+
+.address-info-content {
+    padding: 1rem;
+}
+/* End starter kit */
+
+/* checkout-regis-bar-area */
+.checkout-regis-bar-area {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 4.75rem;
+    z-index: 1502;
+}
+.checkout-regis-bar {
+    width: 100%;
+    height: 100%;
+    max-width: 1212px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.checkout-regis-bar-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background: #FFF;
+    -webkit-box-shadow: 0rem 0rem 1rem 0rem rgb(56 83 154 / 16%);
+    -moz-box-shadow: 0rem 0rem 1rem 0rem rgba(56, 83, 154, 0.16);
+    box-shadow: 0rem 0rem 1rem 0rem rgb(56 83 154 / 16%);
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.checkout-regis-bar-btn-box button, .checkout-regis-bar-btn-box a {
+    width: 10rem;
+    height: 3rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+.checkout-regis-bar-price-box {
+    width: calc(100% - 10rem);
+}
+.checkout-regis-bar-price-area {
+    display: flex;
+    align-items: center;
+}
+.checkout-regis-bar-price {
+    color: #CB5454;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+.checkout-regis-bar-price-title {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+/* End checkout-regis-bar-area */
+
+.add-bank-area {
+    padding: 1.5rem;
+}
+.added-bank-detail {
+    display: none;
+}
+.added-bank-detail.active {
+    display: flex;
+}
+.bank-detail-title {
+    margin-top: 0.5rem;
+}
+.bank-detail-text {
+    color: #9EA0A3;
+}
+.bank-detail-image-area {
+    position: relative;
+    overflow: hidden;
+}
+.bank-detail-image-area::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+.bank-detail-image {
+    position: absolute;
+    object-fit: cover;
+}
+
+.amway-input-description {
+    color: #9EA0A3;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.image-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.image-popup.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(44, 44, 44, 0.7);
+}
+.image-area {
+    position: relative;
+}
+.image-popup-close {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 1rem;
+    color: #2c2c2c;
+    background-color: #ffffff;
+    box-shadow: 0 0.125rem 1rem #2c2c2c;
+}
+.image-popup-close::before {
+    content: 'r';
+    font-weight: 700;
+    font-family: Amway Icon !important;
+}
+
+@media (min-width: 1024px) {
+    .summary-box {
+        width: 48rem;
+    }
+    .checkout-box-content-btn {
+        width: 15.563rem;
+        margin: 1.5rem auto;
+    }
+    .checkout-box-content {
+        border-bottom: 0.063rem solid #F8F8F8;
+    }
+    .estarter-banner {
+        justify-content: center;
+    }
+    .estarter-illust {
+        height: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .estarter-illust-left {
+        width: 4rem;
+        margin-left: 1rem;
+        margin-right: 2.375rem;
+        background-image: url('../../image/FOA/illustration/estarter-1.svg');
+    }
+    .estarter-illust-right {
+        width: 7.125rem;
+        margin-left: 0.313rem;
+        background-image: url('../../image/FOA/illustration/estarter-2.svg');
+    }
+    .estarter-banner-image {
+        width: 3rem;
+        height: 3rem;
+    }
+    .estarter-banner-content, .starter-banner-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .starter-banner-content-coupon {
+        width: 11.75rem;
+    }
+    .starterkit-banner {
+        height: 5rem;
+        justify-content: center;
+        padding: 0.25rem 0.5rem;
+    }
+    .ka-address {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .ka-contact {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .amplus-banner {
+        justify-content: center;
+    }
+    .checkout-box-edit-sub-title {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5rem;
+    }
+    .image-area img {
+        width: auto;
+        height: 32rem;
+    }
+    .image-popup-close {
+        top: -1rem;
+        right: -1rem;
+        height: 2rem;
+        width: 2rem;
+    }
+    .image-popup-close::before {
+        font-size: 1.25rem;
+    }
+    .added-bank-detail.active {
+        flex-direction: row-reverse;
+    }
+    .bank-detail-left, .bank-detail-right {
+        width: 50%;
+    }
+    .bank-detail-title {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .bank-detail-text {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+    }
+    .bank-detail-image-area {
+        max-width: 15.5rem;
+        max-height: 15.5rem;
+        border-radius: 0.625rem;
+    }
+    .bank-detail-image-area .bank-detail-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.625rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .amway-header, .amway-header-modal-all {
+        display: none;
+    }
+    .amway-main-layout {
+        padding-top: 0;
+    }
+    .checkout-box-otp-send-area {
+        padding-bottom: 3rem;
+    }
+    .checkout-progress-trackers-content-box.add-padding-bottom {
+        padding-bottom: 5.5rem;
+    }
+    .checkout-box-footer {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        padding: 1rem 1rem 1.5rem;
+        background-color: #ffffff;
+    }
+    .checkout-box-footer.on-side-box {
+        position: relative;
+        padding: 1.5rem 0 0.5rem;
+    }
+    .summary-box {
+        width: 100%;
+    }
+    
+    .checkout-box-content {
+        border-bottom: 0.25rem solid #F8F8F8;
+    }
+    .checkout-regis-bar-box {
+        border-bottom-right-radius: 0rem;
+        border-bottom-left-radius: 0rem;
+    }
+    .checkout-box-content-btn {
+        display: none;
+    }
+    .estarter-banner-image {
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-left: 1.5rem;
+    }
+    .estarter-banner-content {
+        width: calc(100% - 4.25rem);
+    }
+    .estarter-illust {
+        display: none;
+    }
+    .starter-banner-content-text {
+        margin-bottom : 0.375rem;
+    }
+    .ka-date {
+        font-size: 0.813rem;
+        line-height: 1.125rem;
+    }
+    .ka-address {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+    .ka-contact {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+    .checkout-box-edit-sub-title {
+        font-size: 0.813rem;
+        font-weight: 700;
+        line-height: 1.5rem;
+    }
+    .checkout-box-add-bank {
+        font-size: 0.813rem;
+    }
+    .image-area {
+        width: 85%;
+    }
+    .image-area img {
+        width: 100%;
+        height: auto;
+    }
+    .image-popup-close {
+        top: -0.75rem;
+        right: -0.75rem;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    .image-popup-close::before {
+        font-size: 1rem;
+    }
+    .added-bank-detail.active {
+        display: block;
+    }
+    .bank-detail-title {
+        font-size: 0.813rem;
+        font-weight: 700;
+        line-height: 1.313rem;
+    }
+    .bank-detail-text {
+        font-size: 0.813rem;
+        font-weight: 500;
+        line-height: 1.313rem;
+    }
+    .bank-detail-image-area {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.625rem;
+        margin-top: 1rem;
+    }
+    .bank-detail-image-area .bank-detail-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.625rem;
+    }
+}
+
+@media (max-width: 1023px) and (max-height: 425px) {
+    .checkout-box-footer {
+        position: relative;
+        padding: 1.5rem 1rem 0;
+    }
+}

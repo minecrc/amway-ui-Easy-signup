@@ -1,0 +1,23 @@
+.oa-image {
+  position: relative;
+}
+.oa-image,
+.oa-image img {
+  transition: opacity 0.2s;
+}
+.oa-image img[data-src],
+.oa-image img[data-src-set],
+.oa-image[data-src],
+.oa-image[data-background-src] {
+  opacity: 0;
+}
+.oa-image.--insert-animation,
+.oa-image.--insert-animation img {
+  transition: transform 0.5s cubic-bezier(0.4, 0.1, 0.5, 1.5), opacity 0.5s;
+}
+.oa-image.--insert-animation img[data-src],
+.oa-image.--insert-animation img[data-src-set],
+.oa-image.--insert-animation[data-src],
+.oa-image.--insert-animation[data-background-src] {
+  transform: translateY(-10%);
+}

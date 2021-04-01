@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shop list detail FOA</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/common.251e0dcdff5dc232292e.css" />
+    <link rel="stylesheet" href="../../styles/Header___Header.7c1ab78bbef29ad6a8f4.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/common/css/style.css" />
+
+    <link rel="stylesheet" href="../../styles/common/css/new_modal.css" />
+    <link rel="stylesheet" href="../../ShareBar/css/select_bundle.css" />
+    <link rel="stylesheet" href="../../ShareBar/css/choose_banner_Sharelist.css" />
+
+    <link rel="stylesheet" href="../../Header_degito/css/header_creator.css" />
+
+    <link rel="stylesheet" href="../../AmwayCreator/css/button.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/shop-default.css" />
+
+    <link rel="stylesheet" href="../../AmwayCreator/css/shop-list.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/shop-list-pd.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/pd-search.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/change-cover.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/re-style-select-color-and-bundle.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/shop-default-mod.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/registration-level-share.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/input-mod.css" />
+    <link rel="stylesheet" href="../../AmwayCreator/css/customer-view.css" />
+</head>
+
+
+<body>
+    <div id="root">
+        <div class="amway-header-creator-area visible-desktop" data-dropdown-top-restrict="true">
+            <div class="amway-header-creator-container">
+                <div class="amway-header-creator-main">
+                    <div class="amway-header-creator-left">
+
+
+                        <a class="amway-logo-icon-creator"></a>
+                    </div>
+                    <div class="amway-header-creator-right">
+
+                        <a href="Mylist_cart.html" class="amway-header-creator-cart">
+                            <div class="amway-header-creator-cart-count">0</div>
+                        </a>
+                        <div class="amway-header-language  visible-desktop">
+                            <div class="ahl-btn">English</div>
+                            <input type="hidden" value="en" name="inputLanguage" id="inputLanguage" class="inputLanguage">
+                            <div class="amway-header-modal for-changeLang ">
+                                <div class="bg-ahm sp"></div>
+                            </div>
+                            <div class="ahl-menu">
+                                <div class="ahl-menu-list" data-lang="th">ไทย</div>
+                                <div class="ahl-menu-list " data-lang="en">English</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="amway-main-layout " class="amway-main-layout no-inMobile-mylist">
+            <div class="amway-main-layout__content ">
+                <!-- content area -->
+                <div class="shop-list-navbar pink  visible-mobile" id="shop-list-navbar">
+                    <div class="amway-container">
+                        <div class="shop-list-navbar-area ">
+
+
+                            <a href="FOA_mylist.html" class="shop-list-navbar-back"></a>
+                            <div class="shop-list-navbar-title">MAKE UP NO MAKE UP</div>
+                            <a href="checkout_page_otp.html" class="shop-list-navbar-cart"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-list-banner pink customerView" id="shop-list-banner">
+                    <div class="amway-container">
+                        <div class="amway-breadcrumb visible-desktop ">
+                            <div class="amway-bc-list ">หน้าหลัก</div>
+                            <div class="amway-bc-list active ">MAKE UP NO MAKE UP
+                            </div>
+                        </div>
+                        <a href="FOA_mylist.html" class="shop-list-btn-back visible-mobile"></a>
+                        <a href="checkout_page_otp.html" class="shop-list-btn-cart visible-mobile"></a>
+                        <div class="shop-list-banner-area">
+                            <div class="shop-list-banner-content">
+                                <div class="shop-list-banner-name-area">
+                                    <div class="shop-list-banner-name">MAKE UP NO MAKE UP</div>
+
+
+                                </div>
+
+                                <div class="shop-list-banner-detail">แต่งหน้าแบบธรรมชาติ ซ่อมผิวให้สวยปิ๊งให้ ลุคสวยใส ฉบับสาวสุขภาพดี
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="shop-list-content-area">
+                    <div class="amway-container">
+                        <div class="shop-list-title-foa">
+                            <div class="shop-list-title-foa-text">รายการสินค้าแนะนำ</div>
+                        </div>
+                    </div>
+
+                    <div class="shop-list-all  list-for-abo">
+                        <div class="amway-container">
+
+                            <div class="shop-list-pd-item" id="pd-0001">
+                                <div class="shop-list-pdI-checkbox amway-chx">
+                                    <input type="checkbox" class="amway-chx-input shop-list-pdI-checkbox-input " id="shop-list-pdI-chx01" name="shop-list-pdI-chx01">
+                                    <label for="shop-list-pdI-chx01" class="amway-chx-label"></label>
+                                </div>
+                                <div class="shop-list-pdI-product-pic-area">
+                                    <div class="shop-list-pdI-product-pic-bg">
+                                        <img class="shop-list-pdI-product-pic" src="../../image/creator/product/normal.svg">
+                                    </div>
+                                </div>
+                                <div class="shop-list-pdI-product">
+
+                                    <div class="shop-list-pdI-product-alldetail">
+                                        <div class="shop-list-pdI-product-code">
+                                            <div class="shop-list-pdI-promo">Promo</div> รหัส#0102345
+                                        </div>
+                                        <div class="shop-list-pdI-product-name" onclick="openModal('productDetial')">
+                                            Artistry Signature Select™ Firming Body Lotion</div>
+                                        <div class="shop-list-pdI-product-status">
+                                            <div class="amway-shop-list-pdI-statut --available">
+                                                <div class="stock-status-icon --available"></div>
+                                                พร้อมจำหน่าย
+                                            </div>
+                                        </div>
+                                        <div class="shop-list-pdI-product-change">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop-list-pdI-area">
+
+                                    <div class="shop-list-pdI-quantity customerView">
+                                        <div class="mz-integer-input ">
+                                            <div class="mz-integer-input__quantity --active ">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true" disabled="disabled">
+                                                    <span class="mz-icon --minus"></span>
+                                                    <div class="btn-del-bin"
+                                                        onclick="openModalInput('deleteItem', 'pd-0001')"></div>
+                                                </button>
+                                                <input type="tel" id="001-quantity" name="001-quantity" class="mz-integer-input__input" min="1" value="1" max="100" />
+                                                <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                    <span class="mz-icon --add"></span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="shop-list-pdI-price-score">
+                                        <div class="shop-list-pdI-price-member">฿ 3,456 <span class="title-price">Member</span></div>
+                                        <div class="shop-list-pdI-price-customer">฿ 1,928 <span class="title-price">Customer</span></div>
+                                    </div>
+
+
+                                </div>
+                                <div class="shop-list-pdI-delete">
+                                </div>
+                                <div class="shop-list-pdI-promotion">
+                                    <div class="shop-list-pdI-promotion-icon">
+                                    </div>
+                                    <div class="shop-list-pdI-promotion-content">
+                                        <div class="shop-list-pdI-promotion-content-title">
+                                            ซื้อ 2 ชิ้น แถมฟรีอีก 1 ชิ้น สีใดก็ได้
+                                        </div>
+                                        <div class="shop-list-pdI-promotion-content-text">
+                                            เมื่อสมัครเป็นครอบครัวแอมเวย์
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop-list-pd-item" id="pd-0002">
+                                <div class="shop-list-pdI-checkbox amway-chx">
+                                    <input type="checkbox" class="amway-chx-input shop-list-pdI-checkbox-input " id="shop-list-pdI-chx02" name="shop-list-pdI-chx02">
+                                    <label for="shop-list-pdI-chx02" class="amway-chx-label"></label>
+                                </div>
+                                <div class="shop-list-pdI-product-pic-area">
+                                    <div class="shop-list-pdI-product-pic-bg">
+                                        <img class="shop-list-pdI-product-pic" src="../../image/creator/product/color.svg">
+                                    </div>
+                                </div>
+                                <div class="shop-list-pdI-product">
+
+                                    <div class="shop-list-pdI-product-alldetail">
+                                        <div class="shop-list-pdI-product-code">
+                                            รหัส#0102345
+                                        </div>
+                                        <div class="shop-list-pdI-product-name" onclick="openModal('productDetial')">
+                                            Artistry Studio Bangkok Edition 2-In-1 Matte Lip Crayon </div>
+                                        <div class="shop-list-pdI-product-status">
+
+                                            <div class="amway-shop-list-pdI-statut --available">
+                                                <div class="stock-status-icon --available"></div>
+                                                พร้อมจำหน่าย
+                                            </div>
+
+                                        </div>
+                                        <div class="shop-list-pdI-product-change active">
+                                            <section class="mz-cart-item__left-section">
+                                                <input name="102375-variant" id="102375-variant" class="mz-dropdown-input__input " value="sl-0001" readonly="" />
+                                                <div class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown dd-marke-check">
+                                                    <button id="102375-variant-dropdown" type="button" class="mz-dropdown__button" data-placeholder="สี" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <div class="mz-dropdown__button-text --selected">
+                                                            <img class="mz-image mz-dropdown__option-image mz-cart-item-variant-dropdown__image"
+                                                                data-src="../../image/products/color/rose-goddess.png"
+                                                                alt="rose-goddess" />
+                                                            <div class="mz-dropdown__text">สีโรส ก็อตเดส</div>
+                                                        </div>
+                                                        <span class="mz-icon --arrow-down mz-dropdown__icon"></span>
+                                                    </button>
+                                                    <ul class="mz-dropdown__menu dropdown-menu" aria-labelledby="102375-variant-dropdown">
+                                                        <div class="mod_mz-dropdown__menu">
+                                                            <li data-value="sl-0001" class="mz-dropdown__option">
+                                                                <img class="mz-image mz-dropdown__option-image mz-cart-item-variant-dropdown__image" data-src="../../image/products/color/rose-goddess.png" alt="rose-goddess" />
+                                                                <div class="mz-dropdown__text">สีโรส ก็อตเดส</div>
+                                                            </li>
+                                                            <li data-value="sl-0002" class="mz-dropdown__option ">
+                                                                <img class="mz-image mz-dropdown__option-image mz-cart-item-variant-dropdown__image" data-src="../../image/products/color/ruby-goddess.png" alt="ruby-goddess" />
+                                                                <div class="mz-dropdown__text">สีรูบี้ ก็อดเดส</div>
+                                                            </li>
+                                                            <li data-value="sl-0003" class="mz-dropdown__option">
+                                                                <img class="mz-image mz-dropdown__option-image mz-cart-item-variant-dropdown__image" data-src="../../image/products/color/spiced-goddess.png" alt="spiced-goddess" />
+                                                                <div class="mz-dropdown__text">สีสไปซ์ด ก็อดเดส</div>
+                                                            </li>
+                                                            <li data-value="sl-0004" class="mz-dropdown__option">
+                                                                <img class="mz-image mz-dropdown__option-image mz-cart-item-variant-dropdown__image" data-src="../../image/products/color/sunset-goddess.png" alt="sunset-goddess" />
+                                                                <div class="mz-dropdown__text">สีซันเซ็ต ก๊อดเดส</div>
+                                                            </li>
+                                                            <li data-value="sl-0005" class="mz-dropdown__option">
+                                                                <img class="mz-image mz-dropdown__option-image mz-cart-item-variant-dropdown__image" data-src="../../image/products/color/fuuchsia-goddess.png" alt="fuuchsia-goddess.png" />
+                                                                <div class="mz-dropdown__text">สีฟูเซีย ก๊อดเดส</div>
+                                                            </li>
+                                                        </div>
+
+                                                    </ul>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop-list-pdI-area">
+
+                                    <div class="shop-list-pdI-quantity customerView">
+                                        <div class="mz-integer-input ">
+                                            <div class="mz-integer-input__quantity --active ">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true" disabled="disabled">
+                                                    <span class="mz-icon --minus"></span>
+                                                    <div class="btn-del-bin"
+                                                        onclick="openModalInput('deleteItem', 'pd-0002')"></div>
+                                                </button>
+                                                <input type="tel" id="002-quantity" name="002-quantity" class="mz-integer-input__input" min="1" value="1" max="100" />
+                                                <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                    <span class="mz-icon --add"></span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="shop-list-pdI-price-score">
+                                        <div class="shop-list-pdI-price-member">฿ 3,456 <span class="title-price">Member</span></div>
+                                        <div class="shop-list-pdI-price-customer">฿ 1,928 <span class="title-price">Customer</span></div>
+                                    </div>
+
+
+                                </div>
+                                <div class="shop-list-pdI-delete">
+
+                                </div>
+                            </div>
+                            <div class="shop-list-pd-item" id="pd-0003">
+                                <div class="shop-list-pdI-checkbox amway-chx">
+                                    <input type="checkbox" class="amway-chx-input shop-list-pdI-checkbox-input " id="shop-list-pdI-chx03" name="shop-list-pdI-chx03">
+                                    <label for="shop-list-pdI-chx03" class="amway-chx-label"></label>
+                                </div>
+                                <div class="shop-list-pdI-product-pic-area">
+                                    <div class="shop-list-pdI-product-pic-bg">
+                                        <img class="shop-list-pdI-product-pic" src="../../image/products/PLP/pd-03.svg">
+                                    </div>
+                                </div>
+                                <div class="shop-list-pdI-product">
+
+                                    <div class="shop-list-pdI-product-alldetail">
+                                        <div class="shop-list-pdI-product-code">รหัส#0102345</div>
+                                        <div class="shop-list-pdI-product-name" onclick="openModal('productDetial')">
+                                            Nutrilite™ Strong Living Bundle
+                                        </div>
+                                        <div class="shop-list-pdI-product-status">
+                                            <div class="amway-shop-list-pdI-statut --backOrder">
+                                                <div class="stock-status-icon --backOrder"></div>
+                                                Accrued product ready on 22/02/20
+                                            </div>
+                                        </div>
+                                        <div class="shop-list-pdI-product-change active">
+                                            <section class="mz-cart-item__left-section">
+
+                                                <input name="102385-instalment" id="102385-instalment" class="mz-dropdown-input__input" value="0%4m" readonly="" />
+                                                <div class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown dd-marke-check">
+                                                    <button id="102385-instalment-dropdown" type="button" class="mz-dropdown__button" data-placeholder="ผ่อนชำระ" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <div class="mz-dropdown__button-text --selected">
+                                                            <div class="mz-dropdown__text">
+                                                                ผ่อนชำระ 0% 4 เดือน
+                                                            </div>
+                                                        </div>
+                                                        <span class="mz-icon --arrow-down mz-dropdown__icon"></span>
+                                                    </button>
+                                                    <ul class="mz-dropdown__menu dropdown-menu" aria-labelledby="102385-instalment-dropdown">
+                                                        <div class="mod_mz-dropdown__menu">
+                                                            <li data-value="0%4m" class="mz-dropdown__option">
+                                                                <div class="mz-dropdown__text">
+                                                                    ผ่อนชำระ 0% 4 เดือน
+                                                                </div>
+                                                            </li>
+                                                            <li data-value="2.5%12m" class="mz-dropdown__option">
+                                                                <div class="mz-dropdown__text">
+                                                                    ผ่อนชำระ 2.5% 12 เดือน
+                                                                </div>
+                                                            </li>
+                                                        </div>
+
+                                                    </ul>
+                                                </div>
+
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop-list-pdI-area">
+
+                                    <div class="shop-list-pdI-quantity customerView">
+                                        <div class="mz-integer-input  ">
+                                            <div class="mz-integer-input__quantity --active has_bin">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true" disabled>
+
+                                                </button> x1
+                                                <button type="button" class="mz-integer-input__stepper " disabled data-increment="true" disabled>
+                                                    <!--  <span class="mz-icon --add"></span> -->
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="shop-list-pdI-price-score">
+                                        <div class="shop-list-pdI-price-member">฿ 3,456 <span class="title-price">Member</span></div>
+                                        <div class="shop-list-pdI-price-customer">฿ 1,928 <span class="title-price">Customer</span></div>
+                                    </div>
+
+                                </div>
+                                <div class="shop-list-pdI-delete">
+
+                                </div>
+
+                                <div class="shop-list-pdI-bundle active">
+                                    <div class="shop-list-pdI-bundle-header">
+                                        สินค้าในชุดผลิตภัณฑ์นี้
+                                        <div class="shop-list-pdI-get-more-btn visible-desktop" onclick="openChooseBundle('choose-bundle', 'pd-0003')">
+                                            แก้ไขรายการนี้</div>
+                                    </div>
+                                    <div class="shop-list-pdI-bundle-content ">
+                                        <div class="shop-list-pdI-bundle-content-title">
+                                            สินค้าที่เลือก
+                                        </div>
+                                        <div class="shop-list-pdI-bundle-list">
+                                            <div class="shop-list-pdI-bundle-img-area">
+                                                <img class="shop-list-pdI-bundle-img" src="../../image/products/pd-buddle.png">
+                                            </div>
+                                            <div class="shop-list-pdI-bundle-piece">x2</div>
+                                            <div class="shop-list-pdI-bundle-title">
+                                                <div class="shop-list-pdI-bundle-title-area">
+                                                    <div class="shop-list-pdI-bundle-text">นิวทริไลท์ ดับเบิ้ลเอ็กซ์ ไฟโตเบลนด์
+                                                    </div>
+                                                    <div class="shop-list-pdI-product-status">
+                                                        <div class="amway-shop-list-pdI-statut --backOrder">
+                                                            <div class="stock-status-icon --backOrder"></div>
+                                                            Accrued product ready on 22/02/20
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="shop-list-pdI-bundle-list">
+                                            <div class="shop-list-pdI-bundle-img-area">
+                                                <img class="shop-list-pdI-bundle-img" src="../../image/products/pd-buddle.png">
+                                            </div>
+                                            <div class="shop-list-pdI-bundle-piece">x2</div>
+                                            <div class="shop-list-pdI-bundle-title">
+                                                <div class="shop-list-pdI-bundle-title-area">
+                                                    <div class="shop-list-pdI-bundle-text">บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                    </div>
+                                                    <div class="shop-list-pdI-product-status">
+                                                        <div class="amway-shop-list-pdI-statut --backOrder">
+                                                            <div class="stock-status-icon --backOrder"></div>
+                                                            Accrued product ready on 22/02/20
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="shop-list-pdI-bundle-list">
+                                            <div class="shop-list-pdI-bundle-img-area">
+                                                <img class="shop-list-pdI-bundle-img" src="../../image/products/pd-buddle.png">
+                                            </div>
+                                            <div class="shop-list-pdI-bundle-piece">x2</div>
+                                            <div class="shop-list-pdI-bundle-title">
+                                                <div class="shop-list-pdI-bundle-title-area">
+                                                    <div class="shop-list-pdI-bundle-text">บอดี้คีย์ ผลิตภัณฑ์ทดแทนมื้อาหาร รสช็อกโกแลต (ฟรี)
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="shop-list-pdI-bundle-list">
+                                            <div class="shop-list-pdI-bundle-img-area">
+                                                <img class="shop-list-pdI-bundle-img" src="../../image/products/pd-buddle.png">
+                                            </div>
+                                            <div class="shop-list-pdI-bundle-piece">x2</div>
+                                            <div class="shop-list-pdI-bundle-title">
+                                                <div class="shop-list-pdI-bundle-title-area">
+                                                    <div class="shop-list-pdI-bundle-text">บอดี้คีย์ ผลิตภัณฑ์ทดแทนมื้อาหาร รสช็อกโกแลต (ฟรี)
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="shop-list-pdI-bundle-list">
+                                            <div class="shop-list-pdI-bundle-img-area">
+                                                <img class="shop-list-pdI-bundle-img" src="../../image/products/pd-buddle.png">
+                                            </div>
+                                            <div class="shop-list-pdI-bundle-piece">x2</div>
+                                            <div class="shop-list-pdI-bundle-title">
+                                                <div class="shop-list-pdI-bundle-title-area">
+                                                    <div class="shop-list-pdI-bundle-text">นิวทริไลท์ ดับเบิ้ลเอ็กซ์ ไฟโตเบลนด์
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="shop-list-pdI-bundle-list">
+                                            <div class="shop-list-pdI-bundle-img-area">
+                                                <img class="shop-list-pdI-bundle-img" src="../../image/products/pd-buddle.png">
+                                            </div>
+                                            <div class="shop-list-pdI-bundle-piece">x2</div>
+                                            <div class="shop-list-pdI-bundle-title">
+                                                <div class="shop-list-pdI-bundle-title-area">
+                                                    <div class="shop-list-pdI-bundle-text">
+                                                        บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shop-list-pdI-bundle-content gray">
+                                        <div class="shop-list-pdI-bundle-content-title">
+                                            สินค้าอื่นๆที่อยู่ในชุด
+                                        </div>
+                                        <div class="shop-list-pdI-bundle-list">
+                                            <div class="shop-list-pdI-bundle-img-area">
+                                                <img class="shop-list-pdI-bundle-img" src="../../image/products/pd-buddle.png">
+                                            </div>
+                                            <div class="shop-list-pdI-bundle-piece">x2</div>
+                                            <div class="shop-list-pdI-bundle-title">
+                                                <div class="shop-list-pdI-bundle-title-area">
+                                                    <div class="shop-list-pdI-bundle-text">นิวทริไลท์ ดับเบิ้ลเอ็กซ์ ไฟโตเบลนด์
+                                                    </div>
+                                                    <div class="shop-list-pdI-product-status">
+                                                        <div class="amway-shop-list-pdI-statut --backOrder">
+                                                            <div class="stock-status-icon --backOrder"></div>
+                                                            Accrued product ready on 22/02/20
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="shop-list-pdI-bundle-list">
+                                            <div class="shop-list-pdI-bundle-img-area">
+                                                <img class="shop-list-pdI-bundle-img" src="../../image/products/pd-buddle.png">
+                                            </div>
+                                            <div class="shop-list-pdI-bundle-piece">x2</div>
+                                            <div class="shop-list-pdI-bundle-title">
+                                                <div class="shop-list-pdI-bundle-title-area">
+                                                    <div class="shop-list-pdI-bundle-text">บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                    </div>
+                                                    <div class="shop-list-pdI-product-status">
+                                                        <div class="amway-shop-list-pdI-statut --backOrder">
+                                                            <div class="stock-status-icon --backOrder"></div>
+                                                            Accrued product ready on 22/02/20
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="shop-list-pdI-bundle-list">
+                                            <div class="shop-list-pdI-bundle-img-area">
+                                                <img class="shop-list-pdI-bundle-img" src="../../image/products/pd-buddle.png">
+                                            </div>
+                                            <div class="shop-list-pdI-bundle-piece">x2</div>
+                                            <div class="shop-list-pdI-bundle-title">
+                                                <div class="shop-list-pdI-bundle-title-area">
+                                                    <div class="shop-list-pdI-bundle-text">บอดี้คีย์ ผลิตภัณฑ์ทดแทนมื้อาหาร รสช็อกโกแลต (ฟรี)
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="shop-list-pdI-bundle-list">
+                                            <div class="shop-list-pdI-bundle-img-area">
+                                                <img class="shop-list-pdI-bundle-img" src="../../image/products/pd-buddle.png">
+                                            </div>
+                                            <div class="shop-list-pdI-bundle-piece">x2</div>
+                                            <div class="shop-list-pdI-bundle-title">
+                                                <div class="shop-list-pdI-bundle-title-area">
+                                                    <div class="shop-list-pdI-bundle-text">บอดี้คีย์ ผลิตภัณฑ์ทดแทนมื้อาหาร รสช็อกโกแลต (ฟรี)
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="shop-list-pdI-bundle-list">
+                                            <div class="shop-list-pdI-bundle-img-area">
+                                                <img class="shop-list-pdI-bundle-img" src="../../image/products/pd-buddle.png">
+                                            </div>
+                                            <div class="shop-list-pdI-bundle-piece">x2</div>
+                                            <div class="shop-list-pdI-bundle-title">
+                                                <div class="shop-list-pdI-bundle-title-area">
+                                                    <div class="shop-list-pdI-bundle-text">นิวทริไลท์ ดับเบิ้ลเอ็กซ์ ไฟโตเบลนด์
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="shop-list-pdI-bundle-list">
+                                            <div class="shop-list-pdI-bundle-img-area">
+                                                <img class="shop-list-pdI-bundle-img" src="../../image/products/pd-buddle.png">
+                                            </div>
+                                            <div class="shop-list-pdI-bundle-piece">x2</div>
+                                            <div class="shop-list-pdI-bundle-title">
+                                                <div class="shop-list-pdI-bundle-title-area">
+                                                    <div class="shop-list-pdI-bundle-text">
+                                                        บอดี้คีย์ บาย นิวทริไลท์ ผลิตภัณฑ์ทดแทนมื้ออาหาร รสกาแฟ - ขนาด 420 กรัม (30 กรัม x 14 ซอง)
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" middle-with-flex  ">
+                                        <div class="shop-list-pdI-get-more-btn visible-mobile my-3" onclick="openChooseBundle('choose-bundle2', 'pd-0003')">
+                                            แก้ไขรายการนี้</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- end content area -->
+
+            </div>
+            <div class="shop-footer">
+                <div class="amway-container ">
+                    <div class="shop-footer-area">
+                        <div class="shop-f-content-call">
+                            <div class="shop-f-content-call-title">
+                                ต้องการความช่วยเหลือ ?
+                            </div>
+                            <div class="shop-f-content-call-number">
+                                <div class="shop-f-content-call-number-area">
+                                    <a href="tel:0-2725-8000">
+
+
+                                        <div class="shop-f-cc-n-icon">
+
+                                        </div>
+                                    </a>
+                                    <a href="tel:0-2725-8000" class="shop-f-cc-n-number">
+                                        0-2725-8000
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="shop-f-content-address">
+                            บริษัท แอมเวย์ (ประเทศไทย) จำกัด 1199/1 ถนนรามคำแหง แขวงหัวหมาก เขตบางกะปิ กรุงเทพ ฯ 10240
+                        </div>
+                        <div class="shop-f-content-language">
+                            <div class="shop-f-content-language-btn" onclick="openModal('shopChangeLangF')">
+                                <div class="shop-f-content-language-icon">
+
+                                </div>
+                                <div class="shop-f-content-language-text">
+                                    <div class="shop-f-content-language-text-list " data-lang="th">
+                                        ไทย
+                                    </div>
+                                    <div class="shop-f-content-language-text-list" data-lang="en">
+                                        English
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="shop-f-content-logo-area">
+                            <div class="shop-f-content-logo">
+                            </div>
+                        </div>
+                        <div class="shop-f-content-copyright">Copyright 2020,Amway(Thailand) Ltd,.</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="shop-change-lang-modal" id="shopChangeLangF">
+                <div class="bg-modal " onclick="closeModal('shopChangeLangF')"></div>
+                <div class="shop-change-lang-footer">
+                    <div class="shop-change-lang-footer-btn" onclick="closeModal('shopChangeLangF')" data-lang="th">
+                        <div class="shop-change-lang-footer-btn-text">
+                            ไทย
+                        </div>
+
+                    </div>
+                    <div class="shop-change-lang-footer-btn " onclick="closeModal('shopChangeLangF')" data-lang="en">
+                        <div class="shop-change-lang-footer-btn-text">
+                            English
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="amway-modal middle" id="deleteList">
+                <div class="bg-modal"></div>
+                <form class="amway-modal-content ">
+                    <div class="close-modal-bar">
+                        <div class="btn-close-modal"></div>
+                    </div>
+                    <div class="amway-modal-content-title text-center">ลบรายการแชร์ !</div>
+                    <div class="amway-modal-content-subtitle text-center">เมื่อลบแล้ว คุณจะไม่สามารถเข้าถึง แก้ไข หรือแชร์ได้อีก!
+                    </div>
+                    <div class="amway-modal-content-footer center">
+                        <button class="btn-outlin-black btn-h40 mr-3" onclick="closeModal('deleteList')">
+                            ยกเลิก</button>
+                        <button type="submit" class="btn-black btn-h40 confirm ">ยืนยัน</button>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="amway-modal middle" id="deleteItem">
+                <input type="hidden" class="input-for-use-something" value="">
+                <div class="bg-modal"></div>
+                <form class="amway-modal-content ">
+                    <div class="close-modal-bar">
+                        <div class="btn-close-modal"></div>
+                    </div>
+                    <div class="amway-modal-content-title text-center">ลบรายการ !</div>
+                    <div class="amway-modal-content-subtitle text-center">เมื่อลบแล้ว คุณจะไม่สามารถเข้าถึง แก้ไข หรือแชร์ได้อีก
+                    </div>
+                    <div class="amway-modal-content-footer center deleteItem-footer">
+                        <button class="btn-outlin-black btn-h40 mr-3" onclick="closeModal('deleteItem')">
+                            ยกเลิก</button> <button type="submit" class="btn-black btn-h40 confirm ">ยืนยัน</button>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="amway-modal-bar" id="addToCart">
+
+                <input type="hidden" class="input-for-use-something" value="">
+                <div class="amway-modal-bar-content ">
+                    <div class="shop-list-all-checkbox amway-chx">
+                        <input type="checkbox" class="amway-chx-input shop-list-all-chx-all" id="shop-list-all-chx" name="shop-list-all-chx">
+                        <label for="shop-list-all-chx" class="amway-chx-label"></label>
+                        <label for="shop-list-all-chx" class="amway-chx-label-text"><span
+                                class=" visible-desktop">เลือก</span>ทั้งหมด</label>
+                    </div>
+
+                    <div class="shop-list-barI-bar-count">
+                        สินค้าที่เลือกแล้ว
+                        <span class="count-select">0</span> รายการ
+                    </div>
+                    <div class="shop-list-barI-bar-detail">
+                        <div class="shop-list-barI-bar-price">
+                            ฿ 2,520
+                        </div>
+                        <div class="shop-list-barI-bar-main">
+                            Total price
+                        </div>
+
+
+                    </div>
+                    <div class="shop-list-barI-bar-btn">
+
+                        <button onclick="location.href='FOA_checkout_login_checkout_FOA_flow.html'" type="submit" class="btn-black btn-h40 submitCart " id="submitCart">
+                            <span class="text-submitCart">สั่งซื้อ</span> <span class="count-select-btn">(0)</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div class=" amway-modal-bundle " id="choose-bundle">
+                <div class="bg-modal"></div>
+                <div class="amway-modal-bundle-content">
+                    <div class="aw-header-bar">
+                        <div class="aw-header-bar-btn-back"></div>
+                        <div class="aw-header-bar-title">จัดการตัวเลือก</div>
+                    </div>
+                    <div class="aw-for-scroll">
+                        <div class="aw-product">
+                            <div class="aw-product-pic-area" onclick="openLModal('choose-bundle-lightbox')">
+                                <div class="aw-product-pic">
+                                    <div class="aw-product-img" style="background: url('../../image/products/PLP/pd-03.svg')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="aw-product-detail">
+                                <div class="aw-product-detail-code">รหัส#0102345</div>
+                                <div class="aw-product-detail-name">
+                                    บอดี้คีย์ บาย นิวทริไลท์ ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ แบบดับเบิ้ล เอ็กซ์ ไฟโตเลนด์ ชนิดเติม 1 กล่องและออลแพลนท์ โปรตีน 900 กรัม
+                                </div>
+                                <div class="aw-product-detail-price">฿ 19,232 - 19,512</div>
+                                <div class="aw-product-detail-score">PV 4,952 - 5,045 / BV 14,857 - 15,137</div>
+                            </div>
+                        </div>
+                        <div class="bundle-select-area">
+                            <div class="bundle-select">
+                                <input type="hidden" class="select-bundle-count-input" min="0" max="3" value="0" id="set-01">
+                                <div class="bundle-select-head">
+                                    <div class="select-bundle-title">
+                                        เลือกโปรตีนให้ครบ 3 ชิ้น
+                                    </div>
+                                    <div class="select-bundle-count-area">
+                                        <div class="select-bundle-count">
+                                            <div class="select-bundle-count-select">0</div>/
+                                            <div class="select-bundle-count-total">3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-select-list">
+                                    <div class="bsl-img-area">
+                                        <div class="bsl-img" style="background: url('../../image/products/pd_bundle.svg');"></div>
+                                    </div>
+                                    <div class="bsl-info-box">
+                                        <div class="bsl-pdname">
+                                            โปรตีน กลิ่นเบอร์รี - ขนาด 500 กรัม
+                                        </div>
+                                        <div class="bsl-status --backOrder">
+                                            <div class="bsl-status-icon"></div>
+                                            <div class="bsl-status-text">สินค้าค้างจ่าย 13/03/2021</div>
+                                        </div>
+                                    </div>
+                                    <div class="bsl-input">
+                                        <div class="mz-integer-input ">
+                                            <div class="mz-integer-input__quantity --active sop_dt">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                    <span class="mz-icon --minus"></span>
+
+                                                </button>
+                                                <input type="tel" id="001-select-01" name="001-select-01" class="mz-integer-input__input" min="0" value="0" max="3" />
+                                                <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                    <span class="mz-icon --add"></span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-select-list">
+                                    <div class="bsl-img-area">
+                                        <div class="bsl-img" style="background: url('../../image/products/pd_bundle.svg');"></div>
+                                    </div>
+                                    <div class="bsl-info-box">
+                                        <div class="bsl-pdname">
+                                            โปรตีน กลิ่นเบอร์รี - ขนาด 500 กรัม
+                                        </div>
+                                    </div>
+                                    <div class="bsl-input">
+                                        <div class="mz-integer-input ">
+                                            <div class="mz-integer-input__quantity --active sop_dt">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                    <span class="mz-icon --minus"></span>
+
+                                                </button>
+                                                <input type="tel" id="001-select-02" name="001-select-02" class="mz-integer-input__input" min="0" value="0" max="3" />
+                                                <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                    <span class="mz-icon --add"></span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-select-list">
+                                    <div class="bsl-img-area">
+                                        <div class="bsl-img" style="background: url('../../image/products/pd_bundle.svg');"></div>
+                                    </div>
+                                    <div class="bsl-info-box">
+                                        <div class="bsl-pdname">
+                                            โปรตีน กลิ่นเบอร์รี - ขนาด 500 กรัม
+                                        </div>
+                                        <div class="bsl-status --outOfStock">
+                                            <div class="bsl-status-icon"></div>
+                                            <div class="bsl-status-text">หมดชั่วคราว</div>
+                                        </div>
+                                    </div>
+                                    <div class="bsl-input">
+                                        <div class="mz-integer-input ">
+                                            <div class="mz-integer-input__quantity --active sop_dt">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                    <span class="mz-icon --minus"></span>
+
+                                                </button>
+                                                <input type="tel" id="001-select-03" name="001-select-03" class="mz-integer-input__input" min="0" value="0" max="3" />
+                                                <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                    <span class="mz-icon --add"></span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bundle-select">
+                                <input type="hidden" class="select-bundle-count-input" min="0" max="3" value="0" id="set-02">
+                                <div class="bundle-select-head">
+                                    <div class="select-bundle-title">
+                                        เลือกโปรตีนให้ครบ 3 ชิ้น
+                                    </div>
+                                    <div class="select-bundle-count-area">
+                                        <div class="select-bundle-count">
+                                            <div class="select-bundle-count-select">0</div>/
+                                            <div class="select-bundle-count-total">3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-select-list">
+                                    <div class="bsl-img-area">
+                                        <div class="bsl-img" style="background: url('../../image/products/pd_bundle.svg');"></div>
+                                    </div>
+                                    <div class="bsl-info-box">
+                                        <div class="bsl-pdname">
+                                            โปรตีน กลิ่นเบอร์รี - ขนาด 500 กรัม
+                                        </div>
+                                    </div>
+                                    <div class="bsl-input">
+                                        <div class="mz-integer-input ">
+                                            <div class="mz-integer-input__quantity --active sop_dt">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                    <span class="mz-icon --minus"></span>
+
+                                                </button>
+                                                <input type="tel" id="002-select-01" name="002-select-01" class="mz-integer-input__input" min="0" value="0" max="3" />
+                                                <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                    <span class="mz-icon --add"></span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-select-list">
+                                    <div class="bsl-img-area">
+                                        <div class="bsl-img" style="background: url('../../image/products/pd_bundle.svg');"></div>
+                                    </div>
+                                    <div class="bsl-info-box">
+                                        <div class="bsl-pdname">
+                                            โปรตีน กลิ่นเบอร์รี - ขนาด 500 กรัม
+                                        </div>
+                                        <div class="bsl-status --backOrder">
+                                            <div class="bsl-status-icon"></div>
+                                            <div class="bsl-status-text">สินค้าค้างจ่าย 13/03/2021</div>
+                                        </div>
+                                    </div>
+                                    <div class="bsl-input">
+                                        <div class="mz-integer-input ">
+                                            <div class="mz-integer-input__quantity --active sop_dt">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                    <span class="mz-icon --minus"></span>
+
+                                                </button>
+                                                <input type="tel" id="002-select-02" name="002-select-02" class="mz-integer-input__input" min="0" value="0" max="3" />
+                                                <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                    <span class="mz-icon --add"></span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-select-list">
+                                    <div class="bsl-img-area">
+                                        <div class="bsl-img" style="background: url('../../image/products/pd_bundle.svg');"></div>
+                                    </div>
+                                    <div class="bsl-info-box">
+                                        <div class="bsl-pdname">
+                                            โปรตีน กลิ่นเบอร์รี - ขนาด 500 กรัม
+                                        </div>
+                                        <div class="bsl-status --outOfStock">
+                                            <div class="bsl-status-icon"></div>
+                                            <div class="bsl-status-text">หมดชั่วคราว</div>
+                                        </div>
+                                    </div>
+                                    <div class="bsl-input">
+                                        <div class="mz-integer-input ">
+                                            <div class="mz-integer-input__quantity --active sop_dt">
+                                                <button type="button" class="mz-integer-input__stepper" data-decrement="true">
+                                                    <span class="mz-icon --minus"></span>
+
+                                                </button>
+                                                <input type="tel" id="002-select-03" name="002-select-03" class="mz-integer-input__input" min="0" value="0" max="3" />
+                                                <button type="button" class="mz-integer-input__stepper" data-increment="true">
+                                                    <span class="mz-icon --add"></span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="mz-button btn btn-lg mz-integer-input__add-button">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bundle-select is-selectbox">
+                                <input type="hidden" class="select-bundle-count-input" min="0" max="3" value="0" id="set-03">
+                                <div class="bundle-select-head">
+                                    <div class="select-bundle-title">
+                                        บอดี้คีย์ ผลิตภัณฑ์ทดแทนมื้ออาหาร (ฟรี) 1 ชิ้น
+                                    </div>
+                                </div>
+                                <div class="bundle-select-list">
+                                    <div class="bsl-img-area">
+                                        <div class="bsl-img" style="background: url('../../image/products/pd_bundle.svg');"></div>
+                                    </div>
+                                    <div class="bsl-info-box">
+                                        <div class="bsl-pdname">
+                                            โปรตีน กลิ่นเบอร์รี - ขนาด 500 กรัม
+                                        </div>
+                                        <div class="bsl-status --backOrder">
+                                            <div class="bsl-status-icon"></div>
+                                            <div class="bsl-status-text">สินค้าค้างจ่าย 13/03/2021</div>
+                                        </div>
+                                    </div>
+                                    <div class="bsl-select">
+                                        <section class="mz-cart-item__left-section">
+
+                                            <input name="flavour-instalment" id="flavour-instalment" class="mz-dropdown-input__input" value="0%4m" readonly="" />
+                                            <div class="mz-dropdown dropdown mz-dropdown-input__dropdown mz-cart-item__dropdown dd-marke-check on-modal">
+                                                <button id="102385-instalment-dropdown" type="button" class="mz-dropdown__button" data-placeholder="รสชาติ" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <div class="mz-dropdown__button-text --selected">
+                                                        <div class="mz-dropdown__text">
+                                                            รสวานิลลา
+                                                        </div>
+                                                    </div>
+                                                    <span class="mz-icon --arrow-down mz-dropdown__icon"></span>
+                                                </button>
+                                                <ul class="mz-dropdown__menu dropdown-menu" aria-labelledby="flavour-instalment-dropdown">
+                                                    <li data-value="0%4m" class="mz-dropdown__option">
+                                                        <div class="mz-dropdown__text">
+                                                            รสวานิลลา
+                                                        </div>
+                                                    </li>
+                                                    <li data-value="2.5%12m" class="mz-dropdown__option">
+                                                        <div class="mz-dropdown__text">
+                                                            รสช็อคโกแลต
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </section>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="bundle-sumary">
+                                <div class="bundle-sumary-header">
+                                    สินค้าอื่นๆ ในชุดผลิตภัณฑ์นี้
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-info-box">
+                                        <div class="bundle-sumary-name">นิวทริไลท์ ดับเบิ้ลเอ็กซ์ ไฟโตเบลนด์</div>
+                                        <div class="bsl-status --outOfStock">
+                                            <div class="bsl-status-icon"></div>
+                                            <div class="bsl-status-text">หมดชั่วคราว</div>
+                                        </div>
+                                    </div>
+                                    <div class="bundle-sumary-piece">x2</div>
+                                    <div class="bundle-sumary-price">฿2,148</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-info-box">
+                                        <div class="bundle-sumary-name">นิวทริไลท์เครื่องหมายการค้า ออล แพ ลนท์ โปรตีน - ขนาด 900 กรัม</div>
+                                        <div class="bsl-status --backOrder">
+                                            <div class="bsl-status-icon"></div>
+                                            <div class="bsl-status-text">สินค้าค้างจ่าย 13/03/2021</div>
+                                        </div>
+                                    </div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price">฿2,148</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-info-box">
+                                        <div class="bundle-sumary-name">กระเป๋าบอดี้คีย์</div>
+                                    </div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price free">Free</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-info-box">
+                                        <div class="bundle-sumary-name">เมนูบอดี้คีย์</div>
+                                    </div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price free">Free</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-info-box">
+                                        <div class="bundle-sumary-name">คู่มือบอดี้คีย์</div>
+                                    </div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price free">Free</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-info-box">
+                                        <div class="bundle-sumary-name">อินบอดี้วอทช์ (นาฬิกาเพื่อสุขภาพอิน บอดี้) InBody WATCH สีดำ - M/L</div>
+                                        <div class="bsl-status --backOrder">
+                                            <div class="bsl-status-icon"></div>
+                                            <div class="bsl-status-text">สินค้าค้างจ่าย 13/03/2021</div>
+                                        </div>
+                                    </div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price free">Free</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-info-box">
+                                        <div class="bundle-sumary-name">นิวทริไลท์เครื่องหมายการค้า กรีน-ที พลัส (ฟรี)
+                                        </div>
+                                    </div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price free">Free</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-info-box">
+                                        <div class="bundle-sumary-name">โบรชัวร์คู่มือการใช้งานอินบอดี้วอทช์ และแอพพลิเคชั่นบอดี้คีย์ 2.1</div>
+                                    </div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price free">Free</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-info-box">
+                                        <div class="bundle-sumary-name">โบรชัวร์ คู่มือการแข่งขันบอดี้คีย์ 2.1</div>
+                                    </div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price free">Free</div>
+                                </div>
+                                <div class="bundle-sumary-list">
+                                    <div class="bundle-sumary-info-box">
+                                        <div class="bundle-sumary-name">อุปกรณ์เสริมบอดี้ตีย์ พร้อมโบรชัวร์การแข่งขันลดน้ำหนักและสลายไขมัน ด้วยโปรแกรมบอดี้คีย์ 2020</div>
+                                    </div>
+                                    <div class="bundle-sumary-piece">x1</div>
+                                    <div class="bundle-sumary-price">฿5,000</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="aw-footer-bar">
+                        <button class="btn-black btn-h40 confirm" disabled onclick="openModal('ThelistHasShop')">ต่อไป</button>
+                    </div>
+
+                </div>
+                <div class="amway-model-lightbox" id="choose-bundle-lightbox">
+                    <div class="am-lb-bg"></div>
+                    <div class="am-lb-close" onclick="closeLModal('choose-bundle-lightbox')"></div>
+                    <div class="am-lb-img" style="background:url('../../image/products/PLP/pd-03.svg')"></div>
+                </div>
+            </div>
+
+            <div class="amway-modal-customer-right  " id="promotion">
+                <input type="hidden" class="input-for-use-something" value="">
+                <div class="bg-modal"></div>
+                <div class="customer-right-full promotion">
+                    <div class="customer-right-full-header">
+                        <div class="customer-right-full-header-close" onclick="closeModal('promotion')"></div>
+                        <div class="customer-right-full-header-title">ส่วนลดรายการสินค้า</div>
+                    </div>
+                    <div class="customer-right-full-on-scroll">
+                        <div class="list-promotion-box-area">
+                            <div class="list-promotion-card">
+                                <div class="list-promotion-card-tag">
+                                    Promotion
+                                </div>
+                                <div class="list-promotion-card-box">
+                                    <div class="list-promotion-card-text">
+                                        เมื่อซื้อArtistry Signature Select™ Firming Body Lotion 2 ชิ้นแถมฟรีอีก 1 ชิ้น สีใดก็ได้
+                                    </div>
+                                    <div class="list-promotion-card-img-area" onclick="openLModal('promotion-lightbox')">
+                                        <div class="list-promotion-card-img" style="background: url('../../image/creator/product/normal.svg');">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-promotion-card">
+                                <div class="list-promotion-card-tag">
+                                    Promotion
+                                </div>
+                                <div class="list-promotion-card-box">
+                                    <div class="list-promotion-card-text">
+                                        เมื่อซื้อ Artistry Studio Bangkok Edition 2-In-1 Matte Lip ครบ 900 บาทรับฟรี กระเป๋าผ้าสุดชิค!
+                                    </div>
+                                    <div class="list-promotion-card-img-area" onclick="openLModal('promotion-lightbox')">
+                                        <div class="list-promotion-card-img" style="background: url('../../image/creator/product/normal.svg');">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="amway-modal-customer-right" id="productDetial">
+                <input type="hidden" class="input-for-use-something" value="">
+                <div class="bg-modal"></div>
+                <div class="customer-right-full productDetial">
+                    <div class="customer-right-full-header visible-desktop">
+                        <div class="customer-right-full-header-close" onclick="closeModal('productDetial')"></div>
+                        <div class="customer-right-full-header-title">ข้อมูลสินค้า</div>
+                    </div>
+                    <div class="customer-right-full-on-scroll">
+                        <div class="pdp-mylist-area">
+                            <div class="pdp-mylist-area-box">
+                                <div class="pdp-mylist-area-close visible-mobile" onclick="closeModal('productDetial')">
+                                </div>
+                                <div class="pdp-mylist-img-area owl-carousel">
+
+                                    <div class="item">
+                                        <div class="pdp-mylist-img-item">
+                                            <img class="pdp-mylist-img-item-img" src="../../image/creator/product/normal.svg">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="pdp-mylist-img-item">
+                                            <img class="pdp-mylist-img-item-img" src="../../image/creator/product/pd01.svg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pdp-mylist-info">
+                                <div class="pdp-mylist-info-code">
+                                    รหัส#0102345
+                                </div>
+                                <div class="pdp-mylist-info-name">
+                                    Artistry Signature Select™ Firming Body Lotion
+                                </div>
+                                <div class="pdp-mylist-info-price">
+                                    ฿ 1,728
+                                </div>
+                                <div class="pdp-mylist-info-score">
+                                    PV 933 / BV 2800
+                                </div>
+                            </div>
+                            <div class="pdp-mylist-content-area">
+                                <div class="pdp-mylist-datail">
+                                    ไอเทมสุดคาวาอี้ของ โตเกียว เอติชั่น เนื้อดี สสวย ชัด ติดทน คอร์เร็คท์ & เพอร์เพีคห์ เฟซ ดอมแพ็ค คอลเร็คเตอร์ (Corrector) และคอนชื่ลเลอร์
+                                </div>
+                                <div class="pdp-mylist-collapse-area">
+                                    <div class="pdp-mylist-collapse">
+                                        <div class="pdp-mylist-collapse-title">
+                                            ส่วนประกอบ
+                                        </div>
+                                        <div class="pdp-mylist-collapse-arrow">
+                                        </div>
+                                    </div>
+                                    <div class="pdp-mylist-collapse-content">
+                                        Artistry™ makeup primer with SPF 35 harnesses the power of three benefits in one: it primes, perfects, and hydrates.
+                                    </div>
+                                </div>
+                                <div class="pdp-mylist-collapse-area">
+                                    <div class="pdp-mylist-collapse">
+                                        <div class="pdp-mylist-collapse-title">
+                                            วิธีใช้
+                                        </div>
+                                        <div class="pdp-mylist-collapse-arrow">
+                                        </div>
+                                    </div>
+                                    <div class="pdp-mylist-collapse-content">
+                                        ทาผิว
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="amway-model-lightbox" id="promotion-lightbox">
+                <div class="am-lb-bg"></div>
+                <div class="am-lb-close" onclick="closeLModal('promotion-lightbox')"></div>
+                <div class="am-lb-img" style="background:url('../../image/creator/product/normal.svg')"></div>
+            </div>
+            <div class="padding-for-mobile "></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="../../Header_degito/js/creator_change_language.js"></script>
+    <script src="../../Header_degito/js/change_delivery.js"></script>
+    <script src="../../Header_degito/js/search_action_fullslide.js"></script>
+    <script src="../../Header_degito/js/header_action.js"></script>
+    <script src="../../Header_degito/js/hamburger_action.js"></script>
+    <script src="../../Header_degito/js/custom_dropdown.js"></script>
+    <script src="../../Header_degito/js/header_action_creator.js"></script>
+    <!-- Add on -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous"></script>
+    <script src="../../Common/js/Modal.js"></script>
+    <script src="../../ShareBar/js/myList-modal.js"></script>
+    <script src="../../AmwayCreator/js/search-pd.js"></script>
+    <script src="../../AmwayCreator/js/checkbox-shopList.js"></script>
+    <script src="../../AmwayCreator/js/pdp-on-list-detail.js"></script>
+
+    <script src="../../Common/js/Dropdown-mod-border.js"></script>
+    <script src="../../Common/js/IntegerInput-mod.js"></script>
+
+    <script src="../../ShareBar/js/select-color.js"></script>
+    <script src="../../AmwayCreator/js/select-bundle-creator.js"></script>
+    <script src="../../ShareBar/js/lightbox-modal.js"></script>
+    <script src="../../AmwayCreator/js/edit-shop.js"></script>
+    <script src="../../AmwayCreator/js/shop-detail-navbar-stickty.js"></script>
+    <script src="../../v2/Common/js/global.js"></script>
+    <script src="../../v2/Common/js/Input.js"></script>
+    <script src="../../v2/Common/js/Image.js"></script>
+    <script src="../../lib/js/bodyScrollLock.min.js"></script>
+    <script src="../../v2/Common/js/Dropdown.js"></script>
+    <script src="../../v2/Common/js/DropdownInput.js"></script>
+    <script src="../../v2/Common/js/SearchableDropdown.js"></script>
+    <script src="../../v1/Header/js/PickupAddressModal.js"></script>
+    <script src="../../v1/Common/js/image.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Group_6037" data-name="Group 6037" transform="translate(-1193.969 -8.5)">
+    <g id="Group_6016" data-name="Group 6016" transform="translate(1193.969 8)">
+      <rect id="Icon_Header_User_background" data-name="Icon Header User background" width="32" height="32" transform="translate(0 0.5)" fill="none"/>
+      <g id="Group_6128" data-name="Group 6128" transform="translate(-1056 -374)">
+        <path id="Path_16646" data-name="Path 16646" d="M2706.93,1492.92l5.016-5.016,3.1,3.1,4.872-4.872" transform="translate(-1640 -1100)" fill="none" stroke="#38539a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/>
+        <g id="Union_1" data-name="Union 1" transform="translate(2702 1480.5)">
+          <path id="Path_16820" data-name="Path 16820" d="M-1620.8-1080.5h-18.4a.3.3,0,0,1-.3-.3v-18.4a.3.3,0,0,1,.3-.3.3.3,0,0,1,.3.3v18.1h18.1a.3.3,0,0,1,.3.3A.3.3,0,0,1-1620.8-1080.5Z" fill="#fff"/>
+          <path id="Path_16821" data-name="Path 16821" d="M-1620.8-1080h-18.4a.8.8,0,0,1-.8-.8v-18.4a.8.8,0,0,1,.8-.8.8.8,0,0,1,.8.8v17.6h17.6a.8.8,0,0,1,.8.8A.8.8,0,0,1-1620.8-1080Z" fill="#38539a"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

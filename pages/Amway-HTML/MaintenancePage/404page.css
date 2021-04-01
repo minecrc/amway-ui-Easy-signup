@@ -1,0 +1,78 @@
+lottie-player {
+    max-width: 380px;
+    width: 100%;
+    min-height: 50vh !important;
+    display: block;
+    height: auto;
+    margin: 50px auto;
+}
+
+button.btn-black-white {
+    background-color: #2C2C2C;
+    color: #ffffff;
+    padding: 10.5px 6em;
+    border-radius: 24px;
+}
+
+.content .place-btn {
+    margin: 3em auto;
+}
+
+.section {
+    padding-top: 120px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.section .content {
+    width: 100%;
+    text-align: center;
+    margin-top: -60px;
+}
+
+@media(max-width: 991px) {
+    nav.oa-topmost-bar.mz-main-layout__topmost-bar {
+        display: none;
+    }
+    .section {
+        padding-top: 35px;
+    }
+    lottie-player {
+        max-width: 370px;
+        width: 100%;
+        margin: 40px auto;
+        min-height: auto;
+    }
+    .oa-language-switcher {
+        display: flex;
+        align-items: center;
+        color: #7d98ba;
+        cursor: pointer;
+        user-select: none;
+        width: 80%;
+        margin: 10px auto;
+        justify-content: center;
+    }
+    button.btn-black-white {
+        background-color: #2C2C2C;
+        color: #ffffff;
+        padding: 10.5px 6em;
+        border-radius: 24px;
+        width: 95%;
+    }
+}
+
+@media (max-width: 375px) {
+    .content h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 325px) {
+    .content h2 {
+        font-size: 19px;
+    }
+}

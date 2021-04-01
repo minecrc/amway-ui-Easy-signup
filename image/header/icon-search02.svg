@@ -1,0 +1,15 @@
+<svg id="Icon_Header_Search" data-name="Icon/Header/Search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #2c2c2c;
+      }
+    </style>
+  </defs>
+  <rect id="Icon_Header_Search_background" data-name="Icon/Header/Search background" class="cls-1" width="24" height="24"/>
+  <path id="Shape" class="cls-2" d="M18.207,19a.789.789,0,0,1-.561-.232L13.079,14.2a8.016,8.016,0,1,1,1.121-1.12l4.568,4.568a.788.788,0,0,1,0,1.117A.789.789,0,0,1,18.207,19ZM8.007,1.589a6.428,6.428,0,1,0,4.535,1.883A6.425,6.425,0,0,0,8.007,1.589Z" transform="translate(3 3)"/>
+</svg>

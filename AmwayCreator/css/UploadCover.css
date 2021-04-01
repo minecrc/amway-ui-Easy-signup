@@ -1,0 +1,96 @@
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .btn-u-s {
+    border: 1px solid #2C2C2C;
+    color:#000000;
+    background-color: white;
+    font-size: 1rem;
+    padding: .5rem 1.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    min-width: 10.5rem;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+  .area-crop-imgage-size{
+      margin-top: 58px;
+     justify-content: center;
+  }
+  .position-cen{
+    justify-content: center;
+  }
+  .cr-viewport::after{
+    content: 'Drag to move cover photo';
+    background: rgb(0,0,0,0.5);
+    /* width: 200px; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    padding: 3px;
+    position: absolute;
+  }
+  .croppie-container::after{
+    content: '';
+    background-image: url('../../image/creator/Group6212@2x.png');
+    width: 60px;
+    height: 60px;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 9999;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .croppie-container .cr-boundary {
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+
+  .btn-rotate {
+    width: 2rem;
+    height: 2rem;
+    background: url(../../image/icon/icon_tool_img/icon-rotate.svg);
+    background-size: 2rem 2rem;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 12px;
+    bottom: 14%;
+
+}
+.cr-slider-wrap{
+  padding-top: 50px;
+}
+.d-data-c-r{
+  display: flex;
+  justify-content: center;
+}
+.gr-w-btn{
+    padding: 5px; 
+}
+.min-w-f{
+  width: 100%;
+}
+.btn-s-w {
+  font-size: 1rem;
+  padding: .5rem 1.5rem;
+  height: 2.5rem;
+  min-width: 10.5rem;
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

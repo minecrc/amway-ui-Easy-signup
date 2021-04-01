@@ -1,0 +1,317 @@
+.add-bank-bar {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 100%;
+    background-color: #ffffff;
+    /* box-shadow: 0 0.188rem 0.375rem rgba(56, 83, 154, 0.16); */
+}
+.add-bank-btn-back {
+    position: absolute;
+    top: 0.75rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 6rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(56, 83, 154, 0.16);
+}
+.add-bank-btn-back::before {
+    content: "b";
+    font-size: 1.75rem;
+    font-family: Amway Icon !important;
+}
+.add-bank-bar-title {
+    max-width: 10rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.add-bank-content {
+    padding: 0 1.5rem;
+}
+.add-bank-content-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+.add-bank-content-description {
+    margin-top: 0.25rem;
+    text-align: center;
+}
+
+.amway-input-area.disabled {
+    opacity: 0.7;
+}
+.amway-input-description {
+    color: #9EA0A3;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+.checkout-box-upload-label.full-width {
+    width: 100%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border: 0.125rem dashed #9EA0A3;
+}
+.checkout-box-upload-label.full-width .checkout-box-upload-label-icon-area {
+    padding-top: 0;
+    padding-bottom: 0.25rem;
+}
+
+.upload-file-image-area {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.upload-file-image-area::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+.upload-file-image-area img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.625rem;
+    object-fit: cover;
+    object-position: center;
+}
+.upload-file-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0.75rem 0.5rem 1rem;
+    border-radius: 0.625rem;
+    background-color: #EDEDED;
+}
+.upload-file-title {
+    width: calc(100% - 1.25rem);
+    padding-right: 0.5rem;
+    font-size: 0.813rem;
+    font-weight: 700;
+    line-height: 1.313rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+.upload-file-delete {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+.upload-file-delete::before {
+    content: "";
+    display: block;
+    width: 0.875rem;
+    height: 0.875rem;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../image/FOA/icon/icon-bin.svg");
+}
+.upload-example {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    background-color: #FAFAFA;
+}
+.upload-example-image {
+    width: 2rem;
+    height: 2rem;
+}
+.upload-example-image img {
+    width: 100%;
+    height: 100%;
+}
+.upload-example-text {
+    margin-left: 0.75rem;
+    font-size: 0.813rem;
+    font-weight: 500;
+    line-height: 1.313rem;
+    text-decoration: underline;
+}
+.checkout-box-footer {
+    padding-bottom: 2.5rem;
+}
+
+.image-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.image-popup.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(44, 44, 44, 0.8);
+}
+.image-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.image-area img {
+    z-index: 9999;
+    max-width: 100%;
+    max-height: 80%;
+}
+.image-popup-close {
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 1rem;
+    color: #ffffff;
+}
+.image-popup-close::before {
+    content: 'r';
+    font-weight: 700;
+    font-family: Amway Icon !important;
+}
+
+.checkout-box-label {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+.checkout-box-detail {
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    border-bottom: 0.125rem solid #F8F8F8;
+}
+.checkout-box-detail-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.checkout-box-detail-title {
+    width: 50%;
+}
+.checkout-box-detail-text {
+    width: 50%;
+    text-align: right;
+    color: #9EA0A3;
+}
+.checkout-box-description {
+    margin-top: 1rem;
+    font-size: 0.813rem;
+    font-weight: 500;
+    line-height: 1.313rem;
+    color: #9EA0A3;
+}
+
+@media (min-width: 1024px) {
+    .add-bank {
+        max-width: 36.25rem;
+        margin: 2rem auto 0;
+    }
+    .add-bank-content-description {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+    }
+    
+    .upload-file-image-area {
+        max-width: 15.5rem;
+        max-height: 15.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .image-popup-close {
+        top: 1rem;
+        right: 1rem;
+    }
+    .image-popup-close::before {
+        font-size: 1.25rem;
+    }
+    .btn-checkout-step {
+        max-width: 20rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .add-bank {
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+    }
+    .add-bank-content-title {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .add-bank-content-description {
+        font-size: 0.813rem;
+        font-weight: 500;
+        line-height: 1.313rem;
+    }
+    
+    .upload-file-image-area {
+        width: 100%;
+        height: 100%;
+    }
+    .image-popup-close {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+    .image-popup-close::before {
+        font-size: 1.5rem;
+    }
+    .checkout-box-footer-bottom {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        background-color: #ffffff;
+    }
+}
+
+@media (max-width: 1023px) and (max-height: 425px) {
+    .checkout-box-description {
+        margin-bottom: 7.75rem;
+    }
+}

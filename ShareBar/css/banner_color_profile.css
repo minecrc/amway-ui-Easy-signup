@@ -1,0 +1,401 @@
+.wishlist-banner-profile {
+    width: 100%;
+    height: 13.5rem;
+    position: relative;
+}
+
+.wbp-bg {
+    position: absolute;
+}
+
+.wbp-banner-content {
+    display: flex;
+    align-items: center;
+    padding-top: 1.5rem;
+}
+
+.wbp-banner-content-image {
+    width: 7.5rem;
+    height: 7.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+}
+
+.wbp-banner-content-image::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 3.75rem;
+    -webkit-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+}
+
+.wishlist-banner-profile.pink .wbp-banner-content-image::before {
+    background: rgba(255, 200, 200, 0.5);
+}
+
+.wishlist-banner-profile.orange .wbp-banner-content-image::before {
+    background: rgba(255, 200, 200, 0.5);
+}
+
+.wishlist-banner-profile.yellow .wbp-banner-content-image::before {
+    background: rgba(241, 241, 209, 0.5);
+}
+
+.wishlist-banner-profile.green .wbp-banner-content-image::before {
+    background: rgba(225, 245, 205, 0.5);
+}
+
+.wishlist-banner-profile.blue .wbp-banner-content-image::before {
+    background: rgba(205, 251, 255, 0.5);
+}
+
+.wishlist-banner-profile.purple .wbp-banner-content-image::before {
+    background: rgba(227, 229, 255, 0.5);
+}
+
+.wbp-bci-img {
+    width: 7rem;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    border-radius: 3.5rem;
+    position: relative;
+}
+
+.wbp-bci-img::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+.wbp-banner-content-text {
+    width: calc(100% - 17rem);
+}
+
+.wbp-name {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+}
+
+.wbp-text {
+    width: 60%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #2c2c2c;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.wishlist-banner-profile.pink .wbp-name {
+    color: #7F3E3E;
+}
+
+.wishlist-banner-profile.orange .wbp-name {
+    color: #A76C47;
+}
+
+.wishlist-banner-profile.yellow .wbp-name {
+    color: #62625A;
+}
+
+.wishlist-banner-profile.green .wbp-name {
+    color: #73793B;
+}
+
+.wishlist-banner-profile.blue .wbp-name {
+    color: #396E75;
+}
+
+.wishlist-banner-profile.purple .wbp-name {
+    color: #38539A;
+}
+
+.wbp-banner-content-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 8rem;
+    align-self: flex-start;
+}
+
+.wbp-social {
+    width: 2rem;
+    height: 2rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+@media(min-width:1024px) {
+    .wishlist-banner-profile.pink {
+        background: #FFE2E2;
+    }
+    .wishlist-banner-profile.orange {
+        background: #FFF1E8;
+    }
+    .wishlist-banner-profile.yellow {
+        background: #F8F8E7;
+    }
+    .wishlist-banner-profile.green {
+        background: #F0FAE5;
+    }
+    .wishlist-banner-profile.blue {
+        background: #E5FDFF;
+    }
+    .wishlist-banner-profile.purple {
+        background: #F1F2FF;
+    }
+    .wbp-bg-area {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        z-index: 0;
+    }
+    .wbp-bg {
+        position: absolute;
+    }
+    .wbp-bg01 {
+        bottom: -6rem;
+        left: calc(50vw - 56rem);
+        width: 25.25rem;
+        height: 25.688rem;
+        border-radius: 12.844rem;
+    }
+    .wbp-bg02 {
+        bottom: 10rem;
+        left: calc(50vw - 18rem);
+        width: 36.813rem;
+        height: 44.75rem;
+        border-radius: 22.375rem;
+        background: rgba(255, 255, 255, 0.5);
+    }
+    .wbp-bg03 {
+        bottom: -26rem;
+        left: calc(50vw - -11rem);
+        width: 26.5rem;
+        height: 31.75rem;
+        border-radius: 16.5rem;
+    }
+    .wbp-bg05 {
+        top: 3.6rem;
+        left: calc(50vw + 13rem);
+        width: 2.5rem;
+        height: 2.375rem;
+        border-radius: 1.25rem;
+    }
+    .wbp-bg04 {
+        bottom: 1.5rem;
+        left: calc(50vw + 35rem);
+        width: 4.25rem;
+        height: 4.75rem;
+        border-radius: 2.375rem;
+        background: rgba(255, 255, 255, 0.5);
+    }
+    /*  .wishlist-banner-profile::before {
+        content: '';
+        position: absolute;
+        bottom: -20rem;
+        left: calc(50vw - 77rem);
+        width: 50rem;
+        height: 50rem;
+        border-radius: 25rem;
+    }
+    .wishlist-banner-profile::after {
+        content: '';
+        position: absolute;
+        top: 8rem;
+        left: 70%;
+        width: 25rem;
+        height: 25rem;
+        border-radius: 12.25rem;
+    }
+    .wbp-bg01 {
+        top: -15rem;
+        left: 45%;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 16rem;
+        transform: scaleX(1.5);
+        background: rgba(255, 255, 255, 0.4);
+    }
+    .wbp-bg02 {
+        bottom: 1.75rem;
+        right: -2.5rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5rem;
+        transform: scaleY(1.2);
+        background: rgba(255, 255, 255, 0.4);
+    }
+    .wbp-bg03 {
+        top: 2.5rem;
+        right: 30%;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 0.75rem;
+    }*/
+    .wishlist-banner-profile.pink .wbp-bg01,
+    .wishlist-banner-profile.pink .wbp-bg03,
+    .wishlist-banner-profile.pink .wbp-bg05 {
+        background: #FFC8C8;
+    }
+    .wishlist-banner-profile.orange .wbp-bg01,
+    .wishlist-banner-profile.orange .wbp-bg03,
+    .wishlist-banner-profile.orange .wbp-bg05 {
+        background: #FFE3D3;
+    }
+    .wishlist-banner-profile.yellow .wbp-bg01,
+    .wishlist-banner-profile.yellow .wbp-bg03,
+    .wishlist-banner-profile.yellow .wbp-bg05 {
+        background: #F1F1D1;
+    }
+    .wishlist-banner-profile.green .wbp-bg01,
+    .wishlist-banner-profile.green .wbp-bg03,
+    .wishlist-banner-profile.green .wbp-bg05 {
+        background: #E1F5CD;
+    }
+    .wishlist-banner-profile.blue .wbp-bg01,
+    .wishlist-banner-profile.blue .wbp-bg03,
+    .wishlist-banner-profile.blue .wbp-bg05 {
+        background: #CDFBFF;
+    }
+    .wishlist-banner-profile.purple .wbp-bg01,
+    .wishlist-banner-profile.purple .wbp-bg03,
+    .wishlist-banner-profile.purple .wbp-bg05 {
+        background: #E3E5FF;
+    }
+}
+
+@media(max-width:1023px) {
+    .wishlist-banner-profile {
+        height: 25rem;
+        overflow: hidden;
+    }
+    .wishlist-banner-profile::before {
+        content: '';
+        position: absolute;
+        top: -3rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 50% 50%/0 0 100% 100%;
+        transform: scaleX(1.7);
+    }
+    .wishlist-banner-profile.pink::before {
+        background: #FFE2E2;
+    }
+    .wishlist-banner-profile.orange::before {
+        background: #FFF1E8;
+    }
+    .wishlist-banner-profile.yellow::before {
+        background: #F8F8E7;
+    }
+    .wishlist-banner-profile.green::before {
+        background: #F0FAE5;
+    }
+    .wishlist-banner-profile.blue::before {
+        background: #E5FDFF;
+    }
+    .wishlist-banner-profile.purple::before {
+        background: #F1F2FF;
+    }
+    .wishlist-banner-profile::after {
+        content: '';
+        position: absolute;
+        top: 3rem;
+        right: -5rem;
+        width: 10rem;
+        height: 9.375rem;
+        border-radius: 5rem;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.5);
+    }
+    .wbp-bg {
+        display: block;
+    }
+    .wbp-bg01 {
+        position: absolute;
+        top: -6rem;
+        left: -4rem;
+        width: 13.438rem;
+        height: 12.5rem;
+        border-radius: 6.719rem;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.5);
+    }
+    .wbp-bg02 {
+        position: absolute;
+        top: 3rem;
+        right: 25%;
+        width: 1.875rem;
+        height: 1.75rem;
+        border-radius: 0.938rem;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.5);
+    }
+    .wishlist-banner-profile.pink .wbp-bg01,
+    .wishlist-banner-profile.pink .wbp-bg02 {
+        background: #FFC8C8;
+    }
+    .wishlist-banner-profile.orange .wbp-bg01,
+    .wishlist-banner-profile.orange .wbp-bg02 {
+        background: #FFE3D3;
+    }
+    .wishlist-banner-profile.yellow .wbp-bg01,
+    .wishlist-banner-profile.yellow .wbp-bg02 {
+        background: #F1F1D1;
+    }
+    .wishlist-banner-profile.green .wbp-bg01,
+    .wishlist-banner-profile.green .wbp-bg01 {
+        background: #E1F5CD;
+    }
+    .wishlist-banner-profile.blue .wbp-bg01,
+    .wishlist-banner-profile.blue .wbp-bg02 {
+        background: #CDFBFF;
+    }
+    .wishlist-banner-profile.purple .wbp-bg01,
+    .wishlist-banner-profile.purple .wbp-bg02 {
+        background: #E3E5FF;
+    }
+    .wbp-banner {
+        z-index: 2;
+    }
+    .wbp-banner-content {
+        display: block;
+    }
+    .wbp-banner-content-image {
+        margin: auto;
+    }
+    .wbp-banner-content-text {
+        padding-top: 1rem;
+        margin: auto;
+        width: calc(100% - 3rem);
+        text-align: center;
+    }
+    .wbp-name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2.438rem;
+    }
+    .wbp-text {
+        width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .wbp-banner-content-social {
+        padding-top: 1.125rem;
+        margin: auto;
+    }
+}

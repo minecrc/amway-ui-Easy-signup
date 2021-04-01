@@ -1,0 +1,17 @@
+<svg id="exclamation" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+  <g id="Group_9066" data-name="Group 9066">
+    <g id="Group_9065" data-name="Group 9065">
+      <path id="Path_87499" data-name="Path 87499" d="M6,0a6,6,0,1,0,6,6A6,6,0,0,0,6,0ZM6,11.063A5.063,5.063,0,1,1,11.063,6,5.06,5.06,0,0,1,6,11.063Z" fill="#c3c4c5"/>
+    </g>
+  </g>
+  <g id="Group_9068" data-name="Group 9068" transform="translate(5.531 3.021)">
+    <g id="Group_9067" data-name="Group 9067">
+      <path id="Path_87500" data-name="Path 87500" d="M236.469,128.877a.469.469,0,0,0-.469.469v3.019a.469.469,0,0,0,.938,0v-3.019A.469.469,0,0,0,236.469,128.877Z" transform="translate(-236 -128.877)" fill="#c3c4c5"/>
+    </g>
+  </g>
+  <g id="Group_9070" data-name="Group 9070" transform="translate(5.367 7.551)">
+    <g id="Group_9069" data-name="Group 9069">
+      <circle id="Ellipse_383" data-name="Ellipse 383" cx="0.633" cy="0.633" r="0.633" fill="#c3c4c5"/>
+    </g>
+  </g>
+</svg>

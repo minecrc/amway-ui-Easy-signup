@@ -1,0 +1,136 @@
+@font-face {
+    font-family: Sukhumvit Tadmai;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../static/fonts/SukhumvitTadmai-Text.eot');
+    src: url('../../static/fonts/SukhumvitTadmai-Text.eot?#iefix') format("embedded-opentype"), url('../../static/fonts/SukhumvitTadmai-Text.woff2') format("woff2"), url('../../static/fonts/SukhumvitTadmai-Text.woff') format("woff")
+}
+
+@font-face {
+    font-family: Sukhumvit Tadmai;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../../static/fonts/SukhumvitTadmai-Medium.eot');
+    src: url('../../static/fonts/SukhumvitTadmai-Medium.eot?#iefix') format("embedded-opentype"), url('../../static/fonts/SukhumvitTadmai-Medium.woff2') format("woff2"), url('../../static/fonts/SukhumvitTadmai-Medium.woff') format("woff"), url('../../static/fonts/SukhumvitTadmai-Medium.otf') format("opentype")
+}
+
+@font-face {
+    font-family: Sukhumvit Tadmai;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../static/fonts/SukhumvitTadmai-Bold.eot');
+    src: url('../../static/fonts/SukhumvitTadmai-Bold.eot?#iefix') format("embedded-opentype"), url('../../static/fonts/SukhumvitTadmai-Bold.woff2') format("woff2"), url('../../static/fonts/SukhumvitTadmai-Bold.woff') format("woff"), url('../../static/fonts/SukhumvitTadmai-Bold.otf') format("opentype")
+}
+
+@font-face {
+    font-family: Sukhumvit Tadmai;
+    font-style: normal;
+    font-weight: 800;
+    src: url('../../static/fonts/SukhumvitTadmai-ExtraBold.eot');
+    src: url('../../static/fonts/SukhumvitTadmai-ExtraBold.eot?#iefix') format("embedded-opentype"), url('../../static/fonts/SukhumvitTadmai-ExtraBold.woff2') format("woff2"), url('../../static/fonts/SukhumvitTadmai-ExtraBold.woff') format("woff"), url('../../static/fonts/SukhumvitTadmai-ExtraBold.otf') format("opentype")
+}
+
+@font-face {
+    font-family: Amway Icon CI;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../static/fonts/amway-icon-ci.eot');
+    src: url('../../static/fonts/amway-icon-ci.eot?#iefix') format("embedded-opentype"), url('../../static/fonts/amway-icon-ci.woff') format("woff"), url('../../static/fonts/amway-icon-ci.ttf') format("truetype"), url('../../static/fonts/amway-icon-ci.svg#amway-icon-ci') format("svg")
+}
+
+@font-face {
+    font-family: Amway Icon;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../static/fonts/amway-icon.eot');
+    src: url('../../static/fonts/amway-icon.eot?#iefix') format("embedded-opentype"), url('../../static/fonts/amway-icon.woff') format("woff"), url('../../static/fonts/amway-icon.ttf') format("truetype"), url('../../static/fonts/amway-icon.svg#amway-icon') format("svg")
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.875rem;
+}
+
+h1,
+h2,
+h3,
+h5 {
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+h5 {
+    font-size: 1.125rem;
+}
+
+a {
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    cursor: pointer
+}
+
+a,
+a:focus,
+a:hover {
+    color: inherit;
+    text-decoration: none
+}
+
+button,
+input {
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: inherit
+}
+
+button:focus,
+button:focus:active {
+    outline: none;
+    box-shadow: inherit
+}
+
+input::placeholder {
+    font-style: inherit;
+    font-weight: 400
+}
+
+label {
+    margin-bottom: 0;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit
+}
+
+p {
+    margin: 0
+}
+
+ul {
+    margin-bottom: 0;
+    padding-inline-start: 0
+}
+
+li {
+    display: block
+}

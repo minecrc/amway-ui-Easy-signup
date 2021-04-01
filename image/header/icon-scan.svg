@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #2c2c2c;
+      }
+    </style>
+  </defs>
+  <g id="Group_6142" data-name="Group 6142" transform="translate(-983 -64)">
+    <rect id="Rectangle_3501" data-name="Rectangle 3501" class="cls-1" width="24" height="24" transform="translate(983 64)"/>
+    <path id="Combined_Shape" data-name="Combined Shape" class="cls-2" d="M1019.47,978.889v-1.306h4.572V973.01h1.307v5.878Zm-12.41,0V973.01h1.307v4.573h4.572v1.306Zm14.37-3.918h-10.451V970.4h-1.959v-1.307h1.96V964.52h10.45v4.572h1.307V970.4h-1.307v4.572Zm-9.145-1.307h7.838V970.4h-7.838Zm0-4.572h7.838v-3.265h-7.838Zm11.757-2.613v-4.572h-4.572V960.6h5.878v5.878Zm-16.982,0V960.6h5.879v1.306h-4.572v4.573Z" transform="translate(-21.061 -893.601)"/>
+  </g>
+</svg>
